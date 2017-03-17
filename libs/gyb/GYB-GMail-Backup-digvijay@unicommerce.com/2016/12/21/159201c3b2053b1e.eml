@@ -1,0 +1,98 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2025501qgd;
+        Tue, 20 Dec 2016 22:40:38 -0800 (PST)
+X-Received: by 10.237.42.225 with SMTP id t88mr306512qtd.139.1482302438375;
+        Tue, 20 Dec 2016 22:40:38 -0800 (PST)
+Return-Path: <vikas@unicommerce.com>
+Received: from mail-qt0-x233.google.com (mail-qt0-x233.google.com. [2607:f8b0:400d:c0d::233])
+        by mx.google.com with ESMTPS id u2si14289820qtb.147.2016.12.20.22.40.38
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Dec 2016 22:40:38 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::233 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c0d::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::233 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Received: by mail-qt0-x233.google.com with SMTP id n6so198193702qtd.1
+        for <digvijay@unicommerce.com>; Tue, 20 Dec 2016 22:40:38 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=zIZoErW3WIFMRBvRucTOnZWhJg5bi4kYRsFYUaoXaNA=;
+        b=UL6rP1fygumGSQk75yKjFVMD+lSpQp6S0ZHeAuv93qVG5+U4zw0EenI8erlsmVy7bk
+         VrPqlDZKpG6XRAa6e9GGUpDAmVnQU9UHr7im0uM7YfFBre6le9B2NG0qsX2SqXZzm8zz
+         JtqAqwPg0m+/1C/4r2tpfhGhA4AIDaWenviRc+GRwIubPykEojFGjM74GZ3Kh+trGj+C
+         PUe7WQPvV33bguOOwclsmRkm5UR9X3yttZR+JZL88EZVtewPasmBX6PjpVeubux4cYZ3
+         tYGqWE7F7CgCFXgPfS2RJXmaLe8VxaKbBua04vbrdQTfTeRBACzs0I5W6sRDHZ6LrSPI
+         M8wA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=zIZoErW3WIFMRBvRucTOnZWhJg5bi4kYRsFYUaoXaNA=;
+        b=ouyfmeAi9tPaZ5x7fpiIKF3hO9V2WknYvzMPrejCb1InyAdMAlYE6fuAq4x8iJU/Jo
+         ib1m9n7d5GDS/pAd/Kc9jtRCWJ0bvKXE7N90JWRFyTY7tLRdqg21wspQRQG1pGfmJvRT
+         e9SPbsSa4in2kLtRyZYW+hdILTcx8xcK92BO5BuC/P4o3Iy8llgFtpa0vO41Dsw9GSCr
+         MiKmhy5XjDvLHJUjmawF/QvPGQ4v+KNqU63Zy71GsFeL4m8CjCp2lJtuWL0rwdrNm5al
+         VHX1gjm2DSjfymYYKcsR2UXKcYdyMujwLp1OApqyFaagHkMHxXul7uojaITTxprUwBUN
+         DUbw==
+X-Gm-Message-State: AIkVDXJvyXkC/kp/epT4CDOksG3cuH+ABkHMYw9v9oyP4B4H2V0o5IuIUX19nyTpPZ2/+6O08jSpoU83nVV3zw==
+X-Received: by 10.200.35.139 with SMTP id q11mr3352824qtq.274.1482302438067;
+ Tue, 20 Dec 2016 22:40:38 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.0.82 with HTTP; Tue, 20 Dec 2016 22:40:37 -0800 (PST)
+In-Reply-To: <CAJF3soqv5FprZ1vs05FXCMYd-tr7jBeVRyBqeEzTpNAcJ4KsXQ@mail.gmail.com>
+References: <CAJF3soqs2V-ZV+-Dfq8bVYi51T6=xSz=+n9RzzgcATmQr=3zfw@mail.gmail.com>
+ <CAJF3soqv5FprZ1vs05FXCMYd-tr7jBeVRyBqeEzTpNAcJ4KsXQ@mail.gmail.com>
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Wed, 21 Dec 2016 12:10:37 +0530
+Message-ID: <CAEixeD-FHLZy69VmcM5bsNVSPYRFD77K9GSj3nsNy451=RiTEg@mail.gmail.com>
+Subject: Re: WormholeTest tomcat not working
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Nitin Yadav <nitin@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1141628445622e0544256ee5
+
+--001a1141628445622e0544256ee5
+Content-Type: text/plain; charset=UTF-8
+
+come to my bay
+
+On Wed, Dec 21, 2016 at 11:59 AM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> ROOT.xml is still not correct. There is no UnicommerceDS in it on
+> WormholeTest Server. Please check and change.
+>
+> On Tue, Dec 20, 2016 at 5:49 PM, Digvijay Sharma <digvijay@unicommerce.com
+> > wrote:
+>
+>> The catalina.sh and ROOT.xml file are both not correct for WormholeTest
+>> server. Thats why tomcat is not booting up. Please check and replace.
+>>
+>
+>
+
+--001a1141628445622e0544256ee5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">come to my bay</div><div class=3D"gmail_extra"><br><div cl=
+ass=3D"gmail_quote">On Wed, Dec 21, 2016 at 11:59 AM, Digvijay Sharma <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_bla=
+nk">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div dir=3D"ltr">ROOT.xml is still not correct. There is no Unico=
+mmerceDS in it on WormholeTest Server. Please check and change.</div><div c=
+lass=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">On Tue, Dec 20, 2016 at 5:49 PM, Digvijay Sharma <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmai=
+l_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left=
+:1ex"><div dir=3D"ltr">The catalina.sh and ROOT.xml file are both not corre=
+ct for WormholeTest server. Thats why tomcat is not booting up. Please chec=
+k and replace.</div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a1141628445622e0544256ee5--

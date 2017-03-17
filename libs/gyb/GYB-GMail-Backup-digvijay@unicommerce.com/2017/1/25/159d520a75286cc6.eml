@@ -1,0 +1,129 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2079401qgu;
+        Wed, 25 Jan 2017 02:16:44 -0800 (PST)
+X-Received: by 10.84.167.2 with SMTP id c2mr2372972plb.56.1485339404268;
+        Wed, 25 Jan 2017 02:16:44 -0800 (PST)
+Return-Path: <gitlab@snapdeal.com>
+Received: from mail-pg0-x234.google.com (mail-pg0-x234.google.com. [2607:f8b0:400e:c05::234])
+        by mx.google.com with ESMTPS id s1si11202334pgb.279.2017.01.25.02.16.43
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Jan 2017 02:16:44 -0800 (PST)
+Received-SPF: pass (google.com: domain of gitlab@snapdeal.com designates 2607:f8b0:400e:c05::234 as permitted sender) client-ip=2607:f8b0:400e:c05::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@snapdeal.com;
+       spf=pass (google.com: domain of gitlab@snapdeal.com designates 2607:f8b0:400e:c05::234 as permitted sender) smtp.mailfrom=gitlab@snapdeal.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=snapdeal.com
+Received: by mail-pg0-x234.google.com with SMTP id 194so63547214pgd.2
+        for <digvijay@unicommerce.com>; Wed, 25 Jan 2017 02:16:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=snapdeal.com; s=google;
+        h=date:from:reply-to:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=g7wVY2VJLnj+T1eKm4yq0GwttyDpOytD8loMBEa1mts=;
+        b=O8FGyg2+BfMRiH+lcJaV7pM4gjW49WTp8L04jZqa4jLDWLq6w5ebFvlRhD6PWLEHWH
+         uwZPgyNdeWISVBdczUIFZuMP+Az6xZAYw3iN/PyXP5x6kW0DZYGY1hFVuJTA6JmceyDb
+         da1XueO9WTTQKfekJWwr2vekG+s0EDWOdTa74=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:from:reply-to:to:message-id:subject
+         :mime-version:content-transfer-encoding;
+        bh=g7wVY2VJLnj+T1eKm4yq0GwttyDpOytD8loMBEa1mts=;
+        b=rUhgQwgXTxWf+M9734T/vuXHYg/GBSR0lE3X4nUaRAIZbcJunanFC5sixcP0pyRILL
+         ES/VKOIurgtU4l5i01W2+3g2GTx5MTLI+SbtZ6tWbZF1pRWdCR06i7JJx4pj8gh9yTmf
+         VP0u79f/WqNSxm2jfI7qhS+/V7MRCFbp3Cpx/XOrh66symM1WvP7HA/ucjkb4wv/PPDr
+         fuZgHjaqYLROylXdvNJauXqphBu+PgnXelJ6EpG6zx3vlX7LxYhSQYAIOo8jsQqfFB16
+         Ql4f9qgMyWW/vpS6KKA5QJB5ewykXQxpy3+cQZhsT9GkMPARoBEhbx5VbpUY57rbjE06
+         AreA==
+X-Gm-Message-State: AIkVDXLm9oeuMXJXgk+3hkfRcrytbdav99nrHsyxYMsdsgdJu/KdKILejyJz8DwsnWvmcVmL
+X-Received: by 10.99.154.9 with SMTP id o9mr19090213pge.69.1485339403597;
+        Wed, 25 Jan 2017 02:16:43 -0800 (PST)
+Return-Path: <gitlab@snapdeal.com>
+Received: from smtp.gmail.com ([220.227.197.38])
+        by smtp.gmail.com with ESMTPSA id p26sm12179296pgn.39.2017.01.25.02.16.41
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Jan 2017 02:16:42 -0800 (PST)
+Date: Wed, 25 Jan 2017 15:47:26 +0530
+From: GitLab <gitlab@snapdeal.com>
+Reply-To: GitLab <gitlab@snapdeal.com>
+To: digvijay@unicommerce.com
+Message-ID: <58887b366cfba_2b703f98b859b4d43679d@GitLab-VM1.mail>
+Subject: SSH key was added to your account
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58887b366a13e_2b703f98b859b4d4366ed";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58887b366a13e_2b703f98b859b4d4366ed
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Digvijay Sharma Js!
+
+A new public key was added to your account:
+
+Title: id_rsa
+
+If this key was added in error, you can remove it at http://gitlab.snapdeal.com/profile/keys
+
+----==_mimepart_58887b366a13e_2b703f98b859b4d4366ed
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
+.w3.org/TR/REC-html40/loose.dtd">
+<html lang=3D"en">
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">=
+
+<title>
+GitLab
+</title>
+
+</head>
+<body>
+<style type=3D"text/css">
+img {
+max-width: 100%; height: auto;
+}
+</style>
+<div class=3D"content">
+<p>
+Hi Digvijay Sharma Js!
+</p>
+<p>
+A new public key was added to your account:
+</p>
+<p>
+title:
+<code>id_rsa</code>
+</p>
+<p>
+If this key was added in error, you can remove it under
+<a href=3D"http://gitlab.snapdeal.com/profile/keys">SSH Keys</a>
+</p>
+
+</div>
+<div class=3D"footer" style=3D"margin-top: 10px">
+<p style=3D"color: #777; font-size: small">
+=E2=80=94
+<br>
+<a href=3D"http://gitlab.snapdeal.com/u/digvijay.sharma.js">View it on Gi=
+tLab</a>.
+<br>
+You're receiving this email because of your account on gitlab.snapdeal.co=
+m.
+If you'd like to receive fewer emails, you can
+adjust your notification settings.
+
+</p>
+</div>
+</body>
+</html>
+
+----==_mimepart_58887b366a13e_2b703f98b859b4d4366ed--

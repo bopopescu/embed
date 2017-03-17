@@ -1,0 +1,208 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp2698915qge;
+        Wed, 23 Nov 2016 02:02:14 -0800 (PST)
+X-Received: by 10.159.36.51 with SMTP id 48mr1457821uaq.27.1479895334611;
+        Wed, 23 Nov 2016 02:02:14 -0800 (PST)
+Return-Path: <ashish@unicommerce.com>
+Received: from mail-ua0-x22c.google.com (mail-ua0-x22c.google.com. [2607:f8b0:400c:c08::22c])
+        by mx.google.com with ESMTPS id q63si2372292vkd.111.2016.11.23.02.02.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Nov 2016 02:02:14 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) client-ip=2607:f8b0:400c:c08::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) smtp.mailfrom=ashish@unicommerce.com
+Received: by mail-ua0-x22c.google.com with SMTP id 51so8268555uai.1
+        for <digvijay@unicommerce.com>; Wed, 23 Nov 2016 02:02:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=/Kkyl3cMMkgeEaRbszjdunQm6W039O2Ln2FvoMaPpoQ=;
+        b=JIEl2Y+a5Z50/LhtcnP6/aDoKas35MIC1Yo6Z1wRokmM/ht1jSQk303e0v0xO2lBYh
+         DXHpx4NXf62P8Vwje1BUXPeCjSDL8JtcYvTPemNbNivG7paxfeG8EBDdQAWGZLZcTEh9
+         dPucTKMMZLXkN0L7SpC57P3ZpD9GJtPTEhZvs5HLNzkxLMxYuwGkv1ISZBJFhWvSp6Cc
+         5OokSO8vAQdwwVR69Qxqqhxykkg2N6Qpx7fcBFaDrXIaGcQJ85Jyp5bKcILWBbjX/4KX
+         qwcYeNlf5UQ+Kc3jwQwdXFB1eVJ9DD+mmJKNHoOTZ8yzkDPft4zhKP+oTECCrXUi1cxE
+         1PFA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=/Kkyl3cMMkgeEaRbszjdunQm6W039O2Ln2FvoMaPpoQ=;
+        b=FPv2C/bsDK0apbBFr6OXI8NIyusq4uli+XdZpSMZ+b0vHhRALxo2aum3sWOKKFVjVn
+         u4L0sesjwMl617lvrpmRKFdaGXyztzxRg9t8Y1I9KKEhdTmxjjJ5LubJ++tyFa9Qti3X
+         I45CtIPqwHxW4dmAB4uUGEKTZ1k60eCG/XItq0GN/cCS6DHaB15BQEAFRDQy2NMYPjb5
+         q+K/b1YhohmGLbNsIxBHCVedODnJtBql5EhWj+TILBev594ENTB1ZgwKXf0KZ+tZE7Bq
+         ADfLuDdotb4yb2zFdvRNbsLz8uz8b+pzPcfAr3k6O2Sy2eBInWMeNCDFaEVUZi5TMKJg
+         FnBA==
+X-Gm-Message-State: AKaTC03ZDLEgoHcwqleXbKw8Badh6yssaJBuVWm7+0h8tPYhZZCK3P59pskG02RV9g8/NoTeArHB2ArLWso49A==
+X-Received: by 10.176.0.82 with SMTP id 76mr1443013uai.46.1479895333990; Wed,
+ 23 Nov 2016 02:02:13 -0800 (PST)
+MIME-Version: 1.0
+From: Ashish Bansal <ashish@unicommerce.com>
+Date: Wed, 23 Nov 2016 10:02:02 +0000
+Message-ID: <CAMThih73OBu7-65Xt6-WPmm1eaZBkU53aoBVEYd5Sxs_=PhogA@mail.gmail.com>
+Subject: error on apply promo code
+To: Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113e45ceb008d90541f4fba4
+
+--001a113e45ceb008d90541f4fba4
+Content-Type: text/plain; charset=UTF-8
+
+!DOCTYPE html><html><head><title>Apache Tomcat/8.0.15 - Error
+report</title><style type="text/css">H1
+{font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+H2
+{font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
+H3
+{font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
+BODY
+{font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B
+{font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
+P
+{font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
+{color : black;}A.name {color : black;}.line {height: 1px;
+background-color: #525D76; border: none;}</style> </head><body><h1>HTTP
+Status 500 - Request processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.orm.hibernate4.HibernateSystemException:
+IllegalArgumentException occurred calling getter of
+com.uniaccounts.core.entity.PromoCode.id; nested exception is
+org.hibernate.PropertyAccessException: IllegalArgumentException occurred
+calling getter of com.uniaccounts.core.entity.PromoCode.id</h1><div
+class="line"></div><p><b>type</b> Exception report</p><p><b>message</b>
+<u>Request processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.orm.hibernate4.HibernateSystemException:
+IllegalArgumentException occurred calling getter of
+com.uniaccounts.core.entity.PromoCode.id; nested exception is
+org.hibernate.PropertyAccessException: IllegalArgumentException occurred
+calling getter of
+com.uniaccounts.core.entity.PromoCode.id</u></p><p><b>description</b>
+<u>The server encountered an internal error that prevented it from
+fulfilling this
+request.</u></p><p><b>exception</b></p><pre>org.springframework.web.util.NestedServletException:
+Request processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.orm.hibernate4.HibernateSystemException:
+IllegalArgumentException occurred calling getter of
+com.uniaccounts.core.entity.PromoCode.id; nested exception is
+org.hibernate.PropertyAccessException: IllegalArgumentException occurred
+calling getter of com.uniaccounts.core.entity.PromoCode.id
+org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119)
+org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:65)
+org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:49)
+org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+
+--001a113e45ceb008d90541f4fba4
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt=
+;Apache Tomcat/8.0.15 - Error report&lt;/title&gt;&lt;style type=3D&quot;te=
+xt/css&quot;&gt;H1 {font-family:Tahoma,Arial,sans-serif;color:white;backgro=
+und-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;=
+color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahom=
+a,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BO=
+DY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;=
+} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D=
+76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;fo=
+nt-size:12px;}A {color : black;}A.name {color : black;}.line {height: 1px; =
+background-color: #525D76; border: none;}&lt;/style&gt; &lt;/head&gt;&lt;bo=
+dy&gt;&lt;h1&gt;HTTP Status 500 - Request processing failed; nested excepti=
+on is org.jboss.resteasy.spi.UnhandledException: org.springframework.orm.hi=
+bernate4.HibernateSystemException: IllegalArgumentException occurred callin=
+g getter of <a href=3D"http://com.uniaccounts.core.entity.PromoCode.id">com=
+.uniaccounts.core.entity.PromoCode.id</a>; nested exception is org.hibernat=
+e.PropertyAccessException: IllegalArgumentException occurred calling getter=
+ of <a href=3D"http://com.uniaccounts.core.entity.PromoCode.id">com.uniacco=
+unts.core.entity.PromoCode.id</a>&lt;/h1&gt;&lt;div class=3D&quot;line&quot=
+;&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt; Exception report&lt;/p&gt=
+;&lt;p&gt;&lt;b&gt;message&lt;/b&gt; &lt;u&gt;Request processing failed; ne=
+sted exception is org.jboss.resteasy.spi.UnhandledException: org.springfram=
+ework.orm.hibernate4.HibernateSystemException: IllegalArgumentException occ=
+urred calling getter of <a href=3D"http://com.uniaccounts.core.entity.Promo=
+Code.id">com.uniaccounts.core.entity.PromoCode.id</a>; nested exception is =
+org.hibernate.PropertyAccessException: IllegalArgumentException occurred ca=
+lling getter of <a href=3D"http://com.uniaccounts.core.entity.PromoCode.id"=
+>com.uniaccounts.core.entity.PromoCode.id</a>&lt;/u&gt;&lt;/p&gt;&lt;p&gt;&=
+lt;b&gt;description&lt;/b&gt; &lt;u&gt;The server encountered an internal e=
+rror that prevented it from fulfilling this request.&lt;/u&gt;&lt;/p&gt;&lt=
+;p&gt;&lt;b&gt;exception&lt;/b&gt;&lt;/p&gt;&lt;pre&gt;org.springframework.=
+web.util.NestedServletException: Request processing failed; nested exceptio=
+n is org.jboss.resteasy.spi.UnhandledException: org.springframework.orm.hib=
+ernate4.HibernateSystemException: IllegalArgumentException occurred calling=
+ getter of <a href=3D"http://com.uniaccounts.core.entity.PromoCode.id">com.=
+uniaccounts.core.entity.PromoCode.id</a>; nested exception is org.hibernate=
+.PropertyAccessException: IllegalArgumentException occurred calling getter =
+of <a href=3D"http://com.uniaccounts.core.entity.PromoCode.id">com.uniaccou=
+nts.core.entity.PromoCode.id</a></div><div><span class=3D"Apple-tab-span" s=
+tyle=3D"white-space:pre">	</span>org.springframework.web.servlet.FrameworkS=
+ervlet.processRequest(FrameworkServlet.java:978)</div><div><span class=3D"A=
+pple-tab-span" style=3D"white-space:pre">	</span>org.springframework.web.se=
+rvlet.FrameworkServlet.doPost(FrameworkServlet.java:868)</div><div><span cl=
+ass=3D"Apple-tab-span" style=3D"white-space:pre">	</span>javax.servlet.http=
+.HttpServlet.service(HttpServlet.java:644)</div><div><span class=3D"Apple-t=
+ab-span" style=3D"white-space:pre">	</span>org.springframework.web.servlet.=
+FrameworkServlet.service(FrameworkServlet.java:842)</div><div><span class=
+=3D"Apple-tab-span" style=3D"white-space:pre">	</span>javax.servlet.http.Ht=
+tpServlet.service(HttpServlet.java:725)</div><div><span class=3D"Apple-tab-=
+span" style=3D"white-space:pre">	</span>org.springframework.session.web.htt=
+p.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119=
+)</div><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">	</spa=
+n>org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePe=
+rRequestFilter.java:65)</div><div><span class=3D"Apple-tab-span" style=3D"w=
+hite-space:pre">	</span>org.apache.tomcat.websocket.server.WsFilter.doFilte=
+r(WsFilter.java:52)</div><div><span class=3D"Apple-tab-span" style=3D"white=
+-space:pre">	</span>com.uniaccounts.web.filter.AccessControlFilter.doFilter=
+Internal(AccessControlFilter.java:49)</div><div><span class=3D"Apple-tab-sp=
+an" style=3D"white-space:pre">	</span>org.springframework.web.filter.OncePe=
+rRequestFilter.doFilter(OncePerRequestFilter.java:107)</div><div><span clas=
+s=3D"Apple-tab-span" style=3D"white-space:pre">	</span>org.tuckey.web.filte=
+rs.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)</div><div><span c=
+lass=3D"Apple-tab-span" style=3D"white-space:pre">	</span>org.tuckey.web.fi=
+lters.urlrewrite.RuleChain.doRules(RuleChain.java:145)</div><div><span clas=
+s=3D"Apple-tab-span" style=3D"white-space:pre">	</span>org.tuckey.web.filte=
+rs.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)</div><div><sp=
+an class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>org.tuckey.we=
+b.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)</=
+div><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>o=
+rg.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilte=
+r(FilterChainProxy.java:330)</div><div><span class=3D"Apple-tab-span" style=
+=3D"white-space:pre">	</span>org.springframework.security.web.access.interc=
+ept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)</d=
+iv><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>or=
+g.springframework.security.web.access.intercept.FilterSecurityInterceptor.d=
+oFilter(FilterSecurityInterceptor.java:84)</div><div><span class=3D"Apple-t=
+ab-span" style=3D"white-space:pre">	</span>org.springframework.security.web=
+.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)</d=
+iv><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>or=
+g.springframework.security.web.access.ExceptionTranslationFilter.doFilter(E=
+xceptionTranslationFilter.java:113)</div><div><span class=3D"Apple-tab-span=
+" style=3D"white-space:pre">	</span>org.springframework.security.web.Filter=
+ChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)</div><div=
+><span class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>org.sprin=
+gframework.security.web.session.SessionManagementFilter.doFilter(SessionMan=
+agementFilter.java:103)</div><div><span class=3D"Apple-tab-span" style=3D"w=
+hite-space:pre">	</span>org.springframework.security.web.FilterChainProxy$V=
+irtualFilterChain.doFilter(FilterChainProxy.java:342)</div></div>
+
+--001a113e45ceb008d90541f4fba4--

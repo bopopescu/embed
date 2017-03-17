@@ -1,0 +1,153 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1600517qgu;
+        Tue, 24 Jan 2017 02:14:08 -0800 (PST)
+X-Received: by 10.55.212.22 with SMTP id l22mr27627146qki.48.1485252848263;
+        Tue, 24 Jan 2017 02:14:08 -0800 (PST)
+Return-Path: <rahul.kandpal@unicommerce.com>
+Received: from mail-qt0-x235.google.com (mail-qt0-x235.google.com. [2607:f8b0:400d:c0d::235])
+        by mx.google.com with ESMTPS id u49si12795852qtb.265.2017.01.24.02.14.08
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 24 Jan 2017 02:14:08 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::235 is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) client-ip=2607:f8b0:400d:c0d::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::235 is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) smtp.mailfrom=rahul.kandpal@unicommerce.com
+Received: by mail-qt0-x235.google.com with SMTP id v23so173775326qtb.0
+        for <digvijay@unicommerce.com>; Tue, 24 Jan 2017 02:14:08 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=gxvTz2MVLK5scSet6UCYdqXkJPx4W6nFj9px39P1Tlk=;
+        b=sD0FkZ1Eq/s2PNN5EOyOKnHwa9BEMnflhSsEEmlFh7EZCy6sQNiSw6e2tKI1PM+kZe
+         Yor/gfWLnoeaqUlQh5OpaIUVm7Qn/9rZEpLmmiNFHh51eXH7+nykineOAfAeh4bbA61b
+         2hwfO+2AgQFWwMMV1+7oAgGx4wMuBT2HsNLVTCvFMdrcTdgJjINhIsLnFrW74zM1Iahr
+         6EisPg1XYpocnVNItDHjIGrLlprk3BpceVpNZ7SnDUbi9Omm2SOJyUk8bxohx/LKvPe9
+         vDcKq/2McZgKSGQhCOAv6puPsCfGmQJFEl9IXSkpTfRm6KkVqusNgyaPpY+9Q7pIwX3r
+         9C6w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=gxvTz2MVLK5scSet6UCYdqXkJPx4W6nFj9px39P1Tlk=;
+        b=oNucGuED/e+uiQQ5qZifTzXD3LeRkUj9+rqUkz3qru64gNeIhekuL6CosqPtqeOcfI
+         XrqczNVBoTe+vEz5nof+1c/wKUrbRzkV4qZwUt1u2Tp3vmg8lPCqv+fXNyEmUH5sM1Yv
+         AzMbytYrXpp0rFWgvmKB6wL5YAsoOGshH2Sud+MLkT4cQdjsRnZGNYSfN765YCdTT4Y2
+         SU1xXrRNRy1KRBIgwVFL4ZJiB0beSXcBF00vjkt7NRDI9CQ2gOXQgIsZ/KGn7UgMzMr5
+         3sHObk3EHKpyTCQE21g47ubej21jfyagvSb65eEUtHC/QNkH0VLRt9s4nFUSgSP13LqN
+         2D8g==
+X-Gm-Message-State: AIkVDXJIzTc+eRMNzB+VG3G4/eaSR5JLtyzU+0xSqxU0kMiNGOsRJpenQ1livz1STs01PxCXzAc5RloHXOkX7Q==
+X-Received: by 10.55.138.196 with SMTP id m187mr6911298qkd.214.1485252847895;
+ Tue, 24 Jan 2017 02:14:07 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.136.251 with HTTP; Tue, 24 Jan 2017 02:14:07 -0800 (PST)
+In-Reply-To: <CAJQg1JtVH0+8xhKnGXfaDFg=5NX7wZ4Q3sc0y67AvD-BGuGoGg@mail.gmail.com>
+References: <CAJQg1Ju8SCyJPB76xwQU2-gYHZ-iGt1wEVZ=SwqBz0hj+F3NNA@mail.gmail.com>
+ <CAJQg1JtVH0+8xhKnGXfaDFg=5NX7wZ4Q3sc0y67AvD-BGuGoGg@mail.gmail.com>
+From: Rahul Kandpal <rahul.kandpal@unicommerce.com>
+Date: Tue, 24 Jan 2017 15:44:07 +0530
+Message-ID: <CAJQg1JvcWPm2MEikr4H13ynMgH6e+9z973PRMwTxQTN2WVVx3w@mail.gmail.com>
+Subject: Re: Trendybharat Integration
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: sunny agarwal <sunny@unicommerce.com>, Rohit Mishra <rohit@unicommerce.com>, 
+	Ravindra Kumar <ravindra@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c073e0a66c24a0546d4605e
+
+--94eb2c073e0a66c24a0546d4605e
+Content-Type: text/plain; charset=UTF-8
+
+Hi Digvijay
+
+Can you tell me exact ROLE name, that was in groupon
+eg: "testdropship"
+i need to make same role in trendybharat
+
+On Tue, Jan 10, 2017 at 2:05 PM, Rahul Kandpal <
+rahul.kandpal@unicommerce.com> wrote:
+
+> Hi Digvijay
+>
+> Please update on the progress.
+>
+> On Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <
+> rahul.kandpal@unicommerce.com> wrote:
+>
+>> Hi Digvijay
+>>
+>> Please update on this mail thread once trendybharat.unicommerce.com is
+>> ready for testing.
+>>
+>> Have created a vendor panel(trtester.unicommerce.com) where orders will
+>> be pulled from trendybharat.
+>>
+>> --
+>>
+>> Thanks
+>> Rahul Kandpal
+>> 08826793081
+>>
+>
+>
+>
+> --
+>
+> Thanks
+> Rahul Kandpal
+> 08826793081
+>
+
+
+
+-- 
+
+Thanks
+Rahul Kandpal
+08826793081
+
+--94eb2c073e0a66c24a0546d4605e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Digvijay<div><br></div><div><div id=3D"gmail-:2tr" dir=
+=3D"ltr" class=3D"gmail-kl" style=3D"font-size:12.8px">Can you tell me exac=
+t ROLE name, that was in groupon</div><div id=3D"gmail-:20" dir=3D"ltr" cla=
+ss=3D"gmail-kl" style=3D"font-size:12.8px">eg: &quot;testdropship&quot;</di=
+v><div id=3D"gmail-:2tl" dir=3D"ltr" class=3D"gmail-kl" style=3D"font-size:=
+12.8px">i need to make same role in trendybharat</div></div></div><div clas=
+s=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, Jan 10, 2017 at 2:=
+05 PM, Rahul Kandpal <span dir=3D"ltr">&lt;<a href=3D"mailto:rahul.kandpal@=
+unicommerce.com" target=3D"_blank">rahul.kandpal@unicommerce.com</a>&gt;</s=
+pan> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex=
+;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Digvijay<=
+div><br></div><div>Please update on the progress.</div></div><div class=3D"=
+gmail_extra"><br><div class=3D"gmail_quote"><span class=3D"">On Thu, Jan 5,=
+ 2017 at 2:56 PM, Rahul Kandpal <span dir=3D"ltr">&lt;<a href=3D"mailto:rah=
+ul.kandpal@unicommerce.com" target=3D"_blank">rahul.kandpal@unicommerce.com=
+</a><wbr>&gt;</span> wrote:<br></span><div><div class=3D"h5"><blockquote cl=
+ass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
+adding-left:1ex"><div dir=3D"ltr">Hi Digvijay<div><br></div><div>Please upd=
+ate on this mail thread once <a href=3D"http://trendybharat.unicommerce.com=
+" target=3D"_blank">trendybharat.unicommerce.com</a> is ready for testing.<=
+/div><div><br></div><div>Have created a vendor panel(<span style=3D"backgro=
+und-color:rgb(226,228,255);color:rgb(51,51,51);font-family:&quot;helvetica =
+neue&quot;,helvetica,arial,sans-serif;font-size:13px"><a href=3D"http://trt=
+ester.unicommerce.com" target=3D"_blank">trtester.unicommerce.com</a><wbr>)=
+</span>=C2=A0where orders will be pulled from trendybharat.</div><span clas=
+s=3D"m_8614798941214077924HOEnZb"><font color=3D"#888888"><div><div><br></d=
+iv>-- <br><div class=3D"m_8614798941214077924m_2525148820284015360gmail_sig=
+nature"><div dir=3D"ltr"><br><div>Thanks</div><div>Rahul Kandpal</div><div>=
+08826793081</div></div></div>
+</div></font></span></div>
+</blockquote></div></div></div><div><div class=3D"h5"><br><br clear=3D"all"=
+><div><br></div>-- <br><div class=3D"m_8614798941214077924gmail_signature" =
+data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><br><div>Thanks</div><d=
+iv>Rahul Kandpal</div><div>08826793081</div></div></div>
+</div></div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><b=
+r><div>Thanks</div><div>Rahul Kandpal</div><div>08826793081</div></div></di=
+v>
+</div>
+
+--94eb2c073e0a66c24a0546d4605e--

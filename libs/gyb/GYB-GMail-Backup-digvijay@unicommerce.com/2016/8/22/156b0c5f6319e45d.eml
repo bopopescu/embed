@@ -1,0 +1,146 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.189.10 with SMTP id x10csp1402266ite;
+        Sun, 21 Aug 2016 22:42:58 -0700 (PDT)
+X-Received: by 10.107.132.199 with SMTP id o68mr21082790ioi.31.1471844578833;
+        Sun, 21 Aug 2016 22:42:58 -0700 (PDT)
+Return-Path: <335C6VxQKAK4RfWjS-gVOfSg-bcfSdZmUccUZS.Qca@doclist.bounces.google.com>
+Received: from mail-it0-x246.google.com (mail-it0-x246.google.com. [2607:f8b0:4001:c0b::246])
+        by mx.google.com with ESMTPS id v68si14546564itd.27.2016.08.21.22.42.55
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Aug 2016 22:42:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 335c6vxqkak4rfwjs-gvofsg-bcfsdzmuccuzs.qca@doclist.bounces.google.com designates 2607:f8b0:4001:c0b::246 as permitted sender) client-ip=2607:f8b0:4001:c0b::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       spf=pass (google.com: domain of 335c6vxqkak4rfwjs-gvofsg-bcfsdzmuccuzs.qca@doclist.bounces.google.com designates 2607:f8b0:4001:c0b::246 as permitted sender) smtp.mailfrom=335C6VxQKAK4RfWjS-gVOfSg-bcfSdZmUccUZS.Qca@doclist.bounces.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=google.com
+Received: by mail-it0-x246.google.com with SMTP id x131so192236634ite.3
+        for <digvijay@unicommerce.com>; Sun, 21 Aug 2016 22:42:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:reply-to:references:message-id:date:subject:from:to:cc;
+        bh=KQ2s+ml2xEVEjKj4xafAjwEH1vpmsQUyF0AhvPdm8bM=;
+        b=JdVyn+BxMO6xMcaWb8jLAm16JceB856khLOD3776ifMKT5v8Kv0y8KavfMVfj41SAQ
+         CyQBY942fft6Gl124zQHWXyM4FYfRxv0fPTxsm9bKCOr2J8bfqEDj4AGW56/0ZIpC7mL
+         Qe/vWepuhCzf6zWMudQHeHkjtNJo9gEpLElV/XKhKPRcRhnHPOkotVbk4tYfUxDmj25L
+         tK44RI2yodMoGF9KyagWVqsj/1XU1HVT1QhDtBHwIAteZ+rJ00d0dpKF4Z4nDuqw1qw3
+         Ek0X+XCflsKnhNt1CBHptjEBmX0v4NNxSEyQe69F0fWo50QehBgF8luPRksOwgI/8Ycy
+         AcIw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:reply-to:references:message-id:date
+         :subject:from:to:cc;
+        bh=KQ2s+ml2xEVEjKj4xafAjwEH1vpmsQUyF0AhvPdm8bM=;
+        b=mcpwVwQ6hO95ix9eF2b6OmPTK2PUZdFgQsdb5McN7EAQ793n1a+mXcIW1waYvjy2x7
+         BOqqyQ/QBAZZcUxeEvEVz2ktofUVzCVvDcCTYEX+A+azsIphQpjGG0oEGdkGtxfWvZYl
+         S2xyZd/YvA9iUcahIhQBFglrScgp3Q1uQUT25AXKgcJbBtgkRtzknOFJfujAE7APiBdy
+         VcJGPs5AmaP4LZqKO1r17sNFwSOkd/aQU46AIqMRpLuKY4pscZX+S9sPe8jTspWiBiq4
+         nrfqWHS46n+uatQJFagkfEd/posLFP+/Oand6QNKEN3XVJflLsxvLc4t4++3uYJg6h07
+         njDA==
+X-Gm-Message-State: AEkoouv7OdTmlhOgDOKEYpyhhU59xiXAlKSQBUVi4PzrBHW37QENHoqdGQQsiGtjTUZ6b2hCPN82kQ==
+MIME-Version: 1.0
+X-Received: by 10.36.149.9 with SMTP id m9mr13237664itd.10.1471844575384; Sun,
+ 21 Aug 2016 22:42:55 -0700 (PDT)
+Reply-To: Aditya Harit <aditya@unicommerce.com>
+X-Originating-IP: 220.227.197.42
+X-No-Auto-Attachment: 1
+References: <097e3191-b392-4339-9ed0-4dc24ecc41f3@docs-share.google.com>
+Message-ID: <94eb2c0665341495c8053aa28568@google.com>
+Date: Mon, 22 Aug 2016 05:42:55 +0000
+Subject: onBoardingProcess.txt
+From: "Aditya Harit (via Google Drive)" <drive-shares-noreply@google.com>
+To: digvijay@unicommerce.com
+Cc: karangarg@unicommerce.com
+Content-Type: multipart/alternative; boundary=94eb2c0665341495ab053aa28565
+
+--94eb2c0665341495ab053aa28565
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+I've shared an item with you:
+
+onBoardingProcess.txt
+https://drive.google.com/a/unicommerce.com/file/d/0B-HCe_8XK7F9U2JZQnIyUTFTRktwc1lJR04yNUVoTndabjRv/view?usp=sharing&ts=57ba90df
+
+It's not an attachment -- it's stored online. To open this item, just click  
+the link above.
+
+Do your changes here.
+
+--94eb2c0665341495ab053aa28565
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div style=3D"width: 100%; padding: 24px 0 16px 0;=
+ background-color: #f5f5f5; text-align: center;"><div style=3D"display: inl=
+ine-block; width: 90%; max-width: 680px;min-width: 280px; text-align: left;=
+ font-family: Roboto,Arial,Helvetica,sans-serif;"><div style=3D"height: 0px=
+;" dir=3D"ltr"></div><div style=3D"display: block; padding: 0 2px;"><div st=
+yle=3D"display: block; background: #fff; height: 2px;"></div></div><div sty=
+le=3D"border-left: 1px solid #f0f0f0; border-right: 1px solid #f0f0f0;"><di=
+v style=3D"padding: 24px 32px 24px 32px; background:#fff; border-right: 1px=
+ solid #eaeaea; border-left: 1px solid #eaeaea;" dir=3D"ltr"><div style=3D"=
+font-size: 14px; line-height: 18px; color: #444;"><a href=3D"mailto:aditya@=
+unicommerce.com" style=3D"color:inherit;text-decoration:none">Aditya Harit<=
+/a> has shared the following file:</div><div style=3D"height: 10px;"></div>=
+<div style=3D"font-size: 18px; display: table;"><div style=3D"display: tabl=
+e-row; border-bottom: 4px solid #fff;"><span style=3D"display: table-cell;"=
+><div style=3D"height: 32px;"><img src=3D"https://ssl.gstatic.com/docs/docu=
+ments/share/images/services/textdoc-2.png" aria-label=3D"Item" style=3D"ver=
+tical-align: middle; max-width: 24px;"/></div></span><span style=3D"display=
+: table-cell; padding-left: 12px;"><a href=3D"https://drive.google.com/a/un=
+icommerce.com/file/d/0B-HCe_8XK7F9U2JZQnIyUTFTRktwc1lJR04yNUVoTndabjRv/view=
+?usp=3Dsharing_eid&amp;ts=3D57ba90df" style=3D"color: #3367d6; text-decorat=
+ion: none; vertical-align: middle;">onBoardingProcess.txt</a><div itemprop=
+=3D"action" itemscope itemtype=3D"http://schema.org/ViewAction"><meta itemp=
+rop=3D"url" content=3D"https://drive.google.com/a/unicommerce.com/file/d/0B=
+-HCe_8XK7F9U2JZQnIyUTFTRktwc1lJR04yNUVoTndabjRv/view?usp=3Dsharing_eid&amp;=
+ts=3D57ba90df"></div></span></div></div><div style=3D"height: 16px;"></div>=
+<div style=3D"height: 1px; background-color: #eee;"></div><div style=3D"hei=
+ght: 24px;"></div><div style=3D"display: table-row;"><img style=3D"display:=
+ table-cell;" width=3D"50" src=3D"https://ssl.gstatic.com/s2/profiles/image=
+s/silhouette64.png" alt=3D"Unknown profile photo"><span style=3D"display: t=
+able-cell; vertical-align: top; padding-left: 16px; font-size: 13px; line-h=
+eight: 18px; max-width: 496px; color: #262626;">Do your changes here.</span=
+></div><div style=3D"height: 32px;"></div><div><a href=3D"https://drive.goo=
+gle.com/a/unicommerce.com/file/d/0B-HCe_8XK7F9U2JZQnIyUTFTRktwc1lJR04yNUVoT=
+ndabjRv/view?usp=3Dsharing_eid&amp;ts=3D57ba90df" target=3D"_blank" style=
+=3D"background-color: #4d90fe; border: 1px solid #3079ed; border-radius: 2p=
+x; color: white; display: inline-block; font-family: Roboto,Arial,Helvetica=
+,sans-serif; font-size: 11px; font-weight: bold; height: 29px; line-height:=
+ 29px; min-width: 54px; outline: 0px; padding: 0 8px; text-align: center; t=
+ext-decoration: none">Open</a></div></div></div><table style=3D"width: 100%=
+; border-collapse: collapse;" role=3D"presentation"><tr><td style=3D"paddin=
+g: 0px;"><table style=3D"border-collapse: collapse; width: 3px;" role=3D"pr=
+esentation"><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"p=
+adding: 0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0p=
+x;"></td><td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"padding: 0px;"></td><=
+/tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: =
+0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td=
+><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td></tr><tr =
+height=3D"1"><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D"padding: 0px;"></=
+td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td wid=
+th=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td></tr></table></td=
+><td style=3D"width: 100%; padding: 0px;"><div style=3D"height: 1px; width:=
+ auto; border-top: 1px solid #ddd; background:#eaeaea; border-bottom: 1px s=
+olid #f0f0f0;"></div></td><td style=3D"padding: 0px;"><table style=3D"borde=
+r-collapse: collapse; width: 3px;" role=3D"presentation"><tr height=3D"1"><=
+td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"padding: 0px;"></td><td width=
+=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" bgc=
+olor=3D"#f0f0f0" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><td wid=
+th=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" b=
+gcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"=
+#f0f0f0" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><td width=3D"1"=
+ bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=
+=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#f5f5f=
+5" style=3D"padding: 0px;"></td></tr></table></td></tr></table><table style=
+=3D"padding: 14px 10px 0 10px;" role=3D"presentation" dir=3D"ltr"><tr><td s=
+tyle=3D"width: 100%; font-size:11px; font-family: Roboto,Arial,Helvetica,sa=
+ns-serif; color:#646464; line-height: 20px; min-height: 40px; vertical-alig=
+n: middle;">Google Drive: Have all your files within reach from any device.=
+ <br/>Google Inc. 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</=
+td><td style=3D"padding-left: 20px; vertical-align: middle;"><a href=3D"htt=
+ps://drive.google.com" target=3D"_blank"><img src=3D"https://www.gstatic.co=
+m/images/branding/googlelogo/1x/googlelogo_tm_black54_color_96x40dp.png" wi=
+dth=3D"96" alt=3D"Logo for Google Drive" border=3D"0"></a></td></tr></table=
+></div></div></body></html>
+--94eb2c0665341495ab053aa28565--

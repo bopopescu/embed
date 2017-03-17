@@ -1,0 +1,89 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1418448qgd;
+        Mon, 19 Dec 2016 18:18:22 -0800 (PST)
+X-Received: by 10.129.71.214 with SMTP id u205mr13742831ywa.197.1482200302634;
+        Mon, 19 Dec 2016 18:18:22 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-yw0-x230.google.com (mail-yw0-x230.google.com. [2607:f8b0:4002:c05::230])
+        by mx.google.com with ESMTPS id b206si593050ybg.173.2016.12.19.18.18.22
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 19 Dec 2016 18:18:22 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:4002:c05::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-yw0-x230.google.com with SMTP id a10so75287489ywa.3
+        for <digvijay@unicommerce.com>; Mon, 19 Dec 2016 18:18:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=from:mime-version:references:in-reply-to:date:message-id:subject:to
+         :cc;
+        bh=oEeIXqF/AUobFkn1k9AUN18kPeMi0wOLRzhncDW3nl8=;
+        b=uc893zn1xVhdZS3KGqoMe3FjO7n0scOavesjUNLhFgehnivkTKRkqQhiYy11KiI79R
+         MRWjfjLyj9qQpOEx+8pJ1SCkGbjeXAKMf9P8AtqukFAiScyTLkm1OBYJ60Eq/iKVT2Kh
+         vXmiwLXtEnrRY0gHNjcBGceRrQeblf+BIj85GK6TT3UDDwiP8uBAmqGCT8fXN05O3PGo
+         v2HuMdiVeuDra9LZs37yLgkDV7Ur+8MPvVR1/FcZXmM7eXXjs+De+8L24bCiOP/V9ujt
+         8xr4RtXLvId14CJZqEwDhMzTAmE2MmMcB66V5eiPyEalUfvkVH6vckVgskTM4yzd9NzE
+         L/8A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:mime-version:references:in-reply-to:date
+         :message-id:subject:to:cc;
+        bh=oEeIXqF/AUobFkn1k9AUN18kPeMi0wOLRzhncDW3nl8=;
+        b=OY7augzJNbgccipdNjMIsYFoMG5zT/Poc+HSdEy6i6Zx57fpHXtxNI2VcUZBPrKFT1
+         INm8wq2tlXO691QJt2P2QW3czSDfomJB48VsWXGkj/6sFSDx9VqscXuWBlg5Ltcf4MY+
+         m2qlIG1RZBCN2PMquySXph6N5bUt+eHdLTkg7/UCD7p1m1R+qsc3iNat4jz/pZ84Sm/g
+         SL/pUf/JZSd/n+EV5Z50vnhAvz4JOH7rCwhSksOJdBu3YFsS1bAXNunAQ3rLKmMU+cTd
+         FyWcyb0zK8elNEPjio74GpccjLVuMO2WJii7SG2rOz/iY19aRpK64tq97iRY4iCzZ0aY
+         WvDw==
+X-Gm-Message-State: AKaTC02+VsNt8MUJ9brRdOnwZ/xEVc9YLMuuCdWukTUIlRL9YzwMuWyHIN0DJ3MpoEyC7TJSH271LUX4+v2WCw==
+X-Received: by 10.129.57.86 with SMTP id g83mr14280852ywa.247.1482200302053;
+ Mon, 19 Dec 2016 18:18:22 -0800 (PST)
+From: Puneet Sharma <puneet@unicommerce.com>
+Mime-Version: 1.0 (1.0)
+References: <CAJF3soo+SENBxvEz4uNwzc6DbdAunJCx-VNkO3Dg1tByKqetoA@mail.gmail.com>
+In-Reply-To: <CAJF3soo+SENBxvEz4uNwzc6DbdAunJCx-VNkO3Dg1tByKqetoA@mail.gmail.com>
+Date: Tue, 20 Dec 2016 07:48:20 +0530
+Message-ID: <5275527727617738106@unknownmsgid>
+Subject: Re: Wormhole to java 8
+To: Digvijay Sharma <digvijay@unicommerce.com>, Nitin Yadav <nitin@unicommerce.com>
+Cc: "devops@unicommerce.com" <devops@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114c71787d9bca05440da61c
+
+--001a114c71787d9bca05440da61c
+Content-Type: text/plain; charset=UTF-8
+
+Nitin , please take care of this .
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+On 19-Dec-2016, at 11:22 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+Could anyone change the java version of WormholeTest  server to java 8?
+
+--001a114c71787d9bca05440da61c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=
+=3Dutf-8"></head><body dir=3D"auto"><div>Nitin , please take care of this .=
+=C2=A0<br><br><div><span style=3D"color:rgba(0,0,0,0.701961);font-family:UI=
+CTFontTextStyleBody;text-decoration:-webkit-letterpress">Thanks,</span><div=
+ style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text=
+-decoration:-webkit-letterpress">Puneet Sharma</div><div style=3D"color:rgb=
+a(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-decoration:-webkit=
+-letterpress">Unicommerce Esolutions Pvt. Ltd</div><div style=3D"color:rgba=
+(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-decoration:-webkit-=
+letterpress"><a href=3D"tel:+91-7666182895">+91-7666182895</a></div></div><=
+/div><div><br>On 19-Dec-2016, at 11:22 PM, Digvijay Sharma &lt;<a href=3D"m=
+ailto:digvijay@unicommerce.com">digvijay@unicommerce.com</a>&gt; wrote:<br>=
+<br></div><blockquote type=3D"cite"><div><div dir=3D"ltr">Could anyone chan=
+ge the java version of WormholeTest =C2=A0server to java 8?</div>
+</div></blockquote></body></html>
+
+--001a114c71787d9bca05440da61c--

@@ -1,0 +1,62 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1289791qgu;
+        Mon, 30 Jan 2017 01:37:15 -0800 (PST)
+X-Received: by 10.157.46.114 with SMTP id c47mr9515220otd.176.1485769035593;
+        Mon, 30 Jan 2017 01:37:15 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-ot0-x236.google.com (mail-ot0-x236.google.com. [2607:f8b0:4003:c0f::236])
+        by mx.google.com with ESMTPS id k6si5196004otb.237.2017.01.30.01.37.15
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jan 2017 01:37:15 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-ot0-x236.google.com with SMTP id f9so238513669otd.1
+        for <digvijay@unicommerce.com>; Mon, 30 Jan 2017 01:37:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=JJo3sBqC+krwNfMbq0ZEhOkL8Skz8MpOutljUXhHCG4=;
+        b=NBXC87Cg+GkzwVmkVzDlvtmU4MMX8fgLeOrHmYmLX+WAspG/R53XM/Dexei47sV53G
+         h0/WNOqA+mc5/Y7ItgK2CkQfcjBZnIqxRmfX1b8YLf7trI3mJ4AGVfUNsQIyF+f5ymtg
+         8b6o9X8d/MEevW2ImZPCymVdytpDvRj1ga0L39wscIxki0mbppY4oU/SG9YUobzXo2Yb
+         KyqhRA69c0K7DtRFAsGIoiZUKTn7+hSw4htYQB90B1Tp7AiuElVWr//duHt/Zb316U85
+         TAkNSgRT7v/6YLT93VZbFuAiXA82xhE01PUvHmH6iydEGYZzwoR0BJxbHBDL2NT1l2r+
+         1SJw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=JJo3sBqC+krwNfMbq0ZEhOkL8Skz8MpOutljUXhHCG4=;
+        b=jfELfCoQUzMaYxPU6QSw3Oq1ufO7NSOXh886pVT7aqLcWfQvU9SfG0uj4IqoXDKAdD
+         GCExt6SBbU3QL8SFmUQUA7cE4ijQLdAj9T1wf1e5MeeaH3Blv2W27q+8Gu6FuFv10qSO
+         1XsanKdHZHgO1SvSBEANz3p44umJdZTDMxVVfcYh4DIrOJUA7MVKliycNbF8Up/GpHlU
+         6B9aVcxHoahGWNsrmxktzNkB+AzlWyUR4ufhz1c795RnHQHHIXXVYmnnoS9hxpZXNtD4
+         8oUjdtQgK52XQJEZy61+CLfLU/DeovaACKziP0W/hlUARjbEnvfMy5ATaVDBjF5eU/f0
+         GRhA==
+X-Gm-Message-State: AIkVDXLfHCwLxQynyeqYGh7/L9BrARTaVioalLmp26pf2/UprnzkNOXTOFzmWrhzdYp9Gz3ie8/9VUCy8LEdfQ==
+X-Received: by 10.157.1.242 with SMTP id e105mr9403948ote.21.1485769035224;
+ Mon, 30 Jan 2017 01:37:15 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Mon, 30 Jan 2017 01:37:14 -0800 (PST)
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 30 Jan 2017 15:07:14 +0530
+Message-ID: <CA+zaFGh8kGSws-gKzXUpgsi_QsnqQDov7t4CD0Q4Tdk6E7Zt5Q@mail.gmail.com>
+Subject: Payment Reconciliation for Flipkart FA is live now.
+To: Varad Singhal <varad@unicommerce.com>, Kapil Makhija <kapil@unicommerce.com>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c03b5f890544405474c8f35
+
+--94eb2c03b5f890544405474c8f35
+Content-Type: text/plain; charset=UTF-8
+
+- Sunny
+
+--94eb2c03b5f890544405474c8f35
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br><div><br></div><div>- Sunny</div></div>
+
+--94eb2c03b5f890544405474c8f35--

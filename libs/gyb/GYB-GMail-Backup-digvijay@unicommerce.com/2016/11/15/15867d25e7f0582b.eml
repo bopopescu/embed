@@ -1,0 +1,77 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1551875qge;
+        Tue, 15 Nov 2016 03:49:49 -0800 (PST)
+X-Received: by 10.55.20.164 with SMTP id 36mr21064596qku.86.1479210589772;
+        Tue, 15 Nov 2016 03:49:49 -0800 (PST)
+Return-Path: <sagar@unicommerce.com>
+Received: from mail-qk0-x22c.google.com (mail-qk0-x22c.google.com. [2607:f8b0:400d:c09::22c])
+        by mx.google.com with ESMTPS id m1si12250679qtd.80.2016.11.15.03.49.49
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 15 Nov 2016 03:49:49 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22c is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) client-ip=2607:f8b0:400d:c09::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22c is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) smtp.mailfrom=sagar@unicommerce.com
+Received: by mail-qk0-x22c.google.com with SMTP id q130so131779402qke.1
+        for <digvijay@unicommerce.com>; Tue, 15 Nov 2016 03:49:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=8kTSQD6rNLqJgbSl5PKu8wSJkMdJd9xVUcL+6gcGw0w=;
+        b=EEUl292XYFFv4OUWEJipaHKkTREhxZIEjpm8CymrunpeFQ2g3Ec2pvaiBX0cz0aCRt
+         9+UN5XIaPwfNksXewmqnC4VgsKCyeU+AxBih0/XBRa1eX/CYbma0x5dof/nqA4qVgA2G
+         b7Sp3Ic67vxN5axj+/6oF7NjfmhuYYEx+1KHheg2bDzEDGZIk8CZ09P4uPta361sl9NA
+         YJmAq4LuvkvuTWJx9M1QgUDyRqqHglSJWSSEZ1AfqjsWuoVNPdBz2E3E8lYQS9xTS9Mf
+         ztb0KlPHDFAlAz5QAVMw3i9jz8WJvEDhStGvW+FEtNcKcOJPK/DHBXna8goyL2+WA5jv
+         Djog==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=8kTSQD6rNLqJgbSl5PKu8wSJkMdJd9xVUcL+6gcGw0w=;
+        b=ZZP+vggjjJm4GlZMmVu2N6BwY9IK7HQrMzvKKGJaqREUnj11LGdnePy5z4rBPcgUHh
+         RNdvWXf/NUVqLbHhdOZGDeFuWLKdextZBZ3kbo0pfV0IbCoFiTCmZAEsSKDO//VF+xod
+         gUrdEqVAqd5z/yUQfZNuGG7zDqJLof/4N+lwUkfOs9yAXQr2yqDRq8aDYWtJ92v0qu/I
+         llB3yirmSKM0Jphx75Vvvy75lDoq4BvtSAEcecGgiywJR2VmsRTohcqizOGCuS8fUpg/
+         GcSofCYd7/9C1rZmPxojT8saanQTs0wBf3MWtwnMT9oEVt3o2KTJd4SowgOpu7KnL4Wj
+         7qDg==
+X-Gm-Message-State: ABUngvdMrgCJaKSBX5hd14jdn4E6ijQc7wRcP6gzq6Czk/hukKge0Zttdb6xzUJzvV+s8pz6e9fGsgNm3/pLlQ==
+X-Received: by 10.55.101.151 with SMTP id z145mr20825287qkb.35.1479210589347;
+ Tue, 15 Nov 2016 03:49:49 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.163.166 with HTTP; Tue, 15 Nov 2016 03:49:48 -0800 (PST)
+From: Sagar Sahni <sagar@unicommerce.com>
+Date: Tue, 15 Nov 2016 17:19:48 +0530
+Message-ID: <CAAgrUr8pR5nKgzxh=meF2LpF7Dz6HipUxSGzUnwjF2i0PuiA4w@mail.gmail.com>
+Subject: :)
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a11482a72ba14120541558d8a
+
+--001a11482a72ba14120541558d8a
+Content-Type: multipart/alternative; boundary=001a11482a72ba140e0541558d88
+
+--001a11482a72ba140e0541558d88
+Content-Type: text/plain; charset=UTF-8
+
+
+
+--001a11482a72ba140e0541558d88
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+
+--001a11482a72ba140e0541558d88--
+--001a11482a72ba14120541558d8a
+Content-Type: text/csv; charset=US-ASCII; name="Item Master (1).csv"
+Content-Disposition: attachment; filename="Item Master (1).csv"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_ivjfsg5i0
+
+Q2F0ZWdvcnkgQ29kZSosUHJvZHVjdCBDb2RlKixOYW1lKixEZXNjcmlwdGlvbixTY2FuIElkZW50
+aWZpZXIsTGVuZ3RoIChtbSksV2lkdGggKG1tKSxoZWlnaHQgKG1tKSxXZWlnaHQgKGdtcyksZWFu
+LHVwYyxpc2JuLGNvbG9yLGJyYW5kLHNpemUsUmVxdWlyZXMgQ3VzdG9taXphdGlvbixNaW4gT3Jk
+ZXIgU2l6ZSxUYXggVHlwZSBDb2RlLFRhZ3MsVEFULEltYWdlIFVybCxQcm9kdWN0IFBhZ2UgVVJM
+LEl0ZW0gRGV0YWlsIEZpZWxkcyxNUlAsQmFzZSBQcmljZSxFbmFibGVkLFJlc3luYyBJbnZlbnRv
+cnksVHlwZSxDb21wb25lbnQgUHJvZHVjdCBDb2RlLENvbXBvbmVudCBRdWFudGl0eSxDb21wb25l
+bnQgUHJpY2UsdmlydHVhbGludixsaW1pdGVk
+--001a11482a72ba14120541558d8a--

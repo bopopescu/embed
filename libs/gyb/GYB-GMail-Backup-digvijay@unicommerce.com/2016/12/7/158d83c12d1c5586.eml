@@ -1,0 +1,101 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp194833qgd;
+        Tue, 6 Dec 2016 23:42:45 -0800 (PST)
+X-Received: by 10.129.123.196 with SMTP id w187mr71811257ywc.212.1481096565619;
+        Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+Return-Path: <tech+bncBC4YJAHS64FBB5P2T3BAKGQEB2FDUJY@unicommerce.com>
+Received: from mail-yw0-x246.google.com (mail-yw0-x246.google.com. [2607:f8b0:4002:c05::246])
+        by mx.google.com with ESMTPS id c84si7022815ywb.272.2016.12.06.23.42.45
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbc4yjahs64fbb5p2t3bakgqeb2fdujy@unicommerce.com) client-ip=2607:f8b0:4002:c05::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbc4yjahs64fbb5p2t3bakgqeb2fdujy@unicommerce.com) smtp.mailfrom=tech+bncBC4YJAHS64FBB5P2T3BAKGQEB2FDUJY@unicommerce.com
+Received: by mail-yw0-x246.google.com with SMTP id t11sf468940418ywe.3
+        for <digvijay@unicommerce.com>; Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=JIkXdhiP74lOw9a35xHGHFuDKQAH2D4gsdnRkct7LDc=;
+        b=xEWGml4J7CQoVz4UmY8uoHgKCP/+R2TeH6yp8fQseh6oADpCIpCl30uISkaT9Z373x
+         x5I23RC9Pe2rV15C8aMmXahszR79RGeLM34x7POE+QgKznXn9xIBkFNEKMFnctQQ1WdL
+         qjYRJwbpNMKJraIJV1j0wVwM0JS1/uk9p6Ou8ddHIxtzsC2PraEK1rNp9mmhgM9VC1k2
+         5e/t52OduCoczvRHSo02LIpdBzFJLm4g/C4RkrkMA/XvrkSl/jdNFOjja8V3GqU5cT8z
+         wjLLNwRuve0MxtNCiXM4iLQD5ncO+8PLn6Y2VygDq/El2lPzMEu68iTuYT+jFah9agnm
+         xLMw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=JIkXdhiP74lOw9a35xHGHFuDKQAH2D4gsdnRkct7LDc=;
+        b=TJXN6Ib2eRrXcJWekFb2QhbdGQes9oMKe9cjcQlzAbYt9h3o1ic40/x/duFhvyAPBw
+         OfphhFodaXBRcLun4kCUMBmhKizW7a96MXkvRwH4B+4xU/X5kTkp9fnjH7ksF7+ewakZ
+         D7d6kyOQHe7Q4pkhgpd578zhhlcBvqQNjZOlk4beA9fUoV8baegc6K4WTQKl8Aw9EaPP
+         zAD/fsj15Nlhb8fwescYL1xhqRq5Lv9F1iK1pH2ZlWdSgHLlpp0hr0wx1X0hNfVUzq3u
+         RSZLCWjQNhmqAdEensFDNd2x0hdTJlnHRu/JXRrrfNuAD/K6pIOi+d5vxPHTHAdKVnqD
+         ZRVQ==
+X-Gm-Message-State: AKaTC03p+4vHXuLjC6Ipp5lUhMgyjwtLqkQf0RkKGFbDMh3b0cdYop27hPcReK+YJlxRaA==
+X-Received: by 10.129.94.213 with SMTP id s204mr17208786ywb.4.1481096565270;
+        Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.46.111 with SMTP id c44ls3081588otd.21.gmail; Tue, 06 Dec
+ 2016 23:42:45 -0800 (PST)
+X-Received: by 10.55.76.150 with SMTP id z144mr56138799qka.194.1481096565117;
+        Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+Received: from mail-qt0-x231.google.com (mail-qt0-x231.google.com. [2607:f8b0:400d:c0d::231])
+        by mx.google.com with ESMTPS id t1si13828561qkf.231.2016.12.06.23.42.45
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c0d::231;
+Received: by mail-qt0-x231.google.com with SMTP id p16so369658238qta.0
+        for <tech@unicommerce.com>; Tue, 06 Dec 2016 23:42:45 -0800 (PST)
+X-Received: by 10.200.33.252 with SMTP id 57mr66173271qtz.255.1481096564882;
+ Tue, 06 Dec 2016 23:42:44 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.0.209 with HTTP; Tue, 6 Dec 2016 23:42:44 -0800 (PST)
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Wed, 7 Dec 2016 13:12:44 +0530
+Message-ID: <CAEixeD8JzcZvHm3mo+sv+g6PUwyUV4wDkmARa50T3X4XKAT6QA@mail.gmail.com>
+Subject: Lunch party
+To: Tech Team <tech@unicommerce.com>, Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, 
+	Sagar Shani <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1140dd1ca0d17405430caa80
+X-Original-Sender: vikas@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best
+ guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a1140dd1ca0d17405430caa80
+Content-Type: text/plain; charset=UTF-8
+
+We are planning a lunch outing for tomorrow.
+
+Khana mat le ke ana :)
+
+--001a1140dd1ca0d17405430caa80
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><span style=3D"font-size:12.8px">We are planning a=C2=A0</=
+span><span class=3D"gmail-il" style=3D"font-size:12.8px">lunch</span><span =
+style=3D"font-size:12.8px">=C2=A0outing for tomorrow.</span><div><span styl=
+e=3D"font-size:12.8px"><br></span></div><div><span style=3D"font-size:12.8p=
+x">Khana mat le ke ana :)<br></span><div><span style=3D"font-size:12.8px"><=
+br></span></div><div><span style=3D"font-size:12.8px"><br></span></div><div=
+><span style=3D"font-size:12.8px"><br></span></div></div></div>
+
+--001a1140dd1ca0d17405430caa80--

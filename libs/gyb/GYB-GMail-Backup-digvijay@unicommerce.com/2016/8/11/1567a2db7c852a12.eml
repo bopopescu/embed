@@ -1,0 +1,775 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp140133oic;
+        Thu, 11 Aug 2016 08:17:11 -0700 (PDT)
+X-Received: by 10.37.206.194 with SMTP id x185mr6700686ybe.101.1470928631672;
+        Thu, 11 Aug 2016 08:17:11 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yw0-x233.google.com (mail-yw0-x233.google.com. [2607:f8b0:4002:c05::233])
+        by mx.google.com with ESMTPS id 16si698692ybc.241.2016.08.11.08.17.11
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Aug 2016 08:17:11 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::233 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c05::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::233 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yw0-x233.google.com with SMTP id r9so4123755ywg.0
+        for <digvijay@unicommerce.com>; Thu, 11 Aug 2016 08:17:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=5zUXymgYn+dVvq5xitDYTl4UhE6MtMurbQHX6slYVHs=;
+        b=13pR7qGdi5X5Rfc4kz8W1NeduGRMaxHQ07hoDACxUZk7bnRH9l1Q0XW9w1H3+AnUDF
+         qgTAb3ROq1Qb0k2QLAR/CwrZikFIUw2//v8d2s9ftfsgdCH9dbS8ya81MHgCAd84ulTP
+         0r/BNas42sWxq6F1o7DlUBG+2rRA+sekMcv5/cbmwCvim98IDHa2wY/8RK5oJDyx+yIp
+         nAeg5XBCMtfh58JJ11zypArekJYqREcETbiI5XVq3Ngjk/lULe2q1naFG3i/3B34LANb
+         W4BgtzMz4Q9V0W6plW0B9M4p0iOjhi5h8QZKdiFesAGPuJXmiKhL4bIqx8rQL3TE/P62
+         84Mw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=5zUXymgYn+dVvq5xitDYTl4UhE6MtMurbQHX6slYVHs=;
+        b=BuRJKc/HWVrTnb5j9eg5q/zPUkOySqQkZ0uYIOgZmVyQCc2OUzmw+xgh0E4qSNrBt4
+         Lxczv3lgQINxc3jRlZq4Fhcn27j7YKYCa9TZfSOOGLj+AcKvUy78EKLbqdrT+kdcsJa7
+         zzt2AGMnvr8ATBf6ouQszUeUkkmXr8DqmczDJOKqJ+tj7w2oBW49+CMBQ4tVy+bGvK+R
+         xWmxuoZ/juXpsVOHJLLlJRYXhVGmUW3OL9rQQ0psinlGMFEfrNkKmqTkIp7+pOXx28lU
+         gUmBx8KrCkT9I2SZxYS2xZLJR8gWVQkEkZFF/VONHs3TpDhuLGXtvp42beycJjn/kejK
+         PfQA==
+X-Gm-Message-State: AEkoous2e+7+HRxfZ0dRgaZNMyTjubucN2ePMipu8U68LuRn7ZokHoMemalCjnFyiv+ZD/wgcvSMiPYtETayXw==
+X-Received: by 10.13.251.66 with SMTP id l63mr7096532ywf.69.1470928631175;
+ Thu, 11 Aug 2016 08:17:11 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.204.78 with HTTP; Thu, 11 Aug 2016 08:17:10 -0700 (PDT)
+In-Reply-To: <CALXgVftZ4Asdve_k7wQqitndrXwMYequGShPOzcENDxv4o=5zA@mail.gmail.com>
+References: <4c348e798cdd48d553afe24bdafebf77@mail.gmail.com> <CALXgVftZ4Asdve_k7wQqitndrXwMYequGShPOzcENDxv4o=5zA@mail.gmail.com>
+From: karan Garg <karangarg@unicommerce.com>
+Date: Thu, 11 Aug 2016 20:47:10 +0530
+Message-ID: <CAG=LqmOS0x0h+dFc=E5PhUX-tDTu-AfNVa7TG5Xv1J6LvXAwDA@mail.gmail.com>
+Subject: Fwd: Existing Route Information
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/related; boundary=94eb2c07e9de8d64080539cd4259
+
+--94eb2c07e9de8d64080539cd4259
+Content-Type: multipart/alternative; boundary=94eb2c07e9de8d64060539cd4258
+
+--94eb2c07e9de8d64060539cd4258
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ----------
+From: Deepak Rao <deepak.rao@snapdeal.com>
+Date: Wed, Aug 10, 2016 at 5:23 PM
+Subject: Fwd: Existing Route Information
+To: karangarg@unicommerce.com
+
+
+
+---------- Forwarded message ----------
+From: Ravi Dhyani <ravi.dhyani@snapdeal.com>
+Date: Fri, Jul 8, 2016 at 2:13 PM
+Subject: Existing Route Information
+To: Harshit Pandey <harshit.pandey@snapdeal.com>
+Cc: Deepak.rao@snapdeal.com
+
+
+Dear Harshit,
+
+
+
+As discussed, please find below the existing route information for your
+reference.
+
+
+
+For further clarification please coordinate with my colleague Mr. Deepak
+Rao (9654457659).
+
+
+
+*S.No*
+
+*Vendor*
+
+*Route*
+
+*Route Follow*
+
+1
+
+OLA
+
+Noida
+
+Noida sec 62 ( Opp fortis) # Shoprix Mall # 12/ 22 Chora More # Dr Group (
+Rajiniganda Chowk) # . Lajpat Nagar # Snapdeal
+
+2
+
+WTI
+
+Dwarka
+
+Snapdeal# Sec 9 Metro Station
+
+3
+
+ZIT
+
+Dwarka
+
+Snapdeal# Sec 9 Metro Station
+
+4
+
+Rapid
+
+Rapid Metro
+
+Snapdeal ASF Center# ASF Tower# Rapid Metro Station
+
+5
+
+Ola (Free wifi Service)
+
+Faridabad
+
+Hill View Apartment SEC 46 FBD # Gulmohar Apartment # Aashiana Apartment #
+Surbhi apartment SEC 25 FBD # Vasundhara apartment # Prateek Kunj # Bristol
+Chowk GGN # Sikanderpur Metro # MG Road Metro # Iffco Chowk # Airtel #
+Polaris # Snapdeal
+
+6
+
+Ola (Free wifi service)
+
+Faridabad
+
+Ballabhgarh Bus Stand # Escorts Mujesar SEC 6 FBD # Bata Chowk # Neelam
+Chowk # B K Chowk # Sainik Chowk SEC 12 GGN # Paras Quartier SEC 56 GGN #
+Bristol Chowk GGN # Sikanderpur Metro # MG Road Metro # Iffco Chowk #
+Polaris # Snapdeal
+
+7
+
+OLA
+
+Sikander pur Metro to ASF
+
+Sikanderpur to ASF
+
+8
+
+OLA
+
+Palam Vihar to ASF
+
+Palam Vihar to ASF
+
+9
+
+Shuttle.com
+
+Kalandi Kunj
+
+Kalindikunj, Apollo Jasola, Okhla Tank, Modi Mil, Nehru Place, Pompas
+Enclave, Hauz Khas, & ASF Centre
+
+10
+
+OLA
+
+East of kailash
+
+East of Kailash , Malviya Nagar & ASF Centre
+
+
+
+
+
+
+
+Regards,
+
+
+
+
+*Ravi Dhyani**Administration*
+
+M: +91 9910062833 | T: 0124-4330000 | EXT: 10242
+ASF Centre A | Udyog Vihar Phase IV |
+Gurgaon | Haryana | India
+
+[image: Description:
+http://i1.sdlcdn.com/img/marketing-mailers/mailer/2015/MKT/refer_23dec/imag=
+es/sd_logo_23dec.png]
+
+
+
+
+
+*Disclaimer:* This communication is for the sole use of the addressee and
+is confidential and privileged information. If you are not the intended
+recipient of this communication, you are prohibited from disclosing it and
+are required to delete it forthwith. Please note that the contents of this
+communication do not necessarily represent the views of Jasper Infotech
+Private Limited ("Company"). E-mail transmission cannot be guaranteed to be
+secure or error-free as information could be intercepted, corrupted, lost,
+destroyed, arrive late or incomplete, or contain viruses. The Company,
+therefore, does not accept liability for any loss caused due to this
+communication. *Jasper Infotech Private Limited, Registered Office: 1st
+Floor, Plot 238, Okhla Industrial Estate, New Delhi - 110020 INDIA CIN:
+U72300DL2007PTC168097*
+
+
+
+
+
+
+
+
+
+--=20
+
+*Deepak Rao*
+
+*Administration*
+
+*Appreciate Your Colleague
+<http://hrapps.snapdeal.com/unify/Rnr.aspx>**[image:
+Description:
+http://i1.sdlcdn.com/static/img/marketing-mailers/mailer/2016/UserGrowth/pi=
+ncode_31march/appreciate.jpg]*
+<http://hrapps.snapdeal.com/unify/Rnr.aspx>
+
+M:- +91 965447659 | T: 0124 =E2=80=93 6600000 | EXT :- 12548
+
+ASF Centre A | Ground Floor | Udyog Vihar Phase IV |
+Gurgaon | Haryana | India
+
+
+
+
+
+*Disclaimer:* This communication is for the sole use of the addressee and
+is confidential and privileged information. If you are not the intended
+recipient of this communication, you are prohibited from disclosing it and
+are required to delete it forthwith. Please note that the contents of this
+communication do not necessarily represent the views of Jasper Infotech
+Private Limited ("Company"). E-mail transmission cannot be guaranteed to be
+secure or error-free as information could be intercepted, corrupted, lost,
+destroyed, arrive late or incomplete, or contain viruses. The Company,
+therefore, does not accept liability for any loss caused due to this
+communication. *Jasper Infotech Private Limited, Registered Office: 1st
+Floor, Plot 238, Okhla Industrial Estate, New Delhi - 110020 INDIA CIN:
+U72300DL2007PTC168097*
+
+
+
+--=20
+Regards,
+Karan Garg
+
+--94eb2c07e9de8d64060539cd4258
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Deepak Rao</b> <span di=
+r=3D"ltr">&lt;<a href=3D"mailto:deepak.rao@snapdeal.com">deepak.rao@snapdea=
+l.com</a>&gt;</span><br>Date: Wed, Aug 10, 2016 at 5:23 PM<br>Subject: Fwd:=
+ Existing Route Information<br>To: <a href=3D"mailto:karangarg@unicommerce.=
+com">karangarg@unicommerce.com</a><br><br><br><div dir=3D"ltr"><br><div cla=
+ss=3D"gmail_quote">---------- Forwarded message ----------<br>From: <b clas=
+s=3D"gmail_sendername">Ravi Dhyani</b> <span dir=3D"ltr">&lt;<a href=3D"mai=
+lto:ravi.dhyani@snapdeal.com" target=3D"_blank">ravi.dhyani@snapdeal.com</a=
+>&gt;</span><br>Date: Fri, Jul 8, 2016 at 2:13 PM<br>Subject: Existing Rout=
+e Information<br>To: Harshit Pandey &lt;<a href=3D"mailto:harshit.pandey@sn=
+apdeal.com" target=3D"_blank">harshit.pandey@snapdeal.com</a>&gt;<br>Cc: <a=
+ href=3D"mailto:Deepak.rao@snapdeal.com" target=3D"_blank">Deepak.rao@snapd=
+eal.com</a><br><br><br><div lang=3D"EN-IN" link=3D"blue" vlink=3D"purple"><=
+div><p class=3D"MsoNormal">Dear Harshit,</p><p class=3D"MsoNormal">=C2=A0</=
+p><p class=3D"MsoNormal">As discussed, please find below the existing route=
+ information for your reference.</p><p class=3D"MsoNormal">=C2=A0</p><p cla=
+ss=3D"MsoNormal">For further clarification please coordinate with my collea=
+gue Mr. Deepak Rao (9654457659).</p><p class=3D"MsoNormal">=C2=A0</p><table=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"735" style=3D"wi=
+dth:551.0pt;background:white;border-collapse:collapse"><tbody><tr style=3D"=
+height:15.0pt"><td width=3D"64" nowrap valign=3D"bottom" style=3D"width:48.=
+0pt;border:solid windowtext 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5=
+.4pt;height:15.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-a=
+lign:center"><b><span style=3D"font-size:12.0pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;;color:black">S.No</span></b><span style=3D"f=
+ont-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;c=
+olor:#222222"></span></p></td><td width=3D"113" nowrap valign=3D"bottom" st=
+yle=3D"width:85.0pt;border:solid windowtext 1.0pt;border-left:none;backgrou=
+nd:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal"=
+ align=3D"center" style=3D"text-align:center"><b><span style=3D"font-size:1=
+2.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black=
+">Vendor</span></b><span style=3D"font-size:12.0pt;font-family:&quot;Times =
+New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=
+=3D"139" nowrap valign=3D"bottom" style=3D"width:104.0pt;border:solid windo=
+wtext 1.0pt;border-left:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;=
+height:15.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:=
+center"><b><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roma=
+n&quot;,&quot;serif&quot;;color:black">Route</span></b><span style=3D"font-=
+size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color=
+:#222222"></span></p></td><td width=3D"419" valign=3D"bottom" style=3D"widt=
+h:314.0pt;border:solid windowtext 1.0pt;border-left:none;background:yellow;=
+padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal" align=3D"=
+center" style=3D"text-align:center"><b><span style=3D"font-size:12.0pt;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Route Fo=
+llow</span></b><span style=3D"font-size:12.0pt;font-family:&quot;Times New =
+Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td></tr><tr style=
+=3D"height:30.0pt"><td width=3D"64" nowrap valign=3D"bottom" style=3D"width=
+:48.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm=
+ 5.4pt;height:30.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text=
+-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New =
+Roman&quot;,&quot;serif&quot;;color:black">1</span><span style=3D"font-size=
+:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#22=
+2222"></span></p></td><td width=3D"113" nowrap valign=3D"bottom" style=3D"w=
+idth:85.0pt;border-top:none;border-left:none;border-bottom:solid windowtext=
+ 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;heig=
+ht:30.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:cent=
+er"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;=
+,&quot;serif&quot;;color:black">OLA</span><span style=3D"font-size:12.0pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#222222"></s=
+pan></p></td><td width=3D"139" nowrap valign=3D"bottom" style=3D"width:104.=
+0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;b=
+order-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:30.0p=
+t"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><spa=
+n style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;s=
+erif&quot;;color:black">Noida</span><span style=3D"font-size:12.0pt;font-fa=
+mily:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#222222"></span></=
+p></td><td width=3D"419" valign=3D"bottom" style=3D"width:314.0pt;border-to=
+p:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:s=
+olid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:30.0pt"><p class=
+=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"=
+font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black">Noida sec 62 ( Opp fortis) # Shoprix Mall # 12/ 22 Chora More =
+# Dr Group ( Rajiniganda Chowk) # . Lajpat Nagar # Snapdeal</span><span sty=
+le=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&=
+quot;;color:#222222"></span></p></td></tr><tr style=3D"height:15.0pt"><td w=
+idth=3D"64" nowrap valign=3D"bottom" style=3D"width:48.0pt;border:solid win=
+dowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p=
+ class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span sty=
+le=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&=
+quot;;color:black">2</span><span style=3D"font-size:12.0pt;font-family:&quo=
+t;Times New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><t=
+d width=3D"113" nowrap valign=3D"bottom" style=3D"width:85.0pt;border-top:n=
+one;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:soli=
+d windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"M=
+soNormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-=
+size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color=
+:black">WTI</span><span style=3D"font-size:12.0pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=
+=3D"139" nowrap valign=3D"bottom" style=3D"width:104.0pt;border-top:none;bo=
+rder-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid wind=
+owtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNorm=
+al" align=3D"center" style=3D"text-align:center"><span style=3D"font-size:1=
+2.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black=
+">Dwarka</span><span style=3D"font-size:12.0pt;font-family:&quot;Times New =
+Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=3D"4=
+19" valign=3D"bottom" style=3D"width:314.0pt;border-top:none;border-left:no=
+ne;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt=
+;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal" align=3D=
+"center" style=3D"text-align:center"><span style=3D"font-size:12.0pt;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Snapdeal# =
+Sec 9 Metro Station</span><span style=3D"font-size:12.0pt;font-family:&quot=
+;Times New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td></t=
+r><tr style=3D"height:15.0pt"><td width=3D"64" nowrap valign=3D"bottom" sty=
+le=3D"width:48.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0c=
+m 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal" align=3D"center" st=
+yle=3D"text-align:center"><span style=3D"font-size:12.0pt;font-family:&quot=
+;Times New Roman&quot;,&quot;serif&quot;;color:black">3</span><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;color:#222222"></span></p></td><td width=3D"113" nowrap valign=3D"botto=
+m" style=3D"width:85.0pt;border-top:none;border-left:none;border-bottom:sol=
+id windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0=
+cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"te=
+xt-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times Ne=
+w Roman&quot;,&quot;serif&quot;;color:black">ZIT</span><span style=3D"font-=
+size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color=
+:#222222"></span></p></td><td width=3D"139" nowrap valign=3D"bottom" style=
+=3D"width:104.0pt;border-top:none;border-left:none;border-bottom:solid wind=
+owtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4p=
+t;height:15.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-alig=
+n:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman=
+&quot;,&quot;serif&quot;;color:black">Dwarka</span><span style=3D"font-size=
+:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#22=
+2222"></span></p></td><td width=3D"419" valign=3D"bottom" style=3D"width:31=
+4.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt=
+;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.=
+0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><s=
+pan style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot=
+;serif&quot;;color:black">Snapdeal# Sec 9 Metro Station</span><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;color:#222222"></span></p></td></tr><tr style=3D"height:15.0pt"><td wid=
+th=3D"64" nowrap valign=3D"bottom" style=3D"width:48.0pt;border:solid windo=
+wtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p c=
+lass=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;color:black">4</span><span style=3D"font-size:12.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td =
+width=3D"113" nowrap valign=3D"bottom" style=3D"width:85.0pt;border-top:non=
+e;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid =
+windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"Mso=
+Normal" align=3D"center" style=3D"text-align:center"><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:b=
+lack">Rapid</span><span style=3D"font-size:12.0pt;font-family:&quot;Times N=
+ew Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=
+=3D"139" nowrap valign=3D"bottom" style=3D"width:104.0pt;border-top:none;bo=
+rder-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid wind=
+owtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNorm=
+al" align=3D"center" style=3D"text-align:center"><span style=3D"font-size:1=
+2.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black=
+">Rapid Metro</span><span style=3D"font-size:12.0pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=
+=3D"419" valign=3D"bottom" style=3D"width:314.0pt;border-top:none;border-le=
+ft:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext =
+1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt"><p class=3D"MsoNormal" ali=
+gn=3D"center" style=3D"text-align:center"><span style=3D"font-size:12.0pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Snapd=
+eal ASF Center# ASF Tower# Rapid Metro Station</span><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#=
+222222"></span></p></td></tr><tr style=3D"height:75.0pt"><td width=3D"64" n=
+owrap valign=3D"bottom" style=3D"width:48.0pt;border:solid windowtext 1.0pt=
+;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:75.0pt"><p class=3D"Mso=
+Normal" align=3D"center" style=3D"text-align:center"><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:b=
+lack">5</span><span style=3D"font-size:12.0pt;font-family:&quot;Times New R=
+oman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td width=3D"11=
+3" nowrap valign=3D"bottom" style=3D"width:85.0pt;border-top:none;border-le=
+ft:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext =
+1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:75.0pt"><p class=3D"MsoNormal" ali=
+gn=3D"center" style=3D"text-align:center"><span style=3D"font-size:12.0pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Ola (=
+Free wifi Service)</span><span style=3D"font-size:12.0pt;font-family:&quot;=
+Times New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td =
+width=3D"139" nowrap valign=3D"bottom" style=3D"width:104.0pt;border-top:no=
+ne;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid=
+ windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:75.0pt"><p class=3D"Ms=
+oNormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-s=
+ize:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:=
+black">Faridabad</span><span style=3D"font-size:12.0pt;font-family:&quot;Ti=
+mes New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td><td wi=
+dth=3D"419" valign=3D"bottom" style=3D"width:314.0pt;border-top:none;border=
+-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowte=
+xt 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:75.0pt"><p class=3D"MsoNormal" =
+align=3D"center" style=3D"text-align:center"><span style=3D"font-size:12.0p=
+t;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Hi=
+ll View Apartment SEC 46 FBD # Gulmohar Apartment # Aashiana Apartment # Su=
+rbhi apartment SEC 25 FBD # Vasundhara apartment # Prateek Kunj # Bristol C=
+howk GGN # Sikanderpur Metro # MG Road Metro # Iffco Chowk # Airtel # Polar=
+is # Snapdeal</span><span style=3D"font-size:12.0pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;serif&quot;;color:#222222"></span></p></td></tr><tr =
+style=3D"height:60.0pt"><td width=3D"64" nowrap valign=3D"bottom" style=3D"=
+width:48.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4p=
+t 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D=
+"text-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times=
+ New Roman&quot;,&quot;serif&quot;;color:black">6</span><span style=3D"font=
+-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;colo=
+r:#222222"></span></p></td><td width=3D"113" nowrap valign=3D"bottom" style=
+=3D"width:85.0pt;border-top:none;border-left:none;border-bottom:solid windo=
+wtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt=
+;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-align=
+:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&=
+quot;,&quot;serif&quot;;color:black">Ola (Free wifi service)</span><span st=
+yle=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif=
+&quot;;color:#222222"></span></p></td><td width=3D"139" nowrap valign=3D"bo=
+ttom" style=3D"width:104.0pt;border-top:none;border-left:none;border-bottom=
+:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4=
+pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=
+=3D"text-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Ti=
+mes New Roman&quot;,&quot;serif&quot;;color:black">Faridabad</span><span st=
+yle=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif=
+&quot;;color:#222222"></span></p></td><td width=3D"419" valign=3D"bottom" s=
+tyle=3D"width:314.0pt;border-top:none;border-left:none;border-bottom:solid =
+windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm =
+5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-=
+align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New R=
+oman&quot;,&quot;serif&quot;;color:black">Ballabhgarh Bus Stand # Escorts M=
+ujesar SEC 6 FBD # Bata Chowk # Neelam Chowk # B K Chowk # Sainik Chowk SEC=
+ 12 GGN # Paras Quartier SEC 56 GGN # Bristol Chowk GGN # Sikanderpur Metro=
+ # MG Road Metro # Iffco Chowk # Polaris # Snapdeal</span><span style=3D"fo=
+nt-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;co=
+lor:#222222"></span></p></td></tr><tr style=3D"height:60.0pt"><td width=3D"=
+64" nowrap valign=3D"bottom" style=3D"width:48.0pt;border:solid windowtext =
+1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=
+=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"=
+font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black">7</span></p></td><td width=3D"113" nowrap valign=3D"bottom" st=
+yle=3D"width:85.0pt;border-top:none;border-left:none;border-bottom:solid wi=
+ndowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.=
+4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-al=
+ign:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Rom=
+an&quot;,&quot;serif&quot;;color:black">OLA</span></p></td><td width=3D"139=
+" nowrap valign=3D"bottom" style=3D"width:104.0pt;border-top:none;border-le=
+ft:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext =
+1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" ali=
+gn=3D"center" style=3D"text-align:center"><span style=3D"font-size:12.0pt;f=
+ont-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Sikan=
+der pur Metro to ASF</span></p></td><td width=3D"419" valign=3D"bottom" sty=
+le=3D"width:314.0pt;border-top:none;border-left:none;border-bottom:solid wi=
+ndowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.=
+4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-al=
+ign:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Rom=
+an&quot;,&quot;serif&quot;;color:black">Sikanderpur to ASF</span></p></td><=
+/tr><tr style=3D"height:60.0pt"><td width=3D"64" nowrap valign=3D"bottom" s=
+tyle=3D"width:48.0pt;border:solid windowtext 1.0pt;border-top:none;padding:=
+0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" =
+style=3D"text-align:center"><span style=3D"font-size:12.0pt;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;;color:black">8</span></p></td><t=
+d width=3D"113" nowrap valign=3D"bottom" style=3D"width:85.0pt;border-top:n=
+one;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:soli=
+d windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"M=
+soNormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-=
+size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color=
+:black">OLA</span></p></td><td width=3D"139" nowrap valign=3D"bottom" style=
+=3D"width:104.0pt;border-top:none;border-left:none;border-bottom:solid wind=
+owtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4p=
+t;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-alig=
+n:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman=
+&quot;,&quot;serif&quot;;color:black">Palam Vihar to ASF</span></p></td><td=
+ width=3D"419" valign=3D"bottom" style=3D"width:314.0pt;border-top:none;bor=
+der-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windo=
+wtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNorma=
+l" align=3D"center" style=3D"text-align:center"><span style=3D"font-size:12=
+.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"=
+>Palam Vihar to ASF</span></p></td></tr><tr style=3D"height:60.0pt"><td wid=
+th=3D"64" nowrap valign=3D"bottom" style=3D"width:48.0pt;border:solid windo=
+wtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p c=
+lass=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=
+=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&qu=
+ot;;color:black">9</span></p></td><td width=3D"113" nowrap valign=3D"bottom=
+" style=3D"width:85.0pt;border-top:none;border-left:none;border-bottom:soli=
+d windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0c=
+m 5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"tex=
+t-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New=
+ Roman&quot;,&quot;serif&quot;;color:black">Shuttle.com</span></p></td><td =
+width=3D"139" nowrap valign=3D"bottom" style=3D"width:104.0pt;border-top:no=
+ne;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid=
+ windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"Ms=
+oNormal" align=3D"center" style=3D"text-align:center"><span style=3D"font-s=
+ize:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:=
+black">Kalandi Kunj</span></p></td><td width=3D"419" valign=3D"bottom" styl=
+e=3D"width:314.0pt;border-top:none;border-left:none;border-bottom:solid win=
+dowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4=
+pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" style=3D"text-ali=
+gn:center"><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roma=
+n&quot;,&quot;serif&quot;;color:black">Kalindikunj, Apollo Jasola, Okhla Ta=
+nk, Modi Mil, Nehru Place, Pompas Enclave, Hauz Khas, &amp; ASF Centre</spa=
+n></p></td></tr><tr style=3D"height:60.0pt"><td width=3D"64" nowrap valign=
+=3D"bottom" style=3D"width:48.0pt;border:solid windowtext 1.0pt;border-top:=
+none;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" alig=
+n=3D"center" style=3D"text-align:center"><span style=3D"font-size:12.0pt;fo=
+nt-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">10</sp=
+an></p></td><td width=3D"113" nowrap valign=3D"bottom" style=3D"width:85.0p=
+t;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;bor=
+der-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"=
+><p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span =
+style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;;color:black">OLA</span></p></td><td width=3D"139" nowrap valign=3D=
+"bottom" style=3D"width:104.0pt;border-top:none;border-left:none;border-bot=
+tom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm =
+5.4pt 0cm 5.4pt;height:60.0pt"><p class=3D"MsoNormal" align=3D"center" styl=
+e=3D"text-align:center"><span style=3D"font-size:12.0pt;font-family:&quot;T=
+imes New Roman&quot;,&quot;serif&quot;;color:black">East of kailash</span><=
+/p></td><td width=3D"419" valign=3D"bottom" style=3D"width:314.0pt;border-t=
+op:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:=
+solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:60.0pt"><p class=
+=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span style=3D"=
+font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;=
+color:black">East of Kailash , Malviya Nagar &amp; ASF Centre</span></p><p =
+class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span styl=
+e=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&q=
+uot;;color:black">=C2=A0</span></p></td></tr></tbody></table><p class=3D"Ms=
+oNormal">=C2=A0</p><p class=3D"MsoNormal">=C2=A0</p><p class=3D"MsoNormal">=
+<span>Regards,</span></p><table border=3D"1" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"602" style=3D"width:451.5pt;border-top:dashed #a6a8ab 1.0pt=
+;border-left:none;border-bottom:dashed #a6a8ab 1.0pt;border-right:none"><tb=
+ody><tr><td width=3D"5" style=3D"width:3.75pt;border:none;padding:0cm 0cm 0=
+cm 0cm"></td><td width=3D"355" valign=3D"top" style=3D"width:266.25pt;borde=
+r:none;padding:0cm 0cm 0cm 0cm"><table border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%" style=3D"width:100.0%"><tbody><tr style=3D"heig=
+ht:27.0pt"><td style=3D"padding:0cm 0cm 0cm 0cm;height:27.0pt"><p class=3D"=
+MsoNormal" style=3D"line-height:12.0pt"><b><span style=3D"font-size:11.5pt;=
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#fb0229">=C2=A0<=
+/span></b></p><p class=3D"MsoNormal" style=3D"line-height:12.0pt"><b><span =
+style=3D"font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&qu=
+ot;;color:#fb0229">Ravi Dhyani<br></span></b><b><span style=3D"font-size:8.=
+5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black">Admin=
+istration</span></b><b><span style=3D"font-size:11.5pt;font-family:&quot;Ar=
+ial&quot;,&quot;sans-serif&quot;;color:#fb0229"></span></b></p></td></tr><t=
+r style=3D"height:42.0pt"><td style=3D"padding:0cm 0cm 0cm 0cm;height:42.0p=
+t"><p class=3D"MsoNormal" style=3D"line-height:12.0pt"><span style=3D"font-=
+size:8.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#8b8b=
+8b">M: +91 9910062833 | T: 0124-4330000 | EXT: 10242<br>ASF Centre A | Udyo=
+g Vihar Phase IV |=C2=A0<br>Gurgaon | Haryana | India</span></p></td></tr><=
+/tbody></table></td><td width=3D"242" valign=3D"top" style=3D"width:181.5pt=
+;border:none;padding:0cm 0cm 0cm 0cm"><p class=3D"MsoNormal"><img width=3D"=
+219" height=3D"72" src=3D"cid:image001.png@01D1D922.D72CADC0" align=3D"righ=
+t" alt=3D"Description: http://i1.sdlcdn.com/img/marketing-mailers/mailer/20=
+15/MKT/refer_23dec/images/sd_logo_23dec.png"><span style=3D"font-size:9.5pt=
+;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"></span></p></td=
+></tr></tbody></table><p class=3D"MsoNormal"><span>=C2=A0</span></p><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"wi=
+dth:100.0%"><tbody><tr><td style=3D"padding:0cm 0cm 0cm 0cm"><p class=3D"Ms=
+oNormal"><span style=3D"font-size:9.5pt">=C2=A0</span><span style=3D"font-s=
+ize:9.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;"></span=
+></p></td></tr><tr><td style=3D"padding:0cm 0cm 0cm 0cm"><p class=3D"MsoNor=
+mal" style=3D"line-height:9.0pt"><b><span style=3D"font-size:7.0pt;font-fam=
+ily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#a6a8ab">Disclaimer:</sp=
+an></b><span style=3D"font-size:7.0pt;font-family:&quot;Arial&quot;,&quot;s=
+ans-serif&quot;;color:#a6a8ab">=C2=A0This communication is for the sole use=
+ of the addressee and is confidential and privileged information. If you ar=
+e not the intended recipient of this communication, you are prohibited from=
+ disclosing it and are required to delete it forthwith. Please note that th=
+e contents of this communication do not necessarily represent the views of =
+Jasper Infotech Private Limited (&quot;Company&quot;). E-mail transmission =
+cannot be guaranteed to be secure or error-free as information could be int=
+ercepted, corrupted, lost, destroyed, arrive late or incomplete, or contain=
+ viruses. The Company, therefore, does not accept liability for any loss ca=
+used due to this communication.=C2=A0<b>Jasper Infotech Private Limited, Re=
+gistered Office: 1st Floor, Plot 238, Okhla Industrial Estate, New Delhi - =
+110020 INDIA CIN: U72300DL2007PTC168097</b></span></p></td></tr></tbody></t=
+able><p class=3D"MsoNormal"><span>=C2=A0</span></p><table border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100.0%"><tbod=
+y><tr><td style=3D"padding:0cm 0cm 0cm 0cm"></td></tr><tr><td style=3D"padd=
+ing:0cm 0cm 0cm 0cm"></td></tr></tbody></table><p class=3D"MsoNormal"><span=
+>=C2=A0</span></p><p class=3D"MsoNormal">=C2=A0</p></div></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div data-smartmail=3D"gm=
+ail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div=
+ dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D=
+"ltr"><table border=3D"1" cellspacing=3D"0" cellpadding=3D"0" width=3D"602"=
+ style=3D"font-size:12.8px;width:451.5pt;border-top-width:1pt;border-style:=
+dashed none;border-top-color:rgb(166,168,171);border-bottom-width:1pt;borde=
+r-bottom-color:rgb(166,168,171)"><tbody><tr><td width=3D"5" style=3D"width:=
+3.75pt;border:none;padding:0cm"></td><td width=3D"355" valign=3D"top" style=
+=3D"width:266.25pt;border:none;padding:0cm"><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:355px"><tbody><tr st=
+yle=3D"height:27pt"><td style=3D"padding:0cm;height:27pt"><p style=3D"margi=
+n-bottom:12pt;line-height:12pt"><font color=3D"#fb0229" face=3D"Arial, sans=
+-serif"><span style=3D"font-size:15.3333px"><b>Deepak Rao</b></span></font>=
+</p><p style=3D"margin-bottom:12pt;line-height:12pt"><b><span style=3D"font=
+-size:11.5pt;font-family:Arial,sans-serif;color:rgb(31,73,125)">Administrat=
+ion</span></b><span style=3D"font-family:Calibri,sans-serif;color:rgb(31,73=
+,125)"></span></p></td></tr><tr style=3D"height:19.5pt"><td style=3D"paddin=
+g:0cm;height:19.5pt"><p style=3D"line-height:12pt"><b><span style=3D"font-s=
+ize:8.5pt;font-family:Arial,sans-serif;color:rgb(1,95,167)"><a href=3D"http=
+://hrapps.snapdeal.com/unify/Rnr.aspx" style=3D"color:rgb(17,85,204)" targe=
+t=3D"_blank"><span style=3D"color:rgb(1,95,167)">Appreciate Your Colleague=
+=C2=A0</span></a></span></b><a href=3D"http://hrapps.snapdeal.com/unify/Rnr=
+.aspx" style=3D"color:rgb(17,85,204)" target=3D"_blank"><b><span style=3D"f=
+ont-size:8.5pt;font-family:Arial,sans-serif;text-decoration:none"><img bord=
+er=3D"0" width=3D"19" height=3D"19" src=3D"cid:image001.jpg@01D1DC2C.4998AF=
+B0" alt=3D"Description: http://i1.sdlcdn.com/static/img/marketing-mailers/m=
+ailer/2016/UserGrowth/pincode_31march/appreciate.jpg"></span></b></a><span =
+style=3D"font-family:Calibri,sans-serif;color:rgb(31,73,125)"></span></p></=
+td></tr><tr style=3D"height:42pt"><td style=3D"padding:0cm;height:42pt"><p =
+style=3D"line-height:12pt"><span style=3D"font-size:8.5pt;font-family:Arial=
+,sans-serif;color:rgb(139,139,139)">M:- +91 965447659 | T: 0124 =E2=80=93 6=
+600000 | EXT :- 12548</span></p><p style=3D"line-height:12pt"><span style=
+=3D"font-size:8.5pt;font-family:Arial,sans-serif;color:rgb(139,139,139)">AS=
+F Centre A | Ground Floor | Udyog Vihar Phase IV |=C2=A0<br>Gurgaon | Harya=
+na | India</span></p></td></tr></tbody></table></td><td width=3D"242" valig=
+n=3D"top" style=3D"width:181.5pt;border:none;padding:0cm"><p><span style=3D=
+"font-family:Calibri,sans-serif;color:rgb(31,73,125)"></span></p></td></tr>=
+</tbody></table><p><span style=3D"font-size:11pt;font-family:Calibri,sans-s=
+erif;color:rgb(31,73,125)">=C2=A0</span><span style=3D"font-size:11pt;font-=
+family:Calibri,sans-serif;color:rgb(31,73,125)"></span></p><p style=3D"font=
+-size:12.8px"><span style=3D"font-size:12.8px"></span></p><table border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:807px"=
+><tbody><tr><td style=3D"font-family:arial,sans-serif;margin:0px;padding:0c=
+m"><p style=3D"margin:0px"><span style=3D"font-size:13.5pt;font-family:Cali=
+bri,sans-serif;color:black">=C2=A0</span><span style=3D"font-family:Calibri=
+,sans-serif;color:rgb(31,73,125)"></span></p></td></tr><tr><td style=3D"fon=
+t-family:arial,sans-serif;margin:0px;padding:0cm"><p style=3D"margin:0px;li=
+ne-height:9pt"><b><span style=3D"font-size:7pt;font-family:Arial,sans-serif=
+;color:rgb(166,168,171)">Disclaimer:</span></b><span style=3D"font-size:7pt=
+;font-family:Arial,sans-serif;color:rgb(166,168,171)">=C2=A0This communicat=
+ion is for the sole use of the addressee and is confidential and privileged=
+ information. If you are not the intended recipient of this communication, =
+you are prohibited from disclosing it and are required to delete it forthwi=
+th. Please note that the contents of this communication do not necessarily =
+represent the views of Jasper Infotech Private Limited (&quot;Company&quot;=
+). E-mail transmission cannot be guaranteed to be secure or error-free as i=
+nformation could be intercepted, corrupted, lost, destroyed, arrive late or=
+ incomplete, or contain viruses. The Company, therefore, does not accept li=
+ability for any loss caused due to this communication.=C2=A0<b>Jasper Infot=
+ech Private Limited, Registered Office: 1st Floor, Plot 238, Okhla Industri=
+al Estate, New Delhi - 110020 INDIA CIN: U72300DL2007PTC168097</b></span></=
+p></td></tr></tbody></table></div></div></div></div></div></div></div></div=
+></div></div>
+</div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=
+=3D"color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:r=
+gb(102,102,102)">Karan Garg</span><br></div></div>
+</div>
+
+--94eb2c07e9de8d64060539cd4258--
+--94eb2c07e9de8d64080539cd4259
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Disposition: inline; filename="image001.jpg"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01D1DC2C.4998AFB0>
+X-Attachment-Id: eada4dc11fbece42_0.2
+
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNCYBCQkJDAsMGA0NGDIhHCEyMjIyMjItMi8t
+MjIyMjItMi0mLSotJioyLS0yMi8tLS0vLSotLS0tKC8tLS0nLTMtM//AABEIABMAEwMBEQACEQED
+EQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAGBwUB/8QAKBAAAQQBAgUEAwEAAAAAAAAAAQIDBBEFAAYS
+ITFBgRMyUWEiI7EH/8QAFgEBAQEAAAAAAAAAAAAAAAAABAUB/8QAHBEAAgMAAwEAAAAAAAAAAAAA
+AQIAAwQREiEx/9oADAMBAAIRAxEAPwDT3fu+Zlcm/GjyVsQGVltCG1FPqVyKlEdb7DpWrWbMtSdn
++yNpvLN1Wcch5XbeNxs2IZrMp1CpD6mwpTSWyRwBY9t1dg/Ot7podg00h6lBEoeH3hAn4iPJkvhh
+9af2NjoFA0f5oDZLAfBGLpXj2AMW3BwOTzELMhoKbW0lr1W+LiAcskcu6een2udAUrB1gVNw0Zbk
+3hhHttTmos9l555ktoQi7/Ll07Vd6BTRYXjLLkCw3hP8/kZHDxpjkhbCnklQbIPSzR8ij509t6Ke
+OIEZGI5i7e2IgTcQ7LkRkKkM+xwWFAfFjqPo6BkYiwCN0qOsH7AwuOyM91cyKl8sqtAWSRf2Lo+d
+UNzFU8g8YBb2VytQ5Zn/2Q==
+--94eb2c07e9de8d64080539cd4259
+Content-Type: image/png; name="image001.png"
+Content-Disposition: inline; filename="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <image001.png@01D1D922.D72CADC0>
+X-Attachment-Id: 108b2a091cce3182_0.1
+
+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
+--94eb2c07e9de8d64080539cd4259--

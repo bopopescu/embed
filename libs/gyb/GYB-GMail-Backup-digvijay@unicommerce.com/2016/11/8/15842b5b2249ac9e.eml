@@ -1,0 +1,89 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1441266qge;
+        Mon, 7 Nov 2016 22:52:33 -0800 (PST)
+X-Received: by 10.99.125.77 with SMTP id m13mr4629554pgn.58.1478587953793;
+        Mon, 07 Nov 2016 22:52:33 -0800 (PST)
+Return-Path: <scriptcron@gmail.com>
+Received: from mail-pg0-x235.google.com (mail-pg0-x235.google.com. [2607:f8b0:400e:c05::235])
+        by mx.google.com with ESMTPS id x5si29944884pfa.210.2016.11.07.22.52.33
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 22:52:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c05::235 as permitted sender) client-ip=2607:f8b0:400e:c05::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c05::235 as permitted sender) smtp.mailfrom=scriptcron@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: by mail-pg0-x235.google.com with SMTP id 3so12075888pgd.0
+        for <digvijay@unicommerce.com>; Mon, 07 Nov 2016 22:52:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:subject:message-id:mime-version:content-disposition
+         :content-transfer-encoding:user-agent;
+        bh=uS33HdeOIMzMISNmwn/w47GUVd7DPRJe76Sw4yUXAVA=;
+        b=AQ2KpXiwXgNvMhUHOj3LK4zZGjLZySZ68ZKdU0d0ee/YVg0tJvuHPLCLo0JJ+QaPbn
+         fpuc6SUVLNLPbGSb7H7W9/ccUBdTALCvAd+ynYXMW/iHFhNG4BWQNkDq7iuQGRw7VPJK
+         jfIq9r8wfGLSM+AiARUw7JcxHj4QSH2mz/CT3DPc45JwVj4dpC39EbDa6rrNMYD6XPsJ
+         tGmU8mu5MqaKYl+yeAZ7v+/FSKSQJwsp5Aee6fsPH6DTKEx6jdHzQTenavJ/iHIdWmg0
+         vWvQ29zBKFOsGTydbQ2jL2D0TO4BDbHe1cKHf/T112iDvKBDOMkoLxXgaxbJWjR2Y1NW
+         r3DA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:mime-version
+         :content-disposition:content-transfer-encoding:user-agent;
+        bh=uS33HdeOIMzMISNmwn/w47GUVd7DPRJe76Sw4yUXAVA=;
+        b=B/g2JNt5NDU9l8qeEuU0WttZQXGfl6wiFdexx+Y1ZJytnIRgXA0YAsAJJhJjjjQWVD
+         qLH/iFyr1aw2N4qVFrfpGJeUQJ8fvRp6lo4H5DQMpaUw0TByV545MKd93Fae4TnT49c0
+         k083MoAj51E5/ireMZArYgvqnBCNAEncpEpPLXHp4BkvWQ3PvVtb7zbAivD8opIk7rNU
+         SiEcWObm6pJ3pbcjyyDbGUqzcfY+W5ifGsuJ4aU6r4ZUPUPb6GT2ClwOKg9cRMC74Rkx
+         Na7zCnsY+mymVwm2JYV+fEav5q6oHz0D5OpQlgktbV93xWpNpHXyeTstRFE5ivuXRVxy
+         +xuQ==
+X-Gm-Message-State: ABUngvfn9lz8i1g4ND/lcvZskLDi8L7VoTLsYejKMOR9lO2Ddg3lP8NUxTVI/zYzl7LtnA==
+X-Received: by 10.99.242.5 with SMTP id v5mr16344182pgh.181.1478587953061;
+        Mon, 07 Nov 2016 22:52:33 -0800 (PST)
+Return-Path: <scriptcron@gmail.com>
+Received: from wormhole.unicommerce.com (ec2-54-169-92-81.ap-southeast-1.compute.amazonaws.com. [54.169.92.81])
+        by smtp.gmail.com with ESMTPSA id 13sm45299766pfz.30.2016.11.07.22.52.31
+        for <digvijay@unicommerce.com>
+        (version=TLS1 cipher=AES128-SHA bits=128/128);
+        Mon, 07 Nov 2016 22:52:32 -0800 (PST)
+Date: Tue, 8 Nov 2016 12:22:25 +0530
+From: digvijay <scriptcron@gmail.com>
+To: digvijay@unicommerce.com
+Subject: Todays Script Version Report- 08-Nov-2016
+Content-Type: text/html
+Message-ID: <20161108065225.GA16987@wormhole.unicommerce.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+User-Agent: Mutt/1.5.20 (2009-12-10)
+
+MongoDB shell version: 2.6.11
+connecting to: mongo1.test.unicommerce.infra/uniware
+<table style=3D"width:100%;" border=3D"1"><tr><th>Name of Script</th><th>Ve=
+rsion</th><th>Comments</th><th>Created By</th></tr><tr><td>TRACKING_NUMBER_=
+ALLOCATION_GOPIGEON</td><td>1.0</td><td>undefined</td><td>undefined</td></t=
+r><tr><td>SCRAPER_SCRIPT_GOPIGEON</td><td>1.0</td><td>undefined</td><td>und=
+efined</td></tr><tr><td>TRACKING_ALLOCATION_VERIFICATION_GOPIGEON</td><td>1=
+=2E0</td><td>undefined</td><td>undefined</td></tr><tr><td>flipkartUnreconci=
+liedOrdersScript</td><td>1.0</td><td>undefined</td><td>undefined</td></tr><=
+tr><td>snapdealUnreconciliedOrdersScript</td><td>1.0</td><td>undefined</td>=
+<td>undefined</td></tr><tr><td>amazonIndiaReconciliationInvoiceDetailScript=
+</td><td>1.0</td><td>undefined</td><td>undefined</td></tr><tr><td>amazonInd=
+iaReconciliationInvoiceListScript</td><td>1.0</td><td>undefined</td><td>und=
+efined</td></tr><tr><td>flipkartReconciliationInvoiceDetailScript</td><td>1=
+=2E0</td><td>undefined</td><td>undefined</td></tr><tr><td>flipkartReconcili=
+ationInvoiceListScript</td><td>1.0</td><td>undefined</td><td>undefined</td>=
+</tr><tr><td>snapdealReconciliationInvoiceDetailScript</td><td>1.0</td><td>=
+undefined</td><td>undefined</td></tr><tr><td>snapdealReconciliationInvoiceL=
+istScript</td><td>1.0</td><td>undefined</td><td>undefined</td></tr><tr><td>=
+snapdealReconciliationInvoiceSyncPreProcessorScript</td><td>1.0</td><td>und=
+efined</td><td>undefined</td></tr><tr><td>amazonIndiaUnreconciliedOrdersScr=
+ipt</td><td>1.0</td><td>undefined</td><td>undefined</td></tr><tr><td>WIDGET=
+_WORST_PERFORMING_PRODUCTS</td><td>1.0</td><td>undefined</td><td>undefined<=
+/td></tr><tr><td>WIDGET_TOP_SKU_IN_TOP_CHANNELS</td><td>1.0</td><td>undefin=
+ed</td><td>undefined</td></tr><tr><td>WIDGET_WORST_PERFORMING_PRODUCTS</td>=
+<td>1.0</td><td>undefined</td><td>undefined</td></tr><tr><td>WIDGET_TOP_SKU=
+_IN_TOP_CHANNELS</td><td>1.0</td><td>undefined</td><td>undefined</td></tr><=
+/table>

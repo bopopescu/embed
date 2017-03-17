@@ -1,0 +1,234 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp303201itg;
+        Wed, 21 Sep 2016 10:29:34 -0700 (PDT)
+X-Received: by 10.200.56.55 with SMTP id q52mr42829141qtb.23.1474478974142;
+        Wed, 21 Sep 2016 10:29:34 -0700 (PDT)
+Return-Path: <tech+bncBCDOZ5NP3YLRB7MGRO7QKGQEF7XLMNY@unicommerce.com>
+Received: from mail-qk0-x245.google.com (mail-qk0-x245.google.com. [2607:f8b0:400d:c09::245])
+        by mx.google.com with ESMTPS id w3si26801685qtw.98.2016.09.21.10.29.34
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 10:29:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::245 is neither permitted nor denied by best guess record for domain of tech+bncbcdoz5np3ylrb7mgro7qkgqef7xlmny@unicommerce.com) client-ip=2607:f8b0:400d:c09::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::245 is neither permitted nor denied by best guess record for domain of tech+bncbcdoz5np3ylrb7mgro7qkgqef7xlmny@unicommerce.com) smtp.mailfrom=tech+bncBCDOZ5NP3YLRB7MGRO7QKGQEF7XLMNY@unicommerce.com
+Received: by mail-qk0-x245.google.com with SMTP id n185sf135086393qke.2
+        for <digvijay@unicommerce.com>; Wed, 21 Sep 2016 10:29:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=hIcQQMGbss/6iR1hIuQRg3NGIyAE5WBflhzHKF1J3cc=;
+        b=Rxcs//yC43QWbksVqIRiENay8T8rOtW4Tmb1p8NmMuPwS8ObFtiWMpVMsJxujfbttw
+         sQF8TuyPfbIs5D3WZc8I8ITmuq1eoVRB0HVQTZlUY7lGy8PddhwzZwmcT/mPFQn88EH+
+         65GFx0BriVhvlof6OBC7br3Howt/sswSo9AD0wemhNggcGk79qhJ6luOPIq9KlQig5St
+         cWvALXO93iSEaB/hU+lZSSARzBGLifocQ4xFPS7zHGAkRc4+bJMJUAoYhFaaIa+NM9rA
+         KkDr/XC/T/V6HzFPkUD4s2UWQBHMPIuVy6buZd9plW29IZiJ6ia7BUokwaloJx3vrAU9
+         T4mw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=hIcQQMGbss/6iR1hIuQRg3NGIyAE5WBflhzHKF1J3cc=;
+        b=CZM6G3eYJqA7PNLVdusYnHfT6k+1cN5R9sHo9zxEKRvJ+a+QYjF6KV/FgcAbrnTkh9
+         vu91HlxPYq1bZ5TV33bvYXGnjeX4Ewb76oimSi5R09chlqchqQj2PAz4Pylj7qSmONCZ
+         Men8SrrGIjFLNerUYKJRIJwcqMemzmqWWelF/O9fkijfL7VmnDroRIkz1Cc/17+m8G5o
+         WoosuMe/7HJazShmIzJXkxYzjPz7xqrhETD1xyLkC/uvk66ouGoobJZgxhvRQLROB3JD
+         vEZskn42qND7ZGnNifWv+314UyVAfZGkO7edrnFdj/KXXS9ZgCDvz3nkln03qKPpXyef
+         5TUg==
+X-Gm-Message-State: AE9vXwMRVsS+p0Qdb+mBtWPzUeopXH5vrkHGjHzz+MS86wC04x++ZtnTYaCsfCmrhmlpWQ==
+X-Received: by 10.13.215.151 with SMTP id z145mr202508ywd.47.1474478973984;
+        Wed, 21 Sep 2016 10:29:33 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.43.196 with SMTP id u62ls4775489ota.15.gmail; Wed, 21 Sep
+ 2016 10:29:33 -0700 (PDT)
+X-Received: by 10.37.170.178 with SMTP id t47mr18936758ybi.180.1474478973724;
+        Wed, 21 Sep 2016 10:29:33 -0700 (PDT)
+Received: from mail-yb0-x22b.google.com (mail-yb0-x22b.google.com. [2607:f8b0:4002:c09::22b])
+        by mx.google.com with ESMTPS id t3si14877844ywf.139.2016.09.21.10.29.33
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 10:29:33 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best guess record for domain of harsh@unicommerce.com) client-ip=2607:f8b0:4002:c09::22b;
+Received: by mail-yb0-x22b.google.com with SMTP id x93so37716768ybh.1
+        for <tech@unicommerce.com>; Wed, 21 Sep 2016 10:29:33 -0700 (PDT)
+X-Received: by 10.37.207.17 with SMTP id f17mr2370743ybg.38.1474478973423;
+ Wed, 21 Sep 2016 10:29:33 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAB1KeyH2qttdBYRAD6WwwDHuWxbVp437HAx-JaKdqOHezbnXeg@mail.gmail.com>
+ <CAFAuwU45GJALNbETFhUYZpK+uxgGOPdF1BTN8XY+5ay5Vy32tQ@mail.gmail.com>
+ <CAMuJ5=qTR7dPDwMwjxLmDNrUnbBfFD6O+Q+CuN8MaModFk21Cw@mail.gmail.com>
+ <CAB1KeyFvB1C3AiDTJ4FYS0RmO-stdO0UV1OSY4DU3YYH03sYaQ@mail.gmail.com>
+ <CAB1KeyFMXuEh_D+0LVxzP_RZvJmKjaQjZajiZy_2TSu+Tnzqxw@mail.gmail.com> <CALCN7aJygEg6MBNKaCeVeQZcyF-TkVH42h5DBofWp1kyY+nCvQ@mail.gmail.com>
+In-Reply-To: <CALCN7aJygEg6MBNKaCeVeQZcyF-TkVH42h5DBofWp1kyY+nCvQ@mail.gmail.com>
+From: Harsh Pal <harsh@unicommerce.com>
+Date: Wed, 21 Sep 2016 17:29:22 +0000
+Message-ID: <CAB1KeyHq-Vd2S9uB2K0sc=wgXW8KHnDPiAEtB+hPZqXR_+7Epw@mail.gmail.com>
+Subject: Re: Long awaited holiday - Lets go to Singapore!
+To: Karun Singla <karun@unicommerce.com>, Amit Dalal <amit.dalal@unicommerce.com>, 
+	Ankur pratik <ankur.pratik@unicommerce.com>, Sagar Shani <sagar@unicommerce.com>, 
+	"devops@unicommerce.com" <devops@unicommerce.com>
+Cc: Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, product@unicommerce.com, 
+	Tech Team <tech@unicommerce.com>, vani verma <vani@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c03cb0470d9d2053d07e362
+X-Original-Sender: harsh@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best
+ guess record for domain of harsh@unicommerce.com) smtp.mailfrom=harsh@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c03cb0470d9d2053d07e362
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Tried not to scare people away with expenses :/
+
+On Wed, Sep 21, 2016 at 10:55 PM Karun Singla <karun@unicommerce.com> wrote=
+:
+
+> Only 1 pub/bar visit =F0=9F=98=80
+> On Wed, 21 Sep 2016 at 10:09 PM, Harsh Pal <harsh@unicommerce.com> wrote:
+>
+>> The following list of tentative expenses might help you to decide
+>> better(All in INR):
+>> Universal Studios ticket : 3650
+>> Aquarium ticket : 1680
+>> Zoo ticket : 1630
+>> Cable car to sentosa : 1500
+>> Visa(Documents to be collected from office) : 2500
+>> Air Ticket(Including travel insurance) : 22300
+>> Accommodation : 8000 approx
+>> Food : 8000 approx
+>> Local travel (3 day local transport pass) : 1000 (plus 1000 for other)
+>> 1 optional pub/bar visit : 4000
+>>
+>> *Total : 55260* (Which includes all foreseen expenses)
+>>
+>> On Wed, Sep 21, 2016 at 1:20 PM Harsh Pal <harsh@unicommerce.com> wrote:
+>>
+>>> +DevOps Team <devops@unicommerce.com>
+>>>
+>>> On Wed, Sep 21, 2016 at 1:19 PM Amit Dalal <amit.dalal@unicommerce.com>
+>>> wrote:
+>>>
+>>>>
+>>>> + Sagar
+>>>>
+>>>>
+>>>> On Wed 21 Sep, 2016, 12:55 PM Ankur Pratik, <
+>>>> ankur.pratik@unicommerce.com> wrote:
+>>>>
+>>>>> Date ???
+>>>>>
+>>>>> Ankur Pratik
+>>>>> Unicommerce Android Team
+>>>>>
+>>>>> On Sep 21, 2016 12:49 PM, "Harsh Pal" <harsh@unicommerce.com> wrote:
+>>>>>
+>>>>>> Hello everyone!
+>>>>>>
+>>>>>> After many attempts and repeated discussions, we are proposing an
+>>>>>> international outing to SINGAPORE
+>>>>>> [image: Image result for sentosa island]
+>>>>>>
+>>>>>> This is an invitation to all of you, please fill the form below, man=
+y
+>>>>>> details around the trip are shared in it and send your comments, if =
+any.
+>>>>>>
+>>>>>> https://goo.gl/forms/OOo3eBJ5Y7NdOirw2
+>>>>>>
+>>>>>> Regards
+>>>>>> Harsh \m/
+>>>>>>
+>>>>>> PS: We will expect your response by 4 pm today.
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>> --
+> Regards
+> Karun Singla
+> Co-founder - Unicommerce
+> M. +91 99103 34586
+>
+
+--94eb2c03cb0470d9d2053d07e362
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Tried not to scare people away with expenses :/</div><br><=
+div class=3D"gmail_quote"><div dir=3D"ltr">On Wed, Sep 21, 2016 at 10:55 PM=
+ Karun Singla &lt;<a href=3D"mailto:karun@unicommerce.com">karun@unicommerc=
+e.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Only 1 pub/bar=
+ visit =F0=9F=98=80 <br><div class=3D"gmail_quote"><div dir=3D"ltr">On Wed,=
+ 21 Sep 2016 at 10:09 PM, Harsh Pal &lt;<a href=3D"mailto:harsh@unicommerce=
+.com" target=3D"_blank">harsh@unicommerce.com</a>&gt; wrote:<br></div><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #cc=
+c solid;padding-left:1ex"><div dir=3D"ltr">The following list of tentative =
+expenses might help you to decide better(All in INR):<div><div>Universal St=
+udios ticket : 3650</div><div>Aquarium ticket : 1680</div><div>Zoo ticket :=
+ 1630</div><div>Cable car to sentosa : 1500</div><div>Visa(Documents to be =
+collected from office) : 2500</div><div>Air Ticket(Including travel insuran=
+ce) : 22300</div><div>Accommodation : 8000 approx</div><div>Food : 8000 app=
+rox</div><div>Local travel (3 day local transport pass) : 1000 (plus 1000 f=
+or other)</div><div>1 optional pub/bar visit : 4000</div></div><div><br></d=
+iv><div><b>Total : 55260</b> (Which includes all foreseen expenses)</div></=
+div><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Wed, Sep 21, 2016 at=
+ 1:20 PM Harsh Pal &lt;<a href=3D"mailto:harsh@unicommerce.com" target=3D"_=
+blank">harsh@unicommerce.com</a>&gt; wrote:<br></div><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex"><div dir=3D"ltr"><a href=3D"mailto:devops@unicommerce.com" target=
+=3D"_blank">+DevOps Team</a>=C2=A0<br></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr">On Wed, Sep 21, 2016 at 1:19 PM Amit Dalal &lt;<a href=3D"=
+mailto:amit.dalal@unicommerce.com" target=3D"_blank">amit.dalal@unicommerce=
+.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"mar=
+gin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><br>+ Sagar<div=
+><br></div><div><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Wed 21 S=
+ep, 2016, 12:55 PM Ankur Pratik, &lt;<a href=3D"mailto:ankur.pratik@unicomm=
+erce.com" target=3D"_blank">ankur.pratik@unicommerce.com</a>&gt; wrote:<br>=
+</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><p dir=3D"ltr">Date ???<br><br></p>
+<p dir=3D"ltr">Ankur Pratik<br>
+Unicommerce Android Team</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sep 21, 2016 1=
+2:49 PM, &quot;Harsh Pal&quot; &lt;<a href=3D"mailto:harsh@unicommerce.com"=
+ target=3D"_blank">harsh@unicommerce.com</a>&gt; wrote:<br type=3D"attribut=
+ion"><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hello everyone!<div><b=
+r></div><div>After many attempts and repeated discussions, we are proposing=
+ an international outing to SINGAPORE</div><div><img alt=3D"Image result fo=
+r sentosa island" width=3D"820" height=3D"537" src=3D"http://www.todayonlin=
+e.com/sites/default/files/styles/photo_gallery_image_lightbox/public/205216=
+13.JPG?itok=3D81jups95" style=3D"margin-top:0px"></div><div><br></div><div>=
+This is an invitation to all of you, please fill the form below, many detai=
+ls around the trip are shared in it and send your comments, if any.</div><d=
+iv><br></div><div><a href=3D"https://goo.gl/forms/OOo3eBJ5Y7NdOirw2" target=
+=3D"_blank">https://goo.gl/forms/OOo3eBJ5Y7NdOirw2</a><br></div><div><br></=
+div><div>Regards</div><div>Harsh \m/</div><div><br></div><div>PS: We will e=
+xpect your response by 4 pm today.</div><div><br></div><div><br></div><div>=
+<br></div><div><br></div><div><br></div><div><br></div></div>
+</blockquote></div></div>
+</blockquote></div></div>
+</blockquote></div></blockquote></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr"><div><span>Regards</span><br><span>Karun Sin=
+gla</span><div>Co-founder -=C2=A0Unicommerce</div><div>M. +91 99103 34586</=
+div></div></div></div>
+</blockquote></div>
+
+--94eb2c03cb0470d9d2053d07e362--

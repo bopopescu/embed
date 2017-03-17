@@ -1,0 +1,119 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Wed, 21 Dec 2016 03:55:54 -0800 (PST)
+Date: Wed, 21 Dec 2016 17:25:54 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soo5rA37GJ+xKm2gDKQWYS+6w3FVjFk6ErGGYC_O-fPHnA@mail.gmail.com>
+Subject: JAVA OPTS
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113c5a2ec938ed054429d5a1
+
+--001a113c5a2ec938ed054429d5a1
+Content-Type: text/plain; charset=UTF-8
+
+JAVA_OPTS="$JAVA_OPTS
+-javaagent:/usr/local/apache-tomcat/UniwareInstrumentation-1.0-jar-with-dependencies.jar
+-Xms512m  -Xmx1024m -XX:MaxPermSize=256M  -Denv=c1
+-DelasticSearchServerUrl=localhost:9200 -Duser.timezone=Asia/Kolkata
+-DhazelcastMembers=127.0.0.1 -DzookeeperConnectionTimeout=15000
+-DzookeeperSessionTimeout=60000 -DtenantSpecificMongoHosts=localhost:27017
+-DcommonMongoHosts=localhost:27017
+-DcustomerCentralMongoHosts=localhost:27017
+-DactiveMQBrokerUrl=failover:tcp://localhost:61616
+-DactiveMQBrokerUsername= -DactiveMQBrokerPassword=
+-DactiveMQMaxConnections=1 -DactiveMQQueuePrefetch=5
+-Dcom.sun.management.jmxremote -DAsyncLogger.ThreadNameStrategy=UNCACHED
+-Dcom.sun.management.jmxremote.port=6969
+-Dcom.sun.management.jmxremote.ssl=false
+-Dcom.sun.management.jmxremote.authenticate=false -DserverNames=sagar
+-DsolrServerUrl=http://staging.unicommerce.com:8983/solr
+-DzookeeperUrl=localhost:2181 -DserverName=sagar -DquartzThreadPoolSize=100"
+
+
+JAVA_OPTS="$JAVA_OPTS -Xloggc:/usr/local/apache-tomcat/logs/gc.log
+-XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:-LoopUnswitching"
+
+JAVA_OPTS="$JAVA_OPTS -DexecuteExportImport=false -DexecuteJobs=false"
+
+JAVA_OPTS="$JAVA_OPTS -DauditMongoHosts=localhost:27017,localhost:27017"
+
+JAVA_OPTS="$JAVA_OPTS -DmongoHosts=localhost:27017,localhost:27017"
+
+#export JPDA_OPTS="-agentlib:jdwp=transport=dt_socket,
+address=localhost:8888, server=y, suspend=n"
+
+
+
+
+JAVA_OPTS="$JAVA_OPTS
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms512m
+-Xmx1024m -XX:MaxPermSize=512M -DactiveMQMaxConnections=1
+-DserverName=sagar -DhazelcastMembers=127.0.0.1
+-DtenantSpecificMongoHosts=localhost:27017
+-DcustomerCentralMongoHosts=localhost:27017
+-DcommonMongoHosts=localhost:27017
+-DactiveMQBrokerUrl=failover:tcp://localhost:61616
+-DelasticSearchServerUrl=localhost:9300 -DactiveMQBrokerUsername=
+-DactiveMQBrokerPassword= -DmongoHosts=localhost:27017 -DsolrServerUrl=
+http://staging.unicommerce.com:8983/solr -DserverNames=sagar
+-DzookeeperUrl=localhost:2181 -DzookeeperConnectionTimeout=15000
+-DzookeeperSessionTimeout=60000"
+
+--001a113c5a2ec938ed054429d5a1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -javaagent:/usr/local/apache-tomcat/UniwareInstrumentation-1.0-jar-with-de=
+pendencies.jar -Xms512m=C2=A0 -Xmx1024m -XX:MaxPermSize=3D256M=C2=A0 -Denv=
+=3Dc1 -DelasticSearchServerUrl=3Dlocalhost:9200 -Duser.timezone=3DAsia/Kolk=
+ata -DhazelcastMembers=3D127.0.0.1 -DzookeeperConnectionTimeout=3D15000 -Dz=
+ookeeperSessionTimeout=3D60000 -DtenantSpecificMongoHosts=3Dlocalhost:27017=
+ -DcommonMongoHosts=3Dlocalhost:27017 -DcustomerCentralMongoHosts=3Dlocalho=
+st:27017 -DactiveMQBrokerUrl=3Dfailover:tcp://localhost:61616 -DactiveMQBro=
+kerUsername=3D -DactiveMQBrokerPassword=3D=C2=A0 -DactiveMQMaxConnections=
+=3D1 -DactiveMQQueuePrefetch=3D5=C2=A0 -Dcom.sun.management.jmxremote -DAsy=
+ncLogger.ThreadNameStrategy=3DUNCACHED -Dcom.sun.management.jmxremote.port=
+=3D6969 -Dcom.sun.management.jmxremote.ssl=3Dfalse -Dcom.sun.management.jmx=
+remote.authenticate=3Dfalse -DserverNames=3Dsagar -DsolrServerUrl=3D<a href=
+=3D"http://staging.unicommerce.com:8983/solr">http://staging.unicommerce.co=
+m:8983/solr</a> -DzookeeperUrl=3Dlocalhost:2181 -DserverName=3Dsagar -Dquar=
+tzThreadPoolSize=3D100&quot;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s1"></span><br></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -Xloggc:/usr/local/apache-tomcat/logs/gc.log -XX:+PrintGCDetails -XX:+Prin=
+tGCDateStamps -XX:-LoopUnswitching&quot;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -DexecuteExportImport=3Dfalse -DexecuteJobs=3Dfalse&quot;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -DauditMongoHosts=3Dlocalhost:27017,localhost:27017&quot;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -DmongoHosts=3Dlocalhost:27017,localhost:27017&quot;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">#export JPDA_OPTS=3D&quot;-a=
+gentlib:jdwp=3Dtransport=3Ddt_socket, address=3Dlocalhost:8888, server=3Dy,=
+ suspend=3Dn&quot;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s1"></span><br></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s1"></span><br></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s1"></span><br></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">JAVA_OPTS=3D&quot;$JAVA_OPTS=
+ -Djava.util.logging.manager=3Dorg.apache.juli.ClassLoaderLogManager -Xms51=
+2m -Xmx1024m -XX:MaxPermSize=3D512M -DactiveMQMaxConnections=3D1 -DserverNa=
+me=3Dsagar -DhazelcastMembers=3D127.0.0.1 -DtenantSpecificMongoHosts=3Dloca=
+lhost:27017 -DcustomerCentralMongoHosts=3Dlocalhost:27017 -DcommonMongoHost=
+s=3Dlocalhost:27017 -DactiveMQBrokerUrl=3Dfailover:tcp://localhost:61616 -D=
+elasticSearchServerUrl=3Dlocalhost:9300 -DactiveMQBrokerUsername=3D -Dactiv=
+eMQBrokerPassword=3D -DmongoHosts=3Dlocalhost:27017 -DsolrServerUrl=3D<a hr=
+ef=3D"http://staging.unicommerce.com:8983/solr">http://staging.unicommerce.=
+com:8983/solr</a> -DserverNames=3Dsagar -DzookeeperUrl=3Dlocalhost:2181 -Dz=
+ookeeperConnectionTimeout=3D15000 -DzookeeperSessionTimeout=3D60000&quot;</=
+span></p></div>
+
+--001a113c5a2ec938ed054429d5a1--

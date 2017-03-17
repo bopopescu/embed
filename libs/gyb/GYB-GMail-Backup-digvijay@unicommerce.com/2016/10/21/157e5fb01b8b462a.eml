@@ -1,0 +1,146 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp1569519qgj;
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+X-Received: by 10.129.74.2 with SMTP id x2mr5503140ywa.59.1477032214600;
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+Return-Path: <tech+bncBDGK3HEB3IFRBFXSU3AAKGQEU5BDDGQ@unicommerce.com>
+Received: from mail-yw0-x246.google.com (mail-yw0-x246.google.com. [2607:f8b0:4002:c05::246])
+        by mx.google.com with ESMTPS id p2si514477ybp.154.2016.10.20.23.43.34
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbdgk3heb3ifrbfxsu3aakgqeu5bddgq@unicommerce.com) client-ip=2607:f8b0:4002:c05::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbdgk3heb3ifrbfxsu3aakgqeu5bddgq@unicommerce.com) smtp.mailfrom=tech+bncBDGK3HEB3IFRBFXSU3AAKGQEU5BDDGQ@unicommerce.com
+Received: by mail-yw0-x246.google.com with SMTP id t192sf14986515ywf.4
+        for <digvijay@unicommerce.com>; Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=RfpGktm/kSTUgxcscaMYz9g/kljooGpVQN+yCHjlnto=;
+        b=CUlZeSRASMPwbZlEcoFNu4pmPmlhNxu63syrFvWnomJ3gsrbhDhEwdN0as5l/jlrZK
+         WrcZDo5G4weJbrEFI5lxyJUKK/aSNVLSVIIA3Cr6sOS4UuKjq0xHybGSRLfD4Zoyeeqq
+         H5CNcSU7kox6dfgv6ZbMtT8EbZoJmZx3B/Ypx6xJADlebsmKWV9ygrQxqBlye1y0qPXr
+         QBkWtmVY2ZmywNobTEXQjiBwabR1m674IC0NaItvLXVs+2/t7xbJIs89r5YQbHwa6vPd
+         PYHqELBMWLdBucYVB0Rqwc3JqC502n68wYkGGNJDyOdhCk0vDDgdmM1ShqXaTJ8bIE+3
+         9rhA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=RfpGktm/kSTUgxcscaMYz9g/kljooGpVQN+yCHjlnto=;
+        b=BgyvNvYSnbVvycyutKDlp2Wc61xrqCcVXE28gchu0lV5+b1T/TpK2QKcZC5E00msGv
+         n3teeHZH4tN8pFqn7AeVckrhrBvdw4d8foCxR3ehNnzSXwLMH2/YKwq5mc4RX/VUIsKA
+         osPLqY7Jvjx3PA4x6i7V6aI6Ut+HpDjodRgzl85g6mRANdTbkKr0VUdMQ/eEHgLOTVxL
+         FdlL/fagGekmSZ+67YIOTMPFE72+iypIC47dgCPxirWizUwwG4sYdjlvyEsxNUVg6vdw
+         Cu2rdVYOUlUiydO7/vuivqUBCk6MvHO0GiX89iTHDMoWHUsIB+oYmTJXbP+a5SpDYhDT
+         CYZw==
+X-Gm-Message-State: AA6/9RnupQe4eahev+8ha4dufRUO8Raftm1SNFgn+uz+vQl856/HoK/MNRJSZuXBYsOu8Q==
+X-Received: by 10.13.204.205 with SMTP id o196mr4458908ywd.85.1477032214279;
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.2.67 with SMTP id 61ls6631572otb.4.gmail; Thu, 20 Oct 2016
+ 23:43:34 -0700 (PDT)
+X-Received: by 10.129.40.141 with SMTP id o135mr5573443ywo.110.1477032214136;
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+Received: from mail-yw0-x233.google.com (mail-yw0-x233.google.com. [2607:f8b0:4002:c05::233])
+        by mx.google.com with ESMTPS id x32si527928ybi.5.2016.10.20.23.43.34
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::233 is neither permitted nor denied by best guess record for domain of animesh@unicommerce.com) client-ip=2607:f8b0:4002:c05::233;
+Received: by mail-yw0-x233.google.com with SMTP id t193so81729364ywc.2
+        for <tech@unicommerce.com>; Thu, 20 Oct 2016 23:43:34 -0700 (PDT)
+X-Received: by 10.202.242.9 with SMTP id q9mr8960755oih.140.1477032213943;
+ Thu, 20 Oct 2016 23:43:33 -0700 (PDT)
+MIME-Version: 1.0
+References: <CA+5inhCwS4Lso=7q3pLbtjM81dQQmkz_MKc1Px18+1Hd=eq16g@mail.gmail.com>
+ <CAEixeD8i7HrSQnCtP6r9gaRkGUCJKBigeRwLhAKyaXHEfCBdTw@mail.gmail.com>
+In-Reply-To: <CAEixeD8i7HrSQnCtP6r9gaRkGUCJKBigeRwLhAKyaXHEfCBdTw@mail.gmail.com>
+From: Kumar Animesh <animesh@unicommerce.com>
+Date: Fri, 21 Oct 2016 06:43:23 +0000
+Message-ID: <CAASAXwydyFsqpc+57sE4Xp2GrMTX9ez=Z4BdsRgXc17=diH=dw@mail.gmail.com>
+Subject: Re: Yamini's Farewell
+To: Vikas Goyal <vikas@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>
+Cc: Tech Team <tech@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>
+Content-Type: multipart/alternative; boundary=94eb2c0934866f2af8053f5a5c38
+X-Original-Sender: animesh@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::233 is neither permitted nor denied by best
+ guess record for domain of animesh@unicommerce.com) smtp.mailfrom=animesh@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c0934866f2af8053f5a5c38
+Content-Type: text/plain; charset=UTF-8
+
+So the venue's going to be: Sublym, sector 29
+<https://www.zomato.com/ncr/sublym-kitchen-bar-sector-29-gurgaon/photos>,
+we've booked the tables. let's leave at around 1:45pm
+
+On Thu, Oct 20, 2016 at 7:39 PM Vikas Goyal <vikas@unicommerce.com> wrote:
+
+> https://www.zomato.com/ncr/factory-by-sutra-sector-29-gurgaon
+>
+> On Thu, Oct 20, 2016 at 5:48 PM, Ayush Walia <ayush@unicommerce.com>
+> wrote:
+>
+> Hello All:
+>
+> We'll be going out for lunch tomorrow to celebrate Yamini's farewell.
+> *Time:* 1:30 PM
+> *Venue:* Will let you know by tomorrow morning (open to suggestions)
+>
+> Thanks & Regards,
+> Ayush Walia
+>
+>
+>
+
+--94eb2c0934866f2af8053f5a5c38
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">So the venue&#39;s going to be: <a href=3D"https://www.zom=
+ato.com/ncr/sublym-kitchen-bar-sector-29-gurgaon/photos">Sublym, sector 29<=
+/a>, we&#39;ve booked the tables. let&#39;s leave at around 1:45pm</div><br=
+><div class=3D"gmail_quote"><div dir=3D"ltr">On Thu, Oct 20, 2016 at 7:39 P=
+M Vikas Goyal &lt;<a href=3D"mailto:vikas@unicommerce.com">vikas@unicommerc=
+e.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r" class=3D"gmail_msg"><a href=3D"https://www.zomato.com/ncr/factory-by-sut=
+ra-sector-29-gurgaon" class=3D"gmail_msg" target=3D"_blank">https://www.zom=
+ato.com/ncr/factory-by-sutra-sector-29-gurgaon</a><br class=3D"gmail_msg"><=
+/div><div class=3D"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div clas=
+s=3D"gmail_quote gmail_msg">On Thu, Oct 20, 2016 at 5:48 PM, Ayush Walia <s=
+pan dir=3D"ltr" class=3D"gmail_msg">&lt;<a href=3D"mailto:ayush@unicommerce=
+.com" class=3D"gmail_msg" target=3D"_blank">ayush@unicommerce.com</a>&gt;</=
+span> wrote:<br class=3D"gmail_msg"><blockquote class=3D"gmail_quote gmail_=
+msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+"><div dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_msg">Hello All:<=
+/div><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"g=
+mail_msg">We&#39;ll be going out for lunch tomorrow to celebrate Yamini&#39=
+;s farewell.</div><div class=3D"gmail_msg"><b class=3D"gmail_msg">Time:</b>=
+ 1:30 PM</div><div class=3D"gmail_msg"><b class=3D"gmail_msg">Venue:</b> Wi=
+ll let you know by tomorrow morning (open to suggestions)</div><br clear=3D=
+"all" class=3D"gmail_msg"><div class=3D"gmail_msg"><div class=3D"m_-1112830=
+686734503098m_8955861016002148258gmail_signature gmail_msg"><div dir=3D"ltr=
+" class=3D"gmail_msg">Thanks &amp; Regards,<div class=3D"gmail_msg">Ayush W=
+alia</div></div></div></div>
+</div>
+</blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div>
+
+--94eb2c0934866f2af8053f5a5c38--

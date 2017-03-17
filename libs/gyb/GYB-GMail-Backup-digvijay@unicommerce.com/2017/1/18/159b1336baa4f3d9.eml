@@ -1,0 +1,90 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp174393qgu;
+        Wed, 18 Jan 2017 02:50:54 -0800 (PST)
+X-Received: by 10.200.52.129 with SMTP id w1mr1984441qtb.43.1484736654266;
+        Wed, 18 Jan 2017 02:50:54 -0800 (PST)
+Return-Path: <vikas@unicommerce.com>
+Received: from mail-qk0-x22f.google.com (mail-qk0-x22f.google.com. [2607:f8b0:400d:c09::22f])
+        by mx.google.com with ESMTPS id w52si18757860qtb.175.2017.01.18.02.50.54
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 18 Jan 2017 02:50:54 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22f is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c09::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22f is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Received: by mail-qk0-x22f.google.com with SMTP id 11so8898377qkl.3
+        for <digvijay@unicommerce.com>; Wed, 18 Jan 2017 02:50:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=xg+QcIUGYL/R2S2rzqO6nEvNgU8xarPvyonbj8LuBHE=;
+        b=G6MQJXKUNWnyNLc9dmVAD4qruwsO+exc/NdatclaB13mOd8ccqgMdbZhkeaGG44wje
+         K6nm7blbwgCzSIdpEQjrc4krgraPimOx6VDBDB+jgLjJ+R7eaRUUGYDyo2iIzcdWD3RN
+         CvHOJm4UbuWO4Zfogc2Xe/K3QSrP8LjWrf7x2UeYeMeslN2PrClrC4f+yQ2cqJ2E8GU7
+         baJQbAMFsyrZ/CtvIfhdWx3grA+bvqO00tmsNp0fOQBmSqGeIvzPzE3SRAnw4eDMwe1M
+         sw2oRNK0iz7uHAdDnvR/e+PPzLfryiLbNg4WmEgheL9TYjZS2kqH4RIe03JtRZHZwJYQ
+         qZfw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=xg+QcIUGYL/R2S2rzqO6nEvNgU8xarPvyonbj8LuBHE=;
+        b=SDgs0QglhjUdzSHEJxYcceYd9masPtfXZEpswEyJR8bM2QWX3/UDm4P6V5lU++N2Dc
+         d7oCtyk+03h2kx1NrJEhoMwGNPost4X3XvpoTgwHubIW28fCFyyh08r0XfiBWhLzGR3l
+         LOS7vSREc9HfJYHeC6lQcRF3Yh7koEyFu8kh58yX1BApnpbJQ0aAWe9ES5UXmnM2cNPl
+         c3cbLOWw0JhBsXv/XL3s07Azxd6JOdCsDiP7WNjUQEP1fT1C8hgEZJZKEftlpBBg9Sg6
+         KU9hZqIMpBxx29pvZ1MfBxP3kHb7ah8Gb45yEY0WRXmF7T3JMEbhsu4pU26qsOMwgoyo
+         xpiQ==
+X-Gm-Message-State: AIkVDXLIT3Ka+gWGdO3i2iNEMgR2I/f3bF9XvXbzbpPI3QBOUEXzSgKP+5pjsGdedyHhOe/fA7umOCG+JEoZ7w==
+X-Received: by 10.55.66.68 with SMTP id p65mr2156051qka.57.1484736653973; Wed,
+ 18 Jan 2017 02:50:53 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.37.77 with HTTP; Wed, 18 Jan 2017 02:50:53 -0800 (PST)
+In-Reply-To: <CAJF3sooSpetfnCCekz4QQVuEzCPME9_c7RJiyN3CeVtfijG21Q@mail.gmail.com>
+References: <CAJF3sooSpetfnCCekz4QQVuEzCPME9_c7RJiyN3CeVtfijG21Q@mail.gmail.com>
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Wed, 18 Jan 2017 16:20:53 +0530
+Message-ID: <CAEixeD_ep3X_nvOfGeceREzpswxZv4eZm7Kt5Z+KfTHM6zMA1Q@mail.gmail.com>
+Subject: Re: Tomcat config change
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: DevOps Team <devops@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114aa91ed87b6705465c30e4
+
+--001a114aa91ed87b6705465c30e4
+Content-Type: text/plain; charset=UTF-8
+
+Done. Restarted too
+
+On Wed, Jan 18, 2017 at 4:13 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Please change the config of Trendybharatcloud tomcat and set
+> -DexecuteJobs=true in JAVA_OPTS in its catalina.sh  so that it runs the
+> queued jobs.
+>
+
+--001a114aa91ed87b6705465c30e4
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done. Restarted too</div><div class=3D"gmail_extra"><br><d=
+iv class=3D"gmail_quote">On Wed, Jan 18, 2017 at 4:13 PM, Digvijay Sharma <=
+span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"=
+_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"m_9166783159315578667gmail-p1">Please change the config of Tren=
+dybharatcloud tomcat and set -DexecuteJobs=3Dtrue in JAVA_OPTS in its catal=
+ina.sh =C2=A0so that it runs the queued jobs.</p></div>
+</blockquote></div><br></div>
+
+--001a114aa91ed87b6705465c30e4--

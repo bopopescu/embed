@@ -1,0 +1,113 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Tue, 28 Feb 2017 20:23:49 -0800 (PST)
+Date: Wed, 1 Mar 2017 09:53:49 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopi6HUxq0Yzi6=m3tmQXb6+c-VvOSa7AYXX58TTB1ehXQ@mail.gmail.com>
+Subject: 
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114660b0e36de90549a3ad25
+
+--001a114660b0e36de90549a3ad25
+Content-Type: text/plain; charset=UTF-8
+
+<http url="#{#amazonUrl}/hz/orders/details" method="get" timeout="80"
+var="orderDetailPage" proxyport="6060"
+proxyhost="#{#channel.httpProxyHost}"  >
+    <!--<header name="Cookie" value="#{#cookieData}"/>-->
+    <param name="orderId" value="407-1522546-3877112" />
+    <param name="_encoding" value="UTF8" />
+    <param name="ref" value="ag_orddet_shel_xx" />
+</http>
+<if condition="#{#orderDetailPage.contains('Please Enable Cookies to
+Continue')}">
+    <scriptError message="Please Enable Cookies to Continue" />
+</if>
+<log level="info" value="orderDetailPage: #{#orderDetailPage}" />
+
+--001a114660b0e36de90549a3ad25
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><span style=3D"background-color:rgb(239,239,239)">&lt;</span><span st=
+yle=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bol=
+d">http </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,2=
+39,239);font-weight:bold">url</span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">=3D&quot;#{#amazonUrl}/hz/or=
+ders/details&quot; </span><span style=3D"color:rgb(0,0,255);background-colo=
+r:rgb(239,239,239);font-weight:bold">method</span><span style=3D"color:rgb(=
+0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;get&q=
+uot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,=
+239);font-weight:bold">timeout</span><span style=3D"color:rgb(0,128,0);back=
+ground-color:rgb(239,239,239);font-weight:bold">=3D&quot;80&quot; </span><s=
+pan style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weig=
+ht:bold">var</span><span style=3D"color:rgb(0,128,0);background-color:rgb(2=
+39,239,239);font-weight:bold">=3D&quot;orderDetailPage&quot; </span><span s=
+tyle=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bo=
+ld">proxyport</span><span style=3D"color:rgb(0,128,0);background-color:rgb(=
+239,239,239);font-weight:bold">=3D&quot;6060&quot; </span><span style=3D"co=
+lor:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">proxyh=
+ost</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,23=
+9);font-weight:bold">=3D&quot;#{#channel.httpProxyHost}&quot;  </span><span=
+ style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=
+=3D"color:rgb(128,128,128);font-style:italic">&lt;!--&lt;header name=3D&quo=
+t;Cookie&quot; value=3D&quot;#{#cookieData}&quot;/&gt;--&gt;<br></span><spa=
+n style=3D"color:rgb(128,128,128);font-style:italic">    </span><span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);background-color:rgb(239,239,239);font-weight:bold">param </span><=
+span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-wei=
+ght:bold">name</span><span style=3D"color:rgb(0,128,0);background-color:rgb=
+(239,239,239);font-weight:bold">=3D&quot;orderId&quot; </span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">=
+value</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,=
+239);font-weight:bold">=3D&quot;407-1522546-3877112&quot; </span><span styl=
+e=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"=
+background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,=
+128);background-color:rgb(239,239,239);font-weight:bold">param </span><span=
+ style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:=
+bold">name</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239=
+,239,239);font-weight:bold">=3D&quot;_encoding&quot; </span><span style=3D"=
+color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">valu=
+e</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239)=
+;font-weight:bold">=3D&quot;UTF8&quot; </span><span style=3D"background-col=
+or:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"background-color:rg=
+b(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-col=
+or:rgb(239,239,239);font-weight:bold">param </span><span style=3D"color:rgb=
+(0,0,255);background-color:rgb(239,239,239);font-weight:bold">name</span><s=
+pan style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weig=
+ht:bold">=3D&quot;ref&quot; </span><span style=3D"color:rgb(0,0,255);backgr=
+ound-color:rgb(239,239,239);font-weight:bold">value</span><span style=3D"co=
+lor:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&qu=
+ot;ag_orddet_shel_xx&quot; </span><span style=3D"background-color:rgb(239,2=
+39,239)">/&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">=
+&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,=
+239);font-weight:bold">http</span><span style=3D"background-color:rgb(239,2=
+39,239)">&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">&=
+lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,23=
+9);font-weight:bold">if </span><span style=3D"color:rgb(0,0,255);background=
+-color:rgb(239,239,239);font-weight:bold">condition</span><span style=3D"co=
+lor:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&qu=
+ot;#{#orderDetailPage.contains(&#39;Please Enable Cookies to Continue&#39;)=
+}&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span>=
+<br>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span =
+style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:b=
+old">scriptError </span><span style=3D"color:rgb(0,0,255);background-color:=
+rgb(239,239,239);font-weight:bold">message</span><span style=3D"color:rgb(0=
+,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;Please=
+ Enable Cookies to Continue&quot; </span><span style=3D"background-color:rg=
+b(239,239,239)">/&gt;</span><br><span style=3D"background-color:rgb(239,239=
+,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(2=
+39,239,239);font-weight:bold">if</span><span style=3D"background-color:rgb(=
+239,239,239)">&gt;</span><br><span style=3D"background-color:rgb(239,239,23=
+9)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,2=
+39,239);font-weight:bold">log </span><span style=3D"color:rgb(0,0,255);back=
+ground-color:rgb(239,239,239);font-weight:bold">level</span><span style=3D"=
+color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&=
+quot;info&quot; </span><span style=3D"color:rgb(0,0,255);background-color:r=
+gb(239,239,239);font-weight:bold">value</span><span style=3D"color:rgb(0,12=
+8,0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;orderDeta=
+ilPage: #{#orderDetailPage}&quot; </span><span style=3D"background-color:rg=
+b(239,239,239)">/&gt;</span></pre></div>
+
+--001a114660b0e36de90549a3ad25--

@@ -1,0 +1,56 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp278313qgu;
+        Mon, 20 Feb 2017 22:06:40 -0800 (PST)
+X-Received: by 10.84.215.15 with SMTP id k15mr37054152pli.58.1487657200611;
+        Mon, 20 Feb 2017 22:06:40 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id v1si20915437pfg.106.2017.02.20.22.06.40
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Feb 2017 22:06:40 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v1L66dUu028438;
+	Tue, 21 Feb 2017 11:36:39 +0530
+Date: Tue, 21 Feb 2017 11:36:39 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1756831955.3.1487657199300.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #2038
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/Uniware/2038/display/redirect?page=changes>
+
+Changes:
+
+[digvijay] Checking self shipping on tenant creation
+
+------------------------------------------
+Started by an SCM change
+Building in workspace <http://jenkins.unicommerce.com:8080/job/Uniware/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 2aa506eecf114a51dbc1592a3cb542861835589a (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2aa506eecf114a51dbc1592a3cb542861835589a
+ > git rev-list 5911e44a1f23a9c6d90e9c940b17c597d7c45c06 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #4153 completed. Result was FAILURE
+Build step 'Trigger/call builds on other projects' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #2037

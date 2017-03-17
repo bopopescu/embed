@@ -1,0 +1,93 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1543392qge;
+        Tue, 15 Nov 2016 03:28:41 -0800 (PST)
+X-Received: by 10.98.17.80 with SMTP id z77mr46232299pfi.166.1479209321337;
+        Tue, 15 Nov 2016 03:28:41 -0800 (PST)
+Return-Path: <tech+bncBC33VSELZUGRB2HCVPAQKGQEAPUKAHI@unicommerce.com>
+Received: from mail-pg0-x246.google.com (mail-pg0-x246.google.com. [2607:f8b0:400e:c05::246])
+        by mx.google.com with ESMTPS id z6si12503935paf.169.2016.11.15.03.28.41
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 15 Nov 2016 03:28:41 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrb2hcvpaqkgqeapukahi@unicommerce.com) client-ip=2607:f8b0:400e:c05::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c05::246 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrb2hcvpaqkgqeapukahi@unicommerce.com) smtp.mailfrom=tech+bncBC33VSELZUGRB2HCVPAQKGQEAPUKAHI@unicommerce.com
+Received: by mail-pg0-x246.google.com with SMTP id e9sf98671723pgc.5
+        for <digvijay@unicommerce.com>; Tue, 15 Nov 2016 03:28:41 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=W1I/rljvVowY9/T6I8c+o0dWzNuBq7BxRGbAlJFMG0Q=;
+        b=B8kZJKWvQKUoFEkIVol6mn5jZodwCXKWKaCMU2hIrDItoPcaqi2CfmqMDyHnxN7aw9
+         YUCZzH8Fr3x0ppgHoAkiZyTN8GHC7JMD1bwwlDjNrKUYqx3TK+6u3HOrEdkTUf7Ggnxb
+         UKuTL9nUqT4TvE34jvnpc9c5XclGAz14nAaS9uLgsZlDU+EMUh3fOgN37IHmOWuTNgCG
+         CkfkUClNwV7LAXvmGwM+RXHfTKgbGvLNzmFFvRURw60RFFL8oK2DhhxcYi37W65arGH5
+         5W+bNiJ1bC+s/yB+nAyY/Q9uoOV/lHUhQh6z3/tGIXDodxafaq8gNJKHiD2XgLqvZRhU
+         r9YA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=W1I/rljvVowY9/T6I8c+o0dWzNuBq7BxRGbAlJFMG0Q=;
+        b=fzsUUcnhjhla4apCrpVQ1eyUU6RTb6PO1rFun2bCZRdzG8VlOon7iTAUwu5rzfkIYW
+         e8hlgUn4sWdogcxtPlGn9bxCTZI40HQRid8mSOthXSy9xBN+apw3SkPlIu3bUlUUHfJL
+         scQijbv83RCCrEcGV2hhcPFP6IKcTNABk6UiOr2NTzxvn633vE64yjwrAe7sKxKBWIt3
+         YBauADev1gSCvxXXfWJPl+t/xwFkKqu3ItVu1+M9Xph4NFTl9v5ODWWNQNyYV/vp2h1D
+         fU455R2N9Cr5dA6LYclo637cq4TwaiZaW9l5R2tXgOlRA729SXQ53KZ2XLwX7JOMsrQa
+         1xcw==
+X-Gm-Message-State: ABUngveKGdhI/Nm1VKRlu6KIYj7rnO1w8GVZOt6hhEmkEziivWeTgHx+TE0M+lqhy9uNcg==
+X-Received: by 10.99.47.130 with SMTP id v124mr806994pgv.37.1479209320934;
+        Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.63.53 with SMTP id m50ls10461384otc.10.gmail; Tue, 15 Nov
+ 2016 03:28:40 -0800 (PST)
+X-Received: by 10.31.80.132 with SMTP id e126mr13063576vkb.109.1479209320759;
+        Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+Received: from mail-ua0-x22f.google.com (mail-ua0-x22f.google.com. [2607:f8b0:400c:c08::22f])
+        by mx.google.com with ESMTPS id 14si5897707uac.25.2016.11.15.03.28.40
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22f is neither permitted nor denied by best guess record for domain of bhupi@unicommerce.com) client-ip=2607:f8b0:400c:c08::22f;
+Received: by mail-ua0-x22f.google.com with SMTP id 51so85294470uai.1
+        for <tech@unicommerce.com>; Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+X-Received: by 10.176.71.133 with SMTP id v5mr13483829uac.68.1479209320438;
+ Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.176.4.41 with HTTP; Tue, 15 Nov 2016 03:28:40 -0800 (PST)
+From: Bhupinder Garg <bhupi@unicommerce.com>
+Date: Tue, 15 Nov 2016 16:58:40 +0530
+Message-ID: <CABtr59v1-9U+AGc2qcXJqWP9o63+5Nd336637kTp26wSMSyaOg@mail.gmail.com>
+Subject: mobile number change
+To: Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045eb91a17e748054155428f
+X-Original-Sender: bhupi@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400c:c08::22f is neither permitted nor denied by best
+ guess record for domain of bhupi@unicommerce.com) smtp.mailfrom=bhupi@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--f403045eb91a17e748054155428f
+Content-Type: text/plain; charset=UTF-8
+
+Pl update my number to 7888920977.
+
+-bhupi
+
+--f403045eb91a17e748054155428f
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">Pl update my number to 7888920977.<div><br></div><div>-bhupi</div></div>
+
+--f403045eb91a17e748054155428f--

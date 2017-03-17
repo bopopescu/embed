@@ -1,0 +1,380 @@
+MIME-Version: 1.0
+Received: by 10.140.89.71 with HTTP; Sat, 12 Nov 2016 08:06:21 -0800 (PST)
+In-Reply-To: <CAJF3sorTg99LO7MAjfrwfNmSvH1dWrPy4xFb1PKbAw2Y6dkxYA@mail.gmail.com>
+References: <CAAgrUr9V4MV643kzC1LJp0PYXOgcD1bt1s-GpxaMMOj8cG_UQA@mail.gmail.com>
+	<CAJF3sorTg99LO7MAjfrwfNmSvH1dWrPy4xFb1PKbAw2Y6dkxYA@mail.gmail.com>
+Date: Sat, 12 Nov 2016 21:36:21 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopL0Vp9Chje7sE49sDcdURcm8PsHPt5nEDBqt7+1GVprA@mail.gmail.com>
+Subject: Re: :D
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113ac4bea3d63305411cc93c
+
+--001a113ac4bea3d63305411cc93c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+update import_job_type set import_job_config =3D '<?xml version=3D\"1.0\"
+encoding=3D\"UTF-8\"?>\n<import-config>\n    <columns>\n        <column
+name=3D\"Category Code\" source=3D\"Category Code\" description=3D\"categor=
+y
+code\" required=3D\"true\" />\n        <column name=3D\"Product Code\"
+source=3D\"Product Code\" description=3D\"product code\" required=3D\"true\=
+"
+groupBy=3D\"true\" requiredInUpdate=3D\"true\" />\n        <column
+name=3D\"Name\" source=3D\"Name\" description=3D\"item type name\"
+required=3D\"true\" />\n        <column name=3D\"Description\"
+source=3D\"Description\" description=3D\"description\" />\n        <column
+name=3D\"Scan Identifier\" source=3D\"Scan Identifier\" description=3D\"sca=
+n
+identifier\" />\n        <column name=3D\"Length (mm)\" source=3D\"Length
+(mm)\" description=3D\"length in millimeters\" />\n        <column
+name=3D\"Width (mm)\" source=3D\"Width (mm)\" description=3D\"width in
+millimeters\" />\n        <column name=3D\"height (mm)\" source=3D\"height
+(mm)\" description=3D\"height in millimeters\" />\n        <column
+name=3D\"Weight (gms)\" source=3D\"Weight (gms)\" description=3D\"weight in
+grams\" />\n        <column name=3D\"ean\" source=3D\"ean\"
+description=3D\"International Article Number or European Article Number\"
+/>\n        <column name=3D\"upc\" source=3D\"upc\" description=3D\"Univers=
+al
+Product Code\" />\n        <column name=3D\"isbn\" source=3D\"isbn\"
+description=3D\"International Standard Book Number\" />\n        <column
+name=3D\"color\" source=3D\"color\" description=3D\"color\" />\n        <co=
+lumn
+name=3D\"brand\" source=3D\"brand\" description=3D\"brand\" />\n        <co=
+lumn
+name=3D\"size\" source=3D\"size\" description=3D\"size\" />\n        <colum=
+n
+name=3D\"Requires Customization\" source=3D\"Requires Customization\"
+description=3D\"SKU requires customization\" />\n        <column name=3D\"M=
+in
+Order Size\" source=3D\"Min Order Size\" description=3D\"minimum order size=
+\"
+/>\n        <column name=3D\"Tax Type Code\" source=3D\"Tax Type Code\"
+description=3D\"tax type code\" />\n        <column name=3D\"Tags\"
+source=3D\"Tags\" description=3D\"tags\" />\n        <column name=3D\"TAT\"
+source=3D\"TAT\" description=3D\"TAT\" />\n        <column name=3D\"Image U=
+rl\"
+source=3D\"Image Url\" description=3D\"image url\" />\n        <column
+name=3D\"Product Page URL\" source=3D\"Product Page URL\" description=3D\"P=
+roduct
+Page URL\" />\n        <column name=3D\"Item Detail Fields\" source=3D\"Ite=
+m
+Detail Fields\" description=3D\"Item Detail Fields (comma seperated)\" />\n
+     <column name=3D\"MRP\" source=3D\"MRP\" description=3D\"Max Retail Pri=
+ce\"
+/>\n        <column name=3D\"Base Price\" source=3D\"Base Price\"
+description=3D\"Selling Price\" />\n        <column name=3D\"Enabled\"
+source=3D\"Enabled\" description=3D\"Enabled\" />\n        <custom-fields
+entity=3D\"com.uniware.core.entity.ItemType\" />\n        <column
+name=3D\"resync inventory\" source=3D\"Resync Inventory\" description=3D\"1=
+ if
+inventory of this item type needs to resynced on channels\" />\n
+ <column name=3D\"Type\" source=3D\"Type\" description=3D\"SIMPLE or BUNDLE=
+, by
+default SIMPLE\" />\n        <column name=3D\"Component Product Code\"
+source=3D\"Component Product Code\" description=3D\"product code of the bun=
+dle
+component\" />\n        <column name=3D\"Component Quantity\"
+source=3D\"Component Quantity\" description=3D\"quantity of the component i=
+n
+bundle\" />\n        <column name=3D\"Component Price\" source=3D\"Componen=
+t
+Price\" description=3D\"price of the component in bundle\" />\n
+ </columns>\n</import-config>\n' where name =3D "DB";
+var decoded_temp =3D db.eval('decodeHex
+(\"3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822=
+3f3e0a3c696d706f72742d636f6e6669673e0a202020203c636f6c756d6e733e0a202020202=
+02020203c636f6c756d6e206e616d653d2243617465676f727920436f64652220736f757263=
+653d2243617465676f727920436f646522206465736372697074696f6e3d2263617465676f7=
+27920636f6465222072657175697265643d227472756522202f3e0a20202020202020203c63=
+6f6c756d6e206e616d653d2250726f6475637420436f64652220736f757263653d2250726f6=
+475637420436f646522206465736372697074696f6e3d2270726f6475637420636f64652220=
+72657175697265643d2274727565222067726f757042793d227472756522207265717569726=
+564496e5570646174653d227472756522202f3e0a20202020202020203c636f6c756d6e206e=
+616d653d224e616d652220736f757263653d224e616d6522206465736372697074696f6e3d2=
+26974656d2074797065206e616d65222072657175697265643d227472756522202f3e0a2020=
+2020202020203c636f6c756d6e206e616d653d224465736372697074696f6e2220736f75726=
+3653d224465736372697074696f6e22206465736372697074696f6e3d226465736372697074=
+696f6e22202f3e0a20202020202020203c636f6c756d6e206e616d653d225363616e2049646=
+56e7469666965722220736f757263653d225363616e204964656e7469666965722220646573=
+6372697074696f6e3d227363616e206964656e74696669657222202f3e0a202020202020202=
+03c636f6c756d6e206e616d653d224c656e67746820286d6d292220736f757263653d224c65=
+6e67746820286d6d2922206465736372697074696f6e3d226c656e67746820696e206d696c6=
+c696d657465727322202f3e0a20202020202020203c636f6c756d6e206e616d653d22576964=
+746820286d6d292220736f757263653d22576964746820286d6d29222064657363726970746=
+96f6e3d22776964746820696e206d696c6c696d657465727322202f3e0a2020202020202020=
+3c636f6c756d6e206e616d653d2268656967687420286d6d292220736f757263653d2268656=
+967687420286d6d2922206465736372697074696f6e3d2268656967687420696e206d696c6c=
+696d657465727322202f3e0a20202020202020203c636f6c756d6e206e616d653d225765696=
+768742028676d73292220736f757263653d225765696768742028676d732922206465736372=
+697074696f6e3d2277656967687420696e206772616d7322202f3e0a20202020202020203c6=
+36f6c756d6e206e616d653d2265616e2220736f757263653d2265616e222064657363726970=
+74696f6e3d22496e7465726e6174696f6e616c2041727469636c65204e756d626572206f722=
+04575726f7065616e2041727469636c65204e756d62657222202f3e0a20202020202020203c=
+636f6c756d6e206e616d653d227570632220736f757263653d2275706322206465736372697=
+074696f6e3d22556e6976657273616c2050726f6475637420436f646522202f3e0a20202020=
+202020203c636f6c756d6e206e616d653d226973626e2220736f757263653d226973626e222=
+06465736372697074696f6e3d22496e7465726e6174696f6e616c205374616e646172642042=
+6f6f6b204e756d62657222202f3e0a20202020202020203c636f6c756d6e206e616d653d226=
+36f6c6f722220736f757263653d22636f6c6f7222206465736372697074696f6e3d22636f6c=
+6f7222202f3e0a20202020202020203c636f6c756d6e206e616d653d226272616e642220736=
+f757263653d226272616e6422206465736372697074696f6e3d226272616e6422202f3e0a20=
+202020202020203c636f6c756d6e206e616d653d2273697a652220736f757263653d2273697=
+a6522206465736372697074696f6e3d2273697a6522202f3e0a20202020202020203c636f6c=
+756d6e206e616d653d22526571756972657320437573746f6d697a6174696f6e2220736f757=
+263653d22526571756972657320437573746f6d697a6174696f6e2220646573637269707469=
+6f6e3d22534b5520726571756972657320637573746f6d697a6174696f6e22202f3e0a20202=
+020202020203c636f6c756d6e206e616d653d224d696e204f726465722053697a652220736f=
+757263653d224d696e204f726465722053697a6522206465736372697074696f6e3d226d696=
+e696d756d206f726465722073697a6522202f3e0a20202020202020203c636f6c756d6e206e=
+616d653d22546178205479706520436f64652220736f757263653d225461782054797065204=
+36f646522206465736372697074696f6e3d22746178207479706520636f646522202f3e0a20=
+202020202020203c636f6c756d6e206e616d653d22546167732220736f757263653d2254616=
+77322206465736372697074696f6e3d227461677322202f3e0a20202020202020203c636f6c=
+756d6e206e616d653d225441542220736f757263653d2254415422206465736372697074696=
+f6e3d2254415422202f3e0a20202020202020203c636f6c756d6e206e616d653d22496d6167=
+652055726c2220736f757263653d22496d6167652055726c22206465736372697074696f6e3=
+d22696d6167652075726c22202f3e0a20202020202020203c636f6c756d6e206e616d653d22=
+50726f6475637420506167652055524c2220736f757263653d2250726f64756374205061676=
+52055524c22206465736372697074696f6e3d2250726f6475637420506167652055524c2220=
+2f3e0a20202020202020203c636f6c756d6e206e616d653d224974656d2044657461696c204=
+669656c64732220736f757263653d224974656d2044657461696c204669656c647322206465=
+736372697074696f6e3d224974656d2044657461696c204669656c64732028636f6d6d61207=
+365706572617465642922202f3e0a20202020202020203c636f6c756d6e206e616d653d224d=
+52502220736f757263653d224d525022206465736372697074696f6e3d224d6178205265746=
+1696c20507269636522202f3e0a20202020202020203c636f6c756d6e206e616d653d224261=
+73652050726963652220736f757263653d22426173652050726963652220646573637269707=
+4696f6e3d2253656c6c696e6720507269636522202f3e0a20202020202020203c636f6c756d=
+6e206e616d653d22456e61626c65642220736f757263653d22456e61626c656422206465736=
+372697074696f6e3d22456e61626c656422202f3e0a20202020202020203c637573746f6d2d=
+6669656c647320656e746974793d22636f6d2e756e69776172652e636f72652e656e7469747=
+92e4974656d5479706522202f3e0a20202020202020203c636f6c756d6e206e616d653d2272=
+6573796e6320696e76656e746f72792220736f757263653d22526573796e6320496e76656e7=
+46f727922206465736372697074696f6e3d223120696620696e76656e746f7279206f662074=
+686973206974656d2074797065206e6565647320746f20726573796e636564206f6e2063686=
+16e6e656c7322202f3e0a20202020202020203c636f6c756d6e206e616d653d225479706522=
+20736f757263653d225479706522206465736372697074696f6e3d2253494d504c45206f722=
+042554e444c452c2062792064656661756c742053494d504c4522202f3e0a20202020202020=
+203c636f6c756d6e206e616d653d22436f6d706f6e656e742050726f6475637420436f64652=
+220736f757263653d22436f6d706f6e656e742050726f6475637420436f6465222064657363=
+72697074696f6e3d2270726f6475637420636f6465206f66207468652062756e646c6520636=
+f6d706f6e656e7422202f3e0a20202020202020203c636f6c756d6e206e616d653d22436f6d=
+706f6e656e74205175616e746974792220736f757263653d22436f6d706f6e656e742051756=
+16e7469747922206465736372697074696f6e3d227175616e74697479206f66207468652063=
+6f6d706f6e656e7420696e2062756e646c6522202f3e0a20202020202020203c636f6c756d6=
+e206e616d653d22436f6d706f6e656e742050726963652220736f757263653d22436f6d706f=
+6e656e7420507269636522206465736372697074696f6e3d227072696365206f66207468652=
+0636f6d706f6e656e7420696e2062756e646c6522202f3e0a202020203c2f636f6c756d6e73=
+3e0a3c2f696d706f72742d636f6e6669673e0a\")');
+db.samplePrintTemplate.update({code: "temp"}, {$set: {template:decoded_temp
+}}, {multi : true});
+db.commonToTenantSpecificMigrationStatus.find().forEach(function(doc){db.ge=
+tSiblingDB(doc.tenantCode)['template'].update({code:
+"temp"}, {$set: {template:decoded_temp}}, {multi : true});})
+
+
+On Sat, Nov 12, 2016 at 9:34 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Haan abhi krta hu
+>
+>
+> On Sat, Nov 12, 2016 at 1:58 PM, Sagar Sahni <sagar@unicommerce.com>
+> wrote:
+>
+>> yrr iss file ko sqlGenerator se query generate krke de de ...maine kuch
+>> changes kiye the system mein .... kuch permission issue aa rahe hain ...
+>> run nai ho raha mera !!
+>>
+>>
+>>
+>
+
+--001a113ac4bea3d63305411cc93c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>update import_job_type set import_job_config =3D &#39=
+;&lt;?xml version=3D\&quot;1.0\&quot; encoding=3D\&quot;UTF-8\&quot;?&gt;\n=
+&lt;import-config&gt;\n =C2=A0 =C2=A0&lt;columns&gt;\n =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0&lt;column name=3D\&quot;Category Code\&quot; source=3D\&quot;Catego=
+ry Code\&quot; description=3D\&quot;category code\&quot; required=3D\&quot;=
+true\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Pro=
+duct Code\&quot; source=3D\&quot;Product Code\&quot; description=3D\&quot;p=
+roduct code\&quot; required=3D\&quot;true\&quot; groupBy=3D\&quot;true\&quo=
+t; requiredInUpdate=3D\&quot;true\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0&lt;column name=3D\&quot;Name\&quot; source=3D\&quot;Name\&quot; descrip=
+tion=3D\&quot;item type name\&quot; required=3D\&quot;true\&quot; /&gt;\n =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Description\&quot; sour=
+ce=3D\&quot;Description\&quot; description=3D\&quot;description\&quot; /&gt=
+;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Scan Identifier\&qu=
+ot; source=3D\&quot;Scan Identifier\&quot; description=3D\&quot;scan identi=
+fier\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Len=
+gth (mm)\&quot; source=3D\&quot;Length (mm)\&quot; description=3D\&quot;len=
+gth in millimeters\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column nam=
+e=3D\&quot;Width (mm)\&quot; source=3D\&quot;Width (mm)\&quot; description=
+=3D\&quot;width in millimeters\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&l=
+t;column name=3D\&quot;height (mm)\&quot; source=3D\&quot;height (mm)\&quot=
+; description=3D\&quot;height in millimeters\&quot; /&gt;\n =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0&lt;column name=3D\&quot;Weight (gms)\&quot; source=3D\&quot;W=
+eight (gms)\&quot; description=3D\&quot;weight in grams\&quot; /&gt;\n =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;ean\&quot; source=3D\&quot=
+;ean\&quot; description=3D\&quot;International Article Number or European A=
+rticle Number\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\=
+&quot;upc\&quot; source=3D\&quot;upc\&quot; description=3D\&quot;Universal =
+Product Code\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&=
+quot;isbn\&quot; source=3D\&quot;isbn\&quot; description=3D\&quot;Internati=
+onal Standard Book Number\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;col=
+umn name=3D\&quot;color\&quot; source=3D\&quot;color\&quot; description=3D\=
+&quot;color\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&q=
+uot;brand\&quot; source=3D\&quot;brand\&quot; description=3D\&quot;brand\&q=
+uot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;size\&quot=
+; source=3D\&quot;size\&quot; description=3D\&quot;size\&quot; /&gt;\n =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Requires Customization\&qu=
+ot; source=3D\&quot;Requires Customization\&quot; description=3D\&quot;SKU =
+requires customization\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column=
+ name=3D\&quot;Min Order Size\&quot; source=3D\&quot;Min Order Size\&quot; =
+description=3D\&quot;minimum order size\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0&lt;column name=3D\&quot;Tax Type Code\&quot; source=3D\&quot;Tax Ty=
+pe Code\&quot; description=3D\&quot;tax type code\&quot; /&gt;\n =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Tags\&quot; source=3D\&quot;Tags\=
+&quot; description=3D\&quot;tags\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+&lt;column name=3D\&quot;TAT\&quot; source=3D\&quot;TAT\&quot; description=
+=3D\&quot;TAT\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\=
+&quot;Image Url\&quot; source=3D\&quot;Image Url\&quot; description=3D\&quo=
+t;image url\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&q=
+uot;Product Page URL\&quot; source=3D\&quot;Product Page URL\&quot; descrip=
+tion=3D\&quot;Product Page URL\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&l=
+t;column name=3D\&quot;Item Detail Fields\&quot; source=3D\&quot;Item Detai=
+l Fields\&quot; description=3D\&quot;Item Detail Fields (comma seperated)\&=
+quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;MRP\&quot=
+; source=3D\&quot;MRP\&quot; description=3D\&quot;Max Retail Price\&quot; /=
+&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Base Price\&quot=
+; source=3D\&quot;Base Price\&quot; description=3D\&quot;Selling Price\&quo=
+t; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Enabled\&quo=
+t; source=3D\&quot;Enabled\&quot; description=3D\&quot;Enabled\&quot; /&gt;=
+\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;custom-fields entity=3D\&quot;com.uniware=
+.core.entity.ItemType\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column =
+name=3D\&quot;resync inventory\&quot; source=3D\&quot;Resync Inventory\&quo=
+t; description=3D\&quot;1 if inventory of this item type needs to resynced =
+on channels\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&q=
+uot;Type\&quot; source=3D\&quot;Type\&quot; description=3D\&quot;SIMPLE or =
+BUNDLE, by default SIMPLE\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;col=
+umn name=3D\&quot;Component Product Code\&quot; source=3D\&quot;Component P=
+roduct Code\&quot; description=3D\&quot;product code of the bundle componen=
+t\&quot; /&gt;\n =C2=A0 =C2=A0 =C2=A0 =C2=A0&lt;column name=3D\&quot;Compon=
+ent Quantity\&quot; source=3D\&quot;Component Quantity\&quot; description=
+=3D\&quot;quantity of the component in bundle\&quot; /&gt;\n =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0&lt;column name=3D\&quot;Component Price\&quot; source=3D\&quo=
+t;Component Price\&quot; description=3D\&quot;price of the component in bun=
+dle\&quot; /&gt;\n =C2=A0 =C2=A0&lt;/columns&gt;\n&lt;/import-config&gt;\n&=
+#39; where name =3D &quot;DB&quot;;</div><div>var decoded_temp =3D db.eval(=
+&#39;decodeHex (\&quot;3c3f786d6c2076657273696f6e3d22312e302220656e636f6469=
+6e673d225554462d38223f3e0a3c696d706f72742d636f6e6669673e0a202020203c636f6c7=
+56d6e733e0a20202020202020203c636f6c756d6e206e616d653d2243617465676f72792043=
+6f64652220736f757263653d2243617465676f727920436f646522206465736372697074696=
+f6e3d2263617465676f727920636f6465222072657175697265643d227472756522202f3e0a=
+20202020202020203c636f6c756d6e206e616d653d2250726f6475637420436f64652220736=
+f757263653d2250726f6475637420436f646522206465736372697074696f6e3d2270726f64=
+75637420636f6465222072657175697265643d2274727565222067726f757042793d2274727=
+56522207265717569726564496e5570646174653d227472756522202f3e0a20202020202020=
+203c636f6c756d6e206e616d653d224e616d652220736f757263653d224e616d65222064657=
+36372697074696f6e3d226974656d2074797065206e616d65222072657175697265643d2274=
+72756522202f3e0a20202020202020203c636f6c756d6e206e616d653d22446573637269707=
+4696f6e2220736f757263653d224465736372697074696f6e22206465736372697074696f6e=
+3d226465736372697074696f6e22202f3e0a20202020202020203c636f6c756d6e206e616d6=
+53d225363616e204964656e7469666965722220736f757263653d225363616e204964656e74=
+696669657222206465736372697074696f6e3d227363616e206964656e74696669657222202=
+f3e0a20202020202020203c636f6c756d6e206e616d653d224c656e67746820286d6d292220=
+736f757263653d224c656e67746820286d6d2922206465736372697074696f6e3d226c656e6=
+7746820696e206d696c6c696d657465727322202f3e0a20202020202020203c636f6c756d6e=
+206e616d653d22576964746820286d6d292220736f757263653d22576964746820286d6d292=
+2206465736372697074696f6e3d22776964746820696e206d696c6c696d657465727322202f=
+3e0a20202020202020203c636f6c756d6e206e616d653d2268656967687420286d6d2922207=
+36f757263653d2268656967687420286d6d2922206465736372697074696f6e3d2268656967=
+687420696e206d696c6c696d657465727322202f3e0a20202020202020203c636f6c756d6e2=
+06e616d653d225765696768742028676d73292220736f757263653d22576569676874202867=
+6d732922206465736372697074696f6e3d2277656967687420696e206772616d7322202f3e0=
+a20202020202020203c636f6c756d6e206e616d653d2265616e2220736f757263653d226561=
+6e22206465736372697074696f6e3d22496e7465726e6174696f6e616c2041727469636c652=
+04e756d626572206f72204575726f7065616e2041727469636c65204e756d62657222202f3e=
+0a20202020202020203c636f6c756d6e206e616d653d227570632220736f757263653d22757=
+06322206465736372697074696f6e3d22556e6976657273616c2050726f6475637420436f64=
+6522202f3e0a20202020202020203c636f6c756d6e206e616d653d226973626e2220736f757=
+263653d226973626e22206465736372697074696f6e3d22496e7465726e6174696f6e616c20=
+5374616e6461726420426f6f6b204e756d62657222202f3e0a20202020202020203c636f6c7=
+56d6e206e616d653d22636f6c6f722220736f757263653d22636f6c6f722220646573637269=
+7074696f6e3d22636f6c6f7222202f3e0a20202020202020203c636f6c756d6e206e616d653=
+d226272616e642220736f757263653d226272616e6422206465736372697074696f6e3d2262=
+72616e6422202f3e0a20202020202020203c636f6c756d6e206e616d653d2273697a6522207=
+36f757263653d2273697a6522206465736372697074696f6e3d2273697a6522202f3e0a2020=
+2020202020203c636f6c756d6e206e616d653d22526571756972657320437573746f6d697a6=
+174696f6e2220736f757263653d22526571756972657320437573746f6d697a6174696f6e22=
+206465736372697074696f6e3d22534b5520726571756972657320637573746f6d697a61746=
+96f6e22202f3e0a20202020202020203c636f6c756d6e206e616d653d224d696e204f726465=
+722053697a652220736f757263653d224d696e204f726465722053697a65222064657363726=
+97074696f6e3d226d696e696d756d206f726465722073697a6522202f3e0a20202020202020=
+203c636f6c756d6e206e616d653d22546178205479706520436f64652220736f757263653d2=
+2546178205479706520436f646522206465736372697074696f6e3d22746178207479706520=
+636f646522202f3e0a20202020202020203c636f6c756d6e206e616d653d225461677322207=
+36f757263653d225461677322206465736372697074696f6e3d227461677322202f3e0a2020=
+2020202020203c636f6c756d6e206e616d653d225441542220736f757263653d22544154222=
+06465736372697074696f6e3d2254415422202f3e0a20202020202020203c636f6c756d6e20=
+6e616d653d22496d6167652055726c2220736f757263653d22496d6167652055726c2220646=
+5736372697074696f6e3d22696d6167652075726c22202f3e0a20202020202020203c636f6c=
+756d6e206e616d653d2250726f6475637420506167652055524c2220736f757263653d22507=
+26f6475637420506167652055524c22206465736372697074696f6e3d2250726f6475637420=
+506167652055524c22202f3e0a20202020202020203c636f6c756d6e206e616d653d2249746=
+56d2044657461696c204669656c64732220736f757263653d224974656d2044657461696c20=
+4669656c647322206465736372697074696f6e3d224974656d2044657461696c204669656c6=
+4732028636f6d6d61207365706572617465642922202f3e0a20202020202020203c636f6c75=
+6d6e206e616d653d224d52502220736f757263653d224d525022206465736372697074696f6=
+e3d224d61782052657461696c20507269636522202f3e0a20202020202020203c636f6c756d=
+6e206e616d653d22426173652050726963652220736f757263653d224261736520507269636=
+522206465736372697074696f6e3d2253656c6c696e6720507269636522202f3e0a20202020=
+202020203c636f6c756d6e206e616d653d22456e61626c65642220736f757263653d22456e6=
+1626c656422206465736372697074696f6e3d22456e61626c656422202f3e0a202020202020=
+20203c637573746f6d2d6669656c647320656e746974793d22636f6d2e756e69776172652e6=
+36f72652e656e746974792e4974656d5479706522202f3e0a20202020202020203c636f6c75=
+6d6e206e616d653d22726573796e6320696e76656e746f72792220736f757263653d2252657=
+3796e6320496e76656e746f727922206465736372697074696f6e3d223120696620696e7665=
+6e746f7279206f662074686973206974656d2074797065206e6565647320746f20726573796=
+e636564206f6e206368616e6e656c7322202f3e0a20202020202020203c636f6c756d6e206e=
+616d653d22547970652220736f757263653d225479706522206465736372697074696f6e3d2=
+253494d504c45206f722042554e444c452c2062792064656661756c742053494d504c452220=
+2f3e0a20202020202020203c636f6c756d6e206e616d653d22436f6d706f6e656e742050726=
+f6475637420436f64652220736f757263653d22436f6d706f6e656e742050726f6475637420=
+436f646522206465736372697074696f6e3d2270726f6475637420636f6465206f662074686=
+52062756e646c6520636f6d706f6e656e7422202f3e0a20202020202020203c636f6c756d6e=
+206e616d653d22436f6d706f6e656e74205175616e746974792220736f757263653d22436f6=
+d706f6e656e74205175616e7469747922206465736372697074696f6e3d227175616e746974=
+79206f662074686520636f6d706f6e656e7420696e2062756e646c6522202f3e0a202020202=
+02020203c636f6c756d6e206e616d653d22436f6d706f6e656e742050726963652220736f75=
+7263653d22436f6d706f6e656e7420507269636522206465736372697074696f6e3d2270726=
+96365206f662074686520636f6d706f6e656e7420696e2062756e646c6522202f3e0a202020=
+203c2f636f6c756d6e733e0a3c2f696d706f72742d636f6e6669673e0a\&quot;)&#39;);=
+=C2=A0</div><div>db.samplePrintTemplate.update({code: &quot;temp&quot;}, {$=
+set: {template:decoded_temp }}, {multi : true});</div><div>db.commonToTenan=
+tSpecificMigrationStatus.find().forEach(function(doc){db.getSiblingDB(doc.t=
+enantCode)[&#39;template&#39;].update({code: &quot;temp&quot;}, {$set: {tem=
+plate:decoded_temp}}, {multi : true});})</div><div><br></div></div><div cla=
+ss=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sat, Nov 12, 2016 at 9=
+:34 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@un=
+icommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wr=
+ote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border=
+-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Haan abhi krta hu<d=
+iv><br></div></div><div class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gm=
+ail_extra"><br><div class=3D"gmail_quote">On Sat, Nov 12, 2016 at 1:58 PM, =
+Sagar Sahni <span dir=3D"ltr">&lt;<a href=3D"mailto:sagar@unicommerce.com" =
+target=3D"_blank">sagar@unicommerce.com</a>&gt;</span> wrote:<br><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc sol=
+id;padding-left:1ex"><div dir=3D"ltr">yrr iss file ko sqlGenerator se query=
+ generate krke de de ...maine kuch changes kiye the system mein .... kuch p=
+ermission issue aa rahe hain ... run nai ho raha mera !!<br><br><div><br></=
+div></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a113ac4bea3d63305411cc93c--

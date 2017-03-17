@@ -1,0 +1,373 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp484386qgj;
+        Wed, 26 Oct 2016 21:07:58 -0700 (PDT)
+X-Received: by 10.157.45.1 with SMTP id v1mr4167207ota.95.1477541278703;
+        Wed, 26 Oct 2016 21:07:58 -0700 (PDT)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o7.em.bitbucket.org (o7.em.bitbucket.org. [167.89.38.218])
+        by mx.google.com with ESMTPS id e188si3480137oia.240.2016.10.26.21.07.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Oct 2016 21:07:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.218 as permitted sender) client-ip=167.89.38.218;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.218 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=0K7Gx9CtftC/RdNLOBGI2uM2awk=; b=kySxzMaUD9CrxQC+ZOkNA0K
+	vRni4Px+Fw2N9fK5gLt9q9IAwwHI5Nrp4M9LNeHeqmHp5Ryu9EEcQrqBtXoCRddu
+	JVpAFrk/Ia2mn2pWGdxzMXy+m+c2R3jiB9kYrv/ujmZqrO18th6RIAkix+CCAD89
+	DNLa9JE9xH+ubgJYD9EQ=
+Received: by filter0936p1mdw1.sendgrid.net with SMTP id filter0936p1mdw1-10966-58117D9E-7
+        2016-10-27 04:07:58.187668637 +0000 UTC
+Received: from celery-worker-101.ash1.bb-inf.net (unknown [104.192.143.196])
+	by ismtpd0004p1iad1.sendgrid.net (SG) with ESMTP id aZBUPfcaSzer1eFES5sfYQ
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 04:07:58.056 +0000 (UTC)
+Received: from celery-worker-101.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-101.ash1.bb-inf.net (Postfix) with ESMTP id 0F8C393FC3
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 04:07:58 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============8927041146110094021=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #19: FK Pagination
+ (unicommercetechnology/uniware)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Thu, 27 Oct 2016 04:07:58 -0000
+Auto-Submitted: auto-generated
+Message-ID: <prcomment-25835645@bitbucket.org>
+References: <pr-unicommercetechnology/uniware/19@bitbucket.org>
+ <pr-unicommercetechnology/uniware/19@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniware/19@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/ucUsXaNmLXNWAwF0iIlk5MzWAaFasiOQid7t
+ TAvfzsL2gzQGi6YEvsmG21ftWeqLMh2HVUHRo6QL/VAZvBDB0xSlkn5T9Qg0Xz4znIvqYHqImGJHZW
+ fDT1MBsKzI3K48AKPVrKeb42MRsxUebwm9q+3vZ0/x8jvrEx/Zw0ip92qpWbpZMKZkgVjJQ6q5ChBm
+ hC6zr30HmmEkyywcyJr2kh
+
+--===============8927041146110094021==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+New comment on pull request:
+
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination#comment-25835645
+
+Akshay Agarwal said:
+
+Please remove logs that you added for testing. Also remove the redundant code. Don't comment it.
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/unwatch/digvijay095/39368813eaf28f4f8d552411f4633a43a94cdd93/
+
+--===============8927041146110094021==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" class="comment-container no-box" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: none; border-radius: 5px; padding: 0; background: #f5f5f5">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td class="main-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <div style="border: 1px solid #ccc; border-radius: 5px; background-color: #fff; padding: 0">
+                
+<span style="display: none; display: none !important;">
+  
+    Akshay Agarwal commented on pull request #19: FK Pagination
+  
+</span>
+<table style="width: 100%; border-collapse: collapse">
+  <tbody>
+    
+      <tr>
+        <td class="comment-filename" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-radius: 5px 5px 0 0">UniwareResources/scripts/scraper-awb/flipkart-reconciliation-invoice-detail-script.xml</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    
+    
+      <tr>
+        <td class="diff-line common first" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px; border-top: 1px solid #ccc">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>55</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>56</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'>             &lt;param <wbr>name="page_size" val<wbr>ue="10" /&gt;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>56</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>57</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'>         &lt;/http&gt;</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line deletion" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>57</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'></td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fdd'>-        &lt;log level=<wbr>"info" value="#{#tra<wbr>nsactionResponse}" /<wbr>&gt;</wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>58</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+        &lt;log level=<wbr>"info" value="#{#pag<wbr>eNumber}"/&gt;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="line-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc">
+            <div style="border: 1px solid #ccc; background: #fff; padding: 20px; border-radius: 5px">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    
+                      
+
+<td class="comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+  <table style="width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td class="comment-avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+          
+            
+              <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1477540461" style="border-radius: 3px">
+            
+          
+        </td>
+        <td class="comment-main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              
+                <tr>
+                  <td class="comment-user" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+                    
+                      
+                        <strong>Akshay Agarwal</strong> commented on pull request #19:
+                      
+                    
+                  </td>
+                </tr>
+                
+                  <tr>
+                    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+                      <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination#comment-25835645" style="color: #3572b0; text-decoration: none">FK Pagination</a>
+                    </td>
+                  </tr>
+                
+              
+              <tr>
+                <td class="comment-content markup-content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 15px">
+                  
+                    <p style="margin-bottom: 0; margin: 10px 0 0 0; padding: 0; margin-top: 0">Please remove logs that you added for testing. Also remove the redundant code. Don't comment it.</p>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="actions secondary" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 20px 0 0; color: #707070; border-top: 1px solid #cccccc; line-height: 1">
+            
+            
+              
+                <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination#comment-25835645" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+              
+            
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</td>
+
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>59</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+        &lt;!--&lt;log le<wbr>vel="info" value="#{<wbr>#transactionResponse<wbr>}" /&gt;--&gt;</wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>58</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>60</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'>         &lt;var name="<wbr>transactionJson" val<wbr>ue="#{T(com.unifier.<wbr>core.utils.JsonUtils<wbr>).stringToJson(#tran<wbr>sactionResponse)}" /<wbr>&gt;</wbr></wbr></wbr></wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line last common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-bottom-left-radius: 5px'>59</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>61</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff; border-bottom-right-radius: 5px'>         &lt;log level=<wbr>"info" value="#{#tra<wbr>nsactionJson}"/&gt;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+  </tbody>
+</table>
+
+              </div>
+            </td>
+          </tr>
+          
+  
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/unwatch/digvijay095/39368813eaf28f4f8d552411f4633a43a94cdd93/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/420779776/b9199976be36f9d23d90a476ff506f1e4e54c061/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/c2f011c629a2/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm5V4MvwbSeFKADmPhWiWe9hIC4zHjyfM4WNFg1ultt7-2BpXwuXT19AFSlLfL4FGHQatrTwoLHvppFMm1VSQgxjUriw50eQgXUAQSC2g0MpU8qJRrcofGtEStuCC0I28E9o9yRmBK3LwPCIqOyNHNqVkD9terfN4OPoNPPf8o518TxtwMjLvMfW3OFWh47gPvubY-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============8927041146110094021==--

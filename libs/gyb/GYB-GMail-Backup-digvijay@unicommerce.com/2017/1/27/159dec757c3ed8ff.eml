@@ -1,0 +1,322 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp101549qgu;
+        Thu, 26 Jan 2017 23:15:22 -0800 (PST)
+X-Received: by 10.55.22.77 with SMTP id g74mr7252256qkh.54.1485501322949;
+        Thu, 26 Jan 2017 23:15:22 -0800 (PST)
+Return-Path: <rohit@unicommerce.com>
+Received: from mail-qt0-x236.google.com (mail-qt0-x236.google.com. [2607:f8b0:400d:c0d::236])
+        by mx.google.com with ESMTPS id r13si2936480qkh.117.2017.01.26.23.15.22
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 26 Jan 2017 23:15:22 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::236 is neither permitted nor denied by best guess record for domain of rohit@unicommerce.com) client-ip=2607:f8b0:400d:c0d::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::236 is neither permitted nor denied by best guess record for domain of rohit@unicommerce.com) smtp.mailfrom=rohit@unicommerce.com
+Received: by mail-qt0-x236.google.com with SMTP id v23so118226233qtb.0
+        for <digvijay@unicommerce.com>; Thu, 26 Jan 2017 23:15:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=GfbBHmr+USlBHYHFLt6oudTctukKfX9pMsQCgVsdyEc=;
+        b=dcPcJPSiwQQQ9GyXxwcrxqEDUV0TRI6c76QXrhm+g2JxTc5lwoJ6bID88+VLX3BkUW
+         agkbFphuxG53j5L+OTk5+6pjGwQcsuRDob5GC1Lh2zb5xYY1cuZlme/SKTpLwODX92bA
+         bcBVNVojCtpZqEFsnRVNZs8tW8Sqztij4pmhWM+IcnLZrRQBtCBPL0Ld0qDIOeiypoFM
+         mCmaHS8imBsvDEUqH7hl8IlpSqvaNMrT3+0UIJk4RegqfuO4GUS/fLaLKYAxLD5w6JPz
+         HC2rCXffcuuz8SmSf8NrO+5HfcisVYNXA+vR8ZiTgjReK7trvlfoiXOwyOS9Jp9DqMzY
+         F0wg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=GfbBHmr+USlBHYHFLt6oudTctukKfX9pMsQCgVsdyEc=;
+        b=T+RhJYPmDM/1ZVE5dwvr19E5S20W8G40PtauSzPSXeH24dk5blz4R14M6dK51RzuqM
+         F8kzK3ZKXrzSkBOuzpbKH+yE1kBaWC7kHevi+U05CnyvXGhfQKGG+S+Ke+Fq3CN0LvCF
+         L1VhfA3AzE59eIHDFezDqpT/2+POYvYOoKEcCgrF9LZMG+zwgfBh/69QyFDe8Kh9IbrB
+         wSCy6lx3cF5tag3YTNhbH9wC4UBE643Ro7JOoH30RavJszwLyLXp6yeY1n6rpkRaVdpJ
+         05aNMbHEzsQd86sPgj4jdw0ztZWCK8y8vn1jtbbHtIuMwPcjVC/uAn7eJna9njHPUN/t
+         MbWw==
+X-Gm-Message-State: AIkVDXJNApHN34Bra+D29sSd6LjZoF4eyRO077k1Vt+vPaBiITmpHh6YepaiCVe1uYPQbJo1QKYQf56Zh/ghjw==
+X-Received: by 10.200.57.163 with SMTP id v32mr6239577qte.173.1485501322651;
+ Thu, 26 Jan 2017 23:15:22 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.200.45.206 with HTTP; Thu, 26 Jan 2017 23:15:02 -0800 (PST)
+In-Reply-To: <CAJQg1JvcWPm2MEikr4H13ynMgH6e+9z973PRMwTxQTN2WVVx3w@mail.gmail.com>
+References: <CAJQg1Ju8SCyJPB76xwQU2-gYHZ-iGt1wEVZ=SwqBz0hj+F3NNA@mail.gmail.com>
+ <CAJQg1JtVH0+8xhKnGXfaDFg=5NX7wZ4Q3sc0y67AvD-BGuGoGg@mail.gmail.com> <CAJQg1JvcWPm2MEikr4H13ynMgH6e+9z973PRMwTxQTN2WVVx3w@mail.gmail.com>
+From: Rohit Mishra <rohit@unicommerce.com>
+Date: Fri, 27 Jan 2017 12:45:02 +0530
+Message-ID: <CAM1_FXZncYAi_zNvTS9Wamkar4ygqkcLQAk5VJHJdjFP4n0+pA@mail.gmail.com>
+Subject: Re: Trendybharat Integration
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: sunny agarwal <sunny@unicommerce.com>, Ravindra Kumar <ravindra@unicommerce.com>, 
+	Rahul Kandpal <rahul.kandpal@unicommerce.com>, Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c069f48a6895005470e3a89
+
+--94eb2c069f48a6895005470e3a89
+Content-Type: text/plain; charset=UTF-8
+
+Hi Digvijay,
+
+As per your discussion access resource is VENDOR_API. I was planning to
+give this access resource to Warehouse Manager role in Trendy Bharat(
+https://trendybharat.unicommerce.com) but unable to do.  This resource was
+available with ALL (Global role) I have given that to utkarsh and tried
+login but it gives.
+
+Login path:-
+https://trvendor1.unicommerce.com/channel/view?channelCode=TRENDY_BHARAT
+
+User:-
+utkarsh@unicommerce.com
+Pass-unicom
+
+Please check, also help give Access resource "VENDOR_API" to role
+"Warehouse Manager". Feel free to call me if any issue on this -*8130126919*
+
+
+*pe* Exception report
+
+*message*
+
+*description* *The server encountered an internal error that prevented it
+from fulfilling this request.*
+
+*exception*
+
+java.lang.NullPointerException
+	com.unifier.web.security.UniwareUser.loadUser(UniwareUser.java:119)
+	com.unifier.web.security.UniwareUser.<init>(UniwareUser.java:82)
+	com.unifier.web.security.UniwareUserDetailsService.loadUserByUsername(UniwareUserDetailsService.java:45)
+	org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper.loadUserDetails(UserDetailsByNameServiceWrapper.java:51)
+	org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider.authenticate(PreAuthenticatedAuthenticationProvider.java:80)
+	org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:156)
+	com.unifier.web.security.UniwareSingleSignonFilter.doAuthenticate(UniwareSingleSignonFilter.java:170)
+	com.unifier.web.security.UniwareSingleSignonFilter.doFilter(UniwareSingleSignonFilter.java:143)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	com.uniware.web.filter.LockingContextFilter.doFilter(LockingContextFilter.java:29)
+
+
+
+*Thanks & Regards*
+*Rohit Mishra*
+*8130126919*
+*Customer Delivery Manager*
+
+
+
+On Tue, Jan 24, 2017 at 3:44 PM, Rahul Kandpal <
+rahul.kandpal@unicommerce.com> wrote:
+
+> Hi Digvijay
+>
+> Can you tell me exact ROLE name, that was in groupon
+> eg: "testdropship"
+> i need to make same role in trendybharat
+>
+> On Tue, Jan 10, 2017 at 2:05 PM, Rahul Kandpal <
+> rahul.kandpal@unicommerce.com> wrote:
+>
+>> Hi Digvijay
+>>
+>> Please update on the progress.
+>>
+>> On Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <
+>> rahul.kandpal@unicommerce.com> wrote:
+>>
+>>> Hi Digvijay
+>>>
+>>> Please update on this mail thread once trendybharat.unicommerce.com is
+>>> ready for testing.
+>>>
+>>> Have created a vendor panel(trtester.unicommerce.com) where orders will
+>>> be pulled from trendybharat.
+>>>
+>>> --
+>>>
+>>> Thanks
+>>> Rahul Kandpal
+>>> 08826793081
+>>>
+>>
+>>
+>>
+>> --
+>>
+>> Thanks
+>> Rahul Kandpal
+>> 08826793081
+>>
+>
+>
+>
+> --
+>
+> Thanks
+> Rahul Kandpal
+> 08826793081
+>
+
+--94eb2c069f48a6895005470e3a89
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Digvijay,<div><br></div><div>As per your discussion acc=
+ess resource is VENDOR_API. I was planning to give this access resource to =
+Warehouse Manager role in Trendy Bharat(<a href=3D"https://trendybharat.uni=
+commerce.com">https://trendybharat.unicommerce.com</a>) but unable to do.=
+=C2=A0 This resource was available with ALL (Global role) I have given that=
+ to utkarsh and tried login but it gives.=C2=A0</div><div><br></div><div>Lo=
+gin path:-</div><div><a href=3D"https://trvendor1.unicommerce.com/channel/v=
+iew?channelCode=3DTRENDY_BHARAT">https://trvendor1.unicommerce.com/channel/=
+view?channelCode=3DTRENDY_BHARAT</a><br></div><div><br></div><div>User:-</d=
+iv><table style=3D"box-sizing:content-box;border-collapse:collapse;max-widt=
+h:100%;width:278px;color:rgb(51,51,51);font-family:&quot;helvetica neue&quo=
+t;,helvetica,arial,sans-serif;font-size:13px"><tbody style=3D"box-sizing:co=
+ntent-box"><tr style=3D"box-sizing:content-box"><td class=3D"gmail-text-ove=
+rFlow" style=3D"box-sizing:content-box;max-width:1px;width:187px"><span sty=
+le=3D"box-sizing:content-box;border-bottom:0px none;display:block;text-over=
+flow:ellipsis;overflow:hidden;white-space:nowrap"><a href=3D"mailto:utkarsh=
+@unicommerce.com">utkarsh@unicommerce.com</a></span></td></tr><tr style=3D"=
+box-sizing:content-box"></tr></tbody></table>Pass-unicom<div><br></div><div=
+>Please check, also help give Access resource &quot;VENDOR_API&quot; to rol=
+e &quot;Warehouse Manager&quot;. Feel free to call me if any issue on this =
+-<b style=3D"font-size:12.8px">8130126919</b><br><div><br></div><div><br></=
+div><div><p style=3D"font-family:tahoma,arial,sans-serif;background-image:i=
+nitial;background-position:initial;background-size:initial;background-repea=
+t:initial;background-origin:initial;background-clip:initial;color:rgb(0,0,0=
+);font-size:12px"><b style=3D"color:white;background-color:rgb(82,93,118)">=
+pe</b>=C2=A0Exception report</p><p style=3D"font-family:tahoma,arial,sans-s=
+erif;background-image:initial;background-position:initial;background-size:i=
+nitial;background-repeat:initial;background-origin:initial;background-clip:=
+initial;color:rgb(0,0,0);font-size:12px"><b style=3D"color:white;background=
+-color:rgb(82,93,118)">message</b><u></u></p><p style=3D"font-family:tahoma=
+,arial,sans-serif;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;color:rgb(0,0,0);font-size:12px"><b style=3D"color:whi=
+te;background-color:rgb(82,93,118)">description</b>=C2=A0<u>The server enco=
+untered an internal error that prevented it from fulfilling this request.</=
+u></p><p style=3D"font-family:tahoma,arial,sans-serif;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;color:rgb(0,0,0);f=
+ont-size:12px"><b style=3D"color:white;background-color:rgb(82,93,118)">exc=
+eption</b></p><pre style=3D"color:rgb(0,0,0)">java.lang.NullPointerExceptio=
+n
+	com.unifier.web.security.UniwareUser.loadUser(UniwareUser.java:119)
+	com.unifier.web.security.UniwareUser.&lt;init&gt;(UniwareUser.java:82)
+	com.unifier.web.security.UniwareUserDetailsService.loadUserByUsername(Uniw=
+areUserDetailsService.java:45)
+	org.springframework.security.core.userdetails.UserDetailsByNameServiceWrap=
+per.loadUserDetails(UserDetailsByNameServiceWrapper.java:51)
+	org.springframework.security.web.authentication.preauth.PreAuthenticatedAu=
+thenticationProvider.authenticate(PreAuthenticatedAuthenticationProvider.ja=
+va:80)
+	org.springframework.security.authentication.ProviderManager.authenticate(P=
+roviderManager.java:156)
+	com.unifier.web.security.UniwareSingleSignonFilter.doAuthenticate(UniwareS=
+ingleSignonFilter.java:170)
+	com.unifier.web.security.UniwareSingleSignonFilter.doFilter(UniwareSingleS=
+ignonFilter.java:143)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.ja=
+va:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilt=
+er(LogoutFilter.java:110)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.request.async.WebAsyncManagerInte=
+grationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.=
+doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterC=
+hainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProx=
+y.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(Delega=
+tingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFi=
+lterProxy.java:261)
+	com.uniware.web.filter.LockingContextFilter.doFilter(LockingContextFilter.=
+java:29)</pre></div><div><br></div></div><div class=3D"gmail_extra"><br cle=
+ar=3D"all"><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div><div d=
+ir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><font color=3D"#000000"><=
+b>Thanks &amp; Regards</b></font></div><div><font color=3D"#000000"><b>Rohi=
+t Mishra</b></font></div><div><span style=3D"font-size:12.8px"><b>813012691=
+9</b></span><br></div><div><b style=3D"color:rgb(0,0,0)">Customer Delivery =
+Manager</b></div><div><br></div><div><br></div></div></div></div></div></di=
+v></div></div>
+<br><div class=3D"gmail_quote">On Tue, Jan 24, 2017 at 3:44 PM, Rahul Kandp=
+al <span dir=3D"ltr">&lt;<a href=3D"mailto:rahul.kandpal@unicommerce.com" t=
+arget=3D"_blank">rahul.kandpal@unicommerce.com</a>&gt;</span> wrote:<br><bl=
+ockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-lef=
+t:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi Digvijay=
+<div><br></div><div><div id=3D"gmail-m_-9105296798117674332gmail-:2tr" dir=
+=3D"ltr" class=3D"gmail-m_-9105296798117674332gmail-kl" style=3D"font-size:=
+12.8px">Can you tell me exact ROLE name, that was in groupon</div><div id=
+=3D"gmail-m_-9105296798117674332gmail-:20" dir=3D"ltr" class=3D"gmail-m_-91=
+05296798117674332gmail-kl" style=3D"font-size:12.8px">eg: &quot;testdropshi=
+p&quot;</div><div id=3D"gmail-m_-9105296798117674332gmail-:2tl" dir=3D"ltr"=
+ class=3D"gmail-m_-9105296798117674332gmail-kl" style=3D"font-size:12.8px">=
+i need to make same role in trendybharat</div></div></div><div class=3D"gma=
+il-HOEnZb"><div class=3D"gmail-h5"><div class=3D"gmail_extra"><br><div clas=
+s=3D"gmail_quote">On Tue, Jan 10, 2017 at 2:05 PM, Rahul Kandpal <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:rahul.kandpal@unicommerce.com" target=3D"_bl=
+ank">rahul.kandpal@unicommerce.com</a><wbr>&gt;</span> wrote:<br><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px s=
+olid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi Digvijay<div><b=
+r></div><div>Please update on the progress.</div></div><div class=3D"gmail_=
+extra"><br><div class=3D"gmail_quote"><span>On Thu, Jan 5, 2017 at 2:56 PM,=
+ Rahul Kandpal <span dir=3D"ltr">&lt;<a href=3D"mailto:rahul.kandpal@unicom=
+merce.com" target=3D"_blank">rahul.kandpal@unicommerce.com</a><wbr>&gt;</sp=
+an> wrote:<br></span><div><div class=3D"gmail-m_-9105296798117674332h5"><bl=
+ockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-lef=
+t:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi Digvijay=
+<div><br></div><div>Please update on this mail thread once <a href=3D"http:=
+//trendybharat.unicommerce.com" target=3D"_blank">trendybharat.unicommerce.=
+com</a> is ready for testing.</div><div><br></div><div>Have created a vendo=
+r panel(<span style=3D"background-color:rgb(226,228,255);color:rgb(51,51,51=
+);font-family:&quot;helvetica neue&quot;,helvetica,arial,sans-serif;font-si=
+ze:13px"><a href=3D"http://trtester.unicommerce.com" target=3D"_blank">trte=
+ster.unicommerce.com</a><wbr>)</span>=C2=A0where orders will be pulled from=
+ trendybharat.</div><span class=3D"gmail-m_-9105296798117674332m_8614798941=
+214077924HOEnZb"><font color=3D"#888888"><div><div><br></div>-- <br><div cl=
+ass=3D"gmail-m_-9105296798117674332m_8614798941214077924m_25251488202840153=
+60gmail_signature"><div dir=3D"ltr"><br><div>Thanks</div><div>Rahul Kandpal=
+</div><div>08826793081</div></div></div>
+</div></font></span></div>
+</blockquote></div></div></div><div><div class=3D"gmail-m_-9105296798117674=
+332h5"><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail-m_-9=
+105296798117674332m_8614798941214077924gmail_signature"><div dir=3D"ltr"><b=
+r><div>Thanks</div><div>Rahul Kandpal</div><div>08826793081</div></div></di=
+v>
+</div></div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail-m_-9105296798117674332gmail_signature"><div dir=3D"ltr"><br><div>=
+Thanks</div><div>Rahul Kandpal</div><div>08826793081</div></div></div>
+</div>
+</div></div></blockquote></div><br></div></div>
+
+--94eb2c069f48a6895005470e3a89--

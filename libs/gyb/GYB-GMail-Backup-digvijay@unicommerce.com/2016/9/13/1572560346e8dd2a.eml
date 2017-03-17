@@ -1,0 +1,72 @@
+MIME-Version: 1.0
+Received: by 10.36.41.130 with HTTP; Tue, 13 Sep 2016 14:07:24 -0700 (PDT)
+Date: Wed, 14 Sep 2016 02:37:24 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soqBQagCZ0qa1tBLYy_KgHGc1gRYCGZz0T39n7_02gbkiA@mail.gmail.com>
+Subject: JUST_ A_SINGLE_QUERY
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c05a204d0c1c8053c69ff79
+
+--94eb2c05a204d0c1c8053c69ff79
+Content-Type: text/plain; charset=UTF-8
+
+#TOP 10 SKUs BY REVENUE FOR TOP CHANNEL CH0 ---> LOOP IN LIMIT 0,1 FOR ALL
+THE 6 CHANNELS IN SCRIPT
+ select seller_sku_code,sum(total_price) as item_revenue from
+sale_order_item inner join (
+  select seller_sku_code as ssc from (select
+name,channel_id,channel_revenue as channel_revenue from channel inner join (
+  select channel_id,sum(sum) as channel_revenue from sale_order inner join (
+  select sum(total_price) as sum,sale_order_id from sale_order_item group
+by sale_order_id)x where
+  sale_order.id=x.sale_order_id group by channel_id order by sum(sum) desc
+LIMIT 6)x where
+  channel.id=x.channel_id LIMIT 0,1 )p inner join (
+  select seller_sku_code,channel_id from sale_order_item inner join (
+   select id,channel_id from sale_order inner join (
+   select name,channel_id as cid,channel_revenue as channel_revenue from
+channel inner join (
+   select channel_id,sum(sum) as channel_revenue from sale_order inner join
+(
+   select sum(total_price) as sum,sale_order_id from sale_order_item group
+by sale_order_id)x where
+    sale_order.id=x.sale_order_id group by channel_id order by sum(sum)
+desc LIMIT 6)x where channel.id=x.channel_id)z where
+    sale_order.channel_id=z.cid)w where sale_order_item.sale_order_id=w.id)q
+where p.channel_id=q.channel_id group by seller_sku_code)r where
+sale_order_item.seller_sku_code=r.ssc group by seller_sku_code order by
+sum(total_price) desc LIMIT 10;
+
+--94eb2c05a204d0c1c8053c69ff79
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>#TOP 10 SKUs BY REVENUE FOR TOP CHANNEL CH0 ---&gt; L=
+OOP IN LIMIT 0,1 FOR ALL THE 6 CHANNELS IN SCRIPT</div><div>=C2=A0select se=
+ller_sku_code,sum(total_price) as item_revenue from sale_order_item inner j=
+oin (</div><div>=C2=A0 select seller_sku_code as ssc from (select name,chan=
+nel_id,channel_revenue as channel_revenue from channel inner join (</div><d=
+iv>=C2=A0 select channel_id,sum(sum) as channel_revenue from sale_order inn=
+er join (</div><div>=C2=A0 select sum(total_price) as sum,sale_order_id fro=
+m sale_order_item group by sale_order_id)x where =C2=A0 =C2=A0</div><div>=
+=C2=A0 <a href=3D"http://sale_order.id">sale_order.id</a>=3Dx.sale_order_id=
+ group by channel_id order by sum(sum) desc LIMIT 6)x where=C2=A0</div><div=
+>=C2=A0 <a href=3D"http://channel.id">channel.id</a>=3Dx.channel_id LIMIT 0=
+,1 )p inner join (</div><div>=C2=A0 select seller_sku_code,channel_id from =
+sale_order_item inner join (</div><div>=C2=A0 =C2=A0select id,channel_id fr=
+om sale_order inner join (</div><div>=C2=A0 =C2=A0select name,channel_id as=
+ cid,channel_revenue as channel_revenue from channel inner join (</div><div=
+>=C2=A0 =C2=A0select channel_id,sum(sum) as channel_revenue from sale_order=
+ inner join (</div><div>=C2=A0 =C2=A0select sum(total_price) as sum,sale_or=
+der_id from sale_order_item group by sale_order_id)x where=C2=A0</div><div>=
+=C2=A0 =C2=A0 <a href=3D"http://sale_order.id">sale_order.id</a>=3Dx.sale_o=
+rder_id group by channel_id order by sum(sum) desc LIMIT 6)x where <a href=
+=3D"http://channel.id">channel.id</a>=3Dx.channel_id)z where=C2=A0</div><di=
+v>=C2=A0 =C2=A0 sale_order.channel_id=3Dz.cid)w where sale_order_item.sale_=
+order_id=3D<a href=3D"http://w.id">w.id</a>)q where p.channel_id=3Dq.channe=
+l_id group by seller_sku_code)r where sale_order_item.seller_sku_code=3Dr.s=
+sc group by seller_sku_code order by sum(total_price) desc LIMIT 10;</div><=
+div><br></div></div>
+
+--94eb2c05a204d0c1c8053c69ff79--

@@ -1,0 +1,139 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.51.147 with SMTP id k141csp1190418itk;
+        Tue, 13 Sep 2016 06:01:17 -0700 (PDT)
+X-Received: by 10.13.210.70 with SMTP id u67mr565689ywd.10.1473771677331;
+        Tue, 13 Sep 2016 06:01:17 -0700 (PDT)
+Return-Path: <akshay@unicommerce.com>
+Received: from mail-yw0-x22e.google.com (mail-yw0-x22e.google.com. [2607:f8b0:4002:c05::22e])
+        by mx.google.com with ESMTPS id k72si339082ywe.49.2016.09.13.06.01.17
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Sep 2016 06:01:17 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22e is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) client-ip=2607:f8b0:4002:c05::22e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::22e is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) smtp.mailfrom=akshay@unicommerce.com
+Received: by mail-yw0-x22e.google.com with SMTP id u124so91578886ywg.3
+        for <digvijay@unicommerce.com>; Tue, 13 Sep 2016 06:01:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=qkVoXsV3Y1ui+L6n9DHqoIr0pVLoeaRQP21LbfbujaU=;
+        b=bH82+OY1VMmvsiH61zs6WVTX0qM81ZA4TYR9ZC65HRFZIkz55Zl0I2mIRegH4GLnhw
+         PY7txfqJLHnpYv3AwCLQsW/Ef9SC9eN5DDAuklazNHKhBF84JjG9JJufUyfJf3OhO0xG
+         8arDGO8UFGxHw2rD8mRnZabBZtvxF7mLvuZme+4v3hOfs5drPQfCHBI9yYINgPFop9/M
+         O5AbYjZuTNO9UF6d4uehhI+jLd2qsYDSUEepANLq8H0cA78SauYicop46xmJLk2Tpgm5
+         2brdt4JzxJZUC+M+yAwevJq3oo6vk6nj3eLvXJfjVx9m7gI59465+D4bMOmvOFgiv1D7
+         hMcw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=qkVoXsV3Y1ui+L6n9DHqoIr0pVLoeaRQP21LbfbujaU=;
+        b=gPrct3ulXlKgv9ALw/IYlsKRPbSHOGsJsQWft03m4b/sgm9liJjGimODqxfYPIL1Dv
+         VdJbhK37Dx+L+DCjJJo+TWsFyqv2RNRrIk48xwdBFd78xV2cVGEV/dbHlK+m3ViiwIG3
+         pb3wKkwcLuIzmBaZU9s5IKS1FptDcSTxJ5ddUG1SocF08goIBUySfBcLXEbg+e4ICaDe
+         kdf8fuVlPoeI51HVTUakgkC94GKk+y4zUsiffvsz1qB2feDX7uPWPKJuWWXHjaj5flNb
+         7PDnYN1aebDfF/6frtt8CAaT1/L8ruQaDEbzpnw2hiR3+AkKjqWmggOmYLfpT2o9gdsP
+         ow/w==
+X-Gm-Message-State: AE9vXwMZkusOddiP5c5B5WjUp+rl/nrcp5jSQDuRpMp4D3O/FVKV/G8G67mrDRlioL2CSIKqoRlqD9HzMrC8Fw==
+X-Received: by 10.129.110.5 with SMTP id j5mr564753ywc.78.1473771676992; Tue,
+ 13 Sep 2016 06:01:16 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.48.9 with HTTP; Tue, 13 Sep 2016 06:00:56 -0700 (PDT)
+In-Reply-To: <CAOkTFmjq0me7sVfoPyWSOYpSxtKJe-YVa2HAtWTN0i5b9dd_Bw@mail.gmail.com>
+References: <CAGz2fOfxNcCt_QTLZ=gVCFEjSRWQahQ4BUourWawR33c1WkF0A@mail.gmail.com>
+ <CAGz2fOd_KKwkc4CN5FvjAwc+7iv_2_ZvfSmW5-tB1C+d8o+wWw@mail.gmail.com>
+ <CAEvR4bTNtz9nmP3z80EOfUUKcRMntm=P8NtAHnsZMeu24ECKhg@mail.gmail.com>
+ <CAOrbZ4YTFCqDK-7n3kg5M+eGJ9VxD65NQaBFyeKXyVBEiZLyug@mail.gmail.com>
+ <CAOhZXUuNiQxawo81Wi9F_gSG45sAhvusH_8V8baPgun6NqmNyQ@mail.gmail.com>
+ <CAAUEOSUWx5MCtrxBZ2MQ3rJD5aU5V-ot8eLOTj+wNBn_=-pBgw@mail.gmail.com>
+ <CAGjOsgQ9nSDmJ5X2q4He5Sgr8kQDbO7+yv4r7g2E7J7wsqi-zQ@mail.gmail.com>
+ <CAK9ixGyB_ok1EWn_y-KriCXU+eNAqhnOhtCQ_g8Q8_HwPgexew@mail.gmail.com>
+ <CAOiUse5CCgKemSnZ6ssSs41S+jskocxieaCWeoYXZ8tpRmV_HQ@mail.gmail.com>
+ <CAASAXwy-w93dqTzzNdijbAeneeOSbtQpNjvy5RpVhyR+zwzNWg@mail.gmail.com>
+ <CA+zaFGiUzbedFGaLQvZ81Fpi7g+WApAFnfGZs6Ra0FoXA_moEg@mail.gmail.com>
+ <CAOiuGhq1KHVRt2VNRUuJpvSpSGxqRTsGFENr3ZE7OTb21K8UJg@mail.gmail.com>
+ <CAGz2fOd_VM8QKFEr=9-aODkt+dPOxDq5Lj-tkGnJVmeV5Zw37g@mail.gmail.com> <CAOkTFmjq0me7sVfoPyWSOYpSxtKJe-YVa2HAtWTN0i5b9dd_Bw@mail.gmail.com>
+From: Akshay Kochhar <akshay@unicommerce.com>
+Date: Tue, 13 Sep 2016 18:30:56 +0530
+Message-ID: <CAOkTFmhQHJs-0_Xyze2Sy5KhHawtz8kKAdrXb75+ZvZAjND0KQ@mail.gmail.com>
+Subject: Re: Wednesday Night Party Expenses
+To: Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Piyush Arora <piyush@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Harsh Pal <harsh@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>, 
+	Sunny Agarwal <sunny@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Vani Verma <vani@unicommerce.com>, Ankur Pratik <ankur.pratik@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Shilpa Suri <shilpa@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>, Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, Vikas Goyal <vikas@unicommerce.com>, 
+	Sonu Goel <sonu@unicommerce.com>, Yamini Sukhija <yamini.sukhija@unicommerce.com>, 
+	karan Garg <karangarg@unicommerce.com>, Puneet Sharma <puneet@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Ashish Bansal <ashish@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1149023a49b77a053c633532
+
+--001a1149023a49b77a053c633532
+Content-Type: text/plain; charset=UTF-8
+
+Done for vikas
+
+-- Regards, Akshay Kochhar
+Software Engineer
+M:9999315765
+Unicommerce eSolutions Pvt. Ltd.
+
+
+
+On Tue, Sep 13, 2016 at 6:23 PM, Akshay Kochhar <akshay@unicommerce.com>
+wrote:
+
+> Done for puneet
+>
+> -- Regards, Akshay Kochhar
+> Software Engineer
+> M:9999315765
+> Unicommerce eSolutions Pvt. Ltd.
+>
+>
+>
+> On Fri, Sep 9, 2016 at 3:35 PM, Rachit Sachdeva <rachit@unicommerce.com>
+> wrote:
+>
+>> Done
+>>
+>
+>
+
+--001a1149023a49b77a053c633532
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done for vikas</div><div class=3D"gmail_extra"><br clear=
+=3D"all"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><div><div>-- Regards, Akshay Kochhar<br></div>Softwar=
+e Engineer<br></div><div>M:9999315765<br></div>Unicommerce eSolutions Pvt. =
+Ltd.<br><img src=3D"https://demo.ucdn.in/img/uniTheme/logo.png?v=3D1"><br><=
+div><div><br></div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Tue, Sep 13, 2016 at 6:23 PM, Akshay Koch=
+har <span dir=3D"ltr">&lt;<a href=3D"mailto:akshay@unicommerce.com" target=
+=3D"_blank">akshay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex"><div dir=3D"ltr">Done for puneet</div><div class=3D"gmail_e=
+xtra"><span class=3D""><br clear=3D"all"><div><div data-smartmail=3D"gmail_=
+signature"><div dir=3D"ltr"><div><div>-- Regards, Akshay Kochhar<br></div>S=
+oftware Engineer<br></div><div>M:9999315765<br></div>Unicommerce eSolutions=
+ Pvt. Ltd.<br><img src=3D"https://demo.ucdn.in/img/uniTheme/logo.png?v=3D1"=
+><br><div><div><br></div></div></div></div></div>
+<br></span><div class=3D"gmail_quote">On Fri, Sep 9, 2016 at 3:35 PM, Rachi=
+t Sachdeva <span dir=3D"ltr">&lt;<a href=3D"mailto:rachit@unicommerce.com" =
+target=3D"_blank">rachit@unicommerce.com</a>&gt;</span> wrote:<br><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc so=
+lid;padding-left:1ex"><p dir=3D"ltr">Done</p>
+</blockquote></div><br></div>
+</blockquote></div><br></div>
+
+--001a1149023a49b77a053c633532--

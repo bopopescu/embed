@@ -1,0 +1,193 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp144559oic;
+        Fri, 12 Aug 2016 04:38:22 -0700 (PDT)
+X-Received: by 10.129.84.213 with SMTP id i204mr10170264ywb.218.1471001902589;
+        Fri, 12 Aug 2016 04:38:22 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yw0-x235.google.com (mail-yw0-x235.google.com. [2607:f8b0:4002:c05::235])
+        by mx.google.com with ESMTPS id e6si1554035ywb.403.2016.08.12.04.38.22
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 12 Aug 2016 04:38:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c05::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yw0-x235.google.com with SMTP id u134so13480896ywg.3
+        for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 04:38:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=evaR/DoD3MZzdEXMB0pzYey9MssYWHV5oK//oy/eYzs=;
+        b=HwX5NuPGD6xUYQDwlpn4OPun3/t5r6y/1KCPlqzRXJqRZQjGILqtmkxSgD1M649TJg
+         Czb3AhuaHEbpDTkCJLZtbrVu4oGSSpFgxkI6mzLuB40R/wKvTKNfkiktUNZuRC47o5hG
+         mn0ZYU6slJ3pE1/k0nJECwpgEe2yisZSXJh47mzxbKx4z03EwLfe6PLcX6/1hPB9d/xc
+         DzyBbVBWRqx7xLyrzPa50be3h9ng4B+fyVS8J1W7RBafX8NuWvDdUEFc3gIXT6pUklMw
+         VTFU4FKmvtESs3ir1KvkRUOMuQOlTMhpDkvjxn223m5RT61mjaJ5awFQorR8OYXaJyAL
+         h/Vg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=evaR/DoD3MZzdEXMB0pzYey9MssYWHV5oK//oy/eYzs=;
+        b=VQN+wIi9djzc70K93FDRUdkNmpLZcsQCaJI5XVwcvduBH76Xw37CGHNx5QJFbNJbRC
+         rkU/Lzqf9Hw+JSURVz660Xnkc0WsZBbSgA6c9CiwxZK09FTENgzfboY0CLx72nJq3ut7
+         rTXmi3aUrmjRuQOF8aKATgG/c5e4veyneQ798yPdBNA1jRACr5c8dB2A+zghRmmk7TzB
+         kaNMy1jcvBUR0r7YRh2ftaewiu9sZvffdBB8wurHmXBxBL5wMXi4KFROmubQxtguiDgf
+         4pV7cUqeRZdF3I2exeVpsX/f5Zc/FjgZOnj+8Seuk2t1R/AeA6QPPH3D9HuC0lbbiLpE
+         uunQ==
+X-Gm-Message-State: AEkoousEJb/5MsDwr5CRwo28QjaEEXn2kOl5DkDQsftz9xq254PNdCI6XZxNfzboawKrPGxMh2ahoxHfGNdZ/Q==
+X-Received: by 10.13.230.2 with SMTP id p2mr9946957ywe.125.1471001902109; Fri,
+ 12 Aug 2016 04:38:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.204.78 with HTTP; Fri, 12 Aug 2016 04:38:21 -0700 (PDT)
+From: karan Garg <karangarg@unicommerce.com>
+Date: Fri, 12 Aug 2016 17:08:21 +0530
+Message-ID: <CAG=LqmPuKoNhjDVfd6BMy0xrWNRvrckz7pOomu0x5GdscoZn3w@mail.gmail.com>
+Subject: steps
+To: Digvijay Sharma <digvijay@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c0878d6d6fe790539de511b
+
+--94eb2c0878d6d6fe790539de511b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+mongorestore dump
+
+
+dev auth:
+
+unauth : user
+
+INSERT INTO user
+(email,normalized_email,mobile,unverified_mobile,email_verified,salt,passwo=
+rd,enabled,name,created,updated)
+VALUES ("karangarg@unicommerce.com","karangarg@unicommerce.com
+",9868730604,1,1,"karangarg@unicommerce.com",md5('
+uniware{karangarg@unicommerce.com}'),1,"karangarg",now(),now());
+
+user_account
+
+
+sql :
+
+
+update tenant set code=3D"karangarg",name=3D"karangarg",access_url=3D"
+karangarg.unicommerce.com",mode=3D"LIVE=E2=80=9D,product_code=3D=E2=80=9CEN=
+TERPRISE=E2=80=9D where
+id=3D41;
+
+update user set username=3D"karangarg@unicommerce.com",email=3D"
+karun@unicommerce.com",user_email=3D"karun@unicommerce.com",normalized_emai=
+l=3D"
+karun@unicommerce.com",name=3D"Karan Garg" where id=3D26;
+
+
+db.tenantProfile.insert({"_class" :
+"com.unifier.services.vo.TenantProfileVO", "tenantCode" : =E2=80=9Ckarangar=
+g=E2=80=9D,
+"accessUrl" : =E2=80=9C
+karangarg.unicommerce.com=E2=80=9D, "tenantType" : =E2=80=9CENTERPRISE=E2=
+=80=9D, "username" : =E2=80=9C
+karangarg@unicommerce.com=E2=80=9D, "password" : =E2=80=9Cuniware=E2=80=9D,=
+ "apiUsername" : "
+techsupport@unicommerce.com", "apiPassword" :
+"0d1815d16a29d69cf4f5dc993157147a", "licenseKey" :
+"DUMMY_LICENSE_KEY", "statusCode" : "ACTIVE", "loginAccessGranted" :
+true, "accountStatus" : "WIP", "setupStatus" :
+"COMPLETE=E2=80=9D,=E2=80=9Dcreated=E2=80=9D=3Dnew
+Date(),=E2=80=9Dupdated=E2=80=9D:new Date() })
+
+
+
+db.copyDatabase("stgcloud1","karangarg");
+
+mongo : karangarg
+
+var collections =3D db.getCollectionNames();
+
+for(var c  in collections){
+
+ db.getCollection(collections[c]).update({},{$set:{"tenantCode":"karangarg"=
+}},{"multi":true});
+
+}
+
+--=20
+Regards,
+Karan Garg
+
+--94eb2c0878d6d6fe790539de511b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"">mongorestore dump</p>
+<p class=3D""><br></p>
+<p class=3D"">dev auth:</p>
+<p class=3D"">unauth : user</p>
+<p class=3D"">INSERT INTO user (email,normalized_email,mobile,unverified_mo=
+bile,email_verified,salt,password,enabled,name,created,updated) VALUES (&qu=
+ot;<a href=3D"mailto:karangarg@unicommerce.com"><span class=3D"">karangarg@=
+unicommerce.com</span></a>&quot;,&quot;<a href=3D"mailto:karangarg@unicomme=
+rce.com"><span class=3D"">karangarg@unicommerce.com</span></a>&quot;,986873=
+0604,1,1,&quot;<a href=3D"mailto:karangarg@unicommerce.com"><span class=3D"=
+">karangarg@unicommerce.com</span></a>&quot;,md5(&#39;<a href=3D"mailto:uni=
+ware%7Bkarangarg@unicommerce.com"><span class=3D"">uniware{karangarg@unicom=
+merce.com</span></a>}&#39;),1,&quot;karangarg&quot;,now(),now());</p>
+<p class=3D"">user_account</p>
+<p class=3D""><br></p>
+<p class=3D"">sql :</p>
+<p class=3D""><br></p>
+<p class=3D"">update tenant set code=3D&quot;karangarg&quot;,name=3D&quot;k=
+arangarg&quot;,access_url=3D&quot;<a href=3D"http://karangarg.unicommerce.c=
+om">karangarg.unicommerce.com</a>&quot;,mode=3D&quot;LIVE=E2=80=9D,product_=
+code=3D=E2=80=9CENTERPRISE=E2=80=9D where id=3D41;</p>
+<p class=3D"">update user set username=3D&quot;<a href=3D"mailto:karangarg@=
+unicommerce.com">karangarg@unicommerce.com</a>&quot;,email=3D&quot;<a href=
+=3D"mailto:karun@unicommerce.com">karun@unicommerce.com</a>&quot;,user_emai=
+l=3D&quot;<a href=3D"mailto:karun@unicommerce.com">karun@unicommerce.com</a=
+>&quot;,normalized_email=3D&quot;<a href=3D"mailto:karun@unicommerce.com">k=
+arun@unicommerce.com</a>&quot;,name=3D&quot;Karan Garg&quot; where id=3D26;=
+</p>
+<p class=3D""><br></p>
+<p class=3D"">db.tenantProfile.insert({&quot;_class&quot;=C2=A0:=C2=A0&quot=
+;com.unifier.services.vo.TenantProfileVO&quot;,=C2=A0&quot;tenantCode&quot;=
+=C2=A0:=C2=A0=E2=80=9Ckarangarg=E2=80=9D,=C2=A0&quot;accessUrl&quot;=C2=A0:=
+=C2=A0=E2=80=9C<a href=3D"http://karangarg.unicommerce.com"><span class=3D"=
+">karangarg.unicommerce.com</span></a>=E2=80=9D,=C2=A0&quot;tenantType&quot=
+;=C2=A0:=C2=A0=E2=80=9CENTERPRISE=E2=80=9D,=C2=A0&quot;username&quot;=C2=A0=
+:=C2=A0=E2=80=9C<a href=3D"mailto:karangarg@unicommerce.com"><span class=3D=
+"">karangarg@unicommerce.com</span></a>=E2=80=9D,=C2=A0&quot;password&quot;=
+=C2=A0:=C2=A0=E2=80=9Cuniware=E2=80=9D,=C2=A0&quot;apiUsername&quot;=C2=A0:=
+=C2=A0&quot;<a href=3D"mailto:techsupport@unicommerce.com"><span class=3D""=
+>techsupport@unicommerce.com</span></a>&quot;,=C2=A0&quot;apiPassword&quot;=
+=C2=A0:=C2=A0&quot;0d1815d16a29d69cf4f5dc993157147a&quot;,=C2=A0&quot;licen=
+seKey&quot;=C2=A0:=C2=A0&quot;DUMMY_LICENSE_KEY&quot;,=C2=A0&quot;statusCod=
+e&quot;=C2=A0:=C2=A0&quot;ACTIVE&quot;,=C2=A0&quot;loginAccessGranted&quot;=
+=C2=A0:=C2=A0true,=C2=A0&quot;accountStatus&quot;=C2=A0:=C2=A0&quot;WIP&quo=
+t;,=C2=A0&quot;setupStatus&quot;=C2=A0:=C2=A0&quot;COMPLETE=E2=80=9D,=E2=80=
+=9Dcreated=E2=80=9D=3Dnew Date(),=E2=80=9Dupdated=E2=80=9D:new Date()=C2=A0=
+})</p>
+<p class=3D""><br></p>
+<p class=3D""><br></p>
+<p class=3D"">db.copyDatabase(&quot;stgcloud1&quot;,&quot;karangarg&quot;);=
+</p>
+<p class=3D"">mongo : karangarg</p>
+<p class=3D"">var collections =3D db.getCollectionNames();</p>
+<p class=3D"">for(var c =C2=A0in collections){</p>
+<p class=3D"">=C2=A0db.getCollection(collections[c]).update({},{$set:{&quot=
+;tenantCode&quot;:&quot;karangarg&quot;}},{&quot;multi&quot;:true});</p>
+<p class=3D"">}</p><div><br></div>-- <br><div class=3D"gmail_signature" dat=
+a-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=3D"color:=
+rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:rgb(102,102=
+,102)">Karan Garg</span><br></div></div>
+</div>
+
+--94eb2c0878d6d6fe790539de511b--

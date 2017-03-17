@@ -1,0 +1,134 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp466698oic;
+        Mon, 8 Aug 2016 23:29:06 -0700 (PDT)
+X-Received: by 10.66.255.42 with SMTP id an10mr170738218pad.57.1470724146620;
+        Mon, 08 Aug 2016 23:29:06 -0700 (PDT)
+Return-Path: <3MnipVwgTCIs23-6t40Dprr39287.v33v0t.r31sxvAxypD92xr311t6rt.r31@gaia.bounces.google.com>
+Received: from mail-pf0-x247.google.com (mail-pf0-x247.google.com. [2607:f8b0:400e:c00::247])
+        by mx.google.com with ESMTPS id bv1si3264621pab.49.2016.08.08.23.29.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Aug 2016 23:29:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3mnipvwgtcis23-6t40dprr39287.v33v0t.r31sxvaxypd92xr311t6rt.r31@gaia.bounces.google.com designates 2607:f8b0:400e:c00::247 as permitted sender) client-ip=2607:f8b0:400e:c00::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@accounts.google.com;
+       spf=pass (google.com: domain of 3mnipvwgtcis23-6t40dprr39287.v33v0t.r31sxvaxypd92xr311t6rt.r31@gaia.bounces.google.com designates 2607:f8b0:400e:c00::247 as permitted sender) smtp.mailfrom=3MnipVwgTCIs23-6t40Dprr39287.v33v0t.r31sxvAxypD92xr311t6rt.r31@gaia.bounces.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=accounts.google.com
+Received: by mail-pf0-x247.google.com with SMTP id w128so7617794pfd.3
+        for <digvijay@unicommerce.com>; Mon, 08 Aug 2016 23:29:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=accounts.google.com; s=20120806;
+        h=mime-version:date:feedback-id:message-id:subject:from:to;
+        bh=XCZRahGi8189XUUc7uKqCCAFq5oAGW8gmy/5BCWadjo=;
+        b=JkhmbLrO5toyBNQM7YeUoB/0qX9sSCzK8HbcDNrkBWe8fwBh8c1OW/fs7wkG+7q+/5
+         FxjJkpWSmPEHy9oEq3HsRu7KW07+0YZlCaH5gJXn6ZgLuE+f6DgsSS/W52MWe9MOckaF
+         FX5pzB+5CxCUF6MKuWVGHKS9unvyK5nKKrMJU6xprJ4/KSaO1TRBbFhMg1qAbqtoDmTJ
+         jQWKhXykIX4KtKX6GsoAEhKnVNOX4KXwsQxQO+uAvVWak9fd9BOcQ1jHq5MwIHDHPbZe
+         0FMH+vuOAVCQVyrEeALmZb+VpMZf4L6NCRLYmClKP6ox8dtxF3LLYcuDbJtLTq7R/feW
+         9sBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:feedback-id:message-id:subject
+         :from:to;
+        bh=XCZRahGi8189XUUc7uKqCCAFq5oAGW8gmy/5BCWadjo=;
+        b=VZCvtB/E4ex2DMseigsilCN1AreNiSRYymRM6L+6U4MWQiufi0A1EG2b0gb7ZIEnFs
+         otvpA3jmpSYOraNt1YZgwbnesmCmaAuIO/HrYTUDNx3mSoKmNqDVp5qCQkb/senB+hcI
+         uL0pSlQmphKUxH4yrUYn2NKH/hPJcdGO+TMsMY6QWChwK37CFqrwkg5Ps5pEUS9WyLpr
+         W/ArEIvaQDd8ZHEciwvE741TOwi3AUN9jFfzyx3MW0tvmAo8R8Jq6XZWhDckN52WJY7B
+         CkPI27B0POOSAwfxFtYbdPBoUa5plAKMHig8DwEshxshOqHm6lx+fFDAAQdx3yaYVpDL
+         +JEg==
+X-Gm-Message-State: AEkooutnkM5G1gFlK4OWz532N5ThwZ1miiWCfTA6GqUvwftJVzRPBKyiQKniwfYcXQUezf9i3JobiwaTPCwftAKv
+MIME-Version: 1.0
+X-Received: by 10.98.100.141 with SMTP id y135mr81983646pfb.6.1470724146416;
+ Mon, 08 Aug 2016 23:29:06 -0700 (PDT)
+Date: Tue, 9 Aug 2016 06:29:01 +0000 (UTC)
+X-Notifications: XEAAAAMGC-nxuXBiwj-MkuMIhYwQ
+X-Account-Notification-Type: 4
+Feedback-ID: 4:account-notifier
+Message-ID: <kNJl9KuuAk10wW_tpe0xlQ@notifications.google.com>
+Subject: Your recovery phone number changed
+From: Google <no-reply@accounts.google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=94eb2c0a7bdc4f4da505399da6ad
+
+--94eb2c0a7bdc4f4da505399da6ad
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+WW91ciByZWNvdmVyeSBwaG9uZSBudW1iZXIgY2hhbmdlZA0KDQoNCg0KSGkgRGlndmlqYXksDQpU
+aGUgcmVjb3ZlcnkgcGhvbmUgbnVtYmVyIGZvciB5b3VyIEdvb2dsZSBBY2NvdW50IGRpZ3ZpamF5
+QHVuaWNvbW1lcmNlLmNvbQ0Kd2FzIHJlY2VudGx5IGNoYW5nZWQuDQoNCipEb24ndCByZWNvZ25p
+emUgdGhpcyBhY3Rpdml0eT8qDQpSZXZpZXcgeW91ciByZWNlbnRseSB1c2VkIGRldmljZXMNCjxo
+dHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vQWNjb3VudENob29zZXI/RW1haWw9ZGlndmlqYXlA
+dW5pY29tbWVyY2UuY29tJmNvbnRpbnVlPWh0dHBzOi8vc2VjdXJpdHkuZ29vZ2xlLmNvbS9zZXR0
+aW5ncy9zZWN1cml0eS9hY3Rpdml0eS9udC8xNDcwNzI0MTQxNTI5P3JmbiUzRDQlMjZyZm5jJTNE
+MSUyNmFzYWUlM0QyPg0Kbm93Lg0KDQpCZXN0LA0KVGhlIEdvb2dsZSBBY2NvdW50cyB0ZWFtDQoN
+Cg0KDQpUaGlzIGVtYWlsIGNhbid0IHJlY2VpdmUgcmVwbGllcy4gRm9yIG1vcmUgaW5mb3JtYXRp
+b24sIHZpc2l0IHRoZSBHb29nbGUNCkFjY291bnRzIEhlbHAgQ2VudGVyIDxodHRwczovL3N1cHBv
+cnQuZ29vZ2xlLmNvbS9hY2NvdW50cy9hbnN3ZXIvMjQ1MDIzNj4uDQoNCg0KDQpZb3UgcmVjZWl2
+ZWQgdGhpcyBtYW5kYXRvcnkgZW1haWwgc2VydmljZSBhbm5vdW5jZW1lbnQgdG8gdXBkYXRlIHlv
+dSBhYm91dA0KaW1wb3J0YW50IGNoYW5nZXMgdG8geW91ciBHb29nbGUgcHJvZHVjdCBvciBhY2Nv
+dW50Lg0KwqkgMjAxNiBHb29nbGUgSW5jLiwgMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwgTW91
+bnRhaW4gVmlldywgQ0EgOTQwNDMsIFVTQQ0K
+--94eb2c0a7bdc4f4da505399da6ad
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"en"><head><meta name=3D"format-detection" content=3D"date=3Dn=
+o"><meta name=3D"format-detection" content=3D"email=3Dno"></head><body styl=
+e=3D"margin: 0; padding: 0;" bgcolor=3D"#FFFFFF"><table width=3D"100%" heig=
+ht=3D"100%" style=3D"min-width: 348px;" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0"><tr height=3D"32px"></tr><tr align=3D"center"><td width=3D"32=
+px"></td><td><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"max-width: 600px;"><tr><td><table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tr><td align=3D"left"><img width=3D"92" height=
+=3D"32" src=3D"https://www.gstatic.com/accountalerts/email/googlelogo_color=
+_188x64dp.png" style=3D"display: block; width: 92px; height: 32px;"></td><t=
+d align=3D"right"><img width=3D"32" height=3D"32" style=3D"display: block; =
+width: 32px; height: 32px;" src=3D"https://www.gstatic.com/accountalerts/em=
+ail/wrench.png"></td></tr></table></td></tr><tr height=3D"16"></tr><tr><td>=
+<table bgcolor=3D"#E6E6E6" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"min-width: 332px; max-width: 600px; border: 1px so=
+lid #E0E0E0; border-bottom: 0; border-top-left-radius: 3px; border-top-righ=
+t-radius: 3px;"><tr><td height=3D"72px" colspan=3D"3"></td></tr><tr><td wid=
+th=3D"32px"></td><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,s=
+ans-serif; font-size: 24px; color: #000000; line-height: 1.25;">Your recove=
+ry phone number changed</td><td width=3D"32px"></td></tr><tr><td height=3D"=
+18px" colspan=3D"3"></td></tr></table></td></tr><tr><td><table bgcolor=3D"#=
+FAFAFA" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"min-width: 332px; max-width: 600px; border: 1px solid #F0F0F0; border=
+-bottom: 1px solid #C0C0C0; border-top: 0; border-bottom-left-radius: 3px; =
+border-bottom-right-radius: 3px;"><tr height=3D"16px"><td width=3D"32px" ro=
+wspan=3D"3"></td><td></td><td width=3D"32px" rowspan=3D"3"></td></tr><tr><t=
+d><table style=3D"min-width: 300px;" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0"><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,san=
+s-serif; font-size: 13px; color: #202020; line-height: 1.5;">Hi Digvijay,</=
+td></tr><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-s=
+erif; font-size: 13px; color: #202020; line-height: 1.5;">The recovery phon=
+e number for your Google Account digvijay@unicommerce.com was recently chan=
+ged.<br><br><b>Don&#39;t recognize this activity?</b><br>Review your <a hre=
+f=3D"https://accounts.google.com/AccountChooser?Email=3Ddigvijay@unicommerc=
+e.com&amp;continue=3Dhttps://security.google.com/settings/security/activity=
+/nt/1470724141529?rfn%3D4%26rfnc%3D1%26asae%3D2" data-meta-key=3D"review-de=
+vices" style=3D"text-decoration: none; color: #4285F4;" target=3D"_blank">r=
+ecently used devices</a> now.</td></tr><tr height=3D"32px"></tr><tr><td sty=
+le=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 13=
+px; color: #202020; line-height: 1.5;">Best,<br>The Google Accounts team</t=
+d></tr><tr height=3D"16px"></tr><tr><td><table style=3D"font-family: Roboto=
+-Regular,Helvetica,Arial,sans-serif; font-size: 12px; color: #B9B9B9; line-=
+height: 1.5;"><tr><td>This email can't receive replies. For more informatio=
+n, visit the <a href=3D"https://support.google.com/accounts/answer/2450236"=
+ data-meta-key=3D"help" style=3D"text-decoration: none; color: #4285F4;" ta=
+rget=3D"_blank">Google Accounts Help Center</a>.</td></tr></table></td></tr=
+></table></td></tr><tr height=3D"32px"></tr></table></td></tr><tr height=3D=
+"16"></tr><tr><td style=3D"max-width: 600px; font-family: Roboto-Regular,He=
+lvetica,Arial,sans-serif; font-size: 10px; color: #BCBCBC; line-height: 1.5=
+;"><tr><td><table style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans=
+-serif; font-size: 10px; color: #666666; line-height: 18px; padding-bottom:=
+ 10px"><tr><td>You received this mandatory email service announcement to up=
+date you about important changes to your Google product or account.</td></t=
+r><tr><td><div style=3D"direction: ltr; text-align: left">&copy; 2016 Googl=
+e Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</div></td><=
+/tr></table></td></tr></td></tr></table></td><td width=3D"32px"></td></tr><=
+tr height=3D"32px"></tr></table></body></html>
+--94eb2c0a7bdc4f4da505399da6ad--

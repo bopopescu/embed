@@ -1,0 +1,246 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp757517qge;
+        Fri, 18 Nov 2016 01:41:48 -0800 (PST)
+X-Received: by 10.98.149.140 with SMTP id c12mr10811965pfk.100.1479462108355;
+        Fri, 18 Nov 2016 01:41:48 -0800 (PST)
+Return-Path: <tech+bncBC33VSELZUGRBW4ZXPAQKGQE4SJS2VQ@unicommerce.com>
+Received: from mail-pg0-x247.google.com (mail-pg0-x247.google.com. [2607:f8b0:400e:c05::247])
+        by mx.google.com with ESMTPS id m129si7426303pgm.165.2016.11.18.01.41.47
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Nov 2016 01:41:48 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrbw4zxpaqkgqe4sjs2vq@unicommerce.com) client-ip=2607:f8b0:400e:c05::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrbw4zxpaqkgqe4sjs2vq@unicommerce.com) smtp.mailfrom=tech+bncBC33VSELZUGRBW4ZXPAQKGQE4SJS2VQ@unicommerce.com
+Received: by mail-pg0-x247.google.com with SMTP id g186sf244270696pgc.2
+        for <digvijay@unicommerce.com>; Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=tI2z3cF3h+7WT3KQ4O4aAKMPJ6Y6q5PB3qnPT/9xlQM=;
+        b=u76yyru27aDvgAEDJVL5klbQpoH7Rw5bPZxntYSiW8VSDlej4JOuzxI6KyEEEvDC/n
+         TI/Z+NykBPcCHNItVC08nBShc2w3Vy7q+Ed4OX9S46jw8ETUr3nIw2osM85sklAj3hC5
+         XJ40zYARJQOQm2oooEXMfnFe9UFMgp/8SQ0i+o8WNZq69qi5IObrjBLnted/2kVmxUcO
+         EJvjBOJxItnZSnF/XnTRRQHV45xB8AVYxNZxgvv7F6hphT/r/ETYtou94NqW1Zgklx9H
+         5n/bxX5axdwBhlpXVNZBHMuDhVRmXu/63au9CO4q2CEYRorHFuEr5hiKdVKyValKcJv6
+         YyTA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=tI2z3cF3h+7WT3KQ4O4aAKMPJ6Y6q5PB3qnPT/9xlQM=;
+        b=I0saoKkGz4sjOwjYQ9LePTEnz3zPCprByapuKpfqQ4ocDxWcDo5XCLaBMvdHADW+b6
+         m0Q/+wuu5Osb9REvyY6vLHmoY/xI90yXQRjZKykIhwsLTCTdaj09cq4nlsVbkdYA3uNR
+         3TuHXsJx0zjf2tGV0ps+Po9G39EcgXDVmgGQaWriYT0mXAcULG8Eym6288oWNuaWgdVl
+         Iy4KVINikCA508mvgYQDgcxkvHSfLdNFtirbSQpWd4G4kXEQ8VoMPbExCcrc6SevFD8+
+         8mCbkFUbVMgtN9egjcKH/IgsfhSLrVJ01WhXoOds8Ze3AielgTTwtO+G9TZA4nbwfaz7
+         g4/g==
+X-Gm-Message-State: ABUngvdxj0EGqGBwo4yYpjSda6mNmeXUE4FsV19X7OP5lxkhkUqBwWdC8IgRNEia73Z4Xg==
+X-Received: by 10.99.114.3 with SMTP id n3mr2780276pgc.140.1479462107782;
+        Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.45.195 with SMTP id g61ls6153880otb.37.gmail; Fri, 18 Nov
+ 2016 01:41:47 -0800 (PST)
+X-Received: by 10.176.82.161 with SMTP id v30mr5027678uav.23.1479462107599;
+        Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+Received: from mail-vk0-x231.google.com (mail-vk0-x231.google.com. [2607:f8b0:400c:c05::231])
+        by mx.google.com with ESMTPS id y137si2012885vky.10.2016.11.18.01.41.47
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::231 is neither permitted nor denied by best guess record for domain of bhupi@unicommerce.com) client-ip=2607:f8b0:400c:c05::231;
+Received: by mail-vk0-x231.google.com with SMTP id w194so163686523vkw.2
+        for <tech@unicommerce.com>; Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+X-Received: by 10.31.167.77 with SMTP id q74mr4628749vke.135.1479462107196;
+ Fri, 18 Nov 2016 01:41:47 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.176.4.41 with HTTP; Fri, 18 Nov 2016 01:41:46 -0800 (PST)
+Received: by 10.176.4.41 with HTTP; Fri, 18 Nov 2016 01:41:46 -0800 (PST)
+In-Reply-To: <e2bd70636a4d5a996ac7122a425d6cb7@mail.gmail.com>
+References: <e2bd70636a4d5a996ac7122a425d6cb7@mail.gmail.com>
+From: Bhupinder Garg <bhupi@unicommerce.com>
+Date: Fri, 18 Nov 2016 15:11:46 +0530
+Message-ID: <CABtr59vqJbmg_GoHUeKFivVji3aoGpv_GM632UkrjhzLDnX7ig@mail.gmail.com>
+Subject: Fwd: Monthly Supply Chain Tech townhall
+To: Tech Team <tech@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a114278ee5bdcb30541901d1a
+X-Original-Sender: bhupi@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400c:c05::231 is neither permitted nor denied by best
+ guess record for domain of bhupi@unicommerce.com) smtp.mailfrom=bhupi@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114278ee5bdcb30541901d1a
+Content-Type: multipart/alternative; boundary=001a114278ee5bdcac0541901d18
+
+--001a114278ee5bdcac0541901d18
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: "Aditi Bansal" <aditi.bansal@snapdeal.com>
+Date: 18 Nov 2016 1:58 pm
+Subject: Monthly Supply Chain Tech townhall
+To: "Anuj Jain" <jain.anuj@snapdeal.com>, "Hemanth Kota" <
+hemanth.kota@snapdeal.com>, "Mayank Jain" <mayank.jain@snapdeal.com>,
+"Karun Singla" <karun.singla@snapdeal.com>, "Tech Rms Dev" <
+Tech.rms.dev@snapdeal.com>, "tech.shipping" <tech.shipping@snapdeal.com>,
+"Gautam Grover" <gautam.grover@snapdeal.com>, "Shiv Suthar" <
+shiv.suthar@snapdeal.com>, "Karun Singla" <karun@unicommerce.com>, "Ritesh
+Singh" <ritesh.singh@snapdeal.com>, "Yeshu Bansal" <
+Yeshu.bansal@snapdeal.com>, "Vinod Taneja" <vinod.taneja@snapdeal.com>,
+"Deepa Sharma" <deepa.sharma@snapdeal.com>, "Tech Rms All" <
+Tech.rms.all@snapdeal.com>, "Amit Dalal" <amit.dalal@unicommerce.com>,
+"Priyanka Sachdeva" <priyanka.sachdeva@snapdeal.com>, "pe.science" <
+pe.science@snapdeal.com>, "Bhumika Srivastava" <
+bhumika.srivastava@snapdeal.com>, "Vasanthi Ramesh" <
+vasanthi.ramesh@snapdeal.com>, "Pdev supplychain" <
+pdev.supplychain@snapdeal.com>, "Bhupinder Garg" <bhupi@unicommerce.com>,
+"tech.shippingqa" <tech.shippingqa@snapdeal.com>, "Pradeep Desai" <
+pradeep.desai@snapdeal.com>, "Pe Dev" <pe.dev@snapdeal.com>, "Ghanshyam
+Sharma" <ghanshyam.sharma@snapdeal.com>
+Cc:
+
+--001a114278ee5bdcac0541901d18
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div class=3D"gmail_quote">---------- Forwarded message ----------<br>From:=
+ &quot;Aditi Bansal&quot; &lt;<a href=3D"mailto:aditi.bansal@snapdeal.com">=
+aditi.bansal@snapdeal.com</a>&gt;<br>Date: 18 Nov 2016 1:58 pm<br>Subject: =
+Monthly Supply Chain Tech townhall<br>To: &quot;Anuj Jain&quot; &lt;<a href=
+=3D"mailto:jain.anuj@snapdeal.com">jain.anuj@snapdeal.com</a>&gt;, &quot;He=
+manth Kota&quot; &lt;<a href=3D"mailto:hemanth.kota@snapdeal.com">hemanth.k=
+ota@snapdeal.com</a>&gt;, &quot;Mayank Jain&quot; &lt;<a href=3D"mailto:may=
+ank.jain@snapdeal.com">mayank.jain@snapdeal.com</a>&gt;, &quot;Karun Singla=
+&quot; &lt;<a href=3D"mailto:karun.singla@snapdeal.com">karun.singla@snapde=
+al.com</a>&gt;, &quot;Tech Rms Dev&quot; &lt;<a href=3D"mailto:Tech.rms.dev=
+@snapdeal.com">Tech.rms.dev@snapdeal.com</a>&gt;, &quot;tech.shipping&quot;=
+ &lt;<a href=3D"mailto:tech.shipping@snapdeal.com">tech.shipping@snapdeal.c=
+om</a>&gt;, &quot;Gautam Grover&quot; &lt;<a href=3D"mailto:gautam.grover@s=
+napdeal.com">gautam.grover@snapdeal.com</a>&gt;, &quot;Shiv Suthar&quot; &l=
+t;<a href=3D"mailto:shiv.suthar@snapdeal.com">shiv.suthar@snapdeal.com</a>&=
+gt;, &quot;Karun Singla&quot; &lt;<a href=3D"mailto:karun@unicommerce.com">=
+karun@unicommerce.com</a>&gt;, &quot;Ritesh Singh&quot; &lt;<a href=3D"mail=
+to:ritesh.singh@snapdeal.com">ritesh.singh@snapdeal.com</a>&gt;, &quot;Yesh=
+u Bansal&quot; &lt;<a href=3D"mailto:Yeshu.bansal@snapdeal.com">Yeshu.bansa=
+l@snapdeal.com</a>&gt;, &quot;Vinod Taneja&quot; &lt;<a href=3D"mailto:vino=
+d.taneja@snapdeal.com">vinod.taneja@snapdeal.com</a>&gt;, &quot;Deepa Sharm=
+a&quot; &lt;<a href=3D"mailto:deepa.sharma@snapdeal.com">deepa.sharma@snapd=
+eal.com</a>&gt;, &quot;Tech Rms All&quot; &lt;<a href=3D"mailto:Tech.rms.al=
+l@snapdeal.com">Tech.rms.all@snapdeal.com</a>&gt;, &quot;Amit Dalal&quot; &=
+lt;<a href=3D"mailto:amit.dalal@unicommerce.com">amit.dalal@unicommerce.com=
+</a>&gt;, &quot;Priyanka Sachdeva&quot; &lt;<a href=3D"mailto:priyanka.sach=
+deva@snapdeal.com">priyanka.sachdeva@snapdeal.com</a>&gt;, &quot;pe.science=
+&quot; &lt;<a href=3D"mailto:pe.science@snapdeal.com">pe.science@snapdeal.c=
+om</a>&gt;, &quot;Bhumika Srivastava&quot; &lt;<a href=3D"mailto:bhumika.sr=
+ivastava@snapdeal.com">bhumika.srivastava@snapdeal.com</a>&gt;, &quot;Vasan=
+thi Ramesh&quot; &lt;<a href=3D"mailto:vasanthi.ramesh@snapdeal.com">vasant=
+hi.ramesh@snapdeal.com</a>&gt;, &quot;Pdev supplychain&quot; &lt;<a href=3D=
+"mailto:pdev.supplychain@snapdeal.com">pdev.supplychain@snapdeal.com</a>&gt=
+;, &quot;Bhupinder Garg&quot; &lt;<a href=3D"mailto:bhupi@unicommerce.com">=
+bhupi@unicommerce.com</a>&gt;, &quot;tech.shippingqa&quot; &lt;<a href=3D"m=
+ailto:tech.shippingqa@snapdeal.com">tech.shippingqa@snapdeal.com</a>&gt;, &=
+quot;Pradeep Desai&quot; &lt;<a href=3D"mailto:pradeep.desai@snapdeal.com">=
+pradeep.desai@snapdeal.com</a>&gt;, &quot;Pe Dev&quot; &lt;<a href=3D"mailt=
+o:pe.dev@snapdeal.com">pe.dev@snapdeal.com</a>&gt;, &quot;Ghanshyam Sharma&=
+quot; &lt;<a href=3D"mailto:ghanshyam.sharma@snapdeal.com">ghanshyam.sharma=
+@snapdeal.com</a>&gt;<br>Cc: <br><br type=3D"attribution"><blockquote class=
+=3D"quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"></blockquote></div><br>
+
+--001a114278ee5bdcac0541901d18--
+--001a114278ee5bdcb30541901d1a
+Content-Type: text/calendar; charset=UTF-8; method=REQUEST; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: d14a1009ad37e6ab_0
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vTWljcm9zb2Z0IENvcnBvcmF0aW9uLy9PdXRsb29r
+IDE0LjAgTUlNRURJUi8vRU4NClZFUlNJT046Mi4wDQpNRVRIT0Q6UkVRVUVTVA0KWC1NUy1PTEst
+Rk9SQ0VJTlNQRUNUT1JPUEVOOlRSVUUNCkJFR0lOOlZUSU1FWk9ORQ0KVFpJRDpJbmRpYSBTdGFu
+ZGFyZCBUaW1lDQpCRUdJTjpTVEFOREFSRA0KRFRTVEFSVDoxNjAxMDEwMVQwMDAwMDANClRaT0ZG
+U0VURlJPTTorMDUzMA0KVFpPRkZTRVRUTzorMDUzMA0KRU5EOlNUQU5EQVJEDQpFTkQ6VlRJTUVa
+T05FDQpCRUdJTjpWRVZFTlQNCkFUVEVOREVFO0NOPSJBbnVqIEphaW4iO1JTVlA9VFJVRTptYWls
+dG86amFpbi5hbnVqQHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049IkhlbWFudGggS290YSI7UlNW
+UD1UUlVFOm1haWx0bzpoZW1hbnRoLmtvdGFAc25hcGRlYWwuY29tDQpBVFRFTkRFRTtDTj0iTWF5
+YW5rIEphaW4iO1JTVlA9VFJVRTptYWlsdG86bWF5YW5rLmphaW5Ac25hcGRlYWwuY29tDQpBVFRF
+TkRFRTtDTj0iS2FydW4gU2luZ2xhIjtSU1ZQPVRSVUU6bWFpbHRvOmthcnVuLnNpbmdsYUBzbmFw
+ZGVhbC5jb20NCkFUVEVOREVFO0NOPSJUZWNoIFJtcyBEZXYiO1JTVlA9VFJVRTptYWlsdG86VGVj
+aC5ybXMuZGV2QHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049J3RlY2guc2hpcHBpbmcnO1JTVlA9
+VFJVRTptYWlsdG86dGVjaC5zaGlwcGluZ0BzbmFwZGVhbC5jb20NCkFUVEVOREVFO0NOPSJHYXV0
+YW0gR3JvdmVyIjtSU1ZQPVRSVUU6bWFpbHRvOmdhdXRhbS5ncm92ZXJAc25hcGRlYWwuY29tDQpB
+VFRFTkRFRTtDTj0iU2hpdiBTdXRoYXIiO1JTVlA9VFJVRTptYWlsdG86c2hpdi5zdXRoYXJAc25h
+cGRlYWwuY29tDQpBVFRFTkRFRTtDTj0iJ0thcnVuIFNpbmdsYSciO1JTVlA9VFJVRTptYWlsdG86
+a2FydW5AdW5pY29tbWVyY2UuY29tDQpBVFRFTkRFRTtDTj0iUml0ZXNoIFNpbmdoIjtSU1ZQPVRS
+VUU6bWFpbHRvOnJpdGVzaC5zaW5naEBzbmFwZGVhbC5jb20NCkFUVEVOREVFO0NOPSJZZXNodSBC
+YW5zYWwiO1JTVlA9VFJVRTptYWlsdG86WWVzaHUuYmFuc2FsQHNuYXBkZWFsLmNvbQ0KQVRURU5E
+RUU7Q049IlZpbm9kIFRhbmVqYSI7UlNWUD1UUlVFOm1haWx0bzp2aW5vZC50YW5lamFAc25hcGRl
+YWwuY29tDQpBVFRFTkRFRTtDTj0iRGVlcGEgU2hhcm1hIjtSU1ZQPVRSVUU6bWFpbHRvOmRlZXBh
+LnNoYXJtYUBzbmFwZGVhbC5jb20NCkFUVEVOREVFO0NOPSJUZWNoIFJtcyBBbGwiO1JTVlA9VFJV
+RTptYWlsdG86VGVjaC5ybXMuYWxsQHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049IidBbWl0IERh
+bGFsJyI7UlNWUD1UUlVFOm1haWx0bzphbWl0LmRhbGFsQHVuaWNvbW1lcmNlLmNvbQ0KQVRURU5E
+RUU7Q049IlByaXlhbmthIFNhY2hkZXZhIjtSU1ZQPVRSVUU6bWFpbHRvOnByaXlhbmthLnNhY2hk
+ZXZhQHNuYXBkZWFsDQoJLmNvbQ0KQVRURU5ERUU7Q049cGUuc2NpZW5jZTtSU1ZQPVRSVUU6bWFp
+bHRvOnBlLnNjaWVuY2VAc25hcGRlYWwuY29tDQpBVFRFTkRFRTtDTj0iQmh1bWlrYSBTcml2YXN0
+YXZhIjtSU1ZQPVRSVUU6bWFpbHRvOmJodW1pa2Euc3JpdmFzdGF2YUBzbmFwZGUNCglhbC5jb20N
+CkFUVEVOREVFO0NOPSJWYXNhbnRoaSBSYW1lc2giO1JTVlA9VFJVRTptYWlsdG86dmFzYW50aGku
+cmFtZXNoQHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049IlBkZXYgc3VwcGx5Y2hhaW4iO1JTVlA9
+VFJVRTptYWlsdG86cGRldi5zdXBwbHljaGFpbkBzbmFwZGVhbC5jDQoJb20NCkFUVEVOREVFO0NO
+PSInQmh1cGluZGVyIEdhcmcnIjtSU1ZQPVRSVUU6bWFpbHRvOmJodXBpQHVuaWNvbW1lcmNlLmNv
+bQ0KQVRURU5ERUU7Q049dGVjaC5zaGlwcGluZ3FhO1JTVlA9VFJVRTptYWlsdG86dGVjaC5zaGlw
+cGluZ3FhQHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049IlByYWRlZXAgRGVzYWkiO1JTVlA9VFJV
+RTptYWlsdG86cHJhZGVlcC5kZXNhaUBzbmFwZGVhbC5jb20NCkFUVEVOREVFO0NOPSJQZSBEZXYi
+O1JTVlA9VFJVRTptYWlsdG86cGUuZGV2QHNuYXBkZWFsLmNvbQ0KQVRURU5ERUU7Q049IkdoYW5z
+aHlhbSBTaGFybWEiO1JTVlA9VFJVRTptYWlsdG86Z2hhbnNoeWFtLnNoYXJtYUBzbmFwZGVhbC5j
+DQoJb20NCkNMQVNTOlBVQkxJQw0KQ1JFQVRFRDoyMDE2MTExOFQwODI3MjFaDQpERVNDUklQVElP
+TjpGb3IgQnJpZGdlXG5DaGFpcnBlcnNvbiBQSU46IDkyODg1OCAjXG5QYXJ0aWNpcGFudCBQSU46
+IDQ5NTA4OSANCgkgI1xuXG5Ub2xsIEZyZWUgZnJvbSBhbnl3aGVyZSBpbiBJbmRpYTpcbjE4MDAg
+NDI1IDQyNTBcbjE4MDAgMTIxIDQyNTBcbjE4MA0KCTAgMjAwIDc4ODhcbg0KRFRFTkQ7VFpJRD0i
+SW5kaWEgU3RhbmRhcmQgVGltZSI6MjAxNjExMThUMTczMDAwDQpEVFNUQU1QOjIwMTYxMTE4VDA4
+MjcyMloNCkRUU1RBUlQ7VFpJRD0iSW5kaWEgU3RhbmRhcmQgVGltZSI6MjAxNjExMThUMTYwMDAw
+DQpMQVNULU1PRElGSUVEOjIwMTYxMTE4VDA4MjczOFoNCkxPQ0FUSU9OOlN0YW5mb3JkXCwgNnRo
+IEZsb29yIENlbnRlciBCICYgRmx5aW5nIERpZGRsZXIgQmFuZ2Fsb3JlDQpPUkdBTklaRVI7Q049
+IkFkaXRpIEJhbnNhbCI6bWFpbHRvOmFkaXRpLmJhbnNhbEBzbmFwZGVhbC5jb20NClBSSU9SSVRZ
+OjUNClJFQ1VSUkVOQ0UtSUQ7VFpJRD0iSW5kaWEgU3RhbmRhcmQgVGltZSI6MjAxNjEwMjdUMTUw
+MDAwDQpTRVFVRU5DRTo0DQpTVU1NQVJZO0xBTkdVQUdFPWVuLWluOk1vbnRobHkgU3VwcGx5IENo
+YWluIFRlY2ggdG93bmhhbGwNClRSQU5TUDpPUEFRVUUNClVJRDpkc2x2cThmbTMzYWtiamJibzJn
+OW92MmlyY0Bnb29nbGUuY29tDQpYLUFMVC1ERVNDO0ZNVFRZUEU9dGV4dC9odG1sOjwhRE9DVFlQ
+RSBIVE1MIFBVQkxJQyAiLS8vVzNDLy9EVEQgSFRNTCAzLjIvL0UNCglOIj5cbjxIVE1MPlxuPEhF
+QUQ+XG48TUVUQSBOQU1FPSJHZW5lcmF0b3IiIENPTlRFTlQ9Ik1TIEV4Y2hhbmdlIFNlcnZlciB2
+ZQ0KCXJzaW9uIDE0LjAyLjUwMDQuMDAwIj5cbjxUSVRMRT48L1RJVExFPlxuPC9IRUFEPlxuPEJP
+RFk+XG48IS0tIENvbnZlcnRlZCBmDQoJcm9tIHRleHQvcnRmIGZvcm1hdCAtLT5cblxuPFAgRElS
+PUxUUj48U1BBTiBMQU5HPSJlbi1pbiI+PEZPTlQgRkFDRT0iQ2FsaWINCglyaSI+Rm9yIEJyaWRn
+ZTwvRk9OVD48L1NQQU4+PC9QPlxuXG48UCBESVI9TFRSPjxTUEFOIExBTkc9ImVuLWluIj48Rk9O
+VCBGQQ0KCUNFPSJDYWxpYnJpIj5DaGFpcnBlcnNvbiBQSU46IDkyODg1OCAjPC9GT05UPjwvU1BB
+Tj48L1A+XG5cbjxQIERJUj1MVFI+PFNQDQoJQU4gTEFORz0iZW4taW4iPjxGT05UIEZBQ0U9IkNh
+bGlicmkiPlBhcnRpY2lwYW50IFBJTjogNDk1MDg5Jm5ic3BcOyAjPC9GT04NCglUPjwvU1BBTj48
+L1A+XG5cbjxQIERJUj1MVFI+PFNQQU4gTEFORz0iZW4taW4iPjwvU1BBTj48U1BBTiBMQU5HPSJl
+bi1pbiI+PA0KCS9TUEFOPjxTUEFOIExBTkc9ImVuLWluIj48L1NQQU4+PFNQQU4gTEFORz0iZW4t
+aW4iPjwvU1BBTj48L1A+XG5cbjxQIERJUj1MDQoJVFI+PFNQQU4gTEFORz0iZW4taW4iPjwvU1BB
+Tj48U1BBTiBMQU5HPSJlbi1pbiI+PEZPTlQgRkFDRT0iQ2FsaWJyaSI+VG9sbCANCglGcmVlIGZy
+b20gYW55d2hlcmUgaW4gSW5kaWE6PC9GT05UPjwvU1BBTj48L1A+XG5cbjxQIERJUj1MVFI+PFNQ
+QU4gTEFORz0iZQ0KCW4taW4iPjwvU1BBTj48U1BBTiBMQU5HPSJlbi1pbiI+PEZPTlQgRkFDRT0i
+Q2FsaWJyaSI+MTgwMCA0MjUgNDI1MDwvRk9OVD48DQoJL1NQQU4+PC9QPlxuXG48UCBESVI9TFRS
+PjxTUEFOIExBTkc9ImVuLWluIj48Rk9OVCBGQUNFPSJDYWxpYnJpIj4xODAwIDEyMSANCgk0MjUw
+PC9GT05UPjwvU1BBTj48L1A+XG5cbjxQIERJUj1MVFI+PFNQQU4gTEFORz0iZW4taW4iPjxGT05U
+IEZBQ0U9IkNhbGlicg0KCWkiPjE4MDAgMjAwIDc4ODg8L0ZPTlQ+PC9TUEFOPjwvUD5cblxuPC9C
+T0RZPlxuPC9IVE1MPg0KWC1NSUNST1NPRlQtQ0RPLUJVU1lTVEFUVVM6VEVOVEFUSVZFDQpYLU1J
+Q1JPU09GVC1DRE8tSU1QT1JUQU5DRToxDQpYLU1JQ1JPU09GVC1DRE8tSU5URU5ERURTVEFUVVM6
+QlVTWQ0KWC1NSUNST1NPRlQtRElTQUxMT1ctQ09VTlRFUjpGQUxTRQ0KWC1NUy1PTEstQVBQVExB
+U1RTRVFVRU5DRTo1DQpYLU1TLU9MSy1BUFBUU0VRVElNRToyMDE2MDkyMFQxNjUwMzVaDQpYLU1T
+LU9MSy1BVVRPU1RBUlRDSEVDSzpGQUxTRQ0KWC1NUy1PTEstQ09ORlRZUEU6MA0KQkVHSU46VkFM
+QVJNDQpUUklHR0VSOi1QVDEwTQ0KQUNUSU9OOkRJU1BMQVkNCkRFU0NSSVBUSU9OOlJlbWluZGVy
+DQpFTkQ6VkFMQVJNDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFSDQo=
+--001a114278ee5bdcb30541901d1a--

@@ -1,0 +1,22 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Thu, 9 Feb 2017 03:27:47 -0800 (PST)
+Date: Thu, 9 Feb 2017 16:57:47 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sor5Ef9ihCN78Oq4_0Xv8tEngqQhc89iTk6rMX_WE6=a_w@mail.gmail.com>
+Subject: WOOCOMMERCE PLACEHOLDER QUERY
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113a7f14479196054817451c
+
+--001a113a7f14479196054817451c
+Content-Type: text/plain; charset=UTF-8
+
+db.source.update({"code":"WOOCOMMERCE"},{$set:{"sourceConnectors.0.sourceConnectorParameters.1.displayPlaceHolder":"
+https://example.com"}})
+
+--001a113a7f14479196054817451c
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">db.source.update({&quot;code&quot;:&quot;WOOCOMMERCE&quot;},{$set:{&quot;sourceConnectors.0.sourceConnectorParameters.1.displayPlaceHolder&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot;}})<br></div>
+
+--001a113a7f14479196054817451c--

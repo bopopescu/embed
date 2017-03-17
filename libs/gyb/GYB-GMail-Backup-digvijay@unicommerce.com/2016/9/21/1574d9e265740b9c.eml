@@ -1,0 +1,201 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp281904itg;
+        Wed, 21 Sep 2016 09:39:52 -0700 (PDT)
+X-Received: by 10.36.204.68 with SMTP id x65mr5676726itf.54.1474475992683;
+        Wed, 21 Sep 2016 09:39:52 -0700 (PDT)
+Return-Path: <tech+bncBCDOZ5NP3YLRBNHPRK7QKGQEJJLLORA@unicommerce.com>
+Received: from mail-io0-x245.google.com (mail-io0-x245.google.com. [2607:f8b0:4001:c06::245])
+        by mx.google.com with ESMTPS id t202si40547787ita.53.2016.09.21.09.39.52
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 09:39:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::245 is neither permitted nor denied by best guess record for domain of tech+bncbcdoz5np3ylrbnhprk7qkgqejjllora@unicommerce.com) client-ip=2607:f8b0:4001:c06::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c06::245 is neither permitted nor denied by best guess record for domain of tech+bncbcdoz5np3ylrbnhprk7qkgqejjllora@unicommerce.com) smtp.mailfrom=tech+bncBCDOZ5NP3YLRBNHPRK7QKGQEJJLLORA@unicommerce.com
+Received: by mail-io0-x245.google.com with SMTP id g22sf155434878ioj.1
+        for <digvijay@unicommerce.com>; Wed, 21 Sep 2016 09:39:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=YJNHt0t/zApxn5mWmvCsdxZkyyD8bHL4aLNQxLThTcw=;
+        b=vPrbTCS8jD5lnUzw2lx0tsLGg7RO5y2DccLk7VUUWCkUnT8k7xzFv/yjtiqPQW16Zk
+         FcdPWm1mp8BBJmwnTNamrGPppfwnvxzajaCxslvpgkPTYchNKaq8lrdANKJnbl1BUES0
+         mGgVKedWZRJjzTMyaFDhtOMq+XDyQ0Q+AAFhGPrxWRs+ngZF3ztsgw+FPB+BJTYLPFZ8
+         Jjv7dIh+r/8VxJSzHSKpv2ayEETs90OoScU0vjknhfbjRTSkGO9rYVq81K1bGxSVo38B
+         Abo917phbbLPOFmG/wJ4uXvnUkm1iFzigQAPsIV67W8m2/QxF0XEopBdIGaQVeAtnYVC
+         I37Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=YJNHt0t/zApxn5mWmvCsdxZkyyD8bHL4aLNQxLThTcw=;
+        b=cVCpr9ENLg2qPXU2UPL1D0mKD/b81XICnpNpeU5IdUw9ZRzLbfYWGg5p8u6IHEv7xW
+         qvpDNMMt5xbYsf+yW0tBItWV/DpLQfrjyoJR2UxvQkHAppD85MoqsqxK0Lr6YoWbSKna
+         vTdqu2RDjIdsJvdbdnyW1PZc28vZClo2+4HVgvH/JhjVZgVmDx0KgFtHPI6NTOLuu2le
+         V+0bd24Zo2pUZyjVtb5lktU1zvJmnKBI9DKcyaOOs6YBap2TXLVvLiFe2TVLDBCnl78Z
+         xSX2wh/TGXcttt2F5ursox+jNG0qqXK1eypuUNmS9LO+51uCoCXXFBmN4S2XcaGzhEib
+         u5Qg==
+X-Gm-Message-State: AE9vXwN9BZ9eF8fOb+HnXzPzCvHNy6uj+Kpfmdvd/mQUGOGcJXy+kL27Ad3QmPcvRkBPoA==
+X-Received: by 10.36.217.19 with SMTP id p19mr1211803itg.17.1474475956203;
+        Wed, 21 Sep 2016 09:39:16 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.46.207 with SMTP id w73ls4502638ota.8.gmail; Wed, 21 Sep
+ 2016 09:39:16 -0700 (PDT)
+X-Received: by 10.37.171.40 with SMTP id u37mr19680859ybi.89.1474475955987;
+        Wed, 21 Sep 2016 09:39:15 -0700 (PDT)
+Received: from mail-yw0-x236.google.com (mail-yw0-x236.google.com. [2607:f8b0:4002:c05::236])
+        by mx.google.com with ESMTPS id e123si14790360ywd.95.2016.09.21.09.39.15
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 09:39:15 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::236 is neither permitted nor denied by best guess record for domain of harsh@unicommerce.com) client-ip=2607:f8b0:4002:c05::236;
+Received: by mail-yw0-x236.google.com with SMTP id t67so62667352ywg.3
+        for <tech@unicommerce.com>; Wed, 21 Sep 2016 09:39:15 -0700 (PDT)
+X-Received: by 10.129.131.145 with SMTP id t139mr35441292ywf.206.1474475955706;
+ Wed, 21 Sep 2016 09:39:15 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAB1KeyH2qttdBYRAD6WwwDHuWxbVp437HAx-JaKdqOHezbnXeg@mail.gmail.com>
+ <CAFAuwU45GJALNbETFhUYZpK+uxgGOPdF1BTN8XY+5ay5Vy32tQ@mail.gmail.com>
+ <CAMuJ5=qTR7dPDwMwjxLmDNrUnbBfFD6O+Q+CuN8MaModFk21Cw@mail.gmail.com> <CAB1KeyFvB1C3AiDTJ4FYS0RmO-stdO0UV1OSY4DU3YYH03sYaQ@mail.gmail.com>
+In-Reply-To: <CAB1KeyFvB1C3AiDTJ4FYS0RmO-stdO0UV1OSY4DU3YYH03sYaQ@mail.gmail.com>
+From: Harsh Pal <harsh@unicommerce.com>
+Date: Wed, 21 Sep 2016 16:39:05 +0000
+Message-ID: <CAB1KeyFMXuEh_D+0LVxzP_RZvJmKjaQjZajiZy_2TSu+Tnzqxw@mail.gmail.com>
+Subject: Re: Long awaited holiday - Lets go to Singapore!
+To: Amit Dalal <amit.dalal@unicommerce.com>, Ankur pratik <ankur.pratik@unicommerce.com>, 
+	Sagar Shani <sagar@unicommerce.com>, "devops@unicommerce.com" <devops@unicommerce.com>
+Cc: Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, product@unicommerce.com, 
+	Tech Team <tech@unicommerce.com>, vani verma <vani@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114eb9729210f9053d072ffe
+X-Original-Sender: harsh@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::236 is neither permitted nor denied by best
+ guess record for domain of harsh@unicommerce.com) smtp.mailfrom=harsh@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114eb9729210f9053d072ffe
+Content-Type: text/plain; charset=UTF-8
+
+The following list of tentative expenses might help you to decide
+better(All in INR):
+Universal Studios ticket : 3650
+Aquarium ticket : 1680
+Zoo ticket : 1630
+Cable car to sentosa : 1500
+Visa(Documents to be collected from office) : 2500
+Air Ticket(Including travel insurance) : 22300
+Accommodation : 8000 approx
+Food : 8000 approx
+Local travel (3 day local transport pass) : 1000 (plus 1000 for other)
+1 optional pub/bar visit : 4000
+
+*Total : 55260* (Which includes all foreseen expenses)
+
+On Wed, Sep 21, 2016 at 1:20 PM Harsh Pal <harsh@unicommerce.com> wrote:
+
+> +DevOps Team <devops@unicommerce.com>
+>
+> On Wed, Sep 21, 2016 at 1:19 PM Amit Dalal <amit.dalal@unicommerce.com>
+> wrote:
+>
+>>
+>> + Sagar
+>>
+>>
+>> On Wed 21 Sep, 2016, 12:55 PM Ankur Pratik, <ankur.pratik@unicommerce.com>
+>> wrote:
+>>
+>>> Date ???
+>>>
+>>> Ankur Pratik
+>>> Unicommerce Android Team
+>>>
+>>> On Sep 21, 2016 12:49 PM, "Harsh Pal" <harsh@unicommerce.com> wrote:
+>>>
+>>>> Hello everyone!
+>>>>
+>>>> After many attempts and repeated discussions, we are proposing an
+>>>> international outing to SINGAPORE
+>>>> [image: Image result for sentosa island]
+>>>>
+>>>> This is an invitation to all of you, please fill the form below, many
+>>>> details around the trip are shared in it and send your comments, if any.
+>>>>
+>>>> https://goo.gl/forms/OOo3eBJ5Y7NdOirw2
+>>>>
+>>>> Regards
+>>>> Harsh \m/
+>>>>
+>>>> PS: We will expect your response by 4 pm today.
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+
+--001a114eb9729210f9053d072ffe
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">The following list of tentative expenses might help you to=
+ decide better(All in INR):<div><div>Universal Studios ticket : 3650</div><=
+div>Aquarium ticket : 1680</div><div>Zoo ticket : 1630</div><div>Cable car =
+to sentosa : 1500</div><div>Visa(Documents to be collected from office) : 2=
+500</div><div>Air Ticket(Including travel insurance) : 22300</div><div>Acco=
+mmodation : 8000 approx</div><div>Food : 8000 approx</div><div>Local travel=
+ (3 day local transport pass) : 1000 (plus 1000 for other)</div><div>1 opti=
+onal pub/bar visit : 4000</div></div><div><br></div><div><b>Total : 55260</=
+b> (Which includes all foreseen expenses)</div></div><br><div class=3D"gmai=
+l_quote"><div dir=3D"ltr">On Wed, Sep 21, 2016 at 1:20 PM Harsh Pal &lt;<a =
+href=3D"mailto:harsh@unicommerce.com">harsh@unicommerce.com</a>&gt; wrote:<=
+br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><a href=3D"mailto:=
+devops@unicommerce.com" target=3D"_blank">+DevOps Team</a>=C2=A0<br></div><=
+br><div class=3D"gmail_quote"><div dir=3D"ltr">On Wed, Sep 21, 2016 at 1:19=
+ PM Amit Dalal &lt;<a href=3D"mailto:amit.dalal@unicommerce.com" target=3D"=
+_blank">amit.dalal@unicommerce.com</a>&gt; wrote:<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><br>+ Sagar<div><br></div><div><br><div class=3D"gmail_quote=
+"><div dir=3D"ltr">On Wed 21 Sep, 2016, 12:55 PM Ankur Pratik, &lt;<a href=
+=3D"mailto:ankur.pratik@unicommerce.com" target=3D"_blank">ankur.pratik@uni=
+commerce.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" styl=
+e=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><p dir=
+=3D"ltr">Date ???<br><br></p>
+<p dir=3D"ltr">Ankur Pratik<br>
+Unicommerce Android Team</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sep 21, 2016 1=
+2:49 PM, &quot;Harsh Pal&quot; &lt;<a href=3D"mailto:harsh@unicommerce.com"=
+ target=3D"_blank">harsh@unicommerce.com</a>&gt; wrote:<br type=3D"attribut=
+ion"><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hello everyone!<div><b=
+r></div><div>After many attempts and repeated discussions, we are proposing=
+ an international outing to SINGAPORE</div><div><img alt=3D"Image result fo=
+r sentosa island" width=3D"820" height=3D"537" src=3D"http://www.todayonlin=
+e.com/sites/default/files/styles/photo_gallery_image_lightbox/public/205216=
+13.JPG?itok=3D81jups95" style=3D"margin-top:0px"></div><div><br></div><div>=
+This is an invitation to all of you, please fill the form below, many detai=
+ls around the trip are shared in it and send your comments, if any.</div><d=
+iv><br></div><div><a href=3D"https://goo.gl/forms/OOo3eBJ5Y7NdOirw2" target=
+=3D"_blank">https://goo.gl/forms/OOo3eBJ5Y7NdOirw2</a><br></div><div><br></=
+div><div>Regards</div><div>Harsh \m/</div><div><br></div><div>PS: We will e=
+xpect your response by 4 pm today.</div><div><br></div><div><br></div><div>=
+<br></div><div><br></div><div><br></div><div><br></div></div>
+</blockquote></div></div>
+</blockquote></div></div>
+</blockquote></div></blockquote></div>
+
+--001a114eb9729210f9053d072ffe--

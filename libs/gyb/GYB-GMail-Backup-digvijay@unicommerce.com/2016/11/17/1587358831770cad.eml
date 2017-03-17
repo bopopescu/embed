@@ -1,0 +1,90 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp402393qge;
+        Thu, 17 Nov 2016 09:32:10 -0800 (PST)
+X-Received: by 10.55.6.141 with SMTP id 135mr4732186qkg.79.1479403930404;
+        Thu, 17 Nov 2016 09:32:10 -0800 (PST)
+Return-Path: <vikas@unicommerce.com>
+Received: from mail-qt0-x229.google.com (mail-qt0-x229.google.com. [2607:f8b0:400d:c0d::229])
+        by mx.google.com with ESMTPS id r68si2621215qkc.242.2016.11.17.09.32.10
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Nov 2016 09:32:10 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c0d::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Received: by mail-qt0-x229.google.com with SMTP id n6so138971936qtd.1
+        for <digvijay@unicommerce.com>; Thu, 17 Nov 2016 09:32:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=Pa/4iwfZxf51CqSy2PtikR1EX+jMAy6OBae55hIflkg=;
+        b=d4Pm5tVa8X0jv8GnGMo/6C7BQp06zdxT8E/CKcoGA0wCNa/w0NQ/ELqJjiOpdbnB3q
+         mY6/7B+obm/7TEG+Wgyfo0OTuJtSlfO8JAI+lkTbcukptyMdxkNSbrPaK5h243NS5pf/
+         ScdtGBj/bFlR/TY8QY0tuWGmJI2YEHfIuQ11pY3sMSWEIQSSgohHUtv3W5VO6wQ7WriP
+         h4D4d6FsPveA36NfhdV5zbkziZdfBMOUCyorgYgWggI1sxcL6BgXKX6E5c20/JYXiw6q
+         mRrC+t0LU+VqnRSM4RN9D1MKoLir1a5RZa3101gIfiUnkZxBNKBOfm/jJemcG2PePJYI
+         Dz1A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=Pa/4iwfZxf51CqSy2PtikR1EX+jMAy6OBae55hIflkg=;
+        b=U2qWCTfGO91hbSqTFxSonKdsMOJfX73ONbice23XeVolT6b61me30rT2V7BoGRLWl2
+         icmdJADy4gEOeq7GrBZHnPIxQnmfIuBR1Gf9UOOrHDLUDhOYzva9behQW3wIhVbGoRvK
+         cz1zoSNeqFKY+7ZcjBjb1R0HZ0CYkaX5ugv9JBrsECogWlu2A01OCgzxuKGcfp9I2MUu
+         bX6q3CBlXllRkgubXNCzsvXvx+TWnEC0rCtQg+3K8IiJamlvl3HCxmrrTc4OTnKq+1h3
+         RegDakBp1yqhwZJKrY9RjMclD5iVwF95aEj/UtTcU+yCMikLz3uSD4jpnacq2NbAKZPb
+         JGfQ==
+X-Gm-Message-State: AKaTC007br71CDo2O8HHEDpatgJaaLDMpUCREPwYxs0zw76tmYvkwwpCtMhBPGcfMtrecTCHM6WdcdcAH5g4QQ==
+X-Received: by 10.200.46.234 with SMTP id i39mr2782688qta.167.1479403930118;
+ Thu, 17 Nov 2016 09:32:10 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.10.147 with HTTP; Thu, 17 Nov 2016 09:32:09 -0800 (PST)
+In-Reply-To: <CAPe2SZS_pUuOWf8zJz1Q0D4O1R=i1zDU7=M1a=J85jo3kmzwag@mail.gmail.com>
+References: <CAPe2SZS_pUuOWf8zJz1Q0D4O1R=i1zDU7=M1a=J85jo3kmzwag@mail.gmail.com>
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Thu, 17 Nov 2016 23:02:09 +0530
+Message-ID: <CAEixeD86q2BkVe4kX0cE-rvqH65rorXrHb1xpTfpGmPJ0Nvi-w@mail.gmail.com>
+Subject: Re: Wormhole Deploy
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Cc: DevOps Team <devops@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>, Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113a8f94bc3a0f05418291ba
+
+--001a113a8f94bc3a0f05418291ba
+Content-Type: text/plain; charset=UTF-8
+
+Done
+
+On Thu, Nov 17, 2016 at 1:13 PM, Akshay Agarwal <
+akshay.agarwal@unicommerce.com> wrote:
+
+> Please deploy wormhole (uniware troubleshoot) from production.
+>
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+
+--001a113a8f94bc3a0f05418291ba
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done</div><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Thu, Nov 17, 2016 at 1:13 PM, Akshay Agarwal <span dir=3D"ltr"=
+>&lt;<a href=3D"mailto:akshay.agarwal@unicommerce.com" target=3D"_blank">ak=
+shay.agarwal@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div dir=3D"ltr">Please deploy wormhole (uniware troubleshoot) fr=
+om production.<span class=3D"HOEnZb"><font color=3D"#888888"><div><br></div=
+></font></span></div><span class=3D"HOEnZb"><font color=3D"#888888"><div di=
+r=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signature"><div dir=3D"=
+ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, Unicommerce</di=
+v><div>+91 9999-872-129</div></div></div>
+</font></span></blockquote></div><br></div>
+
+--001a113a8f94bc3a0f05418291ba--

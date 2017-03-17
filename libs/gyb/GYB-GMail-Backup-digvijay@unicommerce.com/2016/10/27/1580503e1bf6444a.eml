@@ -1,0 +1,105 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp565857qgj;
+        Thu, 27 Oct 2016 00:21:30 -0700 (PDT)
+X-Received: by 10.129.41.72 with SMTP id p69mr1531145ywp.304.1477552890373;
+        Thu, 27 Oct 2016 00:21:30 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-yb0-x22b.google.com (mail-yb0-x22b.google.com. [2607:f8b0:4002:c09::22b])
+        by mx.google.com with ESMTPS id d14si206784ybc.125.2016.10.27.00.21.30
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Oct 2016 00:21:30 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4002:c09::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-yb0-x22b.google.com with SMTP id d128so11652012ybh.2
+        for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 00:21:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=OWWrU3EopFVBF7JgPpmzQKMh81a3yeLJCC6+QSxK8UI=;
+        b=bYgpsr4XxoOIMMslF/HjHRDd8wyFjvgfRajNT6ypbwUWRH1Hypf+zEBnxGzOOHUaW8
+         YZUot3/nRsKJdTZsa6DosAXCDu1f9LJ8pwJMGfefEnx/OOcO2bUdpk/IOgPNTOoSTGtu
+         4IAzkhfWFDjFlV4xRyu4FSNlDBM3okOedHa/5hxy09OisBBheR5sGa3IHASCzswA3cq/
+         dcPtKGWrlnZ5SpGPkNy5WptxPgnQko8bnUiafUb8HrAEtpDcrGs0LWDdrK9dIMi/S1Eh
+         NH7KGZm1l5MksKVxwJwB3MZkHLjLVZGXeA9diVDc6AhzSC0svV022qOPVhxtaFxfmsGW
+         +M0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=OWWrU3EopFVBF7JgPpmzQKMh81a3yeLJCC6+QSxK8UI=;
+        b=VWswdDGZ7cv/andEBpd1vt2GzwiTkiAy68Ne08iK1v9ekEo62cJkfKSY1qymGc/qfG
+         1C2d8m1CmKuzPfpwtNh8FETwsbI18hyhSpmNY/nOToqWRB3M8Tl1imcXmZ/4D6+y1iBf
+         UOGaxqWht3ULUeNwj+WUY6mLUhJepW2qNLgMaSj4uBDis+FUsur1OcWLxmbjngbo1seM
+         Fh8eGRiUbUny5oqjwRFeGnVAZYFKEVTBtGVHuv3GIJ2/5/MhEX/RN+E6AXGxDdBbB188
+         Yrx3004G8XD7M3p9SazUHQT2UCprG4V2xBwXvoFMk4uL0DNa7c0XMnSQ5H896oGpFs/z
+         Krlg==
+X-Gm-Message-State: ABUngvdtMYNaTGFz0QHyM4ntoPBXZWlZD6TeDWIAjamdc8FR+o1aA8OStwjpn4RAU15jR93u5FUcbA7/jiGrBg==
+X-Received: by 10.37.173.1 with SMTP id y1mr4373919ybi.88.1477552890016; Thu,
+ 27 Oct 2016 00:21:30 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.129.84.85 with HTTP; Thu, 27 Oct 2016 00:21:28 -0700 (PDT)
+In-Reply-To: <1940953700.3.1477551755994.JavaMail.root@unicoms-MacBook-Air-3.local>
+References: <1940953700.3.1477551755994.JavaMail.root@unicoms-MacBook-Air-3.local>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 27 Oct 2016 12:51:28 +0530
+Message-ID: <CA+zaFGhLT__+OYjk4nVNMca1f3XMYqJk4JAPHoPfbWB8PCC=tg@mail.gmail.com>
+Subject: Re: text/html
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045dc5d225a5c4053fd39779
+
+--f403045dc5d225a5c4053fd39779
+Content-Type: text/plain; charset=UTF-8
+
+This looks good. Get it deployed to production by Vikas/Puneet.
+
+- Sunny
+
+On Thu, Oct 27, 2016 at 12:32 PM, <scriptcron@gmail.com> wrote:
+
+> Name of ScriptVersionCommentsCreated By
+> flipkartVerifyOrderScript 2.0 test digvijay@unicommerce.com
+> flipkartVerifyOrderScript 2.0 test digvijay@unicommerce.com
+> tradusItemTypeListScript 2.0 test digvijay@unicommerce.com
+> tradusDispatchVerificationScript 1.2 test digvijay@unicommerce.com
+> tradusDispatchVerificationScript 1.2 test digvijay@unicommerce.com
+> flipkartReconcilationInvoiceDetailScript 3.0 test digvijay@unicommerce.com
+> flipkartReconcilationInvoiceDetailScript 2.0 asda digvijay@unicommerce.com
+>
+
+--f403045dc5d225a5c4053fd39779
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">This looks good. Get it deployed to production by Vikas/Pu=
+neet.<div><br></div><div>- Sunny</div></div><div class=3D"gmail_extra"><br>=
+<div class=3D"gmail_quote">On Thu, Oct 27, 2016 at 12:32 PM,  <span dir=3D"=
+ltr">&lt;<a href=3D"mailto:scriptcron@gmail.com" target=3D"_blank">scriptcr=
+on@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div c=
+lass=3D"HOEnZb"><div class=3D"h5"><table style=3D"width:100%" border=3D"1">=
+<tbody><tr><th>Name of Script</th><th>Version</th><th>Comments</th><th>Crea=
+ted By</th></tr><tr><td>flipkartVerifyOrderScript</td><td>2.0</td><td>test<=
+/td><td><a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvi=
+jay@unicommerce.com</a></td></tr><tr><td>flipkartVerifyOrderScript</td><td>=
+2.0</td><td>test</td><td><a href=3D"mailto:digvijay@unicommerce.com" target=
+=3D"_blank">digvijay@unicommerce.com</a></td></tr><tr><td>tradusItemTypeLis=
+tScript</td><td>2.0</td><td>test</td><td><a href=3D"mailto:digvijay@unicomm=
+erce.com" target=3D"_blank">digvijay@unicommerce.com</a></td></tr><tr><td>t=
+radusDispatchVerificationScri<wbr>pt</td><td>1.2</td><td>test</td><td><a hr=
+ef=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommer=
+ce.com</a></td></tr><tr><td>tradusDispatchVerificationScri<wbr>pt</td><td>1=
+.2</td><td>test</td><td><a href=3D"mailto:digvijay@unicommerce.com" target=
+=3D"_blank">digvijay@unicommerce.com</a></td></tr><tr><td>flipkartReconcila=
+tionInvoiceDe<wbr>tailScript</td><td>3.0</td><td>test</td><td><a href=3D"ma=
+ilto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</=
+a></td></tr><tr><td>flipkartReconcilationInvoiceDe<wbr>tailScript</td><td>2=
+.0</td><td>asda</td><td><a href=3D"mailto:digvijay@unicommerce.com" target=
+=3D"_blank">digvijay@unicommerce.com</a></td></tr></tbody></table>
+</div></div></blockquote></div><br></div>
+
+--f403045dc5d225a5c4053fd39779--

@@ -1,0 +1,194 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1509966qgu;
+        Sun, 5 Feb 2017 21:14:14 -0800 (PST)
+X-Received: by 10.37.170.177 with SMTP id t46mr5848517ybi.79.1486358054102;
+        Sun, 05 Feb 2017 21:14:14 -0800 (PST)
+Return-Path: <3JQaYWAcPCFw4H4GCE4OHC6IGG8L68.6IG7CAPCD4SOHC6IGG8L68.6IG@trix.bounces.google.com>
+Received: from mail-yb0-x247.google.com (mail-yb0-x247.google.com. [2607:f8b0:4002:c09::247])
+        by mx.google.com with ESMTPS id d88si7697845ybi.67.2017.02.05.21.14.13
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 05 Feb 2017 21:14:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3jqaywacpcfw4h4gce4ohc6igg8l68.6ig7capcd4sohc6igg8l68.6ig@trix.bounces.google.com designates 2607:f8b0:4002:c09::247 as permitted sender) client-ip=2607:f8b0:4002:c09::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=pass (google.com: domain of 3jqaywacpcfw4h4gce4ohc6igg8l68.6ig7capcd4sohc6igg8l68.6ig@trix.bounces.google.com designates 2607:f8b0:4002:c09::247 as permitted sender) smtp.mailfrom=3JQaYWAcPCFw4H4GCE4OHC6IGG8L68.6IG7CAPCD4SOHC6IGG8L68.6IG@trix.bounces.google.com
+Received: by mail-yb0-x247.google.com with SMTP id w194so88772936ybe.2
+        for <digvijay@unicommerce.com>; Sun, 05 Feb 2017 21:14:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:reply-to:message-id:date:subject:from:to;
+        bh=2xzSTY5B0MMISPlpdmGrzEdsaicyQVXsCircTS/xI7U=;
+        b=JyrfUdOrAoismHgdiJivDz/RVpmadsNTEDyr8+loSN3AeLBILM9eSmzhTxgbLfUfnd
+         lVqEpPoMwvOXUdmIqSO1azsnfNgx9Cb8JUXG34dkxLlQvYuhCAxeNpbaiP1u0ts5iLcb
+         Gfk4QDC+rYx5MpitafZY/Y8vpoaeCl9rMrkxd5WBdI20m87uSSDqt9/jzKfDwPIpAXQs
+         pB/qXOi6uADfKemqDLJTlSWk1doZSJ0pqBiTgg40V55zSDzVV1qCvnuVSbwsUeCQ27zm
+         sLpSw+KEgg+moywaY/h95uPevIAfUlK0oWriOvJcQVnZuA+JMcyxFQhugN23glwYXzEW
+         Vseg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:message-id:date:subject
+         :from:to;
+        bh=2xzSTY5B0MMISPlpdmGrzEdsaicyQVXsCircTS/xI7U=;
+        b=m9UQW+u4ROx/8cajrawGHegdQYr+XiOLfPRLYeCo0Wj1T6fuDznBbemxFZzQccPA6V
+         s6d9b3snmElO5L0hREYpU1H2/Xgm2UnSNSlkK3mlH6tbG6APPYLhXRHgdOJ+VAFyJPx4
+         2mG6BdmNbEXMMOSJ+Rtr8IuY6Ksu/+ypKSwdNr+T+UydjzP+VvSITh30PNJPTyrK8FHP
+         bXOYe0sio+Y6kE5s+LBUrqSCOdupz2ukhj5+NM5JYyS2M9ZBh1aysLSd+pZS5ymIKqp8
+         d9MkrhGVykceOScMzHHlvQRNOhronAChuI+dcioAbh8Qd9c+hWuf6RC8WwJFat5uF2Ac
+         hOwQ==
+X-Gm-Message-State: AIkVDXLtDPUfWk5W8UYFzDkJxMI8bFcIf6KC75ROMIbJ/wJY2vRbL8PjDeY0jnMu7xY1+O015hu5d8VR/w8695Q=
+MIME-Version: 1.0
+X-Received: by 10.13.210.69 with SMTP id u66mt2952772ywd.127.1486358053156;
+ Sun, 05 Feb 2017 21:14:13 -0800 (PST)
+Reply-To: anamika@unicommerce.com
+X-No-Auto-Attachment: 1
+Message-ID: <001a114e40f4c4bd690547d5b3e1@google.com>
+Date: Mon, 06 Feb 2017 05:14:13 +0000
+Subject: Blood Group Details (for ID Cards)
+From: anamika@unicommerce.com
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a114e40f4ce83870547d5b3ee
+
+--001a114e40f4ce83870547d5b3ee
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+I've invited you to fill out the following form:
+Blood Group Details
+
+To fill it out, visit:
+https://docs.google.com/a/unicommerce.com/forms/d/e/1FAIpQLSeqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fBxOM9fjV95FE0-6g/viewform?c=0&amp;w=1&amp;usp=mail_form_link
+
+Dear All,
+
+Kindly share your blood group details ASAP.
+
+Thanks
+Anamika
+
+Google Forms: Create and analyze surveys.
+
+--001a114e40f4ce83870547d5b3ee
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"font-family: Roboto,Helvetica,Arial,sans-serif; margin=
+: 0; padding: 0; height: 100%; width: 100%;"><table border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"background-color:rgb(103, 58, 183);" wid=
+th=3D"100%" role=3D"presentation"><tbody><tr height=3D"64px"><td style=3D"p=
+adding-left: 24px"><img alt=3D"Google Forms" height=3D"26px" style=3D"displ=
+ay: inline-block; margin: 0; vertical-align: middle;" width=3D"143px" src=
+=3D"https://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.pn=
+g"></td></tr></tbody></table><div style=3D"padding: 24px; background-color:=
+rgb(237, 231, 246)"><table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"max-width: 672px; min-width: 154px;" width=3D"10=
+0%" role=3D"presentation"><tbody><tr><td style=3D"font-size: 13px; line-hei=
+ght: 18px; color: #424242; font-weight: 700">Having trouble viewing or subm=
+itting this form?</td></tr><tr height=3D"8px"><td></td></tr><tr><td><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr>=
+<td><a href=3D"https://docs.google.com/a/unicommerce.com/forms/d/e/1FAIpQLS=
+eqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fBxOM9fjV95FE0-6g/viewform?c=3D0&amp;w=3D1&a=
+mp;usp=3Dmail_form_link"style=3D"border-radius: 3px; box-sizing: border-box=
+; display: inline-block; font-size: 13px; font-weight: 700; height: 40px; l=
+ine-height: 40px; padding: 0 24px; text-align: center; text-decoration: non=
+e; text-transform: uppercase; vertical-align: middle; color: #fff; backgrou=
+nd-color: rgb(103, 58, 183);" target=3D"_blank">FILL OUT IN GOOGLE FORMS</a=
+></td></tr></tbody></table></td></tr><tr height=3D"24px"><td></td></tr></tb=
+ody></table><div align=3D"center" style=3D"background-color: #fff; border-b=
+ottom: 1px solid #e0e0e0; margin: 0 auto; max-width: 624px; min-width: 154p=
+x; padding: 0 24px;"><table align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"background-color: #fff;" width=3D"100%" role=3D"presentatio=
+n"><tbody><tr height=3D"24px"><td></td></tr><tr><td><span style=3D"display:=
+ table-cell; vertical-align: top; font-size: 13px; line-height: 18px; color=
+: #424242;">Dear All,<br><br>Kindly share your blood group details ASAP. <b=
+r><br>Thanks<br>Anamika</span></td></tr><tr height=3D"20px"><td></tr><tr st=
+yle=3D"font-size: 20px; line-height: 24px;"><td><span style=3D"display: tab=
+le-cell;"><a href=3D"https://docs.google.com/a/unicommerce.com/forms/d/e/1F=
+AIpQLSeqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fBxOM9fjV95FE0-6g/viewform?c=3D0&amp;w=
+=3D1&amp;usp=3Dmail_form_link" style=3D"color: rgb(103, 58, 183); text-deco=
+ration: none; vertical-align: middle; font-weight: 500">Blood Group Details=
+ </a><div itemprop=3D"action" itemscope itemtype=3D"http://schema.org/ViewA=
+ction"><meta itemprop=3D"url" content=3D"https://docs.google.com/a/unicomme=
+rce.com/forms/d/e/1FAIpQLSeqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fBxOM9fjV95FE0-6g/=
+viewform?c=3D0&amp;w=3D1&amp;usp=3Dmail_goto_form"><meta itemprop=3D"name" =
+content=3D"Fill out form"></div></span></td></tr><tr height=3D"24px"></tr><=
+tr><td><div class=3D"ss-form" style=3D""><form action=3D"https://docs.googl=
+e.com/a/unicommerce.com/forms/d/e/1FAIpQLSeqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fB=
+xOM9fjV95FE0-6g/formResponse" method=3D"POST" id=3D"ss-form" target=3D"_sel=
+f" onsubmit=3D"" style=3D""><ol role=3D"list" class=3D"ss-question-list" st=
+yle=3D"padding-left: 0;list-style-type:none;">
+
+<div class=3D"ss-form-question errorbox-good" role=3D"listitem" style=3D"">
+<div dir=3D"auto" class=3D"ss-item ss-item-required ss-text" style=3D"margi=
+n:12px 0;"><div class=3D"ss-form-entry" style=3D"margin-bottom:1.5em;vertic=
+al-align:middle;margin-left:0;margin-top:0;max-width:100%;">
+<label class=3D"ss-q-item-label" for=3D"entry_1204975879" style=3D""><div c=
+lass=3D"ss-q-title" style=3D"display:block;font-weight:bold;margin-top:.83e=
+m;margin-bottom:.83em;">Kindly share your blood group here
+<label for=3D"itemView.getDomIdToLabel()" aria-label=3D"(Required field)" s=
+tyle=3D""></label>
+<span class=3D"ss-required-asterisk" aria-hidden=3D"true" style=3D"color:#c=
+43b1d;">*</span></div>
+<div class=3D"ss-q-help ss-secondary-text" dir=3D"auto" style=3D"display:bl=
+ock;margin:.1em 0 .25em 0;color:#666;"></div></label>
+
+<input type=3D"text" name=3D"entry.1204975879" value=3D"" class=3D"ss-q-sho=
+rt" id=3D"entry_1204975879" dir=3D"auto" aria-label=3D"Kindly share your bl=
+ood group here  " aria-required=3D"true" title=3D"" style=3D"">
+
+
+</div></div></div>
+<input type=3D"hidden" name=3D"draftResponse" value=3D"[,,&quot;55827301642=
+41729960&quot;]
+" style=3D"">
+<input type=3D"hidden" name=3D"pageHistory" value=3D"0" style=3D"">
+
+<input type=3D"hidden" name=3D"usp" value=3D"mail_form_submit" style=3D"">
+
+<input type=3D"hidden" name=3D"fbzx" value=3D"5582730164241729960" style=3D=
+"">
+<div class=3D"ss-send-email-receipt" style=3D"margin-bottom: 4px;" dir=3D"l=
+tr"><label for=3D"emailReceipt" style=3D"display:inline;"></label></div>
+<div class=3D"ss-item ss-navigate" style=3D"margin:12px 0;"><table id=3D"na=
+vigation-table" style=3D""><tbody><tr><td class=3D"ss-form-entry goog-inlin=
+e-block" id=3D"navigation-buttons" dir=3D"ltr" style=3D"margin-bottom:1.5em=
+;vertical-align:middle;margin-left:0;margin-top:0;max-width:100%;position:r=
+elative;display:inline-block;">
+<input type=3D"submit" name=3D"submit" value=3D"Submit" id=3D"ss-submit" cl=
+ass=3D"jfk-button jfk-button-action " style=3D"">
+<div class=3D"ss-password-warning ss-secondary-text" style=3D"color:#666;">=
+Never submit passwords through Google Forms.</div></td>
+</tr></tbody></table></div></ol></form></div>
+<div class=3D"ss-footer" style=3D""><div class=3D"ss-attribution" style=3D"=
+"></div>
+<div class=3D"ss-legal" style=3D""><div class=3D"disclaimer-separator" styl=
+e=3D""></div>
+<div class=3D"disclaimer" dir=3D"ltr" style=3D""><div class=3D"powered-by-l=
+ogo" style=3D"margin-top:2em;"><span class=3D"powered-by-text" style=3D"">P=
+owered by</span>
+<a href=3D"https://www.google.com/forms/about/?utm_source=3Dproduct&amp;utm=
+_medium=3Dforms_logo&amp;utm_campaign=3Dforms" style=3D""><div class=3D"ss-=
+logo-container" style=3D""><img src=3D"https://ssl.gstatic.com/docs/forms/f=
+orms_logo_2_small_dark_2x.png" height=3D"21px" width=3D"108px" alt=3D"Googl=
+e Forms" style=3D""></div></a></div>
+<div class=3D"ss-terms" style=3D"color:#777;font-size:11px;margin-top:1.5em=
+;"><span class=3D"disclaimer-msg" style=3D"">This form was created inside o=
+f Unicommerce.</span>
+<br>
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSeqQX_qtAMErb0nmeXx7CUq=
+jTr8p9PI0fBxOM9fjV95FE0-6g/reportabuse?source=3Dhttps://docs.google.com/a/u=
+nicommerce.com/forms/d/e/1FAIpQLSeqQX_qtAMErb0nmeXx7CUqjTr8p9PI0fBxOM9fjV95=
+FE0-6g/viewform?sid%3D4ad3611a08bbdd4%26c%3D0%26w%3D1%26token%3DiggHEloBAAA=
+.gE-f5WKVIoYLT_5LNLnPpA.t9RBUw8G--OqFDpG0Vepmw" style=3D"">Report Abuse</a>
+-
+<a href=3D"http://www.google.com/accounts/TOS" style=3D"">Terms of Service<=
+/a>
+-
+<a href=3D"http://www.google.com/google-d-s/terms.html" style=3D"">Addition=
+al Terms</a></div></div></div></div>
+</td></tr><tr height=3D"24px"></tr></tbody></table></div><table align=3D"ce=
+nter" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 672px; min-wi=
+dth: 154px;" width=3D"100%" role=3D"presentation"><tbody><tr height=3D"24px=
+"><td></td></tr><tr><td><a href=3D"https://docs.google.com/forms?usp=3Dmail=
+_form_link" style=3D"color: #616161; font-size: 13px;">Create your own Goog=
+le Form</a></td></tr></tbody></table></div></body></html>
+--001a114e40f4ce83870547d5b3ee--

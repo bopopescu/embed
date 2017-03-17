@@ -1,0 +1,97 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp88591qge;
+        Tue, 8 Nov 2016 22:34:36 -0800 (PST)
+X-Received: by 10.107.17.70 with SMTP id z67mr16562743ioi.123.1478673276080;
+        Tue, 08 Nov 2016 22:34:36 -0800 (PST)
+Return-Path: <piyush@unicommerce.com>
+Received: from mail-it0-x235.google.com (mail-it0-x235.google.com. [2607:f8b0:4001:c0b::235])
+        by mx.google.com with ESMTPS id 192si9063237itl.125.2016.11.08.22.34.35
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 22:34:36 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::235 is neither permitted nor denied by best guess record for domain of piyush@unicommerce.com) client-ip=2607:f8b0:4001:c0b::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::235 is neither permitted nor denied by best guess record for domain of piyush@unicommerce.com) smtp.mailfrom=piyush@unicommerce.com
+Received: by mail-it0-x235.google.com with SMTP id e187so191486602itc.0
+        for <digvijay@unicommerce.com>; Tue, 08 Nov 2016 22:34:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=Ycn9rgYMrtd/dv4+dZhjZKJ0pFdLj2XTgxqyKx92TUE=;
+        b=CgDO+SC8/coa18/G5R4JKTd3FNUcnAFEpEcDd7acaDzVk7aewOonVKb5x1ieOiQri4
+         kXGur590Rjh1ScBcVPF9PH/B+EfyE3DGf53qZ0Gqu8U+CP/EKqFb51pWUWH2kggsC9li
+         UCZEUPK32i9D5fD23V2TieUc4HFh1PFvWEbVIQA1Aq7UM0RDDmCA6XOVMPsRr9WZG7ff
+         yl1k2WxO758gUcDoaP501N/3pbimsXX/kDyXDITqBWv6fgdoSMHNhc2WNrgSxRxiIviX
+         CWGbauy8xSUQOMBp368XIH8CM7pracwQT0qr2bljps+edrNvQELoLObbx8OnyC1Nctn0
+         Ce2w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=Ycn9rgYMrtd/dv4+dZhjZKJ0pFdLj2XTgxqyKx92TUE=;
+        b=UW/KvOKfdo84Cvy+JKttExYbUt5kwwFIkiIhHKMbHCFMJLCYUdHjOksDamI70vgCca
+         Wz4g8tZGxQtGAjDwaQpskezepIcQxdcsgzw997dIRmlFjHqUFJxXlDH/bfgZUItRBDIz
+         NlK2tN5+HVa7Jh9H2vxIHgO7sAxVgsidphU2NCj0WG3gErH5EzsuXGxEjEgkqXpsvh2v
+         CYh2wV8fs9ZES0fdn/aB/ic/oX7bPAdH6OBZOatgKdNs2BtadgRWNhVNc2y8ug0MI9eO
+         qOUoTijXw/xHOBEQEp+IwxgXb/AJw8zJf3TnmVX+Lffo9eq5dY/buVyM1rfdJPpA/o0n
+         mxCg==
+X-Gm-Message-State: ABUngvdRhEm01MD/q7ak7Uj8DB4ulMPNVqLEjSx9HqF9hR3cNcKFFWgZEVB4uCr9b0tOWo708EyHumqu6/MrfQ==
+X-Received: by 10.107.142.210 with SMTP id q201mr17046105iod.4.1478673275810;
+ Tue, 08 Nov 2016 22:34:35 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.107.162.195 with HTTP; Tue, 8 Nov 2016 22:34:35 -0800 (PST)
+From: Piyush Arora <piyush@unicommerce.com>
+Date: Wed, 9 Nov 2016 12:04:35 +0530
+Message-ID: <CAOiuGhqkQSmNrRX=qJc91D+fvj1_uK=VKEjf0_W1A4KOF=JOHw@mail.gmail.com>
+Subject: Issue in GetPackagesBySuborder API
+To: aarti.kalra@snapdeal.com
+Cc: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c05c300580e060540d873af
+
+--94eb2c05c300580e060540d873af
+Content-Type: text/plain; charset=UTF-8
+
+Hi Aarti,
+
+We are not getting packages for suborder that belongs to FC_VOI fulfillment
+mode. We are making request as :
+
+https://apigateway.snapdeal.com/seller-api/orders/suborders?fModes=FC_VOI&subOrderId=20493708102
+
+response:
+{
+    "metadata": {
+        "requestId": "72eddaaa-679d-491e-afdb-cd036b5e59b0",
+        "clientId": "Unicommerce",
+        "responseTime": 15,
+        "requestedURI": "GET /orders/suborders"
+    },
+    "payload": {
+        "packages": []
+    }
+}
+
+While it is working fine for all other fulfillment modes.
+
+--94eb2c05c300580e060540d873af
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Aarti,<div><br></div><div>We are not getting packages f=
+or suborder that belongs to FC_VOI fulfillment mode. We are making request =
+as :</div><div><br></div><div><a href=3D"https://apigateway.snapdeal.com/se=
+ller-api/orders/suborders?fModes=3DFC_VOI&amp;subOrderId=3D20493708102">htt=
+ps://apigateway.snapdeal.com/seller-api/orders/suborders?fModes=3DFC_VOI&am=
+p;subOrderId=3D20493708102</a><br></div><div><br></div><div>response:</div>=
+<div>{</div><div>=C2=A0 =C2=A0 &quot;metadata&quot;: {</div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &quot;requestId&quot;: &quot;72eddaaa-679d-491e-afdb-cd03=
+6b5e59b0&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;clientId&quot;:=
+ &quot;Unicommerce&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;respo=
+nseTime&quot;: 15,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;requestedURI=
+&quot;: &quot;GET /orders/suborders&quot;</div><div>=C2=A0 =C2=A0 },</div><=
+div>=C2=A0 =C2=A0 &quot;payload&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &quot;packages&quot;: []</div><div>=C2=A0 =C2=A0 }</div><div>}=C2=A0</d=
+iv><div><br></div><div>While it is working fine for all other fulfillment m=
+odes.</div></div>
+
+--94eb2c05c300580e060540d873af--

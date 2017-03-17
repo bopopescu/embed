@@ -1,0 +1,744 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Fri, 17 Feb 2017 04:29:44 -0800 (PST)
+In-Reply-To: <CAJF3sopG8oY2cDsDRtmvYfM+UnhLMK_Od0Tqey4qY7jRCzpC=g@mail.gmail.com>
+References: <CAJF3sopEgaUMADwPMKmYnaymqZ-xNJiVk=jHjbgCnxR6LQseCA@mail.gmail.com>
+	<CAJF3sop582HwL9R-Jv=fAyhHDvtAB0d6k8ZD3OfMUPZz3Gaxgw@mail.gmail.com>
+	<CAJF3sopG8oY2cDsDRtmvYfM+UnhLMK_Od0Tqey4qY7jRCzpC=g@mail.gmail.com>
+Date: Fri, 17 Feb 2017 17:59:44 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopJnPKy-sc79D6226-ig06kobqQ==aSXtiM19X35uxKgA@mail.gmail.com>
+Subject: Re:
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c124228e57110548b9119e
+
+--001a11c124228e57110548b9119e
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+connection =3D (HttpsURLConnection) url.openConnection();
+
+        // Host name verification off
+            connection.setHostnameVerifier(new HostnameVerifier()
+            {
+                public boolean verify(String hostname, SSLSession session)
+                {
+                    return true;
+                }
+            });  `
+
+
+
+On Fri, Feb 17, 2017 at 5:46 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> /*
+>  *  Copyright 2012 Unicommerce Technologies (P) Limited . All Rights Rese=
+rved.
+>  *  UNICOMMERCE TECHONOLOGIES PROPRIETARY/CONFIDENTIAL. Use is subject to=
+ license terms.
+>  *
+>  *  @version     1.0, Jan 18, 2012
+>  *  @author singla
+>  */
+> package com.unifier.core.transport.http;
+>
+> import java.io.IOException;
+> import java.net.InetAddress;
+> import java.security.cert.X509Certificate;
+> import java.util.ArrayList;
+> import java.util.List;
+> import java.util.Map;
+> import java.util.concurrent.ConcurrentHashMap;
+> import java.util.concurrent.TimeUnit;
+> import javax.net.ssl.SNIHostName;
+> import javax.net.ssl.SNIServerName;
+> import javax.net.ssl.SSLHandshakeException;
+> import javax.net.ssl.SSLParameters;
+> import javax.net.ssl.SSLSocket;
+> import org.apache.http.HttpEntityEnclosingRequest;
+> import org.apache.http.HttpRequest;
+> import org.apache.http.HttpVersion;
+> import org.apache.http.NoHttpResponseException;
+> import org.apache.http.client.HttpClient;
+> import org.apache.http.client.HttpRequestRetryHandler;
+> import org.apache.http.client.params.ClientPNames;
+> import org.apache.http.conn.params.ConnRouteParams;
+> import org.apache.http.conn.scheme.PlainSocketFactory;
+> import org.apache.http.conn.scheme.Scheme;
+> import org.apache.http.conn.scheme.SchemeRegistry;
+> import org.apache.http.conn.ssl.SSLSocketFactory;
+> import org.apache.http.conn.ssl.TrustStrategy;
+> import org.apache.http.impl.client.DecompressingHttpClient;
+> import org.apache.http.impl.client.DefaultHttpClient;
+> import org.apache.http.impl.client.LaxRedirectStrategy;
+> import org.apache.http.impl.conn.PoolingClientConnectionManager;
+> import org.apache.http.params.BasicHttpParams;
+> import org.apache.http.params.HttpConnectionParams;
+> import org.apache.http.params.HttpParams;
+> import org.apache.http.params.HttpProtocolParams;
+> import org.apache.http.protocol.ExecutionContext;
+> import org.apache.http.protocol.HttpContext;
+>
+> /**
+>  * @author singla
+>  */
+> public class HttpClientFactory {
+>     private static final int                     DEFAULT_REQUEST_TIMEOUT =
+=3D 60 * 1000;
+>     private static final Map<String, HttpClient> httpClientCache         =
+=3D new ConcurrentHashMap<>();
+>     private static IHttpClientNameDecorator      httpClientNameDecorator;
+>
+>     public static void setHttpClientNameDecorator(IHttpClientNameDecorato=
+r httpClientNameDecorator) {
+>         HttpClientFactory.httpClientNameDecorator =3D httpClientNameDecor=
+ator;
+>     }
+>
+>     /**
+>      * @param name
+>      * @return the cached http client instance for the given name
+>      */
+>     public static HttpClient getCachedHttpClient(String name, boolean tru=
+stAll) {
+>         if (HttpClientFactory.httpClientNameDecorator !=3D null) {
+>             name =3D HttpClientFactory.httpClientNameDecorator.decorate(n=
+ame);
+>         }
+>
+>         HttpClient httpClient =3D httpClientCache.get(name);
+>         if (httpClient =3D=3D null) {
+>             synchronized (httpClientCache) {
+>                 httpClient =3D httpClientCache.get(name);
+>                 if (httpClient =3D=3D null) {
+>                     httpClient =3D buildHttpClient(trustAll);
+>                     httpClientCache.put(name, httpClient);
+>                 }
+>             }
+>         }
+>         return httpClient;
+>     }
+>
+>     private static HttpClient buildHttpClient(InetAddress localAddress, b=
+oolean trustAll) {
+>         HttpParams params =3D new BasicHttpParams();
+>         HttpConnectionParams.setSoTimeout(params, DEFAULT_REQUEST_TIMEOUT=
+);
+>         ConnRouteParams.setLocalAddress(params, localAddress);
+>         HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
+>         params.getParameter(ClientPNames.COOKIE_POLICY);
+>         params.setBooleanParameter(ClientPNames.ALLOW_CIRCULAR_REDIRECTS,=
+true);
+>         params.setIntParameter(ClientPNames.MAX_REDIRECTS,100);
+>         SchemeRegistry schemeRegistry =3D new SchemeRegistry();
+>         schemeRegistry.register(new Scheme("http", 80, PlainSocketFactory=
+.getSocketFactory()));
+>         SSLSocketFactory socketFactory;
+>         if (trustAll) {
+>             try {
+>                 socketFactory =3D new SSLSocketFactory(new TrustStrategy(=
+) {
+>                     @Override
+>                     public boolean isTrusted(final X509Certificate[] chai=
+n, String authType) {
+>                         // Oh, I am easy...
+>                         return true;
+>                     }
+>
+>                 }, SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+>             } catch (Exception e) {
+>                 socketFactory =3D SSLSocketFactory.getSocketFactory();
+>             }
+>         } else {
+>             socketFactory =3D SSLSocketFactory.getSocketFactory();
+>         }
+>         schemeRegistry.register(new Scheme("https", 443, socketFactory));
+>
+>         SSLSocket sslSocket =3D null;
+>         try {
+>             sslSocket =3D (SSLSocket) socketFactory.createSocket();
+>         } catch (IOException e) {
+>             e.printStackTrace();
+>         }
+>         // SSLEngine sslEngine =3D sslContext.createSSLEngine("172.16.10.=
+6", 443);
+>
+>         SNIHostName serverName =3D new SNIHostName("www.singlekart.com");
+>         List<SNIServerName> serverNames =3D new ArrayList<>(1);
+>         serverNames.add(serverName);
+>         SSLParameters sslParams =3D sslSocket.getSSLParameters();
+>         sslParams.setServerNames(serverNames);
+>         sslSocket.setSSLParameters(sslParams);
+>         // sslEngine.setSSLParameters(params);
+>
+>
+>         PoolingClientConnectionManager cm =3D new PoolingClientConnection=
+Manager(schemeRegistry, 5 , TimeUnit.MINUTES);
+>         cm.setDefaultMaxPerRoute(20);
+>         cm.setMaxTotal(100);
+>         DefaultHttpClient client =3D new DefaultHttpClient(cm, params);
+>         HttpRequestRetryHandler retryHandler =3D new HttpRequestRetryHand=
+ler() {
+>             @Override
+>             public boolean retryRequest(IOException exception, int execut=
+ionCount, HttpContext context) {
+>                 if (executionCount >=3D 2) {
+>                     // Do not retry if over max retry count
+>                     return false;
+>                 }
+>                 if (exception instanceof NoHttpResponseException) {
+>                     // Retry if the server dropped connection on us
+>                     return true;
+>                 }
+>                 if (exception instanceof SSLHandshakeException) {
+>                     // Do not retry on SSL handshake exception
+>                     return false;
+>                 }
+>                 HttpRequest request =3D (HttpRequest) context.getAttribut=
+e(ExecutionContext.HTTP_REQUEST);
+>                 boolean idempotent =3D !(request instanceof HttpEntityEnc=
+losingRequest);
+>                 if (idempotent) {
+>                     // Retry if the request is considered idempotent
+>                     return true;
+>                 }
+>                 return false;
+>             }
+>         };
+>         client.setHttpRequestRetryHandler(retryHandler);
+>         client.setRedirectStrategy(new LaxRedirectStrategy());
+>         return new DecompressingHttpClient(client);
+>     }
+>
+>     public static HttpClient buildHttpClient(boolean trustAll) {
+>         return buildHttpClient(null, true);
+>     }
+>
+>     public static HttpClient buildHttpClient() {
+>         return buildHttpClient(null, false);
+>     }
+>
+>     public static void clearCache() {
+>         httpClientCache.clear();
+>     }
+>
+>     public static void clearCacheEntry(String name) {
+>         if (HttpClientFactory.httpClientNameDecorator !=3D null) {
+>             name =3D HttpClientFactory.httpClientNameDecorator.decorate(n=
+ame);
+>         }
+>         httpClientCache.remove(name);
+>     }
+>
+> }
+>
+>
+> On Fri, Feb 17, 2017 at 5:41 PM, Digvijay Sharma <digvijay@unicommerce.co=
+m
+> > wrote:
+>
+>>
+>>     public static void main(String[] args) throws HttpTransportException=
+, IOException, InterruptedException {
+>> //        System.out.println(new BigDecimal("0.00"));
+>>
+>> //        Process p =3D Runtime.getRuntime().exec("/bin/bash -c wget --q=
+uiet   --output-document   - 'https://www.singlekart.com/wp-json/wc/v1/prod=
+ucts?consumer_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&consumer_se=
+cret=3Dcc9ec0eeb500af6b34bcec948ac6ee88396daf4cc&per_page=3D1&page=3D1'");
+>> //        p.waitFor();
+>> ////        System.out.println(p.getOutputStream());
+>> //        String s =3D null;
+>> //        try {
+>> //            BufferedReader br =3D new BufferedReader(
+>> //                    new InputStreamReader(p.getInputStream()));
+>> //            while ((s =3D br.readLine()) !=3D null) {
+>> //                System.out.println(s);
+>> //            }
+>> //        } catch (IOException ioe) {
+>> //            ioe.printStackTrace();
+>> //        }
+>> //        System.out.println(new HttpSender(true).executeGet("https://ww=
+w.singlekart.com/wp-json/wc/v1/products?consumer_key=3Dck_ac07ede27ebf2884d=
+9a06dada0fb1eb3a6f19810&consumer_secret=3Dcs_c9ec0eeb500af6b34bcec948ac6ee8=
+8396daf4cc&per_page=3D1&page=3D1",null));
+>>         System.out.println(new HttpSender(true).executeGet("http://www.s=
+inglekart.com",null));
+>>
+>>
+>> //        System.out.println(dateToString(addToDate(getCurrentDate(), Ca=
+lendar.DATE, -30),"yyyy-MM-ddTmm:HH:ssZ"));
+>>     }
+>>
+>>
+>> On Fri, Feb 17, 2017 at 5:39 PM, Digvijay Sharma <
+>> digvijay@unicommerce.com> wrote:
+>>
+>>> sudo keytool -import -alias alias -keystore
+>>> /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/li=
+b/security/cacerts
+>>> -file ~/Downloads/u1.cer
+>>>
+>>>
+>>>
+>>>
+>>
+>
+
+--001a11c124228e57110548b9119e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre class=3D"gmail-lang-java gmail-prettyprint gmail-pret=
+typrinted" style=3D"margin-top:0px;margin-bottom:1em;padding:5px;border:0px=
+;font-size:13px;width:auto;max-height:600px;overflow:auto;font-family:conso=
+las,menlo,monaco,&quot;lucida console&quot;,&quot;liberation mono&quot;,&qu=
+ot;dejavu sans mono&quot;,&quot;bitstream vera sans mono&quot;,&quot;courie=
+r new&quot;,monospace,sans-serif;background-color:rgb(239,240,241);color:rg=
+b(57,51,24);word-wrap:normal"><code style=3D"margin:0px;padding:0px;border:=
+0px;font-family:consolas,menlo,monaco,&quot;lucida console&quot;,&quot;libe=
+ration mono&quot;,&quot;dejavu sans mono&quot;,&quot;bitstream vera sans mo=
+no&quot;,&quot;courier new&quot;,monospace,sans-serif;white-space:inherit">=
+<span class=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;color:=
+rgb(48,51,54)">connection </span><span class=3D"gmail-pun" style=3D"margin:=
+0px;padding:0px;border:0px;color:rgb(48,51,54)">=3D</span><span class=3D"gm=
+ail-pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> <=
+/span><span class=3D"gmail-pun" style=3D"margin:0px;padding:0px;border:0px;=
+color:rgb(48,51,54)">(</span><span class=3D"gmail-typ" style=3D"margin:0px;=
+padding:0px;border:0px;color:rgb(43,145,175)">HttpsURLConnection</span><spa=
+n class=3D"gmail-pun" style=3D"margin:0px;padding:0px;border:0px;color:rgb(=
+48,51,54)">)</span><span class=3D"gmail-pln" style=3D"margin:0px;padding:0p=
+x;border:0px;color:rgb(48,51,54)"> url</span><span class=3D"gmail-pun" styl=
+e=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">.</span><span c=
+lass=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,=
+51,54)">openConnection</span><span class=3D"gmail-pun" style=3D"margin:0px;=
+padding:0px;border:0px;color:rgb(48,51,54)">();</span><span class=3D"gmail-=
+pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">
+
+        </span><span class=3D"gmail-com" style=3D"margin:0px;padding:0px;bo=
+rder:0px;color:rgb(133,140,147)">// Host name verification off</span><span =
+class=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48=
+,51,54)">
+            connection</span><span class=3D"gmail-pun" style=3D"margin:0px;=
+padding:0px;border:0px;color:rgb(48,51,54)">.</span><span class=3D"gmail-pl=
+n" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">setHostn=
+ameVerifier</span><span class=3D"gmail-pun" style=3D"margin:0px;padding:0px=
+;border:0px;color:rgb(48,51,54)">(</span><span class=3D"gmail-kwd" style=3D=
+"margin:0px;padding:0px;border:0px;color:rgb(16,16,148)">new</span><span cl=
+ass=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,5=
+1,54)"> </span><span class=3D"gmail-typ" style=3D"margin:0px;padding:0px;bo=
+rder:0px;color:rgb(43,145,175)">HostnameVerifier</span><span class=3D"gmail=
+-pun" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">()</s=
+pan><span class=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;co=
+lor:rgb(48,51,54)"> =20
+            </span><span class=3D"gmail-pun" style=3D"margin:0px;padding:0p=
+x;border:0px;color:rgb(48,51,54)">{</span><span class=3D"gmail-pln" style=
+=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">       =20
+                </span><span class=3D"gmail-kwd" style=3D"margin:0px;paddin=
+g:0px;border:0px;color:rgb(16,16,148)">public</span><span class=3D"gmail-pl=
+n" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> </span>=
+<span class=3D"gmail-kwd" style=3D"margin:0px;padding:0px;border:0px;color:=
+rgb(16,16,148)">boolean</span><span class=3D"gmail-pln" style=3D"margin:0px=
+;padding:0px;border:0px;color:rgb(48,51,54)"> verify</span><span class=3D"g=
+mail-pun" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">(=
+</span><span class=3D"gmail-typ" style=3D"margin:0px;padding:0px;border:0px=
+;color:rgb(43,145,175)">String</span><span class=3D"gmail-pln" style=3D"mar=
+gin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> hostname</span><span c=
+lass=3D"gmail-pun" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,=
+51,54)">,</span><span class=3D"gmail-pln" style=3D"margin:0px;padding:0px;b=
+order:0px;color:rgb(48,51,54)"> </span><span class=3D"gmail-typ" style=3D"m=
+argin:0px;padding:0px;border:0px;color:rgb(43,145,175)">SSLSession</span><s=
+pan class=3D"gmail-pln" style=3D"margin:0px;padding:0px;border:0px;color:rg=
+b(48,51,54)"> session</span><span class=3D"gmail-pun" style=3D"margin:0px;p=
+adding:0px;border:0px;color:rgb(48,51,54)">)</span><span class=3D"gmail-pln=
+" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> =20
+                </span><span class=3D"gmail-pun" style=3D"margin:0px;paddin=
+g:0px;border:0px;color:rgb(48,51,54)">{</span><span class=3D"gmail-pln" sty=
+le=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> =20
+                    </span><span class=3D"gmail-kwd" style=3D"margin:0px;pa=
+dding:0px;border:0px;color:rgb(16,16,148)">return</span><span class=3D"gmai=
+l-pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> </s=
+pan><span class=3D"gmail-kwd" style=3D"margin:0px;padding:0px;border:0px;co=
+lor:rgb(16,16,148)">true</span><span class=3D"gmail-pun" style=3D"margin:0p=
+x;padding:0px;border:0px;color:rgb(48,51,54)">;</span><span class=3D"gmail-=
+pln" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> =20
+                </span><span class=3D"gmail-pun" style=3D"margin:0px;paddin=
+g:0px;border:0px;color:rgb(48,51,54)">}</span><span class=3D"gmail-pln" sty=
+le=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)"> =20
+            </span><span class=3D"gmail-pun" style=3D"margin:0px;padding:0p=
+x;border:0px;color:rgb(48,51,54)">});</span><span class=3D"gmail-pln" style=
+=3D"margin:0px;padding:0px;border:0px;color:rgb(48,51,54)">  </span><span c=
+lass=3D"gmail-pun" style=3D"margin:0px;padding:0px;border:0px;color:rgb(48,=
+51,54)">`</span></code></pre><pre class=3D"gmail-lang-java gmail-prettyprin=
+t gmail-prettyprinted" style=3D"margin-top:0px;margin-bottom:1em;padding:5p=
+x;border:0px;font-size:13px;width:auto;max-height:600px;overflow:auto;font-=
+family:consolas,menlo,monaco,&quot;lucida console&quot;,&quot;liberation mo=
+no&quot;,&quot;dejavu sans mono&quot;,&quot;bitstream vera sans mono&quot;,=
+&quot;courier new&quot;,monospace,sans-serif;background-color:rgb(239,240,2=
+41);color:rgb(57,51,24);word-wrap:normal"><code style=3D"margin:0px;padding=
+:0px;border:0px;font-family:consolas,menlo,monaco,&quot;lucida console&quot=
+;,&quot;liberation mono&quot;,&quot;dejavu sans mono&quot;,&quot;bitstream =
+vera sans mono&quot;,&quot;courier new&quot;,monospace,sans-serif;white-spa=
+ce:inherit"><span class=3D"gmail-pun" style=3D"margin:0px;padding:0px;borde=
+r:0px;color:rgb(48,51,54)"><br></span></code></pre></div><div class=3D"gmai=
+l_extra"><br><div class=3D"gmail_quote">On Fri, Feb 17, 2017 at 5:46 PM, Di=
+gvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.=
+com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><b=
+lockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px =
+#ccc solid;padding-left:1ex"><div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0=
+);font-family:menlo;font-size:9pt"><span style=3D"color:rgb(128,128,128);fo=
+nt-style:italic">/*<br></span><span style=3D"color:rgb(128,128,128);font-st=
+yle:italic"> *  Copyright 2012 Unicommerce Technologies (P) Limited . All R=
+ights Reserved.<br></span><span style=3D"color:rgb(128,128,128);font-style:=
+italic"> *  UNICOMMERCE TECHONOLOGIES PROPRIETARY/CONFIDENTIAL. Use is subj=
+ect to license terms.<br></span><span style=3D"color:rgb(128,128,128);font-=
+style:italic"> *  <br></span><span style=3D"color:rgb(128,128,128);font-sty=
+le:italic"> *  @version     1.0, Jan 18, 2012<br></span><span style=3D"colo=
+r:rgb(128,128,128);font-style:italic"> *  @author singla<br></span><span st=
+yle=3D"color:rgb(128,128,128);font-style:italic"> */<br></span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold">package </span>com.unifier.core.tr=
+ansport.<wbr>http;<br><br><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">import </span>java.io.IOException;<br><span style=3D"color:rgb(0,0,128);=
+font-weight:bold">import </span>java.net.InetAddress;<br><span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">import </span>java.security.cert.<wbr>X50=
+9Certificate;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import=
+ </span>java.util.ArrayList;<br><span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">import </span>java.util.List;<br><span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">import </span>java.util.Map;<br><span style=3D"color:rgb=
+(0,0,128);font-weight:bold">import </span>java.util.concurrent.<wbr>Concurr=
+entHashMap;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import <=
+/span>java.util.concurrent.TimeUnit;<br><span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">import </span>javax.net.ssl.SNIHostName;<br><span style=3D=
+"color:rgb(0,0,128);font-weight:bold">import </span>javax.net.ssl.SNIServer=
+Name;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </span>=
+javax.net.ssl.<wbr>SSLHandshakeException;<br><span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">import </span>javax.net.ssl.SSLParameters;<br><span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">import </span>javax.net.ssl.SS=
+LSocket;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </sp=
+an>org.apache.http.<wbr>HttpEntityEnclosingRequest;<br><span style=3D"color=
+:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.HttpRequest;<=
+br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </span>org.ap=
+ache.http.HttpVersion;<br><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">import </span>org.apache.http.<wbr>NoHttpResponseException;<br><span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.cl=
+ient.<wbr>HttpClient;<br><span style=3D"color:rgb(0,0,128);font-weight:bold=
+">import </span>org.apache.http.client.<wbr>HttpRequestRetryHandler;<br><sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">import </span>org.apache.h=
+ttp.client.params.<wbr>ClientPNames;<br><span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">import </span>org.apache.http.conn.params.<wbr>ConnRoutePa=
+rams;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </span>=
+org.apache.http.conn.scheme.<wbr>PlainSocketFactory;<br><span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.conn.scheme.=
+<wbr>Scheme;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import =
+</span>org.apache.http.conn.scheme.<wbr>SchemeRegistry;<br><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.conn.ssl.=
+<wbr>SSLSocketFactory;<br><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">import </span>org.apache.http.conn.ssl.<wbr>TrustStrategy;<br><span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.imp=
+l.client.<wbr>DecompressingHttpClient;<br><span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">import </span>org.apache.http.impl.client.<wbr>DefaultHt=
+tpClient;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </s=
+pan>org.apache.http.impl.client.<wbr>LaxRedirectStrategy;<br><span style=3D=
+"color:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.impl.co=
+nn.<wbr>PoolingClientConnectionManager<wbr>;<br><span style=3D"color:rgb(0,=
+0,128);font-weight:bold">import </span>org.apache.http.params.<wbr>BasicHtt=
+pParams;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </sp=
+an>org.apache.http.params.<wbr>HttpConnectionParams;<br><span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.params.<wbr>=
+HttpParams;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import <=
+/span>org.apache.http.params.<wbr>HttpProtocolParams;<br><span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">import </span>org.apache.http.protocol.<w=
+br>ExecutionContext;<br><span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>import </span>org.apache.http.protocol.<wbr>HttpContext;<br><br><span styl=
+e=3D"color:rgb(128,128,128);font-style:italic">/**<br></span><span style=3D=
+"color:rgb(128,128,128);font-style:italic"> * </span><span style=3D"color:r=
+gb(128,128,128);font-weight:bold;font-style:italic">@author </span><span st=
+yle=3D"color:rgb(128,128,128);font-style:italic">singla<br></span><span sty=
+le=3D"color:rgb(128,128,128);font-style:italic"> */<br></span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public class </span>HttpClientFact=
+ory {<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private st=
+atic final int                     </span><span style=3D"color:rgb(102,14,1=
+22);font-weight:bold;font-style:italic">DEFAULT_REQUEST_TIMEOUT </span>=3D =
+<span style=3D"color:rgb(0,0,255)">60 </span>* <span style=3D"color:rgb(0,0=
+,255)">1000</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">private static final </span>Map&lt;String, HttpClient&gt; <span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">httpClientCac=
+he         </span>=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">n=
+ew </span>ConcurrentHashMap&lt;&gt;();<br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">private static </span>IHttpClientNameDecorator      =
+<span style=3D"color:rgb(102,14,122);font-style:italic">httpClientNameDecor=
+ator</span>;<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>public static void </span>setHttpClientNameDecorator(<wbr>IHttpClientNameD=
+ecorator httpClientNameDecorator) {<br>        HttpClientFactory.<span styl=
+e=3D"color:rgb(102,14,122);font-style:italic">httpClientNa<wbr>meDecorator =
+</span>=3D httpClientNameDecorator;<br>    }<br><br>    <span style=3D"colo=
+r:rgb(128,128,128);font-style:italic">/**<br></span><span style=3D"color:rg=
+b(128,128,128);font-style:italic">     * </span><span style=3D"color:rgb(12=
+8,128,128);font-weight:bold;font-style:italic">@param </span><span style=3D=
+"color:rgb(61,61,61);font-weight:bold;font-style:italic">name<br></span><sp=
+an style=3D"color:rgb(61,61,61);font-weight:bold;font-style:italic">     </=
+span><span style=3D"color:rgb(128,128,128);font-style:italic">* </span><spa=
+n style=3D"color:rgb(128,128,128);font-weight:bold;font-style:italic">@retu=
+rn </span><span style=3D"color:rgb(128,128,128);font-style:italic">the cach=
+ed http client instance for the given name<br></span><span style=3D"color:r=
+gb(128,128,128);font-style:italic">     */<br></span><span style=3D"color:r=
+gb(128,128,128);font-style:italic">    </span><span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public static </span>HttpClient getCachedHttpClient(=
+String name, <span style=3D"color:rgb(0,0,128);font-weight:bold">boolean </=
+span>trustAll) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">if </span>(HttpClientFactory.<span style=3D"color:rgb(102,14,122);font=
+-style:italic">httpClientN<wbr>ameDecorator </span>!=3D <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">null</span>) {<br>            name =3D Htt=
+pClientFactory.<span style=3D"color:rgb(102,14,122);font-style:italic">http=
+ClientNa<wbr>meDecorator</span>.decorate(name);<br>        }<br><br>       =
+ HttpClient httpClient =3D <span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">httpClientCache</span>.get(name);<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(httpClient =3D=3D=
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {<br>    =
+        <span style=3D"color:rgb(0,0,128);font-weight:bold">synchronized </=
+span>(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">httpClientCache</span>) {<br>                httpClient =3D <span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">httpClientCac=
+he</span>.get(name);<br>                <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">if </span>(httpClient =3D=3D <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">null</span>) {<br>                    httpClient =3D=
+ <span style=3D"font-style:italic">buildHttpClient</span>(trustAll);<br>   =
+                 <span style=3D"color:rgb(102,14,122);font-weight:bold;font=
+-style:italic">httpClientCache</span>.put(name, httpClient);<br>           =
+     }<br>            }<br>        }<br>        <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">return </span>httpClient;<br>    }<br><br>    <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">private static </span>HttpC=
+lient buildHttpClient(InetAddress localAddress, <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">boolean </span>trustAll) {<br>        HttpParams p=
+arams =3D <span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>Ba=
+sicHttpParams();<br>        HttpConnectionParams.<span style=3D"font-style:=
+italic">setSoTime<wbr>out</span>(params, <span style=3D"color:rgb(102,14,12=
+2);font-weight:bold;font-style:italic">DEFAULT_REQUEST_TIMEOUT</span>);<br>=
+        ConnRouteParams.<span style=3D"font-style:italic">setLocalAddres<wb=
+r>s</span>(params, localAddress);<br>        HttpProtocolParams.<span style=
+=3D"font-style:italic">setVersion</span>(<wbr>params, HttpVersion.<span sty=
+le=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">HTTP_1_1</s=
+pan>);<br>        params.getParameter(<wbr>ClientPNames.<span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold;font-style:italic">COOKIE_POLICY</span>)=
+;<br>        params.setBooleanParameter(<wbr>ClientPNames.<span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">ALLOW_CIRCULAR_<wbr=
+>REDIRECTS</span>,<span style=3D"color:rgb(0,0,128);font-weight:bold">true<=
+/span>);<br>        params.setIntParameter(<wbr>ClientPNames.<span style=3D=
+"color:rgb(102,14,122);font-weight:bold;font-style:italic">MAX_REDIRECTS</s=
+pan>,<span style=3D"color:rgb(0,0,255)">100</span><wbr>);<br>        Scheme=
+Registry schemeRegistry =3D <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">new </span>SchemeRegistry();<br>        schemeRegistry.register(<span =
+style=3D"color:rgb(0,0,128);font-weight:bold">new </span>Scheme(<span style=
+=3D"color:rgb(0,128,0);font-weight:bold">&quot;http&quot;</span>, <span sty=
+le=3D"color:rgb(0,0,255)">80</span>, PlainSocketFactory.<span style=3D"font=
+-style:italic">getSocketFa<wbr>ctory</span>()));<br>        SSLSocketFactor=
+y socketFactory;<br>        <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">if </span>(trustAll) {<br>            <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">try </span>{<br>                socketFactory =3D <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">new </span>SSLSocketFactory(=
+<span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>TrustStrateg=
+y() {<br>                    <span style=3D"color:rgb(128,128,0)">@Override=
+<br></span><span style=3D"color:rgb(128,128,0)">                    </span>=
+<span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>i=
+sTrusted(<span style=3D"color:rgb(0,0,128);font-weight:bold">final </span>X=
+509Certificate[] chain, String authType) {<br>                        <span=
+ style=3D"color:rgb(128,128,128);font-style:italic">// Oh, I am easy...<br>=
+</span><span style=3D"color:rgb(128,128,128);font-style:italic">           =
+             </span><span style=3D"color:rgb(0,0,128);font-weight:bold">ret=
+urn true</span>;<br>                    }<br><br>                }, SSLSock=
+etFactory.<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:=
+italic">ALLOW_ALL_<wbr>HOSTNAME_VERIFIER</span>);<br>            } <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">catch </span>(Exception e) {<br=
+>                socketFactory =3D SSLSocketFactory.<span style=3D"font-sty=
+le:italic">getSocketFact<wbr>ory</span>();<br>            }<br>        } <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">else </span>{<br>        =
+    socketFactory =3D SSLSocketFactory.<span style=3D"font-style:italic">ge=
+tSocketFact<wbr>ory</span>();<br>        }<br>        schemeRegistry.regist=
+er(<span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>Scheme(<s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold">&quot;https&quot;</span>,=
+ <span style=3D"color:rgb(0,0,255)">443</span>, socketFactory));<br><br>   =
+     SSLSocket sslSocket =3D <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">null</span>;<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">try </span>{<br>            sslSocket =3D (SSLSocket) socketFactory.=
+createSocket();<br>        } <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">catch </span>(IOException e) {<br>            e.printStackTrace();<br=
+>        }<br>        <span style=3D"color:rgb(128,128,128);font-style:ital=
+ic">// SSLEngine sslEngine =3D sslContext.createSSLEngine(&quot;<wbr>172.16=
+.10.6&quot;, 443);<br></span><span style=3D"color:rgb(128,128,128);font-sty=
+le:italic"><br></span><span style=3D"color:rgb(128,128,128);font-style:ital=
+ic">        </span>SNIHostName serverName =3D <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">new </span>SNIHostName(<span style=3D"color:rgb(0,12=
+8,0);font-weight:bold">&quot;<a href=3D"http://www.singlekart.com" target=
+=3D"_blank">www.singlekart.<wbr>com</a>&quot;</span>);<br>        List&lt;S=
+NIServerName&gt; serverNames =3D <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">new </span>ArrayList&lt;&gt;(<span style=3D"color:rgb(0,0,255)">1=
+</span>);<br>        serverNames.add(serverName);<br>        SSLParameters =
+sslParams =3D sslSocket.getSSLParameters();<br>        sslParams.setServerN=
+ames(<wbr>serverNames);<br>        sslSocket.setSSLParameters(<wbr>sslParam=
+s);<br>        <span style=3D"color:rgb(128,128,128);font-style:italic">// =
+sslEngine.setSSLParameters(<wbr>params);<br></span><span style=3D"color:rgb=
+(128,128,128);font-style:italic"><br></span><span style=3D"color:rgb(128,12=
+8,128);font-style:italic"><br></span><span style=3D"color:rgb(128,128,128);=
+font-style:italic">        </span>PoolingClientConnectionManager cm =3D <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">new </span>PoolingClientCo=
+nnectionManager<wbr>(schemeRegistry, <span style=3D"color:rgb(0,0,255)">5 <=
+/span>, TimeUnit.<span style=3D"color:rgb(102,14,122);font-weight:bold;font=
+-style:italic">MINUTES</span>);<br>        cm.setDefaultMaxPerRoute(<span s=
+tyle=3D"color:rgb(0,0,255)">20</span>);<br>        cm.setMaxTotal(<span sty=
+le=3D"color:rgb(0,0,255)">100</span>);<br>        DefaultHttpClient client =
+=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>DefaultH=
+ttpClient(cm, params);<br>        HttpRequestRetryHandler retryHandler =3D =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>HttpRequestR=
+etryHandler() {<br>            <span style=3D"color:rgb(128,128,0)">@Overri=
+de<br></span><span style=3D"color:rgb(128,128,0)">            </span><span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>retryRe=
+quest(IOException exception, <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">int </span>executionCount, HttpContext context) {<br>                =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(executionCou=
+nt &gt;=3D <span style=3D"color:rgb(0,0,255)">2</span>) {<br>              =
+      <span style=3D"color:rgb(128,128,128);font-style:italic">// Do not re=
+try if over max retry count<br></span><span style=3D"color:rgb(128,128,128)=
+;font-style:italic">                    </span><span style=3D"color:rgb(0,0=
+,128);font-weight:bold">return false</span>;<br>                }<br>      =
+          <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(ex=
+ception <span style=3D"color:rgb(0,0,128);font-weight:bold">instanceof </sp=
+an>NoHttpResponseException) {<br>                    <span style=3D"color:r=
+gb(128,128,128);font-style:italic">// Retry if the server dropped connectio=
+n on us<br></span><span style=3D"color:rgb(128,128,128);font-style:italic">=
+                    </span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">return true</span>;<br>                }<br>                <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">if </span>(exception <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">instanceof </span>SSLHandshakeExce=
+ption) {<br>                    <span style=3D"color:rgb(128,128,128);font-=
+style:italic">// Do not retry on SSL handshake exception<br></span><span st=
+yle=3D"color:rgb(128,128,128);font-style:italic">                    </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">return false</span>;<b=
+r>                }<br>                HttpRequest request =3D (HttpRequest=
+) context.getAttribute(<wbr>ExecutionContext.<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold;font-style:italic">HTTP_REQUEST</span>)<wbr>;<br>  =
+              <span style=3D"color:rgb(0,0,128);font-weight:bold">boolean <=
+/span>idempotent =3D !(request <span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold">instanceof </span>HttpEntityEnclosingRequest);<br>                <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(idempotent) {=
+<br>                    <span style=3D"color:rgb(128,128,128);font-style:it=
+alic">// Retry if the request is considered idempotent<br></span><span styl=
+e=3D"color:rgb(128,128,128);font-style:italic">                    </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">return true</span>;<br> =
+               }<br>                <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">return false</span>;<br>            }<br>        };<br>       =
+ client.<wbr>setHttpRequestRetryHandler(<wbr>retryHandler);<br>        clie=
+nt.setRedirectStrategy(<span style=3D"color:rgb(0,0,128);font-weight:bold">=
+new </span>LaxRedirectStrategy());<br>        <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">return new </span>DecompressingHttpClient(<wbr>clien=
+t);<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>public static </span>HttpClient buildHttpClient(<span style=3D"color:rgb(0=
+,0,128);font-weight:bold">boolean </span>trustAll) {<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D"font-=
+style:italic">buildHttpClient</span>(<span style=3D"color:rgb(0,0,128);font=
+-weight:bold">null</span>, <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">true</span>);<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">public static </span>HttpClient buildHttpClient() {<br>     =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span><span =
+style=3D"font-style:italic">buildHttpClient</span>(<span style=3D"color:rgb=
+(0,0,128);font-weight:bold">null</span>, <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">false</span>);<br>    }<br><br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public static void </span>clearCache() {<br> =
+       <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ita=
+lic">httpClientCache</span>.clear();<br>    }<br><br>    <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">public static void </span>clearCacheEntry=
+(String name) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">if </span>(HttpClientFactory.<span style=3D"color:rgb(102,14,122);font-=
+style:italic">httpClientN<wbr>ameDecorator </span>!=3D <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">null</span>) {<br>            name =3D Http=
+ClientFactory.<span style=3D"color:rgb(102,14,122);font-style:italic">httpC=
+lientNa<wbr>meDecorator</span>.decorate(name);<br>        }<br>        <spa=
+n style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">httpCl=
+ientCache</span>.remove(name);<br>    }<br><br>}<br></pre></div><div class=
+=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"=
+gmail_quote">On Fri, Feb 17, 2017 at 5:41 PM, Digvijay Sharma <span dir=3D"=
+ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digv=
+ijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+"><div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-si=
+ze:9pt"><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public =
+static void </span>main(String[] args) <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">throws </span>HttpTransportException, IOException, Interrup=
+tedException {<br><span style=3D"color:rgb(128,128,128);font-style:italic">=
+//        System.out.println(new BigDecimal(&quot;0.00&quot;));<br></span><=
+span style=3D"color:rgb(128,128,128);font-style:italic"><br></span><span st=
+yle=3D"color:rgb(128,128,128);font-style:italic">//        Process p =3D Ru=
+ntime.getRuntime().exec(&quot;/bi<wbr>n/bash -c wget --quiet   --output-doc=
+ument   - &#39;<a href=3D"https://www.singlekart.com/wp-json/wc/v1/products=
+?consumer_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&amp;consumer_se=
+cret=3Dcc9ec0eeb500af6b34bcec948ac6ee88396daf4cc&amp;per_page=3D1&amp;page=
+=3D1" target=3D"_blank">https://www.singlekart.com/wp<wbr>-json/wc/v1/produ=
+cts?consumer_<wbr>key=3Dck_ac07ede27ebf2884d9a06da<wbr>da0fb1eb3a6f19810&am=
+p;consumer_<wbr>secret=3Dcc9ec0eeb500af6b34bcec9<wbr>48ac6ee88396daf4cc&amp=
+;per_page=3D1&amp;<wbr>page=3D1</a>&#39;&quot;);<br></span><span style=3D"c=
+olor:rgb(128,128,128);font-style:italic">//        p.waitFor();<br></span><=
+span style=3D"color:rgb(128,128,128);font-style:italic">////        System.=
+out.println(p.getOutput<wbr>Stream());<br></span><span style=3D"color:rgb(1=
+28,128,128);font-style:italic">//        String s =3D null;<br></span><span=
+ style=3D"color:rgb(128,128,128);font-style:italic">//        try {<br></sp=
+an><span style=3D"color:rgb(128,128,128);font-style:italic">//            B=
+ufferedReader br =3D new BufferedReader(<br></span><span style=3D"color:rgb=
+(128,128,128);font-style:italic">//                    new InputStreamReade=
+r(p.getInputSt<wbr>ream()));<br></span><span style=3D"color:rgb(128,128,128=
+);font-style:italic">//            while ((s =3D br.readLine()) !=3D null) =
+{<br></span><span style=3D"color:rgb(128,128,128);font-style:italic">//    =
+            System.out.println(s);<br></span><span style=3D"color:rgb(128,1=
+28,128);font-style:italic">//            }<br></span><span style=3D"color:r=
+gb(128,128,128);font-style:italic">//        } catch (IOException ioe) {<br=
+></span><span style=3D"color:rgb(128,128,128);font-style:italic">//        =
+    ioe.printStackTrace();<br></span><span style=3D"color:rgb(128,128,128);=
+font-style:italic">//        }<br></span><span style=3D"color:rgb(128,128,1=
+28);font-style:italic">//        System.out.println(new HttpSender(true).ex=
+ecuteGet(&quot;<a href=3D"https://www.singlekart.com/wp-json/wc/v1/products=
+?consumer_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&amp;consumer_se=
+cret=3Dcs_c9ec0eeb500af6b34bcec948ac6ee88396daf4cc&amp;per_page=3D1&amp;pag=
+e=3D1" target=3D"_blank">h<wbr>ttps://www.singlekart.com/wp-j<wbr>son/wc/v1=
+/products?consumer_ke<wbr>y=3Dck_ac07ede27ebf2884d9a06dada<wbr>0fb1eb3a6f19=
+810&amp;consumer_<wbr>secret=3Dcs_c9ec0eeb500af6b34bce<wbr>c948ac6ee88396da=
+f4cc&amp;per_page=3D<wbr>1&amp;page=3D1</a>&quot;,null));<br></span><span s=
+tyle=3D"color:rgb(128,128,128);font-style:italic">        </span>System.<sp=
+an style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">out</=
+span>.println(<span style=3D"color:rgb(0,0,128);font-weight:bold">new </spa=
+n>HttpSender(<span style=3D"color:rgb(0,0,128);font-weight:bold">true</span=
+>).executeGet(<span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a =
+href=3D"http://www.singlekart.com" target=3D"_blank">h<wbr>ttp://www.single=
+kart.com</a>&quot;</span>,<span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">null</span><wbr>));<br><br><br><span style=3D"color:rgb(128,128,128);fon=
+t-style:italic">//        System.out.println(dateToStrin<wbr>g(addToDate(ge=
+tCurrentDate(), Calendar.DATE, -30),&quot;yyyy-MM-ddTmm:HH:ssZ&quot;));<br>=
+</span><span style=3D"color:rgb(128,128,128);font-style:italic">    </span>=
+}</pre></div><div class=3D"m_-3248316446523487353HOEnZb"><div class=3D"m_-3=
+248316446523487353h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_qu=
+ote">On Fri, Feb 17, 2017 at 5:39 PM, Digvijay Sharma <span dir=3D"ltr">&lt=
+;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@uni=
+commerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div d=
+ir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"m_-3248316446523487353m_-5391729674530597366m_-9200278520830816=
+835gmail-p1"><span class=3D"m_-3248316446523487353m_-5391729674530597366m_-=
+9200278520830816835gmail-s1">sudo keytool -import -alias alias -keystore=C2=
+=A0 /Library/Java/JavaVirtualMachi<wbr>nes/jdk1.8.0_112.jdk/Contents/<wbr>H=
+ome/jre/lib/security/cacerts -file ~/Downloads/u1.cer</span></p><p class=3D=
+"m_-3248316446523487353m_-5391729674530597366m_-9200278520830816835gmail-p1=
+"><span class=3D"m_-3248316446523487353m_-5391729674530597366m_-92002785208=
+30816835gmail-s1"><br></span></p><p class=3D"m_-3248316446523487353m_-53917=
+29674530597366m_-9200278520830816835gmail-p1"><span class=3D"m_-32483164465=
+23487353m_-5391729674530597366m_-9200278520830816835gmail-s1"><br></span></=
+p></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a11c124228e57110548b9119e--

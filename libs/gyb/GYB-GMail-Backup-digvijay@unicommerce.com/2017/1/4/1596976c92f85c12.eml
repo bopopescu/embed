@@ -1,0 +1,100 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Wed, 4 Jan 2017 04:31:49 -0800 (PST)
+In-Reply-To: <CAJF3soo2N4WrekCYmAT5Ovu9MoGmpji5CHMPKvEtS7RXTL+TmA@mail.gmail.com>
+References: <CAJF3sor34AU+2ONPWaXiD2reZhggQ5nR8w=FjzTzaxrBwAprPw@mail.gmail.com>
+	<CA+zaFGig10ZEZPi_s=raPNxOK3k9vAvwaMJj=Z3zqdYVs8mhcQ@mail.gmail.com>
+	<CAJF3soq+=ne3JVCcqFiT2d2uqW8ST7rhXdXaO_VB8jeWfxMzew@mail.gmail.com>
+	<CAJF3soo2N4WrekCYmAT5Ovu9MoGmpji5CHMPKvEtS7RXTL+TmA@mail.gmail.com>
+Date: Wed, 4 Jan 2017 18:01:49 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorZbEULzTyqiQ1HuC9Jw8nqDCjviZ1K5Akh0pjw_FbMFw@mail.gmail.com>
+Subject: Re: Permission for wormhole changes to go to prod
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1139545a02ff34054543f8db
+
+--001a1139545a02ff34054543f8db
+Content-Type: text/plain; charset=UTF-8
+
+Sir wormhole aur uniware build ho gaye?
+
+On Thu, Dec 29, 2016 at 10:44 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> And for changing the build config and scripts to fetch from bitbucket
+> repos.
+>
+> On Thu, Dec 29, 2016 at 10:43 PM, Digvijay Sharma <
+> digvijay@unicommerce.com> wrote:
+>
+>> Okay. But I dont have prod build access or anything. So could u build
+>> uniware first to include that openForInactiveTenants change?
+>> And wormhole afterwards. I will also write a mail to puneet sir for the
+>> DB Queries for activate tenant and editable flags and for setting java 8
+>> and tomcat 8.0.15 on wormhole.
+>>
+>> On Thu, Dec 29, 2016 at 10:14 PM, Sunny Agarwal <sunny@unicommerce.com>
+>> wrote:
+>>
+>>> Yes, please do
+>>>
+>>> On Thu, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <
+>>> digvijay@unicommerce.com> wrote:
+>>>
+>>>> Sir the changes i made, i have tested them all on staging. So should i
+>>>> move these changes to prod?
+>>>> The changes were :
+>>>> 1. reload config one/all
+>>>> 2. script edit enterprise scripts editable flag
+>>>> 3. Activate Tenant Service
+>>>> 4. wormhole to java 8
+>>>>
+>>>
+>>>
+>>
+>
+
+--001a1139545a02ff34054543f8db
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Sir wormhole aur uniware build ho gaye?</div><div class=3D=
+"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Dec 29, 2016 at 10:44 =
+PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicom=
+merce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:=
+<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-lef=
+t:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">And for changing the bu=
+ild config and scripts to fetch from bitbucket repos.</div><div class=3D"HO=
+EnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_=
+quote">On Thu, Dec 29, 2016 at 10:43 PM, Digvijay Sharma <span dir=3D"ltr">=
+&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@=
+unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" =
+style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><di=
+v dir=3D"ltr">Okay. But I dont have prod build access or anything. So could=
+ u build uniware first to include that openForInactiveTenants change?<div>A=
+nd wormhole afterwards. I will also write a mail to puneet sir for the DB Q=
+ueries for activate tenant and editable flags and for setting java 8 and to=
+mcat 8.0.15 on wormhole.=C2=A0</div></div><div class=3D"m_-1449599009948964=
+911HOEnZb"><div class=3D"m_-1449599009948964911h5"><div class=3D"gmail_extr=
+a"><br><div class=3D"gmail_quote">On Thu, Dec 29, 2016 at 10:14 PM, Sunny A=
+garwal <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" targe=
+t=3D"_blank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex"><div dir=3D"ltr">Yes, please do</div><div class=3D"m_-14495=
+99009948964911m_1836278144409359660HOEnZb"><div class=3D"m_-144959900994896=
+4911m_1836278144409359660h5"><div class=3D"gmail_extra"><br><div class=3D"g=
+mail_quote">On Thu, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <span dir=3D"l=
+tr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvi=
+jay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"=
+><div dir=3D"ltr">Sir the changes i made, i have tested them all on staging=
+. So should i move these changes to prod?=C2=A0<div>The changes were :</div=
+><div>1. reload config one/all</div><div>2. script edit enterprise scripts =
+editable flag</div><div>3. Activate Tenant Service</div><div>4. wormhole to=
+ java 8</div></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a1139545a02ff34054543f8db--

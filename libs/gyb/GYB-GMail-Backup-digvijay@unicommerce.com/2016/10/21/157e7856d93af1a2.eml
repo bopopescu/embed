@@ -1,0 +1,96 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp1753240qgj;
+        Fri, 21 Oct 2016 06:54:23 -0700 (PDT)
+X-Received: by 10.99.123.18 with SMTP id w18mr1498474pgc.155.1477058063649;
+        Fri, 21 Oct 2016 06:54:23 -0700 (PDT)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id r195si2819512pgr.210.2016.10.21.06.54.23
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 Oct 2016 06:54:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id u9LDsMVx022735;
+	Fri, 21 Oct 2016 19:24:22 +0530
+Date: Fri, 21 Oct 2016 19:24:22 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <84110687.55.1477058062211.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1701669032.54.1477057249133.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1701669032.54.1477057249133.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UnicommerceWormholeTest #41
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Jenkins-Job: UnicommerceWormholeTest
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/41/>
+
+------------------------------------------
+Started by user akshaya
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniwaretroubleshoot.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniwaretroubleshoot.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git -c core.askpass=true fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniwaretroubleshoot.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision bb74ef6508d3db21d2308c455088d121ce130aae (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f bb74ef6508d3db21d2308c455088d121ce130aae
+ > git rev-list bb74ef6508d3db21d2308c455088d121ce130aae # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3760 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UnicommerceWormholeTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f UniwareNotifications/pom.xml clean package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniTroubleshoot 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniTroubleshoot ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniTroubleshoot ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniTroubleshoot ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniTroubleshoot ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 193 source files to <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/target/classes>
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/src/main/java/com/uniware/services/release/impl/ReleaseUpdateServiceImpl.java>:[51,48] cannot find symbol
+  symbol:   variable RELEASE_UPDATE_ALREADY_PRESENT
+  location: class com.uniware.core.api.validation.WsResponseCode
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.620 s
+[INFO] Finished at: 2016-10-21T19:24:21+05:30
+[INFO] Final Memory: 33M/177M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniTroubleshoot: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/src/main/java/com/uniware/services/release/impl/ReleaseUpdateServiceImpl.java>:[51,48] cannot find symbol
+[ERROR] symbol:   variable RELEASE_UPDATE_ALREADY_PRESENT
+[ERROR] location: class com.uniware.core.api.validation.WsResponseCode
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure

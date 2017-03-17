@@ -1,0 +1,95 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1063789qgd;
+        Mon, 19 Dec 2016 03:30:53 -0800 (PST)
+X-Received: by 10.98.76.8 with SMTP id z8mr14378420pfa.167.1482147053514;
+        Mon, 19 Dec 2016 03:30:53 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id 3si18084706plx.43.2016.12.19.03.30.52
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 19 Dec 2016 03:30:53 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uBJBUpYj027552;
+	Mon, 19 Dec 2016 17:00:51 +0530
+Date: Mon, 19 Dec 2016 17:00:51 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1184627233.118.1482147051955.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <557744104.117.1482146924404.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <557744104.117.1482146924404.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UnicommerceWormholeTest #57
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UnicommerceWormholeTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/57/------------------------------------------
+Started by user digvijay
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@git.unicommerce.com:uniwaretroubleshoot.git # timeout=10
+Fetching upstream changes from git@git.unicommerce.com:uniwaretroubleshoot.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@git.unicommerce.com:uniwaretroubleshoot.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision b0eac95697fb16cfd7e8ea5b618945780118db05 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b0eac95697fb16cfd7e8ea5b618945780118db05
+ > git rev-list b0eac95697fb16cfd7e8ea5b618945780118db05 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #4007 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UnicommerceWormholeTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f UniwareNotifications/pom.xml clean package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniTroubleshoot 2.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniTroubleshoot ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniTroubleshoot ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniTroubleshoot ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniTroubleshoot ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 222 source files to <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/target/classes>
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/src/main/java/com/uniware/services/tenant/impl/TenantServiceImpl.java>:[427,69] cannot find symbol
+  symbol:   method getTenantProfilesByCode(java.lang.String)
+  location: variable tenantProfileService of type com.unifier.services.tenantprofile.service.ITenantProfileService
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.289 s
+[INFO] Finished at: 2016-12-19T11:30:51+00:00
+[INFO] Final Memory: 28M/256M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniTroubleshoot: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws/UniwareNotifications/src/main/java/com/uniware/services/tenant/impl/TenantServiceImpl.java>:[427,69] cannot find symbol
+[ERROR] symbol:   method getTenantProfilesByCode(java.lang.String)
+[ERROR] location: variable tenantProfileService of type com.unifier.services.tenantprofile.service.ITenantProfileService
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure

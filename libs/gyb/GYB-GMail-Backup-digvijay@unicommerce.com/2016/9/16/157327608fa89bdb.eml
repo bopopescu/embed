@@ -1,0 +1,104 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.51.147 with SMTP id k141csp359392itk;
+        Fri, 16 Sep 2016 03:06:19 -0700 (PDT)
+X-Received: by 10.13.211.195 with SMTP id v186mr14036395ywd.319.1474020379060;
+        Fri, 16 Sep 2016 03:06:19 -0700 (PDT)
+Return-Path: <tech+bncBCY6PLPHVEHBBGUI567AKGQEXERGMQY@unicommerce.com>
+Received: from mail-yw0-x245.google.com (mail-yw0-x245.google.com. [2607:f8b0:4002:c05::245])
+        by mx.google.com with ESMTPS id g66si4668658ywd.484.2016.09.16.03.06.18
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Sep 2016 03:06:19 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbgui567akgqexergmqy@unicommerce.com) client-ip=2607:f8b0:4002:c05::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbgui567akgqexergmqy@unicommerce.com) smtp.mailfrom=tech+bncBCY6PLPHVEHBBGUI567AKGQEXERGMQY@unicommerce.com
+Received: by mail-yw0-x245.google.com with SMTP id t67sf160631439ywg.3
+        for <digvijay@unicommerce.com>; Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=s63AZhDUJsbBye/u43472xrDDtMi4GKD/U35l62K23k=;
+        b=jWiaDwVzgLrgc8agar1bifc7p06iIC8d2f03DdFPG49zyzWFjLu9cxdIgHAUGX8zvi
+         xbObqOiNG/+BkD2R3J3Fbk8mRTS3wObH4iQNY0G4bKbhCjSdjbyzXCkNugSfO8rVKjbG
+         ug+PwYFmDWMjabaDlP2VS3MbfYRHaLKZw7fNAV5PutdEP6H/kgXolDEULX5TfnkXZX6u
+         Joua9Qbc8TVK5BRofCXt1HAOIy62Bd0jLQdX1livDZ2nyHoAACM95Othxfxl+SK8fzy3
+         rpihLh3c1IwCZmOgf4iej4uuFQINKtQjb3RcuKXO0gGa3x5A4+FqNe08Z7kYRDc+qIbf
+         DqlA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=s63AZhDUJsbBye/u43472xrDDtMi4GKD/U35l62K23k=;
+        b=iDEmlb8M+Jw1+xpzcApDWmtUaIzVaWWtdwjWsGpsT5C3rl+vAu0e1iEgOnW9+/jY4c
+         0Nbim2R8PrhYRz5g9CXSYkBB0A4xWjnDlTdpBGRtwPscHoCJ44V5phw9o1tQa5MD3N5S
+         N7gD0V2cgZUbsXaQXeLMKzHjCzLZfc4W8QdZr0hbqGLTYrlOO0/Oj1463PgrdAhFRnP7
+         QAOenKaq8DjduWvsM0LPg9USHhV84egepGDFjEepjsEHoZPYmUAtdSFcNQFaM+9810tb
+         haMe04K+iYrRuIozCotFK3sc1cyqN/X9fi7/F1A00XBaH4JIx8umofijQT74Nx/mTjW7
+         VuRA==
+X-Gm-Message-State: AE9vXwNq00SNjjfO7He4InI6sbLqgFCIk95dN9g6i3S6mB0AzG2N+Uxa1WgusyzTxg6f1Q==
+X-Received: by 10.129.121.70 with SMTP id u67mr9983892ywc.2.1474020378879;
+        Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.27.100 with SMTP id l91ls5578060otl.14.gmail; Fri, 16 Sep
+ 2016 03:06:18 -0700 (PDT)
+X-Received: by 10.129.104.84 with SMTP id d81mr13151500ywc.119.1474020378700;
+        Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+Received: from mail-yw0-x232.google.com (mail-yw0-x232.google.com. [2607:f8b0:4002:c05::232])
+        by mx.google.com with ESMTPS id f65si4699846ywc.290.2016.09.16.03.06.18
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best guess record for domain of rachit@unicommerce.com) client-ip=2607:f8b0:4002:c05::232;
+Received: by mail-yw0-x232.google.com with SMTP id g192so85309771ywh.1
+        for <tech@unicommerce.com>; Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+X-Received: by 10.129.106.67 with SMTP id f64mr7897367ywc.38.1474020378367;
+ Fri, 16 Sep 2016 03:06:18 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.99.213 with HTTP; Fri, 16 Sep 2016 03:05:58 -0700 (PDT)
+From: Rachit Sachdeva <rachit@unicommerce.com>
+Date: Fri, 16 Sep 2016 15:35:58 +0530
+Message-ID: <CAGz2fOddKa2UBxL+d5vykRy=HAp3cNq1a3zM0hcvXEPGZ9i6wQ@mail.gmail.com>
+Subject: Pictures Abhi Baaki Hain
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	UI Team <ui@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>
+Content-Type: multipart/alternative; boundary=001a1149387e0b83e1053c9d1d7e
+X-Original-Sender: rachit@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best
+ guess record for domain of rachit@unicommerce.com) smtp.mailfrom=rachit@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a1149387e0b83e1053c9d1d7e
+Content-Type: text/plain; charset=UTF-8
+
+https://drive.google.com/open?id=0B4oQ9F7-5AO0ZmZlSmpwSG5lcEk
+
+Regards,
+Rachit Sachdeva
+
+--001a1149387e0b83e1053c9d1d7e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><a href=3D"https://drive.google.com/open?id=3D0B4oQ9F=
+7-5AO0ZmZlSmpwSG5lcEk">https://drive.google.com/open?id=3D0B4oQ9F7-5AO0ZmZl=
+SmpwSG5lcEk</a><br></div><br clear=3D"all"><div><div class=3D"gmail_signatu=
+re"><div dir=3D"ltr"><div>Regards,</div><div>Rachit Sachdeva</div><img src=
+=3D"https://d3kjp0zrek7zit.cloudfront.net/uploads/product/image/4364/large_=
+detail_1409053661.png" width=3D"96" height=3D"54"><br></div></div></div>
+</div>
+
+--001a1149387e0b83e1053c9d1d7e--

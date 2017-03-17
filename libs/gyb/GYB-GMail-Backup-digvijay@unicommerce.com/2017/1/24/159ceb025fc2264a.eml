@@ -1,0 +1,79 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1499652qgu;
+        Mon, 23 Jan 2017 20:16:07 -0800 (PST)
+X-Received: by 10.223.170.79 with SMTP id q15mr29791438wrd.36.1485231367545;
+        Mon, 23 Jan 2017 20:16:07 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x229.google.com (mail-wm0-x229.google.com. [2a00:1450:400c:c09::229])
+        by mx.google.com with ESMTPS id r20si21196925wrc.97.2017.01.23.20.16.07
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Jan 2017 20:16:07 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x229.google.com with SMTP id c206so188821228wme.0
+        for <digvijay@unicommerce.com>; Mon, 23 Jan 2017 20:16:07 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=kuPUs12YhglVqHImgS2dMBZMrWaIOalhHPu6UNjQCIo=;
+        b=grgqyIzt9rwMhonB3zcaE5qwPB5eMXUSvYHdwS7yANGJGR6Emh1F726v96bfrZ2Yal
+         tslkeU8AAhYW/enb5zp3Qy8ty3CYFreIVikm7DlIE5Ub7tnznyre3fXtfnQ0NvNHr3Gd
+         g0S6+bbx21XqpQX/CTNKzmiVC0iqjqCEUnktxwhF8vSG/pCXYa88Pya5r2emw9lmDC7D
+         51ywIaAeOq9INpIRxgwfyL+MfmJdE0WaJjo7PLTayJ/Mg1mSJO77txdhXil11+QuFep8
+         U5KTmBQZ0KeHhw0FkD7q2Rx3a9grEB9IwLGCSTvxitBVtX4peFCJUO5i7PqzfkxP5s2L
+         h1BQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=kuPUs12YhglVqHImgS2dMBZMrWaIOalhHPu6UNjQCIo=;
+        b=k+CC+15C32LzVWX7M/DuBtUxBpFM9kuoY7jwGD4uiT3nFSvS3FIP4sc9Ycbx1L4ucx
+         XxFGxtr64IH4GF7RhVwesRM1Dw9woZD+sbfMKKwcNTeM6Qoc6VTANt9wgIppf5/GZ49g
+         iLrTzQvDRHRWohVSeuPjp38MxOKAavP8l+qYkqrYue29p41AQOftl096oWBpWJUbfwbc
+         qnkoXGTrwnDckl99cZmFL4t+RiLq3m51z6FpLDIFNoCo2Lo/NQ1upJS6Ill8hDMttXh4
+         fepu5H/bBWEeiT7iV5YiMtCNXsbmIMUg9ry7guRv6bERyFqgBnVD7Q5TmsaX9kEIwa9I
+         RkZg==
+X-Gm-Message-State: AIkVDXK9L6UKsr4CaDnFjv6YHu3jZG/xQUyXkaz3zyuyyi6cx/crhw9YhD0kqzvJ3BMqNeYM6jq1pYom/rZDgw==
+X-Received: by 10.28.129.5 with SMTP id c5mr15079621wmd.23.1485231367170; Mon,
+ 23 Jan 2017 20:16:07 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Tue, 24 Jan 2017 04:15:56 +0000
+Message-ID: <CAPe2SZRn+srp_QNYsaxadwx2906p8cHFidrkBzcxQsf3Te0Xzg@mail.gmail.com>
+Subject: Working From Home
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharam <digvijay@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114241520cbfe40546cf6066
+
+--001a114241520cbfe40546cf6066
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+I am in a middle of a family emergency. My brother is severely infected
+with a respiratory infection. Need to be with him for his doctor visits.
+Please ping the issues, if any. I'll try to solve them and continue my
+tasks when I am online.
+
+
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a114241520cbfe40546cf6066
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi,<div>I am in a middle of a family emergency. My brother=
+ is severely infected with a respiratory infection. Need to be with him for=
+ his doctor visits.</div><div>Please ping the issues, if any. I&#39;ll try =
+to solve them and continue my tasks when I am online.</div><div><br></div><=
+div><br></div></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gm=
+ail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Softwar=
+e Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a114241520cbfe40546cf6066--

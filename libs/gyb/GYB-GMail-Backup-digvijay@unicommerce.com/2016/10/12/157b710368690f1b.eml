@@ -1,0 +1,73 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp281509qgj;
+        Tue, 11 Oct 2016 21:04:35 -0700 (PDT)
+X-Received: by 10.107.12.139 with SMTP id 11mr1107629iom.67.1476245075707;
+        Tue, 11 Oct 2016 21:04:35 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-it0-x229.google.com (mail-it0-x229.google.com. [2607:f8b0:4001:c0b::229])
+        by mx.google.com with ESMTPS id m21si4491596iod.140.2016.10.11.21.04.35
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 11 Oct 2016 21:04:35 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4001:c0b::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-it0-x229.google.com with SMTP id k64so23226530itb.0
+        for <digvijay@unicommerce.com>; Tue, 11 Oct 2016 21:04:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=rp0uOEwGuGGc86Ms/2f0WtzrMQF0Z+WpTQdm0s0aRHc=;
+        b=ZvCMiUv8sJnFA5pR4EkDpFN3TbPI7Bq6OwHGlHUxtvdHcUijfpMX/U7gS+0PAVwIpD
+         M1ihlZQnzWnCBjP9QZNTFuk3p4emzqwQ/uUK68hW309JYwDBcy0XjvbDYZ9ow7kVl+8r
+         A1sUJJHW2IX6+3VhMVq2RLKo4dv3VVpY20zWcPJVYKtAaipwUr/jarpFTn/tsHn7CI2s
+         MsIUxI8QXM/n8VflaZrNorwnEK3rFTfoT4BzD0mhttfi5wX54qUyTjAOOjDVUbAG1ynF
+         npZ+bOhLmdsGWvNOx5/HZj9iC7/dRGyeVz2BKAq66tMh9oyZv0icaO/YMBkmUtzLlhmb
+         y52w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=rp0uOEwGuGGc86Ms/2f0WtzrMQF0Z+WpTQdm0s0aRHc=;
+        b=DHUe29735C51RoQH60QIh9xu52JFohsxq05mz5nXwFbIEHoGtdTN64UL+1ZyplKehr
+         D/VyMBPxJPioWjjc1Y1nFQ1OqCGmaWBgayG5T4qj+nUY3bxjqN/UgydSJkHuZNoDjLlp
+         aGLasiDt7X9WT+YPPfOBq9pC6hU5gOLlKEzme81TZyRnKRmtVmAKHCQ4BD3TAr+XBxqt
+         5tFogsyZC6hACuFuID4Pwwahst4owsTHlpi6bHQQmDWzoUJjtXHAWqPoivUPNFW8jMdF
+         7S1lUGcUAL5EuqilDQIlWUNzLMOP+FxnV5+BjN+vPhe+3WcDEGZDA/kUd8OeI3FjG58K
+         x6UA==
+X-Gm-Message-State: AA6/9RlXJIPVyK+XS9Tk+3gMUoYlB9ysGsTRCw4urZkQHQgN+NjYoqLfGk7uR2bYLQ+t2oRNEegumq65F8kZ9A==
+X-Received: by 10.36.196.132 with SMTP id v126mr773485itf.30.1476245075200;
+ Tue, 11 Oct 2016 21:04:35 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.2.21 with HTTP; Tue, 11 Oct 2016 21:04:34 -0700 (PDT)
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Wed, 12 Oct 2016 09:34:34 +0530
+Message-ID: <CA+zaFGhqYPz7O_0PNtHEv5FF1jSn7Q=j7i5LLaxWt9A30EvGhg@mail.gmail.com>
+Subject: File format
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c0587de4f2ad3053ea31715
+
+--94eb2c0587de4f2ad3053ea31715
+Content-Type: text/plain; charset=UTF-8
+
+VERSION,TITLE,URL,RELEASE_DATE,UPDATE1_TITLE,UPDATE1_CONTENT,UPDATE1_URL,UPDATE2_TITLE,UPDATE2_CONTENT,UPDATE2_URL,UPDATE3_TITLE,UPDATE3_CONTENT,UPDATE3_URL,UPDATE4_TITLE,UPDATE4_CONTENT,UPDATE4_URL,UPDATE5_TITLE,UPDATE5_CONTENT,UPDATE5_URL
+10,"Major enahancements", "support.unicomm","2016-11-25","Reconciliation",
+"Fli,Ama, Snap", "www.dsad.c","Dimension update","dasdasd dad", "
+www.dsad.com","POS Support", "custom order punching", "www.cad.com"
+
+--94eb2c0587de4f2ad3053ea31715
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>VERSION,TITLE,URL,RELEASE_DATE,UPDATE1_TITLE,UPDATE1_=
+CONTENT,UPDATE1_URL,UPDATE2_TITLE,UPDATE2_CONTENT,UPDATE2_URL,UPDATE3_TITLE=
+,UPDATE3_CONTENT,UPDATE3_URL,UPDATE4_TITLE,UPDATE4_CONTENT,UPDATE4_URL,UPDA=
+TE5_TITLE,UPDATE5_CONTENT,UPDATE5_URL</div><div>10,&quot;Major enahancement=
+s&quot;, &quot;support.unicomm&quot;,&quot;2016-11-25&quot;,&quot;Reconcili=
+ation&quot;, &quot;Fli,Ama, Snap&quot;, &quot;www.dsad.c&quot;,&quot;Dimens=
+ion update&quot;,&quot;dasdasd dad&quot;, &quot;<a href=3D"http://www.dsad.=
+com">www.dsad.com</a>&quot;,&quot;POS Support&quot;, &quot;custom order pun=
+ching&quot;, &quot;<a href=3D"http://www.cad.com">www.cad.com</a>&quot;</di=
+v></div>
+
+--94eb2c0587de4f2ad3053ea31715--

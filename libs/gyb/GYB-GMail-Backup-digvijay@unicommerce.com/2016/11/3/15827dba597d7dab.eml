@@ -1,0 +1,69 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp631586qge;
+        Wed, 2 Nov 2016 18:44:16 -0700 (PDT)
+X-Received: by 10.37.76.136 with SMTP id z130mr5866267yba.12.1478137456062;
+        Wed, 02 Nov 2016 18:44:16 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-yb0-x230.google.com (mail-yb0-x230.google.com. [2607:f8b0:4002:c09::230])
+        by mx.google.com with ESMTPS id x126si1522017ywb.245.2016.11.02.18.44.16
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 02 Nov 2016 18:44:16 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::230 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4002:c09::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::230 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-yb0-x230.google.com with SMTP id v78so11504289ybe.3
+        for <digvijay@unicommerce.com>; Wed, 02 Nov 2016 18:44:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=gGei1CReSHoRWnktAhNf/1FfOX7vzGPLDd7FPnLLj2E=;
+        b=znxwobkjRUsjQ/mJV0zo9mxb8LCyScyKJ3/SG/mChYoQ5ldJ+p4nnYFWIN3fE6vhlK
+         uZh4NDWQnXFo4UkuCzSl9gbcnqlAsvGWNZUwA3/K0T9ak6qlJfzXuUly1fIfXpCmJPLq
+         gU9FHfo9a3Vr6hwuY4VeaGDDD8FqkRlI6798w+ZrHOFasrCP6HLZJirpT72vv7WktjlN
+         GwF8nUqiF5n2LSEJnD8LA2nz9mL5ZSCl9S0sOojicpPKBwxRNQ1nIjlmuUL/oEfwLZA7
+         jVGF4nthw1mEpAizbaAbr7ONfuS609HlzmDmFQOTN81KJN0VFdaOdoVpxKCROXOAeziF
+         KnlQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=gGei1CReSHoRWnktAhNf/1FfOX7vzGPLDd7FPnLLj2E=;
+        b=U124Z91OsDYuJ2gYc9QKOeusjKANaj93YFyzWttKkhhbpHO2T25ncEb5XERvkuCf+K
+         dy256B1ljXQGj9GjaJG0EFxLBcwPAobftQeJzu1qY61zcsCKmsZ5EQn2R3JSKU3JF8+4
+         eTAZRnURSDb+wDJz/jYwkl6+jAzd79rb9RWMUMXEXxUT3ihI5U77sqXuHeC8JAAsUboL
+         FX3enkb9B2wjLkpVvp0dWeyFqfltLNreLCMahDlfnnrjocMeDjrGfkUPa+adXdfJ/5mr
+         H4y9EYLwnCcW03ybIeSfeG6+YAmsX0MZ/8slnV2r3StmmgXXlwV/9MOZCO6hoH/BqfmL
+         iaBg==
+X-Gm-Message-State: ABUngvf3LnCFsYMyJ8ZrJbXsb1kG1zHu0bgJtoFjh/NTsRlptzstqnPcRpcUquPvwKSjo+wKZTBgqyJmV6GDgA==
+X-Received: by 10.37.55.204 with SMTP id e195mr5444310yba.29.1478137455843;
+ Wed, 02 Nov 2016 18:44:15 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.129.84.85 with HTTP; Wed, 2 Nov 2016 18:44:15 -0700 (PDT)
+Received: by 10.129.84.85 with HTTP; Wed, 2 Nov 2016 18:44:15 -0700 (PDT)
+In-Reply-To: <CA+zaFGiM1mz5wkT+9zQpsmGfGOo6HPU9f-pfUN93QQ3jybmYoQ@mail.gmail.com>
+References: <CA+zaFGiM1mz5wkT+9zQpsmGfGOo6HPU9f-pfUN93QQ3jybmYoQ@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 3 Nov 2016 07:14:15 +0530
+Message-ID: <CA+zaFGgh7wH0cvbgh8=NhfdRM53eyxkvBLfYrtaJ_hdt-Qt6Cg@mail.gmail.com>
+Subject: Re: Will be working from Okhla today
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114738e8fc4a4b05405bb198
+
+--001a114738e8fc4a4b05405bb198
+Content-Type: text/plain; charset=UTF-8
+
+Ignore last mail. Will be working from Gurgaon.
+
+On 03-Nov-2016 7:10 AM, "Sunny Agarwal" <sunny@unicommerce.com> wrote:
+
+--001a114738e8fc4a4b05405bb198
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr">Ignore last mail. Will be working from Gurgaon. </p>
+<p dir="ltr">On 03-Nov-2016 7:10 AM, &quot;Sunny Agarwal&quot; &lt;<a href="mailto:sunny@unicommerce.com">sunny@unicommerce.com</a>&gt; wrote:<br>
+</p>
+
+--001a114738e8fc4a4b05405bb198--

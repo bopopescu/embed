@@ -1,0 +1,979 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp399323qge;
+        Thu, 17 Nov 2016 09:26:13 -0800 (PST)
+X-Received: by 10.107.17.75 with SMTP id z72mr4623973ioi.207.1479403573167;
+        Thu, 17 Nov 2016 09:26:13 -0800 (PST)
+Return-Path: <animesh@unicommerce.com>
+Received: from mail-it0-x234.google.com (mail-it0-x234.google.com. [2607:f8b0:4001:c0b::234])
+        by mx.google.com with ESMTPS id u127si9525509itd.112.2016.11.17.09.26.13
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Nov 2016 09:26:13 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::234 is neither permitted nor denied by best guess record for domain of animesh@unicommerce.com) client-ip=2607:f8b0:4001:c0b::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::234 is neither permitted nor denied by best guess record for domain of animesh@unicommerce.com) smtp.mailfrom=animesh@unicommerce.com
+Received: by mail-it0-x234.google.com with SMTP id c20so289654233itb.0
+        for <digvijay@unicommerce.com>; Thu, 17 Nov 2016 09:26:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=wvgMMfTnJ7sADCq0VYtYp1m/p7AF/QY9jwqgCdF33Pk=;
+        b=B1cwF9LMFtVmK1ZxvOu1/rPESwTxLnIjrXx0CoD1+05h0wt1IfaCwaI/7XPa2uH8ne
+         kQzWcG2+5gFhbVMFgaPzZPGYJm6zmuqs24vuFZo4ZJubt5H4dg/k8BpwqWfdJHrDxlDg
+         7T/xeudjOgqn+spPGRvSFBm3VOh9f14nAInsbHkKBHIUZa6sU/v0n1t1GhflKev0fzcY
+         UrIe5mf8ia4Wc9pPoMDgnR6x9X5F5nrNJ27TTaVvA+iEoQflB31vOcQ+NahBumo95dD6
+         2PPM0m1gG8VB/ag58imYXfzzcaqZCkPLpA4Megi6LE/GcXyMswQvLWZWp837M9xnhd0F
+         GC6Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=wvgMMfTnJ7sADCq0VYtYp1m/p7AF/QY9jwqgCdF33Pk=;
+        b=JV27j7zFDyiHiFjxLIrsqdh8mc/LunqNBRUT30g8jjzU5iJaPsgyy5WAZt13+4RufG
+         Jq+bwtQUfyFVfeIYcJMGwZU625casuHwbDU4s/bvbFsUEAeWd8YOTKDjkbpuZ1VNczMi
+         F1n1xHrX1bk0C7YZfwfN6sCzegMIMoCl6yB0IeP36ZGfKxvXAUvZdEsC4IvKXnU1MSlS
+         bLJz+rXtjtVpSVRnwtjcQQcrvQM/ycm+eqt0f6YCuILSZtyiYDzpipqq7p+htDuQVGXA
+         daj/YB8DS1kOrjSZO9RIJlIPLXXLV/GlPc3uVRqgT6CiQTuM8FeMtGvl6Rd/U1IP6p3I
+         OpxA==
+X-Gm-Message-State: AKaTC01Xxnvon0S7HwWy6gHt8sjcfkIVkfeNCFh9Sf+88nvvgpegpDGGcOvi57zirdlgfiGzOh6PC7MthGbLkg==
+X-Received: by 10.202.199.146 with SMTP id x140mr1778951oif.155.1479403571354;
+ Thu, 17 Nov 2016 09:26:11 -0800 (PST)
+MIME-Version: 1.0
+From: Kumar Animesh <animesh@unicommerce.com>
+Date: Thu, 17 Nov 2016 17:26:00 +0000
+Message-ID: <CAASAXwy0qB1BZmFbtr6zzntNrTSL2sk6WqJUSCuJqEQV2KX8=Q@mail.gmail.com>
+Subject: 500
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c17e8859c4aa0541827c7b
+
+--001a11c17e8859c4aa0541827c7b
+Content-Type: text/plain; charset=UTF-8
+
+HTTP Status 500 - Request processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.expression.spel.SpelEvaluationException: EL1001E:(pos
+0): Type conversion problem, cannot convert from
+com.uniaccounts.core.entity.Account_$$_javassist_28 to java.lang.Boolean
+
+*type* Exception report
+
+*message* *Request processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.expression.spel.SpelEvaluationException: EL1001E:(pos
+0): Type conversion problem, cannot convert from
+com.uniaccounts.core.entity.Account_$$_javassist_28 to java.lang.Boolean*
+
+*description* *The server encountered an internal error that prevented it
+from fulfilling this request.*
+
+*exception*
+
+org.springframework.web.util.NestedServletException: Request
+processing failed; nested exception is
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.expression.spel.SpelEvaluationException:
+EL1001E:(pos 0): Type conversion problem, cannot convert from
+com.uniaccounts.core.entity.Account_$$_javassist_28 to
+java.lang.Boolean
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66)
+
+*root cause*
+
+org.jboss.resteasy.spi.UnhandledException:
+org.springframework.expression.spel.SpelEvaluationException:
+EL1001E:(pos 0): Type conversion problem, cannot convert from
+com.uniaccounts.core.entity.Account_$$_javassist_28 to
+java.lang.Boolean
+	org.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(SynchronousDispatcher.java:340)
+	org.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousDispatcher.java:214)
+	org.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(SynchronousDispatcher.java:190)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(ResteasyHandlerAdapter.java:91)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWebHandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66)
+
+*root cause*
+
+org.springframework.expression.spel.SpelEvaluationException:
+EL1001E:(pos 0): Type conversion problem, cannot convert from
+com.uniaccounts.core.entity.Account_$$_javassist_28 to
+java.lang.Boolean
+	org.springframework.expression.spel.support.StandardTypeConverter.convertValue(StandardTypeConverter.java:78)
+	org.springframework.expression.common.ExpressionUtils.convertTypedValue(ExpressionUtils.java:70)
+	org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:301)
+	com.unifier.core.expressions.Expression.evaluate(Expression.java:38)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode_aroundBody10(PromoServiceImpl.java:228)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl$AjcClosure11.run(PromoServiceImpl.java:1)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96cproceed(AbstractTransactionAspect.aj:66)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect$AbstractTransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72)
+	org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96c(AbstractTransactionAspect.aj:70)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode(PromoServiceImpl.java:199)
+	com.uniaccounts.web.controller.PromoResource.validatePromoCode(PromoResource.java:38)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:606)
+	org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:154)
+	org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(ResteasyHandlerAdapter.java:87)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWebHandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66)
+
+*root cause*
+
+org.springframework.core.convert.ConverterNotFoundException: No
+converter found capable of converting from type
+com.uniaccounts.core.entity.Account_$$_javassist_28 to type
+java.lang.Boolean
+	org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:311)
+	org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:192)
+	org.springframework.expression.spel.support.StandardTypeConverter.convertValue(StandardTypeConverter.java:74)
+	org.springframework.expression.common.ExpressionUtils.convertTypedValue(ExpressionUtils.java:70)
+	org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:301)
+	com.unifier.core.expressions.Expression.evaluate(Expression.java:38)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode_aroundBody10(PromoServiceImpl.java:228)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl$AjcClosure11.run(PromoServiceImpl.java:1)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96cproceed(AbstractTransactionAspect.aj:66)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect$AbstractTransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72)
+	org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96c(AbstractTransactionAspect.aj:70)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode(PromoServiceImpl.java:199)
+	com.uniaccounts.web.controller.PromoResource.validatePromoCode(PromoResource.java:38)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:606)
+	org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:154)
+	org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(ResteasyHandlerAdapter.java:87)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWebHandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66)
+
+*note* *The full stack trace of the root cause is available in the Apache
+Tomcat/8.0.15 logs.*
+------------------------------
+Apache Tomcat/8.0.15
+
+--001a11c17e8859c4aa0541827c7b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><h1 style=3D"font-family:tahoma,arial,sans-serif;color:whi=
+te;background-color:rgb(82,93,118);font-size:22px">HTTP Status 500 - Reques=
+t processing failed; nested exception is org.jboss.resteasy.spi.UnhandledEx=
+ception: org.springframework.expression.spel.SpelEvaluationException: EL100=
+1E:(pos 0): Type conversion problem, cannot convert from com.uniaccounts.co=
+re.entity.Account_$$_javassist_28 to java.lang.Boolean</h1><div class=3D"in=
+box-inbox-line" style=3D"height:1px;background-color:rgb(82,93,118);border:=
+none;font-family:tahoma,arial,sans-serif;font-size:medium"></div><p style=
+=3D"font-family:tahoma,arial,sans-serif;background-image:initial;background=
+-position:initial;background-size:initial;background-repeat:initial;backgro=
+und-origin:initial;background-clip:initial;font-size:12px"><b style=3D"colo=
+r:white;background-color:rgb(82,93,118)">type</b><span class=3D"inbox-inbox=
+-Apple-converted-space">=C2=A0</span>Exception report</p><p style=3D"font-f=
+amily:tahoma,arial,sans-serif;background-image:initial;background-position:=
+initial;background-size:initial;background-repeat:initial;background-origin=
+:initial;background-clip:initial;font-size:12px"><b style=3D"color:white;ba=
+ckground-color:rgb(82,93,118)">message</b><span class=3D"inbox-inbox-Apple-=
+converted-space">=C2=A0</span><u>Request processing failed; nested exceptio=
+n is org.jboss.resteasy.spi.UnhandledException: org.springframework.express=
+ion.spel.SpelEvaluationException: EL1001E:(pos 0): Type conversion problem,=
+ cannot convert from com.uniaccounts.core.entity.Account_$$_javassist_28 to=
+ java.lang.Boolean</u></p><p style=3D"font-family:tahoma,arial,sans-serif;b=
+ackground-image:initial;background-position:initial;background-size:initial=
+;background-repeat:initial;background-origin:initial;background-clip:initia=
+l;font-size:12px"><b style=3D"color:white;background-color:rgb(82,93,118)">=
+description</b><span class=3D"inbox-inbox-Apple-converted-space">=C2=A0</sp=
+an><u>The server encountered an internal error that prevented it from fulfi=
+lling this request.</u></p><p style=3D"font-family:tahoma,arial,sans-serif;=
+background-image:initial;background-position:initial;background-size:initia=
+l;background-repeat:initial;background-origin:initial;background-clip:initi=
+al;font-size:12px"><b style=3D"color:white;background-color:rgb(82,93,118)"=
+>exception</b></p><pre>org.springframework.web.util.NestedServletException:=
+ Request processing failed; nested exception is org.jboss.resteasy.spi.Unha=
+ndledException: org.springframework.expression.spel.SpelEvaluationException=
+: EL1001E:(pos 0): Type conversion problem, cannot convert from com.uniacco=
+unts.core.entity.Account_$$_javassist_28 to java.lang.Boolean
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkS=
+ervlet.java:978)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.j=
+ava:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.=
+java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInter=
+nal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePer=
+RequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessCont=
+rolFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:1=
+76)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.j=
+ava:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilt=
+er.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilte=
+r(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(=
+SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFil=
+ter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthe=
+nticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequ=
+estFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFi=
+lter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFil=
+ter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProc=
+essingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(Uniware=
+TokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.ja=
+va:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilt=
+er(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.=
+doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterC=
+hainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProx=
+y.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(Delega=
+tingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFi=
+lterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(Reques=
+tIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ch=
+aracterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServlet=
+Filter.java:66)
+</pre><p style=3D"font-family:tahoma,arial,sans-serif;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:12px"><b=
+ style=3D"color:white;background-color:rgb(82,93,118)">root cause</b></p><p=
+re>org.jboss.resteasy.spi.UnhandledException: org.springframework.expressio=
+n.spel.SpelEvaluationException: EL1001E:(pos 0): Type conversion problem, c=
+annot convert from com.uniaccounts.core.entity.Account_$$_javassist_28 to j=
+ava.lang.Boolean
+	org.jboss.resteasy.core.SynchronousDispatcher.handleApplicationException(S=
+ynchronousDispatcher.java:340)
+	org.jboss.resteasy.core.SynchronousDispatcher.handleException(SynchronousD=
+ispatcher.java:214)
+	org.jboss.resteasy.core.SynchronousDispatcher.handleInvokerException(Synch=
+ronousDispatcher.java:190)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(Res=
+teasyHandlerAdapter.java:91)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWeb=
+HandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherSer=
+vlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServ=
+let.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkS=
+ervlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.j=
+ava:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.=
+java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInter=
+nal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePer=
+RequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessCont=
+rolFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:1=
+76)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.j=
+ava:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilt=
+er.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilte=
+r(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(=
+SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFil=
+ter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthe=
+nticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequ=
+estFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFi=
+lter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFil=
+ter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProc=
+essingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(Uniware=
+TokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.ja=
+va:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilt=
+er(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.=
+doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterC=
+hainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProx=
+y.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(Delega=
+tingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFi=
+lterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(Reques=
+tIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ch=
+aracterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServlet=
+Filter.java:66)
+</pre><p style=3D"font-family:tahoma,arial,sans-serif;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:12px"><b=
+ style=3D"color:white;background-color:rgb(82,93,118)">root cause</b></p><p=
+re>org.springframework.expression.spel.SpelEvaluationException: EL1001E:(po=
+s 0): Type conversion problem, cannot convert from com.uniaccounts.core.ent=
+ity.Account_$$_javassist_28 to java.lang.Boolean
+	org.springframework.expression.spel.support.StandardTypeConverter.convertV=
+alue(StandardTypeConverter.java:78)
+	org.springframework.expression.common.ExpressionUtils.convertTypedValue(Ex=
+pressionUtils.java:70)
+	org.springframework.expression.spel.standard.SpelExpression.getValue(SpelE=
+xpression.java:301)
+	com.unifier.core.expressions.Expression.evaluate(Expression.java:38)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode_aro=
+undBody10(PromoServiceImpl.java:228)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl$AjcClosure11.run(Prom=
+oServiceImpl.java:1)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$arou=
+nd$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73=
+e96cproceed(AbstractTransactionAspect.aj:66)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect$Abstract=
+TransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72)
+	org.springframework.transaction.interceptor.TransactionAspectSupport.invok=
+eWithinTransaction(TransactionAspectSupport.java:281)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$arou=
+nd$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73=
+e96c(AbstractTransactionAspect.aj:70)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode(Pro=
+moServiceImpl.java:199)
+	com.uniaccounts.web.controller.PromoResource.validatePromoCode(PromoResour=
+ce.java:38)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:=
+57)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorIm=
+pl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:606)
+	org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:=
+154)
+	org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:=
+257)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(Res=
+teasyHandlerAdapter.java:87)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWeb=
+HandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherSer=
+vlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServ=
+let.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkS=
+ervlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.j=
+ava:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.=
+java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInter=
+nal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePer=
+RequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessCont=
+rolFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:1=
+76)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.j=
+ava:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilt=
+er.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilte=
+r(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(=
+SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFil=
+ter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthe=
+nticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequ=
+estFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFi=
+lter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFil=
+ter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProc=
+essingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(Uniware=
+TokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.ja=
+va:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilt=
+er(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.=
+doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterC=
+hainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProx=
+y.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(Delega=
+tingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFi=
+lterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(Reques=
+tIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ch=
+aracterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServlet=
+Filter.java:66)
+</pre><p style=3D"font-family:tahoma,arial,sans-serif;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:12px"><b=
+ style=3D"color:white;background-color:rgb(82,93,118)">root cause</b></p><p=
+re>org.springframework.core.convert.ConverterNotFoundException: No converte=
+r found capable of converting from type com.uniaccounts.core.entity.Account=
+_$$_javassist_28 to type java.lang.Boolean
+	org.springframework.core.convert.support.GenericConversionService.handleCo=
+nverterNotFound(GenericConversionService.java:311)
+	org.springframework.core.convert.support.GenericConversionService.convert(=
+GenericConversionService.java:192)
+	org.springframework.expression.spel.support.StandardTypeConverter.convertV=
+alue(StandardTypeConverter.java:74)
+	org.springframework.expression.common.ExpressionUtils.convertTypedValue(Ex=
+pressionUtils.java:70)
+	org.springframework.expression.spel.standard.SpelExpression.getValue(SpelE=
+xpression.java:301)
+	com.unifier.core.expressions.Expression.evaluate(Expression.java:38)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode_aro=
+undBody10(PromoServiceImpl.java:228)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl$AjcClosure11.run(Prom=
+oServiceImpl.java:1)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$arou=
+nd$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73=
+e96cproceed(AbstractTransactionAspect.aj:66)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect$Abstract=
+TransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72)
+	org.springframework.transaction.interceptor.TransactionAspectSupport.invok=
+eWithinTransaction(TransactionAspectSupport.java:281)
+	org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$arou=
+nd$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73=
+e96c(AbstractTransactionAspect.aj:70)
+	com.uniaccounts.services.promo.impl.PromoServiceImpl.validatePromoCode(Pro=
+moServiceImpl.java:199)
+	com.uniaccounts.web.controller.PromoResource.validatePromoCode(PromoResour=
+ce.java:38)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:=
+57)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorIm=
+pl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:606)
+	org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:=
+154)
+	org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:=
+257)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(Res=
+teasyHandlerAdapter.java:87)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:74)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:24)
+	org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWeb=
+HandlerTemplate.java:39)
+	org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandler=
+Adapter.java:45)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherSer=
+vlet.java:943)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServ=
+let.java:877)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkS=
+ervlet.java:966)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.j=
+ava:868)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.=
+java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	org.springframework.session.web.http.SessionRepositoryFilter.doFilterInter=
+nal(SessionRepositoryFilter.java:119)
+	org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePer=
+RequestFilter.java:65)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	com.uniaccounts.web.filter.AccessControlFilter.doFilterInternal(AccessCont=
+rolFilter.java:49)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:1=
+76)
+	org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+	org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.j=
+ava:92)
+	org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilt=
+er.java:381)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:330)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.invoke(FilterSecurityInterceptor.java:118)
+	org.springframework.security.web.access.intercept.FilterSecurityIntercepto=
+r.doFilter(FilterSecurityInterceptor.java:84)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.access.ExceptionTranslationFilter.doFilte=
+r(ExceptionTranslationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.session.SessionManagementFilter.doFilter(=
+SessionManagementFilter.java:103)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AnonymousAuthenticationFil=
+ter.doFilter(AnonymousAuthenticationFilter.java:113)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.rememberme.RememberMeAuthe=
+nticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.servletapi.SecurityContextHolderAwareRequ=
+estFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFi=
+lter(RequestCacheAwareFilter.java:45)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.www.BasicAuthenticationFil=
+ter.doFilter(BasicAuthenticationFilter.java:150)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.AbstractAuthenticationProc=
+essingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:107)
+	com.uniaccounts.web.security.UniwareTokenBasedLoginFilter.doFilter(Uniware=
+TokenBasedLoginFilter.java:110)
+	org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter=
+(CompositeFilter.java:112)
+	org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.ja=
+va:73)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.authentication.logout.LogoutFilter.doFilt=
+er(LogoutFilter.java:105)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.context.SecurityContextPersistenceFilter.=
+doFilter(SecurityContextPersistenceFilter.java:87)
+	org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFil=
+ter(FilterChainProxy.java:342)
+	org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterC=
+hainProxy.java:192)
+	org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProx=
+y.java:160)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(Delega=
+tingFilterProxy.java:344)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFi=
+lterProxy.java:261)
+	com.uniaccounts.web.filter.RequestIdentifierFilter.doFilterInternal(Reques=
+tIdentifierFilter.java:32)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(Ch=
+aracterEncodingFilter.java:88)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServlet=
+Filter.java:66)
+</pre><p style=3D"font-family:tahoma,arial,sans-serif;background-image:init=
+ial;background-position:initial;background-size:initial;background-repeat:i=
+nitial;background-origin:initial;background-clip:initial;font-size:12px"><b=
+ style=3D"color:white;background-color:rgb(82,93,118)">note</b><span class=
+=3D"inbox-inbox-Apple-converted-space">=C2=A0</span><u>The full stack trace=
+ of the root cause is available in the Apache Tomcat/8.0.15 logs.</u></p><h=
+r class=3D"inbox-inbox-line" style=3D"height:1px;background-color:rgb(82,93=
+,118);border:none;font-family:tahoma,arial,sans-serif;font-size:medium"><h3=
+ style=3D"font-family:tahoma,arial,sans-serif;color:white;background-color:=
+rgb(82,93,118);font-size:14px">Apache Tomcat/8.0.15</h3></div>
+
+--001a11c17e8859c4aa0541827c7b--

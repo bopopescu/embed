@@ -1,0 +1,397 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1475132qge;
+        Tue, 8 Nov 2016 00:41:29 -0800 (PST)
+X-Received: by 10.176.84.66 with SMTP id o2mr7102610uaa.148.1478594489659;
+        Tue, 08 Nov 2016 00:41:29 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-vk0-x230.google.com (mail-vk0-x230.google.com. [2607:f8b0:400c:c05::230])
+        by mx.google.com with ESMTPS id 1si8887239uar.218.2016.11.08.00.41.29
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 00:41:29 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::230 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c05::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::230 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-vk0-x230.google.com with SMTP id 137so95319314vkl.0
+        for <digvijay@unicommerce.com>; Tue, 08 Nov 2016 00:41:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=bFIawIvrGz8mUQzU1Drnv0qhScdgJNddJJ72Djw4iPs=;
+        b=gLZmdj4KB0EegycalOh8rgtCHcNtPbQ7PE0n1DQaT8vRG88yGCAYbKu4xl/8WInf8E
+         tNIdbGzEtCgTglA+zFnIaqtvMi9ITJwbvQ58eR8yMQQlRj2lkKy/bSbFNpkeqz587uZw
+         mg9XExYf3xVhZhG6n//cMz2505PDgErn0S+QpcET8FbKWcjU4SZ0sE6+jvVxjmKR7ubg
+         UU+RbZTr81jILNU8I9oFTZUZLyDGAm0gflrRzXZ2tFblH0T9OlkLEi/p6E4ifLfbUE54
+         DvHWzwfGbVGDpCvELcib0s+Wm+bCrTUSnVmT5yo/eufT2QCG8MKVJ358ziqWqj5S07T7
+         A7ng==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=bFIawIvrGz8mUQzU1Drnv0qhScdgJNddJJ72Djw4iPs=;
+        b=PRGCvFYp6r6+jLvbrChzzmInJjjufIfRqNQA4WlRcaC9CjKxoq3JofZ2M66Jiz9aGl
+         NM6UPOZGh3tZMOtB7O8eDGAwWmJkXT0LbUCHiieikx7NGJD/Ahzo0SK0jGheu3RgU7Ib
+         IVg6+rhLTi2sQAdObVaBbcSipI6OaKGLsPC+T6YvVOj7UkSrpLu/XhNPIiFZVozJTuh8
+         K4t0BzZAYQYX41+VLQF7NlqHGHjqlIA35AQwpHZY0e93Uz4ZTog1LdsKYiLRFvlHbLuh
+         UHce+ORtTotdfraDVM1hKUAoQ3AXQObgKsNhu4BwrsFCTzzyr/T8RMf1DLJ9xRy3fiAw
+         siCA==
+X-Gm-Message-State: ABUngvf/xmSQtOLFuqvvI8erItLQUqB6N44teHpFUjAkgm0X4zTna0lXt6Ba40p/NBjzaQ4SThQR7H2rMarU6w==
+X-Received: by 10.31.183.144 with SMTP id h138mr6663602vkf.48.1478594489323;
+ Tue, 08 Nov 2016 00:41:29 -0800 (PST)
+MIME-Version: 1.0
+References: <CAMWjBm93A5w3gGLgKWepSPn-xi-uP=2uuNyp8HyR9dMqkSx0uw@mail.gmail.com>
+ <CA+zaFGiEvL=bcd2YTxqC+7orG3kMzq42e8iz=xcLJ+F3_Se64g@mail.gmail.com>
+ <CAMWjBm9Y8+xi0Hf+CYKWRRfWNVeDRNeWaV-eY7pB1KQeFC6BXA@mail.gmail.com>
+ <CAPe2SZT+ZhrSVpuu8nrCAu=ZuZ=iE57M8UoaTp4S34+w_RAVnA@mail.gmail.com> <CAMWjBm-PMGi7bP3XK0vxSxEyD0_jZas9n2O2JAusWOD-D9FSNg@mail.gmail.com>
+In-Reply-To: <CAMWjBm-PMGi7bP3XK0vxSxEyD0_jZas9n2O2JAusWOD-D9FSNg@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Tue, 08 Nov 2016 08:41:18 +0000
+Message-ID: <CAPe2SZRDrSe2vFQ6WWvHGKn6HS-oMdCnPpDVW0i_DChhMD59=g@mail.gmail.com>
+Subject: Re: UP FORM
+To: Ravindra Kumar <ravindra@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Harsh Pal <harsh@unicommerce.com>, Bharat Goel <bharat@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1142f2304da3350540c61b55
+
+--001a1142f2304da3350540c61b55
+Content-Type: text/plain; charset=UTF-8
+
+++shipra@unicommerce.com
+
+On Tue, Nov 8, 2016 at 1:19 PM Ravindra Kumar <ravindra@unicommerce.com>
+wrote:
+
+> Akshay,
+>
+> Please add Srinagar Form-65 on Healthkart tenants
+>
+> Regard's
+> Ravindra
+>
+> On Thu, Oct 13, 2016 at 6:59 PM, Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+> Done. Please check now.
+>
+>
+> On Thu, Oct 13, 2016 at 5:51 PM Ravindra Kumar <ravindra@unicommerce.com>
+> wrote:
+>
+> Digvijay,
+>
+> Please confirm on this
+>
+> Regard's
+> Ravindra
+>
+> On Thu, Oct 13, 2016 at 2:48 PM, Sunny Agarwal <sunny@unicommerce.com>
+> wrote:
+>
+> Digvijay,
+>
+> Please take care of this.
+>
+> - Sunny
+>
+> On Thu, Oct 13, 2016 at 2:26 PM, Ravindra Kumar <ravindra@unicommerce.com>
+> wrote:
+>
+> Hi Harsh,
+>
+> Please check User are unable to print Form UP 17 and 18 at all Healthkart
+> Tenant.
+>
+>
+> https://healthkartunivedhealthcare.unicommerce.com/order/shipments?orderCode=2879173&shipmentCode=HEAL01478
+>
+> https://healthkartunivedhealthcare.unicommerce.com/oms/shipment/stateRegulatoryForm/print/UP_FORM17/HEAL01478?legacy=1
+>
+> HTTP Status 500 - Request processing failed; nested exception is
+> java.lang.NullPointerException
+>
+> *type* Exception report
+>
+> *message* *Request processing failed; nested exception is
+> java.lang.NullPointerException*
+>
+> *description* *The server encountered an internal error that prevented it
+> from fulfilling this request.*
+>
+> *exception*
+>
+> org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+> 	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+> 	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857)
+> 	javax.servlet.http.HttpServlet.service(HttpServlet.java:618)
+> 	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+> 	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+> 	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+> 	com.codahale.metrics.servlet.AbstractInstrumentedFilter.doFilter(AbstractInstrumentedFilter.java:104)
+> 	com.unifier.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:68)
+> 	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+> 	org.tuckey.web.filters.urlr
+>
+>
+>
+> Regard's
+> Ravindra
+>
+>
+>
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+>
+> --
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a1142f2304da3350540c61b55
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><a class=3D"GWVZpf gW" id=3D"IloFPc-1">++shipra@unicommerc=
+e.com</a><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Tue, =
+Nov 8, 2016 at 1:19 PM Ravindra Kumar &lt;<a href=3D"mailto:ravindra@unicom=
+merce.com">ravindra@unicommerce.com</a>&gt; wrote:<br></div><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_de=
+fault gmail_msg" style=3D"color:#0b5394">Akshay,</div><div class=3D"gmail_d=
+efault gmail_msg" style=3D"color:#0b5394"><br class=3D"gmail_msg"></div><di=
+v class=3D"gmail_default gmail_msg" style=3D"color:#0b5394">Please add Srin=
+agar Form-65 on Healthkart tenants=C2=A0</div></div><div class=3D"gmail_ext=
+ra gmail_msg"><br clear=3D"all" class=3D"gmail_msg"><div class=3D"gmail_msg=
+"><div class=3D"m_-4205593356033154270gmail_signature gmail_msg" data-smart=
+mail=3D"gmail_signature"><div dir=3D"ltr" class=3D"gmail_msg">Regard&#39;s<=
+/div></div></div></div><div class=3D"gmail_extra gmail_msg"><div class=3D"g=
+mail_msg"><div class=3D"m_-4205593356033154270gmail_signature gmail_msg" da=
+ta-smartmail=3D"gmail_signature"><div dir=3D"ltr" class=3D"gmail_msg"><div =
+class=3D"gmail_msg">Ravindra</div></div></div></div></div><div class=3D"gma=
+il_extra gmail_msg">
+<br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On Thu, Oct 13=
+, 2016 at 6:59 PM, Akshay Agarwal <span dir=3D"ltr" class=3D"gmail_msg">&lt=
+;<a href=3D"mailto:akshay.agarwal@unicommerce.com" class=3D"gmail_msg" targ=
+et=3D"_blank">akshay.agarwal@unicommerce.com</a>&gt;</span> wrote:<br class=
+=3D"gmail_msg"><blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" cl=
+ass=3D"gmail_msg">Done. Please check now.<div class=3D"gmail_msg"><br class=
+=3D"gmail_msg"></div></div><div class=3D"m_-4205593356033154270HOEnZb gmail=
+_msg"><div class=3D"m_-4205593356033154270h5 gmail_msg"><br class=3D"gmail_=
+msg"><div class=3D"gmail_quote gmail_msg"><div dir=3D"ltr" class=3D"gmail_m=
+sg">On Thu, Oct 13, 2016 at 5:51 PM Ravindra Kumar &lt;<a href=3D"mailto:ra=
+vindra@unicommerce.com" class=3D"gmail_msg" target=3D"_blank">ravindra@unic=
+ommerce.com</a>&gt; wrote:<br class=3D"gmail_msg"></div><blockquote class=
+=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc =
+solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_-4205593356033154270m_-=
+4700201696981551114gmail_msg gmail_msg"><div class=3D"gmail_default m_-4205=
+593356033154270m_-4700201696981551114gmail_msg gmail_msg" style=3D"color:rg=
+b(11,83,148)"><span style=3D"color:rgb(34,34,34);font-size:12.8px" class=3D=
+"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg">Digvijay,=
+</span><br class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg g=
+mail_msg"></div><div class=3D"gmail_default m_-4205593356033154270m_-470020=
+1696981551114gmail_msg gmail_msg" style=3D"color:rgb(11,83,148)"><span styl=
+e=3D"color:rgb(34,34,34);font-size:12.8px" class=3D"m_-4205593356033154270m=
+_-4700201696981551114gmail_msg gmail_msg"><br class=3D"m_-42055933560331542=
+70m_-4700201696981551114gmail_msg gmail_msg"></span></div><div class=3D"gma=
+il_default m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"=
+><span style=3D"font-size:12.8px" class=3D"m_-4205593356033154270m_-4700201=
+696981551114gmail_msg gmail_msg">Please confirm on this=C2=A0</span></div><=
+/div><div class=3D"gmail_extra m_-4205593356033154270m_-4700201696981551114=
+gmail_msg gmail_msg"><br clear=3D"all" class=3D"m_-4205593356033154270m_-47=
+00201696981551114gmail_msg gmail_msg"><div class=3D"m_-4205593356033154270m=
+_-4700201696981551114gmail_msg gmail_msg"><div class=3D"m_-4205593356033154=
+270m_-4700201696981551114m_6185164655945244499gmail_signature m_-4205593356=
+033154270m_-4700201696981551114gmail_msg gmail_msg" data-smartmail=3D"gmail=
+_signature"><div dir=3D"ltr" class=3D"m_-4205593356033154270m_-470020169698=
+1551114gmail_msg gmail_msg">Regard&#39;s</div></div></div></div><div class=
+=3D"gmail_extra m_-4205593356033154270m_-4700201696981551114gmail_msg gmail=
+_msg"><div class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg g=
+mail_msg"><div class=3D"m_-4205593356033154270m_-4700201696981551114m_61851=
+64655945244499gmail_signature m_-4205593356033154270m_-4700201696981551114g=
+mail_msg gmail_msg" data-smartmail=3D"gmail_signature"><div dir=3D"ltr" cla=
+ss=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><div=
+ class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg">=
+Ravindra</div></div></div></div></div><div class=3D"gmail_extra m_-42055933=
+56033154270m_-4700201696981551114gmail_msg gmail_msg">
+<br class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_ms=
+g"><div class=3D"gmail_quote m_-4205593356033154270m_-4700201696981551114gm=
+ail_msg gmail_msg">On Thu, Oct 13, 2016 at 2:48 PM, Sunny Agarwal <span dir=
+=3D"ltr" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gma=
+il_msg">&lt;<a href=3D"mailto:sunny@unicommerce.com" class=3D"m_-4205593356=
+033154270m_-4700201696981551114gmail_msg gmail_msg" target=3D"_blank">sunny=
+@unicommerce.com</a>&gt;</span> wrote:<br class=3D"m_-4205593356033154270m_=
+-4700201696981551114gmail_msg gmail_msg"><blockquote class=3D"gmail_quote m=
+_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg=
+">Digvijay,<div class=3D"m_-4205593356033154270m_-4700201696981551114gmail_=
+msg gmail_msg"><br class=3D"m_-4205593356033154270m_-4700201696981551114gma=
+il_msg gmail_msg"></div><div class=3D"m_-4205593356033154270m_-470020169698=
+1551114gmail_msg gmail_msg">Please take care of this.</div><span class=3D"m=
+_-4205593356033154270m_-4700201696981551114m_6185164655945244499HOEnZb m_-4=
+205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><font color=3D=
+"#888888" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gm=
+ail_msg"><div class=3D"m_-4205593356033154270m_-4700201696981551114gmail_ms=
+g gmail_msg"><br class=3D"m_-4205593356033154270m_-4700201696981551114gmail=
+_msg gmail_msg"></div><div class=3D"m_-4205593356033154270m_-47002016969815=
+51114gmail_msg gmail_msg">- Sunny</div></font></span></div><div class=3D"m_=
+-4205593356033154270m_-4700201696981551114m_6185164655945244499HOEnZb m_-42=
+05593356033154270m_-4700201696981551114gmail_msg gmail_msg"><div class=3D"m=
+_-4205593356033154270m_-4700201696981551114m_6185164655945244499h5 m_-42055=
+93356033154270m_-4700201696981551114gmail_msg gmail_msg"><div class=3D"gmai=
+l_extra m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><b=
+r class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"=
+><div class=3D"gmail_quote m_-4205593356033154270m_-4700201696981551114gmai=
+l_msg gmail_msg">On Thu, Oct 13, 2016 at 2:26 PM, Ravindra Kumar <span dir=
+=3D"ltr" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gma=
+il_msg">&lt;<a href=3D"mailto:ravindra@unicommerce.com" class=3D"m_-4205593=
+356033154270m_-4700201696981551114gmail_msg gmail_msg" target=3D"_blank">ra=
+vindra@unicommerce.com</a>&gt;</span> wrote:<br class=3D"m_-420559335603315=
+4270m_-4700201696981551114gmail_msg gmail_msg"><blockquote class=3D"gmail_q=
+uote m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gma=
+il_msg"><div class=3D"gmail_default m_-4205593356033154270m_-47002016969815=
+51114gmail_msg gmail_msg" style=3D"color:rgb(11,83,148)">Hi Harsh,</div><di=
+v class=3D"gmail_default m_-4205593356033154270m_-4700201696981551114gmail_=
+msg gmail_msg" style=3D"color:rgb(11,83,148)"><br class=3D"m_-4205593356033=
+154270m_-4700201696981551114gmail_msg gmail_msg"></div><div class=3D"gmail_=
+default m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg" st=
+yle=3D"color:rgb(11,83,148)">Please check User are unable to print Form UP =
+17 and 18 at all Healthkart Tenant.</div><div class=3D"gmail_default m_-420=
+5593356033154270m_-4700201696981551114gmail_msg gmail_msg" style=3D"color:r=
+gb(11,83,148)"><div style=3D"color:rgb(34,34,34);font-size:12.8px" class=3D=
+"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><br class=
+=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"></div>=
+<div style=3D"color:rgb(34,34,34);font-size:12.8px" class=3D"m_-42055933560=
+33154270m_-4700201696981551114gmail_msg gmail_msg"><a href=3D"https://healt=
+hkartunivedhealthcare.unicommerce.com/order/shipments?orderCode=3D2879173&a=
+mp;shipmentCode=3DHEAL01478" class=3D"m_-4205593356033154270m_-470020169698=
+1551114gmail_msg gmail_msg" target=3D"_blank">https://healthkartunivedhealt=
+hcare.unicommerce.com/order/shipments?orderCode=3D2879173&amp;shipmentCode=
+=3DHEAL01478</a></div><div class=3D"m_-4205593356033154270m_-47002016969815=
+51114m_6185164655945244499m_-3577000598580383462m_3713249411152530582gmail-=
+yj6qo m_-4205593356033154270m_-4700201696981551114m_6185164655945244499m_-3=
+577000598580383462m_3713249411152530582gmail-ajU m_-4205593356033154270m_-4=
+700201696981551114gmail_msg gmail_msg" style=3D"margin:2px 0px 0px;color:rg=
+b(34,34,34);font-size:12.8px"><div id=3D"m_-4205593356033154270m_-470020169=
+6981551114m_6185164655945244499m_-3577000598580383462m_3713249411152530582g=
+mail-:2rv" class=3D"m_-4205593356033154270m_-4700201696981551114m_618516465=
+5945244499m_-3577000598580383462m_3713249411152530582gmail-ajR m_-420559335=
+6033154270m_-4700201696981551114gmail_msg gmail_msg"><img class=3D"m_-42055=
+93356033154270m_-4700201696981551114m_6185164655945244499m_-357700059858038=
+3462m_3713249411152530582gmail-ajT m_-4205593356033154270m_-470020169698155=
+1114gmail_msg gmail_msg" src=3D"https://ssl.gstatic.com/ui/v1/icons/mail/im=
+ages/cleardot.gif"></div></div></div><div class=3D"gmail_default m_-4205593=
+356033154270m_-4700201696981551114gmail_msg gmail_msg"><font color=3D"#0b53=
+94" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_ms=
+g"><a href=3D"https://healthkartunivedhealthcare.unicommerce.com/oms/shipme=
+nt/stateRegulatoryForm/print/UP_FORM17/HEAL01478?legacy=3D1" class=3D"m_-42=
+05593356033154270m_-4700201696981551114gmail_msg gmail_msg" target=3D"_blan=
+k">https://healthkartunivedhealthcare.unicommerce.com/oms/shipment/stateReg=
+ulatoryForm/print/UP_FORM17/HEAL01478?legacy=3D1</a></font><br class=3D"m_-=
+4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"></div><div cl=
+ass=3D"gmail_default m_-4205593356033154270m_-4700201696981551114gmail_msg =
+gmail_msg"><font color=3D"#0b5394" class=3D"m_-4205593356033154270m_-470020=
+1696981551114gmail_msg gmail_msg"><br class=3D"m_-4205593356033154270m_-470=
+0201696981551114gmail_msg gmail_msg"></font></div><div class=3D"gmail_defau=
+lt m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><h1 sty=
+le=3D"font-family:tahoma,arial,sans-serif;color:white;background-color:rgb(=
+82,93,118);font-size:22px" class=3D"m_-4205593356033154270m_-47002016969815=
+51114gmail_msg gmail_msg">HTTP Status 500 - Request processing failed; nest=
+ed exception is java.lang.NullPointerException</h1><div class=3D"m_-4205593=
+356033154270m_-4700201696981551114m_6185164655945244499m_-35770005985803834=
+62m_3713249411152530582gmail-line m_-4205593356033154270m_-4700201696981551=
+114gmail_msg gmail_msg" style=3D"min-height:1px;background-color:rgb(82,93,=
+118);border:none;color:rgb(0,0,0);font-family:tahoma,arial,sans-serif;font-=
+size:medium"></div><p style=3D"font-family:tahoma,arial,sans-serif;backgrou=
+nd-image:initial;background-position:initial;background-size:initial;backgr=
+ound-repeat:initial;background-origin:initial;background-clip:initial;color=
+:rgb(0,0,0);font-size:12px" class=3D"m_-4205593356033154270m_-4700201696981=
+551114gmail_msg gmail_msg"><b style=3D"color:white;background-color:rgb(82,=
+93,118)" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gma=
+il_msg">type</b>=C2=A0Exception report</p><p style=3D"font-family:tahoma,ar=
+ial,sans-serif;background-image:initial;background-position:initial;backgro=
+und-size:initial;background-repeat:initial;background-origin:initial;backgr=
+ound-clip:initial;color:rgb(0,0,0);font-size:12px" class=3D"m_-420559335603=
+3154270m_-4700201696981551114gmail_msg gmail_msg"><b style=3D"color:white;b=
+ackground-color:rgb(82,93,118)" class=3D"m_-4205593356033154270m_-470020169=
+6981551114gmail_msg gmail_msg">message</b>=C2=A0<u class=3D"m_-420559335603=
+3154270m_-4700201696981551114gmail_msg gmail_msg">Request processing failed=
+; nested exception is java.lang.NullPointerException</u></p><p style=3D"fon=
+t-family:tahoma,arial,sans-serif;background-image:initial;background-positi=
+on:initial;background-size:initial;background-repeat:initial;background-ori=
+gin:initial;background-clip:initial;color:rgb(0,0,0);font-size:12px" class=
+=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><b sty=
+le=3D"color:white;background-color:rgb(82,93,118)" class=3D"m_-420559335603=
+3154270m_-4700201696981551114gmail_msg gmail_msg">description</b>=C2=A0<u c=
+lass=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg">Th=
+e server encountered an internal error that prevented it from fulfilling th=
+is request.</u></p><p style=3D"font-family:tahoma,arial,sans-serif;backgrou=
+nd-image:initial;background-position:initial;background-size:initial;backgr=
+ound-repeat:initial;background-origin:initial;background-clip:initial;color=
+:rgb(0,0,0);font-size:12px" class=3D"m_-4205593356033154270m_-4700201696981=
+551114gmail_msg gmail_msg"><b style=3D"color:white;background-color:rgb(82,=
+93,118)" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gma=
+il_msg">exception</b></p><pre style=3D"color:rgb(0,0,0)" class=3D"m_-420559=
+3356033154270m_-4700201696981551114gmail_msg gmail_msg">org.springframework=
+.web.util.NestedServletException: Request processing failed; nested excepti=
+on is java.lang.NullPointerException
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkS=
+ervlet.java:978)
+	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.ja=
+va:857)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:618)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.=
+java:842)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+	<a href=3D"http://org.apache.tomcat.websocket.se" class=3D"m_-420559335603=
+3154270m_-4700201696981551114gmail_msg gmail_msg" target=3D"_blank">org.apa=
+che.tomcat.websocket.se</a>rver.WsFilter.doFilter(WsFilter.java:52)
+	com.codahale.metrics.servlet.AbstractInstrumentedFilter.doFilter(AbstractI=
+nstrumentedFilter.java:104)
+	com.unifier.web.filter.AccessControlFilter.doFilterInternal(AccessControlF=
+ilter.java:68)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerReques=
+tFilter.java:107)
+	org.tuckey.web.filters.urlr</pre></div><div class=3D"gmail_default m_-4205=
+593356033154270m_-4700201696981551114gmail_msg gmail_msg" style=3D"color:rg=
+b(11,83,148)"><br class=3D"m_-4205593356033154270m_-4700201696981551114gmai=
+l_msg gmail_msg"></div><div class=3D"gmail_default m_-4205593356033154270m_=
+-4700201696981551114gmail_msg gmail_msg" style=3D"color:rgb(11,83,148)"><br=
+ class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg">=
+</div><div class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg g=
+mail_msg"><div class=3D"m_-4205593356033154270m_-4700201696981551114m_61851=
+64655945244499m_-3577000598580383462m_3713249411152530582gmail_signature m_=
+-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><div dir=3D"=
+ltr" class=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_m=
+sg">Regard&#39;s<span class=3D"m_-4205593356033154270m_-4700201696981551114=
+m_6185164655945244499m_-3577000598580383462HOEnZb m_-4205593356033154270m_-=
+4700201696981551114gmail_msg gmail_msg"><font color=3D"#888888" class=3D"m_=
+-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg"><div class=
+=3D"m_-4205593356033154270m_-4700201696981551114gmail_msg gmail_msg">Ravind=
+ra</div></font></span></div></div></div>
+</div>
+</blockquote></div><br class=3D"m_-4205593356033154270m_-470020169698155111=
+4gmail_msg gmail_msg"></div>
+</div></div></blockquote></div><br class=3D"m_-4205593356033154270m_-470020=
+1696981551114gmail_msg gmail_msg"></div></blockquote></div></div></div><spa=
+n class=3D"m_-4205593356033154270HOEnZb gmail_msg"><font color=3D"#888888" =
+class=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">-- <br class=3D"gm=
+ail_msg"></div><div data-smartmail=3D"gmail_signature" class=3D"gmail_msg">=
+<div dir=3D"ltr" class=3D"gmail_msg">Thanks<div class=3D"gmail_msg">Akshay =
+Agarwal</div><div class=3D"gmail_msg">Software Engineer, Unicommerce</div><=
+div class=3D"gmail_msg">+91 9999-872-129</div></div></div>
+</font></span></blockquote></div><br class=3D"gmail_msg"></div></blockquote=
+></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signature=
+"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, U=
+nicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a1142f2304da3350540c61b55--

@@ -1,0 +1,147 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp56228itg;
+        Wed, 21 Sep 2016 00:25:03 -0700 (PDT)
+X-Received: by 10.55.186.131 with SMTP id k125mr41215740qkf.140.1474442703331;
+        Wed, 21 Sep 2016 00:25:03 -0700 (PDT)
+Return-Path: <tech+bncBDNKL3GOUINRBT7LRC7QKGQEXMBUGCA@unicommerce.com>
+Received: from mail-qk0-x248.google.com (mail-qk0-x248.google.com. [2607:f8b0:400d:c09::248])
+        by mx.google.com with ESMTPS id h64si27314478qtd.128.2016.09.21.00.25.03
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 00:25:03 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::248 is neither permitted nor denied by best guess record for domain of tech+bncbdnkl3gouinrbt7lrc7qkgqexmbugca@unicommerce.com) client-ip=2607:f8b0:400d:c09::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::248 is neither permitted nor denied by best guess record for domain of tech+bncbdnkl3gouinrbt7lrc7qkgqexmbugca@unicommerce.com) smtp.mailfrom=tech+bncBDNKL3GOUINRBT7LRC7QKGQEXMBUGCA@unicommerce.com
+Received: by mail-qk0-x248.google.com with SMTP id o68sf96750356qkf.0
+        for <digvijay@unicommerce.com>; Wed, 21 Sep 2016 00:25:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=RrahxXJ2M4i6jgxPHjQXkEC+eDLMWQDxcUaILC3uUFo=;
+        b=bf864A/53kUb8+4Jg7elGcnKxTvxY7xX93TuTX+eM/ZY1C6CcMXr1IetqrVMhOWq0u
+         VhN3NuojwUMRFW4idsP5yqmlKhtqr6l/vBBgJToAsf+CB1yjnEV9o72S30QnuRqEHsu1
+         suXn/xEBubx1kvfs9aYbazjq/trSVORgEFPZAJQCUuqr5EZ7LbIFcu5DHPIVI+hWDoE1
+         9fHGAjqXI7dATV8kGB6Fvn8B6S8hcGFvAmZ5XEmiwP642NYpdCp2t95iZ/GAXSFDcE0i
+         zz3JmkwXo5INhVMCuluc+4bq04q1sFifNyvnnfDcQr2EEu8CJr0UKD4TBR0xY6kT8LRz
+         CHEg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=RrahxXJ2M4i6jgxPHjQXkEC+eDLMWQDxcUaILC3uUFo=;
+        b=UAJeKn+huxGA9oTeC3dubUwieOUdtu4MSAdBSawJXytOMzXXXJLdDk0m8GBvadiC4n
+         PVQZJma7VluZrjCBDVULIPZ40b7Ohv9sOb4EGvPVL6i+wYd6fViE93efTTZdJeVOSzme
+         k90q2gSRc56d4Jrz8+Kv2xNmawV/SpZ9oJ6KWhiWYepspbws2Kjnf1IPONBZY4g1EPKs
+         3Erb7e8xPMkzJZDro9WfA7aGrnqAJQM/Z4u4rwkkRmyCCbgqBmNX4tp5BZiMz4VWVRDJ
+         ZU7AkPKgr6Ke7r3yS9bmRVFhI+S2beZvhhKOyo5Z/WBw3msRbu63ogxFujH3ZEzuSlLt
+         +oGA==
+X-Gm-Message-State: AE9vXwNxFWzrsSoL3ZDRGIEUsobUIAQRIxuxt7Qygm66Mnagg5br8ea+lJtliB51tckegA==
+X-Received: by 10.13.212.149 with SMTP id w143mr7216324ywd.38.1474442703173;
+        Wed, 21 Sep 2016 00:25:03 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.36.238.68 with SMTP id b65ls3903890iti.13.canary; Wed, 21 Sep
+ 2016 00:25:02 -0700 (PDT)
+X-Received: by 10.66.157.166 with SMTP id wn6mr31269629pab.42.1474442702869;
+        Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+Received: from mail-pa0-x234.google.com (mail-pa0-x234.google.com. [2607:f8b0:400e:c03::234])
+        by mx.google.com with ESMTPS id ta8si39459501pab.231.2016.09.21.00.25.02
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c03::234 is neither permitted nor denied by best guess record for domain of ankur.pratik@unicommerce.com) client-ip=2607:f8b0:400e:c03::234;
+Received: by mail-pa0-x234.google.com with SMTP id hm5so15640853pac.0
+        for <tech@unicommerce.com>; Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+X-Received: by 10.66.86.105 with SMTP id o9mr62740791paz.108.1474442702721;
+ Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.102.106 with HTTP; Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+Received: by 10.66.102.106 with HTTP; Wed, 21 Sep 2016 00:25:02 -0700 (PDT)
+In-Reply-To: <CAB1KeyH2qttdBYRAD6WwwDHuWxbVp437HAx-JaKdqOHezbnXeg@mail.gmail.com>
+References: <CAB1KeyH2qttdBYRAD6WwwDHuWxbVp437HAx-JaKdqOHezbnXeg@mail.gmail.com>
+From: Ankur Pratik <ankur.pratik@unicommerce.com>
+Date: Wed, 21 Sep 2016 12:55:02 +0530
+Message-ID: <CAFAuwU45GJALNbETFhUYZpK+uxgGOPdF1BTN8XY+5ay5Vy32tQ@mail.gmail.com>
+Subject: Re: Long awaited holiday - Lets go to Singapore!
+To: Harsh Pal <harsh@unicommerce.com>
+Cc: Product Team <product@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, vani verma <vani@unicommerce.com>, 
+	Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f46d042de69789a6e8053cff71d7
+X-Original-Sender: ankur.pratik@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400e:c03::234 is neither permitted nor denied by best
+ guess record for domain of ankur.pratik@unicommerce.com) smtp.mailfrom=ankur.pratik@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--f46d042de69789a6e8053cff71d7
+Content-Type: text/plain; charset=UTF-8
+
+Date ???
+
+Ankur Pratik
+Unicommerce Android Team
+
+On Sep 21, 2016 12:49 PM, "Harsh Pal" <harsh@unicommerce.com> wrote:
+
+> Hello everyone!
+>
+> After many attempts and repeated discussions, we are proposing an
+> international outing to SINGAPORE
+> [image: Image result for sentosa island]
+>
+> This is an invitation to all of you, please fill the form below, many
+> details around the trip are shared in it and send your comments, if any.
+>
+> https://goo.gl/forms/OOo3eBJ5Y7NdOirw2
+>
+> Regards
+> Harsh \m/
+>
+> PS: We will expect your response by 4 pm today.
+>
+>
+>
+>
+>
+>
+>
+
+--f46d042de69789a6e8053cff71d7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">Date ???<br><br></p>
+<p dir=3D"ltr">Ankur Pratik<br>
+Unicommerce Android Team</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Sep 21, 2016 1=
+2:49 PM, &quot;Harsh Pal&quot; &lt;<a href=3D"mailto:harsh@unicommerce.com"=
+>harsh@unicommerce.com</a>&gt; wrote:<br type=3D"attribution"><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex"><div dir=3D"ltr">Hello everyone!<div><br></div><div>After=
+ many attempts and repeated discussions, we are proposing an international =
+outing to SINGAPORE</div><div><img alt=3D"Image result for sentosa island" =
+width=3D"820" height=3D"537" src=3D"http://www.todayonline.com/sites/defaul=
+t/files/styles/photo_gallery_image_lightbox/public/20521613.JPG?itok=3D81ju=
+ps95" style=3D"margin-top:0px"></div><div><br></div><div>This is an invitat=
+ion to all of you, please fill the form below, many details around the trip=
+ are shared in it and send your comments, if any.</div><div><br></div><div>=
+<a href=3D"https://goo.gl/forms/OOo3eBJ5Y7NdOirw2" target=3D"_blank">https:=
+//goo.gl/forms/<wbr>OOo3eBJ5Y7NdOirw2</a><br></div><div><br></div><div>Rega=
+rds</div><div>Harsh \m/</div><div><br></div><div>PS: We will expect your re=
+sponse by 4 pm today.</div><div><br></div><div><br></div><div><br></div><di=
+v><br></div><div><br></div><div><br></div></div>
+</blockquote></div></div>
+
+--f46d042de69789a6e8053cff71d7--

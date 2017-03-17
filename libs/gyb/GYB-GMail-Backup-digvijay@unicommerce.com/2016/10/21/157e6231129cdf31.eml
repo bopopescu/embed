@@ -1,0 +1,276 @@
+MIME-Version: 1.0
+Received: by 10.140.89.71 with HTTP; Fri, 21 Oct 2016 00:27:20 -0700 (PDT)
+Date: Fri, 21 Oct 2016 12:57:20 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopbkkEHdNcpC+iHgJSXDXqDLSHgiLJgUjQb9TSXkVQ=Hw@mail.gmail.com>
+Subject: ScriptEditView.html
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113a816afd447b053f5af80c
+
+--001a113a816afd447b053f5af80c
+Content-Type: text/plain; charset=UTF-8
+
+<div class="home_wrapper" id="scriptEditViewHtml">
+
+        <div>
+
+                <div id="ltDiv" class="lb-over" hidden="true">
+
+                        <div class="lb-over-inner round_all">
+
+                                <div id="tempDiv" style="margin: 40px;
+line-height: 24px;"></div>
+
+                        </div>
+
+                </div>
+
+                <h3 style="margin-top: 20px;">Script Edit</h3><br>Enter
+Script Name :
+
+                <input type="text" id="lookupScript" style="width:300px"/>
+
+                <% if (hasRole('super')) { %>
+
+                <button id="deleteScript" class="btn btn-success rfloat50"
+
+                                type="submit" style="float:right;margin-left:
+10px;">Delete</button>
+
+                <% }%>
+
+                <% if (hasRole('super')) { %>
+
+                <button id="createScriptVersion" class="btn btn-success
+rfloat50"
+
+                                type="submit" style="float:right">Create
+Version</button>
+
+                <% }%>
+
+                <div id="availableVersions"></div>
+
+                <div class="failure"></div>
+
+                <div class="success"></div>
+
+                <div id = "sciptContainerDiv">
+
+                        <textarea id="sciptContainer" style="width: 1025px;
+height: 500px;"></textarea>
+
+                </div>
+
+                <% if (hasRole('super')) { %>
+
+                <input type="button" value="Update Script" class=
+"updateScript" id="updateScript"/>
+
+                <% }%>
+
+                <img alt="Loading" id="loader" src="/img/uniware-loader.gif"
+style="display:none">
+
+        </div>
+
+</div>
+
+--001a113a816afd447b053f5af80c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">&lt;</span><span class=3D"gm=
+ail-s2">div</span><span class=3D"gmail-s1"> </span><span class=3D"gmail-s3"=
+>class</span><span class=3D"gmail-s1">=3D</span><span class=3D"gmail-s4">&q=
+uot;home_wrapper&quot;</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=3D"gm=
+ail-s4">&quot;scriptEditViewHtml&quot;</span><span class=3D"gmail-s1">&gt;<=
+/span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+</span><span class=3D"gmail-s1">&lt;</span><span class=3D"gmail-s2">div</sp=
+an><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">div</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=3D"gm=
+ail-s4">&quot;ltDiv&quot;</span><span class=3D"gmail-s1"> </span><span clas=
+s=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D</span><span class=
+=3D"gmail-s4">&quot;lb-over&quot;</span><span class=3D"gmail-s1"> hidden=3D=
+</span><span class=3D"gmail-s4">&quot;true&quot;</span><span class=3D"gmail=
+-s1">&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=
+=3D"gmail-s1">&lt;</span><span class=3D"gmail-s2">div</span><span class=3D"=
+gmail-s1"> </span><span class=3D"gmail-s3">class</span><span class=3D"gmail=
+-s1">=3D</span><span class=3D"gmail-s4">&quot;lb-over-inner round_all&quot;=
+</span><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><span class=3D"gmail-=
+s2">div</span><span class=3D"gmail-s1"> </span><span class=3D"gmail-s3">id<=
+/span><span class=3D"gmail-s1">=3D</span><span class=3D"gmail-s4">&quot;tem=
+pDiv&quot;</span><span class=3D"gmail-s1"> </span><span class=3D"gmail-s3">=
+style</span><span class=3D"gmail-s1">=3D</span><span class=3D"gmail-s4">&qu=
+ot;margin: 40px; line-height: 24px;&quot;</span><span class=3D"gmail-s1">&g=
+t;&lt;/</span><span class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&=
+gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=
+=3D"gmail-s1">&lt;/</span><span class=3D"gmail-s2">div</span><span class=3D=
+"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;/</span><sp=
+an class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">h3</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">style</span><span class=3D"gmail-s1">=3D</span><span class=3D=
+"gmail-s6">&quot;margin-top: 20px;&quot;</span><span class=3D"gmail-s1">&gt=
+;</span><span class=3D"gmail-s7">Script Edit</span><span class=3D"gmail-s1"=
+>&lt;/</span><span class=3D"gmail-s2">h3</span><span class=3D"gmail-s1">&gt=
+;&lt;</span><span class=3D"gmail-s2">br</span><span class=3D"gmail-s1">&gt;=
+</span><span class=3D"gmail-s4">Enter Script Name :</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">input</span><span class=3D"gmail-s1"> </span><span cla=
+ss=3D"gmail-s3">type</span><span class=3D"gmail-s1">=3D</span><span class=
+=3D"gmail-s4">&quot;text&quot;</span><span class=3D"gmail-s1"> </span><span=
+ class=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=
+=3D"gmail-s4">&quot;lookupScript&quot;</span><span class=3D"gmail-s1"> </sp=
+an><span class=3D"gmail-s3">style</span><span class=3D"gmail-s1">=3D</span>=
+<span class=3D"gmail-s4">&quot;width:300px&quot;</span><span class=3D"gmail=
+-s1">/&gt;</span></p>
+<p class=3D"gmail-p3"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s4">&lt;% if (hasRo=
+le(</span><span class=3D"gmail-s6">&#39;super&#39;</span><span class=3D"gma=
+il-s4">)) { %&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">button</span><span class=3D"gmail-s1"> </span><span cl=
+ass=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=3D=
+"gmail-s4">&quot;deleteScript&quot;</span><span class=3D"gmail-s1"> </span>=
+<span class=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D</span><sp=
+an class=3D"gmail-s4">&quot;btn btn-success rfloat50&quot;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </span><span class=3D"gmail-s3">type</span><span class=3D"gmail-=
+s1">=3D</span><span class=3D"gmail-s4">&quot;submit&quot;</span><span class=
+=3D"gmail-s1"> </span><span class=3D"gmail-s3">style</span><span class=3D"g=
+mail-s1">=3D</span><span class=3D"gmail-s4">&quot;float:right;margin-left: =
+10px;&quot;</span><span class=3D"gmail-s1">&gt;</span><span class=3D"gmail-=
+s5">Delete</span><span class=3D"gmail-s1">&lt;/</span><span class=3D"gmail-=
+s2">button</span><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;% }%&gt;</s=
+pan></p>
+<p class=3D"gmail-p3"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s4">&lt;% if (hasRo=
+le(</span><span class=3D"gmail-s6">&#39;super&#39;</span><span class=3D"gma=
+il-s4">)) { %&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">button</span><span class=3D"gmail-s1"> </span><span cl=
+ass=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=3D=
+"gmail-s4">&quot;createScriptVersion&quot;</span><span class=3D"gmail-s1"> =
+</span><span class=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D</s=
+pan><span class=3D"gmail-s4">&quot;btn btn-success rfloat50&quot;</span></p=
+>
+<p class=3D"gmail-p3"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </span><span class=3D"gmail-s3">type</span><span class=3D"gmail-=
+s4">=3D</span><span class=3D"gmail-s6">&quot;submit&quot;</span><span class=
+=3D"gmail-s4"> </span><span class=3D"gmail-s3">style</span><span class=3D"g=
+mail-s4">=3D</span><span class=3D"gmail-s6">&quot;float:right&quot;</span><=
+span class=3D"gmail-s4">&gt;</span><span class=3D"gmail-s5">Create Version<=
+/span><span class=3D"gmail-s4">&lt;/</span><span class=3D"gmail-s2">button<=
+/span><span class=3D"gmail-s4">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;% }%&gt;</s=
+pan></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">div</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=3D"gm=
+ail-s4">&quot;availableVersions&quot;</span><span class=3D"gmail-s1">&gt;&l=
+t;/</span><span class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&gt;<=
+/span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">div</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D</span><span class=3D=
+"gmail-s6">&quot;failure&quot;</span><span class=3D"gmail-s1">&gt;&lt;/</sp=
+an><span class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&gt;</span><=
+/p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">div</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D</span><span class=3D=
+"gmail-s6">&quot;success&quot;</span><span class=3D"gmail-s1">&gt;&lt;/</sp=
+an><span class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&gt;</span><=
+/p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">div</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">id</span><span class=3D"gmail-s1"> =3D </span><span class=3D"=
+gmail-s4">&quot;sciptContainerDiv&quot;</span><span class=3D"gmail-s1">&gt;=
+</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=
+=3D"gmail-s1">&lt;</span><span class=3D"gmail-s2">textarea</span><span clas=
+s=3D"gmail-s1"> </span><span class=3D"gmail-s3">id</span><span class=3D"gma=
+il-s1">=3D</span><span class=3D"gmail-s4">&quot;sciptContainer&quot;</span>=
+<span class=3D"gmail-s1"> </span><span class=3D"gmail-s3">style</span><span=
+ class=3D"gmail-s1">=3D</span><span class=3D"gmail-s4">&quot;width: 1025px;=
+ height: 500px;&quot;</span><span class=3D"gmail-s1">&gt;&lt;/</span><span =
+class=3D"gmail-s2">textarea</span><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;/</span><sp=
+an class=3D"gmail-s2">div</span><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p3"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s4">&lt;% if (hasRo=
+le(</span><span class=3D"gmail-s6">&#39;super&#39;</span><span class=3D"gma=
+il-s4">)) { %&gt;</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">input</span><span class=3D"gmail-s1"> </span><span cla=
+ss=3D"gmail-s3">type</span><span class=3D"gmail-s1">=3D</span><span class=
+=3D"gmail-s4">&quot;button&quot;</span><span class=3D"gmail-s1"> </span><sp=
+an class=3D"gmail-s3">value</span><span class=3D"gmail-s1">=3D</span><span =
+class=3D"gmail-s4">&quot;Update Script&quot;</span><span class=3D"gmail-s1"=
+> </span><span class=3D"gmail-s3">class</span><span class=3D"gmail-s1">=3D<=
+/span><span class=3D"gmail-s4">&quot;updateScript&quot;</span><span class=
+=3D"gmail-s1"> </span><span class=3D"gmail-s3">id</span><span class=3D"gmai=
+l-s1">=3D</span><span class=3D"gmail-s4">&quot;updateScript&quot;</span><sp=
+an class=3D"gmail-s1">/&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;% }%&gt;</s=
+pan></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s5">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 </span><span class=3D"gmail-s1">&lt;</span><spa=
+n class=3D"gmail-s2">img</span><span class=3D"gmail-s1"> </span><span class=
+=3D"gmail-s3">alt</span><span class=3D"gmail-s1">=3D</span><span class=3D"g=
+mail-s4">&quot;Loading&quot;</span><span class=3D"gmail-s1"> </span><span c=
+lass=3D"gmail-s3">id</span><span class=3D"gmail-s1">=3D</span><span class=
+=3D"gmail-s4">&quot;loader&quot;</span><span class=3D"gmail-s1"> </span><sp=
+an class=3D"gmail-s3">src</span><span class=3D"gmail-s1">=3D</span><span cl=
+ass=3D"gmail-s4">&quot;/img/uniware-loader.gif&quot;</span><span class=3D"g=
+mail-s1"> </span><span class=3D"gmail-s3">style</span><span class=3D"gmail-=
+s1">=3D</span><span class=3D"gmail-s4">&quot;display:none&quot;</span><span=
+ class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p2"><span class=3D"gmail-s4">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+</span><span class=3D"gmail-s1">&lt;/</span><span class=3D"gmail-s2">div</s=
+pan><span class=3D"gmail-s1">&gt;</span></p>
+<p class=3D"gmail-p4"><span class=3D"gmail-s1">&lt;/</span><span class=3D"g=
+mail-s4">div</span><span class=3D"gmail-s1">&gt;</span></p></div>
+
+--001a113a816afd447b053f5af80c--

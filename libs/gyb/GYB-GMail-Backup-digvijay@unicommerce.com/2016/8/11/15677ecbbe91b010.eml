@@ -1,0 +1,178 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp739869oic;
+        Wed, 10 Aug 2016 21:46:58 -0700 (PDT)
+X-Received: by 10.159.35.141 with SMTP id 13mr3867464uao.58.1470890818385;
+        Wed, 10 Aug 2016 21:46:58 -0700 (PDT)
+Return-Path: <bhupinder.garg@snapdeal.com>
+Received: from mail-ua0-x22a.google.com (mail-ua0-x22a.google.com. [2607:f8b0:400c:c08::22a])
+        by mx.google.com with ESMTPS id h76si180852vkc.72.2016.08.10.21.46.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 Aug 2016 21:46:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bhupinder.garg@snapdeal.com designates 2607:f8b0:400c:c08::22a as permitted sender) client-ip=2607:f8b0:400c:c08::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@snapdeal.com;
+       spf=pass (google.com: domain of bhupinder.garg@snapdeal.com designates 2607:f8b0:400c:c08::22a as permitted sender) smtp.mailfrom=bhupinder.garg@snapdeal.com;
+       dmarc=pass (p=QUARANTINE dis=NONE) header.from=snapdeal.com
+Received: by mail-ua0-x22a.google.com with SMTP id 97so102869874uav.3
+        for <digvijay@unicommerce.com>; Wed, 10 Aug 2016 21:46:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=snapdeal.com; s=google;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:cc;
+        bh=S0YMhL8zcoPSj5BA0I2QW6V1eOVBR6StpS0diwGEDbw=;
+        b=X4ggT3Jo4XkLFKuevEEexa8VNJEnTs/npf+IZ9Eh58jfuyGQO7FMEEJiTxk8MCoRDg
+         gu7QG39ulHvSc5i3+Z4uVBn0Amgs66AeY5AtorGAY3/hYQuWlAVDoEXanv2a2Do/vNQx
+         eIBLfgrw3r+BHWIFE1srZOZ+vT90o9sit1pDQ=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:cc;
+        bh=S0YMhL8zcoPSj5BA0I2QW6V1eOVBR6StpS0diwGEDbw=;
+        b=GF36owoP9X0oc2ZmCWo2O8fnPFw3hOGV96d3lmC3sMw9McRet4osqWES3Pbe53upyN
+         1zpNpsOwftH384swyDYxPIPFqWZHRTh/Va1mELT4F0oODwPfte9ZKRWRIoYGllLYYMWC
+         /0PnynL+CtAM7p0Q/JWzcbCPkYjNMqYTbG9LLygEyx+Yz5uhukh39q+E92cE1/spijuq
+         ZxDwSoOVARxDjI1Yjnd48i5u98ykLXQDlINsi02Siv/EoYV9n+mxg3rqqtzunw/K67bD
+         b+F49YALdJrJ/j9ToVfyyPm5zcL+AwlUrLlyp07ExUAMDyL49EspUdcuDkpb05kHK3y6
+         Ojog==
+X-Gm-Message-State: AEkooutIDZn+CmKa2kLuqYM1Q+kuTCeiLpPfrITTrbL7mP5Sx5VXuZRi7SIO63vRZjC7vnhT6Z/8ja/VcY9RGHTe
+X-Received: by 10.31.12.77 with SMTP id 74mt4323986vkm.32.1470890817945; Wed,
+ 10 Aug 2016 21:46:57 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.159.34.232 with HTTP; Wed, 10 Aug 2016 21:46:57 -0700 (PDT)
+Received: by 10.159.34.232 with HTTP; Wed, 10 Aug 2016 21:46:57 -0700 (PDT)
+In-Reply-To: <CAOk_4bnGTpTYoKvpUWkJGH2HeMmO3Ao+OFjjULsocpNEnREbKg@mail.gmail.com>
+References: <CA+ygVjDtBWoz74fJLu11yGBC8yqSo_UGWL9y5yt5_8PfREE+hQ@mail.gmail.com>
+ <CAOk_4bnGTpTYoKvpUWkJGH2HeMmO3Ao+OFjjULsocpNEnREbKg@mail.gmail.com>
+From: Bhupinder Garg <bhupinder.garg@snapdeal.com>
+Date: Thu, 11 Aug 2016 10:16:57 +0530
+Message-ID: <CA+ygVjDodq9pwDYqhRD1Rx3cpRhbjA+N4i-P8ooUQnE2ic=wcQ@mail.gmail.com>
+Subject: Re: new unicommerce employees
+Cc: aditya@unicommerce.com, karan Garg <karangarg@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11450586b556c60539c474c6
+
+--001a11450586b556c60539c474c6
+Content-Type: text/plain; charset=UTF-8
+
+Guys, hope ur coming bk to Ggn ofc after visiting the okhla ofc.
+
+Laxmi, our IT eng. will provide u additional  few things for me
+- 1 xtra laptop
+- 1 screwdriver
+- 1 dongle
+
+Pl also share ur phone numbers with me.
+
+Thx-
+bhupi
+
+On 10 Aug 2016 5:51 pm, "Anamika Singh" <anamika@unicommerce.com> wrote:
+
+> Hi Bhupi,
+>
+> We are coordinating with the concerned person regarding the same, soon
+> will share the details with you.
+>
+>
+>
+> On Wed, Aug 10, 2016 at 5:45 PM, Bhupinder Garg <
+> bhupinder.garg@snapdeal.com> wrote:
+>
+>> Hi Ruchira/Anamika,
+>> We have Karan, Aditya & Digvijay join us recently. They need SD email ids
+>> to access repos et al. Can you have these setup?
+>>
+>> -bhupi
+>>
+>
+>
+>
+> --
+> [image: photo]
+> *Regards,*
+> Anamika Singh
+> Talent Acquisition Specialist
+> Unicommerce eSolutions Pvt Ltd
+> 201,3rd Floor Okhla Phase-3 New Delhi110020
+> M: 8826711822 | 9891023475
+> W: http://www.unicommerce.com/in.linkedin.com/pub/anamika-
+> singh/20/434/829/
+>
+>
+
+--001a11450586b556c60539c474c6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">Guys, hope ur coming bk to Ggn ofc after visiting the okhla =
+ofc.</p>
+<p dir=3D"ltr">Laxmi, our IT eng. will provide u additional=C2=A0 few thing=
+s for me<br>
+- 1 xtra laptop<br>
+- 1 screwdriver<br>
+- 1 dongle</p>
+<p dir=3D"ltr">Pl also share ur phone numbers with me.</p>
+<p dir=3D"ltr">Thx-<br>
+bhupi</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On 10 Aug 2016 5:=
+51 pm, &quot;Anamika Singh&quot; &lt;<a href=3D"mailto:anamika@unicommerce.=
+com">anamika@unicommerce.com</a>&gt; wrote:<br type=3D"attribution"><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc =
+solid;padding-left:1ex"><div dir=3D"ltr">Hi Bhupi,<div><br></div><div>We ar=
+e coordinating with the concerned person regarding the same, soon will shar=
+e the details with you.=C2=A0</div><div><br></div><div><br></div></div><div=
+ class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Wed, Aug 10, 2016 =
+at 5:45 PM, Bhupinder Garg <span dir=3D"ltr">&lt;<a href=3D"mailto:bhupinde=
+r.garg@snapdeal.com" target=3D"_blank">bhupinder.garg@snapdeal.com</a>&gt;<=
+/span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Ruchira=
+/Anamika,<div>We have Karan, Aditya &amp; Digvijay join us recently. They n=
+eed SD email ids to access repos et al. Can you have these setup?</div><div=
+><br></div><div>-bhupi</div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div data-sm=
+artmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div dir=3D"ltr"><table border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" width=3D"470" style=3D"font-size:12.8000001907349px;width:=
+470px"><tbody><tr valign=3D"top"><td style=3D"border-right-width:1px;border=
+-right-style:solid;border-right-color:rgb(69,102,142);padding-right:10px;wi=
+dth:10px"><font face=3D"arial, helvetica, sans-serif" color=3D"#666666"><im=
+g src=3D"https://s3.amazonaws.com/webapp.wisestamp.com/ffxL1of0QSaDBUTQNAZG=
+_unicommerce%20new%20logo%20black%20(2).png" alt=3D"photo" style=3D"border-=
+radius:4px;width:65px;max-width:120px"></font></td><td style=3D"font-stretc=
+h:normal;padding-left:10px"><div><b><font face=3D"arial, helvetica, sans-se=
+rif" color=3D"#666666">Regards,</font></b></div><div><font color=3D"#666666=
+"><font face=3D"arial, helvetica, sans-serif">Anamika Singh<br></font><span=
+ style=3D"font-size:small">Talent Acquisition Specialist=C2=A0</span><font =
+face=3D"arial, helvetica, sans-serif"><br></font></font></div><div><font fa=
+ce=3D"arial, helvetica, sans-serif" color=3D"#666666">Unicommerce eSolution=
+s Pvt Ltd</font></div><div><div><font face=3D"arial, helvetica, sans-serif"=
+ color=3D"#666666">201,3rd Floor=C2=A0</font><span style=3D"color:rgb(102,1=
+02,102);font-family:arial,helvetica,sans-serif;font-size:small">Okhla Phase=
+-3 New Delhi110020</span></div><div><span style=3D"color:rgb(102,102,102);f=
+ont-family:arial,helvetica,sans-serif;font-size:small">M</span><span style=
+=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-size=
+:small;display:inline-block">:=C2=A0</span><span style=3D"color:rgb(102,102=
+,102);font-family:arial,helvetica,sans-serif;font-size:small">8826711822</s=
+pan><span style=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-=
+serif;font-size:small">=C2=A0| 9891023475</span></div><div><span style=3D"c=
+olor:rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-size:smal=
+l">W</span><span style=3D"color:rgb(102,102,102);font-family:arial,helvetic=
+a,sans-serif;font-size:small;white-space:nowrap;display:inline-block">:=C2=
+=A0<a href=3D"http://www.unicommerce.com/" style=3D"color:rgb(17,85,204)" t=
+arget=3D"_blank">http://www.unicommerce.com/</a></span><a href=3D"http://in=
+.linkedin.com/pub/anamika-singh/20/434/829/" title=3D"View public profile" =
+name=3D"m_2892230124197327525_UNIQUE_ID_SafeHtmlFilter_UNIQUE_ID_SafeHtmlFi=
+lter_UNIQUE_ID_SafeHtmlFilter_UNIQUE_ID_SafeHtmlFilter_webProfileURL" style=
+=3D"font-family:inherit;font-style:inherit;font-variant:inherit;font-weight=
+:inherit;line-height:inherit;color:rgb(102,102,102);font-size:11px;margin:0=
+px 0px 0px 10px;padding:0px 0px 0px 19px;border:0px;outline:0px;vertical-al=
+ign:middle;text-decoration:none;display:inline-block;zoom:1;background:url(=
+https://static.licdn.com/scds/common/u/images/apps/profile/sprite/sprite_pr=
+ofile_top_card_v8.png) 0px -249px no-repeat" target=3D"_blank"><wbr>in.link=
+edin.com/pub/anamika-<wbr>singh/20/434/829/</a></div></div><div><span></spa=
+n><span></span><br></div></td></tr></tbody></table></div></div></div></div>=
+</div></div></div></div>
+</div>
+</blockquote></div></div>
+
+--001a11450586b556c60539c474c6--

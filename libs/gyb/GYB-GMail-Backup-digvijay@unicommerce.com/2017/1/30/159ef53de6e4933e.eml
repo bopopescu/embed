@@ -1,0 +1,195 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1344648qgu;
+        Mon, 30 Jan 2017 04:22:48 -0800 (PST)
+X-Received: by 10.200.54.247 with SMTP id b52mr21631803qtc.124.1485778968360;
+        Mon, 30 Jan 2017 04:22:48 -0800 (PST)
+Return-Path: <sagar@unicommerce.com>
+Received: from mail-qt0-x235.google.com (mail-qt0-x235.google.com. [2607:f8b0:400d:c0d::235])
+        by mx.google.com with ESMTPS id k32si9393821qtc.252.2017.01.30.04.22.48
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jan 2017 04:22:48 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::235 is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) client-ip=2607:f8b0:400d:c0d::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::235 is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) smtp.mailfrom=sagar@unicommerce.com
+Received: by mail-qt0-x235.google.com with SMTP id w20so132589689qtb.1
+        for <digvijay@unicommerce.com>; Mon, 30 Jan 2017 04:22:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=7f5etV8v1z1tkLKg+bbuLL3dS1K4pfXkajorGZCyn6k=;
+        b=QX7ytQcwEyr9JZfOco4qmDDZYuj0XtJSC3tO5WJuzy6ow6VJzV8b7yTtABPxK0noiM
+         TGQoql6BpikR8GOHGIYM9T29IuaadpDQzspT97mW4k20eNk+fXhRCQm8aF4suCi1n77l
+         K9jSrGUEIev4MfSMjcrOGnhQb+9ugpxChWBYYtbevxeyW3OpakiWOtCSE0MI6wuRaP0n
+         QMyKLRCeqgAX/1nVc2tyvk5OXAun2nxP2e6GZO8hq073zTtGbe917KFxBrBXC+FpUb6B
+         wGdIwdbJWnf9sLXqNV2/JByVBo6GbUyObFMyeXqMCugznhI8D89m02P5jN6FUOlxsQhU
+         M7Mg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=7f5etV8v1z1tkLKg+bbuLL3dS1K4pfXkajorGZCyn6k=;
+        b=rNTK4sr4OlgS76VEO7WX0yWRLvNaG9bH5A1ndWtJIohldZy1GnUdVfod7EtcpypRZ5
+         /sdFDlvvjjgz7NsZedUNB4RZOZV5hQzWF2Vs7CS2O8yrteoveBmJTqjIGFNqUV5P2i1K
+         aIqzW4X/reLrHGfhdddTSUTBWqzOPLZoa1zelFlYiFn/uphNP8QJRkL+zYxCMQ2CdS6U
+         A7odsee7TXy63dL2QEPDVGo/HC6nMvzClN2e5ywogSNJqsCengc3a6xupfg/8XHsg7tx
+         03jHTe6NArKcTQpiVbu1Lus3OFuzhwxwDXe1uXOU7ZDDLQSP8ftKhpQEBBQoDWcWIwg+
+         fXhg==
+X-Gm-Message-State: AIkVDXJHzocGLCr3wvkc8booZbOSZMr6xkZn1Nql7Op8UiiRDjOrktzBnGyub6/xgMA2TkCE+i8/Mc47TDMs8w==
+X-Received: by 10.200.54.40 with SMTP id m37mr19387460qtb.211.1485778968032;
+ Mon, 30 Jan 2017 04:22:48 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.173.91 with HTTP; Mon, 30 Jan 2017 04:22:47 -0800 (PST)
+In-Reply-To: <CA+zaFGj2ihBjE+0Nw6rfTC1tKVFBzqofCMjTsrSfXNY0oGcV7A@mail.gmail.com>
+References: <CAJF3sor+ZBQZaB5=1UHQ=gmP5y2=ppat=QmOUhmNFM1OHjqcbw@mail.gmail.com>
+ <CA+zaFGj2ihBjE+0Nw6rfTC1tKVFBzqofCMjTsrSfXNY0oGcV7A@mail.gmail.com>
+From: Sagar Sahni <sagar@unicommerce.com>
+Date: Mon, 30 Jan 2017 17:52:47 +0530
+Message-ID: <CAAgrUr-mCMXid1kE8AX_i8VosrWsvNdak4oZZOp4Rxqa+kn0CQ@mail.gmail.com>
+Subject: Re: Queries for fba recon of amazon
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113787249aea9d05474edf76
+
+--001a113787249aea9d05474edf76
+Content-Type: text/plain; charset=UTF-8
+
+Please run this query
+
+Regards
+
+On Mon, Jan 30, 2017 at 4:29 PM, Sunny Agarwal <sunny@unicommerce.com>
+wrote:
+
+> Sagar,
+>
+> Let me know when the script changes are done. I'll run this query then.
+>
+> - Sunny
+>
+> On Mon, Jan 30, 2017 at 3:18 PM, Digvijay Sharma <digvijay@unicommerce.com
+> > wrote:
+>
+>> db.source.update({"code":"AMAZON_FBA"},{$addToSet:{"sourceProperties" :{
+>> $each:[
+>> {
+>> "sourceCode" : "AMAZON_FBA",
+>> "name" : "reconciliation.invoice.list.script.name",
+>> "value" : "amazonIndiaReconciliationInvoiceListScript"
+>> },
+>> {
+>> "sourceCode" : "AMAZON_FBA",
+>> "name" : "reconciliation.invoice.detail.script.name",
+>> "value" : "amazonIndiaReconciliationInvoiceDetailScript"
+>> },
+>> {
+>> "sourceCode" : "AMAZON_FBA",
+>> "name" : "unreconcilied.order.item.script.name",
+>> "value" : "amazonIndiaUnreconciliedOrdersScript"
+>> },
+>> {
+>> "sourceCode" : "AMAZON_FBA",
+>> "name" : "order.reconciliation.enabled",
+>> "value" : "true"
+>> },
+>> {
+>> "sourceCode" : "AMAZON_FBA",
+>> "name" : "payment.reconciliation.enabled",
+>> "value" : "false"
+>> }
+>> ]
+>> }
+>> }})
+>>
+>
+>
+
+--001a113787249aea9d05474edf76
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Please run this query<br><br>Regards</div><div class=3D"gm=
+ail_extra"><br><div class=3D"gmail_quote">On Mon, Jan 30, 2017 at 4:29 PM, =
+Sunny Agarwal <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com=
+" target=3D"_blank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc s=
+olid;padding-left:1ex"><div dir=3D"ltr">Sagar,<div><br></div><div>Let me kn=
+ow when the script changes are done. I&#39;ll run this query then.</div><di=
+v><br></div><div>- Sunny</div></div><div class=3D"gmail_extra"><br><div cla=
+ss=3D"gmail_quote">On Mon, Jan 30, 2017 at 3:18 PM, Digvijay Sharma <span d=
+ir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank=
+">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div dir=3D"ltr"><div>db.source.update({&quot;code&quot;:&quot;AMAZ=
+<wbr>ON_FBA&quot;},{$addToSet:{&quot;sourcePr<wbr>operties&quot; :{ $each:[=
+</div><div><span class=3D"m_2534086673334505013m_-4037670784595873755gmail-=
+Apple-tab-span" style=3D"white-space:pre-wrap">			</span>{</div><div><span =
+class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" s=
+tyle=3D"white-space:pre-wrap">			</span>&quot;sourceCode&quot; : &quot;AMAZ=
+ON_FBA&quot;,</div><div><span class=3D"m_2534086673334505013m_-403767078459=
+5873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot=
+;name&quot; : &quot;<a href=3D"http://reconciliation.invoice.list.script.na=
+me" target=3D"_blank">reconciliation.invoice.list.s<wbr>cript.name</a>&quot=
+;,</div><div><span class=3D"m_2534086673334505013m_-4037670784595873755gmai=
+l-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;value&quot=
+; : &quot;amazonIndiaReconciliationInvo<wbr>iceListScript&quot;</div><div><=
+span class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-sp=
+an" style=3D"white-space:pre-wrap">		</span>},</div><div><span class=3D"m_2=
+534086673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"whit=
+e-space:pre-wrap">		</span>{</div><div><span class=3D"m_2534086673334505013=
+m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">=
+			</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span =
+class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" s=
+tyle=3D"white-space:pre-wrap">			</span>&quot;name&quot; : &quot;<a href=3D=
+"http://reconciliation.invoice.detail.script.name" target=3D"_blank">reconc=
+iliation.invoice.detail<wbr>.script.name</a>&quot;,</div><div><span class=
+=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" style=
+=3D"white-space:pre-wrap">			</span>&quot;value&quot; : &quot;amazonIndiaRe=
+conciliationInvo<wbr>iceDetailScript&quot;</div><div><span class=3D"m_25340=
+86673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-sp=
+ace:pre-wrap">		</span>},</div><div><span class=3D"m_2534086673334505013m_-=
+4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">		<=
+/span>{</div><div><span class=3D"m_2534086673334505013m_-403767078459587375=
+5gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;sourc=
+eCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=3D"m_2534086673=
+334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:p=
+re-wrap">			</span>&quot;name&quot; : &quot;<a href=3D"http://unreconcilied=
+.order.item.script.name" target=3D"_blank">unreconcilied.order.item.scri<wb=
+r>pt.name</a>&quot;,</div><div><span class=3D"m_2534086673334505013m_-40376=
+70784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</spa=
+n>&quot;value&quot; : &quot;amazonIndiaUnreconciliedOrder<wbr>sScript&quot;=
+</div><div><span class=3D"m_2534086673334505013m_-4037670784595873755gmail-=
+Apple-tab-span" style=3D"white-space:pre-wrap">		</span>},</div><div><span =
+class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" s=
+tyle=3D"white-space:pre-wrap">				</span>{</div><div><span class=3D"m_25340=
+86673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-sp=
+ace:pre-wrap">			</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</d=
+iv><div><span class=3D"m_2534086673334505013m_-4037670784595873755gmail-App=
+le-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;name&quot; : &q=
+uot;order.reconciliation.enabled&quot;<wbr>,</div><div><span class=3D"m_253=
+4086673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-=
+space:pre-wrap">			</span>&quot;value&quot; : &quot;true&quot;</div><div><s=
+pan class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-spa=
+n" style=3D"white-space:pre-wrap">		</span>},</div><div><span class=3D"m_25=
+34086673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white=
+-space:pre-wrap">	</span>{</div><div><span class=3D"m_2534086673334505013m_=
+-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">		=
+	</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span cl=
+ass=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" sty=
+le=3D"white-space:pre-wrap">			</span>&quot;name&quot; : &quot;payment.reco=
+nciliation.enable<wbr>d&quot;,</div><div><span class=3D"m_25340866733345050=
+13m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap=
+">			</span>&quot;value&quot; : &quot;false&quot;</div><div><span class=3D"=
+m_2534086673334505013m_-4037670784595873755gmail-Apple-tab-span" style=3D"w=
+hite-space:pre-wrap">		</span>}</div><div><span class=3D"m_2534086673334505=
+013m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wra=
+p">		</span>]</div><div><span class=3D"m_2534086673334505013m_-403767078459=
+5873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">		</span>}</div=
+><div><span class=3D"m_2534086673334505013m_-4037670784595873755gmail-Apple=
+-tab-span" style=3D"white-space:pre-wrap">		</span>}})</div></div>
+</blockquote></div><br></div>
+</blockquote></div><br></div>
+
+--001a113787249aea9d05474edf76--

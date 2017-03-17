@@ -1,0 +1,112 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp2181339itg;
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+X-Received: by 10.129.165.78 with SMTP id c75mr138935ywh.48.1474967186712;
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+Return-Path: <tech+bncBCY6PLPHVEHBBEXNVC7QKGQEFEKFI3Y@unicommerce.com>
+Received: from mail-yw0-x245.google.com (mail-yw0-x245.google.com. [2607:f8b0:4002:c05::245])
+        by mx.google.com with ESMTPS id d67si443840ywb.236.2016.09.27.02.06.26
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbexnvc7qkgqefekfi3y@unicommerce.com) client-ip=2607:f8b0:4002:c05::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbexnvc7qkgqefekfi3y@unicommerce.com) smtp.mailfrom=tech+bncBCY6PLPHVEHBBEXNVC7QKGQEFEKFI3Y@unicommerce.com
+Received: by mail-yw0-x245.google.com with SMTP id g18sf17688361ywb.0
+        for <digvijay@unicommerce.com>; Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=/oPwwqkHK10di8ADaQ/dL/tK2z+bMM7FgkaYtOw4ewQ=;
+        b=uLBi48ksMuGYt3qSVJloAMimc7wLkzrEn5KK3Ev4yYoMVt7JW1K6HALjwjQ0zpbDI5
+         S/1suEzsoP1Mmq+IYb9PSZAWT/wag/+8WrL/zrsSC+oHowrej6XDPXW4rWw4hkHnQ2kk
+         UyWGFbtzMkd/NdGJFHv+oRqvm8UVLlnuhJE0n75cjOymxHjFgNuvunPx4MIYsiobJzBL
+         yK0r/f+J013f8YuOlXiDeMkCktk3b1UFO/R89eS0+haDkFtOj7hqU0p6al8ATeEmkUkd
+         IBfdRqTVc+pyYupFldpiQ30RBHuiHxj7s5NtyPVCH9Sr6jgEwqqiU8QUKFEi+tH+HEKw
+         hUZg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=/oPwwqkHK10di8ADaQ/dL/tK2z+bMM7FgkaYtOw4ewQ=;
+        b=WZ9x8FlhjvZu0QnNmTDw+6+WfOsonsNsHb62x698yLL0KGWR3sU7hmhaIr5PfQVRxz
+         2GzoqrVrgJox+hineHOIwx9iaEEmiTgYAeqZTsEQ/k4u0IFDzRQjYhkcbyCA2OM+RS5g
+         BfR+fK1WmYYokCg6fb8mCxnjpJaZEhey03UDRMJxFkC0XqFr94SuxfWBDinfc00Fj6jB
+         Mkip2xvQvLhETg+RSOjoaBAPmWLXKFrAefxrgw/vgRMpDqSD6zN6m+KQN0M1vQIoZ4hY
+         Sbyy5ru0C64mdRorjpzFgK8TBZnOV8RWOvqe7vYUinByjGR1URv1G1V18upFPh38NXez
+         09Yg==
+X-Gm-Message-State: AE9vXwMNJjpYaxli5XQJWmpUsqXgjileNVuJGEbm/9fYDoeooxg5wzXz+c90aFeQZDyQZw==
+X-Received: by 10.13.221.143 with SMTP id g137mr5999629ywe.73.1474967186505;
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.53.114 with SMTP id l47ls13856400ote.24.gmail; Tue, 27 Sep
+ 2016 02:06:26 -0700 (PDT)
+X-Received: by 10.37.64.65 with SMTP id n62mr11940164yba.101.1474967186362;
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+Received: from mail-yw0-x235.google.com (mail-yw0-x235.google.com. [2607:f8b0:4002:c05::235])
+        by mx.google.com with ESMTPS id z5si444519yba.180.2016.09.27.02.06.26
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best guess record for domain of rachit@unicommerce.com) client-ip=2607:f8b0:4002:c05::235;
+Received: by mail-yw0-x235.google.com with SMTP id g192so4340421ywh.1
+        for <tech@unicommerce.com>; Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+X-Received: by 10.129.164.9 with SMTP id b9mr18956324ywh.145.1474967186131;
+ Tue, 27 Sep 2016 02:06:26 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.99.213 with HTTP; Tue, 27 Sep 2016 02:06:24 -0700 (PDT)
+Received: by 10.37.99.213 with HTTP; Tue, 27 Sep 2016 02:06:24 -0700 (PDT)
+In-Reply-To: <CAB1KeyHxJaVX6N0AEMP6tr1UvxnkvKf8z-qdnKaO0SsJ=R4EYw@mail.gmail.com>
+References: <CAB1KeyH2qttdBYRAD6WwwDHuWxbVp437HAx-JaKdqOHezbnXeg@mail.gmail.com>
+ <CAFAuwU45GJALNbETFhUYZpK+uxgGOPdF1BTN8XY+5ay5Vy32tQ@mail.gmail.com>
+ <CAMuJ5=qTR7dPDwMwjxLmDNrUnbBfFD6O+Q+CuN8MaModFk21Cw@mail.gmail.com>
+ <CAB1KeyFvB1C3AiDTJ4FYS0RmO-stdO0UV1OSY4DU3YYH03sYaQ@mail.gmail.com>
+ <CAB1KeyFMXuEh_D+0LVxzP_RZvJmKjaQjZajiZy_2TSu+Tnzqxw@mail.gmail.com>
+ <CALCN7aJygEg6MBNKaCeVeQZcyF-TkVH42h5DBofWp1kyY+nCvQ@mail.gmail.com>
+ <CAB1KeyHq-Vd2S9uB2K0sc=wgXW8KHnDPiAEtB+hPZqXR_+7Epw@mail.gmail.com>
+ <CAB1KeyGQ3ETuTSmF6WoSv9_e_Q5J=VXkBC5bRztFwB2463D7-Q@mail.gmail.com>
+ <CAMuJ5=q_7fHM0pbgntNJ=qFmnvV-hLWftbyTzHMF+3aVnj5+9Q@mail.gmail.com>
+ <CALCN7a+KvgYT1TbjQ=QJd1uN+MXokS3SdXkcgJr-hXgwXqjLSQ@mail.gmail.com> <CAB1KeyHxJaVX6N0AEMP6tr1UvxnkvKf8z-qdnKaO0SsJ=R4EYw@mail.gmail.com>
+From: Rachit Sachdeva <rachit@unicommerce.com>
+Date: Tue, 27 Sep 2016 14:36:24 +0530
+Message-ID: <CAGz2fOdigGRsOMjkB-TQjE7JWka+vHBSXTkJoy50+TGE-JKJyQ@mail.gmail.com>
+Subject: Re: Long awaited holiday - Lets go to Singapore!
+To: Harsh Pal <harsh@unicommerce.com>
+Cc: Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, karun@unicommerce.com, 
+	DevOps Team <devops@unicommerce.com>, Amit Dalal <amit.dalal@unicommerce.com>, 
+	Vani Verma <vani@unicommerce.com>, Sagar Sahni <sagar@unicommerce.com>, 
+	Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	Ankur Pratik <ankur.pratik@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c1287d42f7cd5053d798fdc
+X-Original-Sender: rachit@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best
+ guess record for domain of rachit@unicommerce.com) smtp.mailfrom=rachit@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c1287d42f7cd5053d798fdc
+Content-Type: text/plain; charset=UTF-8
+
+Let's all meet at Tahiti @ 3:30PM. Please spare at least 15 minutes.
+
+Thanks
+
+--94eb2c1287d42f7cd5053d798fdc
+Content-Type: text/html; charset=UTF-8
+
+<p dir="ltr">Let&#39;s all meet at Tahiti @ 3:30PM. Please spare at least 15 minutes. </p>
+<p dir="ltr">Thanks</p>
+
+--94eb2c1287d42f7cd5053d798fdc--

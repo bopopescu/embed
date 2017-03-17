@@ -1,0 +1,2036 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp1167697qgd;
+        Thu, 12 Jan 2017 02:59:09 -0800 (PST)
+X-Received: by 10.99.119.200 with SMTP id s191mr16614805pgc.172.1484218749482;
+        Thu, 12 Jan 2017 02:59:09 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id 3si8934743plz.158.2017.01.12.02.59.06
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 12 Jan 2017 02:59:09 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v0CAx5M1004097;
+	Thu, 12 Jan 2017 16:29:05 +0530
+Date: Thu, 12 Jan 2017 16:29:05 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, shobhit@Shobhits-MacBook-Air.local,
+        garima@unicommerce.com, bhupi@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, amit.dalal.js@snapdeal.com,
+        sunny@unicommerce.com, harsh.pal.js@snapdeal.com,
+        akshay.kochhar.js@snapdeal.com, akshay.agarwal@unicommerce.com,
+        apple@apples-MacBook-Air-2.local,
+        bhuvneshwarkumar@Bhuvneshwars-MacBook-Air.local,
+        admin@Admins-MacBook-Air-4.local, harsh@unicommerce.com,
+        akshay@unicommerce.com, amit.dalal@unicommerce.com,
+        piyush.arora.js@snapdeal.com, garima.arora.js@snapdeal.com,
+        shipra@unicommerce.com, rachit@Rachits-MacBook-Air.local,
+        digvijay@unicommerce.com, Samdeesh@admins-MacBook-Air-4.local,
+        piyush@unicommerce.com, ankitbansal@Chinmays-MacBook-Air.local,
+        kunika@unicommerce.com, pradhika@unicommerce.com,
+        ankur@unicommerce.com
+Message-ID: <604925830.146.1484218745389.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1068689146.145.1483613957939.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1068689146.145.1483613957939.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #1989
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/Uniware/1989/Changes:
+
+[piyush] Dashboard from replica
+
+[piyush] Dashboard from replica
+
+[piyush] Dashboard from Replication refactoring
+
+[sunny] added logging
+
+[sunny] append -D to tracking number if order gets deleted
+
+[sunny] fix export subscription
+
+[garima.arora.js] TOL-486 : fixing fulfilment tat
+
+[akshay.agarwal.js] Add channel add activity fix
+
+[sunny] reactivate tenant api is open for all
+
+[akshay.agarwal.js] item cost price is sum of all cost price of items in un=
+reconcilied row
+
+[akshay.agarwal.js] returns tab slow fix, datatable query ix
+
+[akshay.agarwal.js] returns tab slow fix, datatable query ix
+
+[akshay.agarwal.js] append D to tracking number when reference code changed=
+ for snapdeal fix
+
+[akshay.agarwal.js] reconciliation minor changes
+
+[akshay.agarwal.js] show export link to customeer support access resource
+
+[akshay.agarwal.js] reconciliation lock bug fix
+
+[sunny] refactoring print shipment label
+
+------------------------------------------
+[...truncated 12.02 KB...]
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/=
+mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareServices=
+ ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding =
+files
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareServices ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareServices ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ UniwareService=
+s ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, f=
+ail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/a=
+spectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+=09<unknown source file>:<no line information>
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect ha=
+s not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAsp=
+ect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edStaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.LockingAspect has n=
+ot been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/LockingAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.TransactionRollback=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/TransactionRollbackAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.ShippingPackageCrea=
+tedAspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/ShippingPackageCreatedAspect.class>:=
+0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.MarkDirtyAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/MarkDirtyAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.LogActivityAspect h=
+as not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/LogActivityAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/AuditLogAspect.class>:0
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/=
+mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareServic=
+es ---
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareServices ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Un=
+iwareServices/target/UniwareServices-1.0.jar>
+[INFO]                                                                     =
+   =20
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Building UniwareWeb 1.0
+[INFO] --------------------------------------------------------------------=
+----
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been rel=
+ocated to commons-io:commons-io:jar:1.3.2
+[INFO]=20
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareWeb ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniware=
+Web/target>
+[INFO]=20
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (def=
+ault) @ UniwareWeb ---
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Uniwa=
+reWeb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareWeb=
+ ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 140 source files to <http://jenkins.unicommerce.com:8080/j=
+ob/Uniware/ws/UniwareWeb/target/classes>
+[INFO]=20
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ UniwareWeb ---
+[INFO] Configured Artifact: unicommerce:UnifierCore:2.0:jar
+[INFO] Configured Artifact: unicommerce:UnifierScraper:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCommonServices:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareServices:1.0:jar
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierCore/2.=
+0/UnifierCore-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uniware/w=
+s/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierScraper=
+/2.0/UnifierScraper-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uni=
+ware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/=
+**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UniwareCommonS=
+ervices/2.0/UniwareCommonServices-2.0.jar to <http://jenkins.unicommerce.co=
+m:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and exclu=
+des "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniwar=
+eCore/target/UniwareCore-1.0.jar> to <http://jenkins.unicommerce.com:8080/j=
+ob/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "MET=
+A-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniwar=
+eServices/target/UniwareServices-1.0.jar> to <http://jenkins.unicommerce.co=
+m:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and exclu=
+des "META-INF/**"
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareWeb ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareWeb ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareWeb --=
+-
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ UniwareWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [UniwareWeb] in [<http://jenkins.unicommerce.com:8=
+080/job/Uniware/ws/UniwareWeb/target/uniware-web]>
+[INFO] Processing war project
+[INFO] Copying webapp resources [<http://jenkins.unicommerce.com:8080/job/U=
+niware/ws/UniwareWeb/src/main/webapp]>
+[INFO] Webapp assembled in [3250 msecs]
+[INFO] Building war: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Un=
+iwareWeb/target/uniware-web.war>
+[INFO]=20
+[INFO] --- yuicompressor-maven-plugin:1.2:compress (compress) @ UniwareWeb =
+---
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/jquery/jquery.all.min.js>
+[INFO] jquery.all.min.js (630897b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/codemirror/codemirror.all.js=
+>
+[INFO] codemirror.all.js (301732b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/codemirror/velocity.all.js>
+[INFO] velocity.all.js (223830b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/unifier/unifier.all.js>
+[INFO] unifier.all.js (46277b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.home.css>
+[INFO] ui.home.css (270417b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/codemirror/ui.codemirror.al=
+l.css>
+[INFO] ui.codemirror.all.css (9467b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.login.css>
+[INFO] ui.login.css (177508b)
+[INFO] nb warnings: 0, nb errors: 0
+[INFO]=20
+[INFO] --- htmlcompressor-maven-plugin:1.3:html (htmlcompressor) @ UniwareW=
+eb ---
+[INFO] Compressing <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniw=
+areWeb/src/main/webapp/views>
+[INFO] HTML compression statistics:
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Category                    | Original                    | Compressed   =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Filesize                    | 13.0 kB                     | 12.8 kB      =
+               |=20
+| Empty Chars                 | 3045                        | 2895         =
+               |=20
+| Script Size                 | 10.9 kB                     | 10.9 kB      =
+               |=20
+| Style Size                  | 0 B                         | 0 B          =
+               |=20
+| Event Handler Size          | 0 B                         | 0 B          =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Time: 00:00:00, Preserved: 10.9 kB, Compression Ratio: 0.99, Savings: 1.1=
+6%             |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+
+[INFO] HTML compression completed.
+[INFO]=20
+[INFO] --- maven-antrun-plugin:1.7:run (run) @ UniwareWeb ---
+[INFO] Executing tasks
+
+main:
+     [echo] +---------------------------------------------------+
+     [echo]     copying war to tomcat server
+     [echo] +---------------------------------------------------+
+     [copy] Copying 7812 files to /usr/local/apache-tomcat/webapps/ROOT
+[INFO] Executed tasks
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Reactor Summary:
+[INFO]=20
+[INFO] Uniware ............................................ SUCCESS [  0.16=
+1 s]
+[INFO] UniwareCore ........................................ SUCCESS [ 12.30=
+7 s]
+[INFO] UniwareServices .................................... SUCCESS [ 24.66=
+5 s]
+[INFO] UniwareWeb ......................................... SUCCESS [ 35.77=
+2 s]
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] BUILD SUCCESS
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Total time: 01:13 min
+[INFO] Finished at: 2017-01-12T16:28:57+05:30
+[INFO] Final Memory: 174M/668M
+[INFO] --------------------------------------------------------------------=
+----
+[Uniware] $ /bin/sh -xe /tmp/hudson8470076952340743883.sh
++ /var/lib/jenkins/scripts/runBuildSqlDelta Jenkins
+297b1a2f545793b1dd7a47ced1c5d96e0007fb88
+Executing SQL Changes........................
+     1=09select "StartDeploying";
+     2=09-- alter table party add column editable tinyint(1) not null defau=
+lt 1 after st_number;
+     3=09alter table party add column tin_verified tinyint(1) not null defa=
+ult 0 after st_number;
+     4=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}],"filters":[{"id":"reconciliationStatusFilter","=
+selectedValues":["UNRECONCILED"]}],"sortColumns":[{"column":"orderTransacti=
+onDate","descending":true}]}' where datatable_type =3D 'DATATABLE_CHANNEL_P=
+AYMENT_RECONCILIATION' and code =3D 'UNRECONCILED';
+     5=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}],"filters":[],"sortColumns":[{"column":"orderTra=
+nsactionDate","descending":true}]}' where datatable_type =3D 'DATATABLE_CHA=
+NNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSACTIONS';
+     6=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"reconcili=
+ationIdentifier\" name=3D\"Order Item # (Order Id)\" value=3D\"#{#entity.re=
+conciliationIdentifier}\" width=3D\"170\" sortable=3D\"true\" align=3D\"lef=
+t\" calculated=3D\"true\" >\n            <clientTemplate><![CDATA[<a class=
+=3D\"link detailsPop\" href=3D\"/order/reconciliation\"><#=3Dobj.reconcilia=
+tionIdentifier#></a><br><span style=3D\"font-style: italic;color: #8F8F8F;\=
+">(<#=3Dobj.channelSaleOrderCode#>)</span><input type=3D\"hidden\" class=3D=
+\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\"=
+ class=3D\"reconciliationIdentifier\" value=3D\"<#=3Dobj.reconciliationIden=
+tifier#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"=
+channelProductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductN=
+ame}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=
+=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sort=
+able=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n            <clien=
+tTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (ob=
+j.channelProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\=
+t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj=
+.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\=
+n        </column>\n        <column id=3D\"channelCode\" name=3D\"Channel\"=
+ value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" ali=
+gn=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliatio=
+nStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n     =
+   <column id=3D\"orderAmount\" name=3D\"Order Amount\" value=3D\"#{#entity=
+.items}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"  >\n            <clientTemplate><![CDATA[\n\t\t\t<div style=3D\=
+"float:left;padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text=
+-align:right\">\n\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t=
+\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;pa=
+dding:0 0 0 5px;\"><#\n\t\t\t\tvar itemsSize =3D obj.orderAmount.length;\n\=
+t\t\t \tvar amount =3D 0;\n\t\t\t \tvar shipping =3D 0;\n\t\t \t\tfor(var i=
+=3D0; i<itemsSize; i++) {\n\t\t\t\t\tamount =3D amount + obj.orderAmount[i]=
+.sellingPrice;\n\t\t\t\t\tshipping =3D shipping + obj.orderAmount[i].shippi=
+ngCharges;\n\t\t\t\t}\n\t\t\t\t#><#=3Damount#><br>\n\t\t\t\t<#=3Dshipping#>=
+\n\t\t\t</div>\n\t\t]]></clientTemplate>\n        </column>\n        <colum=
+n id=3D\"totalReconcileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#e=
+ntity.totalReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\=
+"left\" calculated=3D\"true\">\n            <!--<clientTemplate><![CDATA[<a=
+ class=3D\"link detailsPop\" href=3D\"/order/reconciliation/invoiceItems\">=
+<#=3Dobj.totalReconcileAmount#></a><input type=3D\"hidden\" class=3D\"chann=
+elCode\" value=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=
+=3D\"channelSaleOrderItemCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode=
+#>\"><input type=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=
+=3Dobj.channelSaleOrderCode#>\">]]></clientTemplate>-->\n        </column>\=
+n        <column id=3D\"settlementPercentage\" name=3D\"Settlement %\" valu=
+e=3D\"#{#entity.settlementPercentage}\" width=3D\"100\" sortable=3D\"true\"=
+ align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><![CD=
+ATA[<#\n\t\t\t\tif (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div s=
+tyle=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color: #00800=
+0;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixe=
+d(2)#> %</span><#\n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.=
+settlementPercentage >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padd=
+ing:0;font-size:11px;font-weight:bold;color: #0000FF;text-align:right\">\n\=
+t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\=
+t\t} else {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px=
+;font-weight:bold;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3D=
+obj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></cli=
+entTemplate>\n        </column>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciliedBy}\" width=3D\"120\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>=
+\n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDat=
+e\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n  =
+      <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <!--<filter id=3D\"settlementPercenta=
+geFilter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':=
+\'settlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settl=
+ementPercentageFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"settlementP=
+ercentage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Am=
+ount less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmou=
+nt\',\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\=
+" type=3D\"text\" attachToColumn=3D\"totalReconcileAmount\" />-->\n        =
+<filter id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Ide=
+ntifier Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationId=
+entifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFil=
+ter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />=
+\n        <filter id=3D\"reconciliationStatusFilter\" name=3D\"Status\" con=
+dition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'val=
+ue\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multiselect\" values=
+=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTE=
+D|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" atta=
+chToColumn=3D\"reconciliationStatus\" />\n        <filter id=3D\"channelSal=
+eOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" condition=3D\"{\=
+'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'=
+value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachTo=
+Column=3D\"channelSaleOrderItemCode\" />\n        <filter id=3D\"orderTrans=
+actionDateRange\" name=3D\"Order Transaction Date Range\" condition=3D\"{\'=
+criteria\':{\'name\':\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'v=
+alue\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"daterange\" attachToC=
+olumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"channelProductI=
+dFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'criteria\':{\'nam=
+e\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#channelProdu=
+ctIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelProductId\" />\=
+n    </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYME=
+NT_RECONCILIATION";
+     7=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_RE=
+CONCILIATION_INVOICE\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.uniware.core.vo.ChannelReconciliationInvoice\",\"crit=
+eria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context=
+.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column i=
+d=3D\"created\" name=3D\"Settlement Date\" value=3D\"#{#entity.created}\" w=
+idth=3D\"130\" align=3D\"left\" sortable=3D\"false\" calculated=3D\"true\" =
+type=3D\"date\"/>\n        <column id=3D\"channelCode\" name=3D\"Channel\" =
+value=3D\"#{#entity.channelCode}\" width=3D\"140\" sortable=3D\"true\" alig=
+n=3D\"left\" calculated=3D\"true\" />\n        <column id=3D\"settlementInv=
+oiceNumber\" name=3D\"Settlement Invoice Number\" value=3D\"#{#entity.invoi=
+ceCode}\" width=3D\"250\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"link\" href=
+=3D\"/reconciliation/invoices?invoiceCode=3D<#=3Dobj.settlementInvoiceNumbe=
+r#>&channelCode=3D<#=3Dobj.channelCode#>\"><#=3Dobj.settlementInvoiceNumber=
+#></a>]]></clientTemplate>\n        </column>\n        <column id=3D\"total=
+SettlementValue\" name=3D\"Total Settlement Value\" value=3D\"#{#entity.tot=
+alSettlementValue}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" c=
+alculated=3D\"true\" />\n        <column id=3D\"downloadUrl\" name=3D\"Down=
+load Url\" value=3D\"#{#entity.downloadUrl}\" width=3D\"80\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\" />\n        <column id=3D\"downl=
+oadLink\" name=3D\"Download Link\" value=3D\"-\" width=3D\"100\" align=3D\"=
+left\" calculated=3D\"true\" >\n            <clientTemplate><![CDATA[<#\n  =
+              if(obj.downloadUrl !=3D null && obj.downloadUrl.includes(\"re=
+conciliationInvoices\")) {#>\n                    <a target=3D\"_blank\" cl=
+ass=3D\"uni-btn-link pleaseOpenInNewTab\" href=3D\"/files/<#=3Dobj.download=
+Url#>?s=3Dapp2\">Click Here</a><#\n                } else {#>\n            =
+        --<#\n                }#>\n          ]]></clientTemplate>\n        =
+</column>\n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"column\=
+" : \"created\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <=
+filters>\n        <filter id=3D\"channelFilter\" name=3D\"Channel Contains\=
+" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\'=
+,\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\" values=3D\"quer=
+y:select c.code,c.name as name from channel c where c.tenant_id =3D :tenant=
+Id\" attachToColumn=3D\"channelCode\" />\n        <filter id=3D\"invoiceNum=
+berFilter\" name=3D\"Invoice Number Contains\" condition=3D\"{\'criteria\':=
+{\'name\':\'invoiceCode\',\'operator\':\'LIKE\',\'value\':\'#{#invoiceNumbe=
+rFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"settlementInvoiceNumber\"=
+ />\n        <filter id=3D\"statusFilter\" name=3D\"Status\" condition=3D\"=
+{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#s=
+tatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:SUCCESS|SUCCESS, =
+FAILED|FAILED\" attachToColumn=3D\"statusCode\" />\n    </filters>\n</table=
+-config>\n' where name =3D "DATATABLE_CHANNEL_RECONCILIATION_INVOICE";
+     8=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"170\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.reconciliationId=
+entifier#><br>\n\t\t\t\t<span style=3D\"font-style: italic;color: #8F8F8F;\=
+"><#=3Dobj.channelSaleOrderCode#>)</span><br><#\n\t\t\t\tif(obj.saleOrderCo=
+de !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t<a class=3D\"li=
+nk detailsPop\" href=3D\"order/orderitems?orderCode=3D<#=3Dobj.saleOrderCod=
+e#>\">Order: <#=3Dobj.saleOrderCode#></a>\n\t\t\t\t<#}#>\n\t\t\t]]></client=
+Template>\n        </column>\n        <column id=3D\"channelProductName\" n=
+ame=3D\"Product\" value=3D\"#{#entity.channelProductName}\" width=3D\"150\"=
+ sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D\"true=
+\"/>\n        <column id=3D\"channelProductId\" name=3D\"Product\" value=3D=
+\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[\n=
+\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channelProductName =
+!=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t<br><span st=
+yle=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelProductName#>=
+)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        </column>\n =
+       <column id=3D\"channelCode\" name=3D\"Channel\" value=3D\"#{#entity.=
+channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\" name=3D\"St=
+atus Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"ord=
+erAmount\" name=3D\"Order Amount\" value=3D\"#{#entity.items}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\"><#\n=
+\t\t\t\tvar itemsSize =3D obj.orderAmount.length;\n\t\t\t \tvar amount =3D =
+0;\n\t\t\t \tvar shipping =3D 0;\n\t\t \t\tfor(var i=3D0; i<itemsSize; i++)=
+ {\n\t\t\t\t\tamount =3D amount + obj.orderAmount[i].sellingPrice;\n\t\t\t\=
+t\tshipping =3D shipping + obj.orderAmount[i].shippingCharges;\n\t\t\t\t}\n=
+\t\t\t\t#><#=3Damount#><br>\n\t\t\t\t<#=3Dshipping#>\n\t\t\t</div>\n\t\t]]>=
+</clientTemplate>\n        </column>\n        <column id=3D\"totalReconcile=
+Amount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmo=
+unt}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\">\n            <!--<clientTemplate><![CDATA[<a class=3D\"link details=
+Pop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcile=
+Amount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=
+=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"channelSaleOrderI=
+temCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode#>\"><input type=3D\"h=
+idden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrde=
+rCode#>\">]]></clientTemplate>-->\n        </column>\n        <column id=3D=
+\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.settle=
+mentPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (ob=
+j.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;pa=
+dding:0;font-size:11px;font-weight:bold;color: #008000;text-align:right\">\=
+n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\=
+t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercentage >=
+=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;f=
+ont-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dob=
+j.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\=
+t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;colo=
+r: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercenta=
+ge.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"reconciledBy\" name=3D\"Reconciled By\" v=
+alue=3D\"#{#entity.reconciledBy}\" width=3D\"120\" sortable=3D\"true\" alig=
+n=3D\"left\" calculated=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n=
+        <![CDATA[{\"column\" : \"orderTransactionDate\", \"descending\" : \=
+"true\"}]]>\n    </defaultSortBy>\n    <filters>\n        <filter id=3D\"ch=
+annelFilter\" name=3D\"Channel Contains\" condition=3D\"{\'criteria\':{\'na=
+me\':\'channelCode\',\'operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\=
+" type=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=3D\"query:=
+select c.code,c.name as name from channel c where c.tenant_id =3D :tenantId=
+\"/>\n        <filter id=3D\"settlementPercentageFilter\" name=3D\"% greate=
+r than\" condition=3D\"{\'criteria\':{\'name\':\'settlementPercentage\',\'o=
+perator\':\'GREATER_THAN\',\'value\':\'#{#settlementPercentageFilter}\'}}\"=
+ type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementPerc=
+entageFilter)}\" attachToColumn=3D\"settlementPercentage\" />\n        <fil=
+ter id=3D\"settlementAmountFilter\" name=3D\"Amount less than\" condition=
+=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\',\'operator\':\'LESS_T=
+HAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"text\" valueExp=
+ression=3D\"#{new java.lang.Double(#settlementAmountFilter)}\" attachToColu=
+mn=3D\"totalReconcileAmount\" />\n        <filter id=3D\"reconciliationIden=
+tifierFilter\" name=3D\"Reconciliation Identifier Contains\" condition=3D\"=
+{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',=
+\'value\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\"text\" attach=
+ToColumn=3D\"reconciliationIdentifier\" />\n        <filter id=3D\"reconcil=
+iationStatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\=
+':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFil=
+ter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AW=
+AITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCIL=
+ED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatus=
+\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Ord=
+er Item Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliat=
+ionIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCo=
+deFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode=
+\" />\n        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order Tr=
+ansaction Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransac=
+tionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRan=
+ge}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" />=
+\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Conta=
+ins\" condition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operato=
+r\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" a=
+ttachToColumn=3D\"channelProductId\" />\n    </filters>\n</table-config>\n'=
+ where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+     9=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"quantity"}],"filters":[{"id"=
+:"reconciliationStatusFilter","selectedValues":["AWAITING_PAYMENT"]}],"sort=
+Columns":[{"column":"orderTransactionDate","descending":true}]}' where data=
+table_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'PEN=
+DING_TRANSACTIONS';
+    10=09update user_datatable_view set config_json=3D '{"resultsPerPage":2=
+5,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdentif=
+ier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcili=
+ationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"name=
+":"settlementPercentage"},{"name":"quantity"}],"filters":[{"id":"reconcilia=
+tionStatusFilter","selectedValues":["UNRECONCILED"]}],"sortColumns":[{"colu=
+mn":"orderTransactionDate","descending":true}]}' where datatable_type =3D '=
+DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'UNRECONCILED';
+    11=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}, {"name":"quantity"}],"filters":[],"sortColumns"=
+:[{"column":"orderTransactionDate","descending":true}]}' where datatable_ty=
+pe =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSAC=
+TIONS';
+    12=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"250\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left=
+;padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:righ=
+t\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\=
+t<span>Channel Order Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t<span>Order C=
+ode: </span>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\"float:left;padding:0 0=
+ 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br>\n\t\t\t\t\t<#=
+=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D nu=
+ll && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleas=
+eOpenInNewTab\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCo=
+de#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\=
+t]]></clientTemplate>\n        </column>\n        <column id=3D\"channelPro=
+ductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\" wid=
+th=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hid=
+den=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"Produc=
+t\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><=
+![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channelPr=
+oductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t<b=
+r><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelPro=
+ductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        </=
+column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" value=3D\"=
+#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\" n=
+ame=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" sor=
+table=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column =
+id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity.sellingP=
+rice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\=
+"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharges\" name=
+=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" width=3D\"15=
+0\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D\"t=
+rue\"/>\n        <column id=3D\"orderAmount\" name=3D\"Total Order Amount\"=
+ value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" al=
+ign=3D\"left\" calculated=3D\"true\"  >\n            <clientTemplate><![CDA=
+TA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-style: i=
+talic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Price: </sp=
+an>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\t<di=
+v style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sellingPrice=
+#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTemplate>\n =
+       </column>\n        <column id=3D\"totalReconcileAmount\" name=3D\"Se=
+ttlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" width=3D\"120=
+\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n           =
+ <!--<clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"/orde=
+r/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><input t=
+ype=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"=
+><input type=3D\"hidden\" class=3D\"channelSaleOrderItemCode\" value=3D\"<#=
+=3Dobj.channelSaleOrderItemCode#>\"><input type=3D\"hidden\" class=3D\"chan=
+nelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]></clientT=
+emplate>-->\n        </column>\n        <column id=3D\"settlementPercentage=
+\" name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\" widt=
+h=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n  =
+          <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPercentage=
+ >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px=
+;font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span><#=3D=
+obj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (obj.se=
+ttlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\t\t\t\=
+t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color:=
+ #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage=
+.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D\"floa=
+t:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-align:=
+right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</spa=
+n><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n        <co=
+lumn id=3D\"quantity\" name=3D\"Quantity\" value=3D\"#{#entity.quantity}\" =
+width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/=
+>\n        <column id=3D\"reconciledBy\" name=3D\"Reconciled By\" value=3D\=
+"#{#entity.reconciledBy}\" width=3D\"120\" sortable=3D\"true\" align=3D\"le=
+ft\" calculated=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n        =
+<![CDATA[{\"column\" : \"orderTransactionDate\", \"descending\" : \"true\"}=
+]]>\n    </defaultSortBy>\n    <filters>\n        <filter id=3D\"channelFil=
+ter\" name=3D\"Channel Contains\" condition=3D\"{\'criteria\':{\'name\':\'c=
+hannelCode\',\'operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\" type=
+=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=3D\"query:select=
+ c.code,c.name as name from channel c where c.tenant_id =3D :tenantId\"/>\n=
+        <filter id=3D\"settlementPercentageFilter\" name=3D\"% greater than=
+\" condition=3D\"{\'criteria\':{\'name\':\'settlementPercentage\',\'operato=
+r\':\'GREATER_THAN\',\'value\':\'#{#settlementPercentageFilter}\'}}\" type=
+=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementPercentag=
+eFilter)}\" attachToColumn=3D\"settlementPercentage\" />\n        <filter i=
+d=3D\"settlementAmountFilter\" name=3D\"Amount less than\" condition=3D\"{\=
+'criteria\':{\'name\':\'totalReconcileAmount\',\'operator\':\'LESS_THAN\',\=
+'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"text\" valueExpression=
+=3D\"#{new java.lang.Double(#settlementAmountFilter)}\" attachToColumn=3D\"=
+totalReconcileAmount\" />\n        <filter id=3D\"reconciliationIdentifierF=
+ilter\" name=3D\"Reconciliation Identifier Contains\" condition=3D\"{\'crit=
+eria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value=
+\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\"text\" attachToColum=
+n=3D\"reconciliationIdentifier\" />\n        <filter id=3D\"reconciliationS=
+tatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'sta=
+tusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}=
+}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_=
+PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNR=
+ECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n=
+        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item=
+ Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIden=
+tifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilte=
+r}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n=
+        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order Transacti=
+on Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransactionDat=
+e\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}=
+\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" />\n     =
+   <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Contains\" c=
+ondition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operator\':\'L=
+IKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachTo=
+Column=3D\"channelProductId\" />\n    </filters>\n</table-config>\n' where =
+name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    13=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"270\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right=
+\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t=
+<span>Channel Order Code: </span>\n\t\t\t\t\t<br><#\n\t\t\t\t\tif(obj.saleO=
+rderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<span>O=
+rder Code: </span>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\=
+"float:left;padding:0 0 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentif=
+ier#><br>\n\t\t\t\t\t<#=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(ob=
+j.saleOrderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t=
+<a class=3D\"link pleaseOpenInNewTab\" href=3D\"/order/orderitems?orderCode=
+=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>=
+\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n        <c=
+olumn id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#entity.ch=
+annelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProd=
+uctId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n      =
+      <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\=
+t\t<# if (obj.channelProductName !=3D null && obj.channelProductName !=3D \=
+"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;=
+\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clie=
+ntTemplate>\n        </column>\n        <column id=3D\"channelCode\" name=
+=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D=
+\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusC=
+ode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price\" va=
+lue=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=
+=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.ship=
+pingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"orderAmount\" na=
+me=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t=
+\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n=
+\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"totalRe=
+concileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalRecon=
+cileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculat=
+ed=3D\"true\">\n            <!--<clientTemplate><![CDATA[<a class=3D\"link =
+detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalRe=
+concileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=
+=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"channelSal=
+eOrderItemCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode#>\"><input typ=
+e=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelS=
+aleOrderCode#>\">]]></clientTemplate>-->\n        </column>\n        <colum=
+n id=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity=
+.settlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\=
+tif (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:=
+left;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:ri=
+ght\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span>=
+<#\n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPerce=
+ntage >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size=
+:11px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span>=
+<#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n=
+\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bo=
+ld;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementP=
+ercentage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n =
+       </column>\n        <column id=3D\"quantity\" name=3D\"Quantity\" val=
+ue=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\"=
+left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" so=
+rtable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\=
+n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate=
+\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n   =
+     <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFi=
+lter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'se=
+ttlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlemen=
+tPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPerce=
+ntage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount=
+ less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\'=
+,\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" ty=
+pe=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountF=
+ilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=
+=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Co=
+ntains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\'=
+,\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\"=
+ type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        =
+<filter id=3D\"reconciliationStatusFilter\" name=3D\"Status\" condition=3D\=
+"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#=
+reconciliationStatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RE=
+CONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, =
+UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=
+=3D\"reconciliationStatus\" />\n        <filter id=3D\"channelSaleOrderItem=
+CodeFilter\" name=3D\"Order Item Code Contains\" condition=3D\"{\'criteria\=
+':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'=
+#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\=
+"channelSaleOrderItemCode\" />\n        <filter id=3D\"orderTransactionDate=
+Range\" name=3D\"Order Transaction Date Range\" condition=3D\"{\'criteria\'=
+:{\'name\':\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'value\':\'#=
+{#orderTransactionDateRange}\'}}\" type=3D\"daterange\" attachToColumn=3D\"=
+orderTransactionDate\" />\n        <filter id=3D\"channelProductIdFilter\" =
+name=3D\"Product Id Contains\" condition=3D\"{\'criteria\':{\'name\':\'chan=
+nelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#channelProductIdFilter=
+}\'}}\" type=3D\"text\" attachToColumn=3D\"channelProductId\" />\n    </fil=
+ters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCI=
+LIATION";
+    14=09-- Akshay Ag; | Add tat column and filter in item type datatable |=
+ 22 Nov 2016
+    15=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE SEARCH ITE=
+M TYPE\" height=3D\"1400\">\n    <queryString>\n        <![CDATA[from item_=
+type it join category c on it.category_id =3D c.id left join tax_type t on =
+it.tax_type_id =3D t.id where it.tenant_id =3D :tenantId and it.sku_code !=
+=3D \'unknown-sku\']]>\n    </queryString>\n    <columns>\n        <column =
+id=3D\"itemType\" name=3D\"Item Name\" value=3D\"it.name\" width=3D\"215\" =
+sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"productCode=
+\" name=3D\"Sku Code\" value=3D\"it.sku_code\" width=3D\"240\" sortable=3D\=
+"true\" align=3D\"left\">\n            <clientTemplate><![CDATA[<# var skuC=
+ode =3D encodeURI(obj.productCode).replace(\"#\", \"%23\"); #><div class=3D=
+\"lfloat10\"><a class=3D\"link\" href=3D\"/products/edit?sku=3D<#=3DskuCode=
+#>\"><#=3Dobj.productCode#></a><div data-skucode=3D\"<#=3DproductCode#>\" c=
+lass=3D\"productInfoIcon link glyphicon glyphicon-info-sign\"></div></div>]=
+]></clientTemplate>\n        </column>\n        <column id=3D\"category\" n=
+ame=3D\"Category\" value=3D\"c.name\" width=3D\"150\" sortable=3D\"true\" a=
+lign=3D\"left\" />\n        <column id=3D\"color\" name=3D\"Color\" value=
+=3D\"it.color\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" />\n  =
+      <column id=3D\"brand\" name=3D\"Brand\" value=3D\"it.brand\" width=3D=
+\"210\" sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"tat=
+\" name=3D\"Tat\" value=3D\"it.tat\" width=3D\"120\" sortable=3D\"true\" al=
+ign=3D\"left\" />\n        <column id=3D\"size\" name=3D\"Size\" value=3D\"=
+it.size\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        =
+<column id=3D\"weight\" name=3D\"Weight\" value=3D\"it.weight\" width=3D\"1=
+00\" sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"mrp\" =
+name=3D\"MRP\" value=3D\"it.max_retail_price\" width=3D\"100\" sortable=3D\=
+"true\" align=3D\"left\" />\n        <column id=3D\"ean\" name=3D\"EAN\" va=
+lue=3D\"it.ean\" width=3D\"100\" align=3D\"left\" />\n        <column id=3D=
+\"dimensions\" name=3D\"Dimensions\" value=3D\"Concat(it.length, \'x\' ,it.=
+width, \'x\' ,it.height)\" width=3D\"100\" sortable=3D\"true\" align=3D\"le=
+ft\" />\n        <column id=3D\"taxType\" name=3D\"Tax Type\" value=3D\"t.c=
+ode\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        <col=
+umn id=3D\"enabled\" name=3D\"Enabled\" value=3D\"if(it.enabled,\'Yes\',\'N=
+o\')\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        <co=
+lumn id=3D\"type\" name=3D\"Type\" value=3D\"it.type\" width=3D\"100\" sort=
+able=3D\"true\" align=3D\"left\" />\n        <column id=3D\"imageUrl\" name=
+=3D\"Image\" value=3D\"it.image_url\" width=3D\"100\" sortable=3D\"true\" a=
+lign=3D\"left\" hidden=3D\"true\" />\n        <column id=3D\"pageUrl\" name=
+=3D\"Page URL\" value=3D\"it.product_page_url\" width=3D\"100\" sortable=3D=
+\"true\" align=3D\"left\" hidden=3D\"true\" />\n    </columns>\n    <filter=
+s>\n        <filter id=3D\"enabledFilter\" name=3D\"Is Enabled\" condition=
+=3D\"it.enabled =3D :enabledFilter\" type=3D\"boolean\" attachToColumn=3D\"=
+enabled\" />\n        <filter id=3D\"brandFilter\" name=3D\"Brand Contains\=
+" condition=3D\"it.brand like :brandFilter\" type=3D\"text\" valueExpressio=
+n=3D\"#{\'%\' + #brandFilter + \'%\'}\" attachToColumn=3D\"brand\" />\n    =
+    <filter id=3D\"tatFilter\" name=3D\"Tat less than\" condition=3D\"it.ta=
+t &lt; :tatFilter\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Int=
+eger(#tatFilter)}\" attachToColumn=3D\"tat\" />\n        <filter id=3D\"ite=
+mTypeFilter\" name=3D\"Item Name Contains\" condition=3D\"it.name like :ite=
+mTypeFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #itemTypeFilter=
+ + \'%\'}\" attachToColumn=3D\"itemType\" />\n        <filter id=3D\"produc=
+tCodeFilter\" name=3D\"Sku Code Contains\" condition=3D\"it.sku_code like :=
+productCodeFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #productC=
+odeFilter + \'%\'}\" attachToColumn=3D\"productCode\" />\n        <filter i=
+d=3D\"colorFilter\" name=3D\"Color Contains\" condition=3D\"it.color like :=
+colorFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #colorFilter + =
+\'%\'}\" attachToColumn=3D\"color\" />\n        <filter id=3D\"categoryFilt=
+er\" name=3D\"Category Contains\" condition=3D\"c.name like :categoryFilter=
+\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #categoryFilter + \'%\'}\"=
+ attachToColumn=3D\"category\" />\n        <filter id=3D\"typeFilter\" name=
+=3D\"Type In\" condition=3D\"it.type in :typeFilter\" type=3D\"multiselect\=
+" valueExpression=3D\"#{#typeFilter}\" values=3D\"enum:SIMPLE|SIMPLE,BUNDLE=
+|BUNDLE\" attachToColumn=3D\"type\" />\n    </filters>\n</table-config>\n' =
+where name =3D "DATATABLE SEARCH ITEM TYPE";
+    16=09-- done
+    17=09-- Akshay Ag;| Settlement Amount pop up fix in reconciliation data=
+table | 22 Nov 2016
+    18=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"270\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right=
+\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t=
+<span>Channel Order Code: </span>\n\t\t\t\t\t<br><#\n\t\t\t\t\tif(obj.saleO=
+rderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<span>O=
+rder Code: </span>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\=
+"float:left;padding:0 0 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentif=
+ier#><br>\n\t\t\t\t\t<#=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(ob=
+j.saleOrderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t=
+<a class=3D\"link pleaseOpenInNewTab\" href=3D\"/order/orderitems?orderCode=
+=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>=
+\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n        <c=
+olumn id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#entity.ch=
+annelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProd=
+uctId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n      =
+      <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\=
+t\t<# if (obj.channelProductName !=3D null && obj.channelProductName !=3D \=
+"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;=
+\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clie=
+ntTemplate>\n        </column>\n        <column id=3D\"channelCode\" name=
+=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D=
+\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusC=
+ode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price\" va=
+lue=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=
+=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.ship=
+pingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"orderAmount\" na=
+me=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t=
+\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n=
+\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"totalRe=
+concileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalRecon=
+cileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculat=
+ed=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"link deta=
+ilsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconc=
+ileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<=
+#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconciliationId=
+entifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"=
+hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrd=
+erCode#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"=
+settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.settleme=
+ntPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcul=
+ated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.=
+settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padd=
+ing:0;font-size:11px;font-weight:bold;color: #008000;text-align:right\">\n\=
+t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\=
+t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercentage >=
+=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;f=
+ont-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dob=
+j.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\=
+t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;colo=
+r: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercenta=
+ge.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"quantity\" name=3D\"Quantity\" value=3D\"=
+#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=3D\"Rec=
+onciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\n    <=
+defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate\", \"=
+descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n        <=
+filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=3D\"{\'=
+criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':\'#{#cha=
+nnelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channelCode\" v=
+alues=3D\"query:select c.code,c.name as name from channel c where c.tenant_=
+id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFilter\" n=
+ame=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'settlement=
+Percentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlementPercent=
+ageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double=
+(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPercentage\" =
+/>\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount less th=
+an\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\',\'opera=
+tor\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"t=
+ext\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountFilter)}\=
+" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=3D\"reco=
+nciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Contains\" =
+condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operat=
+or\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\=
+"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        <filter i=
+d=3D\"reconciliationStatusFilter\" name=3D\"Status\" condition=3D\"{\'crite=
+ria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconcili=
+ationStatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|=
+RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCI=
+LED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconc=
+iliationStatus\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\=
+" name=3D\"Order Item Code Contains\" condition=3D\"{\'criteria\':{\'name\'=
+:\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelS=
+aleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSal=
+eOrderItemCode\" />\n        <filter id=3D\"orderTransactionDateRange\" nam=
+e=3D\"Order Transaction Date Range\" condition=3D\"{\'criteria\':{\'name\':=
+\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTran=
+sactionDateRange}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransa=
+ctionDate\" />\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Pr=
+oduct Id Contains\" condition=3D\"{\'criteria\':{\'name\':\'channelProductI=
+d\', \'operator\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" typ=
+e=3D\"text\" attachToColumn=3D\"channelProductId\" />\n    </filters>\n</ta=
+ble-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    19=09-- done
+    20=09-- Akshay Ag;| drop editable from party, use tin_verified column i=
+nstead | 22th Nov 2016
+    21=09-- alter table party drop column editable;
+    22=09-- done
+    23=09--  Akshayag; | order amount filter, item costprice in data channe=
+l payment reconciliation and datatable views | 23rd Nov 2016
+    24=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.sa=
+leOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleaseOpenInNewTa=
+b\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3D=
+obj.reconciliationIdentifier#><br/>(<#=3Dobj.channelSaleOrderCode#>)</a>\n\=
+t\t\t\t\t<#} else {#>\n\t\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br/>=
+(<#=3Dobj.channelSaleOrderCode#>)<br><#\n\t\t\t\t\t}#>\n\t\t\t\t</div>\n\t\=
+t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"channelP=
+roductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" h=
+idden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"Prod=
+uct\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate=
+><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channel=
+ProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t=
+<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelP=
+roductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" value=3D=
+\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"le=
+ft\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\"=
+ name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <colum=
+n id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity.sellin=
+gPrice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharges\" n=
+ame=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" width=3D\=
+"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D=
+\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Total Order Amou=
+nt\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\=
+" align=3D\"left\" calculated=3D\"true\"  >\n            <clientTemplate><!=
+[CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-styl=
+e: italic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Price: =
+</span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\=
+t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sellingP=
+rice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTemplate=
+>\n        </column>\n        <column id=3D\"totalReconcileAmount\" name=3D=
+\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" width=3D\=
+"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n       =
+     <clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"/orde=
+r/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><input t=
+ype=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"=
+><input type=3D\"hidden\" class=3D\"reconciliationIdentifier\" value=3D\"<#=
+=3Dobj.reconciliationIdentifier#>\"><input type=3D\"hidden\" class=3D\"chan=
+nelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]></clientT=
+emplate>\n        </column>\n        <column id=3D\"settlementPercentage\" =
+name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\" width=
+=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n   =
+         <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPercentage =
+>=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;=
+font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span><#=3Do=
+bj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (obj.set=
+tlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\t\t\t\t=
+<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color: =
+#0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D\"float=
+:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-align:r=
+ight\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span=
+><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n        <col=
+umn id=3D\"itemCostPrice\" name=3D\"Item Cost Price\" value=3D\"#{#entity.i=
+temCostPrice}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcul=
+ated=3D\"true\"/>\n        <column id=3D\"quantity\" name=3D\"Quantity\" va=
+lue=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\=
+"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" so=
+rtable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\=
+n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate=
+\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n   =
+     <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFi=
+lter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'se=
+ttlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlemen=
+tPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPerce=
+ntage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount=
+ less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\'=
+,\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" ty=
+pe=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountF=
+ilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=
+=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Co=
+ntains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\'=
+,\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\"=
+ type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        =
+<filter id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\" co=
+ndition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GREATER=
+_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" type=3D\"text\" valueExpres=
+sion=3D\"#{new java.lang.Double(#orderAmountFilter)}\" attachToColumn=3D\"s=
+ellingPrice\" />\n        <filter id=3D\"reconciliationStatusFilter\" name=
+=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operat=
+or\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multi=
+select\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_P=
+AYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECO=
+NCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n        <filter id=
+=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" c=
+ondition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operato=
+r\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"=
+text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filter id=
+=3D\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range\" co=
+ndition=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operator\':=
+\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"datera=
+nge\" attachToColumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"=
+channelProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'cr=
+iteria\':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'=
+#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channel=
+ProductId\" />\n        <filter id=3D\"itemCostPriceFilter\" name=3D\"Cost =
+Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'itemCostPrice\=
+',\'operator\':\'GREATER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}}\" t=
+ype=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#itemCostPriceFil=
+ter)}\" attachToColumn=3D\"itemCostPrice\" />\n    </filters>\n</table-conf=
+ig>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    25=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left=
+;padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.s=
+aleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleaseOpenInNewT=
+ab\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=
+=3Dobj.reconciliationIdentifier#><br/>(<#=3Dobj.channelSaleOrderCode#>)</a>=
+\n\t\t\t\t\t<#} else {#>\n\t\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><b=
+r/>(<#=3Dobj.channelSaleOrderCode#>)<br><#\n\t\t\t\t\t}#>\n\t\t\t\t</div>\n=
+\t\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"chann=
+elProductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\=
+" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\=
+" hidden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"P=
+roduct\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n            <clientTem=
+plate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.ch=
+annelProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\=
+t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.cha=
+nnelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n   =
+     </column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" val=
+ue=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationS=
+tatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"=
+150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n       =
+ <column id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity=
+.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcu=
+lated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharge=
+s\" name=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Total Order=
+ Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\"  >\n            <clientTempla=
+te><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font=
+-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Pr=
+ice: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n=
+\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sel=
+lingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTem=
+plate>\n        </column>\n        <column id=3D\"totalReconcileAmount\" na=
+me=3D\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" widt=
+h=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n  =
+          <clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"=
+/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><in=
+put type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCod=
+e#>\"><input type=3D\"hidden\" class=3D\"reconciliationIdentifier\" value=
+=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"hidden\" class=
+=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]>=
+</clientTemplate>\n        </column>\n        <column id=3D\"settlementPerc=
+entage\" name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\=
+" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\=
+">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPerc=
+entage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-siz=
+e:11px;font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span=
+><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (=
+obj.settlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\=
+t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;=
+color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPerc=
+entage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D=
+\"float:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-=
+align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> =
+%</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n     =
+   <column id=3D\"itemCostPrice\" name=3D\"Item Cost Price\" value=3D\"#{#e=
+ntity.itemCostPrice}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\"=
+ calculated=3D\"true\"/>\n        <column id=3D\"quantity\" name=3D\"Quanti=
+ty\" value=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" al=
+ign=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy=
+\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"1=
+20\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </co=
+lumns>\n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransact=
+ionDate\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filter=
+s>\n        <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" cond=
+ition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'val=
+ue\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"ch=
+annelCode\" values=3D\"query:select c.code,c.name as name from channel c wh=
+ere c.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercent=
+ageFilter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\'=
+:\'settlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#sett=
+lementPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new jav=
+a.lang.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlement=
+Percentage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"A=
+mount less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmo=
+unt\',\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}=
+\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAm=
+ountFilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filte=
+r id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifie=
+r Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifi=
+er\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'=
+}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n    =
+    <filter id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\=
+" condition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GRE=
+ATER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" type=3D\"text\" valueEx=
+pression=3D\"#{new java.lang.Double(#orderAmountFilter)}\" attachToColumn=
+=3D\"sellingPrice\" />\n        <filter id=3D\"reconciliationStatusFilter\"=
+ name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'o=
+perator\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"=
+multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAIT=
+ING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|U=
+NRECONCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n        <filt=
+er id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contain=
+s\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'op=
+erator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=
+=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filt=
+er id=3D\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range=
+\" condition=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operat=
+or\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"d=
+aterange\" attachToColumn=3D\"orderTransactionDate\" />\n        <filter id=
+=3D\"channelProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"=
+{\'criteria\':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value=
+\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"ch=
+annelProductId\" />\n        <filter id=3D\"itemCostPriceFilter\" name=3D\"=
+Cost Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'itemCostP=
+rice\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}=
+}\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#itemCostPri=
+ceFilter)}\" attachToColumn=3D\"itemCostPrice\" />\n    </filters>\n</table=
+-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    26=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"sellingPrice"}, {"name":"itemCostPrice"}, {"name":"=
+quantity"}],"filters":[{"id":"reconciliationStatusFilter","selectedValues":=
+["AWAITING_PAYMENT"]}],"sortColumns":[{"column":"orderTransactionDate","des=
+cending":true}]}' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECON=
+CILIATION' and code =3D 'PENDING_TRANSACTIONS';
+    27=09update user_datatable_view set config_json=3D '{"resultsPerPage":2=
+5,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdentif=
+ier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcili=
+ationStatus"},{"name":"sellingPrice"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}, {"name":"itemCostPrice"},{"name":"quantity"}],"=
+filters":[{"id":"reconciliationStatusFilter","selectedValues":["UNRECONCILE=
+D"]}],"sortColumns":[{"column":"orderTransactionDate","descending":true}]}'=
+ where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and co=
+de =3D 'UNRECONCILED';
+    28=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"sellingPrice"},{"name":"totalReconcileAmount"},{"na=
+me":"settlementPercentage"}, {"name":"itemCostPrice"},{"name":"quantity"}],=
+"filters":[],"sortColumns":[{"column":"orderTransactionDate","descending":t=
+rue}]}' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION'=
+ and code =3D 'ALL_TRANSACTIONS';
+    29=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.sa=
+leOrderCode !=3D \"\") {#>\n<a class=3D\"link pleaseOpenInNewTab\" href=3D\=
+"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.reconcil=
+iationIdentifier#></a><br/><span style=3D\"font-style: italic;color: #8F8F8=
+F;\">(<#=3Dobj.channelSaleOrderCode#>)</span>\n\t\t\t\t\t<#} else {#>\n\t\t=
+\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br/><span style=3D\"font-style:=
+ italic;color: #8F8F8F;\">(<#=3Dobj.channelSaleOrderCode#>)</span><#\n\t\t\=
+t\t\t}#>\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n  =
+      <column id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#e=
+ntity.channelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"l=
+eft\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"cha=
+nnelProductId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" =
+width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#=
+>\n\t\t\t\t<# if (obj.channelProductName !=3D null && obj.channelProductNam=
+e !=3D \"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: =
+#8F8F8F;\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]=
+]></clientTemplate>\n        </column>\n        <column id=3D\"channelCode\=
+" name=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sor=
+table=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column =
+id=3D\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.st=
+atusCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price=
+\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" =
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column=
+ id=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.s=
+hippingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"sellingPrice\=
+" name=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n =
+           <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;paddi=
+ng:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n=
+\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping:=
+ </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\=
+">\n\t\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</=
+div>\n\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"t=
+otalReconcileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.tota=
+lReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"lin=
+k detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.total=
+ReconcileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=
+=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconcilia=
+tionIdentifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input typ=
+e=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelS=
+aleOrderCode#>\">]]></clientTemplate>\n        </column>\n        <column i=
+d=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.se=
+ttlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif=
+ (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:lef=
+t;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:right=
+\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\=
+n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercenta=
+ge >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11=
+px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=
+=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t=
+\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold=
+;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPer=
+centage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n   =
+     </column>\n        <column id=3D\"itemCostPrice\" name=3D\"Item Cost P=
+rice\" value=3D\"#{#entity.itemCostPrice}\" width=3D\"100\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"quant=
+ity\" name=3D\"Quantity\" value=3D\"#{#entity.quantity}\" width=3D\"120\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <colum=
+n id=3D\"reconciledBy\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconc=
+iledBy}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"col=
+umn\" : \"orderTransactionDate\", \"descending\" : \"true\"}]]>\n    </defa=
+ultSortBy>\n    <filters>\n        <filter id=3D\"channelFilter\" name=3D\"=
+Channel Contains\" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'=
+operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\=
+" attachToColumn=3D\"channelCode\" values=3D\"query:select c.code,c.name as=
+ name from channel c where c.tenant_id =3D :tenantId\"/>\n        <filter i=
+d=3D\"settlementPercentageFilter\" name=3D\"% greater than\" condition=3D\"=
+{\'criteria\':{\'name\':\'settlementPercentage\',\'operator\':\'GREATER_THA=
+N\',\'value\':\'#{#settlementPercentageFilter}\'}}\" type=3D\"text\" valueE=
+xpression=3D\"#{new java.lang.Double(#settlementPercentageFilter)}\" attach=
+ToColumn=3D\"settlementPercentage\" />\n        <filter id=3D\"settlementAm=
+ountFilter\" name=3D\"Amount less than\" condition=3D\"{\'criteria\':{\'nam=
+e\':\'totalReconcileAmount\',\'operator\':\'LESS_THAN\',\'value\':\'#{#sett=
+lementAmountFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.la=
+ng.Double(#settlementAmountFilter)}\" attachToColumn=3D\"totalReconcileAmou=
+nt\" />\n        <filter id=3D\"reconciliationIdentifierFilter\" name=3D\"R=
+econciliation Identifier Contains\" condition=3D\"{\'criteria\':{\'name\':\=
+'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconcilia=
+tionIdentifierFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliati=
+onIdentifier\" />\n        <filter id=3D\"orderAmountFilter\" name=3D\"Sell=
+ing Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'sellingPri=
+ce\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" =
+type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#orderAmountFilt=
+er)}\" attachToColumn=3D\"sellingPrice\" />\n        <filter id=3D\"reconci=
+liationStatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name=
+\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFi=
+lter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, A=
+WAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCI=
+LED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatu=
+s\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Or=
+der Item Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconcilia=
+tionIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemC=
+odeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCod=
+e\" />\n        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order T=
+ransaction Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransa=
+ctionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRa=
+nge}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" /=
+>\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Cont=
+ains\" condition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operat=
+or\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" =
+attachToColumn=3D\"channelProductId\" />\n        <filter id=3D\"itemCostPr=
+iceFilter\" name=3D\"Cost Price Greater Than\" condition=3D\"{\'criteria\':=
+{\'name\':\'itemCostPrice\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#it=
+emCostPriceFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#itemCostPriceFilter)}\" attachToColumn=3D\"itemCostPrice\" />\n  =
+  </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_=
+RECONCILIATION";
+    30=09=3D=3D=3D=3D=3D=3D=3D
+    31=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.sa=
+leOrderCode !=3D \"\") {#>\n<a class=3D\"link pleaseOpenInNewTab\" href=3D\=
+"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.reconcil=
+iationIdentifier#></a><br/><span style=3D\"font-style: italic;color: #8F8F8=
+F;\">(<#=3Dobj.channelSaleOrderCode#>)</span>\n\t\t\t\t\t<#} else {#>\n\t\t=
+\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br/><span style=3D\"font-style:=
+ italic;color: #8F8F8F;\">(<#=3Dobj.channelSaleOrderCode#>)</span><#\n\t\t\=
+t\t\t}#>\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n  =
+      <column id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#e=
+ntity.channelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"l=
+eft\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"cha=
+nnelProductId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" =
+width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#=
+>\n\t\t\t\t<# if (obj.channelProductName !=3D null && obj.channelProductNam=
+e !=3D \"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: =
+#8F8F8F;\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]=
+]></clientTemplate>\n        </column>\n        <column id=3D\"channelCode\=
+" name=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sor=
+table=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column =
+id=3D\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.st=
+atusCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price=
+\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" =
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column=
+ id=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.s=
+hippingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"sellingPrice\=
+" name=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n =
+           <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;paddi=
+ng:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n=
+\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping:=
+ </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\=
+">\n\t\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</=
+div>\n\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"t=
+otalReconcileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.tota=
+lReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"lin=
+k detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.total=
+ReconcileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=
+=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconcilia=
+tionIdentifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input typ=
+e=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelS=
+aleOrderCode#>\">]]></clientTemplate>\n        </column>\n        <column i=
+d=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.se=
+ttlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif=
+ (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:lef=
+t;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:right=
+\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\=
+n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercenta=
+ge >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11=
+px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=
+=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t=
+\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold=
+;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPer=
+centage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n   =
+     </column>\n        <column id=3D\"itemCostPrice\" name=3D\"Item Cost P=
+rice\" value=3D\"#{#entity.itemCostPrice}\" width=3D\"100\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"quant=
+ity\" name=3D\"Quantity\" value=3D\"#{#entity.quantity}\" width=3D\"120\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <colum=
+n id=3D\"reconciledBy\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconc=
+iledBy}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"col=
+umn\" : \"orderTransactionDate\", \"descending\" : \"true\"}]]>\n    </defa=
+ultSortBy>\n    <filters>\n        <filter id=3D\"channelFilter\" name=3D\"=
+Channel Contains\" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'=
+operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\=
+" attachToColumn=3D\"channelCode\" values=3D\"query:select c.code,c.name as=
+ name from channel c where c.tenant_id =3D :tenantId\"/>\n        <filter i=
+d=3D\"settlementPercentageFilter\" name=3D\"% greater than\" condition=3D\"=
+{\'criteria\':{\'name\':\'settlementPercentage\',\'operator\':\'GREATER_THA=
+N\',\'value\':\'#{#settlementPercentageFilter}\'}}\" type=3D\"text\" valueE=
+xpression=3D\"#{new java.lang.Double(#settlementPercentageFilter)}\" attach=
+ToColumn=3D\"settlementPercentage\" />\n        <filter id=3D\"settlementAm=
+ountFilter\" name=3D\"Amount less than\" condition=3D\"{\'criteria\':{\'nam=
+e\':\'totalReconcileAmount\',\'operator\':\'LESS_THAN\',\'value\':\'#{#sett=
+lementAmountFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.la=
+ng.Double(#settlementAmountFilter)}\" attachToColumn=3D\"totalReconcileAmou=
+nt\" />\n        <filter id=3D\"reconciliationIdentifierFilter\" name=3D\"R=
+econciliation Identifier Contains\" condition=3D\"{\'criteria\':{\'name\':\=
+'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconcilia=
+tionIdentifierFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliati=
+onIdentifier\" />\n        <filter id=3D\"orderAmountFilter\" name=3D\"Sell=
+ing Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'sellingPri=
+ce\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" =
+type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#orderAmountFilt=
+er)}\" attachToColumn=3D\"sellingPrice\" />\n        <filter id=3D\"reconci=
+liationStatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name=
+\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFi=
+lter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, A=
+WAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCI=
+LED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatu=
+s\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Or=
+der Item Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconcilia=
+tionIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemC=
+odeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCod=
+e\" />\n        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order T=
+ransaction Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransa=
+ctionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRa=
+nge}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" /=
+>\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Cont=
+ains\" condition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operat=
+or\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" =
+attachToColumn=3D\"channelProductId\" />\n        <filter id=3D\"itemCostPr=
+iceFilter\" name=3D\"Cost Price Greater Than\" condition=3D\"{\'criteria\':=
+{\'name\':\'itemCostPrice\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#it=
+emCostPriceFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#itemCostPriceFilter)}\" attachToColumn=3D\"itemCostPrice\" />\n  =
+  </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_=
+RECONCILIATION";
+    32=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CUSTOMER_R=
+ETURN\" height=3D\"1400\">\n    <queryString>\n        <![CDATA[from revers=
+e_pickup rp left join sale_order so on rp.sale_order_id =3D so.id left join=
+ channel c on c.id =3D so.channel_id left join sale_order_item soi on rp.id=
+=3Dsoi.reverse_pickup_id left join shipping_package shp on soi.shipping_pac=
+kage_id =3D shp.id left join item_type it on (soi.item_type_id =3D it.id)  =
+left join reverse_pickup_action rpa on rpa.code =3D rp.action_code left joi=
+n shipping_provider sp on rp.shipping_provider_id=3Dsp.id where rp.facility=
+_id  =3D :facilityId]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"channel\" name=3D\"Channel\" value=3D\"c.code\" sortable=3D\"true\"=
+ width=3D\"150\" align=3D\"left\" />\n        <column id=3D\"shipment\" nam=
+e=3D\"Shipment\" value=3D\"shp.code\" sortable=3D\"true\" width=3D\"150\" a=
+lign=3D\"left\" hidden=3D\"true\"/>\n        <column id=3D\"reversePickupCo=
+de\" name=3D\"Reverse Pickup #\" value=3D\"rp.code\" sortable=3D\"true\" wi=
+dth=3D\"150\" align=3D\"left\">\n            <clientTemplate><![CDATA[<a hr=
+ef=3D\"/order/returns?returnCode=3D<#=3Dobj.reversePickupCode#>&orderCode=
+=3D<#=3Dobj.saleOrderNum#>\"><#=3Dobj.reversePickupCode#></a>]]></clientTem=
+plate>\n        </column>\n        <column id=3D\"saleOrderNum\" name=3D\"O=
+rder #\" value=3D\"so.code\" align=3D\"left\" width=3D\"200\" sortable=3D\"=
+true\">\n            <clientTemplate><![CDATA[<div style=3D\"float:left;pad=
+ding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">=
+<span>Shipment: </span><br><span>Order: </span></div><div style=3D\"float:l=
+eft;padding:0 0 0 5px;width: 110px;\"><a class=3D\"link\" href=3D\"/order/o=
+rderitems?orderCode=3D<#=3Dobj.saleOrderNum#>&shipmentCode=3D<#=3Dobj.shipm=
+ent#>\"><#=3Dshipment#></a><br><a class=3D\"link\" href=3D\"/order/orderite=
+ms?orderCode=3D<#=3Dobj.saleOrderNum#>\"><#=3DdisplayOrderCode#><#if (saleO=
+rderNum !=3D displayOrderCode) {#><br><span style=3D\"font-style: italic;co=
+lor: #8F8F8F;\">(<#=3DsaleOrderNum#>)</span><#}#></a></div>]]></clientTempl=
+ate>\n        </column>\n        <column id=3D\"displayOrderCode\" name=3D\=
+"Display Order #\" value=3D\"so.display_order_code\" width=3D\"150\" sortab=
+le=3D\"true\" align=3D\"left\" hidden=3D\"true\" />\n        <column id=3D\=
+"productInfo\" name=3D\"Products\" value=3D\"it.sku_code\" width=3D\"260\" =
+sortable=3D\"true\" align=3D\"left\">\n            <clientTemplate><![CDATA=
+[<#\n            if (itemTypeSkus =3D=3D null) {\n                #><div>No=
+ Products</div><#\n            } else if (itemTypeSkus.indexOf(''unknown-sk=
+u'') > -1) {\n                var items =3D sellerSkus.split('','');\n     =
+           var sellerSkuToCount =3D {};\n                for (var i=3D0;i<i=
+tems.length;i++) {\n                    if (sellerSkuToCount[items[i]]) {\n=
+                        sellerSkuToCount[items[i]] =3D sellerSkuToCount[ite=
+ms[i]] + 1;\n                    } else {\n                        sellerSk=
+uToCount[items[i]] =3D 1;\n                    }\n                }\n      =
+          var skuDetails =3D sellerSkuToDetails.split(''^'');\n            =
+    for (var i=3D0;i<skuDetails.length;i++) {\n                    var skuD=
+etail =3D skuDetails[i].split(''~'');\n                    #><div data-skuc=
+ode=3D\"<#=3DskuDetail[0]#>\"><#=3DskuDetail[1]#></div><div style=3D\"paddi=
+ng:0 0 5px 0;\" ><span style=3D\"font-style: italic;color:#8F8F8F\">(<#=3Ds=
+kuDetail[0]#>)</span> - <#=3DsellerSkuToCount[skuDetail[0]]#></div><#\n    =
+            }\n            } else {\n                var items =3D itemType=
+Ids.split('','');\n                var itemTypeIdToCount =3D {};\n         =
+       for (var i=3D0;i<items.length;i++) {\n                    if (itemTy=
+peIdToCount[items[i]]) {\n                        itemTypeIdToCount[items[i=
+]] =3D itemTypeIdToCount[items[i]] + 1;\n                    } else {\n    =
+                    itemTypeIdToCount[items[i]] =3D 1;\n                   =
+ }\n                }\n                var skuDetails =3D itemIdToDetails.s=
+plit(''^'');\n                for (var i=3D0;i<skuDetails.length;i++) {\n  =
+                  var skuDetail =3D skuDetails[i].split(''~'');\n#><span>Na=
+me:&nbsp;</span><span><div data-skucode=3D\"<#=3DskuDetail[1]#>\" class=3D\=
+"productInfoIcon link underline\"><#=3DskuDetail[2]#></div></span><br/><spa=
+n>SKU:&nbsp;</span><span><span style=3D\"padding:0 0 5px 0;\"><span style=
+=3D\"font-style: italic;color:#8F8F8F\">(<#=3DskuDetail[1]#>)</span></span>=
+</span><br/><span>Quantity:&nbsp;</span><span><span><#=3DitemTypeIdToCount[=
+skuDetail[0]]#></span></span><#\n                }\n            }#>]]></cli=
+entTemplate>\n        </column>\n        <column id=3D\"itemTypeSkus\" name=
+=3D\"Item Type SKUs\" value=3D\"group_concat(it.sku_code)\" width=3D\"200\"=
+ sortable=3D\"true\" align=3D\"left\" hidden=3D\"true\" />\n        <column=
+ id=3D\"itemTypeIds\" name=3D\"Item Type Ids\" value=3D\"group_concat(it.id=
+)\" width=3D\"200\" sortable=3D\"true\" align=3D\"left\" hidden=3D\"true\" =
+/>\n        <column id=3D\"sellerSkus\" name=3D\"Seller SKUs\" value=3D\"gr=
+oup_concat(soi.seller_sku_code)\" width=3D\"200\" sortable=3D\"true\" align=
+=3D\"left\" hidden=3D\"true\" />\n        <column id=3D\"itemIdToDetails\" =
+name=3D\"Item Id Details\" value=3D\"group_concat(distinct concat_ws(''~'',=
+ it.id,it.sku_code,it.name) SEPARATOR ''^'')\" width=3D\"200\" sortable=3D\=
+"true\" align=3D\"left\" hidden=3D\"true\" />\n        <column id =3D \"ord=
+erItemIds\" name=3D\"OrderItemIds\" value=3D\"group_concat(soi.code)\" widt=
+h=3D\"200\" sortable=3D\"true\" align=3D\"left\" hidden=3D\"true\" />\n    =
+    <column id=3D\"sellerSkuToDetails\" name=3D\"Seller SKU Details\" value=
+=3D\"group_concat(distinct concat_ws(''~'', soi.seller_sku_code,soi.channel=
+_product_name) SEPARATOR ''^'')\" width=3D\"200\" sortable=3D\"true\" align=
+=3D\"left\" hidden=3D\"true\" />\n        <column id=3D\"actionCode\" name=
+=3D\"Required Action\" value=3D\"rpa.description\" width=3D\"200\" sortable=
+=3D\"true\" align=3D\"left\" />\n        <column id=3D\"reversePickupStatus=
+Code\" name=3D\"Status\" value=3D\"rp.status_code\" width=3D\"160\" sortabl=
+e=3D\"true\" align=3D\"left\" />\n        <column id=3D\"shippingProviderCo=
+de\" name=3D\"Pickup Provider\" value=3D\"sp.code\" width=3D\"160\" sortabl=
+e=3D\"true\" align=3D\"left\" />\n        <column id=3D\"trackingNumber\" n=
+ame=3D\"Tracking #\" value=3D\"rp.tracking_number\" width=3D\"160\" sortabl=
+e=3D\"true\" align=3D\"left\" />\n        <column id=3D\"returnReason\" nam=
+e=3D\"Return Reason\" value=3D\"group_concat(soi.reverse_pickup_reason)\" w=
+idth=3D\"160\" sortable=3D\"true\" align=3D\"left\" />\n        <column id=
+=3D\"created\" name=3D\"Created Date\" value=3D\"rp.created\" width=3D\"110=
+\" sortable=3D\"true\" align=3D\"left\" type=3D\"date\" />\n    </columns>\=
+n    <groupBy>\n        group by rp.id\n    </groupBy>\n    <defaultSortBy>=
+\n        rp.created desc\n    </defaultSortBy>\n    <filters>\n        <fi=
+lter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=3D\"so.ch=
+annel_id in (:channelFilter)\" type=3D\"multiselect\" values=3D\"query:sele=
+ct id,code from channel where tenant_id =3D :tenantId\" attachToColumn=3D\"=
+channel\" />\n        <filter id=3D\"providerFilter\" name=3D\"Shipping Pro=
+vider is\" condition=3D\"sp.code =3D:providerFilter\" type=3D\"text\" attac=
+hToColumn=3D\"shippingProviderCode\" />\n        <filter id=3D\"trackingNum=
+berFilter\" name=3D\"Tracking Number is\" condition=3D\"rp.tracking_number =
+=3D :trackingNumberFilter\" type=3D\"text\" attachToColumn=3D\"trackingNumb=
+er\" />\n        <filter id=3D\"reversePickupCodeFilter\" name=3D\"Reverse =
+Pickup Code is\" condition=3D\"rp.code =3D :reversePickupCodeFilter\" type=
+=3D\"text\" attachToColumn=3D\"reversePickupCode\" />\n        <filter id=
+=3D\"saleOrderFilter\" name=3D\"Order #\" condition-for-view=3D\"{''name'' =
+: ''saleOrderNum'', ''operator'' : ''IS'', ''value'' : '':saleOrderFilter''=
+}\" condition=3D\"(so.code =3D :saleOrderFilter or so.display_order_code =
+=3D :saleOrderFilter)\" type=3D\"text\" valueExpression=3D\"#{#saleOrderFil=
+ter}\" attachToColumn=3D\"saleOrderNum\" primary=3D\"true\" />\n        <fi=
+lter id=3D\"itemNameFilter\" name=3D\"Item Name Contains\" condition-for-vi=
+ew=3D\"{''name'' : ''productInfo'', ''operator'' : ''LIKE'', ''value'' : ''=
+:itemNameFilter''}\" condition=3D\"(it.name like :itemNameFilter or it.sku_=
+code like :itemNameFilter)\" type=3D\"text\" valueExpression=3D\"#{#itemNam=
+eFilter}\" attachToColumn=3D\"productInfo\" />\n        <filter id=3D\"date=
+RangeFilter\" name=3D\"Created in Date Range\" condition=3D\"rp.created &gt=
+; :dateRangeFilterStart and rp.created &lt; :dateRangeFilterEnd\" type=3D\"=
+daterange\" attachToColumn=3D\"created\" />\n        <filter id=3D\"reverse=
+PickupStatusCodeFilter\" name=3D\"Reverse Pickup Status\" condition=3D\"rp.=
+status_code in (:reversePickupStatusCodeFilter)\" type=3D\"multiselect\" va=
+lues=3D\"query:select code,description from reverse_pickup_status\" attachT=
+oColumn=3D\"reversePickupStatusCode\" />\n        <filter id=3D\"reversePic=
+kupActionCodeFilter\" name=3D\"Reverse Pickup Action\" condition=3D\"rpa.co=
+de in (:reversePickupActionCodeFilter)\" type=3D\"multiselect\" values=3D\"=
+query:select code,description from reverse_pickup_action\" attachToColumn=
+=3D\"actionCode\" />\n    </filters>\n</table-config>' where name =3D "DATA=
+TABLE_CUSTOMER_RETURN" ;
+    33=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Date\" value=3D\"#{#entity.order=
+TransactionDate}\" width=3D\"90\" sortable=3D\"true\" align=3D\"left\" type=
+=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"saleOrderCode\"=
+ name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=3D\"150=
+\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D\"tr=
+ue\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"Order It=
+em #\" value=3D\"#{#entity.reconciliationIdentifier}\" width=3D\"130\" sort=
+able=3D\"true\" align=3D\"left\" calculated=3D\"true\" />\n        <column =
+id=3D\"channelSaleOrderCode\" name=3D\"Order #\" value=3D\"#{#entity.channe=
+lSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\" >\n            <clientTemplate><![CDATA[\n\t\t\t\t<div st=
+yle=3D\"float:left;padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode =
+!=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"lin=
+k pleaseOpenInNewTab\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.sale=
+OrderCode#>\"><#=3Dobj.channelSaleOrderCode#></a>\n\t\t\t\t\t<#} else {#>\n=
+\t\t\t\t\t\t<span><#=3Dobj.channelSaleOrderCode#></span><#\n\t\t\t\t\t}#>\n=
+\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n        <col=
+umn id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#entity.chan=
+nelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProduc=
+tId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D\"=
+150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n        =
+    <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\=
+t<# if (obj.channelProductName !=3D null && obj.channelProductName !=3D \"\=
+") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\"=
+>(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></client=
+Template>\n        </column>\n        <column id=3D\"channelCode\" name=3D\=
+"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"rec=
+onciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\=
+" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\=
+"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price\" value=
+=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"=
+shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.shippingC=
+harges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=
+=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150=
+\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n         =
+   <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;fon=
+t-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t\t=
+<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>=
+\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t=
+\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t=
+\t]]></clientTemplate>\n        </column>\n        <column id=3D\"totalReco=
+ncileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalReconci=
+leAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"link detail=
+sPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcil=
+eAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=
+=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconciliationIde=
+ntifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"h=
+idden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrde=
+rCode#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"s=
+ettlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.settlemen=
+tPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.s=
+ettlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;paddi=
+ng:0;font-size:11px;font-weight:bold;color: #008000;text-align:right\">\n\t=
+\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t=
+\t} else if (obj.settlementPercentage < 80 && obj.settlementPercentage >=3D=
+ 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font=
+-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.s=
+ettlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t=
+<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color: =
+#FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </c=
+olumn>\n        <column id=3D\"itemCostPrice\" name=3D\"Item Cost Price\" v=
+alue=3D\"#{#entity.itemCostPrice}\" width=3D\"100\" sortable=3D\"true\" ali=
+gn=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"quantity\" na=
+me=3D\"Quantity\" value=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D=
+\"comments\" name=3D\"Comments\" value=3D\"#{#entity.comments}\" width=3D\"=
+120\"  align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"rec=
+onciledBy\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" wi=
+dth=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\=
+n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orde=
+rTransactionDate\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n  =
+  <filters>\n        <filter id=3D\"channelFilter\" name=3D\"Channel Contai=
+ns\" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'I=
+N\',\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColu=
+mn=3D\"channelCode\" values=3D\"query:select c.code,c.name as name from cha=
+nnel c where c.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settleme=
+ntPercentageFilter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':=
+{\'name\':\'settlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':=
+\'#{#settlementPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"=
+#{new java.lang.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"s=
+ettlementPercentage\" />\n        <filter id=3D\"settlementAmountFilter\" n=
+ame=3D\"Amount less than\" condition=3D\"{\'criteria\':{\'name\':\'totalRec=
+oncileAmount\',\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFi=
+lter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#set=
+tlementAmountFilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n     =
+   <filter id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation =
+Identifier Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliatio=
+nIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifier=
+Filter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\"=
+ />\n        <filter id=3D\"channelSaleOrderCodeFilter\" name=3D\"Channel S=
+ale Order Code -\" condition=3D\"{\'criteria\':{\'name\':\'channelSaleOrder=
+Code\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderCodeFilter}\'}}=
+\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderCode\" />\n        <f=
+ilter id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\" cond=
+ition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GREATER_T=
+HAN\',\'value\':\'#{#orderAmountFilter}\'}}\" type=3D\"text\" valueExpressi=
+on=3D\"#{new java.lang.Double(#orderAmountFilter)}\" attachToColumn=3D\"sel=
+lingPrice\" />\n        <filter id=3D\"reconciliationStatusFilter\" name=3D=
+\"Status\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operator\=
+':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multisel=
+ect\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYM=
+ENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCI=
+LABLE\" attachToColumn=3D\"reconciliationStatus\" />\n        <filter id=3D=
+\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" cond=
+ition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\'=
+:\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"tex=
+t\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filter id=3D=
+\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range\" condi=
+tion=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operator\':\'B=
+ETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"daterange=
+\" attachToColumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"cha=
+nnelProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'crite=
+ria\':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#=
+channelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelPro=
+ductId\" />\n        <filter id=3D\"itemCostPriceFilter\" name=3D\"Cost Pri=
+ce Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'itemCostPrice\',\=
+'operator\':\'GREATER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}}\" type=
+=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#itemCostPriceFilter=
+)}\" attachToColumn=3D\"itemCostPrice\" />\n    </filters>\n</table-config>=
+\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    34=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelSaleOrderCode"},{"name":"channelProductId"},{"name":=
+"channelCode"},{"name":"reconciliationStatus"},{"name":"sellingPrice"}, {"n=
+ame":"itemCostPrice"}, {"name":"quantity"}],"filters":[{"id":"reconciliatio=
+nStatusFilter","selectedValues":["AWAITING_PAYMENT"]}],"sortColumns":[{"col=
+umn":"orderTransactionDate","descending":true}]}' where code =3D 'PENDING_T=
+RANSACTIONS' and datatable_type=3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATIO=
+N' ;
+    35=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelSaleOrderCode"},{"name":"channelProductId"},{"name":=
+"channelCode"},{"name":"reconciliationStatus"},{"name":"sellingPrice"},{"na=
+me":"totalReconcileAmount"},{"name":"settlementPercentage"}, {"name":"itemC=
+ostPrice"},{"name":"quantity"}],"filters":[],"sortColumns":[{"column":"orde=
+rTransactionDate","descending":true}]}' where datatable_type=3D 'DATATABLE_=
+CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSACTIONS';
+    36=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelSaleOrderCode"},{"name":"channelProductId"},{"name":=
+"channelCode"},{"name":"reconciliationStatus"},{"name":"channelSaleOrderCod=
+e"},{"name":"sellingPrice"},{"name":"totalReconcileAmount"},{"name":"settle=
+mentPercentage"},{"name":"itemCostPrice"}, {"name":"quantity"}, {"name":"re=
+conciledBy"}],"filters":[{"id":"reconciliationStatusFilter","selectedValues=
+":["RECONCILED"]}],"sortColumns":[{"column":"orderTransactionDate","descend=
+ing":true}]}' where code =3D 'RECONCILED' and datatable_type=3D 'DATATABLE_=
+CHANNEL_PAYMENT_RECONCILIATION' ;
+    37=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelSaleOrderCode"},{"name":"channelProductId"},{"name":=
+"channelCode"},{"name":"reconciliationStatus"},{"name":"sellingPrice"},{"na=
+me":"totalReconcileAmount"},{"name":"settlementPercentage"},{"name":"itemCo=
+stPrice"}, {"name":"quantity"},{"name":"comments"}, {"name":"reconciledBy"}=
+],"filters":[{"id":"reconciliationStatusFilter","selectedValues":["DISPUTED=
+"]}],"sortColumns":[{"column":"orderTransactionDate","descending":true}]}' =
+where code =3D 'DISPUTED' and datatable_type=3D 'DATATABLE_CHANNEL_PAYMENT_=
+RECONCILIATION';
+    38=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelSaleOrderCode"},{"name":"channelProductId"},{"name":=
+"channelCode"},{"name":"reconciliationStatus"},{"name":"sellingPrice"},{"na=
+me":"totalReconcileAmount"},{"name":"settlementPercentage"}, {"name":"itemC=
+ostPrice"},{"name":"quantity"}],"filters":[{"id":"reconciliationStatusFilte=
+r","selectedValues":["UNRECONCILED"]}],"sortColumns":[{"column":"orderTrans=
+actionDate","descending":true}]}' where code =3D 'UNRECONCILED' and datatab=
+le_type=3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION';
+    39=09insert ignore into role_access_resource  (select null, id, 'CHANNE=
+L_RECONCILIATION_ADMIN', 1, now(), now() from role where code =3D 'UNI_CUST=
+OMER_SUPPORT');
+    40=09insert ignore into role_access_resource  (select null, id, 'CHANNE=
+L_RECONCILIATION_ADMIN', 1, now(), now() from role where code =3D 'CUSTOMER=
+_SUPPORT');
+    41=09update environment_property set value=3D'https://jenkins.ucdn.in' =
+where name =3D'static.content.server.url';
+    42=09select "EndDeploying";
+Importing sql queries....................
+*********** Checking SQL delta is executing on Jenkins or not *************=
+*
+ERROR 1060 (42S21) at line 3: Duplicate column name 'tin_verified'
+0
+Error Encountered on server Jenkins: SQL delta is not executed !!!
+Build step 'Execute shell' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws=
+/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #1955

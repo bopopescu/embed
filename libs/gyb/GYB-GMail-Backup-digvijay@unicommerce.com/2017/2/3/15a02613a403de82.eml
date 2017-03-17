@@ -1,0 +1,71 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Thu, 2 Feb 2017 21:10:10 -0800 (PST)
+Received: by 10.140.19.178 with HTTP; Thu, 2 Feb 2017 21:10:10 -0800 (PST)
+In-Reply-To: <CA+zaFGijGopKJT7erOCyBho=p+X0PL=pD41aYi6jfYf2p0P4dA@mail.gmail.com>
+References: <CAJF3sorgT+F+KHQfWNHPj0XgQL9d4-o3zuQmi_CuA2GPLkw+Yw@mail.gmail.com>
+	<CA+zaFGijGopKJT7erOCyBho=p+X0PL=pD41aYi6jfYf2p0P4dA@mail.gmail.com>
+Date: Fri, 3 Feb 2017 10:40:10 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorpgSp7=ErGRUKLq6eRz-AivuvNqLbb-tKp+Ryx1Qn+cg@mail.gmail.com>
+Subject: Re: Query
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114660b0caf93a0547994b4a
+
+--001a114660b0caf93a0547994b4a
+Content-Type: text/plain; charset=UTF-8
+
+Toh test kaise hoga agar table nhn banegi toh store kahan krenge warehouse
+inventory ko
+
+On 03-Feb-2017 9:04 AM, "Sunny Agarwal" <sunny@unicommerce.com> wrote:
+
+> no
+>
+> On Thu, Feb 2, 2017 at 7:37 PM, Digvijay Sharma <digvijay@unicommerce.com>
+> wrote:
+>
+>> Sir yeh query chalado ek bari stgenterprise1 pe :
+>>
+>> create table channel_warehouse_inventory (id int(10) unsigned not null
+>> primary key auto_increment, tenant_id int(10) unsigned not null,
+>> item_type_id int(10) unsigned not null, facility_id int(10) unsigned not
+>> null, unfulfillable_quantity int(10) unsigned not null,
+>> fulfillable_quantity int(10) unsigned not null, inbound_quantity int(10)
+>> unsigned not null, reserved_quantity int(10) unsigned not null,
+>> total_quantity int(10) unsigned not null, created datetime not null,
+>> updated timestamp not null default current_timestamp on update
+>> current_timestamp);
+>>
+>
+>
+
+--001a114660b0caf93a0547994b4a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">Toh test kaise hoga agar table nhn banegi toh store kahan kr=
+enge warehouse inventory ko</p>
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On 03-Feb-2017 9:=
+04 AM, &quot;Sunny Agarwal&quot; &lt;<a href=3D"mailto:sunny@unicommerce.co=
+m">sunny@unicommerce.com</a>&gt; wrote:<br type=3D"attribution"><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr">no</div><div class=3D"gmail_extra"><br=
+><div class=3D"gmail_quote">On Thu, Feb 2, 2017 at 7:37 PM, Digvijay Sharma=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=
+=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex"><div dir=3D"ltr"><div>Sir yeh query chalado ek bari stgen=
+terprise1 pe :=C2=A0</div><div><br></div>create table channel_warehouse_inv=
+entory (id int(10) unsigned not null primary key auto_increment, tenant_id =
+int(10) unsigned not null, item_type_id int(10) unsigned not null, facility=
+_id int(10) unsigned not null, unfulfillable_quantity int(10) unsigned not =
+null, fulfillable_quantity int(10) unsigned not null, inbound_quantity int(=
+10) unsigned not null, reserved_quantity int(10) unsigned not null, total_q=
+uantity int(10) unsigned not null, created datetime not null, updated times=
+tamp not null default current_timestamp on update current_timestamp);<br></=
+div>
+</blockquote></div><br></div>
+</blockquote></div></div>
+
+--001a114660b0caf93a0547994b4a--

@@ -1,0 +1,654 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp194844qgj;
+        Mon, 10 Oct 2016 21:21:56 -0700 (PDT)
+X-Received: by 10.36.184.65 with SMTP id m62mr3299526ite.55.1476159716709;
+        Mon, 10 Oct 2016 21:21:56 -0700 (PDT)
+Return-Path: <noreply@apple.com>
+Received: from nwk-txn-msbadger0104.apple.com (nwk-txn-msbadger0104.apple.com. [17.151.1.34])
+        by mx.google.com with ESMTPS id b7si1764213pfg.4.2016.10.10.21.21.56
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 10 Oct 2016 21:21:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@apple.com designates 17.151.1.34 as permitted sender) client-ip=17.151.1.34;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@apple.com;
+       spf=pass (google.com: domain of noreply@apple.com designates 17.151.1.34 as permitted sender) smtp.mailfrom=noreply@apple.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=apple.com
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s; c=relaxed/relaxed;
+	q=dns/txt; i=@apple.com; t=1476159716;
+	h=From:Subject:Date:To:MIME-Version:Content-Type;
+	bh=DXkwpIfWZPvVUL/bpr8okKGVqRvihcAli4SgPbBGmTk=;
+	b=TQl5QiLHO0mZcNxfSIic1eR414Z1a8zv4qoJ9yzGjyJg0Q6FVmEz9c6ksmwgrUuR
+	Pzmw4CcXQ0j101X/L98TS0nJAiszMjfsfnZ6oDt2jVrOI9iyiPIedV9/T33rluN9
+	8iWqlP5x0VfYZKkXWsntSussdmooNpVaVr4qlxAfbkyKehNxG3EcFTrltLaRzhRc
+	B0yN6yjdch5fi1HSYVu0Jy6Vd/kQ/kajNVfooX3m3Q28CJsFyZc8fZacBsyuOSqI
+	7GHexMInO+O2DLMp+dsEbbA/Z8LoMAisLZ3IiTV/OUKdz8S3tlURxAD83QiIRmle
+	YVHfkUqUlT+CEpeTy+y0hA==;
+Date: Tue, 11 Oct 2016 04:21:56 +0000 (GMT)
+From: Apple <noreply@apple.com>
+REPLY-TO: noreply@apple.com
+To: digvijay@unicommerce.com
+Message-ID: <685941502.7453934.1476159716185.JavaMail.email@email.apple.com>
+Subject: =?UTF-8?Q?You_have_enabled_two-factor_au?=
+ =?UTF-8?Q?thentication_for_your_Apple=C2=A0ID?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7453932_670588390.1476159716184"
+X-EmailType-Id: 927751
+X-Sent-To: digvijay@unicommerce.com,2,OD5aEl7y2zQ0agO7mXlZ4Cof2Ga1Dbbr02jxmqMd5dikY%2F2ogU1KWEGEHJ0DPohCodak7MTz%2B%2FHyiBb8GVcgmB3uEz7kIFnpLI8t0qJw6syKrJblFGurxm9M7Wwa71KfeoDx6Po7S9wT87l6end%2Bq1Arkdd7v8H%2BoIz8zAVw02fWu5n%2BpV4RWpOlPWDq2RSdAXcUgQHlIXd2W0uKWPNef%2BFTbJnsypcIcbHLRzFRd7r%2FOJnNbY1jHOTl0Tzzhxrel4e4wpidSC6E9mONMuzCZp%2Fdmn7bwdpd0Tg%2Bk5I3QcljzMBjikF5saDGNsoZJIc9LhmX2yDuqg1QCWnABvqlN8czSMRMgnGSeQ3Cg5%2BwAHS6%2BTRBdfYOv5ftUw%2B0ApuX
+x-ds-vetting-token: 
+X-Business-Group: DS
+X-Attach-Flag: N
+X-TXN_ID: EF4D9DAA-B9C1-4C8B-AC22-C8A4C5E66A9B
+X-DKIM_SIGN_REQUIRED: YES
+
+------=_Part_7453932_670588390.1476159716184
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-Disposition: inline
+
+Dear Digvijay Sharma,
+
+Thank you for enabling two-factor authentication for your Apple=C2=A0ID (d=
+=E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2@unicommerce.com).
+
+Two-factor authentication is an additional layer of security designed to pr=
+event unauthorised access to your account and protect the photos, documents=
+ and other data you store with Apple.
+
+From now on, whenever you sign in with your Apple=C2=A0ID on a new device o=
+r browser, you will verify your identity by entering your password plus a s=
+ix-digit verification code sent to your other devices or a trusted phone nu=
+mber. To learn more, read the FAQ.
+
+https://support.apple.com/kb/HT204915
+
+Additional security information
+
+If you did not enable two-factor authentication and believe an unauthorised=
+ user has accessed your account, you can use the link below to return to yo=
+ur previous security settings.
+
+Turn off Two-Factor Authentication
+https://iforgot.apple.com/withdraw?key=3D001592-00-eca0317f291842afc43bfe35=
+0594690c42e91fe5bd18d6d8f6cdb6efec554102LTOW
+
+This link and your Apple ID security questions will expire on 25 October 20=
+16. After this date, the only way to turn off two-factor authentication wil=
+l be to sign in to your Apple=C2=A0ID account page with your password and a=
+ six-digit verification code.
+
+Sincerely,
+
+
+Apple Support
+
+-------------------------------------------------------------
+
+Apple=C2=A0ID
+https://appleid.apple.com/gb
+
+Support
+http://www.apple.com/uk/support
+
+Privacy Policy
+http://www.apple.com/uk/privacy
+
+
+Copyright (c) 2016 Apple Distribution International, Luxembourg Branch, 31-=
+33, rue Sainte Zithe, L-2763 Luxembourg All Rights Reserved.
+
+------=_Part_7453932_670588390.1476159716184
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-Disposition: inline
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+=09<meta charset=3D"utf-8" />
+        <meta name=3D"format-detection" content=3D"address=3Dno" />
+        <meta name=3D"format-detection" content=3D"telephone=3Dno" />
+
+=09<title></title>
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width" />
+=09<meta name=3D"generator" content=3D"BBEdit 10.5" />
+=09
+<style>
+body#message {
+    font: 300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, =
+sans-serif, Arial, Helvetica, Verdana, sans-serif !important;
+    color: #333 !important;
+    background-color: #ffffff !important;
+    margin:0 !important;
+    padding:0 !important;
+    width:100% /* !important */;
+    /* was 685px */;
+}
+
+/*
+same width as body, because Rover adds this div
+*/
+body/*, .main*/ {
+}
+
+.main {
+    width: 685px;
+}
+
+#apple-logo-left-margin {
+    width: 538px !important;
+}
+
+#logo-row-box {
+=09width:100% !important;
+=09text-align:right;
+=09padding-bottom:47px !important;
+}
+
+div[dir=3D"rtl"] #logo-row-box {
+=C2=A0 text-align:left !important;
+}
+
+h1, em, b {
+    font-weight:bold !important;
+    line-height:18px !important;
+}
+
+h1, td.h1-header {
+    font-family: 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+p {
+    font-weight: 300;
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+    word-wrap: break-word;
+}
+
+td.paragraph {
+=09padding:0 0 18px !important;
+}
+
+td.h1-header {
+=09padding:0 0 18px !important;
+}
+
+td.no-padding-bottom {
+    padding-bottom:0 !important;
+}
+
+#signature {
+    padding-top:18px !important; /* was 41px */
+    padding-bottom:50px !important;
+}
+
+em {
+    font-family: 'Lucida Grande Bold', 'Lucida Grande', Lucida Sans, Lucida=
+ Sans Unicode, sans-serif, Arial, Helvetica, Verdana, sans-serif !important=
+;
+    font-style:normal !important;
+}
+
+em a {
+    color: #333 !important;
+}
+
+a {
+    color: #08c;
+    text-decoration: none;
+}
+
+span.unlink a,
+em a,
+b a,
+td.unlink a {
+    color:#333 !important;
+    cursor: text;
+    pointer-events: none;
+    padding-top:0 !important;
+    margin-top:0 !important;
+}
+
+#main {
+    margin-top: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+img#footer-gradient {
+    position:relative;
+    /* left:-70px;  does not work in Outlook.com */
+    /* width: 825px !important; */
+
+    width:100% !important;   =20
+    height:16px !important;
+}
+
+.footer-hr,
+footer hr {
+    height: 1px;
+    background-color: #FEFEFE;
+    background-image: linear-gradient(left, #FEFEFE 0%, #EAEAEA 6%, #EAEAEA=
+ 94%, #FEFEFE 100%);
+    background-image: -moz-linear-gradient(left, #FEFEFE 0%, #EAEAEA 6%, #E=
+AEAEA 94%, #FEFEFE 100%);
+    background-image: -ms-linear-gradient(left, #FEFEFE 0%, #EAEAEA 6%, #EA=
+EAEA 94%, #FEFEFE 100%);
+    background-image: -o-linear-gradient(left, #FEFEFE 0%, #EAEAEA 6%, #EAE=
+AEA 94%, #FEFEFE 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-s=
+top(0.0, #FEFEFE), color-stop(0.5, #FAFAFA), color-stop(1.0, #FEFEFE));
+    background-image: -webkit-linear-gradient(left, #FEFEFE 0%, #EAEAEA 6%,=
+ #EAEAEA 94%, #FEFEFE 100%);
+}
+
+.footer-radial-gradient {
+    height: 18px;
+    border-width: 0;
+    background: radial-gradient(342px 0px, farthest-side, #F8F8F8 0%, #FEFE=
+FE 100%);
+    background: -moz-radial-gradient(342px 0px, farthest-side, #F8F8F8 0%, =
+#FEFEFE 100%);
+    background: -ms-radial-gradient(342px 0px, farthest-side, #F8F8F8 0%, #=
+FEFEFE 100%);
+    background: -o-radial-gradient(342px 0px, farthest-side, #F8F8F8 0%, #F=
+EFEFE 100%);
+    background: -webkit-gradient(radial, 342px 0px, color-stop(0.0, #F8F8F8=
+), color-stop(1.0, #FEFEFE));
+    background: -webkit-radial-gradient(342px 0px, farthest-side, #F8F8F8 0=
+%, #FEFEFE 100%);
+}
+
+footer,
+footer p,
+footer span.unlink a,
+footer td.paragraph {
+    font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;
+    color:#888 !important;
+}
+
+.center-text,
+footer nav,
+footer p {
+    text-align: center;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+td.spacer-36 {
+=09padding-bottom:36px;
+}
+
+html[dir=3Drtl] #apple-logo {
+    left:0;
+    right:538px;
+}
+
+p#copyright {
+    margin-bottom: 0;
+}
+
+.display-block {
+    display: block;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+#apple-logo-margin-bottom {
+    height: 44px !important;
+}
+
+#left-align-on-reply {
+=09/* moved from body */
+=09margin:0px auto 50px;
+=09padding:0;
+=09width: 685px;
+}
+
+#apple-logo-cell {
+=09width:100%;
+=09padding-top:40px;
+=09padding-bottom:44px;
+}
+
+#apple-logo-in-cell {
+    height: 28px !important;
+    width: 24px !important;
+}
+
+#apple-logo-in-row-box-mobile {
+    display: none;
+    height: 20px !important;
+    width: 17px !important;
+}
+
+/* If the email client is reading the style element: */
+
+/* - then we don't need spacer divs */
+div.paragraph-spacer {
+  display:none;
+  height:0px !important;
+  margin-bottom:0px !important;
+}
+
+/* - and margin-top already is in effect on #main */
+#apple-logo-margin-top {
+  height:0px !important;
+}
+
+#logo-row-box {
+  padding-top:0 !important;
+}
+
+
+/* normally max-width: 320px */
+@media (max-width:320px) {
+
+  /* body[yahoo] prevents Yahoo! Mail from reading these rules, because it =
+cannot read attribute selectors */=09
+        body[yahoo]#message {
+          -webkit-text-size-adjust:none;
+=09}
+
+=C2=A0=09body[yahoo] #apple-logo-left-margin {
+=C2=A0=09=09width:275px !important;
+=C2=A0=09}
+
+=09body[yahoo] #main {
+=09=09margin-top:18px;
+=09=09padding-right:0;
+=09=09padding-left:0;
+=09}
+=09
+=09body[yahoo] #apple-logo-in-row-box {
+=09=09/* Not using hide and show approach between small and large imgs beca=
+use Outlook Express 6 shows both imgs on reply */
+
+=09=09/*
+=09=09display:none !important;=20
+=09=09height:0px !important;
+=09=09width:0px !important;
+=09=09*/
+
+=09=09height:20px !important;
+=09=09width:17px !important;
+=09}
+
+=09body[yahoo] #apple-logo-in-row-box-mobile {
+=09=09/* display:inline-block !important; Not using hide and show approach =
+between small and large imgs because Outlook Express 6 shows both imgs on r=
+eply */
+=09}
+=09
+=09body[yahoo] #apple-logo-margin-bottom {
+=09=09height:6px !important;
+=09}
+
+=09body[yahoo] #logo-row-box {
+=09=09padding-bottom:9px !important;
+=09}
+=09
+=09body[yahoo] p {
+=09=09margin-bottom:20px;
+=09}
+
+=09body[yahoo] td.paragraph {
+=09=09padding:0 0 20px !important;
+=09}
+
+=09body[yahoo] td.no-padding-bottom {
+=09=09padding-bottom:0 !important;
+=09}
+
+=09body[yahoo] p#signature {
+=09=09margin-top:36px !important;
+=09=09margin-bottom:28px !important;
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }
+
+=09body[yahoo] td#signature {
+=09=09padding-top:18px !important; /* was 36px */
+=09=09padding-bottom:28px !important;
+=09}
+
+=09body[yahoo] .footer-radial-gradient {
+=09=09height:0px;
+=09=09border-width:0;
+=09=09background: radial-gradient(150px 0px, farthest-side, #F8F8F8 0%, #FE=
+FEFE 100%);
+=09=09background: -moz-radial-gradient(150px 0px, farthest-side, #F8F8F8 0%=
+, #FEFEFE 100%);
+=09=09background: -ms-radial-gradient(150px 0px, farthest-side, #F8F8F8 0%,=
+ #FEFEFE 100%);
+=09=09background: -o-radial-gradient(150px 0px, farthest-side, #F8F8F8 0%, =
+#FEFEFE 100%);
+=09=09background: -webkit-gradient(radial, 150px 0px, color-stop(0.0, #F8F8=
+F8), color-stop(1.0, #FEFEFE));
+=09=09background: -webkit-radial-gradient(150px 0px, farthest side, #F8F8F8=
+ 0%, #FEFEFE 100%);
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }
+
+=09=09body[yahoo] img#footer-gradient {
+=09=09=09display:block !important;
+=09=09=09left:0;
+=09=09=09width:288px !important;
+=09=09}
+
+        body[yahoo] img#footer-gradient + p {
+          margin-bottom:12px !important;
+        }
+
+=09=09body[yahoo] td#footer-links {
+=09=09=09padding-bottom:12px !important;
+=09=09}
+
+        body[yahoo] #copyright #apple-address,
+        body[yahoo]  #copyright #all-rights-reserved {
+          display:block;
+        }
+
+        body[yahoo] #left-align-on-reply {
+                /* moved from body  */
+=09=09padding-right:16px;
+=09=09padding-left:16px;
+=09=09width:300px;
+        }
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 body[yahoo] footer {
+=09 =C2=A0font:11px/15px 'Helvetica Neue', Helvetica, Geneva, Verdana, Aria=
+l, sans-serif;
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }
+
+=09body[yahoo] #footer-paragraphs {
+=09=09 -webkit-text-size-adjust:none;
+=09}
+}
+</style>
+
+<!--[if lt IE 10]>
+<style>
+em {
+=09font-weight:bold;
+}
+</style>
+<![endif]-->
+
+<!--[if IE 9]>
+<style>
+
+.footer-hr,
+.footer-radial-gradient {
+=09display:block;
+}
+
+.footer-radial-gradient {
+=09width:825px;
+background:url('https://statici.icloud.com/emailimages/v4/common/footer_gra=
+dient_web.png') no-repeat;
+=09background-size:825px 18px;
+=09left:-70px;
+}
+
+img#footer-gradient {
+=09display:none;
+}
+</style>
+<![endif]-->
+
+<!--[if IE 8]>
+<style>
+.footer-hr,
+.footer-radial-gradient {
+=09display:none;
+}
+
+img#footer-gradient {
+=09display:block !important;
+=09margin-right:auto;
+=09margin-left:auto;
+}
+</style>
+<![endif]--> =20
+
+</head>
+
+<!-- body[yahoo] is being used to prevent Yahoo! Mail from reading these ru=
+les, because it cannot read attribute selectors -->
+<body id=3D"message" style=3D"background-color:#fff;" yahoo=3D"fix">
+=09<div id=3D"left-align-on-reply" dir=3D"ltr">
+=09=09<div id=3D"main">
+=09=09=09<!--<div id=3D"apple-logo-margin-top" style=3D"height:40px;"></div=
+>-->
+=09=09=09=09=09=09<div id=3D"logo-row-box" style=3D"width:95%;text-align: r=
+ight;padding-top:6%;padding-bottom:6%;">
+=09=09=09  <img id=3D"apple-logo-in-row-box" src=3D"https://statici.icloud.=
+com/emailimages/v4/common/apple_logo_web@2x.png" style=3D"display:inline-bl=
+ock;height:28px;width:24px;right:0px;"><!--<img id=3D"apple-logo-in-row-box=
+-mobile" src=3D"https://statici.icloud.com/emailimages/v4/common/apple_logo=
+_web.png" style=3D"display:none;height:0;width:0;right:0px;" height=3D"0" w=
+idth=3D"0">--><!--Two logos are appearing on reply in Windows XP Outlook Ex=
+press-->
+=09=09=09</div>
+
+=09=09=09<table id=3D"message-body-wrapper" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0">
+=09=09=09=09<tr>
+=09=09=09=09=09<td id=3D"message-body-left-margin" width=3D"0"></td><td id=
+=3D"message-body"><table id=3D"paragraphs" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0">
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">Dear Digvijay Sharm=
+a,</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">Thank you for enabl=
+ing two-factor authentication for your Apple&nbsp;ID (<em style=3D"font-fam=
+ily: 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-serif, Arial, =
+Helvetica, Verdana, sans-serif;font-style:normal;">d=E2=80=A2=E2=80=A2=E2=
+=80=A2=E2=80=A2=E2=80=A2@unicommerce.com</em>).</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">Two-factor authenti=
+cation is an additional layer of security designed to prevent unauthorised =
+access to your account and protect the photos, documents and other data you=
+ store with Apple.</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">From now on, whenev=
+er you sign in with your Apple=C2=A0ID on a new device or browser, you will=
+ verify your identity by entering your password plus a six-digit verificati=
+on code sent to your other devices or a trusted phone number. To learn more=
+, read the <a href=3D"https://support.apple.com/kb/HT204915" style=3D"line-=
+height:18px;color:#08c;text-decoration:none;" role=3D"link">FAQ</a>.</td></=
+tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;font-weight:bold;">Ad=
+ditional security information</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">If you did not enab=
+le two-factor authentication and believe an unauthorised user has accessed =
+your account, you can use the link below to return to your previous securit=
+y settings.</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;"><a href=3D"https://=
+iforgot.apple.com/withdraw?key=3D001592-00-eca0317f291842afc43bfe350594690c=
+42e91fe5bd18d6d8f6cdb6efec554102LTOW" style=3D"line-height:18px;color:#08c;=
+text-decoration:none;" role=3D"link">Turn off Two-Factor Authentication</a>=
+</td></tr>
+=09=09=09=09=09=09<tr><td class=3D"paragraph" style=3D"padding:0 5% 18px;fo=
+nt:300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-se=
+rif, Arial, Helvetica, Verdana, sans-serif;color:#333;">This link and your =
+Apple ID security questions will expire on 25 October 2016. After this date=
+, the only way to turn off two-factor authentication will be to sign in to =
+your Apple=C2=A0ID account page with your password and a six-digit verifica=
+tion code.</td></tr>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr><td class=3D"para=
+graph" style=3D"padding:0 5% 18px;font:300 14px/18px 'Lucida Grande', Lucid=
+a Sans, Lucida Sans Unicode, sans-serif, Arial, Helvetica, Verdana, sans-se=
+rif;color:#333;">Sincerely,</td></tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<tr><td id=3D"signature" class=3D"parag=
+raph" style=3D"padding:18px 5% 51px;font:300 14px/18px 'Lucida Grande', Luc=
+ida Sans, Lucida Sans Unicode, sans-serif, Arial, Helvetica, Verdana, sans-=
+serif;color:#333;">Apple Support</td></tr>
+=09=09=09=09=09</table><!--end table#paragraphs-->
+=09=09=09=09=09</td><!--end td#message-body-->
+=09=09=09=09</tr>
+=09=09=09</table><!--end table#message-body-wrapper-->
+=09=09</div><!--end #main -->
+
+=09=09<footer style=3D"width:100%;">
+=09=09=09<div class=3D"footer-radial-gradient" style=3D"display:none;"></di=
+v>
+=09=09=09<!--fallback image below for IE 8, 9-->
+=09
+=09=09=09<table id=3D"footer-paragraphs" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"width:100%;">
+=09=09=09=09<tr><td id=3D"footer-hr-cell"><div class=3D"footer-hr" style=3D=
+"height:1px;" height=3D"1"></div></td></tr>
+=09=09=09=09<tr><td id=3D"footer-gradient-img-cell" style=3D"width:100%"><i=
+mg id=3D"footer-gradient" src=3D"https://statici.icloud.com/emailimages/v4/=
+common/footer_gradient_web.png" style=3D"display:block;width:100%;" height=
+=3D"16"><!--width was 593,  width=3D"100%"--></td></tr>
+=09=09=09=09<tr><td id=3D"footer-links" style=3D"padding:0;text-align:cente=
+r;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;color:#888;"=
+><a href=3D"https://appleid.apple.com/gb" role=3D"link">Apple&nbsp;ID</a> |=
+ <a href=3D"http://www.apple.com/uk/support" role=3D"link">Support</a> | <a=
+ href=3D"http://www.apple.com/uk/privacy" role=3D"link">Privacy Policy</a><=
+/td></tr>
+=09=09=09=09<tr><td id=3D"copyright-cell" style=3D"padding:0;margin-bottom:=
+0;text-align:center;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-=
+serif;color:#888;">Copyright =C2=A9 2016 <span id=3D"apple-address" class=
+=3D"unlink  display-block" style=3D"display:block;">Apple Distribution Inte=
+rnational, Luxembourg Branch, 31-33, rue Sainte Zithe, L-2763 Luxembourg</s=
+pan> <span id=3D"all-rights-reserved">All Rights Reserved.</span></td></tr>
+=09=09=09</table>
+=09=09</footer>
+=09</div><!--end #left-align-on-reply-->
+</body>
+<img src=3D'http://outsideapple.apple.com/img/APPLE_EMAIL_LINK/spacer4.gif?=
+v=3D2&a=3DOD5aEl7y2zQ0agO7mXlZ4Cof2Ga1Dbbr02jxmqMd5dikY%2F2ogU1KWEGEHJ0DPoh=
+Codak7MTz%2B%2FHyiBb8GVcgmB3uEz7kIFnpLI8t0qJw6syKrJblFGurxm9M7Wwa71KfeoDx6P=
+o7S9wT87l6end%2Bq1Arkdd7v8H%2BoIz8zAVw02fWu5n%2BpV4RWpOlPWDq2RSdAXcUgQHlIXd=
+2W0uKWPNef%2BFTbJnsypcIcbHLRzFRd7r%2FOJnNbY1jHOTl0Tzzhxrel4e4wpidSC6E9mONMu=
+zCZp%2Fdmn7bwdpd0Tg%2Bk5I3QcljzMBjikF5saDGNsoZJIc9LhmX2yDuqg1QCWnABvqlN8czS=
+MRMgnGSeQ3Cg5%2BwAHS6%2BTRBdfYOv5ftUw%2B0ApuX'/>
+</html>
+------=_Part_7453932_670588390.1476159716184--

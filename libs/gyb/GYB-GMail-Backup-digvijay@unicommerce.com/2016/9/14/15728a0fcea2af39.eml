@@ -1,0 +1,174 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.51.147 with SMTP id k141csp1640110itk;
+        Wed, 14 Sep 2016 05:17:01 -0700 (PDT)
+X-Received: by 10.37.217.71 with SMTP id q68mr2302689ybg.105.1473855421769;
+        Wed, 14 Sep 2016 05:17:01 -0700 (PDT)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-yb0-x233.google.com (mail-yb0-x233.google.com. [2607:f8b0:4002:c09::233])
+        by mx.google.com with ESMTPS id y15si1689391yby.51.2016.09.14.05.17.01
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 14 Sep 2016 05:17:01 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::233 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:4002:c09::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::233 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-yb0-x233.google.com with SMTP id x93so9068258ybh.1
+        for <digvijay@unicommerce.com>; Wed, 14 Sep 2016 05:17:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=1PXkln79rhOaacNplhUCBIH20M1Rj4HRUuH7hkmUbmU=;
+        b=eQOVRkRaGuNZ75e/a4cmN/ypMuvSuc2nH9aq2UKgCnBRk2Esx4IcGuRHeN38vukJBe
+         +ens6tgI9muSZrjIFnhRZB5C5vsG99+A7F0hK+zvqyHP6pvJiM9PS8Nr1OVHh2QIuVUZ
+         0OKlEtAqIo138uzHcCByg8sR3IK1YrYFmPYEX4ApE+gzLWWEzjrwa2AM6NnkK5ZKaL9q
+         g3enXekgMLLa+HshWpA96t0oD6pIz16lIgq6oVCK+96h0vv4bHfDoBkFbu/2bGSF3OS6
+         IIVAW629HIkPvt9LW6upsq/95kjAoT9wqE+zas+EHzY/YJlJpPHbeVkn3t/gJvl7b37o
+         XQCQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=1PXkln79rhOaacNplhUCBIH20M1Rj4HRUuH7hkmUbmU=;
+        b=HF+y6bnec3gOE9/I2Dzq7TjIzHzCwj6IlWLPT/R8/XL5ifNz2V2iQ0pnwAakK6jXmb
+         JjaYM74B+1fIDnCzPSHW8BTlmk0nc5qOBPZx0Hgz3Qw7u5A+Hqa+/o61ssYqOx/NuK9W
+         4buhR4ZhO+u9yMjIi/2Dlz+BV+GC/Wq3FTy5ae+XO8ekiDqeiiy7SvjoNN2RfE/NxETG
+         iSbZkz7XxNopu8PLlpyaeNTLE2HI+aDwIJlOgj/go8IdnJkR+6D5LyWLTi+vrU9IDAj3
+         MHwM62wPeBMQZE852k2G2uiavAVy8hFocVzdVmlsUZ5XHy4H39Y3voJ7l7NTVZVDA895
+         RY7Q==
+X-Gm-Message-State: AE9vXwNh5u8DbED/pXRwGdH7nDO5dFDpfAGjXb/WfdQJPRcvOsIf5SvdIPxfgZavulyJP7V9D4TB61LC20/OWw==
+X-Received: by 10.37.123.68 with SMTP id w65mr2211762ybc.116.1473855420929;
+ Wed, 14 Sep 2016 05:17:00 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAJF3soro_9e=-J7ToixLYN0HfTam1T_SdYqNcBtsy9D=7sAfEw@mail.gmail.com>
+In-Reply-To: <CAJF3soro_9e=-J7ToixLYN0HfTam1T_SdYqNcBtsy9D=7sAfEw@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Wed, 14 Sep 2016 12:16:50 +0000
+Message-ID: <CAPe2SZSbtRHbtct4uGQhgkAg0+gBwbvBtBtwkXpyOva4O-fi9w@mail.gmail.com>
+Subject: Re: HI
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114dc0c8d113bd053c76b443
+
+--001a114dc0c8d113bd053c76b443
+Content-Type: text/plain; charset=UTF-8
+
+select soi.seller_sku_code as Top10Skus from sale_order so left join
+sale_order_item soi on soi.sale_order_id = so.id where so.tenant_id = 663
+group by soi.seller_sku_code order by sum(soi.total_price) desc limit 10;
+
+select seller_sku_code as Top10Skus from sale_order_item where
+sale_order_id in (select id from sale_order where tenant_id=663) group by
+seller_sku_code order by sum(total_price) desc LIMIT 10;
+
+select c.id as Top6Channels from sale_order so left join sale_order_item
+soi on soi.sale_order_id = so.id left join channel c on c.id =
+so.channel_id where so.tenant_id = 663 group by c.id order by
+sum(soi.total_price) desc limit 6;
+
+select name as Top6Channels,channel_id as channel_id from channel inner
+join (select channel_id,sum(sum) as channel_revenue from sale_order inner
+join (select sale_order_id,sum(total_price) as sum from sale_order_item
+group by sale_order_id)y where sale_order.id=y.sale_order_id and
+tenant_id=663 group by channel_id order by channel_revenue desc LIMIT 6)x
+where x.channel_id=channel.id and tenant_id=663;
+
+select channelSku as channelSku,sum(total_price) as channelSkuRevenue from
+sale_order so left join sale_order_item soi on soi.sale_order_id = so.id
+left join channel c on c_idwhere soi.seller_sku in (SELLERSKUS)
+
+select so.channel_id as ChannelId, soi.seller_sku_code as channelSku,
+sum(soi.total_price) as channelSkuRevenue from sale_order so left join
+sale_order_item soi on soi.sale_order_id = so.id where so.channel_id in
+(5292,5360,5279,5845,4729) group by so.channel_id having
+soi.seller_sku_code in
+('DSS7070A','DSS1022G','DSS8006C','DSS8076A','7070B','2251E','DSS2170C','2025A','DSS8095A','7070E')
+order by sum(soi.total_price) desc;
+
+select channelSku as channelSku,sum(total_price) as channelSkuRevenue from
+(select seller_sku_code as channelSku,total_price from sale_order_item
+where sale_order_id in (select id as saleOrderIds from sale_order where
+channel_id=5292))x group by channelSku having channelSku=(select
+seller_sku_code as Top10Skus from sale_order_item group by seller_sku_code
+order by sum(total_price) desc LIMIT 0,1) ;
+
+select channelSku as channelSku,sum(total_price) as channelSkuRevenue from
+(select seller_sku_code as channelSku,total_price from sale_order_item
+where sale_order_id in (select id as saleOrderIds from sale_order where
+channel_id=5292))x group by channelSku having channelSku in
+('DSS7070A','DSS1022G','DSS8006C','DSS8076A','7070B','2251E','DSS2170C','2025A','DSS8095A','7070E')
+
+
+5292,5360,5279,5845,4729
+
+ 'DSS7070A','DSS1022G','DSS8006C','DSS8076A','7070B','2251E','DSS2170C','2025A','DSS8095A','7070E'
+
+On Wed, Sep 14, 2016 at 4:50 PM Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+>
+> --
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a114dc0c8d113bd053c76b443
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>select soi.seller_sku_code as Top10Skus from sale_ord=
+er so left join sale_order_item soi on soi.sale_order_id =3D <a href=3D"htt=
+p://so.id">so.id</a> where so.tenant_id =3D 663 group by soi.seller_sku_cod=
+e order by sum(soi.total_price) desc limit 10;</div><div><br></div><div>sel=
+ect seller_sku_code as Top10Skus from sale_order_item where sale_order_id i=
+n (select id from sale_order where tenant_id=3D663) group by seller_sku_cod=
+e order by sum(total_price) desc LIMIT 10;</div><div><br></div><div>select =
+<a href=3D"http://c.id">c.id</a> as Top6Channels from sale_order so left jo=
+in sale_order_item soi on soi.sale_order_id =3D <a href=3D"http://so.id">so=
+.id</a> left join channel c on <a href=3D"http://c.id">c.id</a> =3D so.chan=
+nel_id where so.tenant_id =3D 663 group by <a href=3D"http://c.id">c.id</a>=
+ order by sum(soi.total_price) desc limit 6;</div><div><br></div><div>selec=
+t name as Top6Channels,channel_id as channel_id from channel inner join (se=
+lect channel_id,sum(sum) as channel_revenue from sale_order inner join (sel=
+ect sale_order_id,sum(total_price) as sum from sale_order_item group by sal=
+e_order_id)y where <a href=3D"http://sale_order.id">sale_order.id</a>=3Dy.s=
+ale_order_id and tenant_id=3D663 group by channel_id order by channel_reven=
+ue desc LIMIT 6)x where x.channel_id=3D<a href=3D"http://channel.id">channe=
+l.id</a> and tenant_id=3D663;</div><div><br></div><div>select channelSku as=
+ channelSku,sum(total_price) as channelSkuRevenue from sale_order so left j=
+oin sale_order_item soi on soi.sale_order_id =3D <a href=3D"http://so.id">s=
+o.id</a> left join channel c on c_idwhere soi.seller_sku in (SELLERSKUS) =
+=C2=A0</div><div><br></div><div>select so.channel_id as ChannelId, soi.sell=
+er_sku_code as channelSku, sum(soi.total_price) as channelSkuRevenue from s=
+ale_order so left join sale_order_item soi on soi.sale_order_id =3D <a href=
+=3D"http://so.id">so.id</a> where so.channel_id in (5292,5360,5279,5845,472=
+9) group by so.channel_id having soi.seller_sku_code in (&#39;DSS7070A&#39;=
+,&#39;DSS1022G&#39;,&#39;DSS8006C&#39;,&#39;DSS8076A&#39;,&#39;7070B&#39;,&=
+#39;2251E&#39;,&#39;DSS2170C&#39;,&#39;2025A&#39;,&#39;DSS8095A&#39;,&#39;7=
+070E&#39;) order by sum(soi.total_price) desc;</div><div><br></div><div>sel=
+ect channelSku as channelSku,sum(total_price) as channelSkuRevenue from (se=
+lect seller_sku_code as channelSku,total_price from sale_order_item where s=
+ale_order_id in (select id as saleOrderIds from sale_order where channel_id=
+=3D5292))x group by channelSku having channelSku=3D(select seller_sku_code =
+as Top10Skus from sale_order_item group by seller_sku_code order by sum(tot=
+al_price) desc LIMIT 0,1) ;</div><div><br></div><div>select channelSku as c=
+hannelSku,sum(total_price) as channelSkuRevenue from (select seller_sku_cod=
+e as channelSku,total_price from sale_order_item where sale_order_id in (se=
+lect id as saleOrderIds from sale_order where channel_id=3D5292))x group by=
+ channelSku having channelSku in (&#39;DSS7070A&#39;,&#39;DSS1022G&#39;,&#3=
+9;DSS8006C&#39;,&#39;DSS8076A&#39;,&#39;7070B&#39;,&#39;2251E&#39;,&#39;DSS=
+2170C&#39;,&#39;2025A&#39;,&#39;DSS8095A&#39;,&#39;7070E&#39;)</div><div><b=
+r></div><div><br></div><div>5292,5360,5279,5845,4729</div><div><br></div><d=
+iv>=C2=A0&#39;DSS7070A&#39;,&#39;DSS1022G&#39;,&#39;DSS8006C&#39;,&#39;DSS8=
+076A&#39;,&#39;7070B&#39;,&#39;2251E&#39;,&#39;DSS2170C&#39;,&#39;2025A&#39=
+;,&#39;DSS8095A&#39;,&#39;7070E&#39;=C2=A0</div></div><br><div class=3D"gma=
+il_quote"><div dir=3D"ltr">On Wed, Sep 14, 2016 at 4:50 PM Digvijay Sharma =
+&lt;<a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommerce.com</a=
+>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0=
+ 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><br><=
+/div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software=
+ Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a114dc0c8d113bd053c76b443--

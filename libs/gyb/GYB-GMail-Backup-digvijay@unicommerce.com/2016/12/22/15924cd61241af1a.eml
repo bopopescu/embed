@@ -1,0 +1,102 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2529311qgd;
+        Wed, 21 Dec 2016 20:32:36 -0800 (PST)
+X-Received: by 10.55.39.10 with SMTP id n10mr8137381qkn.103.1482381156582;
+        Wed, 21 Dec 2016 20:32:36 -0800 (PST)
+Return-Path: <garima@unicommerce.com>
+Received: from mail-qk0-x22d.google.com (mail-qk0-x22d.google.com. [2607:f8b0:400d:c09::22d])
+        by mx.google.com with ESMTPS id v27si1786449qtc.203.2016.12.21.20.32.36
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Dec 2016 20:32:36 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22d is neither permitted nor denied by best guess record for domain of garima@unicommerce.com) client-ip=2607:f8b0:400d:c09::22d;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22d is neither permitted nor denied by best guess record for domain of garima@unicommerce.com) smtp.mailfrom=garima@unicommerce.com
+Received: by mail-qk0-x22d.google.com with SMTP id q68so103134768qki.1
+        for <digvijay@unicommerce.com>; Wed, 21 Dec 2016 20:32:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=13nQVZA6P4kO+puevDe8Re8ne/tLc/P4c1vIxoRTI7k=;
+        b=IpuJGFZ4Q2q7aruR31SoYHx56WSoHhd8kFFcK/NxdrHSJU4NByIPnlZIrzbn6auVcL
+         hKhdEVGImg+TUx80KP5G2nsfxS2uXhshCthlSMlFLmnwE8gKXzTPVc6M88hqcp66JDS9
+         hMPuQHLZ6uzjh6J/dZ3Lvd6BddSfRdZXQF427Xe/Oi7/w9E0jtuVJCyDv8JozGsIoo7I
+         v11JSabGK+9YnMNRnG97ZOS5DEYTePGszn7yw7c72eJELusmLkFKOPLr2MZSrqR7ILpV
+         Sx3UAATqyPlPl3Tuu7CMjLgYYgYm1tJIZzAmr8591VdW4iLlaW1wOEjGDjOCGxj8Und+
+         a0BA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=13nQVZA6P4kO+puevDe8Re8ne/tLc/P4c1vIxoRTI7k=;
+        b=eyfFm9NjA06Apqo6HrQ0v2W5X3XgwjB3SsVJ8PPaYPcxwxbyVWNnV0JkvllLWvb8sy
+         VhgNZx2KHRERiIoI5xD29naF2ISEB3ilTrw7lZ1UHLrAt+Nzs+hCsf04xZWy9UkULnMI
+         7mF3kVfdX6/Ee8ZWKlg5j8RcDT7fXYnDHuQ84f3q048bE5n0DMdrII+lg58R3frZAYuL
+         P304tycFdTsYPTodUhKVKJlwJOQ+h1wzlQj/S0T1fidSHzfo3tpnCCGqh99P5znsbhjQ
+         cUOVj6bwHwjiRa6yXtywPVI4mReyVQz7QRJUG98u0SJuUblUzCU6XmMf74/sn5heyUSd
+         EqKA==
+X-Gm-Message-State: AIkVDXK4C6pHg5KsoDPPJ/jrEQVwhY+ipyvWiuXC5H9U2b/eAx9SWMZyOi45mZprfks2skAMFuew5xq+t3qhaw==
+X-Received: by 10.55.195.4 with SMTP id a4mr1359498qkj.192.1482381156307; Wed,
+ 21 Dec 2016 20:32:36 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.146.148 with HTTP; Wed, 21 Dec 2016 20:32:35 -0800 (PST)
+Received: by 10.12.146.148 with HTTP; Wed, 21 Dec 2016 20:32:35 -0800 (PST)
+In-Reply-To: <CAGz2fOf8MEYve9MCy+5Vk4oDBYZsnbU+QrFucqSBWg-LKV-2eQ@mail.gmail.com>
+References: <CAGz2fOf8MEYve9MCy+5Vk4oDBYZsnbU+QrFucqSBWg-LKV-2eQ@mail.gmail.com>
+From: Garima Arora <garima@unicommerce.com>
+Date: Thu, 22 Dec 2016 10:02:35 +0530
+Message-ID: <CAPyw11aTNb2jCkUBtjqEPypK_xJ52oemthsou3WUsx=HkRcSww@mail.gmail.com>
+Subject: Re: Prankster
+To: Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Shipra Gupta <shipra@unicommerce.com>, Akshay Kochhar <akshay@unicommerce.com>, 
+	Guhapriya Velu <guhapriya@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1147833c3e675a054437c2eb
+
+--001a1147833c3e675a054437c2eb
+Content-Type: text/plain; charset=UTF-8
+
+Done ..paytm
+
+On Dec 16, 2016 1:12 PM, "Rachit Sachdeva" <rachit@unicommerce.com> wrote:
+
+> Total Bill: 6877
+> Total People: 11
+> Per Person: 626
+>
+> Payment Link: https://www.billdesk.com/pgidsk/pgmerc/amexcard/
+> amex_card.jsp
+>
+> Card Number: 3744 339168 41001
+>
+> Regards,
+> Rachit Sachdeva
+>
+>
+
+--001a1147833c3e675a054437c2eb
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Done ..paytm</div><div class=3D"gmail_extra"><br><div cla=
+ss=3D"gmail_quote">On Dec 16, 2016 1:12 PM, &quot;Rachit Sachdeva&quot; &lt=
+;<a href=3D"mailto:rachit@unicommerce.com">rachit@unicommerce.com</a>&gt; w=
+rote:<br type=3D"attribution"><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r"><div>Total Bill: 6877</div><div>Total People: 11</div><div>Per Person: 6=
+26</div><div><br></div><div>Payment Link:=C2=A0<a href=3D"https://www.billd=
+esk.com/pgidsk/pgmerc/amexcard/amex_card.jsp" target=3D"_blank">https://www=
+.billdesk.<wbr>com/pgidsk/pgmerc/amexcard/<wbr>amex_card.jsp</a></div><div>=
+<br></div><div>Card Number: 3744 339168 41001</div><br clear=3D"all"><div><=
+div class=3D"m_8213870909652778153gmail_signature"><div dir=3D"ltr"><div>Re=
+gards,</div><div>Rachit Sachdeva</div><img src=3D"https://d3kjp0zrek7zit.cl=
+oudfront.net/uploads/product/image/4364/large_detail_1409053661.png" width=
+=3D"96" height=3D"54"><br></div></div></div>
+</div>
+</blockquote></div></div>
+
+--001a1147833c3e675a054437c2eb--

@@ -1,0 +1,123 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp274940qge;
+        Thu, 17 Nov 2016 05:35:11 -0800 (PST)
+X-Received: by 10.99.48.68 with SMTP id w65mr7891129pgw.68.1479389711052;
+        Thu, 17 Nov 2016 05:35:11 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id o2si3392129pga.26.2016.11.17.05.35.10
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Nov 2016 05:35:11 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uAHDZ9Rv007271;
+	Thu, 17 Nov 2016 19:05:09 +0530
+Date: Thu, 17 Nov 2016 19:05:09 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <72174292.50.1479389709571.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareAccountTest #207
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareAccountTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/207/Changes:
+
+[digvijay] Controllers separated promoCode
+
+------------------------------------------
+Started by user digvijay
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/UniwareAccounts.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/UniwareAccounts.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/UniwareAccounts.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 9a9ec264d6265d9ec099f12f66ef6a4ab05f6f77 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9a9ec264d6265d9ec099f12f66ef6a4ab05f6f77
+ > git rev-list efa84a6b7ae0ed1d526c3e43590608478f39f8ca # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3934 completed. Result was SUCCESS
+Waiting for the completion of UniwareUIAccounts
+UniwareUIAccounts #115 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareAccountTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] UniwareAccounts
+[INFO] UniwareAccountCore
+[INFO] UniwareAccountServices
+[INFO] UniwareAccount Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccounts 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccounts ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccounts ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccountCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/src/main/resources>
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 206 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/classes>
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/src/main/java/com/uniaccounts/core/api/promoCode/pojo/WsPromoCode.java>:[3,47] cannot find symbol
+  symbol:   class DecimalMin
+  location: package com.unifier.core.annotation.constraints
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] UniwareAccounts .................................... SUCCESS [  0.301 s]
+[INFO] UniwareAccountCore ................................. FAILURE [  3.920 s]
+[INFO] UniwareAccountServices ............................. SKIPPED
+[INFO] UniwareAccount Webapp .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.407 s
+[INFO] Finished at: 2016-11-17T13:35:09+00:00
+[INFO] Final Memory: 34M/178M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniwareAccountCore: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/src/main/java/com/uniaccounts/core/api/promoCode/pojo/WsPromoCode.java>:[3,47] cannot find symbol
+[ERROR] symbol:   class DecimalMin
+[ERROR] location: package com.unifier.core.annotation.constraints
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UniwareAccountCore
+Build step 'Invoke top-level Maven targets' marked build as failure

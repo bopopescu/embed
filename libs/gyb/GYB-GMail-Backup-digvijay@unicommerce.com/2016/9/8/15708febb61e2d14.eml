@@ -1,0 +1,124 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.214.18 with SMTP id o18csp661240itg;
+        Thu, 8 Sep 2016 01:51:34 -0700 (PDT)
+X-Received: by 10.13.254.135 with SMTP id o129mr44317963ywf.117.1473324694396;
+        Thu, 08 Sep 2016 01:51:34 -0700 (PDT)
+Return-Path: <akshay@unicommerce.com>
+Received: from mail-yw0-x22a.google.com (mail-yw0-x22a.google.com. [2607:f8b0:4002:c05::22a])
+        by mx.google.com with ESMTPS id i3si14883533ywb.178.2016.09.08.01.51.34
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Sep 2016 01:51:34 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22a is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) client-ip=2607:f8b0:4002:c05::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::22a is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) smtp.mailfrom=akshay@unicommerce.com
+Received: by mail-yw0-x22a.google.com with SMTP id u124so11308505ywg.3
+        for <digvijay@unicommerce.com>; Thu, 08 Sep 2016 01:51:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=frvHZWI0dH05+BLo63lp3PaEgkJvt5YyNrr/7/c8Opc=;
+        b=TMU8LF2KayYYxGA3GpHeuArUbXdHx5+ZrHFjJMuKsgTnb/ytmJnuhNg0ZaKwhkvPT+
+         SrZ0wmrK5v06FBu55KA80NyxPTXpq0a30e82Mpnv6AJVv4Kzt2PV5PaEW029jk39F5Xi
+         5GT8Gwa/AJ7UIXFUUtooYNiGVqIgo1PbkHzpyXHtD9xRqwvt8Y4Afk7mzr58h8R4ysXD
+         C1Ib3/iU5s8+YQXk1ckBP5PK6zoxOCNbbXadgiFuqmTLlqu2sVc3hfAqNAtQlQrzQKvB
+         Yb73mKxPEqjV8iUerfSoXnaUSY6tGEabP/w2KjBuMMl9r2/NqjmU68ovDrjzyt7qHsIA
+         S/gA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=frvHZWI0dH05+BLo63lp3PaEgkJvt5YyNrr/7/c8Opc=;
+        b=ftyeLpxwwVwv6AYJrcpUZHbywYX/IPKccHJXWqZdycDTkd9Or+naMUBDCiqVTtupO4
+         jcvszMIPtwjDH4DiKbmbYsnE8RhT0iBmXKKW5GcAsrZoGp2TBYmIUtZJKIPogiPx8tNx
+         n1R36rsTJPBR6eJhezH/AA6l+pJ9EnNahjA5OqhlyDmsiQlV6FMgRE95YGkaJRJq4sfi
+         2kkmGVJRsVgXPykp/TfUkMJ6L+bkcdP4U2BXsw4fnL76NiOeERFG5EDSolUdbp2oELVW
+         QrOyqoL68ZPETVw0VS04z3yYSf+mNANZW/rF9EdTRJQFkqY4T9MBLwKutjw4Hu8wM4r8
+         1vXw==
+X-Gm-Message-State: AE9vXwNKOz/9LGYG/dOztVDlIg2XT0xDuh7vDpU8b4+PNfmYJ3Wmknqe98zwmFb1XPiqWRJxbYaT5evgo/CBUw==
+X-Received: by 10.13.202.195 with SMTP id m186mr18618208ywd.11.1473324694109;
+ Thu, 08 Sep 2016 01:51:34 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.48.9 with HTTP; Thu, 8 Sep 2016 01:51:13 -0700 (PDT)
+In-Reply-To: <CAGz2fOfxNcCt_QTLZ=gVCFEjSRWQahQ4BUourWawR33c1WkF0A@mail.gmail.com>
+References: <CAGz2fOfxNcCt_QTLZ=gVCFEjSRWQahQ4BUourWawR33c1WkF0A@mail.gmail.com>
+From: Akshay Kochhar <akshay@unicommerce.com>
+Date: Thu, 8 Sep 2016 14:21:13 +0530
+Message-ID: <CAOkTFmjtDPPLttfubPC4cTFvk3i0rnXQsXoP1QND=e-c+chtuQ@mail.gmail.com>
+Subject: Re: Wednesday Night Party Expenses
+To: Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Vani Verma <vani@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Vikas Goyal <vikas@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Puneet Sharma <puneet@unicommerce.com>, 
+	Piyush Arora <piyush@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, 
+	Yamini Sukhija <yamini.sukhija@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Sunny Agarwal <sunny@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Ankur Pratik <ankur.pratik@unicommerce.com>, Shilpa Suri <shilpa@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>, 
+	Ashish Bansal <ashish@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114e3e3c085393053bfb2315
+
+--001a114e3e3c085393053bfb2315
+Content-Type: text/plain; charset=UTF-8
+
+Done.
+
+-- Regards, Akshay Kochhar
+Software Engineer
+M:9999315765
+Unicommerce eSolutions Pvt. Ltd.
+
+
+
+On Thu, Sep 8, 2016 at 1:17 PM, Rachit Sachdeva <rachit@unicommerce.com>
+wrote:
+
+> Total Bill: 33610
+> Total People: 28
+>
+> Charges per person: 1200.35 (:P)
+>
+> Account Details:
+>
+> Account Name: Rachit Sachdeva
+> Account Number: 50100047857008, HDFC Barakhamba Road,
+> IFSC: HDFC0000708
+>
+> Regards,
+> Rachit Sachdeva
+>
+>
+
+--001a114e3e3c085393053bfb2315
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done.</div><div class=3D"gmail_extra"><br clear=3D"all"><d=
+iv><div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div d=
+ir=3D"ltr"><div><div>-- Regards, Akshay Kochhar<br></div>Software Engineer<=
+br></div><div>M:9999315765<br></div>Unicommerce eSolutions Pvt. Ltd.<br><im=
+g src=3D"https://demo.ucdn.in/img/uniTheme/logo.png?v=3D1"><br><div><div><b=
+r></div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Thu, Sep 8, 2016 at 1:17 PM, Rachit Sachd=
+eva <span dir=3D"ltr">&lt;<a href=3D"mailto:rachit@unicommerce.com" target=
+=3D"_blank">rachit@unicommerce.com</a>&gt;</span> wrote:<br><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex"><div dir=3D"ltr"><div>Total Bill: 33610</div><div>Total Peo=
+ple: 28</div><div><br></div><div>Charges per person: 1200.35 (:P)</div><div=
+><br></div><div>Account Details:</div><div><br></div><div>Account Name: Rac=
+hit Sachdeva</div><div><div>Account Number: 50100047857008, HDFC Barakhamba=
+ Road,</div><div>IFSC: HDFC0000708</div></div><br clear=3D"all"><div><div><=
+div dir=3D"ltr"><div>Regards,</div><div>Rachit Sachdeva</div><img src=3D"ht=
+tps://d3kjp0zrek7zit.cloudfront.net/uploads/product/image/4364/large_detail=
+_1409053661.png" width=3D"96" height=3D"54"><br></div></div></div>
+</div>
+</blockquote></div><br></div>
+
+--001a114e3e3c085393053bfb2315--

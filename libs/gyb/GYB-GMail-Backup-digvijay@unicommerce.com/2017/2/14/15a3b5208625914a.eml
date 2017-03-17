@@ -1,0 +1,93 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1318758qgu;
+        Mon, 13 Feb 2017 22:31:56 -0800 (PST)
+X-Received: by 10.55.162.80 with SMTP id l77mr9625377qke.272.1487053916673;
+        Mon, 13 Feb 2017 22:31:56 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qk0-x22d.google.com (mail-qk0-x22d.google.com. [2607:f8b0:400d:c09::22d])
+        by mx.google.com with ESMTPS id z15si9011508qtz.141.2017.02.13.22.31.56
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 13 Feb 2017 22:31:56 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22d is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c09::22d;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22d is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qk0-x22d.google.com with SMTP id 11so113852510qkl.3
+        for <digvijay@unicommerce.com>; Mon, 13 Feb 2017 22:31:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=VCoSYbyn8zt4TlkCRlxjQwWZiCDILoGxhcINoQafqKQ=;
+        b=mhUc2voVxQs06H2CAwMgCDXPhxTBAXpzE2gaYAbXdhLLhDg+prYRnyEqGVRoiQ/Ilt
+         0fbmbU3zzeUEUuUdd48dYVHwQHF9EHgS8YV9XObMvOgsRD2M3lwQfq/OBBkQ5C9eOitI
+         aS928coeCO0E0FVzdtSEBLTXiho2C9Yxb48e1OfZJPdAlhh5CEq2xSU2ejj0O4N9m75N
+         EpxuyrO7OUdNnrB+5Trl8QbKfN//xkQ+x1uzb+0iB78NHy+bonhriPcYo6n83PB2mNdz
+         I0RbFA/a2eAFu+sVZqNCLVgr4ZvWOLYdfK7QRiAIgu0y0yF9YNBYVKdOsA46fAAPYxYy
+         EmYQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=VCoSYbyn8zt4TlkCRlxjQwWZiCDILoGxhcINoQafqKQ=;
+        b=uegw/3yXvIZQs9bLneUlZZAiXBmC+Vy9i+U9StWSwHMR2SjZn5HOnxQSjs6oFoyV8L
+         bXK5Jth7UHpEq/qc2FSL/hfhZOKEXf84ENaQdcNOVrxQnyXNdoAEtwxp+MgTjVaWsboD
+         SyDlKTOoe5j/Q4YIhtdYZhnCi1rJzNXxJHcLEE5d2oUeA2vmDrx2szx/xI6odKmWtT7a
+         U3XeR1nwlfQ/6MSmyhDIIWNdqjLFVSGjJuX3+YXSE7WQCmALoDWb4sRWpE/GnINFP8ra
+         cVOr4C7/A0zfwKNxOo5cuc3zJENeNQ4zc+Ohp1PqRA+O+i4/Z9smM3GY0efn1EjhQfaU
+         gP3Q==
+X-Gm-Message-State: AMke39mNR+3CeanqnTN9/G+QS3nBh5DXzusYc+rqFIXJz1aryvWajrumlgXmDWoKAR39oiA57KiDPECxMZTnjw==
+X-Received: by 10.55.6.210 with SMTP id 201mr25370569qkg.51.1487053916261;
+ Mon, 13 Feb 2017 22:31:56 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.158.31 with HTTP; Mon, 13 Feb 2017 22:31:55 -0800 (PST)
+From: Varad Singhal <varad@unicommerce.com>
+Date: Tue, 14 Feb 2017 12:01:55 +0530
+Message-ID: <CAFD_XHFMDdbD0nLnMHCuz7g2HvPAfu4yUTsZP=BnvoOYhx-r+g@mail.gmail.com>
+Subject: Error in generating access token
+To: "Mani, Rohit" <rohitman@amazon.com>
+Cc: "Kaura, Anuj" <anujkaur@amazon.com>, "Rao, Sagar" <raosagar@amazon.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114d6d5470eaff054877b833
+
+--001a114d6d5470eaff054877b833
+Content-Type: text/plain; charset=UTF-8
+
+Hi Rohit,
+
+During the development, we are trying to generate access token and we are
+getting error as invalid_client.
+
+Please check and suggest, pasting curl below for ready ref.
+
+varad@wormhole [~] $ curl -k -X POST -H 'Content-Type: application/json' -d
+'{"grant_type": "client_credentials", "client_secret":
+"f5743e8e8e965ee2c3151854c40cf9e2702d39ee82fcabc17260c060130c9bc9",
+"client_id": "amzn1.application.74edb224e86f4af990b825cdf96428cb", "scope":
+"shipwithamazon::shipment::read"}' https://api.amazon.com/auth/O2/token
+
+{"error_description":"Client authentication
+failed","error":"invalid_client"}
+
+Regards
+Varad Singhal
+88266 32211
+
+--001a114d6d5470eaff054877b833
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Rohit,<br><br>During the development, we are trying to =
+generate access token and we are getting error as invalid_client.<br><br>Pl=
+ease check and suggest, pasting curl below for ready ref.<br><br>varad@worm=
+hole [~] $ curl -k -X POST -H &#39;Content-Type: application/json&#39; -d &=
+#39;{&quot;grant_type&quot;: &quot;client_credentials&quot;, &quot;client_s=
+ecret&quot;: &quot;f5743e8e8e965ee2c3151854c40cf9e2702d39ee82fcabc17260c060=
+130c9bc9&quot;, &quot;client_id&quot;: &quot;amzn1.application.74edb224e86f=
+4af990b825cdf96428cb&quot;, &quot;scope&quot;: &quot;shipwithamazon::shipme=
+nt::read&quot;}&#39; <a href=3D"https://api.amazon.com/auth/O2/token">https=
+://api.amazon.com/auth/O2/token</a><br><br>{&quot;error_description&quot;:&=
+quot;Client authentication failed&quot;,&quot;error&quot;:&quot;invalid_cli=
+ent&quot;}<br><div><br></div><div>Regards</div><div>Varad Singhal</div><div=
+>88266 32211</div></div>
+
+--001a114d6d5470eaff054877b833--

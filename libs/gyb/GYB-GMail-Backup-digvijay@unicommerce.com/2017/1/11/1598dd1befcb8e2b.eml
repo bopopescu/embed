@@ -1,0 +1,123 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp752821qgd;
+        Wed, 11 Jan 2017 05:57:30 -0800 (PST)
+X-Received: by 10.129.81.4 with SMTP id f4mr7502116ywb.239.1484143050732;
+        Wed, 11 Jan 2017 05:57:30 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-yw0-x229.google.com (mail-yw0-x229.google.com. [2607:f8b0:4002:c05::229])
+        by mx.google.com with ESMTPS id s124si1750033ywb.426.2017.01.11.05.57.30
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 11 Jan 2017 05:57:30 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::229 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:4002:c05::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::229 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-yw0-x229.google.com with SMTP id l75so56782741ywb.0
+        for <digvijay@unicommerce.com>; Wed, 11 Jan 2017 05:57:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=from:mime-version:references:date:message-id:subject:to:cc;
+        bh=csLiYzdB0Xv/a9Bnnv7HbrMQruUeXPzWUOP3p9YI6VU=;
+        b=t9mwT6DbrJGm/6ZqNzCgthWQV4Abk/zq8ENK6pRR/7O4OCTa2ht+2pId2MhV1rwDDZ
+         8+iCjktmpmSYbPe1RzJYbCeBxY7PZjQtWadfv0e+Mdq01M+T8J/i9YfpiKSiOJBvC1Tx
+         vFzPp/s0hfeZl64XhzoNrG12wfdRioq9YC9o3YxNiOt1jTXJBR4y7VE7pSe0MBa3z1Wi
+         fY977o0yEQfl6hAHK9m3eyY1o77v8ih9fhN7EslN/eDWjNSwNyjIG/fv9aXzpQQiy9sb
+         wRkPWT558MNDRCbrcTyfEl1clxWZFms7BErNgeiGyMf2FTbiazVJ1fJJyu/RUzv+ex80
+         T/1Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:mime-version:references:date:message-id
+         :subject:to:cc;
+        bh=csLiYzdB0Xv/a9Bnnv7HbrMQruUeXPzWUOP3p9YI6VU=;
+        b=jQGglhxwjibtyyVl0ULsS5U5A8bh9En2xlZEHzewIkkAWMYOw8lrrpwF6YkZvj0KGZ
+         YKswbcbvGSWpXVODdC0XmjFw+yA54gdhdklkWsnR1t+YG1FyiroxsvvI0uNcVSA1UB++
+         JITW+8YupmHXoL/72VGub38yff4na8n2KKF2NiKvlCsrIrKO+3TsqzpEAPS0SIrx+z4t
+         94ar3hJ6lcSmDeETmPzRG3oFCfZpNiHiqgcLD1TpbOoIRGLKvYscaPKRPSa9JvprFhhp
+         MbrBlIRBEOAx8KhgFYZZL0I6iQOSsjy+zotfpekQOioPkVEQO6gN68CT6fi5scBd6mAA
+         mecA==
+X-Gm-Message-State: AIkVDXIAs04hVFWIqZ5LcSpPmrIf0zd3qm8wYU5F4gDYhjDOKlaj53zuS1cUZLHCnSQcz+AbpiWLnqG3KJ7vqQ==
+X-Received: by 10.13.199.135 with SMTP id j129mr7317578ywd.12.1484143050278;
+ Wed, 11 Jan 2017 05:57:30 -0800 (PST)
+From: Puneet Sharma <puneet@unicommerce.com>
+Mime-Version: 1.0 (1.0)
+References: <CAJF3soq==hsjABXHULxaRmaH9dZvURhPE=8dJNaiGt-SSe32mQ@mail.gmail.com>
+Date: Wed, 11 Jan 2017 19:27:28 +0530
+Message-ID: <-5170650639444694567@unknownmsgid>
+Subject: Fwd: Queries for prod uniware
+To: devops@unicommerce.com
+Cc: Digvijay Sharma <digvijay@unicommerce.com>, Sunny Agarwal <sunny@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a114e5ea04f7f830545d1fb27
+
+--001a114e5ea04f7f830545d1fb27
+Content-Type: multipart/alternative; boundary=001a114e5ea04f7f7e0545d1fb25
+
+--001a114e5ea04f7f7e0545d1fb25
+Content-Type: text/plain; charset=UTF-8
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+Begin forwarded message:
+
+*From:* Digvijay Sharma <digvijay@unicommerce.com>
+*Date:* 11 January 2017 at 7:20:41 PM IST
+*To:* Puneet Sharma <puneet@unicommerce.com>, Sunny Agarwal <
+sunny@unicommerce.com>,  Akshay Agarwal <akshay.agarwal@unicommerce.com>
+*Subject:* *Queries for prod uniware*
+
+Please run these queries as mysql2All.
+
+--001a114e5ea04f7f7e0545d1fb25
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=
+=3Dus-ascii"></head><body dir=3D"auto"><div><br><br><div><span style=3D"col=
+or:rgba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-decoration:-=
+webkit-letterpress">Thanks,</span><div style=3D"color:rgba(0,0,0,0.701961);=
+font-family:UICTFontTextStyleBody;text-decoration:-webkit-letterpress">Pune=
+et Sharma</div><div style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFon=
+tTextStyleBody;text-decoration:-webkit-letterpress">Unicommerce Esolutions =
+Pvt. Ltd</div><div style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFont=
+TextStyleBody;text-decoration:-webkit-letterpress"><a href=3D"tel:+91-76661=
+82895">+91-7666182895</a></div></div></div><div><br>Begin forwarded message=
+:<br><br></div><blockquote type=3D"cite"><div><b>From:</b> Digvijay Sharma =
+&lt;<a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommerce.com</a=
+>&gt;<br><b>Date:</b> 11 January 2017 at 7:20:41 PM IST<br><b>To:</b> Punee=
+t Sharma &lt;<a href=3D"mailto:puneet@unicommerce.com">puneet@unicommerce.c=
+om</a>&gt;, Sunny Agarwal &lt;<a href=3D"mailto:sunny@unicommerce.com">sunn=
+y@unicommerce.com</a>&gt;,=C2=A0 Akshay Agarwal &lt;<a href=3D"mailto:aksha=
+y.agarwal@unicommerce.com">akshay.agarwal@unicommerce.com</a>&gt;<br><b>Sub=
+ject:</b> <b>Queries for prod uniware</b><br><br></div></blockquote><div><s=
+pan></span></div><blockquote type=3D"cite"><div><div dir=3D"ltr">Please run=
+ these queries as mysql2All.</div>
+</div></blockquote><blockquote type=3D"cite"><div></div></blockquote></body=
+></html>
+
+--001a114e5ea04f7f7e0545d1fb25--
+--001a114e5ea04f7f830545d1fb27
+Content-Type: text/html; charset=us-ascii
+Content-Disposition: attachment
+Content-Transfer-Encoding: base64
+X-Attachment-Id: cef3be1c7263232b_0.1.2
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9dXMtYXNjaWkiPjwvaGVhZD48Ym9keSBkaXI9ImF1dG8iPjxibG9ja3F1
+b3RlIHR5cGU9ImNpdGUiPjxkaXY+PC9kaXY+PC9ibG9ja3F1b3RlPjwvYm9keT48L2h0bWw+
+--001a114e5ea04f7f830545d1fb27
+Content-Type: application/octet-stream; name="trendyBharat.sql"; 
+	x-apple-part-url=68D1F2D7-5122-4297-BED2-F245E53B93F4
+Content-Disposition: attachment; filename="trendyBharat.sql"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: cef3be1c7263232b_0.1.1
+
+aW5zZXJ0IGludG8gcHJvZHVjdF9zb3VyY2UgdmFsdWVzKG51bGwsICJTVEFOREFSRCIsICdUUkVO
+RFlfQkhBUkFUJywgbm93KCksIG5vdygpKTsNCmluc2VydCBpbnRvIHByb2R1Y3Rfc291cmNlIHZh
+bHVlcyhudWxsLCAiRU5URVJQUklTRSIsICdUUkVORFlfQkhBUkFUJywgbm93KCksIG5vdygpKTsN
+Cmluc2VydCBpbnRvIHByb2R1Y3Rfc291cmNlIHZhbHVlcyhudWxsLCAiUFJPRkVTU0lPTkFMIiwg
+J1RSRU5EWV9CSEFSQVQnLCBub3coKSwgbm93KCkpOw==
+--001a114e5ea04f7f830545d1fb27--

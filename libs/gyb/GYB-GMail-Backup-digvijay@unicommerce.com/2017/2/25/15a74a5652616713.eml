@@ -1,0 +1,194 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp133852qgu;
+        Sat, 25 Feb 2017 01:41:20 -0800 (PST)
+X-Received: by 10.84.143.1 with SMTP id 1mr9868777ply.81.1488015680707;
+        Sat, 25 Feb 2017 01:41:20 -0800 (PST)
+Return-Path: <tech+bncBC5LH3M3TACRBP5CYXCQKGQEE6PVPCY@unicommerce.com>
+Received: from mail-pf0-x248.google.com (mail-pf0-x248.google.com. [2607:f8b0:400e:c00::248])
+        by mx.google.com with ESMTPS id a19si9785190pgk.243.2017.02.25.01.41.20
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 25 Feb 2017 01:41:20 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c00::248 is neither permitted nor denied by best guess record for domain of tech+bncbc5lh3m3tacrbp5cyxcqkgqee6pvpcy@unicommerce.com) client-ip=2607:f8b0:400e:c00::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c00::248 is neither permitted nor denied by best guess record for domain of tech+bncbc5lh3m3tacrbp5cyxcqkgqee6pvpcy@unicommerce.com) smtp.mailfrom=tech+bncBC5LH3M3TACRBP5CYXCQKGQEE6PVPCY@unicommerce.com
+Received: by mail-pf0-x248.google.com with SMTP id h72sf30745471pfd.5
+        for <digvijay@unicommerce.com>; Sat, 25 Feb 2017 01:41:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=4aUzbLtMBCw0GKgzDaKEmhqrwKvbRJNRlLLVTSglHEc=;
+        b=azlx4K+CWDGx4Ikv3BNqMlbbmNoAzN4rBwxinqfk4gmFN+wbtWmNIXZz5dJ+vOJyz6
+         x4fNLxvC2YMbZZkJnw6+rBeAHCmsMbdmY9fpEmbiNIRKWarIGPMpaT+4JZ+jp53jO+3o
+         WOvzeShm6yGfdxgCiQPP1wIj35ajxdc3DjfMUhmW9SXagIQmuyTz89vHOno+P0xPBzRk
+         uvrivDfVBV5Ph7Jo72iniJcXSx7lX5PluAKehiaKpVW1pXOd7T+L3AIUD4Cl5++ldGfV
+         JWWTvDxyyl79Upq8cqWsGG7a/Wyn3IyhpKKpk4TlXFXPJg4NqvnDksz2EFb4imreD2Rx
+         Duzw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=4aUzbLtMBCw0GKgzDaKEmhqrwKvbRJNRlLLVTSglHEc=;
+        b=ESAEVqN73ikytutdSYoIjRqEkUVrfP4N7VD9wgN7M8hrGvIDQA6GUC2afM8p9jxMHA
+         8y4w3zoQM98IywdPlCOZXduFNo8ONS+30kXbvCuxcUw0vihkz8oYHb0e5cSg0Ke3mBuh
+         LSt0ZhgQZqbX+Ibn3iN5OuxZRmay9eHh066MIXPbLRt+0XUQtEhT1MgH+jNG/wmgDzNd
+         xwnVIxHhtICb0/rHysZQ0smvSKLhZDCzITiLzAhGN40AaRVpZ1zyRn5CpZkPfh/wP0V4
+         fLtgSibHgWOdNEshfcJXlIhbXir8jiAj025xZFLrXs2UIa2lJSar+bxjCH7y/5K6LcOJ
+         0X1g==
+X-Gm-Message-State: AMke39ntN/TlQRXVIsSoWUW3FQwhvXHUF6ItXW7ZNPdxDNnBJfr4KOvcTYvkDHI5Rjguzg==
+X-Received: by 10.99.146.15 with SMTP id o15mr2433883pgd.8.1488015679944;
+        Sat, 25 Feb 2017 01:41:19 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.107.161.14 with SMTP id k14ls305293ioe.35.gmail; Sat, 25 Feb
+ 2017 01:41:19 -0800 (PST)
+X-Received: by 10.107.51.68 with SMTP id z65mr6109695ioz.53.1488015679722;
+        Sat, 25 Feb 2017 01:41:19 -0800 (PST)
+Received: from mail-it0-x229.google.com (mail-it0-x229.google.com. [2607:f8b0:4001:c0b::229])
+        by mx.google.com with ESMTPS id k64si10388427iof.5.2017.02.25.01.41.19
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 25 Feb 2017 01:41:19 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::229 is neither permitted nor denied by best guess record for domain of guhapriya@unicommerce.com) client-ip=2607:f8b0:4001:c0b::229;
+Received: by mail-it0-x229.google.com with SMTP id 203so38879498ith.0
+        for <tech@unicommerce.com>; Sat, 25 Feb 2017 01:41:19 -0800 (PST)
+X-Received: by 10.36.116.71 with SMTP id o68mr7031223itc.60.1488015679459;
+ Sat, 25 Feb 2017 01:41:19 -0800 (PST)
+MIME-Version: 1.0
+References: <001a113f32defe992105492f8731@google.com> <CAPyw11bpwZOupFvEdE=ad9jm+o0LNHOZhOqwV8136ZM4+fGD9w@mail.gmail.com>
+In-Reply-To: <CAPyw11bpwZOupFvEdE=ad9jm+o0LNHOZhOqwV8136ZM4+fGD9w@mail.gmail.com>
+From: Guhapriya Velu <guhapriya@unicommerce.com>
+Date: Sat, 25 Feb 2017 09:41:08 +0000
+Message-ID: <CAGjOsgSdVZJpcJMLX3=5d8m8m8f74Y4FPP_Hm0Oya7UBj=khcw@mail.gmail.com>
+Subject: Re: Farewell Party (Please respond asap,we need to get the booking
+ done )
+To: DevOps Team <devops@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, Product Team <product@unicommerce.com>, 
+	Tech Team <tech@unicommerce.com>, Vani Verma <vani@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114aad2cfeb84e054957a528
+X-Original-Sender: guhapriya@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4001:c0b::229 is neither permitted nor denied by best
+ guess record for domain of guhapriya@unicommerce.com) smtp.mailfrom=guhapriya@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114aad2cfeb84e054957a528
+Content-Type: text/plain; charset=UTF-8
+
+I'm in. Didn't fill though
+
+On Sat, 25 Feb 2017 at 2:56 PM, Garima Arora <garima@unicommerce.com> wrote:
+
+> Hi
+>
+> We need to get the bookings done.Please respond as soon as possible.
+> We have received only 17 responses so far.
+>
+> Thanks and Regards
+> Garima Arora
+>
+> On Thu, Feb 23, 2017 at 3:19 PM, <shobhit@unicommerce.com> wrote:
+>
+> [image: Google Forms]
+> I've invited you to fill out a form:
+> PARTAAAAAAYYYYYYYYYY!!!!!!!!! :)
+> <https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=0&w=1&usp=mail_form_link>
+> Farewell party !!! (Expected Damage : 1.2K per person)
+>
+> PS -: A yes today is a promise to pay tomorrow. :D :P :D
+> FILL OUT FORM
+> <https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=0&w=1&usp=mail_form_link>
+> Create your own Google Form
+> <https://docs.google.com/forms?usp=mail_form_link>
+>
+>
+> --
+Regards
+Guhapriya Velu
++91-9000174563
+
+--001a114aad2cfeb84e054957a528
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div>I&#39;m in. Didn&#39;t fill though</div><div><br><div class=3D"gmail_q=
+uote"><div>On Sat, 25 Feb 2017 at 2:56 PM, Garima Arora &lt;<a href=3D"mail=
+to:garima@unicommerce.com">garima@unicommerce.com</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px=
+ #ccc solid;padding-left:1ex"><div class=3D"gmail_msg">Hi<div class=3D"gmai=
+l_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg">We need to ge=
+t the bookings done.Please respond as soon as possible.</div><div class=3D"=
+gmail_msg">We have received only 17 responses so far.</div><div class=3D"gm=
+ail_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg">Thanks and =
+Regards</div><div class=3D"gmail_msg">Garima Arora</div></div><div class=3D=
+"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div class=3D"gmail_quote g=
+mail_msg">On Thu, Feb 23, 2017 at 3:19 PM,  <span class=3D"gmail_msg">&lt;<=
+a href=3D"mailto:shobhit@unicommerce.com" class=3D"gmail_msg" target=3D"_bl=
+ank">shobhit@unicommerce.com</a>&gt;</span> wrote:<br class=3D"gmail_msg"><=
+blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;borde=
+r-left:1px #ccc solid;padding-left:1ex"><div style=3D"font-family:Roboto,He=
+lvetica,Arial,sans-serif;margin:0;padding:0;height:100%;width:100%" class=
+=3D"gmail_msg"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"background-color:rgb(103,58,183)" width=3D"100%" class=3D"gmail_msg"><=
+tbody class=3D"gmail_msg"><tr height=3D"64px" class=3D"gmail_msg"><td style=
+=3D"padding-left:24px" class=3D"gmail_msg"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display:inline-block;margin:0;vertical-align:middle" wid=
+th=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_logo_lo=
+ckup_white_2x.png" class=3D"gmail_msg"></td></tr></tbody></table><div style=
+=3D"padding:24px;background-color:rgb(237,231,246)" class=3D"gmail_msg"><di=
+v align=3D"center" style=3D"background-color:#fff;border-bottom:1px solid #=
+e0e0e0;margin:0 auto;max-width:624px;min-width:154px;padding:0 24px" class=
+=3D"gmail_msg"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"background-color:#fff" width=3D"100%" class=3D"gmail_msg"><tbody c=
+lass=3D"gmail_msg"><tr height=3D"24px" class=3D"gmail_msg"><td class=3D"gma=
+il_msg"></td></tr><tr class=3D"gmail_msg"><td class=3D"gmail_msg"><div styl=
+e=3D"font-size:13px;line-height:18px;color:#424242;font-weight:700" class=
+=3D"gmail_msg">I&#39;ve invited you to fill out a form:</div></td></tr><tr =
+height=3D"20px" class=3D"gmail_msg"><td class=3D"gmail_msg"></td></tr><tr s=
+tyle=3D"font-size:20px;line-height:24px" class=3D"gmail_msg"><td class=3D"g=
+mail_msg"><span style=3D"display:table-cell" class=3D"gmail_msg"><a href=3D=
+"https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO=
+8yyvAjKkmvRAQ99w/viewform?c=3D0&amp;w=3D1&amp;usp=3Dmail_form_link" style=
+=3D"color:rgb(103,58,183);text-decoration:none;vertical-align:middle;font-w=
+eight:500" class=3D"gmail_msg" target=3D"_blank">PARTAAAAAAYYYYYYYYYY!!!!!!=
+!!! :)</a><div class=3D"gmail_msg"></div></span></td></tr><tr height=3D"16p=
+x" class=3D"gmail_msg"></tr><tr class=3D"gmail_msg"><td class=3D"gmail_msg"=
+><span style=3D"display:table-cell;vertical-align:top;font-size:13px;line-h=
+eight:18px;color:#424242" class=3D"gmail_msg">Farewell party !!! (Expected =
+Damage : 1.2K per person)<br class=3D"gmail_msg"><br class=3D"gmail_msg">PS=
+ -: A yes today is a promise to pay tomorrow. :D :P :D</span></td></tr><tr =
+height=3D"24px" class=3D"gmail_msg"></tr><tr class=3D"gmail_msg"><td class=
+=3D"gmail_msg"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%" class=3D"gmail_msg"><tbody class=3D"gmail_msg"><tr class=3D"gmai=
+l_msg"><td class=3D"gmail_msg"><a href=3D"https://docs.google.com/forms/d/e=
+/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=3D0&am=
+p;w=3D1&amp;usp=3Dmail_form_link" style=3D"border-radius:3px;box-sizing:bor=
+der-box;display:inline-block;font-size:13px;font-weight:700;height:40px;lin=
+e-height:40px;padding:0 24px;text-align:center;text-decoration:none;text-tr=
+ansform:uppercase;vertical-align:middle;color:#fff;background-color:rgb(103=
+,58,183)" class=3D"gmail_msg" target=3D"_blank">FILL OUT FORM</a></td></tr>=
+</tbody></table></td></tr><tr height=3D"24px" class=3D"gmail_msg"></tr></tb=
+ody></table></div><table align=3D"center" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"max-width:672px;min-width:154px" width=3D"100%" class=3D"gmail_=
+msg"><tbody class=3D"gmail_msg"><tr height=3D"24px" class=3D"gmail_msg"><td=
+ class=3D"gmail_msg"></td></tr><tr class=3D"gmail_msg"><td class=3D"gmail_m=
+sg"><a href=3D"https://docs.google.com/forms?usp=3Dmail_form_link" style=3D=
+"color:#616161;font-size:13px" class=3D"gmail_msg" target=3D"_blank">Create=
+ your own Google Form</a></td></tr></tbody></table></div></div></blockquote=
+></div><br class=3D"gmail_msg"></div>
+</blockquote></div></div><div dir=3D"ltr">-- <br></div><div data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Regards<div>Guh=
+apriya Velu</div><div>+91-9000174563</div></div></div></div></div>
+
+--001a114aad2cfeb84e054957a528--

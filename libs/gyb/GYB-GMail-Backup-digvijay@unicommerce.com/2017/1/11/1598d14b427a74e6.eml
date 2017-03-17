@@ -1,0 +1,37 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Wed, 11 Jan 2017 02:31:01 -0800 (PST)
+Date: Wed, 11 Jan 2017 16:01:01 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorMjvge47oSh-y5atLQiHcy+9dwx5Q=zcPYeLvFV3jKtg@mail.gmail.com>
+Subject: queries
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c12c1ae5d5d00545cf18c3
+
+--001a11c12c1ae5d5d00545cf18c3
+Content-Type: text/plain; charset=UTF-8
+
+db.channelReconciliationInvoiceItem.remove({"invoiceCode" :
+"NFT-161230023GN00065XXXXXXX","channelSaleOrderCode":"OD407736220667566000","invoiceItemOrderStatus":"return_requested"})
+db.channelReconciliationInvoiceItem.remove({"invoiceCode" :
+"NFT-161230023GN00065XXXXXXX","channelSaleOrderCode":"OD407736220667566000","invoiceItemOrderStatus":"shipped"})
+db.saleOrderReconciliation.update({"channelSaleOrderCode"
+:"OD407736220667566000"},{$set:{"totalReconcileAmount":396.836,"settlementPercentage"
+: 77.96}})
+
+--001a11c12c1ae5d5d00545cf18c3
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>db.channelReconciliationInvoiceItem.remove({&quot;inv=
+oiceCode&quot; : &quot;NFT-161230023GN00065XXXXXXX&quot;,&quot;channelSaleO=
+rderCode&quot;:&quot;OD407736220667566000&quot;,&quot;invoiceItemOrderStatu=
+s&quot;:&quot;return_requested&quot;})</div><div>db.channelReconciliationIn=
+voiceItem.remove({&quot;invoiceCode&quot; : &quot;NFT-161230023GN00065XXXXX=
+XX&quot;,&quot;channelSaleOrderCode&quot;:&quot;OD407736220667566000&quot;,=
+&quot;invoiceItemOrderStatus&quot;:&quot;shipped&quot;})</div><div>db.saleO=
+rderReconciliation.update({&quot;channelSaleOrderCode&quot; :&quot;OD407736=
+220667566000&quot;},{$set:{&quot;totalReconcileAmount&quot;:396.836,&quot;s=
+ettlementPercentage&quot; : 77.96}})</div><div><br></div></div>
+
+--001a11c12c1ae5d5d00545cf18c3--

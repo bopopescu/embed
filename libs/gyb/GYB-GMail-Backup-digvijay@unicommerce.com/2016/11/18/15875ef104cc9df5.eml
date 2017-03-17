@@ -1,0 +1,281 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp680048qge;
+        Thu, 17 Nov 2016 21:35:51 -0800 (PST)
+X-Received: by 10.98.32.151 with SMTP id m23mr9620657pfj.127.1479447351700;
+        Thu, 17 Nov 2016 21:35:51 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id f19si6448521pgk.152.2016.11.17.21.35.51
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 17 Nov 2016 21:35:51 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uAI5Zo3Z032419;
+	Fri, 18 Nov 2016 11:05:50 +0530
+Date: Fri, 18 Nov 2016 11:05:50 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <122588552.58.1479447350296.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <71866417.57.1479442607321.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <71866417.57.1479442607321.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareAccountTest #215
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareAccountTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/215/------------------------------------------
+[...truncated 940 B...]
+ > git checkout -f 7bedb765e31dca64b99a3fb5679ebe185f906d46
+ > git rev-list 7bedb765e31dca64b99a3fb5679ebe185f906d46 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3945 completed. Result was SUCCESS
+Waiting for the completion of UniwareUIAccounts
+UniwareUIAccounts #122 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareAccountTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] UniwareAccounts
+[INFO] UniwareAccountCore
+[INFO] UniwareAccountServices
+[INFO] UniwareAccount Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccounts 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccounts ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccounts ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccountCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/src/main/resources>
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 206 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/classes>
+[INFO] 
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareAccountCore ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding files
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareAccountCore ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareAccountCore ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareAccountCore ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareAccountCore ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/UniwareAccountCore-1.0.jar>
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccountServices 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountServices ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountServices ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountServices ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 133 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target/classes>
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java>: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java> uses or overrides a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/configuration/ExportJobConfiguration.java>: Some input files use unchecked or unsafe operations.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/configuration/ExportJobConfiguration.java>: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.7:compile (default) @ UniwareAccountServices ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/aspectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.2 found 1.7.4
+	<unknown source file>:<no line information>
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[INFO] 
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareAccountServices ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding files
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareAccountServices ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareAccountServices ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.7:test-compile (default) @ UniwareAccountServices ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/aspectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.2 found 1.7.4
+	<unknown source file>:<no line information>
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in com.uniaccounts.services.aspect.TransactionRollbackAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target/classes!com/uniaccounts/services/aspect/TransactionRollbackAspect.class>:0
+
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareAccountServices ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareAccountServices ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target/UniwareAccountServices-1.0.jar>
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccount Webapp 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountWeb ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountWeb ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountWeb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountWeb ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes>
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/src/main/java/com/uniaccounts/web/controller/EndPointResource.java>:[50,19] sun.reflect.ReflectionFactory is internal proprietary API and may be removed in a future release
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/src/main/java/com/uniaccounts/web/controller/EndPointResource.java>:[50,19] sun.reflect.ReflectionFactory is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ UniwareAccountWeb ---
+[INFO] Configured Artifact: unicommerce:UnifierCore:2.0:jar
+[INFO] Configured Artifact: unicommerce:UnifierScraper:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCommonServices:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareAccountCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareAccountServices:1.0:jar
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierCore/2.0/UnifierCore-2.0.jar to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierScraper/2.0/UnifierScraper-2.0.jar to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UniwareCommonServices/2.0/UniwareCommonServices-2.0.jar to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/UniwareAccountCore-1.0.jar> to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target/UniwareAccountServices-1.0.jar> to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.7:compile (default) @ UniwareAccountWeb ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] Missing message: configure.invalidClasspathSection in: org.aspectj.ajdt.ajc.messages
+	<unknown source file>:<no line information>
+
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/aspectj/aspectjrt/1.6.12/aspectjrt-1.6.12.jar expected 1.8.2 found 1.6.12
+	<unknown source file>:<no line information>
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareAccountWeb ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareAccountWeb ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.7:test-compile (default) @ UniwareAccountWeb ---
+[WARNING] No sources found skipping aspectJ compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareAccountWeb ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ UniwareAccountWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [UniwareAccountWeb] in [<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/UniwareAccountWeb]>
+[INFO] Processing war project
+[INFO] Copying webapp resources [<http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/src/main/webapp]>
+[INFO] Webapp assembled in [845 msecs]
+[INFO] Building war: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountWeb/target/UniwareAccountWeb.war>
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.4:run (default) @ UniwareAccountWeb ---
+project.artifactId
+[INFO] Executing tasks
+     [echo] +---------------------------------------------------+
+     [echo]     deleteing war from tomcat server
+     [echo] +---------------------------------------------------+
+     [echo] +---------------------------------------------------+
+     [echo]     copying war to tomcat server
+     [echo] +---------------------------------------------------+
+     [copy] Copying 1193 files to /usr/local/apache-tomcat/webapps/ROOT
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] UniwareAccounts .................................... SUCCESS [  0.325 s]
+[INFO] UniwareAccountCore ................................. SUCCESS [  5.454 s]
+[INFO] UniwareAccountServices ............................. SUCCESS [ 10.285 s]
+[INFO] UniwareAccount Webapp .............................. SUCCESS [ 10.569 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 26.785 s
+[INFO] Finished at: 2016-11-18T05:35:38+00:00
+[INFO] Final Memory: 52M/365M
+[INFO] ------------------------------------------------------------------------
+[UniwareAccountTest] $ /bin/sh -xe /tmp/hudson6181339911754331154.sh
++ /var/lib/jenkins/scripts/SqlDeltaRemoteAccount UniwareAccountTest UniwareAccountTest
+Fetch Git tag
+7bedb765e31dca64b99a3fb5679ebe185f906d46
+Git diff
+Executing SQL Changes........................
+     1	set autocommit=0;
+     2	select "StartDeploying";
+     3	select "EndDeploying";
+     4	commit;
+Importing sql queries....................
+*********** Checking SQL delta is executing on accounts1.test.unicommerce.infra or not **************
+2
+SQL file is executed
+********** Checking Standard Error ***********
+Build ==> SUCCESSFUL
+Deleted tag 'UniwareAccountTest' (was 298d037)
+delete old tag
+7bedb765e31dca64b99a3fb5679ebe185f906d46
+create new tag
+To git@bitbucket.org:unicommercetechnology/UniwareAccounts.git
+ + 298d037...93c19ad UniwareAccountTest -> UniwareAccountTest (forced update)
+push tag
++ /var/lib/jenkins/scripts/mvTomcatROOT accounts1.test.unicommerce.infra UniwareAccountTest
+UniwareAccountTest
+accounts1.test.unicommerce.infra
+cd /var/lib/jenkins/release/UniwareAccountTest/
+tar: ROOT: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+tar -cf ROOT.tar ROOT
+CREATE TAR FILE
+Connection to accounts1.test.unicommerce.infra closed.
+ssh -t -t jenkins@accounts1.test.unicommerce.infra 'sudo rm -rf /home/jenkins/release/ROOT.bak'
+DELETE OLD ROOT FILES
+Connection to accounts1.test.unicommerce.infra closed.
+ssh -t -t jenkins@accounts1.test.unicommerce.infra 'sudo rm -rf /home/jenkins/release/UniwareAccountTest/ROOT'
+scp /var/lib/jenkins/release/UniwareAccountTest/ROOT.tar jenkins@accounts1.test.unicommerce.infra:/home/jenkins/release/UniwareAccountTest/
+Connection to accounts1.test.unicommerce.infra closed.
+ssh -t -t jenkins@accounts1.test.unicommerce.infra 'sudo tar -xf /home/jenkins/release/UniwareAccountTest/ROOT.tar -C /home/jenkins/release/UniwareAccountTest/'
+Connection to accounts1.test.unicommerce.infra closed.
+ssh -t -t jenkins@accounts1.test.unicommerce.infra 'sudo rm -rf /home/jenkins/release/UniwareAccountTest/ROOT.tar'
+DELETE TAR FILE
+******* CHECKING ROOT fOLDER **********
+Connection to accounts1.test.unicommerce.infra closed.
+ROOT FOLDER IS NOT MOVED
+Build step 'Execute shell' marked build as failure

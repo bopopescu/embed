@@ -1,0 +1,120 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1422778qge;
+        Fri, 4 Nov 2016 03:38:53 -0700 (PDT)
+X-Received: by 10.31.15.65 with SMTP id 62mr9480399vkp.93.1478255933699;
+        Fri, 04 Nov 2016 03:38:53 -0700 (PDT)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x234.google.com (mail-ua0-x234.google.com. [2607:f8b0:400c:c08::234])
+        by mx.google.com with ESMTPS id k22si4068599uab.39.2016.11.04.03.38.53
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 04 Nov 2016 03:38:53 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::234 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::234 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x234.google.com with SMTP id b35so62524255uaa.3
+        for <digvijay@unicommerce.com>; Fri, 04 Nov 2016 03:38:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=Z3vu5XsQrTpPgHExe8zxCPQJppGd6dFGJk7dpcbcfok=;
+        b=FICV/S2EFSKBqvu1vx+a3Ogn9qtg+G6DYiHX37L5ZO4+jT2DttisBE+NdaO7gUYWOO
+         OkE2TaF1mz2mUbCQBqxIabDFvK2NldSs4S1SKuaEJu50KihNam4/K7PT5OCyZRIcch2I
+         sZnKUUX6tf4B7wOPXdv4DepJO/MfJrVMI9AiITjMtI6bcfELtuyWh2+whrGX81cB1ubg
+         8OoF7DcmtMXOktj6zQzu0s//DZeDgt1MOAc/VNPbi2ACng2luHd0CHXQ2LSkJot44P9C
+         Wzz0KQBObQWsYWGy2IapJy3GoKbal+R1ik6DaZmCeuH+DGzqVYGzGHsnSBM5JZCDKZFb
+         jnhg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=Z3vu5XsQrTpPgHExe8zxCPQJppGd6dFGJk7dpcbcfok=;
+        b=FSgUlXo6qMWqo/xxpAlEWO6n7I8KH2FkS2SRPUwnkbw9jWmqalmTD0DVT2//yN5/O5
+         45MyAcN88kTOOLDaitHs//xbFwVrXNzmH2vxsBS13vaCdOHQJfzsFQxakkghMUF8H73B
+         1tU5NUztjF0gkxmKuFrdiId+77bUi6Ad9xKblNwYfGSiI6oldBBsWmFeB5xwiAgRGq9V
+         hEEr+dyxxNaU62EHlw1G/6E0e39VZfkowrir6L+Dj28lZBgsPgY54GMezXS/rlA8v2uA
+         OV8KzlMD3lsg6lwJa/a+J13IBP/PqMjomjzgYgOJDWudpKUxDYvpGgRnBHV0eUX+NwAp
+         9waw==
+X-Gm-Message-State: ABUngvdCsSXg6EnXKOFe/o5DgHVo3pvQT6qBuwzRGftEXZgkdu37LVQNKZWxaPl+G5KPbFKBHW4V436evzFdaw==
+X-Received: by 10.176.81.82 with SMTP id f18mr10729395uaa.119.1478255933225;
+ Fri, 04 Nov 2016 03:38:53 -0700 (PDT)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Fri, 04 Nov 2016 10:38:42 +0000
+Message-ID: <CAPe2SZTqyHm8cJvhnDXocA8mMmdhgv67bP9fipymupDcxHS63w@mail.gmail.com>
+Subject: Mail for new scripts created to be moved to shell
+To: Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=94eb2c1913b6c9a9b40540774744
+
+--94eb2c1913b6c9a9b40540774744
+Content-Type: multipart/alternative; boundary=94eb2c1913b6c9a9ae0540774742
+
+--94eb2c1913b6c9a9ae0540774742
+Content-Type: text/plain; charset=UTF-8
+
+Reference to make the changes for script creation mails.
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--94eb2c1913b6c9a9ae0540774742
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Reference to make the changes for script creation mails.=
+=C2=A0</div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_sign=
+ature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Engine=
+er, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--94eb2c1913b6c9a9ae0540774742--
+--94eb2c1913b6c9a9b40540774744
+Content-Type: text/javascript; charset=US-ASCII; name="sample.js"
+Content-Disposition: attachment; filename="sample.js"
+Content-Transfer-Encoding: base64
+Content-ID: <1582ee24d3642566c0d1>
+X-Attachment-Id: 1582ee24d3642566c0d1
+
+ZGIgPSBjb25uZWN0KCJtb25nbzEuYzEuaG9wcy5vbHAuaW5mcmE6MjcwMTcvb2xwanVuY3Rpb24i
+KTsKb2xwID0gY29ubmVjdCgibW9uZ28xLmMxLmhvcHMub2xwLmluZnJhOjI3MDE3L29scCIpOwoK
+c3RyID0gJ0ZhY2lsaXR5LFRyaXAgQ29kZSxDcmVhdGVkIFRpbWUsUHVzaCBUbyBSaWRlciBUaW1l
+XG4nOwoKdmFyIGN1cnJlbnREYXRlID0gbmV3IERhdGUoKTsKY3VycmVudERhdGUuc2V0RGF0ZShu
+ZXcgRGF0ZSgpLmdldERhdGUoKSArIDEpOwpjdXJyZW50RGF0ZS5zZXRIb3VycygwLCAwLCAwLCAw
+KTsKdmFyIHByZXZpb3VzRGF0ZSA9IG5ldyBEYXRlKCk7CnByZXZpb3VzRGF0ZS5zZXRIb3Vycygw
+LCAwLCAwLCAwKTsKCnZhciB0cmlwcyA9IGRiLnRyaXAuZmluZCh7ImNyZWF0ZWQiOiB7JGd0OiBw
+cmV2aW91c0RhdGUsICRsdDogY3VycmVudERhdGV9fSwgeyJjb2RlIjogMSwgImNyZWF0ZWQiOiAx
+LCAidXBkYXRlZCIgOiAxLCAiZmFjaWxpdHlDb2RlIjogMX0pLnNvcnQoeyJmYWNpbGl0eUNvZGUi
+OiAxfSk7CmZvciAoaiA9IDA7IGogPCB0cmlwcy5zaXplKCk7IGorKykgewogICAgaWYgKGogIT0g
+MCkgewogICAgICAgIHN0ciA9IHN0ciArICdcbic7CiAgICB9CiAgICBzdHIgPSBzdHIgKyB0cmlw
+c1tqXS5mYWNpbGl0eUNvZGUgKyAnLCc7CiAgICBzdHIgPSBzdHIgKyB0cmlwc1tqXS5jb2RlICsg
+JywnOwogICAgdmFyIGNyZWF0ZWQgPSBuZXcgRGF0ZSh0cmlwc1tqXS5jcmVhdGVkKS50b1N0cmlu
+ZygpLnNwbGl0KCcgJyk7CiAgICB2YXIgdGltZSA9IGNyZWF0ZWRbNF07CiAgICBzdHIgPSBzdHIg
+KyB0aW1lICsgJywnOwogICAgdmFyIHB1c2hlZFRpbWUgPSBudWxsOwogICAgdmFyIGFjdGl2aXR5
+ID0gb2xwLmFjdGl2aXR5LmZpbmRPbmUoewogICAgICAgIGFjdGl2aXR5VHlwZTogJ1RSSVBfUFVT
+SEVEX1RPX1JJREVSJywKICAgICAgICBncm91cElkZW50aWZpZXI6IHRyaXBzW2pdLmNvZGUsCiAg
+ICAgICAgZmFjaWxpdHlDb2RlOiB0cmlwc1tqXS5mYWNpbGl0eUNvZGUsCiAgICAgICAgdGVuYW50
+Q29kZTogJ3Z1bGNhbicsCiAgICAgICAgZW50aXR5TmFtZTogJ1RSSVAnCiAgICB9KTsKICAgIGlm
+IChhY3Rpdml0eSAhPSBudWxsKSB7CiAgICAgICAgcHVzaGVkVGltZSA9IGFjdGl2aXR5LmNyZWF0
+ZWQ7CiAgICB9IGVsc2UgewogICAgICAgIHB1c2hlZFRpbWUgPSB0cmlwc1tqXS51cGRhdGVkOwog
+ICAgfQogICAgaWYgKHB1c2hlZFRpbWUgIT0gbnVsbCkgewogICAgICAgIHB1c2hlZFRpbWUgPSBw
+dXNoZWRUaW1lLnRvU3RyaW5nKCkuc3BsaXQoJyAnKVs0XTsKICAgICAgICBzdHIgPSBzdHIgKyBw
+dXNoZWRUaW1lOwogICAgfQp9CnByaW50KHN0cik7
+--94eb2c1913b6c9a9b40540774744
+Content-Type: application/octet-stream; name="sample.sh"
+Content-Disposition: attachment; filename="sample.sh"
+Content-Transfer-Encoding: base64
+Content-ID: <1582ee24d6c42566d192>
+X-Attachment-Id: 1582ee24d6c42566d192
+
+TU9OR09fSE9TVD1gbW9uZ28gbW9uZ28xLmMxLmhvcHMub2xwLmluZnJhOjI3MDE3IC0tcXVpZXQg
+LS1ldmFsICdkYi5wcmludFNsYXZlUmVwbGljYXRpb25JbmZvKCknfGhlYWQgLTF8Z3JlcCAic291
+cmNlInxhd2sgLUYgInNvdXJjZTogIiAne3ByaW50ICQyfSdgCm1vbmdvICRNT05HT19IT1NUL2hv
+cHMgL2hvbWUvYnVpbGQvcmVwb3J0aW5nc2NyaXB0cy90cmlwUGVyZm9ybWFuY2VSZXBvcnQuanMg
+fCBncmVwIC12IGNvbm5lY3RpbmcgfCBncmVwIC12IE1vbmdvID4gdHJpcFBlcmZvcm1hbmNlUmVw
+b3J0LmNzdgplY2hvICJQRkEgVGhlIFRyaXAgUGVyZm9ybWFuY2UgUmVwb3J0IiB8IG1haWx4IC1h
+IHRyaXBQZXJmb3JtYW5jZVJlcG9ydC5jc3YgLXMgIiQoZWNobyAtZSAiT0xQIC0gVG9kYXkncyBU
+cmlwIFBlcmZvcm1hbmNlIFJlcG9ydC0gYGRhdGUgLWQgJ3RvZGF5JyArJWQtJWItJVlgXG5Db250
+ZW50LVR5cGU6IHRleHQvaHRtbCIpIiAtLSBha3NoYXkuYWdhcndhbEB1bmljb21tZXJjZS5jb20K
+Cg==
+--94eb2c1913b6c9a9b40540774744--

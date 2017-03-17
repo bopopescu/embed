@@ -1,0 +1,64 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp379778oic;
+        Wed, 10 Aug 2016 05:15:06 -0700 (PDT)
+X-Received: by 10.31.80.196 with SMTP id e187mr1724011vkb.29.1470831306171;
+        Wed, 10 Aug 2016 05:15:06 -0700 (PDT)
+Return-Path: <bhupinder.garg@snapdeal.com>
+Received: from mail-ua0-x22f.google.com (mail-ua0-x22f.google.com. [2607:f8b0:400c:c08::22f])
+        by mx.google.com with ESMTPS id h130si876648vka.142.2016.08.10.05.15.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 10 Aug 2016 05:15:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bhupinder.garg@snapdeal.com designates 2607:f8b0:400c:c08::22f as permitted sender) client-ip=2607:f8b0:400c:c08::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@snapdeal.com;
+       spf=pass (google.com: domain of bhupinder.garg@snapdeal.com designates 2607:f8b0:400c:c08::22f as permitted sender) smtp.mailfrom=bhupinder.garg@snapdeal.com;
+       dmarc=pass (p=QUARANTINE dis=NONE) header.from=snapdeal.com
+Received: by mail-ua0-x22f.google.com with SMTP id k90so66643261uak.1
+        for <digvijay@unicommerce.com>; Wed, 10 Aug 2016 05:15:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=snapdeal.com; s=google;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=R0/v97zPP4XcPMA1+IoxOLP4W3RMl7orxrU6jnFFAkg=;
+        b=N2vQAU057NSk1fWMxkmQAGNrP8darJPUUH4FO8GzUmdaln8arSUTWlH9qCMgYFJlLZ
+         cvffu2XERP0ihy2e0Y0qbMlJ1Da759yFp7tuTbn5A0t9aZo1imyaxi3Nek46MgFkVJM9
+         QKiwLC/fbZrX7s6CxHQKfbqKTAVFQS20y6ArI=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=R0/v97zPP4XcPMA1+IoxOLP4W3RMl7orxrU6jnFFAkg=;
+        b=PvmP+civ3hdKH+BkYmaWaUvdvDamGmqw3NumCvGT/3Dzcu81wD8FGwFwj3w6gkatvD
+         e13Yrk82K7m7//XjRS1MVAJa1S+qmfsgbSMuaDblBbH6RKqU9o9zMBVe9gQ1Cl/cu0EB
+         pg9eF6gKh185Ti6cdxR2t7vae6XFZQ4bOTi74gENcyxtO9rNbGV9/zIb0R0g+cy3px2N
+         WEHdNsRStxkPFjtQeFZ2I8/rW1vAqNo905daT4D2xC4FBKOHLBaKlavtCH4qgc+cJrI4
+         xjogzGaCytwxEA3BCd2iQg3tGSkTkzBhjD7Pq2eWumANCa6uac9ujtVYjwBDhcUBSp6k
+         OYog==
+X-Gm-Message-State: AEkoouu2Hcsc2X6lakcoJT/6cgtiUEey4S6pK/iLUoM4ay5wnEtxyu4AuENmlD5YaA5hbo32XqMtyKspIeYeOKhn
+X-Received: by 10.31.80.196 with SMTP id e187mr1723998vkb.29.1470831305809;
+ Wed, 10 Aug 2016 05:15:05 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.159.34.232 with HTTP; Wed, 10 Aug 2016 05:15:05 -0700 (PDT)
+From: Bhupinder Garg <bhupinder.garg@snapdeal.com>
+Date: Wed, 10 Aug 2016 17:45:05 +0530
+Message-ID: <CA+ygVjDtBWoz74fJLu11yGBC8yqSo_UGWL9y5yt5_8PfREE+hQ@mail.gmail.com>
+Subject: new unicommerce employees
+To: Ruchira Moondra <ruchira.moondra@snapdeal.com>, anamika@unicommerce.com
+Cc: karangarg@unicommerce.com, aditya@unicommerce.com, 
+	digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a114e1c4c81f45b0539b69943
+
+--001a114e1c4c81f45b0539b69943
+Content-Type: text/plain; charset=UTF-8
+
+Hi Ruchira/Anamika,
+We have Karan, Aditya & Digvijay join us recently. They need SD email ids
+to access repos et al. Can you have these setup?
+
+-bhupi
+
+--001a114e1c4c81f45b0539b69943
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">Hi Ruchira/Anamika,<div>We have Karan, Aditya &amp; Digvijay join us recently. They need SD email ids to access repos et al. Can you have these setup?</div><div><br></div><div>-bhupi</div></div>
+
+--001a114e1c4c81f45b0539b69943--

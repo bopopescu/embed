@@ -1,0 +1,74 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1249763qgd;
+        Sun, 4 Dec 2016 19:33:24 -0800 (PST)
+X-Received: by 10.13.208.199 with SMTP id s190mr52090691ywd.201.1480908804478;
+        Sun, 04 Dec 2016 19:33:24 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-yw0-x22f.google.com (mail-yw0-x22f.google.com. [2607:f8b0:4002:c05::22f])
+        by mx.google.com with ESMTPS id b145si3957784ywe.327.2016.12.04.19.33.24
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 04 Dec 2016 19:33:24 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4002:c05::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-yw0-x22f.google.com with SMTP id t125so246661756ywc.1
+        for <digvijay@unicommerce.com>; Sun, 04 Dec 2016 19:33:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=DGetKIkxAPSof5oUYo+ciq1gxlrefP63tB4zC2gUi20=;
+        b=YjK2CLgzKqpxlV8g7ceB8IQewJRqNU6XAZfzoNOmS7ztVCIfVKbFSteGM7Dr89XumB
+         bnRYtswJ4xMCpe1C1o254Dvz0CfRre4kfGPsx/kAhwP9hry5+HMpWE+jbnGgrvYLET/J
+         75xkOXuMckiN/P0y8sSpQWL5hvVvGLjxQ4PnA85EXu5Jk93mFaCpPB28tdCP0Rsv9jd2
+         gMznU770aEpANdbXcKDWzGoeN1kKI/nOueCjjfvVUX2Cj+lXfDzEoZQ/yL8VSBC21sqd
+         w2epk4eBVd53hZWj1qqUrJMe0xgvqNkCxA0jcwnr0UYmrdD0p6HqyWb95H9GhJ/2uOLa
+         03LA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=DGetKIkxAPSof5oUYo+ciq1gxlrefP63tB4zC2gUi20=;
+        b=j19M9CSEGSJERB9mMW/BmTyPkNF24tY3JCDKD0MaOSl6+WRb1+aJPoiMeITHcwk2qC
+         HeDgjbVIOAZL85UxAFMwzZaYoxeDs3zypEKj/1JUvKGDVLRZnGx+c9vjd7YnJtNKAzTg
+         ymL6YeDm4XEhUeSQ0dFqNO039OOSPWxWxeTnaptU+TceFwlikiaBYjKAuSZN7xRWlhgv
+         9tVqzyyORRcgtnqtHT+H46bBwEksjblKpznQQcDovCFpyKcqOISK/sj+gBmn8yHnni+U
+         aYtC2DHm6JdnXbS1HhOkoWqw92nRALuoCL1ausQGHzsZ/1Emg1HHegKgv/sdcVNCYJJM
+         izpQ==
+X-Gm-Message-State: AKaTC013n368rusBcjMWAVkEpfy1tiPuHcZ5sQumlPGzvD+Na6GDpQg+N88UCQRjbQTXUWSdKaxMvYoBZ/tzPQ==
+X-Received: by 10.129.82.10 with SMTP id g10mr61939918ywb.66.1480908804020;
+ Sun, 04 Dec 2016 19:33:24 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.129.137.194 with HTTP; Sun, 4 Dec 2016 19:33:23 -0800 (PST)
+Received: by 10.129.137.194 with HTTP; Sun, 4 Dec 2016 19:33:23 -0800 (PST)
+In-Reply-To: <CA+zaFGiUUBoheg1ETsuQYfewptBX3EqnU5d4tDz4gY1HDfgv_A@mail.gmail.com>
+References: <CA+zaFGhh4O5dXuPuv8g430eCWDvFveV-cdGVRkSZMuLuG5rc6Q@mail.gmail.com>
+ <CA+zaFGjH3wEcv5C4nGqKUpm8vADaOsEeOeTSMc6UE_4E+btRGg@mail.gmail.com>
+ <CA+zaFGgk=-603fP+4D5CLf6+jkW8fahZDZa9BmPn0X20k4LMAg@mail.gmail.com> <CA+zaFGiUUBoheg1ETsuQYfewptBX3EqnU5d4tDz4gY1HDfgv_A@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 5 Dec 2016 09:03:23 +0530
+Message-ID: <CA+zaFGgw+L22Hd4vxC+-pTzV_ZCeEAqkrTUeCax35kdmQKJ7QA@mail.gmail.com>
+Subject: Down with back pain
+To: Karun Singla <karun@unicommerce.com>, Amit Dalal <amit.dalal@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114db44c3589910542e0f31b
+
+--001a114db44c3589910542e0f31b
+Content-Type: text/plain; charset=UTF-8
+
+Have severe pain in my back, taking physiotherapy sessions. Doctor has
+advised 4-5 days of complete bed rest. Will try to work from home.
+
+- Sunny
+
+--001a114db44c3589910542e0f31b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Have severe pain in my back, taking physiotherapy session=
+s. Doctor has advised 4-5 days of complete bed rest. Will try to work from =
+home.<div dir=3D"auto"><br></div><div dir=3D"auto">- Sunny<br><div dir=3D"a=
+uto"><br></div><div dir=3D"auto"><br></div></div></div>
+
+--001a114db44c3589910542e0f31b--

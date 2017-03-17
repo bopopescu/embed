@@ -1,0 +1,106 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp1114561qgj;
+        Thu, 20 Oct 2016 05:18:56 -0700 (PDT)
+X-Received: by 10.99.248.21 with SMTP id n21mr609125pgh.35.1476965936154;
+        Thu, 20 Oct 2016 05:18:56 -0700 (PDT)
+Return-Path: <tech+bncBDDYJNWMYIJRBL7MULAAKGQEPNYUVJQ@unicommerce.com>
+Received: from mail-pf0-x246.google.com (mail-pf0-x246.google.com. [2607:f8b0:400e:c00::246])
+        by mx.google.com with ESMTPS id 88si44826369pfs.216.2016.10.20.05.18.55
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Oct 2016 05:18:56 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c00::246 is neither permitted nor denied by best guess record for domain of tech+bncbddyjnwmyijrbl7mulaakgqepnyuvjq@unicommerce.com) client-ip=2607:f8b0:400e:c00::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c00::246 is neither permitted nor denied by best guess record for domain of tech+bncbddyjnwmyijrbl7mulaakgqepnyuvjq@unicommerce.com) smtp.mailfrom=tech+bncBDDYJNWMYIJRBL7MULAAKGQEPNYUVJQ@unicommerce.com
+Received: by mail-pf0-x246.google.com with SMTP id i85sf22687859pfa.5
+        for <digvijay@unicommerce.com>; Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=teTCHN7ufWORDgoXlpz7r2bWM7CbTWniSDRUk91fGfQ=;
+        b=yNcwVOPkdaLwdzeai78tXo7EH6speJr+Pk9gRcRVWyZ6TO2B+s95u7STs4k1VyGkZO
+         f4PUBybxBphBSZVH1qGqSub42vkDfuE5Y2VJ4Um/0ZP9lDwQo8H5Gx1XvL4QhOlABSwV
+         SkpJACQ/ddTyuuCM/o0q1XLhQwAEs0zMDvJJuMqQwCr6i3hiPaD+n1IOSJNgMqsms7mq
+         qz7/z+H1wxapPwH6JkSxLkvl/pbZAAMkVxOHlN9DvDJ0nIiPa/1lhr1ESHxszvzOzhvU
+         w+45S4skhDE+UpUjlOcUxVMoONcAvpVNtcq3ddEr+zr2ua4O9OfdNZhkgOuaY+k5I7JP
+         kBUg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=teTCHN7ufWORDgoXlpz7r2bWM7CbTWniSDRUk91fGfQ=;
+        b=BWkKR5/e/VieHMWBvO3519aUGPORs2ByPd3UnPAFbOShucYUwlf4zsDnDCsA5P3yfN
+         /JC73DEqQ0H4WvClpQDRzmRy5dAaOFH+Kr4/Zl/Ip+6xwTEs+fuJNnfuxbqIviMQV1ac
+         RejIJ3Hki0iHUCwBT+ngj3wv0lWmntzecHp9HQxiKudtB23oNUaqMemplMZHKRvDlWl7
+         ryRzeLethpbrhUxEYCdzCEPvXq/H8EZ2bOltSOHQn8jKM0WfndstaE7Fwaoh0bOIYvJA
+         dhbt81AECQwoLw4YvcvtFbfzMNdC1FjPJC/pROG3XAsw+A5pem/XB8mSXvEJplIqsfVs
+         9xTQ==
+X-Gm-Message-State: AA6/9RmQb4QUaD0x4YTHNCu47/TD/gQeyjnixpmeZ3YCrE3zR3SVlBTCeGkevSKCtzA1Vw==
+X-Received: by 10.98.27.11 with SMTP id b11mr3540974pfb.3.1476965935662;
+        Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.107.53.225 with SMTP id k94ls1689476ioo.21.gmail; Thu, 20 Oct
+ 2016 05:18:55 -0700 (PDT)
+X-Received: by 10.107.5.72 with SMTP id 69mr437179iof.132.1476965935401;
+        Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+Received: from mail-it0-x231.google.com (mail-it0-x231.google.com. [2607:f8b0:4001:c0b::231])
+        by mx.google.com with ESMTPS id 64si70451iog.31.2016.10.20.05.18.55
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::231 is neither permitted nor denied by best guess record for domain of ayush@unicommerce.com) client-ip=2607:f8b0:4001:c0b::231;
+Received: by mail-it0-x231.google.com with SMTP id m138so90078010itm.0
+        for <tech@unicommerce.com>; Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+X-Received: by 10.107.138.160 with SMTP id c32mr423152ioj.235.1476965935110;
+ Thu, 20 Oct 2016 05:18:55 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.79.13.139 with HTTP; Thu, 20 Oct 2016 05:18:54 -0700 (PDT)
+From: Ayush Walia <ayush@unicommerce.com>
+Date: Thu, 20 Oct 2016 17:48:54 +0530
+Message-ID: <CA+5inhCwS4Lso=7q3pLbtjM81dQQmkz_MKc1Px18+1Hd=eq16g@mail.gmail.com>
+Subject: Yamini's Farewell
+To: Tech Team <tech@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>
+Content-Type: multipart/alternative; boundary=001a113ff53ee86e8e053f4aed1e
+X-Original-Sender: ayush@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4001:c0b::231 is neither permitted nor denied by best
+ guess record for domain of ayush@unicommerce.com) smtp.mailfrom=ayush@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113ff53ee86e8e053f4aed1e
+Content-Type: text/plain; charset=UTF-8
+
+Hello All:
+
+We'll be going out for lunch tomorrow to celebrate Yamini's farewell.
+*Time:* 1:30 PM
+*Venue:* Will let you know by tomorrow morning (open to suggestions)
+
+Thanks & Regards,
+Ayush Walia
+
+--001a113ff53ee86e8e053f4aed1e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hello All:</div><div><br></div><div>We&#39;ll be goin=
+g out for lunch tomorrow to celebrate Yamini&#39;s farewell.</div><div><b>T=
+ime:</b> 1:30 PM</div><div><b>Venue:</b> Will let you know by tomorrow morn=
+ing (open to suggestions)</div><br clear=3D"all"><div><div class=3D"gmail_s=
+ignature"><div dir=3D"ltr">Thanks &amp; Regards,<div>Ayush Walia</div></div=
+></div></div>
+</div>
+
+--001a113ff53ee86e8e053f4aed1e--

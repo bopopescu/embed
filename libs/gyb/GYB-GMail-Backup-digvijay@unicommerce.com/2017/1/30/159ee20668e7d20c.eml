@@ -1,0 +1,131 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1243232qgu;
+        Sun, 29 Jan 2017 22:46:58 -0800 (PST)
+X-Received: by 10.223.169.112 with SMTP id u103mr16579230wrc.166.1485758818022;
+        Sun, 29 Jan 2017 22:46:58 -0800 (PST)
+Return-Path: <kapil@unicommerce.com>
+Received: from mail-wm0-x22a.google.com (mail-wm0-x22a.google.com. [2a00:1450:400c:c09::22a])
+        by mx.google.com with ESMTPS id j3si15292417wra.42.2017.01.29.22.46.57
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 29 Jan 2017 22:46:57 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) client-ip=2a00:1450:400c:c09::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) smtp.mailfrom=kapil@unicommerce.com
+Received: by mail-wm0-x22a.google.com with SMTP id b65so18358218wmf.0
+        for <digvijay@unicommerce.com>; Sun, 29 Jan 2017 22:46:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=EszR9dnurLAkFv49NjjY/voSjXYpio1e67Igbu5EziM=;
+        b=xjRPBiqqEVHo7i24/nYHV4/cZpyFHYOAXj8wlHEFsu87flc/bKsBD8hfE6SxZRdNne
+         1xQ+4kbCsPER0WuB9GaugM4DcSLD7pOrzOn41aFIST1TIeRYtSsZ6AKeqjqd+5fQdUFO
+         URXVkuvIWXZ9ICS2jkSyJbeOdLzMebR1mLLmxB4eetznspeK7VTt22Hc5u5FIrkyoObR
+         RRpagWeT7yuXekWO3xgc0qROTmchtctUDGBzJmpN2dTW78BENHi73tiau5QPnTMj6Zlw
+         dfaTGjbY2CsdnPWOlECR7WTPiSMsv1Adw7XwuJxYSPuilbYDcf195iJEZkVaSFS2e5uC
+         eYMA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=EszR9dnurLAkFv49NjjY/voSjXYpio1e67Igbu5EziM=;
+        b=gylExzNFNQtYvgcGcVSFJrUH4zJVlrDShx+fgi4paUsdVxX94xqmOZqiwZKQiD4zp/
+         tU26uA4HytFEWO0pUvGp4nRMMmGf4NUr+/hI/WiGhbp7iLdG0nTnLrHGOWKshEocQPOb
+         jYk72iU5n3fBve++/Q7kshLeXbNM2CR5L7G2dZUJCRoTbhZWNXR0jb5UwWMYcXNpaQyz
+         0C2PQbfZer+gZe9cdFqmIpAJfP8Ft0cOLU3MLqTpKNJr53Mn7Ef102qE987c+2fV6NXW
+         PFvfyjVrvm8JmFoSkgPP1vzA2UHjp+kAVkqvlxKJ7KE0331TuLKiHSB+myTefXa2FN3t
+         o89A==
+X-Gm-Message-State: AIkVDXIcuRjwd5VX9IhQO0jV5k6Kjx5Zex1Wt39AczuNdHmboD7znXjs7nA29YsoL4NVZbcHfOm/Kb/Fd2plnw==
+X-Received: by 10.223.134.151 with SMTP id 23mr20715012wrx.0.1485758817667;
+ Sun, 29 Jan 2017 22:46:57 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.28.15.75 with HTTP; Sun, 29 Jan 2017 22:46:57 -0800 (PST)
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Mon, 30 Jan 2017 12:16:57 +0530
+Message-ID: <CAOzor=4_yurWEfBj6zgS1Et1qP=at=XSA_Cov9uxdGfQesS-NA@mail.gmail.com>
+Subject: Woocommerce credentials
+To: Varad Singhal <varad@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1146ac788c931705474a2e1c
+
+--001a1146ac788c931705474a2e1c
+Content-Type: text/plain; charset=UTF-8
+
+Hi Varad,
+
+The seller I was in touch with for Woocommerce keys has been delaying
+inordinately, so would request you to reach out to other sellers who have
+expressed interest in integration and see if anyone is willing to share the
+details. The following clients had expressed interest:
+
+ - Varkalasilksarees
+- Horabonny
+- Flexibleapparels
+- te
+- brightcotton
+- instanote9
+- Momtobeindia
+- parvatiretail
+
+Hope one of them agrees to share the details :)
+
+Regards,
+Kapil Makhija
+
+-- 
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+--001a1146ac788c931705474a2e1c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Varad,<div><br></div><div>The seller I was in touch wit=
+h for Woocommerce keys has been delaying inordinately, so would request you=
+ to reach out to other sellers who have expressed interest in integration a=
+nd see if anyone is willing to share the details. The following clients had=
+ expressed interest:</div><div><br></div><div>=C2=A0-=C2=A0<span style=3D"c=
+olor:rgb(0,0,0);font-family:arial,sans,sans-serif;font-size:13px;white-spac=
+e:pre-wrap">Varkalasilksarees</span></div><div><font color=3D"#000000" face=
+=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap"> - </span=
+></font><span style=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;f=
+ont-size:13px;white-space:pre-wrap">Horabonny</span></div><div><span style=
+=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;white-space:pre-wrap=
+"></span><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span sty=
+le=3D"white-space:pre-wrap"> - </span></font><span style=3D"color:rgb(0,0,0=
+);font-family:arial,sans,sans-serif;font-size:13px;white-space:pre-wrap">Fl=
+exibleapparels</span></div><div><span style=3D"color:rgb(0,0,0);font-family=
+:arial,sans,sans-serif;white-space:pre-wrap"></span><font color=3D"#000000"=
+ face=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap"> - t=
+e</span></font></div><div><font color=3D"#000000" face=3D"arial, sans, sans=
+-serif"><span style=3D"white-space:pre-wrap"> - </span></font><span style=
+=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;font-size:13px;white=
+-space:pre-wrap">brightcotton</span></div><div><span style=3D"color:rgb(0,0=
+,0);font-family:arial,sans,sans-serif;white-space:pre-wrap"></span><font co=
+lor=3D"#000000" face=3D"arial, sans, sans-serif"><span style=3D"white-space=
+:pre-wrap"> - </span></font><span style=3D"color:rgb(0,0,0);font-family:ari=
+al,sans,sans-serif;font-size:13px;white-space:pre-wrap">instanote9</span></=
+div><div><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span sty=
+le=3D"white-space:pre-wrap"> - </span></font><span style=3D"color:rgb(0,0,0=
+);font-family:arial,sans,sans-serif;font-size:13px;white-space:pre-wrap">Mo=
+mtobeindia</span></div><div><font color=3D"#000000" face=3D"arial, sans, sa=
+ns-serif"><span style=3D"white-space:pre-wrap"> - </span></font><span style=
+=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;font-size:13px;white=
+-space:pre-wrap">parvatiretail</span></div><div><font color=3D"#000000" fac=
+e=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap"><br></sp=
+an></font></div><div><span style=3D"color:rgb(0,0,0);font-family:arial,sans=
+,sans-serif;white-space:pre-wrap"></span><font color=3D"#000000" face=3D"ar=
+ial, sans, sans-serif"><span style=3D"white-space:pre-wrap">Hope one of the=
+m agrees to share the details :)</span></font></div><div><font color=3D"#00=
+0000" face=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap"=
+><br></span></font></div><div><font color=3D"#000000" face=3D"arial, sans, =
+sans-serif"><span style=3D"white-space:pre-wrap">Regards,</span></font></di=
+v><div><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span style=
+=3D"white-space:pre-wrap">Kapil Makhija<br clear=3D"all"></span></font><div=
+><br></div>-- <br><div class=3D"gmail_signature"><div dir=3D"ltr">Kapil Mak=
+hija<div>Director, Strategy - Unicommerce</div><div>M: +91-9718470888</div>=
+</div></div>
+</div></div>
+
+--001a1146ac788c931705474a2e1c--

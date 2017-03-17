@@ -1,0 +1,135 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp42262oic;
+        Thu, 11 Aug 2016 04:41:42 -0700 (PDT)
+X-Received: by 10.31.196.199 with SMTP id u190mr472037vkf.116.1470915702888;
+        Thu, 11 Aug 2016 04:41:42 -0700 (PDT)
+Return-Path: <noreply-daa26fef@plus.google.com>
+Received: from mail-ua0-x247.google.com (mail-ua0-x247.google.com. [2607:f8b0:400c:c08::247])
+        by mx.google.com with ESMTPS id 141si424383vkh.89.2016.08.11.04.41.42
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Aug 2016 04:41:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply-daa26fef@plus.google.com designates 2607:f8b0:400c:c08::247 as permitted sender) client-ip=2607:f8b0:400c:c08::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@plus.google.com;
+       spf=pass (google.com: domain of noreply-daa26fef@plus.google.com designates 2607:f8b0:400c:c08::247 as permitted sender) smtp.mailfrom=noreply-daa26fef@plus.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=plus.google.com
+Received: by mail-ua0-x247.google.com with SMTP id 65so1946803uay.1
+        for <digvijay@unicommerce.com>; Thu, 11 Aug 2016 04:41:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=plus.google.com; s=20160623;
+        h=mime-version:date:precedence:message-id:subject:from:to;
+        bh=LX/P7gg8ZrVLrc21x5zyZrXVo3H69yPRtq2yxk5wYJA=;
+        b=NBk6MgWgsafjF1ISSlCcbkxbk6M5w1vbUD9Cg1BA6Wy5XAgpZVtZEiXr6yDmEdvLr/
+         55sTJQBplDRuNE9JWZm8KJJ51+Nq7ozH0+c39K0FRIBkwolnR6raZxfaKO2k5cPcmCEA
+         fevjV7Iq5rcs8dJWXrEiH3WzjGAIJp3/J0iDDqGVHbvWqK+XLeR2OttTLLf9PHWCdcTY
+         10W5jnpnfWURKWrD6azyaZ0IX2R33tXYnnjqRRM7CS56Rr5gkV66EDa30lDNEkLGUXnY
+         rsIm+HTXbaDSnuAj28dAGlIm/ktaUmYnlkbXQPNXzFsfWcv4m9R397vqifIhQDRiK8ER
+         SCtQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:precedence:message-id:subject
+         :from:to;
+        bh=LX/P7gg8ZrVLrc21x5zyZrXVo3H69yPRtq2yxk5wYJA=;
+        b=jW6w1cU+7x8TpL4NqBlZ3wJW10PHAzICmdtpzCgBByTemfhWyJFHwAAcG9uTa+YiJg
+         8p9YIOIfI/sFed5DNOyZYjRHGJc4LyLAv7c3iGyzHGd8c0plkCOCluOb4le3Lml0dS/A
+         wSLhdQ/lhY3QVj5vuSi485acLfNzrRl+ER0IG83u5mZBX5fEdfAdsKoXDj6NQFqp5GuD
+         HcPux0OIsnEK4GwveUb0MmSPrGec9oPSK8QLWlwLMeXnXud/zsOpDKvmE1E9nfSGTtVn
+         dXVVarYrrJLq2ahmvtCHayyWon8J1Ave8FtPOAoAKR+KzCkkYWDSyQ/0zoUq6lfTexVB
+         3cUA==
+X-Gm-Message-State: AEkoousty60kALvTdQLVdOrbUqUEPVIbC66zEQJWPg+fFAESPE13jS7rmuwfV1TcGlqTo5ZA6c2FbqyYHWloMQlqLiUUDEZAOXHuKk7LeSc=
+MIME-Version: 1.0
+X-Received: by 10.200.56.7 with SMTP id q7mr6524578qtb.10.1470915702713; Thu,
+ 11 Aug 2016 04:41:42 -0700 (PDT)
+Date: Thu, 11 Aug 2016 04:41:42 -0700 (PDT)
+X-Notifications: XEAAAAIFx5JrZUh-3qy9aECOM_pk
+X-UB: 54
+Precedence: bulk
+X-All-Senders-In-Circles: 1
+Message-ID: <CODyz_-juc4CFdRMHgodX9YAaQ@plus.google.com>
+Subject: Welcome to Google+, Digvijay
+From: "Google+ team" <noreply-daa26fef@plus.google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a1140bbaaf46f270539ca3f68
+
+--001a1140bbaaf46f270539ca3f68
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+Hey Digvijay,
+
+Welcome to Google+ - we're glad you're here! Here's a video and some tips  
+to help you get started:
+
+
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=CODyz_-juc4CFdRMHgodX9YAaQ&path=%2F%3Fpop%3Dwv&dt=1470915702703&ub=54
+
+
+Getting started on Google+
+Find people you knowCircles are the heart of Google+ - they control who you  
+share with and whose posts you see.  Find people you know, then drag and  
+drop them into circles that match your real-world relationships.
+
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=CODyz_-juc4CFdRMHgodX9YAaQ&path=%2Fpeople%2Ffind&dt=1470915702703&ub=54
+
+See what people are sharingNow that you've added people to your circles,  
+visit your stream to see what they're saying. When you find something you  
+like, add a comment or click +1 to just say "cool!"
+
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=CODyz_-juc4CFdRMHgodX9YAaQ&path=%2Fstream&dt=1470915702703&ub=54
+
+Share somethingTo post for the first time, click "Share what's new" - you  
+can include photos, videos, and links. Select the circles or people you  
+want to share with, or choose "Public" so that anyone can see what you have  
+to say.
+
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=CODyz_-juc4CFdRMHgodX9YAaQ&path=%2Fstream&dt=1470915702703&ub=54
+
+
+Congrats, you've made it to the end of this epic email. If you're still  
+seeking answers, check out the Google+ Help Center.
+
+http://www.google.com/support/+/
+
+Enjoy! - The Google+ Team
+
+
+Change what email Google+ sends you:  
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=CODyz_-juc4CFdRMHgodX9YAaQ&path=%2Fsettings%2Fplus&dt=1470915702703&ub=54
+
+--001a1140bbaaf46f270539ca3f68
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr"><body style=3D"display:block; max-width:480px; padding:24=
+px 0;"><!-- X-Notifications: 1:c7f1dfef8e800000 --><div style=3D"font-famil=
+y:Roboto, Arial, sans-serif; color:rgba(0, 0, 0, 0.87);"><a href=3D"https:/=
+/plus.google.com/_/notifications/emlink?emr=3D05502464480182497854&emid=3DC=
+ODyz_-juc4CFdRMHgodX9YAaQ&path=3D%2Fcollections%3Farp%3D1&dt=3D147091570270=
+3&ub=3D54"><img style=3D"width:100%; max-width:100%; margin-bottom:32px;" s=
+rc=3D"https://ssl.gstatic.com/s2/oz/images/notifications/gplus-welcome_8ef6=
+9ce6966b0b8e60b43a458cf1ed39.png" alt=3D"Google+ featured collections"/></a=
+><div style=3D"font-size:30px; font-weight:500; line-height:34px; margin-bo=
+ttom:24px;">Discover something amazing</div><div style=3D"font-size:16px; l=
+ine-height:24px; margin-bottom:32px; padding-right:16px;">Dive into the wor=
+ld's best content in <a style=3D"color:#4285f4; font-weight:bold; text-deco=
+ration:none;" href=3D"https://plus.google.com/_/notifications/emlink?emr=3D=
+05502464480182497854&emid=3DCODyz_-juc4CFdRMHgodX9YAaQ&path=3D%2Fcollection=
+s%3Farp%3D1&dt=3D1470915702703&ub=3D54">Collections</a>. Plus, find the peo=
+ple who get you in <a style=3D"color:#4285f4; font-weight:bold; text-decora=
+tion:none;" href=3D"https://plus.google.com/_/notifications/emlink?emr=3D05=
+502464480182497854&emid=3DCODyz_-juc4CFdRMHgodX9YAaQ&path=3D%2Fcommunities%=
+3Farp%3D1&dt=3D1470915702703&ub=3D54">Communities</a>.</div><a style=3D"bac=
+kground-color:#DB4437; color:white; font-size:14px; font-weight:bold;displa=
+y:inline-block; line-height:36px; padding:0 10px; border-radius:1px;text-al=
+ign:center; text-decoration:none; white-space:nowrap;" href=3D"https://plus=
+.google.com/_/notifications/emlink?emr=3D05502464480182497854&emid=3DCODyz_=
+-juc4CFdRMHgodX9YAaQ&path=3D%2Fcollections%3Farp%3D1&dt=3D1470915702703&ub=
+=3D54" role=3D"button">LET&#39;S GO</a></div><div style=3D"font-family:Aria=
+l; font-size:10px; color:gray; margin: 32px 0 10px;">This notification was =
+sent to digvijay@unicommerce.com. Go to your  <a href=3D"https://plus.googl=
+e.com/_/notifications/emlink?emr=3D05502464480182497854&emid=3DCODyz_-juc4C=
+FdRMHgodX9YAaQ&path=3D%2Fsettings%2Fplus&dt=3D1470915702703&ub=3D54" style=
+=3D"color:#3366CC;text-decoration:none">notification delivery settings</a> =
+to update your address. Google Inc., 1600 Amphitheatre Pkwy, Mountain View,=
+ CA 94043 USA</div></body></html>
+--001a1140bbaaf46f270539ca3f68--

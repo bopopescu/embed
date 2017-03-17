@@ -1,0 +1,65 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Fri, 13 Jan 2017 01:35:05 -0800 (PST)
+Date: Fri, 13 Jan 2017 15:05:05 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorz+7PaZfyM2sE_1J_nxhA7ghq3Tiv31xqCVFp3psDZgQ@mail.gmail.com>
+Subject: Woocommerce Apis not working
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Kapil Makhija <kapil@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11395758860ea40545f68c0b
+
+--001a11395758860ea40545f68c0b
+Content-Type: text/plain; charset=UTF-8
+
+Hi Kapil,
+
+The consumer key and secret pair that were given on the mail are not
+working and it shows :
+Request :
+
+curl https://www.fidesbox.com/wp-json/wc/v1/orders -u ck_
+e9c7f289f518b12c67f570e3c611798bf24a559e:cs_6bbdef52d4737cd4f02bfc4357f93d
+3dc31c10bd
+
+
+Response :
+{
+  "code": "woocommerce_rest_cannot_view",
+  "message": "Sorry, you cannot list resources.",
+  "data": {
+    "status": 401
+  }
+}
+I think when these keys were generated, maybe someone did not give read and
+write access to the user for which he created the keys. Please check and
+confirm.
+
+Unable to integrate woocomerce right now because of this problem.
+
+--001a11395758860ea40545f68c0b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Kapil,<div><br></div><div><div style=3D"font-size:12.8p=
+x">The consumer key and secret pair that were given on the mail are not wor=
+king and it shows :</div><div style=3D"font-size:12.8px">Request :=C2=A0</d=
+iv><div style=3D"font-size:12.8px"><p class=3D"gmail-m_5687733833881313209g=
+mail-p1"><span class=3D"gmail-m_5687733833881313209gmail-s1">curl=C2=A0<a h=
+ref=3D"https://www.fidesbox.com/wp-json/wc/v1/orders" target=3D"_blank">htt=
+ps://www.fidesbox.com/wp-<wbr>json/wc/v1/orders</a>=C2=A0-u ck_<wbr>e9c7f28=
+9f518b12c67f570e3c61179<wbr>8bf24a559e:cs_<wbr>6bbdef52d4737cd4f02bfc4357f9=
+3d<wbr>3dc31c10bd</span></p><p class=3D"gmail-m_5687733833881313209gmail-p1=
+"><span class=3D"gmail-m_5687733833881313209gmail-s1"><br></span></p><p cla=
+ss=3D"gmail-m_5687733833881313209gmail-p1">Response :</p></div><div style=
+=3D"font-size:12.8px"><div>{</div><div>=C2=A0 &quot;code&quot;: &quot;wooco=
+mmerce_rest_cannot_view&quot;<wbr>,</div><div>=C2=A0 &quot;message&quot;: &=
+quot;Sorry, you cannot list resources.&quot;,</div><div>=C2=A0 &quot;data&q=
+uot;: {</div><div>=C2=A0 =C2=A0 &quot;status&quot;: 401</div><div>=C2=A0 }<=
+/div><div>}</div></div><div style=3D"font-size:12.8px">I think when these k=
+eys were generated, maybe someone did not give read and write access to the=
+ user for which he created the keys. Please check and confirm.=C2=A0</div><=
+/div><div style=3D"font-size:12.8px"><br></div><div style=3D"font-size:12.8=
+px">Unable to integrate woocomerce right now because of this problem.</div>=
+</div>
+
+--001a11395758860ea40545f68c0b--

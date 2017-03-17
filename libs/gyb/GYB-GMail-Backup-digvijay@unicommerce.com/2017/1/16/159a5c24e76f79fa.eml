@@ -1,0 +1,144 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp1200353qgd;
+        Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+X-Received: by 10.129.120.85 with SMTP id t82mr25875268ywc.97.1484544691840;
+        Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+Return-Path: <sonu@unicommerce.com>
+Received: from mail-yw0-x236.google.com (mail-yw0-x236.google.com. [2607:f8b0:4002:c05::236])
+        by mx.google.com with ESMTPS id a62si5595818ywg.440.2017.01.15.21.31.31
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::236 is neither permitted nor denied by best guess record for domain of sonu@unicommerce.com) client-ip=2607:f8b0:4002:c05::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::236 is neither permitted nor denied by best guess record for domain of sonu@unicommerce.com) smtp.mailfrom=sonu@unicommerce.com
+Received: by mail-yw0-x236.google.com with SMTP id l75so62696700ywb.0
+        for <digvijay@unicommerce.com>; Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=lFE7JfEt4b1lQVX6Ss1tV3ryc5DvbJoSZc16Uo3laJw=;
+        b=E65S7SS4EZr/D6flg4AFUnFXtv9jgJ2x0FsMLUqYYE7V+BlAv/rvO7/WVA/SI6CPNJ
+         IGeE3gcaj8FbYmPIQPCyNCx0elCZLtYm6Xj4cUxbLg7kKy56fMlE1eVzOmrJt6MdcMzF
+         locqieA4Gbx+y7/hPuzjWeMTesH8+rRHg67pyyORcVOS/3T9w5UQqYkwZ4V+qICteweK
+         zLiWKw6gYmPousddYVQ0JpXu7rcptW8nqH6dPSfNxDQf8I5+vRGChigM+y3qzUDjpl2D
+         2+zstsimttbelNQc1Lj+DcPwAI6b7ENex8MYmMj/qczzQx8p9s69h53G3y49BY/P6NBV
+         SL3w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=lFE7JfEt4b1lQVX6Ss1tV3ryc5DvbJoSZc16Uo3laJw=;
+        b=tcPpZg6DLS/XwLLLzSY+T21TldxePGqCdtOVaCgOc5ht/XSDIO2xg0q8Mx+uL+uKL5
+         T43J7VT2UGfwTMM0OY0XKitb/ZUCMLQWSsk7A0KULv2eg465AO/Cu98723IyPBVZGtjl
+         5DUcGRQfUKhmwKFEQvdRha15Q+wS8lKOv7xk8Yj1kNre9ATfQa8wGPf9RpR5pC9DiSya
+         5geeA0MOGqzeglIewd5r+A+ajrQa3kewRnUQABK7Poncq93sGl/Kq2OOFQmYAlxg/Snp
+         Q3WgJLMXCIISu1pG7tYYqWqJ9S50dHiTA32giCfkN3cNbaJXxlXJpqhueGaZtGO3JUCA
+         nWCA==
+X-Gm-Message-State: AIkVDXKnSM0CBwQc4hQC82qlDXjVAQZnwy4qgwa1C1Ng26g34Nr1m40prN1xXQlaySZmkdMDfrE/L2XPZMhmVw==
+X-Received: by 10.129.94.196 with SMTP id s187mr27222622ywb.240.1484544691506;
+ Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.129.85.23 with HTTP; Sun, 15 Jan 2017 21:31:31 -0800 (PST)
+In-Reply-To: <001a1141584cd5330e0545cf93d1@google.com>
+References: <bdfee0fb-24ed-411c-8880-a028fb5770ba@docs-share.google.com> <001a1141584cd5330e0545cf93d1@google.com>
+From: Sonu Goel <sonu@unicommerce.com>
+Date: Mon, 16 Jan 2017 11:01:31 +0530
+Message-ID: <CAAUEOSUjMLSW9tcWKnW+ustKaumWWyzFeCwvRn1OozDX1ZpcYg@mail.gmail.com>
+Subject: Fwd: Medical, LTA - Invitation to view
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1141c1f4fdba0005462f7eaa
+
+--001a1141c1f4fdba0005462f7eaa
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: Bhuvneshwar Kumar (via Google Drive) <drive-shares-noreply@google.com>
+Date: Wed, Jan 11, 2017 at 4:35 PM
+Subject: Medical, LTA - Invitation to view
+To: sonu@unicommerce.com
+
+
+Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com> has invited you to *view*
+the following shared folders:
+Medical
+<https://drive.google.com/drive/folders/0B-uoMrKOqip1WXVFMzV3bGh0azQ?usp=sharing_eixpa_nl&ts=58761174>
+LTA
+<https://drive.google.com/drive/folders/0B-uoMrKOqip1dzZBYk9mTmNOajQ?usp=sharing_eixpa_nl&ts=58761174>
+Google Drive: Have all your files within reach from any device.
+Google Inc. 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA [image:
+Logo for Google Drive] <https://drive.google.com>
+
+--001a1141c1f4fdba0005462f7eaa
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Bhuvneshwar Kumar (via =
+Google Drive)</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:drive-shares-nore=
+ply@google.com">drive-shares-noreply@google.com</a>&gt;</span><br>Date: Wed=
+, Jan 11, 2017 at 4:35 PM<br>Subject: Medical, LTA - Invitation to view<br>=
+To: <a href=3D"mailto:sonu@unicommerce.com">sonu@unicommerce.com</a><br><br=
+><br><div><div style=3D"width:100%;padding:24px 0 16px 0;background-color:#=
+f5f5f5;text-align:center"><div style=3D"display:inline-block;width:90%;max-=
+width:680px;min-width:280px;text-align:left;font-family:Roboto,Arial,Helvet=
+ica,sans-serif"><div style=3D"height:0px" dir=3D"ltr"></div><div style=3D"d=
+isplay:block;padding:0 2px"><div style=3D"display:block;background:#fff;hei=
+ght:2px"></div></div><div style=3D"border-left:1px solid #f0f0f0;border-rig=
+ht:1px solid #f0f0f0"><div style=3D"padding:24px 32px 24px 32px;background:=
+#fff;border-right:1px solid #eaeaea;border-left:1px solid #eaeaea" dir=3D"l=
+tr"><div style=3D"font-size:14px;line-height:18px;color:#444"><a href=3D"ma=
+ilto:bhuvneshwar@unicommerce.com" style=3D"color:inherit;text-decoration:no=
+ne" target=3D"_blank">Bhuvneshwar Kumar</a> has invited you to <b>view</b> =
+the following shared folders:</div><div style=3D"height:10px"></div><div st=
+yle=3D"font-size:18px;display:table"><div style=3D"display:table-row;border=
+-bottom:4px solid #fff"><span style=3D"display:table-cell"><div style=3D"he=
+ight:32px"><img src=3D"https://ssl.gstatic.com/docs/documents/share/images/=
+services/folder-3.png" style=3D"vertical-align:middle;max-width:24px"></div=
+></span><span style=3D"display:table-cell;padding-left:12px"><a href=3D"htt=
+ps://drive.google.com/drive/folders/0B-uoMrKOqip1WXVFMzV3bGh0azQ?usp=3Dshar=
+ing_eixpa_nl&amp;ts=3D58761174" style=3D"color:#3367d6;text-decoration:none=
+;vertical-align:middle" target=3D"_blank">Medical</a></span></div><div styl=
+e=3D"display:table-row;border-bottom:4px solid #fff"><span style=3D"display=
+:table-cell"><div style=3D"height:32px"><img src=3D"https://ssl.gstatic.com=
+/docs/documents/share/images/services/folder-3.png" style=3D"vertical-align=
+:middle;max-width:24px"></div></span><span style=3D"display:table-cell;padd=
+ing-left:12px"><a href=3D"https://drive.google.com/drive/folders/0B-uoMrKOq=
+ip1dzZBYk9mTmNOajQ?usp=3Dsharing_eixpa_nl&amp;ts=3D58761174" style=3D"color=
+:#3367d6;text-decoration:none;vertical-align:middle" target=3D"_blank">LTA<=
+/a></span></div></div></div></div><table style=3D"width:100%;border-collaps=
+e:collapse"><tbody><tr><td style=3D"padding:0px"><table style=3D"border-col=
+lapse:collapse;width:3px"><tbody><tr height=3D"1"><td width=3D"1" bgcolor=
+=3D"#f0f0f0" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea"=
+ style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"pa=
+dding:0px"></td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" s=
+tyle=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padd=
+ing:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></t=
+d></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D"paddin=
+g:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td>=
+<td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td></tr></tbody=
+></table></td><td style=3D"width:100%;padding:0px"><div style=3D"height:1px=
+;width:auto;border-top:1px solid #ddd;background:#eaeaea;border-bottom:1px =
+solid #f0f0f0"></div></td><td style=3D"padding:0px"><table style=3D"border-=
+collapse:collapse;width:3px"><tbody><tr height=3D"1"><td width=3D"1" bgcolo=
+r=3D"#e5e5e5" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea=
+" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"p=
+adding:0px"></td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#eaeaea" =
+style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"pad=
+ding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></=
+td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"paddi=
+ng:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td=
+><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D"padding:0px"></td></tr></tbod=
+y></table></td></tr></tbody></table><table style=3D"padding:14px 10px 0 10p=
+x" dir=3D"ltr"><tbody><tr><td style=3D"width:100%;font-size:11px;font-famil=
+y:Roboto,Arial,Helvetica,sans-serif;color:#646464;line-height:20px;min-heig=
+ht:40px;vertical-align:middle">Google Drive: Have all your files within rea=
+ch from any device. <br>Google Inc. 1600 Amphitheatre Parkway, Mountain Vie=
+w, CA 94043, USA</td><td style=3D"padding-left:20px;vertical-align:middle">=
+<a href=3D"https://drive.google.com" target=3D"_blank"><img src=3D"https://=
+www.gstatic.com/images/branding/googlelogo/1x/googlelogo_tm_black54_color_9=
+6x40dp.png" width=3D"96" alt=3D"Logo for Google Drive" border=3D"0"></a></t=
+d></tr></tbody></table></div></div></div></div><br></div>
+
+--001a1141c1f4fdba0005462f7eaa--

@@ -1,0 +1,43 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Thu, 15 Dec 2016 10:41:07 -0800 (PST)
+Date: Fri, 16 Dec 2016 00:11:07 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sor7mm12_W8JXZhdazbNcOgdZ5Nfbt1ecod2eyP-JLZWoQ@mail.gmail.com>
+Subject: DB_QUERIES
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c139b0e4ef8d0543b6cbc7
+
+--001a11c139b0e4ef8d0543b6cbc7
+Content-Type: text/plain; charset=UTF-8
+
+Sir, wormhole Test k db pe yeh queries chala do :
+
+insert into role
+values(null,'ACTIVATE_TENANT','activate',NULL,0,NOW(),NOW());
+
+db.createCollection('cloudServers');
+
+var tenants =  db.tenantProfile.distinct('serverName');
+
+tenants.forEach(function(tenant) {
+
+db.cloudServers.insert({"serverName":tenant});
+});
+
+--001a11c139b0e4ef8d0543b6cbc7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Sir, wormhole Test k db pe yeh queries chala do :<div><br>=
+<div><div>insert into role values(null,&#39;ACTIVATE_TENANT&#39;,&#39;activ=
+ate&#39;,NULL,0,NOW(),NOW());</div><div><br></div><div>db.createCollection(=
+&#39;cloudServers&#39;);</div><div><br></div><div>var tenants =3D =C2=A0db.=
+tenantProfile.distinct(&#39;serverName&#39;);</div><div><br></div><div>tena=
+nts.forEach(function(tenant) {</div><div><br></div><div><span class=3D"gmai=
+l-Apple-tab-span" style=3D"white-space:pre">	</span>db.cloudServers.insert(=
+{&quot;serverName&quot;:tenant});<span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">	</span></div><div>});</div></div><div><br></div></div=
+></div>
+
+--001a11c139b0e4ef8d0543b6cbc7--

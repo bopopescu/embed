@@ -1,0 +1,2100 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1356986qgu;
+        Mon, 30 Jan 2017 04:56:14 -0800 (PST)
+X-Received: by 10.28.15.202 with SMTP id 193mr12970147wmp.99.1485780974504;
+        Mon, 30 Jan 2017 04:56:14 -0800 (PST)
+Return-Path: <kapil@unicommerce.com>
+Received: from mail-wj0-x230.google.com (mail-wj0-x230.google.com. [2a00:1450:400c:c01::230])
+        by mx.google.com with ESMTPS id k7si13329040wmd.38.2017.01.30.04.56.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jan 2017 04:56:14 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c01::230 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) client-ip=2a00:1450:400c:c01::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c01::230 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) smtp.mailfrom=kapil@unicommerce.com
+Received: by mail-wj0-x230.google.com with SMTP id n2so5008225wjq.3
+        for <digvijay@unicommerce.com>; Mon, 30 Jan 2017 04:56:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=F2Y+AfjR/2bLCjchOV8Z/pMCy7xrm6Ag3Ee4u89yCp4=;
+        b=c7gk1ZVM6ejz73dHmSboYdpJW5dvp/uEA5stIoYFj+HIVz5KILDtscuKNJ9bTQ0VhO
+         uzUT8WozxyitZh1YxAIepKLIL+lTBUxN0TflKn+KcSmERtw66rRdW/qiEhV+14vwHFyt
+         /Se3KCFLiF4l7SWGpjKjyUKqQZ3SETf2E62FsltQP+lrwMxwwhwW3DyjzWMooNIN4YYs
+         q5iyIynFB2tVWwl0QQr8TFZ6l2J2FoiBbnRul2NACNok/mR0luB8S7iNrBw3ixPbK/ZZ
+         FiA+hsss98BRkvEtbqzhUEJYjtZrxYQehjVAljGgLTSywZ3Od6pLzq8MneQwRo9XvATu
+         u2jQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=F2Y+AfjR/2bLCjchOV8Z/pMCy7xrm6Ag3Ee4u89yCp4=;
+        b=gL8u2K7u+7qhAo4DVNnPyAe06dj9FWLOaeQNQj6aek8GcxMBUEcJHPe3A+F67pQw/c
+         lfOqZ7Cgq6+UC14EmKL2EJ/BzF150HjvtEvZYOvtt5O8eDspYorTjODq8+5l2x9fudXd
+         UHHuiwFxuu59jsnalD/hyOvTrPJG3sJws2yWQqr8bt3OynnSf0N3jDQuKZ7hpPJkU/QK
+         mU8vzb9pkTnnzVKDuSjbJcb7j8iyDJ06goRctU9Jc55sKg+DXAIrT5Q7KQVRunBTzieT
+         1L6l9zvqFvvG2jDqBBF5Jz80fxjyZhe1mclRQAk+khnV3g3GgoWHjrrN8iz8WqxAxMza
+         gcGQ==
+X-Gm-Message-State: AIkVDXIUVKdu2pUONLdckOX3X22aSodGjCxWh9RNDkOZvgz6Jpnq6WxjKNQebUSfAr4309hhpJQSmZ92qRlkfw==
+X-Received: by 10.223.134.151 with SMTP id 23mr22403809wrx.0.1485780973968;
+ Mon, 30 Jan 2017 04:56:13 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.28.15.75 with HTTP; Mon, 30 Jan 2017 04:56:13 -0800 (PST)
+In-Reply-To: <CAPe2SZTF2te758ou5atE7F2KNW+EM7bTAj+=kFEuhX+TYdrsPA@mail.gmail.com>
+References: <CAPe2SZSKCWWbOizCvQPF-eLa6vTXNkYEKvjTWO8kPpZL9z6p2Q@mail.gmail.com>
+ <CAOzor=5B2BHRx9OjSf3j-D_Yty=X0Tb0mo_GEN=f8o3PYHqUyQ@mail.gmail.com>
+ <CAPe2SZSbAbbf1kni+BzTf2y+kke=yzX+CWx-PkkJcwn3g7Jp=g@mail.gmail.com>
+ <CAGttGOKzrgS-J1jV7aqLbX7F8j-6BFRVEPjSpWOtJ0QSNa4YCQ@mail.gmail.com>
+ <CAFD_XHFKtehJrKTKPWpPZjTFLPEMOn5cDHRfJ5i8RFScC5iEdg@mail.gmail.com>
+ <CAPe2SZRFdDPRK3MbqEWHSY15A5xjcdRDuJEQUjcr-H-1axEAjg@mail.gmail.com>
+ <CAOzor=5FJjE6ncqsi=bJZKbnK0nN-A7a9O8_rCUj2f1=VWRv1w@mail.gmail.com>
+ <CAPe2SZSrJQk_aoEbtT5Lua8GOE2rQfz01oRhZdBJCox7_PBdew@mail.gmail.com>
+ <CAOzor=6yrDKb_8ryiPme_ge7zYJE9jN3LEKrF9BnJ3zo2kcQVw@mail.gmail.com>
+ <CAPe2SZSc=a=9wgBi4c0crrtZHOYybs2U-Ejfw=OyMG2_4eUZoQ@mail.gmail.com>
+ <CAGttGOK8nxu6nYV9PZHRpDgGVwbAKzcFCsQsSiuqcE06w=bWVg@mail.gmail.com>
+ <CAOzor=775vKA3=tzbUo=55jqSq1wsjzYZdTa22FsULoK61UCPQ@mail.gmail.com>
+ <CAGttGO+JQOEX4WpVMHg0NfVUyo4PV=zMXew7JT9=cfroQ7WeCw@mail.gmail.com>
+ <CAPe2SZTT59xzjjahxau+_kSzLfvt4Ka+vbghGWorOyzi_9vutA@mail.gmail.com>
+ <CAOzor=4vS=T8oeqtc4tGmCNH=XgqPAOrWGs_tyUrZf39pDsz1Q@mail.gmail.com>
+ <CAOzor=6OsLc_vxa6FzDFnLun_pmGpfbCcjk=H5d=wsEkV2PDfg@mail.gmail.com>
+ <CAPe2SZRx0cT=dtL8oCqnpzbsX0uG3+ZdkSn6c8n_D4=oHd=yeg@mail.gmail.com>
+ <CAOzor=7fgQhx6ybv1aHoyc8FutmBC03nTZ2d+-B2U0c-u_JY5g@mail.gmail.com>
+ <CAOzor=53sCouPOpazpxj01TU9Mw+75iXc=z=6g6UBQsDycBinQ@mail.gmail.com>
+ <CAOzor=7hPkbnaMGU+YoOQx9u=7yNSdXsuzhwnCD_5y5kYzr0Cg@mail.gmail.com>
+ <CAFD_XHFZvqoRGh-XGavQkG2ny-F9ZoPJf2DTpSuGKuOxpc7Y-Q@mail.gmail.com> <CAPe2SZTF2te758ou5atE7F2KNW+EM7bTAj+=kFEuhX+TYdrsPA@mail.gmail.com>
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Mon, 30 Jan 2017 18:26:13 +0530
+Message-ID: <CAOzor=7wiFEOAOVZFVcY=yc9Kvu7VSeox+X5c1AWCausMdLPdw@mail.gmail.com>
+Subject: Re: Recon Pending changes
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Cc: Varad Singhal <varad@unicommerce.com>, Digvijay Sharam <digvijay@unicommerce.com>, 
+	Ayush Walia <ayush@unicommerce.com>, Puneet Sharma <puneet@unicommerce.com>, 
+	Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1146ac782aea7905474f57ca
+
+--001a1146ac782aea7905474f57ca
+Content-Type: text/plain; charset=UTF-8
+
+Hi Akshay,
+
+Thanks for adding the column. However, it needs to have a value only when
+cost price is >0. Right now, most of our customers have not updated Cost
+price, so we are effectively showing the same value as Settled Amount in
+Net Profit, which should not be the case.
+
+Also, the original order of column is fine i.e. Net Profit should be
+visible after the Cost Price column.
+
+Regards,
+Kapil Makhija
+
+On Fri, Jan 27, 2017 at 1:06 PM, Akshay Agarwal <
+akshay.agarwal@unicommerce.com> wrote:
+
+> Hi Kapil,
+> I am adding the required column.
+> Will let you know.
+>
+> On Fri, Jan 27, 2017, 12:38 Varad Singhal <varad@unicommerce.com> wrote:
+>
+>> Yes, I checked fixed fee on Triveni and its fixed now
+>>
+>> On Fri, Jan 27, 2017 at 12:18 PM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Hi Akshay/ Sunny,
+>>
+>> Request you to add an additional column in "Unreconciled" and
+>> "Reconciled" tabs called "Net Profit" which is the difference of payment
+>> received - Cost Price. It should be populated only when Cost Price > 0,
+>> else it should show an empty value in this column. Basically, it should
+>> only populate the "Net Profit" value, only when the seller has updated the
+>> cost price.
+>>
+>> Varad, did you check the "Fixed Fee" on any seller? If yes, please
+>> confirm and we will include it in this month's newsletter.
+>>
+>> Regards,
+>> Kapil Makhija
+>>
+>> On Thu, Jan 12, 2017 at 6:04 PM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Akshay,
+>>
+>> What about Point No. 2 (2 - Comments support while marking item as
+>> disputed). Is this live already?
+>>
+>> Regards,
+>> Kapil Makhija
+>>
+>> On Wed, Jan 4, 2017 at 6:50 PM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> No the order of columns is fine..let's not change that..can we not do
+>> anything about the width? What about the suggestions I gave?
+>>
+>> On Wed, Jan 4, 2017 at 6:41 PM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> I'll move settlement amount and settlement percentage up the order to
+>> that it does not need scrolling.
+>> Digvijay , were the issues regarding the marketplace fees as shared in
+>> another thread resolved?
+>> Adding digvijay
+>>
+>> On Wed, Jan 4, 2017, 18:32 Kapil Makhija <kapil@unicommerce.com> wrote:
+>>
+>> Also, who is working on providing fixed maketplace fee separately in
+>> settlements page?
+>>
+>> On Wed, Jan 4, 2017 at 11:14 AM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Hi Akshay,
+>>
+>> We will need to further adjust the width of the columns..I see scope of
+>> reduction in Order date, Product and Status Code columns. We can also
+>> change "Total Order Amt" to "Order Amt", and make that shorter.
+>>
+>> I want Settled% to be visible without scrolling, so that they can simply
+>> select and mark reconciled by looking at the Settled%
+>>
+>> Regards,
+>> Kapil Makhija
+>>
+>> On Wed, Jan 4, 2017 at 7:00 AM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> Kapil, no for the width of columns.
+>>
+>> On Wed, Jan 4, 2017, 00:03 Puneet Sharma <puneet@unicommerce.com> wrote:
+>>
+>> Done .
+>>
+>> Thanks,
+>> Puneet Sharma
+>> Unicommerce Esolutions Pvt. Ltd
+>> +91-7666182895
+>>
+>> On Tue, Jan 3, 2017 at 11:56 PM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Thanks Puneet.
+>>
+>> Akshay, is this for dispute comments?
+>>
+>> On Tue, Jan 3, 2017 at 11:03 PM, Puneet Sharma <puneet@unicommerce.com>
+>> wrote:
+>>
+>> Done .
+>>
+>> Thanks,
+>> Puneet Sharma
+>> Unicommerce Esolutions Pvt. Ltd
+>> +91-7666182895
+>>
+>> On Tue, Jan 3, 2017 at 10:41 PM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> Puneet sir,
+>> PFA the query to be executed.
+>>
+>>
+>> On Tue, Jan 3, 2017 at 12:21 PM Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Only width change is required, rest is fine.
+>>
+>> Varad, can you resolve the ticket pending for order # now?
+>>
+>> On Tue, Jan 3, 2017 at 12:03 PM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> Yeah, the changes are deployed. The UI changes  (comments while marking
+>> disputed) should be deployed by tonight. I'll change the column widths as
+>> well. Please list here the changes required in the table. Like display name
+>> changes, widths, filters. I'll make all the changes together today.
+>>
+>> On Tue, Jan 3, 2017 at 11:27 AM Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>> Yup, and I see order item and order # as separate, so I am assuming all
+>> the pending changes are taken care of now.
+>>
+>> Is it possible to reduce the width of certain columns, so that %
+>> Settlement is visible without scrolling
+>>
+>> On Tue, Jan 3, 2017 at 11:14 AM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> I checked the accesses of admin yesterday. They had the export access. So
+>> won't be required I guess
+>>
+>> On Tue, Jan 3, 2017, 11:10 Varad Singhal <varad@unicommerce.com> wrote:
+>>
+>> Akshay, you can use my user on varad.unicommerce.com, let me know if any
+>> live seller's details are required only
+>>
+>> On Tue, Jan 3, 2017 at 9:12 AM, Puneet Sharma <puneet@unicommerce.com>
+>> wrote:
+>>
+>> Build done .
+>>
+>> Thanks,
+>> Puneet Sharma
+>> Unicommerce Esolutions Pvt. Ltd
+>> +91-7666182895 <+91%2076661%2082895>
+>>
+>> On Mon, Jan 2, 2017 at 10:37 PM, Akshay Agarwal <
+>> akshay.agarwal@unicommerce.com> wrote:
+>>
+>> Varad please confirm with any admin user login?
+>> And for customer support user its not visible as of now, have asked ayush
+>> about the required role on that.. Working on it.
+>> Need to deploy backend for reconciliation changes, and snapdeal tracking
+>> number change.
+>> +Puneet Sharma <puneet@unicommerce.com> Sir, Can we build all clouds
+>> tonight?
+>>
+>> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+
+
+
+-- 
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+--001a1146ac782aea7905474f57ca
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Akshay,<div><br></div><div>Thanks for adding the column=
+. However, it needs to have a value only when cost price is &gt;0. Right no=
+w, most of our customers have not updated Cost price, so we are effectively=
+ showing the same value as Settled Amount in Net Profit, which should not b=
+e the case.</div><div><br></div><div>Also, the original order of column is =
+fine i.e. Net Profit should be visible after the Cost Price column.</div><d=
+iv><br></div><div>Regards,</div><div>Kapil Makhija</div></div><div class=3D=
+"gmail_extra"><br><div class=3D"gmail_quote">On Fri, Jan 27, 2017 at 1:06 P=
+M, Akshay Agarwal <span dir=3D"ltr">&lt;<a href=3D"mailto:akshay.agarwal@un=
+icommerce.com" target=3D"_blank">akshay.agarwal@unicommerce.com</a>&gt;</sp=
+an> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;=
+border-left:1px #ccc solid;padding-left:1ex"><p dir=3D"ltr">Hi Kapil, <br>
+I am adding the required column.<br>
+Will let you know.</p>
+<br><div class=3D"gmail_quote"><div dir=3D"ltr">On Fri, Jan 27, 2017, 12:38=
+ Varad Singhal &lt;<a href=3D"mailto:varad@unicommerce.com" target=3D"_blan=
+k">varad@unicommerce.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail=
+_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:=
+1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134gmail_msg">Yes, I check=
+ed fixed fee on Triveni and its fixed now</div><div class=3D"gmail_extra m_=
+2312446684852710134gmail_msg"><br class=3D"m_2312446684852710134gmail_msg">=
+<div class=3D"gmail_quote m_2312446684852710134gmail_msg">On Fri, Jan 27, 2=
+017 at 12:18 PM, Kapil Makhija <span dir=3D"ltr" class=3D"m_231244668485271=
+0134gmail_msg">&lt;<a href=3D"mailto:kapil@unicommerce.com" class=3D"m_2312=
+446684852710134gmail_msg" target=3D"_blank">kapil@unicommerce.com</a>&gt;</=
+span> wrote:<br class=3D"m_2312446684852710134gmail_msg"><blockquote class=
+=3D"gmail_quote m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;=
+border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_23=
+12446684852710134gmail_msg">Hi Akshay/ Sunny,<div class=3D"m_23124466848527=
+10134gmail_msg"><br class=3D"m_2312446684852710134gmail_msg"></div><div cla=
+ss=3D"m_2312446684852710134gmail_msg">Request you to add an additional colu=
+mn in &quot;Unreconciled&quot; and &quot;Reconciled&quot; tabs called &quot=
+;Net Profit&quot; which is the difference of payment received - Cost Price.=
+ It should be populated only when Cost Price &gt; 0, else it should show an=
+ empty value in this column. Basically, it should only populate the &quot;N=
+et Profit&quot; value, only when the seller has updated the cost price.</di=
+v><div class=3D"m_2312446684852710134gmail_msg"><br class=3D"m_231244668485=
+2710134gmail_msg"></div><div class=3D"m_2312446684852710134gmail_msg">Varad=
+, did you check the &quot;Fixed Fee&quot; on any seller? If yes, please con=
+firm and we will include it in this month&#39;s newsletter.</div><div class=
+=3D"m_2312446684852710134gmail_msg"><br class=3D"m_2312446684852710134gmail=
+_msg"></div><div class=3D"m_2312446684852710134gmail_msg">Regards,</div><di=
+v class=3D"m_2312446684852710134gmail_msg">Kapil Makhija</div></div><div cl=
+ass=3D"gmail_extra m_2312446684852710134gmail_msg"><br class=3D"m_231244668=
+4852710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710134gmail_m=
+sg">On Thu, Jan 12, 2017 at 6:04 PM, Kapil Makhija <span dir=3D"ltr" class=
+=3D"m_2312446684852710134gmail_msg">&lt;<a href=3D"mailto:kapil@unicommerce=
+.com" class=3D"m_2312446684852710134gmail_msg" target=3D"_blank">kapil@unic=
+ommerce.com</a>&gt;</span> wrote:<br class=3D"m_2312446684852710134gmail_ms=
+g"><blockquote class=3D"gmail_quote m_2312446684852710134gmail_msg" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr" class=3D"m_2312446684852710134gmail_msg">Akshay,<div class=3D"m_23=
+12446684852710134gmail_msg"><br class=3D"m_2312446684852710134gmail_msg"></=
+div><div class=3D"m_2312446684852710134gmail_msg">What about Point No. 2 (<=
+span style=3D"font-size:12.8px" class=3D"m_2312446684852710134gmail_msg">2 =
+- Comments support while marking item as disputed). Is this live already?</=
+span></div><div class=3D"m_2312446684852710134gmail_msg"><span style=3D"fon=
+t-size:12.8px" class=3D"m_2312446684852710134gmail_msg"><br class=3D"m_2312=
+446684852710134gmail_msg"></span></div><div class=3D"m_2312446684852710134g=
+mail_msg"><span style=3D"font-size:12.8px" class=3D"m_2312446684852710134gm=
+ail_msg">Regards,</span></div><div class=3D"m_2312446684852710134gmail_msg"=
+><span style=3D"font-size:12.8px" class=3D"m_2312446684852710134gmail_msg">=
+Kapil Makhija</span></div></div><div class=3D"gmail_extra m_231244668485271=
+0134gmail_msg"><br class=3D"m_2312446684852710134gmail_msg"><div class=3D"g=
+mail_quote m_2312446684852710134gmail_msg">On Wed, Jan 4, 2017 at 6:50 PM, =
+Kapil Makhija <span dir=3D"ltr" class=3D"m_2312446684852710134gmail_msg">&l=
+t;<a href=3D"mailto:kapil@unicommerce.com" class=3D"m_2312446684852710134gm=
+ail_msg" target=3D"_blank">kapil@unicommerce.com</a>&gt;</span> wrote:<br c=
+lass=3D"m_2312446684852710134gmail_msg"><blockquote class=3D"gmail_quote m_=
+2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134g=
+mail_msg">No the order of columns is fine..let&#39;s not change that..can w=
+e not do anything about the width? What about the suggestions I gave?<br cl=
+ass=3D"m_2312446684852710134gmail_msg"></div><div class=3D"gmail_extra m_23=
+12446684852710134gmail_msg"><br class=3D"m_2312446684852710134gmail_msg"><d=
+iv class=3D"gmail_quote m_2312446684852710134gmail_msg">On Wed, Jan 4, 2017=
+ at 6:41 PM, Akshay Agarwal <span dir=3D"ltr" class=3D"m_231244668485271013=
+4gmail_msg">&lt;<a href=3D"mailto:akshay.agarwal@unicommerce.com" class=3D"=
+m_2312446684852710134gmail_msg" target=3D"_blank">akshay.agarwal@unicommerc=
+e.<wbr>com</a>&gt;</span> wrote:<br class=3D"m_2312446684852710134gmail_msg=
+"><blockquote class=3D"gmail_quote m_2312446684852710134gmail_msg" style=3D=
+"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D=
+"ltr" class=3D"m_2312446684852710134gmail_msg">I&#39;ll move settlement amo=
+unt and settlement percentage up the order to that it does not need scrolli=
+ng.<br class=3D"m_2312446684852710134gmail_msg">Digvijay , were the issues =
+regarding the marketplace fees as shared in another thread resolved?<br cla=
+ss=3D"m_2312446684852710134gmail_msg">
+Adding digvijay<br class=3D"m_2312446684852710134gmail_msg">
+</div><span class=3D"m_2312446684852710134gmail_msg">
+</span><br class=3D"m_2312446684852710134gmail_msg"><div class=3D"gmail_quo=
+te m_2312446684852710134gmail_msg"><div dir=3D"ltr" class=3D"m_231244668485=
+2710134gmail_msg">On Wed, Jan 4, 2017, 18:32 Kapil Makhija &lt;<a href=3D"m=
+ailto:kapil@unicommerce.com" class=3D"m_2312446684852710134gmail_msg" targe=
+t=3D"_blank">kapil@unicommerce.com</a>&gt; wrote:<br class=3D"m_23124466848=
+52710134gmail_msg"></div><blockquote class=3D"gmail_quote m_231244668485271=
+0134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;paddin=
+g-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053gmail_msg m_2312446684852710134gmail_msg">Also, who is workin=
+g on providing fixed maketplace fee separately in settlements page?</div><d=
+iv class=3D"gmail_extra m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+gmail_msg m_2312446684852710134gmail_msg"><br class=3D"m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><d=
+iv class=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+gmail_msg m_2312446684852710134gmail_msg">On Wed, Jan 4, 2017 at 11:14 AM, =
+Kapil Makhija <span dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842=
+664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15=
+73234147381622053gmail_msg m_2312446684852710134gmail_msg">&lt;<a href=3D"m=
+ailto:kapil@unicommerce.com" class=3D"m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053gmail_msg m_2312446684852710134gmail_msg" target=3D"_blank">k=
+apil@unicommerce.com</a>&gt;</span> wrote:<br class=3D"m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><b=
+lockquote class=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053gmail_msg m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex=
+;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2=
+312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603=
+4228428m_612389745178932431m_1573234147381622053gmail_msg m_231244668485271=
+0134gmail_msg">Hi Akshay,<div class=3D"m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053gmail_msg m_2312446684852710134gmail_msg"><br class=3D"m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527101=
+34gmail_msg"></div><div class=3D"m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg">We will need to further =
+adjust the width of the columns..I see scope of reduction in Order date, Pr=
+oduct and Status Code columns. We can also change &quot;Total Order Amt&quo=
+t; to &quot;Order Amt&quot;, and make that shorter.</div><div class=3D"m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710=
+134gmail_msg"><br class=3D"m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053gmail_msg m_2312446684852710134gmail_msg"></div><div class=3D"m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg">I want Settled% to be visible without scrolling, so that they can s=
+imply select and mark reconciled by looking at the Settled%</div><div class=
+=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg"><br class=3D"m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053gmail_msg m_2312446684852710134gmail_msg"></div><div class=3D"m_=
+2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560=
+34228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527=
+10134gmail_msg">Regards,</div><div class=3D"m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">Kapil Makhija=
+</div></div><div class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164HOEnZb m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053gmail_msg m_2312446684852710134gmail_msg"><div class=3D"m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164h5 m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmai=
+l_msg"><div class=3D"gmail_extra m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg"><br class=3D"m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmai=
+l_msg"><div class=3D"gmail_quote m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg">On Wed, Jan 4, 2017 at 7=
+:00 AM, Akshay Agarwal <span dir=3D"ltr" class=3D"m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">&lt;<a =
+href=3D"mailto:akshay.agarwal@unicommerce.com" class=3D"m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg" t=
+arget=3D"_blank">akshay.agarwal@unicommerce.<wbr>com</a>&gt;</span> wrote:<=
+br class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_=
+2312446684852710134gmail_msg"><blockquote class=3D"gmail_quote m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail=
+_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1e=
+x"><p dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053gmail_msg m_2312446684852710134gmail_msg">Kapil, no for the width of col=
+umns. </p><div class=3D"m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+m_-8295268808088332164m_6478836095512514865HOEnZb m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div cl=
+ass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053m_-82952688080883=
+32164m_6478836095512514865h5 m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053gmail_msg m_2312446684852710134gmail_msg">
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">=
+<div dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53gmail_msg m_2312446684852710134gmail_msg">On Wed, Jan 4, 2017, 00:03 Pune=
+et Sharma &lt;<a href=3D"mailto:puneet@unicommerce.com" class=3D"m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg" target=3D"_blank">puneet@unicommerce.com</a>&gt; wrote:<br class=3D=
+"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg"></div><blockquote class=3D"gmail_quote m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"=
+ style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><d=
+iv dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852=
+710134gmail_msg">Done .=C2=A0</div><div class=3D"gmail_extra m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125=
+14865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053gmail_msg m_2312446684852710134gmail_msg"></div><div class=3D"g=
+mail_extra m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808=
+088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_m=
+sg"><br clear=3D"all" class=3D"m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_231244=
+6684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286=
+6820053238m_2501757933951337327gmail_signature m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882=
+866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748=
+25298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gm=
+ail_msg m_2312446684852710134gmail_msg" data-smartmail=3D"gmail_signature">=
+<div dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg"><div class=3D"m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gm=
+ail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312=
+446684852710134gmail_msg"><div dir=3D"ltr" class=3D"m_2312446684852710134m_=
+-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974517=
+8932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68=
+29882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053gmail_msg m_2312446684852710134gmail_msg">Thanks,<div class=3D"m_2312446=
+684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422842=
+8m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609=
+5512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842=
+664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15=
+73234147381622053gmail_msg m_2312446684852710134gmail_msg">Puneet Sharma</d=
+iv><div class=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298=
+667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295=
+268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134g=
+mail_msg">Unicommerce Esolutions Pvt. Ltd</div><div class=3D"m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125=
+14865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053gmail_msg m_2312446684852710134gmail_msg">+91-7666182895</div><=
+/div></div></div></div></div>
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail=
+_msg"></div><div class=3D"gmail_extra m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053gmail_msg m_2312446684852710134gmail_msg">On Tue, Jan 3, 2017 at 11=
+:56 PM, Kapil Makhija <span dir=3D"ltr" class=3D"m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298=
+82866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+gmail_msg m_2312446684852710134gmail_msg">&lt;<a href=3D"mailto:kapil@unico=
+mmerce.com" class=3D"m_2312446684852710134m_-4157252842664517068m_802287482=
+5298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-=
+8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710=
+134gmail_msg" target=3D"_blank">kapil@unicommerce.com</a>&gt;</span> wrote:=
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail=
+_msg"><blockquote class=3D"gmail_quote m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667=
+029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg =
+m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px =
+#ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m=
+_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_=
+8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147381=
+622053gmail_msg m_2312446684852710134gmail_msg">Thanks Puneet.<div class=3D=
+"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m=
+_6478836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><br cl=
+ass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053m_-82952688080883=
+32164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">=
+</div><div class=3D"m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527101=
+34gmail_msg">Akshay, is this for dispute comments?</div></div><div class=3D=
+"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m=
+_6478836095512514865m_6829882866820053238m_2501757933951337327HOEnZb m_2312=
+446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422=
+8428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883=
+6095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div class=3D=
+"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m=
+_6478836095512514865m_6829882866820053238m_2501757933951337327h5 m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478836095=
+512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053gmail_msg m_2312446684852710134gmail_msg"><div class=3D"gma=
+il_extra m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880808=
+8332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527=
+10134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123=
+89745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg=
+"><br class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg"><div class=3D"gmail_quote m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238g=
+mail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_231=
+2446684852710134gmail_msg">On Tue, Jan 3, 2017 at 11:03 PM, Puneet Sharma <=
+span dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg">&lt;<a href=3D"mailto:puneet@unicommerce.com" class=3D"m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6=
+478836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg" target=
+=3D"_blank">puneet@unicommerce.com</a>&gt;</span> wrote:<br class=3D"m_2312=
+446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422=
+8428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883=
+6095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><blockquote c=
+lass=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527101=
+34gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005323=
+8gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2=
+312446684852710134gmail_msg">Done .=C2=A0</div><div class=3D"gmail_extra m_=
+2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560=
+34228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64=
+78836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><span cla=
+ss=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053m_-829526880808833=
+2164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><=
+br clear=3D"all" class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg"><div class=3D"m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gm=
+ail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312=
+446684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200=
+53238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440gmail=
+_signature m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808=
+088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_m=
+sg" data-smartmail=3D"gmail_signature"><div dir=3D"ltr" class=3D"m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478836095=
+512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053gmail_msg m_2312446684852710134gmail_msg"><div class=3D"m_2=
+312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603=
+4228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647=
+8836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div dir=
+=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124=
+46684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228=
+428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134=
+gmail_msg">Thanks,<div class=3D"m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gma=
+il_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124=
+46684852710134gmail_msg">Puneet Sharma</div><div class=3D"m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg">Unicommerce Esolutions P=
+vt. Ltd</div><div class=3D"m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684=
+852710134gmail_msg">+91-7666182895</div></div></div></div></div></div>
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail=
+_msg"></span><div class=3D"m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684=
+852710134gmail_msg"><div class=3D"m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m=
+_2501757933951337327m_-6857870467513869461h5 m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286=
+6820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmai=
+l_msg m_2312446684852710134gmail_msg"><div class=3D"gmail_quote m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955=
+12514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053gmail_msg m_2312446684852710134gmail_msg">On Tue, Jan 3, 201=
+7 at 10:41 PM, Akshay Agarwal <span dir=3D"ltr" class=3D"m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053gmail_msg m_2312446684852710134gmail_msg">&lt;<a href=3D"mailto:aks=
+hay.agarwal@unicommerce.com" class=3D"m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg" target=3D"_blank">akshay.agarwal@unicommerce=
+.<wbr>com</a>&gt;</span> wrote:<br class=3D"m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail=
+_msg m_2312446684852710134gmail_msg"><blockquote class=3D"gmail_quote m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788=
+36095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg" style=3D"mar=
+gin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr=
+" class=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808=
+088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_m=
+sg">Puneet sir,=C2=A0<div class=3D"m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23=
+12446684852710134gmail_msg">PFA the query to be executed.<div class=3D"m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div class=
+=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053m_-82952688080883321=
+64m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857870=
+467513869461m_-5954838828273293440h5 m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200532=
+38gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_=
+2312446684852710134gmail_msg"><br class=3D"m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_=
+msg m_2312446684852710134gmail_msg"><br class=3D"m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298=
+82866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+gmail_msg m_2312446684852710134gmail_msg"><div class=3D"gmail_quote m_23124=
+46684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228=
+428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478836=
+095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div dir=3D"lt=
+r" class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880=
+8088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848=
+52710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6=
+12389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_=
+msg">On Tue, Jan 3, 2017 at 12:21 PM Kapil Makhija &lt;<a href=3D"mailto:ka=
+pil@unicommerce.com" class=3D"m_2312446684852710134m_-4157252842664517068m_=
+8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147381=
+622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail=
+_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225=
+514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446=
+684852710134gmail_msg" target=3D"_blank">kapil@unicommerce.com</a>&gt; wrot=
+e:<br class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg"></div><blockquote class=3D"gmail_quote m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882=
+866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748=
+25298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gm=
+ail_msg m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551=
+2514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5=
+954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829=
+882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228=
+74825298667029m_-225514156034228428m_612389745178932431m_157323414738162205=
+3gmail_msg m_2312446684852710134gmail_msg">Only width change is required, r=
+est is fine.<div class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_2501757=
+933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817=
+286gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail=
+_msg"><br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82=
+95268808088332164m_6478836095512514865m_6829882866820053238m_25017579339513=
+37327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053m_-829526880808833=
+2164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><=
+/div><div class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82=
+95268808088332164m_6478836095512514865m_6829882866820053238m_25017579339513=
+37327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053m_-829526880808833=
+2164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">V=
+arad, can you resolve the ticket pending for order # now?</div></div><div c=
+lass=3D"gmail_extra m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238m_2501757933951=
+337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gma=
+il_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053m_-82952688080883=
+32164m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">=
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg =
+m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415=
+6034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_=
+6478836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div cl=
+ass=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82=
+95268808088332164m_6478836095512514865m_6829882866820053238m_25017579339513=
+37327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053m_-829526880808833=
+2164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">O=
+n Tue, Jan 3, 2017 at 12:03 PM, Akshay Agarwal <span dir=3D"ltr" class=3D"m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6=
+478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751=
+3869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125=
+14865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053gmail_msg m_2312446684852710134gmail_msg">&lt;<a href=3D"mailto=
+:akshay.agarwal@unicommerce.com" class=3D"m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg" target=3D"_blank">akshay.agarwal@unicommerce.<wbr>com=
+</a>&gt;</span> wrote:<br class=3D"m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129=
+514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748=
+25298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_=
+-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2=
+312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603=
+4228428m_612389745178932431m_1573234147381622053gmail_msg m_231244668485271=
+0134gmail_msg"><blockquote class=3D"gmail_quote m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23=
+12446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc=
+ solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg">Yeah, the changes are deployed. The UI chang=
+es =C2=A0(comments while marking disputed) should be deployed by tonight. I=
+&#39;ll change the column widths as well. Please list here the changes requ=
+ired in the table. Like display name changes, widths, filters. I&#39;ll mak=
+e all the changes together today.</div><div class=3D"m_2312446684852710134m=
+_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451=
+78932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6=
+829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282=
+73293440m_-4042129514090817286m_-93775917757425983HOEnZb m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838=
+828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail=
+_msg m_2312446684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286m_-93775917757425983h5 m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m=
+_2312446684852710134gmail_msg"><br class=3D"m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m=
+_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_231244=
+6684852710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829=
+882866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282732=
+93440m_-4042129514090817286gmail_msg m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200532=
+38gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_=
+2312446684852710134gmail_msg"><div dir=3D"ltr" class=3D"m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865=
+m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548388=
+28273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_=
+msg m_2312446684852710134gmail_msg">On Tue, Jan 3, 2017 at 11:27 AM Kapil M=
+akhija &lt;<a href=3D"mailto:kapil@unicommerce.com" class=3D"m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125=
+14865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595=
+4838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874=
+825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053g=
+mail_msg m_2312446684852710134gmail_msg" target=3D"_blank">kapil@unicommerc=
+e.com</a>&gt; wrote:<br class=3D"m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_=
+2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212951=
+4090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527101=
+34gmail_msg"></div><blockquote class=3D"gmail_quote m_2312446684852710134m_=
+-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974517=
+8932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68=
+29882866820053238m_2501757933951337327m_-6857870467513869461m_-595483882827=
+3293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667=
+029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg =
+m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px =
+#ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m=
+_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483882=
+8273293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599g=
+mail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880808=
+8332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-68=
+57870467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">Yup, and I =
+see order item and order # as separate, so I am assuming all the pending ch=
+anges are taken care of now.<div class=3D"m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751386=
+9461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg"><br class=3D"m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955=
+12514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-=
+5954838828273293440m_-4042129514090817286m_-93775917757425983m_-71730884130=
+05318599gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmail=
+_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225=
+514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332=
+164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"></=
+div><div class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93=
+775917757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882=
+866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282732934=
+40m_-4042129514090817286gmail_msg m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238g=
+mail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_231=
+2446684852710134gmail_msg">Is it possible to reduce the width of certain co=
+lumns, so that % Settlement is visible without scrolling</div></div><div cl=
+ass=3D"gmail_extra m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82=
+95268808088332164m_6478836095512514865m_6829882866820053238m_25017579339513=
+37327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9=
+3775917757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23=
+12446684852710134gmail_msg"><br class=3D"m_2312446684852710134m_-4157252842=
+664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15=
+73234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820=
+053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4=
+042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788=
+36095512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869=
+461m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053gmail_msg m_2312446684852710134gmail_msg"><div class=3D"gmail_quote=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m=
+_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857870467=
+513869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_=
+-7173088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_=
+8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147381=
+622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_250=
+1757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212951409=
+0817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298=
+667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295=
+268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134g=
+mail_msg">On Tue, Jan 3, 2017 at 11:14 AM, Akshay Agarwal <span dir=3D"ltr"=
+ class=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688080=
+88332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6=
+857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775=
+7425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404=
+2129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg">&lt;<a href=3D"mailto:akshay.agarwal@unicommerce.com" cl=
+ass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053m_-82952688080883=
+32164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857=
+870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775742=
+5983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005323=
+8m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212=
+9514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874=
+825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m=
+_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_=
+2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560=
+34228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848527=
+10134gmail_msg" target=3D"_blank">akshay.agarwal@unicommerce.<wbr>com</a>&g=
+t;</span> wrote:<br class=3D"m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_2501=
+757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090=
+817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483=
+8828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286=
+6820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmai=
+l_msg m_2312446684852710134gmail_msg"><blockquote class=3D"gmail_quote m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751386=
+9461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-7173=
+088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_80228=
+74825298667029m_-225514156034228428m_612389745178932431m_157323414738162205=
+3m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017579=
+33951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140908172=
+86gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880=
+8088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848=
+52710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6=
+12389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_=
+msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+"><p dir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_2501757=
+933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817=
+286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m=
+_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483882=
+8273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298=
+667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_m=
+sg m_2312446684852710134gmail_msg">I checked the accesses of admin yesterda=
+y. They had the export access. So won&#39;t be required I guess</p><div cla=
+ss=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053m_-829526880808833=
+2164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-68578=
+70467513869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425=
+983m_-7173088413005318599m_-5753126297500230996HOEnZb m_2312446684852710134=
+m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745=
+178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_=
+6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828=
+273293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gm=
+ail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685=
+7870467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788=
+36095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div class=
+=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053m_-82952688080883321=
+64m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857870=
+467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775742598=
+3m_-7173088413005318599m_-5753126297500230996h5 m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164=
+m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046=
+7513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955=
+12514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053gmail_msg m_2312446684852710134gmail_msg">
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164=
+m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046=
+7513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955=
+12514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053gmail_msg m_2312446684852710134gmail_msg"><div dir=3D"ltr" c=
+lass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685=
+7870467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177574=
+25983m_-7173088413005318599gmail_msg m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200532=
+38m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421=
+29514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852=
+710134gmail_msg">On Tue, Jan 3, 2017, 11:10 Varad Singhal &lt;<a href=3D"ma=
+ilto:varad@unicommerce.com" class=3D"m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200532=
+38m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421=
+29514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312446=
+684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422842=
+8m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609=
+5512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m=
+_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m=
+_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451=
+78932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6=
+829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80=
+22874825298667029m_-225514156034228428m_612389745178932431m_157323414738162=
+2053gmail_msg m_2312446684852710134gmail_msg" target=3D"_blank">varad@unico=
+mmerce.com</a>&gt; wrote:<br class=3D"m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042=
+129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461=
+m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134=
+m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745=
+178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_=
+6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053gmail_msg m_2312446684852710134gmail_msg"></div><blockquote class=3D"g=
+mail_quote m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808=
+088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-=
+6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177=
+57425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200=
+53238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40=
+42129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_802=
+2874825298667029m_-225514156034228428m_612389745178932431m_1573234147381622=
+053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684=
+852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
+adding-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_=
+-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753126297=
+500230996m_77984527146858631gmail_msg m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042=
+129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461=
+m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134=
+m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745=
+178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_=
+6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053gmail_msg m_2312446684852710134gmail_msg">Akshay, you can use my user =
+on <a href=3D"http://varad.unicommerce.com" class=3D"m_2312446684852710134m=
+_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451=
+78932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6=
+829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282=
+73293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-=
+5753126297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164=
+m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046=
+7513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668=
+4852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m=
+_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360955=
+12514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053gmail_msg m_2312446684852710134gmail_msg" target=3D"_blank">=
+varad.unicommerce.com</a>, let me know if any live seller&#39;s details are=
+ required only</div><div class=3D"gmail_extra m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828=
+66820053238m_2501757933951337327m_-6857870467513869461m_-595483882827329344=
+0m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753126=
+297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-4157252842=
+664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15=
+73234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820=
+053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4=
+042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788=
+36095512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869=
+461m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053gmail_msg m_2312446684852710134gmail_msg"><br class=3D"m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551=
+2514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5=
+954838828273293440m_-4042129514090817286m_-93775917757425983m_-717308841300=
+5318599m_-5753126297500230996m_77984527146858631gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483=
+8828273293440m_-4042129514090817286m_-93775917757425983m_-71730884130053185=
+99gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866702=
+9m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880=
+8088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_=
+-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6=
+478836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><div cla=
+ss=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93=
+775917757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858=
+631gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg">On Tue, Jan 3, 2017 at 9:12 AM, Puneet Sharma <span d=
+ir=3D"ltr" class=3D"m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238m_2501757933951=
+337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-=
+93775917757425983m_-7173088413005318599m_-5753126297500230996m_779845271468=
+58631gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238m_250175793395133732=
+7m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93775=
+917757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m=
+_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmai=
+l_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22=
+5514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_231244=
+6684852710134gmail_msg">&lt;<a href=3D"mailto:puneet@unicommerce.com" class=
+=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053m_-82952688080883321=
+64m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857870=
+467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775742598=
+3m_-7173088413005318599m_-5753126297500230996m_77984527146858631gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6=
+478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751=
+3869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-7=
+173088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_80=
+22874825298667029m_-225514156034228428m_612389745178932431m_157323414738162=
+2053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017=
+57933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140908=
+17286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg" target=3D"_blank">puneet@unicommerce.com</a>&gt;</span> wrote:<br c=
+lass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685=
+7870467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177574=
+25983m_-7173088413005318599m_-5753126297500230996m_77984527146858631gmail_m=
+sg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551=
+4156034228428m_612389745178932431m_1573234147381622053m_-829526880808833216=
+4m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-68578704=
+67513869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983=
+m_-7173088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068=
+m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341473=
+81622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_2=
+501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129514=
+090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82=
+95268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_2312=
+446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422=
+8428m_612389745178932431m_1573234147381622053gmail_msg m_231244668485271013=
+4gmail_msg"><blockquote class=3D"gmail_quote m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286=
+6820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440=
+m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-57531262=
+97500230996m_77984527146858631gmail_msg m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200=
+53238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40=
+42129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312=
+446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422=
+8428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883=
+6095512514865m_6829882866820053238m_2501757933951337327m_-68578704675138694=
+61m_-5954838828273293440m_-4042129514090817286gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865=
+m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053gmail_msg m_2312446684852710134gmail_msg" style=3D"margin:0 0 0 .8ex=
+;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2=
+312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603=
+4228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647=
+8836095512514865m_6829882866820053238m_2501757933951337327m_-68578704675138=
+69461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-717=
+3088413005318599m_-5753126297500230996m_77984527146858631gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461=
+m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-71730884=
+13005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482=
+5298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-=
+8295268808088332164m_6478836095512514865m_6829882866820053238m_250175793395=
+1337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gm=
+ail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"=
+>Build done .=C2=A0</div><div class=3D"gmail_extra m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-57=
+53126297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828=
+66820053238m_2501757933951337327m_-6857870467513869461m_-595483882827329344=
+0m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg =
+m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415=
+6034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_=
+6478836095512514865m_6829882866820053238m_2501757933951337327m_-68578704675=
+13869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_23124466848=
+52710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6=
+12389745178932431m_1573234147381622053m_-8295268808088332164m_6478836095512=
+514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053gmail_msg m_2312446684852710134gmail_msg"><br clear=3D"all" cl=
+ass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2=
+25514156034228428m_612389745178932431m_1573234147381622053m_-82952688080883=
+32164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857=
+870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775742=
+5983m_-7173088413005318599m_-5753126297500230996m_77984527146858631gmail_ms=
+g m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514=
+156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164=
+m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046=
+7513869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m=
+_-7173088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25=
+01757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140=
+90817286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124=
+46684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228=
+428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134=
+gmail_msg"><div class=3D"m_2312446684852710134m_-4157252842664517068m_80228=
+74825298667029m_-225514156034228428m_612389745178932431m_157323414738162205=
+3m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017579=
+33951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140908172=
+86m_-93775917757425983m_-7173088413005318599m_-5753126297500230996m_7798452=
+7146858631gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825=
+298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8=
+295268808088332164m_6478836095512514865m_6829882866820053238m_2501757933951=
+337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-=
+93775917757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298=
+82866820053238m_2501757933951337327m_-6857870467513869461m_-595483882827329=
+3440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415725284266451=
+7068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234=
+147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005323=
+8gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_msg m_2=
+312446684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_=
+-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753126297=
+500230996m_77984527146858631m_8759334858780925247m_407325447305622334gmail_=
+signature m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688080=
+88332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6=
+857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775=
+7425983m_-7173088413005318599m_-5753126297500230996m_77984527146858631gmail=
+_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225=
+514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332=
+164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787=
+0467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177574259=
+83m_-7173088413005318599gmail_msg m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m=
+_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295=
+14090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482=
+5298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-=
+8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710=
+134gmail_msg" data-smartmail=3D"gmail_signature"><div dir=3D"ltr" class=3D"=
+m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415=
+6034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_=
+6478836095512514865m_6829882866820053238m_2501757933951337327m_-68578704675=
+13869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-=
+7173088413005318599m_-5753126297500230996m_77984527146858631gmail_msg m_231=
+2446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342=
+28428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788=
+36095512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869=
+461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-71730=
+88413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_250175793=
+3951337327m_-6857870467513869461m_-5954838828273293440m_-404212951409081728=
+6gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029=
+m_-225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808=
+088332164m_6478836095512514865m_6829882866820053238gmail_msg m_231244668485=
+2710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61=
+2389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_m=
+sg"><div class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93=
+775917757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858=
+631gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-415=
+7252842664517068m_8022874825298667029m_-225514156034228428m_612389745178932=
+431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988=
+2866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293=
+440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-57531=
+26297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_=
+-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2=
+312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603=
+4228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647=
+8836095512514865m_6829882866820053238m_2501757933951337327m_-68578704675138=
+69461m_-5954838828273293440m_-4042129514090817286gmail_msg m_23124466848527=
+10134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123=
+89745178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514=
+865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053gmail_msg m_2312446684852710134gmail_msg">Thanks,<div class=3D"m_=
+2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560=
+34228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64=
+78836095512514865m_6829882866820053238m_2501757933951337327m_-6857870467513=
+869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-71=
+73088413005318599m_-5753126297500230996m_77984527146858631gmail_msg m_23124=
+46684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228=
+428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478836=
+095512514865m_6829882866820053238m_2501757933951337327m_-685787046751386946=
+1m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-7173088=
+413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748=
+25298667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_=
+-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017579339=
+51337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286g=
+mail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880808=
+8332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466848527=
+10134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123=
+89745178932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg=
+">Puneet Sharma</div><div class=3D"m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129=
+514090817286m_-93775917757425983m_-7173088413005318599m_-575312629750023099=
+6m_77984527146858631gmail_msg m_2312446684852710134m_-4157252842664517068m_=
+8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147381=
+622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_250=
+1757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212951409=
+0817286m_-93775917757425983m_-7173088413005318599gmail_msg m_23124466848527=
+10134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123=
+89745178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514=
+865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548=
+38828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828=
+66820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482=
+5298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gma=
+il_msg m_2312446684852710134gmail_msg">Unicommerce Esolutions Pvt. Ltd</div=
+><div class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238m_250175793395133732=
+7m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93775=
+917757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858631=
+gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m=
+_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688080=
+88332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6=
+857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775=
+7425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404=
+2129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg=
+ m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141=
+56034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466848=
+52710134gmail_msg"><a href=3D"tel:+91%2076661%2082895" value=3D"+9176661828=
+95" class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg" target=3D"_blank">+91-7666182895</a></div></div></div=
+></div></div></div><div class=3D"m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_=
+2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212951=
+4090817286m_-93775917757425983m_-7173088413005318599m_-5753126297500230996m=
+_77984527146858631gmail_msg m_2312446684852710134m_-4157252842664517068m_80=
+22874825298667029m_-225514156034228428m_612389745178932431m_157323414738162=
+2053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017=
+57933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140908=
+17286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312446684852710=
+134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389=
+745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251486=
+5m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838=
+828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252=
+98667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail=
+_msg m_2312446684852710134gmail_msg"><div class=3D"m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-57=
+53126297500230996m_77984527146858631m_8759334858780925247h5 m_2312446684852=
+710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612=
+389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251=
+4865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5954=
+838828273293440m_-4042129514090817286m_-93775917757425983m_-717308841300531=
+8599m_-5753126297500230996m_77984527146858631gmail_msg m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m=
+_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483882=
+8273293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599g=
+mail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_=
+-225514156034228428m_612389745178932431m_1573234147381622053m_-829526880808=
+8332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-68=
+57870467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg">
+<br class=3D"m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858631gm=
+ail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685=
+7870467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177574=
+25983m_-7173088413005318599gmail_msg m_2312446684852710134m_-41572528426645=
+17068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323=
+4147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200532=
+38m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421=
+29514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287=
+4825298667029m_-225514156034228428m_612389745178932431m_1573234147381622053=
+m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852=
+710134gmail_msg"><div class=3D"gmail_quote m_2312446684852710134m_-41572528=
+42664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_=
+1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668=
+20053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_=
+-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753126297=
+500230996m_77984527146858631gmail_msg m_2312446684852710134m_-4157252842664=
+517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732=
+34147381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053=
+238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042=
+129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461=
+m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134=
+m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745=
+178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_=
+6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053gmail_msg m_2312446684852710134gmail_msg">On Mon, Jan 2, 2017 at 10:37=
+ PM, Akshay Agarwal <span dir=3D"ltr" class=3D"m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882=
+866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282732934=
+40m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-575312=
+6297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751386=
+9461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg">&lt;<a href=3D"mailto:ak=
+shay.agarwal@unicommerce.com" class=3D"m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404=
+2129514090817286m_-93775917757425983m_-7173088413005318599m_-57531262975002=
+30996m_77984527146858631gmail_msg m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m=
+_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295=
+14090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551=
+2514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5=
+954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829=
+882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228=
+74825298667029m_-225514156034228428m_612389745178932431m_157323414738162205=
+3gmail_msg m_2312446684852710134gmail_msg" target=3D"_blank">akshay.agarwal=
+@unicommerce.<wbr>com</a>&gt;</span> wrote:<br class=3D"m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865=
+m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548388=
+28273293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599=
+m_-5753126297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-=
+4157252842664517068m_8022874825298667029m_-225514156034228428m_612389745178=
+932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682=
+9882866820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273=
+293440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail=
+_msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225=
+514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088332=
+164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685787=
+0467513869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053gmail_msg m_2312446684852710134gmail_msg"><blockquote cla=
+ss=3D"gmail_quote m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93=
+775917757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858=
+631gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid=
+;padding-left:1ex"><div dir=3D"ltr" class=3D"m_2312446684852710134m_-415725=
+2842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431=
+m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286=
+6820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440=
+m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-57531262=
+97500230996m_77984527146858631gmail_msg m_2312446684852710134m_-41572528426=
+64517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_157=
+3234147381622053m_-8295268808088332164m_6478836095512514865m_68298828668200=
+53238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40=
+42129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312=
+446684852710134m_-4157252842664517068m_8022874825298667029m_-22551415603422=
+8428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_647883=
+6095512514865m_6829882866820053238m_2501757933951337327m_-68578704675138694=
+61m_-5954838828273293440m_-4042129514090817286gmail_msg m_23124466848527101=
+34m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897=
+45178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865=
+m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053gmail_msg m_2312446684852710134gmail_msg">Varad please confirm with =
+any admin user login?<div class=3D"m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238=
+m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129=
+514090817286m_-93775917757425983m_-7173088413005318599m_-575312629750023099=
+6m_77984527146858631gmail_msg m_2312446684852710134m_-4157252842664517068m_=
+8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147381=
+622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_250=
+1757933951337327m_-6857870467513869461m_-5954838828273293440m_-404212951409=
+0817286m_-93775917757425983m_-7173088413005318599gmail_msg m_23124466848527=
+10134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123=
+89745178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514=
+865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-59548=
+38828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-41572=
+52842664517068m_8022874825298667029m_-225514156034228428m_61238974517893243=
+1m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298828=
+66820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482=
+5298667029m_-225514156034228428m_612389745178932431m_1573234147381622053gma=
+il_msg m_2312446684852710134gmail_msg">And for customer support user its no=
+t visible as of now, have asked ayush about the required role on that.. Wor=
+king on it.</div><div class=3D"m_2312446684852710134m_-4157252842664517068m=
+_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414738=
+1622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25=
+01757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140=
+90817286m_-93775917757425983m_-7173088413005318599m_-5753126297500230996m_7=
+7984527146858631gmail_msg m_2312446684852710134m_-4157252842664517068m_8022=
+874825298667029m_-225514156034228428m_612389745178932431m_15732341473816220=
+53m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_2501757=
+933951337327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817=
+286m_-93775917757425983m_-7173088413005318599gmail_msg m_231244668485271013=
+4m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238974=
+5178932431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m=
+_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-595483882=
+8273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238gmail_msg m_2312446684852710134m_-4157252842664517068m_8022874825298=
+667029m_-225514156034228428m_612389745178932431m_1573234147381622053gmail_m=
+sg m_2312446684852710134gmail_msg">Need to deploy backend for reconciliatio=
+n changes, and snapdeal tracking number change.</div><div class=3D"m_231244=
+6684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560342284=
+28m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64788360=
+95512514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461=
+m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-71730884=
+13005318599m_-5753126297500230996m_77984527146858631gmail_msg m_23124466848=
+52710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6=
+12389745178932431m_1573234147381622053m_-8295268808088332164m_6478836095512=
+514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-59=
+54838828273293440m_-4042129514090817286m_-93775917757425983m_-7173088413005=
+318599gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986=
+67029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952=
+68808088332164m_6478836095512514865m_6829882866820053238m_25017579339513373=
+27m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286gmail_m=
+sg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-22551=
+4156034228428m_612389745178932431m_1573234147381622053m_-829526880808833216=
+4m_6478836095512514865m_6829882866820053238gmail_msg m_2312446684852710134m=
+_-4157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451=
+78932431m_1573234147381622053gmail_msg m_2312446684852710134gmail_msg"><a c=
+lass=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-=
+225514156034228428m_612389745178932431m_1573234147381622053m_-8295268808088=
+332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-685=
+7870467513869461m_-5954838828273293440m_-4042129514090817286m_-937759177574=
+25983m_-7173088413005318599m_-5753126297500230996m_77984527146858631m_87593=
+34858780925247m_407325447305622334m_-2249433665080271090GWVZpf m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551=
+2514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5=
+954838828273293440m_-4042129514090817286m_-93775917757425983m_-717308841300=
+5318599m_-5753126297500230996m_77984527146858631m_8759334858780925247m_4073=
+25447305622334m_-2249433665080271090gW m_2312446684852710134m_-415725284266=
+4517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573=
+234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682005=
+3238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-404=
+2129514090817286m_-93775917757425983m_-7173088413005318599m_-57531262975002=
+30996m_77984527146858631gmail_msg m_2312446684852710134m_-41572528426645170=
+68m_8022874825298667029m_-225514156034228428m_612389745178932431m_157323414=
+7381622053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m=
+_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295=
+14090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_2312446684=
+852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_=
+612389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551=
+2514865m_6829882866820053238m_2501757933951337327m_-6857870467513869461m_-5=
+954838828273293440m_-4042129514090817286gmail_msg m_2312446684852710134m_-4=
+157252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789=
+32431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829=
+882866820053238gmail_msg m_2312446684852710134m_-4157252842664517068m_80228=
+74825298667029m_-225514156034228428m_612389745178932431m_157323414738162205=
+3gmail_msg m_2312446684852710134gmail_msg" id=3D"m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298=
+82866820053238m_2501757933951337327m_-6857870467513869461m_-595483882827329=
+3440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753=
+126297500230996m_77984527146858631m_8759334858780925247m_407325447305622334=
+m_-2249433665080271090IloFPc-1" href=3D"mailto:puneet@unicommerce.com" targ=
+et=3D"_blank">+Puneet Sharma</a>=C2=A0Sir,=C2=A0Can we build all clouds ton=
+ight?<br class=3D"m_2312446684852710134m_-4157252842664517068m_802287482529=
+8667029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829=
+5268808088332164m_6478836095512514865m_6829882866820053238m_250175793395133=
+7327m_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-93=
+775917757425983m_-7173088413005318599m_-5753126297500230996m_77984527146858=
+631gmail_msg m_2312446684852710134m_-4157252842664517068m_80228748252986670=
+29m_-225514156034228428m_612389745178932431m_1573234147381622053m_-82952688=
+08088332164m_6478836095512514865m_6829882866820053238m_2501757933951337327m=
+_-6857870467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591=
+7757425983m_-7173088413005318599gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286gmail_msg m_2312446684852710134m_-4157252842664517068m_8=
+022874825298667029m_-225514156034228428m_612389745178932431m_15732341473816=
+22053m_-8295268808088332164m_6478836095512514865m_6829882866820053238gmail_=
+msg m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053gmail_msg m_23124466=
+84852710134gmail_msg"></div></div><br class=3D"m_2312446684852710134m_-4157=
+252842664517068m_8022874825298667029m_-225514156034228428m_6123897451789324=
+31m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882=
+866820053238m_2501757933951337327m_-6857870467513869461m_-59548388282732934=
+40m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-575312=
+6297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-415725284=
+2664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m_1=
+573234147381622053m_-8295268808088332164m_6478836095512514865m_682988286682=
+0053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m_-=
+4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_23=
+12446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156034=
+228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6478=
+836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751386=
+9461m_-5954838828273293440m_-4042129514090817286gmail_msg m_231244668485271=
+0134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_61238=
+9745178932431m_1573234147381622053m_-8295268808088332164m_64788360955125148=
+65m_6829882866820053238gmail_msg m_2312446684852710134m_-415725284266451706=
+8m_8022874825298667029m_-225514156034228428m_612389745178932431m_1573234147=
+381622053gmail_msg m_2312446684852710134gmail_msg"><span class=3D"HOEnZb"><=
+font color=3D"#888888"><div class=3D"gmail_quote m_2312446684852710134m_-41=
+57252842664517068m_8022874825298667029m_-225514156034228428m_61238974517893=
+2431m_1573234147381622053m_-8295268808088332164m_6478836095512514865m_68298=
+82866820053238m_2501757933951337327m_-6857870467513869461m_-595483882827329=
+3440m_-4042129514090817286m_-93775917757425983m_-7173088413005318599m_-5753=
+126297500230996m_77984527146858631gmail_msg m_2312446684852710134m_-4157252=
+842664517068m_8022874825298667029m_-225514156034228428m_612389745178932431m=
+_1573234147381622053m_-8295268808088332164m_6478836095512514865m_6829882866=
+820053238m_2501757933951337327m_-6857870467513869461m_-5954838828273293440m=
+_-4042129514090817286m_-93775917757425983m_-7173088413005318599gmail_msg m_=
+2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255141560=
+34228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_64=
+78836095512514865m_6829882866820053238m_2501757933951337327m_-6857870467513=
+869461m_-5954838828273293440m_-4042129514090817286gmail_msg m_2312446684852=
+710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428m_612=
+389745178932431m_1573234147381622053m_-8295268808088332164m_647883609551251=
+4865m_6829882866820053238gmail_msg m_2312446684852710134m_-4157252842664517=
+068m_8022874825298667029m_-225514156034228428m_612389745178932431m_15732341=
+47381622053gmail_msg m_2312446684852710134gmail_msg"><div dir=3D"ltr" class=
+=3D"m_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-2255=
+14156034228428m_612389745178932431m_1573234147381622053m_-82952688080883321=
+64m_6478836095512514865m_6829882866820053238m_2501757933951337327m_-6857870=
+467513869461m_-5954838828273293440m_-4042129514090817286m_-9377591775742598=
+3m_-7173088413005318599m_-5753126297500230996m_77984527146858631gmail_msg m=
+_2312446684852710134m_-4157252842664517068m_8022874825298667029m_-225514156=
+034228428m_612389745178932431m_1573234147381622053m_-8295268808088332164m_6=
+478836095512514865m_6829882866820053238m_2501757933951337327m_-685787046751=
+3869461m_-5954838828273293440m_-4042129514090817286m_-93775917757425983m_-7=
+173088413005318599gmail_msg m_2312446684852710134m_-4157252842664517068m_80=
+22874825298667029m_-225514156034228428m_612389745178932431m_157323414738162=
+2053m_-8295268808088332164m_6478836095512514865m_6829882866820053238m_25017=
+57933951337327m_-6857870467513869461m_-5954838828273293440m_-40421295140908=
+17286gmail_msg m_2312446684852710134m_-4157252842664517068m_802287482529866=
+7029m_-225514156034228428m_612389745178932431m_1573234147381622053m_-829526=
+8808088332164m_6478836095512514865m_6829882866820053238gmail_msg m_23124466=
+84852710134m_-4157252842664517068m_8022874825298667029m_-225514156034228428=
+m_612389745178932431m_1573234147381622053gmail_msg m_2312446684852710134gma=
+il_msg"></div></div></font></span></blockquote></div></div></div></div></bl=
+ockquote></div></div></blockquote></div></div></div></blockquote></div></di=
+v></blockquote></div></div></div></blockquote></div></div></blockquote></di=
+v></div></div></div></div></blockquote></div></div></div></div></blockquote=
+></div></div></div></div></blockquote></div></div></blockquote></div></div>=
+</div></blockquote></div></div></div></div></blockquote></div></div></block=
+quote></div></blockquote></div></div></blockquote></div></div></blockquote>=
+</div></div></blockquote></div></div></blockquote></div><span class=3D"HOEn=
+Zb"><font color=3D"#888888"><div dir=3D"ltr">-- <br></div><div data-smartma=
+il=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div=
+>Software Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div=
+>
+</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
+r><div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div di=
+r=3D"ltr">Kapil Makhija<div>Director, Strategy - Unicommerce</div><div>M: +=
+91-9718470888</div></div></div>
+</div>
+
+--001a1146ac782aea7905474f57ca--

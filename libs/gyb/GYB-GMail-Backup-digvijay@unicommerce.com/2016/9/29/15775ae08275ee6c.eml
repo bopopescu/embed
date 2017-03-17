@@ -1,0 +1,129 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp272739itg;
+        Thu, 29 Sep 2016 04:22:02 -0700 (PDT)
+X-Received: by 10.176.1.140 with SMTP id 12mr503789ual.1.1475148122375;
+        Thu, 29 Sep 2016 04:22:02 -0700 (PDT)
+Return-Path: <samdeesh@unicommerce.com>
+Received: from mail-vk0-x22b.google.com (mail-vk0-x22b.google.com. [2607:f8b0:400c:c05::22b])
+        by mx.google.com with ESMTPS id q62si4055491uaq.138.2016.09.29.04.22.02
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 04:22:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::22b is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) client-ip=2607:f8b0:400c:c05::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::22b is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) smtp.mailfrom=samdeesh@unicommerce.com
+Received: by mail-vk0-x22b.google.com with SMTP id 192so71336543vkl.2
+        for <digvijay@unicommerce.com>; Thu, 29 Sep 2016 04:22:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=q3niiKssHZlr41acoYjjhI2stZXjVsAP59T2KpzIPfM=;
+        b=p7JbfIcaj9UDza9SPPFNcbyHXKtM/Fv+s8E/V+bT/ZMpxj+Uj2gKldMLoullj9es1V
+         Q/wpVWh9D1XtaFijctNgXdWRGObiDuuW9DlmllfL0KYsXYhNwioZFsvRmFRYJKzLApcj
+         2H6N8/AYsgSDorgLHPOJMU53t6cZt0U7CyknfrVSwi0dE/jizFQ/NN+ft3h0XCXOCL+q
+         fzDVti5nsy3LSKmFWIt7cWQ9dPzT1cz+/6C5/9P6VAXBD9wqSKpTsRhnayFQEZ/xZQqR
+         22MboDi0cP6jZEmeL/zecpVCJkKoKyyS7T63jn9IVYdcdgQAdhe8XlsekgN1ot8tE7w5
+         lmRQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=q3niiKssHZlr41acoYjjhI2stZXjVsAP59T2KpzIPfM=;
+        b=Tla7GKtmFVYWtD6NqEDn8t8hrpdx5zNxsmtLg8Q1/kJ42k8ZV+8DoWs0ttb4eWQlJ5
+         FAo/ElhQDiWxvqa/bibaX3QzuFVH+zEwdmGuARwtTHA3jKVELUl7qtV9CHDTHzaTe7Lc
+         CNxobgqtHOrlx1nuZOl+2y8jcZkMbMvUDmeHzhkkwG6qwRfm1kKMse5ifvWkEhfrHiM5
+         y/ykSdynG6QyIrPvXS9o+bHpdIuEec1m+l2ltqEkzC+JACNe3q8cMewSXueRfI2XRtUX
+         1eRaxA+Jp7XI3qg6Cs17dWohfvhZ2OoXkKTnkONt/Ir57YG7/UqlaHQC0JGW8trSHln0
+         zfaA==
+X-Gm-Message-State: AA6/9RmgtUpDjFbw1zPfRGjRM8hMhgb1QjSCAz7lx2AsjSsH8OTq3u4nICNzQQVbg0DrFojZz3lrNSuO7OXHrg==
+X-Received: by 10.31.58.19 with SMTP id h19mr419959vka.30.1475148121890; Thu,
+ 29 Sep 2016 04:22:01 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAGjOsgSBA0ni4-cAHPM7NM_4VyPjRCgtaC-Zyd-oM8PVdxWvHw@mail.gmail.com>
+In-Reply-To: <CAGjOsgSBA0ni4-cAHPM7NM_4VyPjRCgtaC-Zyd-oM8PVdxWvHw@mail.gmail.com>
+From: Samdeesh Singh <samdeesh@unicommerce.com>
+Date: Thu, 29 Sep 2016 11:21:51 +0000
+Message-ID: <CAOrbZ4bLrFYErCMFBSoP52W23CQA5F=8k8GEyz7zNa6GUv3LRA@mail.gmail.com>
+Subject: Re: Lunch Contri
+To: Guhapriya Velu <guhapriya@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Harsh Pal <harsh@unicommerce.com>, Amit Dalal <amit.dalal@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, Sushant Majumdar <sushant@unicommerce.com>, 
+	Ankur Pratik <ankur.pratik@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Garima Arora <garima@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>, 
+	Akshay Kochhar <akshay@unicommerce.com>, Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Kunal Garg <kunal.garg@unicommerce.com>, Girish Tarwatkar <girish@unicommerce.com>, 
+	Promil Bhardwaj <promil@unicommerce.com>, Bhawna Dhawan <bhawna@unicommerce.com>, 
+	Lalit Tanwar <lalit.tanwar@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Puneet Sharma <puneet@unicommerce.com>, Vikas Goyal <vikas@unicommerce.com>, 
+	Ankit Bansal <ankit.bansal@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>, Piyush Arora <piyush@unicommerce.com>, 
+	karan Garg <karangarg@unicommerce.com>, Yamini Sukhija <yamini.sukhija@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114389c8cbf307053da3af0b
+
+--001a114389c8cbf307053da3af0b
+Content-Type: text/plain; charset=UTF-8
+
+Done.
+
+On Wed, Sep 28, 2016 at 11:16 PM Guhapriya Velu <guhapriya@unicommerce.com>
+wrote:
+
+> Hi Guys
+>
+>
+> For lunch last friday the total bill was 24,109 Rs. I'm contributing 8k to
+> the lunch out. The rest is split amongst the 30 of us who were on lunch
+> which comes to 537 Rs per person. Find below my account details for the
+> transfer. Thanks in advance.
+>
+> *Account No:* 30031385491
+> *IFSC Code:* SBIN0000965
+> *MICR Code:* 600002031
+> *Branch*: SBI MYLAPORE
+>
+> Regards
+> Guha
+>
+> PS: Don't remember the ppl exactly hence mighth ave marked additional
+> people
+>
+-- 
+Regards,
+Samdeesh Singh
+Unicommerce eSolutions Pvt Ltd
+M: 7838037738
+
+--001a114389c8cbf307053da3af0b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done.=C2=A0</div><br><div class=3D"gmail_quote"><div dir=
+=3D"ltr">On Wed, Sep 28, 2016 at 11:16 PM Guhapriya Velu &lt;<a href=3D"mai=
+lto:guhapriya@unicommerce.com">guhapriya@unicommerce.com</a>&gt; wrote:<br>=
+</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Guys
+<div><br></div><div><br></div><div>For lunch last friday the total bill was=
+ 24,109 Rs. I&#39;m contributing 8k to the lunch out. The rest is split amo=
+ngst the 30 of us who were on lunch which comes to 537 Rs per person. Find =
+below my account details for the transfer. Thanks in advance.</div><div><br=
+></div><div><font face=3D"arial, helvetica, sans-serif" color=3D"#000000"><=
+b><u>Account No:</u></b>=C2=A030031385491</font></div><div><font face=3D"ar=
+ial, helvetica, sans-serif" color=3D"#000000"><b><u>IFSC Code:</u></b> SBIN=
+0000965</font></div><div><font face=3D"arial, helvetica, sans-serif" color=
+=3D"#000000"><font style=3D"background-color:rgb(255,255,255)"><b><u>MICR C=
+ode:</u></b>=C2=A0600002031</font><br></font></div><div><font face=3D"arial=
+, helvetica, sans-serif" color=3D"#000000"><b><u>Branch</u></b>:=C2=A0SBI=
+=C2=A0MYLAPORE</font><font face=3D"arial, helvetica, sans-serif" color=3D"#=
+000000" style=3D"background-color:rgb(255,255,255)"><br></font></div><div><=
+br></div><div>Regards</div><div>Guha</div><div><br></div><div>PS: Don&#39;t=
+ remember the ppl exactly hence mighth ave marked additional people</div></=
+div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Regards,<div>Samdeesh Singh</div><div>Unicom=
+merce eSolutions Pvt Ltd</div><div>M: 7838037738</div></div></div>
+
+--001a114389c8cbf307053da3af0b--

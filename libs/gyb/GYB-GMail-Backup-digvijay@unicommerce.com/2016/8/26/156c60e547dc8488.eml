@@ -1,0 +1,180 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.242.3 with SMTP id j3csp75067ith;
+        Fri, 26 Aug 2016 01:54:03 -0700 (PDT)
+X-Received: by 10.237.41.2 with SMTP id s2mr1840189qtd.115.1472201643381;
+        Fri, 26 Aug 2016 01:54:03 -0700 (PDT)
+Return-Path: <20160826085402e778c6652904475cba4cc3a1f950p0na@bounces.amazon.com>
+Received: from a13-25.smtp-out.amazonses.com (a13-25.smtp-out.amazonses.com. [54.240.13.25])
+        by mx.google.com with ESMTPS id 132si13486698qkg.261.2016.08.26.01.54.03
+        for <digvijay@unicommerce.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 26 Aug 2016 01:54:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 20160826085402e778c6652904475cba4cc3a1f950p0na@bounces.amazon.com designates 54.240.13.25 as permitted sender) client-ip=54.240.13.25;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazon.com;
+       dkim=pass header.i=@amazonses.com;
+       spf=pass (google.com: domain of 20160826085402e778c6652904475cba4cc3a1f950p0na@bounces.amazon.com designates 54.240.13.25 as permitted sender) smtp.mailfrom=20160826085402e778c6652904475cba4cc3a1f950p0na@bounces.amazon.com;
+       dmarc=pass (p=QUARANTINE dis=NONE) header.from=amazon.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=eaxkvsyelrnxjh4cicqyjjmtjpetuwjx; d=amazon.com; t=1472201642;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=UpJ+yv3gG/GC9I+V754Vc8FuaaBVvflqO7Z3DOHGgwo=;
+	b=PUhwjTAOhSN/Csr8AdRHK0MGw7h+7uAvGrzSdh34hzAa0mBcARTVdQgOkPIgLcBu
+	lJyYmdSDpmICoG2slCEsbAWCjzvGaLdjCOqsXcOUnQhk2Yz8vIY8Xqda+zTyNvNa7/j
+	le8p3Xq3/0zDgbvlswzRNHKO0yV2SCjmKJfAzjYI=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1472201642;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=UpJ+yv3gG/GC9I+V754Vc8FuaaBVvflqO7Z3DOHGgwo=;
+	b=F35F3XWuOX0gsUm8vG1C9E27+MIA0O+jLL2At+7f+XIz871O8KCfNYc0vY+jcbB9
+	2QdWebgjiL7GQoJ/TyJjJJ44DrYxvqaiBoILMfaIoFaN8zic6JhgsutrNtySAU9QxPL
+	oIeaTcPyNEEqCEGNf8R8rqd2Y27U8K7wIniZ0e9s=
+Date: Fri, 26 Aug 2016 08:54:02 +0000
+From: Amazon Web Services <no-reply-aws@amazon.com>
+To: "digvijay@unicommerce.com" <digvijay@unicommerce.com>
+Message-ID: <01000156c60e5089-29ee0b77-e080-426f-b3bb-124cf7c22fc7-000000@email.amazonses.com>
+Subject: Welcome to Amazon Web Services
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_840963_1258129794.1472201642085"
+X-AMAZON-RTE-VERSION: 2.0
+X-AMAZON-METADATA: RI=AC2PP3TCC8H7J
+Bounces-to: 20160826085402e778c6652904475cba4cc3a1f950p0na@bounces.amazon.com
+X-AMAZON-MAIL-RELAY-TYPE: notification
+X-Original-MessageID: <urn.correios.msg.20160826085402e778c6652904475cba4cc3a1f950p0na@1472201642086.rte-svc-1d-m3-e7ad73e5.us-east-1.amazon.com>
+X-SES-Outgoing: 2016.08.26-54.240.13.25
+Feedback-ID: 1.us-east-1.ZHcGJK6s+x+i9lRHKog4RW3tECwWIf1xzTYCZyUaiec=:AmazonSES
+
+------=_Part_840963_1258129794.1472201642085
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_840964_1964387669.1472201642085"
+
+------=_Part_840964_1964387669.1472201642085
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to Amazon Web Services,
+
+Thank you for creating an Amazon Web Services (AWS) account. For the next 12 months, you will have free access to compute, storage, database, and application services. Learn more by visiting our Free Tier page at http://aws.amazon.com/free/ . You can access your account at https://console.aws.amazon.com/billing/home. 
+  
+AWS Resources
+AWS Pricing: http://aws.amazon.com/pricing/
+AWS Support: https://aws.amazon.com/support
+AWS Premium Support: http://aws.amazon.com/premiumsupport/
+Step-by-Step Instructions on How to Deploy Your Application: http://aws.amazon.com/documentation/gettingstarted/
+Find Popular Software and Launch It with 1-Click via AWS Marketplace: https://aws.amazon.com/marketplace/help/200900000/ref=NewAWSCustomer
+
+Thank you for joining Amazon Web Services.
+
+Sincerely,
+
+Amazon Web Services
+
+
+Amazon Internet Services Private Ltd. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Internet Services Private Ltd., Ground Floor, Eros Corporate Towers, Nehru Place, New Delhi - 110 019, India
+------=_Part_840964_1964387669.1472201642085
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<table style="background-color: #f3f4f4;" cellspacing="0" cellpadding="0" width="100%"
+  align="center" bgcolor="#F3F4F4">
+  <tbody>
+    <tr>
+      <td><br />
+      <table style="background-color: #d9dadb;" cellspacing="0" cellpadding="1" align="center"
+        bgcolor="#D9DADB">
+        <tbody>
+          <tr>
+            <td>
+            <table
+              style="font-family: arial, helvetica, sans-serif; font-size: 14px; line-height: 20px; background-color: #ffffff; font-color: black;"
+              cellspacing="0" cellpadding="0" width="600" align="center" bgcolor="#ffffff">
+              <tbody>
+                <tr>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                  <td
+                    style="font-family: arial, helvetica, sans-serif; font-size: 14px; line-height: 20px;">
+                  <p><br />
+                  <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%3Fref_%3Dpe_1679150_132208640&A=KNB4RAJPEULKXUTQABEEORQLW5SA&H=LSMOZEVG6XPVBBRNHQF80JFBPOQA&ref_=pe_1679150_132208640"><img
+                    src="http://d36cz9buwru1tt.cloudfront.net/aws-email-logo.png"
+                    alt="Amazon Web Services" border="0" /></a> <br />
+                  <br />
+                  Welcome to Amazon Web Services, <br />
+                  <br />
+                  Thank you for creating an Amazon Web Services (AWS) account. For the next 12 months, you will have free access to compute, storage,
+                  database, and application services. Learn more by visiting our <a
+                    href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%2Ffree%2F%3Fsc_ichannel%3DEM%26sc_icampaign%3Dwelcome_email_1%26sc_icontent%3Dfree_tier_link%26sc_iplace%3Dwelcome_email_1%26sc_idetail%3Dintro_paragraph%26ref_%3Dpe_1679150_132208640&A=BSGCWWUX5WZKJPCXU5DR9NX9HOEA&H=UYZ1CALGRLLXPT3PW07HMKHJ2CKA&ref_=pe_1679150_132208640">Free
+                  Tier</a> page. To access your
+                  account, click <a
+                    href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=https%3A%2F%2Fconsole.aws.amazon.com%2Fbilling%2Fhome%3Fref_%3Dpe_1679150_132208640&A=J98EDAXMQFONENVUEIBI9QXPR7CA&H=DO0WD0BXA6AO5HJZAJE7CCKM7TSA&ref_=pe_1679150_132208640">Access
+                  Account</a>.<br />
+                  <br />
+                  <strong>AWS Resources</strong> <br />
+                  <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%2Fpricing%2F%3Fsc_ichannel%3DEM%26sc_icampaign%3Dwelcome_email_1%26sc_icontent%3Dpricing_link%26sc_iplace%3Dwelcome_email_1%26sc_idetail%3Daws_resources%26ref_%3Dpe_1679150_132208640&A=07X3NDVARPV4CF8EZE7HG2ZFC8OA&H=NQIUXGPBGSWVUIGEZ2VZ5XLL02EA&ref_=pe_1679150_132208640">AWS
+                  Pricing</a> <br />
+                  <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%2Fsupport%3Fref_%3Dpe_1679150_132208640&A=VCXR6VX3TSDU9A0XHSXHUIUOUC0A&H=ADLU9K998VWAJPOCARGVZEJUFZ8A&ref_=pe_1679150_132208640">AWS
+                  Support</a> or <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%2Fpremiumsupport%2F%3Fsc_ichannel%3DEM%26sc_icampaign%3Dwelcome_email_1%26sc_icontent%3Dpremium_support_link%26sc_iplace%3Dwelcome_email_1%26sc_idetail%3Daws_resources%26ref_%3Dpe_1679150_132208640&A=MOMDBSZOT805JVAOXBXKMDC6JLGA&H=MBVBZA6WFGCQLWAALF0RFAZJNCUA&ref_=pe_1679150_132208640">AWS
+                  Premium Support</a> <br />
+                  <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=http%3A%2F%2Faws.amazon.com%2Fdocumentation%2Fgettingstarted%2F%3Fsc_ichannel%3DEM%26sc_icampaign%3Dwelcome_email_1%26sc_icontent%3Dgetting_started_link%26sc_iplace%3Dwelcome_email_1%26sc_idetail%3Daws_resources%26ref_%3Dpe_1679150_132208640&A=PKGNRAYOA7PZU6SSUO2NEIHJ1MMA&H=L9QGADSFP0ODZ2YUBAVF3XDY594A&ref_=pe_1679150_132208640">Step-by-Step
+                  Instructions on How to Deploy Your Application</a> <br />
+                  <a href="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=C&U=https%3A%2F%2Faws.amazon.com%2Fmarketplace%2Fhelp%2F200900000%2Fref%3Dpe_1679150_132208640_pe_NewAWSCustomer%3Fsc_ichannel%3DEM%26sc_icampaign%3Dwelcome_email_1%26sc_icontent%3Dmarketplace_link%26sc_iplace%3Dwelcome_email_1%26sc_idetail%3Daws_resources&A=RLB1B6TLNK3P3C1QPWW9PXZDB5WA&H=PMPBF31K32Y7SIBY3LSB4A3TLAQA&ref_=pe_1679150_132208640_pe_NewAWSCustomer">Find
+                  Popular Software and Launch It with 1-Click via AWS Marketplace</a><br />
+                  <br />
+                  Thank you for joining Amazon Web Services. <br />
+                  <br />
+                  Sincerely,</p>
+                  <p>The Amazon Web Services Team<br />
+                  <br />
+                  </p>
+                  </td>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                </tr>
+                <tr>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                  <td align="right">
+                  <hr size="1px" />
+                  </td>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                </tr>
+                <tr>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                  <td align="left">
+                  <p style="font-size: 9px; color: #999; line-height: 12px; margin-top: 0px; text-align: center; font-family: Arial, Helvetica, sans-serif;"
+                    align="center"><br />Amazon Internet Services Private Ltd. is a subsidiary of Amazon.com, Inc. Amazon.com is a registered trademark of Amazon.com, Inc. This message was produced and distributed by Amazon Internet Services Private Ltd., Ground Floor, Eros Corporate Towers, Nehru Place, New Delhi - 110 019, India</p>
+                  <br />
+                  </td>
+                  <td width="30"><img style="display: block;"
+                    src="http://d36cz9buwru1tt.cloudfront.net/blank.gif" border="0" alt="" width="1"
+                    height="1" /></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<img src="https://www.amazon.com/gp/r.html?C=HDLLC0C5EJLY&R=1S13N8EXZR4MF&T=E&U=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&A=TGP9Y06FY4W3DZEIAHU5TRTST9KA&H=V1W9FZ4H2C2R6A7ZU6DABS14AZ4A" /></body>
+</html>
+------=_Part_840964_1964387669.1472201642085--
+
+------=_Part_840963_1258129794.1472201642085--

@@ -1,0 +1,113 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.189.10 with SMTP id x10csp684843ite;
+        Thu, 25 Aug 2016 00:29:01 -0700 (PDT)
+X-Received: by 10.200.44.213 with SMTP id 21mr8486545qtx.91.1472110141769;
+        Thu, 25 Aug 2016 00:29:01 -0700 (PDT)
+Return-Path: <accounts@unicommerce.com>
+Received: from mail-qk0-x234.google.com (mail-qk0-x234.google.com. [2607:f8b0:400d:c09::234])
+        by mx.google.com with ESMTPS id i10si9566341qta.6.2016.08.25.00.29.01
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Aug 2016 00:29:01 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::234 is neither permitted nor denied by best guess record for domain of accounts@unicommerce.com) client-ip=2607:f8b0:400d:c09::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::234 is neither permitted nor denied by best guess record for domain of accounts@unicommerce.com) smtp.mailfrom=accounts@unicommerce.com
+Received: by mail-qk0-x234.google.com with SMTP id v123so38114440qkh.2
+        for <digvijay@unicommerce.com>; Thu, 25 Aug 2016 00:29:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=IXkn2eJzCufyinbjiiQ8eP/waDwk6ft0LhmteNzSj5U=;
+        b=ZouztP7ksYsYwyExzqvSz3UEeG8/jwc2yM39UpZDGIq9WWzcqN0KYWo52Ks0YFqZ8g
+         ZWGNFyvlIT/ffJmx2jau+YOqFVz8iTVS19n8cVt422vD8WxlKcxgSCDKx78zjo3KZsDP
+         4mIVuX/LuMKarf/j235pHHdbPBjHGFagRwTh3oC2QjRKRiLS9jPjnf9wKIvFcMARO+gr
+         ILSFpMVRmhuJoYVkviV1Nyj5RW5myV3R9G+bO1AwzdWOUWajMxIlvj34NTIc00kXHlHK
+         pilcXx9s7LbTwAwUYGCDO0kPqBo3oyxKpnNjkqwKH8vxJ8TUfHLXJv6BmflL4JRX2KY0
+         rjig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=IXkn2eJzCufyinbjiiQ8eP/waDwk6ft0LhmteNzSj5U=;
+        b=TZUTlAAZ5auf+7JN3m7rs9Amm3qJjFRUWHhgUKEgmWHv1m6txhBSs+2xJWLNV20/Eo
+         eLyCk7WX2MjrcjrB1IuqqUeQFPen9vc3aNghtZsibzD4ubwMOSz0Dcu5jCDR8iETm/cB
+         z+uQf4gm1TIW/IhO9GFtHgf8VjzEgly/HnuHI51ibYcS/xGQDOrBFm9ZrUcwce4dBah7
+         qFKSTjb7G4J+dtL7FY4B8eekeT6kBmaev76cS+YC7F1YhvVyjEKEnr/4VGU3f6z2rr8/
+         N/T3ayP/sK368UXtlrode9KxT78dvm6evLcQfaMrbHwFky+diHcpmyP5pz0yQdb2Cz3a
+         Etuw==
+X-Gm-Message-State: AE9vXwMhX5egPe7Sw5Zz6SqqXv97tNVxqgv2j4da66joeMXWBLCty/9DQA032HG10HoxhB00EjdQOMOapSxMow==
+X-Received: by 10.55.50.13 with SMTP id y13mr8104997qky.233.1472110141386;
+ Thu, 25 Aug 2016 00:29:01 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.200.43.188 with HTTP; Thu, 25 Aug 2016 00:29:00 -0700 (PDT)
+In-Reply-To: <CAJF3sore6woCq3=gnEjhk-AgL=pvMeSoq5NW5tkm=2weYVwcHw@mail.gmail.com>
+References: <CADROa=ZrfSpCvZhAFPjaoVfwty3E53-ADVX7YAG98E+ZfZ8c8w@mail.gmail.com>
+ <CAJF3sore6woCq3=gnEjhk-AgL=pvMeSoq5NW5tkm=2weYVwcHw@mail.gmail.com>
+From: Accounts <accounts@unicommerce.com>
+Date: Thu, 25 Aug 2016 12:59:00 +0530
+Message-ID: <CADROa=b5Dif8sUdoJKHsGj8je8-x0egFtJiwKw5yJwgcji8i4g@mail.gmail.com>
+Subject: Re: Require Pan No.
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114715ec0c44a6053ae05a15
+
+--001a114715ec0c44a6053ae05a15
+Content-Type: text/plain; charset=UTF-8
+
+Hi digvijay,
+
+Can u plz call us on 9654116545.
+
+Regards
+
+Yogita
+
+On Thu, Aug 25, 2016 at 12:45 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> EWVTS4861N
+>
+> On Thu, Aug 25, 2016 at 12:25 PM, Accounts <accounts@unicommerce.com>
+> wrote:
+>
+>> Hi Digvijay,
+>>
+>> Request you to share your Pan No. as this require for our documentation
+>> purpose.
+>>
+>> Regards
+>>
+>> Yogita
+>>
+>
+>
+
+--001a114715ec0c44a6053ae05a15
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi digvijay,<div><br></div><div>Can u plz call us on 96541=
+16545.</div><div><br></div><div>Regards</div><div><br></div><div>Yogita</di=
+v></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, A=
+ug 25, 2016 at 12:45 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"m=
+ailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com<=
+/a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><d=
+iv style=3D"vertical-align:top;padding:7px 0px 1px;border-radius:5px 0px 5p=
+x 5px;color:rgb(38,38,38);font-size:13px"><div style=3D"color:rgb(38,50,56)=
+"><div style=3D"line-height:16px;margin-bottom:6px;margin-left:9px;margin-r=
+ight:9px;word-wrap:break-word"><span dir=3D"ltr">EWVTS4861N</span></div></d=
+iv></div><div style=3D"width:7px;min-height:8px;color:rgb(38,38,38);font-si=
+ze:13px;text-align:start;background:none"></div></div><div class=3D"HOEnZb"=
+><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote=
+">On Thu, Aug 25, 2016 at 12:25 PM, Accounts <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:accounts@unicommerce.com" target=3D"_blank">accounts@unicommerce=
+.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r">Hi Digvijay,<div><br></div><div>Request you to share your Pan No. as thi=
+s require for our documentation purpose.</div><div><br></div><div>Regards</=
+div><div><br></div><div>Yogita</div></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a114715ec0c44a6053ae05a15--

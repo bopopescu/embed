@@ -1,0 +1,110 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp5736894qgd;
+        Thu, 29 Dec 2016 03:55:51 -0800 (PST)
+X-Received: by 10.176.4.130 with SMTP id 2mr32443661uaw.30.1483012551097;
+        Thu, 29 Dec 2016 03:55:51 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x22d.google.com (mail-ua0-x22d.google.com. [2607:f8b0:400c:c08::22d])
+        by mx.google.com with ESMTPS id b65si7207042vkg.124.2016.12.29.03.55.51
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Dec 2016 03:55:51 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22d is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::22d;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22d is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x22d.google.com with SMTP id 88so223550143uaq.3
+        for <digvijay@unicommerce.com>; Thu, 29 Dec 2016 03:55:51 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=g15OFa3KIRAi2zrlS00AY5L2lcoXNL4tTTkDH8dH65w=;
+        b=qFhyYSwWJfeBuf6hghu+We+bY9JbWayWYl1pu6HrAbN76MCbqsFSXoC9jW8moOUv8j
+         mWHYYVVO+m5TUiJyhUWJrKC2K29vxiy8mUNoPBKKLZXU7jM1dp87/VWtzT8XiTnO2G+I
+         76IAT0lQG2IgQHWaNco5TBH/R6Pmpw0wFg64kbJrPScOj2TSAM8zFrKamtZM9dBkprrl
+         JJPdNnIkGB9JvpJtFhJQstX8h7MOrhVxH9dhG/h10RackXJvXYRwO9r3o8t0mYda1yP7
+         7E1Gimosp4ZQwwsNG5BJnf63IuYKgjvJMthBgdgpc42Tx5tf9y99sAC+twiJqeZeWKci
+         3ZlQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=g15OFa3KIRAi2zrlS00AY5L2lcoXNL4tTTkDH8dH65w=;
+        b=f3uhLUonkxBQxCgv6bbP4GULc22blWSO+ptQZx4foX+2z972hv7ignkCABJ8PR3B/e
+         hv3EjmyDC32ujnF1lkv9AXXrasLhLpPxr1o1XUPyr5sy/rMejRP8aiDBOlVxtMMLgx3Q
+         8YKrGbshJmjbVAXv9E32nd/hvIZgNXQbNzthDW9ioXh4pHem7MeQ0P0VhSecpp09IURr
+         nFe+vOJ8dmodK2HJ6HSo0BlC03AbyQgCdNjcsh8PQ4J/S4z3CC55DBfbDDlsxhKfr0pi
+         mz32kal2vULaSmlAvJkW6QVycDExpZKfmUvKL9L4uKbyIoTNRRR1Y+ugJXB8WbKgdx84
+         y1cA==
+X-Gm-Message-State: AIkVDXL45EmSqVArxaTU2BiKei6IXaPgEKFsjkemCG4AjJRW+oUJjFKM54Lr4xE9RG+ZijjfrDvIv/8RfYk2iA==
+X-Received: by 10.176.74.221 with SMTP id t29mr28697469uae.119.1483012550792;
+ Thu, 29 Dec 2016 03:55:50 -0800 (PST)
+MIME-Version: 1.0
+References: <CAJF3soreHb6rZyRQkUAL4wK4=TtKEK5BfK6C8=hk0640K48r0w@mail.gmail.com>
+ <CAPe2SZShM6XYKvr1ms1yQdDc_v=Z6W_HDaS4fnEMQJVnjV=fhw@mail.gmail.com>
+In-Reply-To: <CAPe2SZShM6XYKvr1ms1yQdDc_v=Z6W_HDaS4fnEMQJVnjV=fhw@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 29 Dec 2016 11:55:40 +0000
+Message-ID: <CAPe2SZTrsQTvXKj8F5j9cWytpBpyP9Hfp9k0hZm89bVWfpfGaw@mail.gmail.com>
+Subject: Re: Queries for TrendyBharat for production
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045f8afe49b2380544cac4a8
+
+--f403045f8afe49b2380544cac4a8
+Content-Type: text/plain; charset=UTF-8
+
+Yes mysql2All karna hoga
+
+On Thu, Dec 29, 2016 at 5:25 PM Akshay Agarwal <
+akshay.agarwal@unicommerce.com> wrote:
+
+> Made few changes/fixes.
+>
+>
+> On Thu, Dec 29, 2016 at 5:12 PM Digvijay Sharma <digvijay@unicommerce.com>
+> wrote:
+>
+> Ek bari check krlo queries. Main phir puneet sir ko forward krunga yeh.
+> Aur isme sql wali query mysql2all krni h kya??
+>
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--f403045f8afe49b2380544cac4a8
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Yes mysql2All karna hoga</div><br><div class=3D"gmail_quot=
+e"><div dir=3D"ltr">On Thu, Dec 29, 2016 at 5:25 PM Akshay Agarwal &lt;<a h=
+ref=3D"mailto:akshay.agarwal@unicommerce.com">akshay.agarwal@unicommerce.co=
+m</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin=
+:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" c=
+lass=3D"gmail_msg">Made few changes/fixes.=C2=A0</div><div dir=3D"ltr" clas=
+s=3D"gmail_msg"><br class=3D"gmail_msg"><br class=3D"gmail_msg"><div class=
+=3D"gmail_quote gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">On Thu, Dec=
+ 29, 2016 at 5:12 PM Digvijay Sharma &lt;<a href=3D"mailto:digvijay@unicomm=
+erce.com" class=3D"gmail_msg" target=3D"_blank">digvijay@unicommerce.com</a=
+>&gt; wrote:<br class=3D"gmail_msg"></div><blockquote class=3D"gmail_quote =
+gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div dir=3D"ltr" class=3D"gmail_msg">Ek bari check krlo queries. Ma=
+in phir puneet sir ko forward krunga yeh. Aur isme sql wali query mysql2all=
+ krni h kya??</div>
+</blockquote></div></div><div dir=3D"ltr" class=3D"gmail_msg">-- <br class=
+=3D"gmail_msg"></div><div data-smartmail=3D"gmail_signature" class=3D"gmail=
+_msg"><div dir=3D"ltr" class=3D"gmail_msg">Thanks<div class=3D"gmail_msg">A=
+kshay Agarwal</div><div class=3D"gmail_msg">Software Engineer, Unicommerce<=
+/div><div class=3D"gmail_msg">+91 9999-872-129</div></div></div></blockquot=
+e></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signatur=
+e"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, =
+Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--f403045f8afe49b2380544cac4a8--

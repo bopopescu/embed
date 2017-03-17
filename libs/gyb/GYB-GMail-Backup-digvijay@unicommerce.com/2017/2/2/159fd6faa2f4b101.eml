@@ -1,0 +1,150 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2675708qgu;
+        Wed, 1 Feb 2017 22:07:51 -0800 (PST)
+X-Received: by 10.223.146.228 with SMTP id 91mr5712138wrn.203.1486015671148;
+        Wed, 01 Feb 2017 22:07:51 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x22b.google.com (mail-wm0-x22b.google.com. [2a00:1450:400c:c09::22b])
+        by mx.google.com with ESMTPS id g130si872091wma.147.2017.02.01.22.07.50
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Feb 2017 22:07:51 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::22b is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::22b is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x22b.google.com with SMTP id v77so71713286wmv.0
+        for <digvijay@unicommerce.com>; Wed, 01 Feb 2017 22:07:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=idLlcS4kP7E6l5WWYaA8IrCzxV+pWjj/gS7GnfkTc5I=;
+        b=wy/atysI0DVMqsU9nj1NRtCqhDjK6BKYpd4+nufjSq/wXSWRvQXOKJxWA4MgAnKVu0
+         qUzWY9IseuYzUdHR3tUWHmFiG+3pcImyAH9oN/HzoV1ZxffgQgW2iApVwKvIvf21nC1+
+         9Cn7Z51G0CYVW1K2JlJQNki+wDAVXOYaKKPnHsiVllVPXR7uc8+Q6HKTpFX3pQsaY1rI
+         qk+02R6R3Q9FXmdzz3RvyvGXGka8IA3mahriiTVufgsG1OX8z3AogZxIZxgXd/i84LLN
+         kMJWdXRfGiFmNI1JbiENn2nf8ta1f4MQe/NwfNuxdlEk4PhNdBJJrxN0xw3c/vw+9S/U
+         Gpjw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=idLlcS4kP7E6l5WWYaA8IrCzxV+pWjj/gS7GnfkTc5I=;
+        b=fTa9Olj7M3iYaOIj1YMwj63wqH7C7Ko3lri+qirU1f/ahcNVoaErMJFXqegLEmrI2C
+         N5BZO6/RzqNXrH8W8L3vb+5fRZIGZTLsCVw/L6Rpcel6yi5RTyJA4VKtjaNY9GoaNeqD
+         soNX18exG0OqLu/5gWV6Yi0D/Mx5pmOz+B0VWa+5INGNqAJXOrGeZXPTlzgVqvmRZf6n
+         s+2wplRkJjfahwpAX+8WB3r4qvVQjSYCUNOQAq2SsFiB0pP0+Epb0H5lZ/MmE/X1Wi3J
+         1q5bTvGa+KNe9Dpska9yc4bU3F+XHX/Ids2o3zg2Gr/lhNxhtLVUdVNW5jXF32Yv/gk2
+         Xz5w==
+X-Gm-Message-State: AIkVDXIRe2rhd57rw086FWOlm9vOz0HhRiMmzM/UtTVKyFug6vihMkqz+qTNe2vp0RujAFeucN/jb8htXk/CYQ==
+X-Received: by 10.28.129.5 with SMTP id c5mr5615015wmd.23.1486015670642; Wed,
+ 01 Feb 2017 22:07:50 -0800 (PST)
+MIME-Version: 1.0
+References: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+ <CAOzor=6WtKeY6S7cAt02zrbyy2hR1SKBWx-gFhDYpCPjOnyMWg@mail.gmail.com>
+In-Reply-To: <CAOzor=6WtKeY6S7cAt02zrbyy2hR1SKBWx-gFhDYpCPjOnyMWg@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 02 Feb 2017 06:07:39 +0000
+Message-ID: <CAPe2SZSU1PJe3q7OvwCaO1A5gCVbKdiEkCYJuO=VxWvH1Zyk-A@mail.gmail.com>
+Subject: Re: Reconciliation Update
+To: Kapil Makhija <kapil@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114241522dff4e054785fcfa
+
+--001a114241522dff4e054785fcfa
+Content-Type: text/plain; charset=UTF-8
+
+Yeah, was waiting for your confirmation on column name.
+Updated on all clients, please check now!
+
+
+On Thu, Feb 2, 2017 at 11:02 AM Kapil Makhija <kapil@unicommerce.com> wrote:
+
+> Sure..that should be fine. Although I did not see any changes for the same
+> on sbhomefashion.unicommerce.com
+>
+> On Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+> Hi Sir,
+> We have updated the last column of the settlement invoices page from
+> "status on channel" to "other info".
+> Earlier it used to represent the payment reason for which the transaction
+> is made (Like Refund, Return, MarketPlaceFee). But since Flipkart doesn't
+> give any such reason in its sheet (we mapped it with order status as of
+> now, which resulted in duplicate invoices), we have to put in invoice code
+> in that field to maintain uniqueness of invoices. Hence renamed the column
+> to "other info".
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129 <+91%2099998%2072129>
+>
+>
+>
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888 <+91%2097184%2070888>
+>
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a114241522dff4e054785fcfa
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Yeah, was waiting for your confirmation on column nam=
+e.<br></div>Updated on all clients, please check now!<div><br></div></div><=
+br><div class=3D"gmail_quote"><div dir=3D"ltr">On Thu, Feb 2, 2017 at 11:02=
+ AM Kapil Makhija &lt;<a href=3D"mailto:kapil@unicommerce.com">kapil@unicom=
+merce.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr" class=3D"gmail_msg">Sure..that should be fine. Although I did not =
+see any changes for the same on <a href=3D"http://sbhomefashion.unicommerce=
+.com" class=3D"gmail_msg" target=3D"_blank">sbhomefashion.unicommerce.com</=
+a></div><div class=3D"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div c=
+lass=3D"gmail_quote gmail_msg"></div></div><div class=3D"gmail_extra gmail_=
+msg"><div class=3D"gmail_quote gmail_msg">On Thu, Feb 2, 2017 at 10:42 AM, =
+Akshay Agarwal <span dir=3D"ltr" class=3D"gmail_msg">&lt;<a href=3D"mailto:=
+akshay.agarwal@unicommerce.com" class=3D"gmail_msg" target=3D"_blank">aksha=
+y.agarwal@unicommerce.com</a>&gt;</span> wrote:<br class=3D"gmail_msg"></di=
+v></div><div class=3D"gmail_extra gmail_msg"><div class=3D"gmail_quote gmai=
+l_msg"><blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"g=
+mail_msg">Hi Sir,<div class=3D"gmail_msg">We have updated the last column o=
+f the settlement invoices page from &quot;status on channel&quot; to &quot;=
+other info&quot;.</div><div class=3D"gmail_msg">Earlier it used to represen=
+t the payment reason for which the transaction is made (Like Refund, Return=
+, MarketPlaceFee). But since Flipkart doesn&#39;t give any such reason in i=
+ts sheet (we mapped it with order status as of now, which resulted in dupli=
+cate invoices), we have to put in invoice code in that field to maintain un=
+iqueness of invoices. Hence renamed the column to &quot;other info&quot;.</=
+div></div><span class=3D"m_6584795136512795450HOEnZb gmail_msg"><font color=
+=3D"#888888" class=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">-- <b=
+r class=3D"gmail_msg"></div><div data-smartmail=3D"gmail_signature" class=
+=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">Thanks<div class=3D"gma=
+il_msg">Akshay Agarwal</div><div class=3D"gmail_msg">Software Engineer, Uni=
+commerce</div><div class=3D"gmail_msg"><a href=3D"tel:+91%2099998%2072129" =
+value=3D"+919999872129" class=3D"gmail_msg" target=3D"_blank">+91 9999-872-=
+129</a></div></div></div>
+</font></span></blockquote></div></div><div class=3D"gmail_extra gmail_msg"=
+><br class=3D"gmail_msg"><br clear=3D"all" class=3D"gmail_msg"><div class=
+=3D"gmail_msg"><br class=3D"gmail_msg"></div>-- <br class=3D"gmail_msg"><di=
+v class=3D"m_6584795136512795450gmail_signature gmail_msg" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr" class=3D"gmail_msg">Kapil Makhija<div=
+ class=3D"gmail_msg">Director, Strategy - Unicommerce</div><div class=3D"gm=
+ail_msg">M: <a href=3D"tel:+91%2097184%2070888" value=3D"+919718470888" cla=
+ss=3D"gmail_msg" target=3D"_blank">+91-9718470888</a></div></div></div>
+</div></blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>S=
+oftware Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a114241522dff4e054785fcfa--

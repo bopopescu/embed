@@ -1,0 +1,115 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Sun, 29 Jan 2017 23:35:16 -0800 (PST)
+Date: Mon, 30 Jan 2017 13:05:16 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorXeH0dJX1-Cf7V4O4HH5b-FUBn8ObPGBqgjM9P7O0qOA@mail.gmail.com>
+Subject: Query to add recon to FLIPKART
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c1254a56762705474adb50
+
+--001a11c1254a56762705474adb50
+Content-Type: text/plain; charset=UTF-8
+
+db.source.update({"code":"FLIPKART_FA"},{$addToSet:{"sourceProperties" :{
+$each:[
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "reconciliation.invoice.list.script.name",
+"value" : "flipkartReconciliationInvoiceListScript"
+},
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "reconciliation.invoice.detail.script.name",
+"value" : "flipkartReconciliationInvoiceDetailScript"
+},
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "unreconcilied.order.item.script.name",
+"value" : "flipkartUnreconciliedOrdersScript"
+},
+
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "order.reconciliation.enabled",
+"value" : "true"
+},
+
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "payment.reconciliation.enabled",
+"value" : "false"
+},
+{
+"sourceCode" : "FLIPKART_FA",
+"name" : "order.item.pre.reconciliation.script.name",
+"value" : "flipkartOrderPreReconciliationScript"
+}
+]
+}
+}})
+
+--001a11c1254a56762705474adb50
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>db.source.update({&quot;code&quot;:&quot;FLIPKART_FA&=
+quot;},{$addToSet:{&quot;sourceProperties&quot; :{ $each:[</div><div><span =
+class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>{<span c=
+lass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span></div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&q=
+uot;sourceCode&quot; : &quot;FLIPKART_FA&quot;,</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&quot; : =
+&quot;<a href=3D"http://reconciliation.invoice.list.script.name">reconcilia=
+tion.invoice.list.script.name</a>&quot;,</div><div><span class=3D"gmail-App=
+le-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; : &quot;=
+flipkartReconciliationInvoiceListScript&quot;</div><div><span class=3D"gmai=
+l-Apple-tab-span" style=3D"white-space:pre">			</span>},</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>{</div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>=
+&quot;sourceCode&quot; : &quot;FLIPKART_FA&quot;,</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&quot; =
+: &quot;<a href=3D"http://reconciliation.invoice.detail.script.name">reconc=
+iliation.invoice.detail.script.name</a>&quot;,</div><div><span class=3D"gma=
+il-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; : =
+&quot;flipkartReconciliationInvoiceDetailScript&quot;</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>},</div><div><=
+span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>{</d=
+iv><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			<=
+/span>&quot;sourceCode&quot; : &quot;FLIPKART_FA&quot;,</div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&=
+quot; : &quot;<a href=3D"http://unreconcilied.order.item.script.name">unrec=
+oncilied.order.item.script.name</a>&quot;,</div><div><span class=3D"gmail-A=
+pple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; : &quo=
+t;flipkartUnreconciliedOrdersScript&quot;</div><div><span class=3D"gmail-Ap=
+ple-tab-span" style=3D"white-space:pre">		</span>},</div><div><br></div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>{=
+</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	=
+		</span>&quot;sourceCode&quot; : &quot;FLIPKART_FA&quot;,</div><div><span =
+class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;na=
+me&quot; : &quot;order.reconciliation.enabled&quot;,</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;value&q=
+uot; : &quot;true&quot;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">		</span>},</div><div><br></div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">		</span>{</div><div><span c=
+lass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;sou=
+rceCode&quot; : &quot;FLIPKART_FA&quot;,</div><div><span class=3D"gmail-App=
+le-tab-span" style=3D"white-space:pre">			</span>&quot;name&quot; : &quot;p=
+ayment.reconciliation.enabled&quot;,</div><div><span class=3D"gmail-Apple-t=
+ab-span" style=3D"white-space:pre">			</span>&quot;value&quot; : &quot;fals=
+e&quot;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space=
+:pre">		</span>},</div><div><span class=3D"gmail-Apple-tab-span" style=3D"w=
+hite-space:pre">		</span>{</div><div><span class=3D"gmail-Apple-tab-span" s=
+tyle=3D"white-space:pre">			</span>&quot;sourceCode&quot; : &quot;FLIPKART_=
+FA&quot;,</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">			</span>&quot;name&quot; : &quot;<a href=3D"http://order.item.pre=
+.reconciliation.script.name">order.item.pre.reconciliation.script.name</a>&=
+quot;,</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:=
+pre">			</span>&quot;value&quot; : &quot;flipkartOrderPreReconciliationScri=
+pt&quot;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spac=
+e:pre">		</span>}</div><div><span class=3D"gmail-Apple-tab-span" style=3D"w=
+hite-space:pre">		</span>]</div><div><span class=3D"gmail-Apple-tab-span" s=
+tyle=3D"white-space:pre">		</span>}</div><div><span class=3D"gmail-Apple-ta=
+b-span" style=3D"white-space:pre">		</span>}})</div></div>
+
+--001a11c1254a56762705474adb50--

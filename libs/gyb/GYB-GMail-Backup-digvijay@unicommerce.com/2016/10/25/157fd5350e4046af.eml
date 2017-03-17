@@ -1,0 +1,58 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp70008qgj;
+        Tue, 25 Oct 2016 12:31:18 -0700 (PDT)
+X-Received: by 10.98.18.23 with SMTP id a23mr41864651pfj.151.1477423878345;
+        Tue, 25 Oct 2016 12:31:18 -0700 (PDT)
+Return-Path: <scriptcron@gmail.com>
+Received: from mail-pf0-x22f.google.com (mail-pf0-x22f.google.com. [2607:f8b0:400e:c00::22f])
+        by mx.google.com with ESMTPS id r1si22225436pgd.242.2016.10.25.12.31.18
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Oct 2016 12:31:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c00::22f as permitted sender) client-ip=2607:f8b0:400e:c00::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c00::22f as permitted sender) smtp.mailfrom=scriptcron@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: by mail-pf0-x22f.google.com with SMTP id e6so124201180pfk.3
+        for <digvijay@unicommerce.com>; Tue, 25 Oct 2016 12:31:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=ZFyuSSnn+naW6uIsGYXY8n2745aB8650zfHrq2IngxUgEZr4YUf2eM2ibovoDHdKSl
+         A0qTt4odVWB8+eiRkxcrlc8sR/nU2hjkCqlLybv6cpRsb1ojVtQ/L+zkEazGnGDj6iV1
+         elPikCebmw9z/rlqXpsx01qOsuLxJW1hamP28WVGUsIiTfb/UtuSbicoAJjt3/en+peu
+         svrT0rmQnQMdNTMpAZJR2PA+CXA3BV378jgV9MPiNJc4PMtbDrGOMSD5u1iyf8StpEu5
+         6wyYOFycESM81dwT+kQcOcLJq/NfaJXjCFxmGsg8fDoUjL2GTvMOzqu7jBom7MRPgfhX
+         ATbQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=GOITISjVxYsCzrbYT/htrBnp3klCmQdgBuV9JTcIrMqq0VWtmQr5fj50haC7p3V34i
+         Rcs4MgV0Zy/SHaiiz2/dAULxQy5Gg85oZjmZ254X7pS91b7EoQMvKaeBjBGQSkop94o1
+         CVl/7bk9PVQgfHmYZD8OnlivZdwvgU3i+SkOkxVCxxyCZuz+2wPrx8IqyqdSON3HD3zT
+         u8+cSosenWYGK6QMmC5MfP74eueLh3ynZNqn7PsmmYOgVsLT6ZMZAM5IMmGDx1hvwEkD
+         1kmowwupIl5u3XFLA8oukn+l4F4t3zxW2npw3f4rS3JaGmIO3MOXiRdLV4BvP9Xqqq7/
+         PN6w==
+X-Gm-Message-State: ABUngvfbcVjUF+fOQQC01FkvaqNaAIpm2dzRwTpyv91nCNiNF/an6MhKiTWqzpTW2ljXFw==
+X-Received: by 10.99.128.198 with SMTP id j189mr20841292pgd.151.1477423877136;
+        Tue, 25 Oct 2016 12:31:17 -0700 (PDT)
+Return-Path: <scriptcron@gmail.com>
+Received: from unicoms-air-3 ([122.180.206.89])
+        by smtp.gmail.com with ESMTPSA id m129sm7308757pfm.13.2016.10.25.12.31.15
+        for <digvijay@unicommerce.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 25 Oct 2016 12:31:16 -0700 (PDT)
+Date: Tue, 25 Oct 2016 12:31:16 -0700 (PDT)
+From: scriptcron@gmail.com
+To: digvijay@unicommerce.com
+Message-ID: <269248778.1.1477423872714.JavaMail.root@unicoms-Air-3>
+Subject: Script Versions Created Today
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+

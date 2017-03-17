@@ -1,0 +1,119 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.189.10 with SMTP id x10csp1667487ite;
+        Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+X-Received: by 10.107.139.194 with SMTP id n185mr49488358iod.159.1471413563549;
+        Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+Return-Path: <noreply-5afe9171@plus.google.com>
+Received: from mail-io0-x247.google.com (mail-io0-x247.google.com. [2607:f8b0:4001:c06::247])
+        by mx.google.com with ESMTPS id d14si25502703itb.33.2016.08.16.22.59.23
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply-5afe9171@plus.google.com designates 2607:f8b0:4001:c06::247 as permitted sender) client-ip=2607:f8b0:4001:c06::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@plus.google.com;
+       spf=pass (google.com: domain of noreply-5afe9171@plus.google.com designates 2607:f8b0:4001:c06::247 as permitted sender) smtp.mailfrom=noreply-5afe9171@plus.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=plus.google.com
+Received: by mail-io0-x247.google.com with SMTP id m130so273479799ioa.1
+        for <digvijay@unicommerce.com>; Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=plus.google.com; s=20160623;
+        h=mime-version:date:reply-to:list-unsubscribe:precedence:message-id
+         :subject:from:to;
+        bh=gOHedYSJVHQOXWyr6zExAqTCH3WZQDc0FmZYOxtqwuM=;
+        b=EJ67UNlfEq/cC3duwUzJBOKfbLIITEl7Q2DeqYjfJ7s4uI+LFDmS9sv7tMv3IQw3ha
+         9by7dSKiI94E5Xqu3xlo9g6tHyoz0TauQMSQ/BsucjUhI/K3N/1R4ZW/bPNfFAy6H9jP
+         o/xagtOnkJ0YRqa8KQ+hrvEI3gUnuICDUvzK6CCpLsFroAwtt+l1DS5k2p9EKCrBSnkC
+         pV74HUpizOUzkNS6lTFtNRJpQnW15zUv50ZqGQqeCjtWyR/0lqK1/JXm70P+mDbskCza
+         Uf3O5DoZ4EFiyfH/51/THzTBSvQLcrIpeNQ/GsEUI3pQ2nOz5x+ZBL4hqsEamnaE3ZCk
+         T+8Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:reply-to:list-unsubscribe
+         :precedence:message-id:subject:from:to;
+        bh=gOHedYSJVHQOXWyr6zExAqTCH3WZQDc0FmZYOxtqwuM=;
+        b=E0CWMGRt2jZUkEVfGI2rSHu8GvErZrcriYXw1c0/UEU+AIhAHvuo2c2ILJv4Ezkz4i
+         1C4JLGyEGuCZV1jNYMk7nGhr9yxrTv7Np++bPeJXxtoVmgNm+G4yzqRtdCVIjlstTaS0
+         hbzP1qr4NggXJG300BOS0wpRlj8ntGMyokvWhHw3wQga+4CONpH4Sl1MOHXTRa+/RvpH
+         kLqoPaDR5VnOc+f0bRArL9QknJVPZhlztC+c4dNybydIeQj4d/zHQLHFavFEhyEG6Cri
+         RgI2V880IZ9ReK0/80bdJiQVJIRqFqH6f2HG0z+7z9orzDIJOmv6cXFKNo9rt6OsEhCf
+         giGg==
+X-Gm-Message-State: AEkoousu8PaPPvBGDaKxMZOJmkjGgytOl0C15s2bk/MiMmseOEjqo5L5QxGF5co0HoWK1q8xJHg6wHFybJXDQEbRnyTyZHU2zU01MBS1A6fd/QV+E65/
+MIME-Version: 1.0
+X-Received: by 10.107.138.5 with SMTP id m5mr27854969iod.20.1471413563392;
+ Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+Date: Tue, 16 Aug 2016 22:59:23 -0700 (PDT)
+X-Notifications: XEAAAAHYSYUJtSvt7TMeB6hkpKQc
+X-Notification-ID: u:729cec04ce800000
+X-Notification-Category: BABEL
+X-Notification-Type: BABEL_MISSED_MESSAGE
+Reply-To: "Google Hangouts (Nitin Yadav)" <noreply-5afe9171@plus.google.com>
+X-UB: 80
+List-Unsubscribe: <https://notifications.google.com/unsubscribe/AJ7SsMnAEp-wxAdsByt433PXNl8v51EdsCNkzGVLzZsD_wibDmXQB4V7UfVXlj5cuo_ZGe5ljtgJchjTyiFYH0R2uhgbkPc4fq7qkSr6vI8nEQvAkRX_ehbvJRCFJBvcrl83n8mOvvO1XYIWRo-4gTp_mujGe-NWkbrDL5wTG26RVaQ6eYJBF90>
+Precedence: bulk
+Message-ID: <1L-lynwZGkjCcMlM7IcMbg@notifications.google.com>
+Subject: Nitin Yadav started a conversation with you
+From: "Google Hangouts (Nitin Yadav)" <noreply-5afe9171@plus.google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a113fa606c3843c053a3e2a58
+
+--001a113fa606c3843c053a3e2a58
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+Nitin Yadav started a conversation with you View Conversation:  
+https://hangouts.google.com/chat/Ugwu-ZALtkAd9pMJfHZ4AaABAagB7dS7Dw?hl=en  
+This notification was sent to digvijay@unicommerce.com. Don't want to  
+receive Google Hangouts notifications? Change what emails Google Hangouts  
+sends to you:  
+https://plus.google.com/_/notifications/emlink?emr=05502464480182497854&emid=COiQi9bix84CFRDEjAoddf0OSQ&path=%2Fsettings%2Fplus&dt=1471413563361&ub=80  
+To stop receiving Google Hangouts notifications from someone, open their  
+Google+ profile and click Mute. Google Inc., 1600 Amphitheatre Pkwy,  
+Mountain View, CA 94043 USA
+
+
+--001a113fa606c3843c053a3e2a58
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html dir=3D"ltr"><head><link href=3D"https://fonts.googleapis.com/css?fami=
+ly=3DRoboto:300,400,700" rel=3D"stylesheet" type=3D"text/css"></head><body>=
+<!-- X-Notifications: 1:729cec04ce800000 --><div  style=3D"width:660px; mar=
+gin:0px auto; padding:20px; text-align:center; font-family:'Roboto',sans-se=
+rif"><table style=3D"width:100%;margin:0px auto;" background=3D"https://ssl=
+.gstatic.com/chat/babble/static/email/header_email_2bc67c781aba8894949eb0ab=
+b2992da6.png"><tr><td><div style=3D"min-height:146px"><div style=3D"padding=
+-left:35px;padding-top:95px;font-weight:lighter;font-size:14px;color:#fff;t=
+ext-align:left">All your conversations, with anyone, anywhere at anytime.</=
+div></div></td></tr></table><div style=3D"border-width:1px;border-color:#e5=
+e5e5;border-style:none solid solid solid; background-color: #f5f5f5; paddin=
+g:30px 50px 20px;"><table style=3D"padding-bottom:10px; text-align: start;"=
+><tr style=3D"vertical-align: top;"><td style=3D"width: 130px; padding-righ=
+t: 10px;"><table style=3D"width:100%; text-align: center;"><tr><td><a href=
+=3D"https://plus.google.com/_/notifications/emlink?emr=3D055024644801824978=
+54&emid=3DCOiQi9bix84CFRDEjAoddf0OSQ&path=3D%2F108103968412963996020&dt=3D1=
+471413563361&ub=3D80"><img width=3D"110" height=3D"110" style=3D"border:0;b=
+order-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;" src=3D"=
+https://lh6.googleusercontent.com/-Ggi-7Qw6ssE/AAAAAAAAAAI/AAAAAAAAABk/Flh1=
+yf7vImU/s110/photo.jpg" /></a></td></tr></table></td><td><table style=3D"te=
+xt-align: left;"><tr><td style=3D"padding: 8px 7px;"><div style=3D"font-siz=
+e: 16px; color: #555;"><span style=3D"font-weight:bold" >Nitin Yadav</span>=
+ started a conversation with you</div></td></tr><tr><td style=3D"padding: 1=
+5px 7px 0;"><a href=3D"https://hangouts.google.com/chat/Ugwu-ZALtkAd9pMJfHZ=
+4AaABAagB7dS7Dw?hl=3Den" style=3D"background-color:#4d90fe;border:solid 1px=
+ #dfdfdf;border-radius:3px;-moz-border-radius: 3px;-webkit-border-radius: 3=
+px;color:#fff;display:inline-block;font-family:Arial;font-size:14px;font-we=
+ight:bold;height:34px;line-height:34px;min-width:54px;padding:0 20px;text-a=
+lign:center;text-decoration:none;white-space:nowrap;"rel=3D"ohUgwu-ZALtkAd9=
+pMJfHZ4AaABAagB7dS7Dw">View Conversation</a></td></tr></table></td></tr></t=
+able></div><div style=3D"font-weight:normal;font-size:12px;color:#aaa;paddi=
+ng-top:15px; text-align:left;">This notification was sent to <a href=3D"mai=
+lto:digvijay@unicommerce.com" style=3D"color:#3366CC;text-decoration:none">=
+digvijay@unicommerce.com</a>. <a href=3D"https://notifications.google.com/u=
+nsubscribe/AJ7SsMnAEp-wxAdsByt433PXNl8v51EdsCNkzGVLzZsD_wibDmXQB4V7UfVXlj5c=
+uo_ZGe5ljtgJchjTyiFYH0R2uhgbkPc4fq7qkSr6vI8nEQvAkRX_ehbvJRCFJBvcrl83n8mOvvO=
+1XYIWRo-4gTp_mujGe-NWkbrDL5wTG26RVaQ6eYJBF90" style=3D"color:#3366CC;text-d=
+ecoration:none">Unsubscribe</a> from these emails.<br>To stop receiving Goo=
+gle Hangouts notifications from someone, open their Google+ profile and cli=
+ck Mute.<br>Google Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043 US=
+A</div></div></body></html>
+--001a113fa606c3843c053a3e2a58--

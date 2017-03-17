@@ -1,0 +1,206 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp4056346qgj;
+        Sun, 9 Oct 2016 03:47:34 -0700 (PDT)
+X-Received: by 10.66.65.133 with SMTP id x5mr25938956pas.119.1476010054356;
+        Sun, 09 Oct 2016 03:47:34 -0700 (PDT)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o6.em.bitbucket.org (o6.em.bitbucket.org. [167.89.38.188])
+        by mx.google.com with ESMTPS id ga9si8055238pac.23.2016.10.09.03.47.33
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 09 Oct 2016 03:47:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) client-ip=167.89.38.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=MFqzYcNXQHoph/wM7sN9yKUg+7o=; b=m8+3J5/dQjL/77UdSwAnxWX
+	Kw/h13OQIkKuvOeAig18rmUEr1FRhKZ7Svdr/LfpbrukpcP15qvboU9r1Ru56bU1
+	nqD9U7X6afkFkHTVZk8QVxOQLUe7DqTnHeBJObAUbw9P/AruaWZ+qvi21/fbQKZZ
+	ZDQnPOvbEnkNhqvTkm24=
+Received: by filter0927p1mdw1.sendgrid.net with SMTP id filter0927p1mdw1.16926.57FA204511
+        2016-10-09 10:47:33.209525406 +0000 UTC
+Received: from celery-worker-108.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0005p1iad1.sendgrid.net (SG) with ESMTP id rDYgUNmpSC2Bd3o3EbyiNQ
+	for <digvijay@unicommerce.com>; Sun, 09 Oct 2016 10:47:33.222 +0000 (UTC)
+Received: from celery-worker-108.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-108.ash1.bb-inf.net (Postfix) with ESMTP id 335395203F9
+	for <digvijay@unicommerce.com>; Sun,  9 Oct 2016 10:47:33 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============6812656232834061032=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #13: Minor changes in Recon Scripts
+ (unicommercetechnology/uniware)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Sun, 09 Oct 2016 10:47:33 -0000
+Auto-Submitted: auto-generated
+Message-ID: <pr-unicommercetechnology/uniware/13/merged/02adc61035df4af9ae90c4c67b75465a@bitbucket.org>
+References: <pr-unicommercetechnology/uniware/13@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniware/13@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/vYb74CxFFThT6pb6hyJJkjoehsInTraGdU9e
+ 1topmE/jhq05qibNYPa63QhzHkLFqsRqmeTxYDZLNXWptfkLHYbF4pr6OZJ1xj2s9J0XPYrGpkTA8G
+ nHRqdZjTdF4o+GOM8qKJiP8g0vYVR1/DNjnokRLwG/AbFDe4ADjCd8xH1X1u2JwXrMrnk/dJHNJVMk
+ 7ssdfC4/BF5U0TiO/fpFyz
+
+--===============6812656232834061032==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+Pull request #13 has been accepted by Akshay Agarwal.
+
+Changes in digvijay095/uniwaredj have been pulled into unicommercetechnology/uniware.
+
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/13/minor-changes-in-recon-scripts
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/13/unwatch/digvijay095/89cd343d239e6f95af4cf7cabc695577ec63ac10/
+
+--===============6812656232834061032==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: 1px solid #cccccc; border-radius: 5px; padding: 20px">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    <td id="avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+                      
+                      <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1476009951" style="border-radius: 3px">
+                      
+                    </td>
+                    <td id="content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+                      
+<table style="width: 100%; border-collapse: collapse">
+  <tr>
+    <td class="user-action" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+      <span>
+        
+          <strong>Akshay Agarwal</strong>
+          <span class="badge fulfilled" style="display: inline-block; font-size: 11px; font-weight: bold; border-radius: 3px; text-transform: uppercase; line-height: 1; color: #ffffff; padding: 2px 5px 1px; background-color: #14892c">merged</span>
+          pull request #13:
+        
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+      <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/13/minor-changes-in-recon-scripts" style="color: #3572b0; text-decoration: none">Minor changes in Recon Scripts</a>
+    </td>
+  </tr>
+  <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+  <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+</table>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          
+  <tr>
+    <td class="actions" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0; border-top: 1px solid #cccccc; line-height: 1">
+      
+      
+        
+          <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/13/minor-changes-in-recon-scripts" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+        
+      
+    </td>
+  </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/13/unwatch/digvijay095/89cd343d239e6f95af4cf7cabc695577ec63ac10/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/407220490/21d5b51d9a5bbebb21f90bb586635a06ce94f59f/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/4729d131423b/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm6D9n1b1TkVy0AUVpsCiJrisVYxRf6dCJj1n4anX2IFqI4u1VI2r64ybMo2DyFMQeEMo-2FvFJ5SitgCp7OF0Uzpmr3PyIZUkb6KVricBvgMgx-2FQ0-2B4zMz-2Blm4nz5qNvdU0p2-2BvpfnDIPwh-2BlSqdHkjx4PqtXmAaU2YSZTSZEsJkO5ND1yGblojBehl0wMyPfHWQ-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============6812656232834061032==--

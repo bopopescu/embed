@@ -1,0 +1,59 @@
+From: digvijay@unicommerce.com
+X-Uniform-Type-Identifier: com.apple.mail-note
+Content-Type: text/html;
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Mac OS X Notes 4.2 \(555.10.42\))
+Date: Mon, 12 Sep 2016 17:34:03 +0530
+X-Mail-Created-Date: Mon, 12 Sep 2016 17:07:02 +0530
+Subject: CHANNELS OF A TENANT(WITH MULTIPLE ACCOUNTS)
+X-Universally-Unique-Identifier: F0D3835C-15BA-4131-9F03-2567FA63F9BC
+Message-Id: <FB268690-EF15-4E40-9D5F-2AEFA4B3D037@unicommerce.com>
+
+<html><head></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures"><br></span></p><p style=3D"margin: 0px; font-size: =
+11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures"><br></span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures"><b>CHANNELS OF A TENANT(WITH MULTIPLE =
+ACCOUNTS)</b></span></p><p style=3D"margin: 0px; font-size: 11px; =
+line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures">create table =
+temp(id INT NOT NULL UNIQUE,source_code VARCHAR(100));</span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures">insert into temp (id,source_code) select =
+id,source_code from channel where tenant_id=3D2 order by =
+source_code;</span></p><p style=3D"margin: 0px; font-size: 11px; =
+line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures"><br></span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><b>SALE_ORDER_IDs of&nbsp;</b></p><p style=3D"margin: 0px; =
+font-size: 11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures"></span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures">create table SALE_ORDER_ID(id INT);</span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures"></span></p><p style=3D"margin: 0px; font-size: =
+11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures">insert into =
+SALE_ORDER_ID select id from sale_order;</span></p><p style=3D"margin: =
+0px; font-size: 11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures"><br></span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures"><br></span></p><p style=3D"margin: 0px; font-size: =
+11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: no-common-ligatures"><br></span></p><p =
+style=3D"margin: 0px; font-size: 11px; line-height: normal; font-family: =
+Menlo;"><span style=3D"font-variant-ligatures: =
+no-common-ligatures"><br></span></p><p style=3D"margin: 0px; font-size: =
+11px; line-height: normal; font-family: Menlo;"><span =
+style=3D"font-variant-ligatures: =
+no-common-ligatures"><br></span></p></body></html>=

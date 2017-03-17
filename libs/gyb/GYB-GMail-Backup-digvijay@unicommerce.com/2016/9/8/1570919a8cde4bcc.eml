@@ -1,0 +1,153 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.214.18 with SMTP id o18csp670364itg;
+        Thu, 8 Sep 2016 02:20:59 -0700 (PDT)
+X-Received: by 10.176.82.146 with SMTP id v18mr31579501uav.135.1473326459140;
+        Thu, 08 Sep 2016 02:20:59 -0700 (PDT)
+Return-Path: <samdeesh@unicommerce.com>
+Received: from mail-ua0-x233.google.com (mail-ua0-x233.google.com. [2607:f8b0:400c:c08::233])
+        by mx.google.com with ESMTPS id b1si8712633vkh.194.2016.09.08.02.20.59
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Sep 2016 02:20:59 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::233 is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) client-ip=2607:f8b0:400c:c08::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::233 is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) smtp.mailfrom=samdeesh@unicommerce.com
+Received: by mail-ua0-x233.google.com with SMTP id 95so10992292uaz.2
+        for <digvijay@unicommerce.com>; Thu, 08 Sep 2016 02:20:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=TJG/qJ6gYPSPtZXidk0kVIhcAJH0UJ4lZPXgsbxpSJk=;
+        b=K2zImIJ941qqT5jCGLJErBDsCzc1uaepB2VJY4ibtMwrqbHtOjvunC1DwWTQ58t01s
+         lW53rj3sMz6DGi0iyBN3BaEKIeEcKG6dsZ8o1wCQi18mBLRy65DMLWBiZL3LApe86q9U
+         qEP01vlsR24K0Dr3wzpBvQ8ZpSRxBURJGMSQxXab9q/OPai/s6TSCOqmwuJoizG5DIvg
+         MAJfN5TVSq2Je3Z+7ut57shqTP/aGdeOdJTTJexF4FUpzDhaztFPvDhyGlYe2KFIqIK8
+         YNroTrIroCGtvH9kqMP098yZCsxj+FavcAN9oz9QrM5Bbg2gTzMLVL5PYFtL/Y7gMuzA
+         Fw8A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=TJG/qJ6gYPSPtZXidk0kVIhcAJH0UJ4lZPXgsbxpSJk=;
+        b=PITiidYe+i6LhOuVmx4VsUldUnzFxxQQRjvfthNeIHAb4CDYfjVZTFI8HTZhaBLJJC
+         vmtK0XKQ/qwQzAEqukIh3BTOW003Z99T+6DhRF5h/jqpuMWX1PZqTdnyUPcxT4uzwDJp
+         cjfcuwiYWIMbffDprIUIn5nZD1DxFuTQjQXclnOD983HdCg8f5mNv+dQEypdQVKtC0Ir
+         kfKqMY/kKD0J+0aEN6XineO21IIn8o0yLJJWXqySH/Loovldkx1/Z0mYIpWUObr5RHTx
+         m+5ZxS0jOWKO34dXkkdM0c4OBkpY1A02c1UIhV4Mkke+YZj8deGDbP2UbB1VMq5Tv4gI
+         B9+g==
+X-Gm-Message-State: AE9vXwONXD2Hl8OOTwnuKMlZc+EiEAwVj6IebU3xJrudIKA/SiM8nWdn7A9ijGUWBvbHMbPBGJxBiv43dSUdhQ==
+X-Received: by 10.176.3.41 with SMTP id 38mr32150637uat.113.1473326458896;
+ Thu, 08 Sep 2016 02:20:58 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAGz2fOfxNcCt_QTLZ=gVCFEjSRWQahQ4BUourWawR33c1WkF0A@mail.gmail.com>
+ <CAGz2fOd_KKwkc4CN5FvjAwc+7iv_2_ZvfSmW5-tB1C+d8o+wWw@mail.gmail.com> <CAEvR4bTNtz9nmP3z80EOfUUKcRMntm=P8NtAHnsZMeu24ECKhg@mail.gmail.com>
+In-Reply-To: <CAEvR4bTNtz9nmP3z80EOfUUKcRMntm=P8NtAHnsZMeu24ECKhg@mail.gmail.com>
+From: Samdeesh Singh <samdeesh@unicommerce.com>
+Date: Thu, 08 Sep 2016 09:20:48 +0000
+Message-ID: <CAOrbZ4YTFCqDK-7n3kg5M+eGJ9VxD65NQaBFyeKXyVBEiZLyug@mail.gmail.com>
+Subject: Re: Wednesday Night Party Expenses
+To: Shipra Gupta <shipra@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Vani Verma <vani@unicommerce.com>, Vikas Goyal <vikas@unicommerce.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, Puneet Sharma <puneet@unicommerce.com>, 
+	Piyush Arora <piyush@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Akshay Kochhar <akshay@unicommerce.com>, Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, 
+	Yamini Sukhija <yamini.sukhija@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Sunny Agarwal <sunny@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Ankur Pratik <ankur.pratik@unicommerce.com>, Shilpa Suri <shilpa@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>, 
+	Ashish Bansal <ashish@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113d049a38c8ca053bfb8cda
+
+--001a113d049a38c8ca053bfb8cda
+Content-Type: text/plain; charset=UTF-8
+
+done
+
+On Thu, Sep 8, 2016 at 2:43 PM Shipra Gupta <shipra@unicommerce.com> wrote:
+
+> Done -  Shipra, Garima and Shobhit
+>
+> On Thu, Sep 8, 2016 at 2:39 PM, Rachit Sachdeva <rachit@unicommerce.com>
+> wrote:
+>
+>> MMID can also be used for IMPS transfers:
+>>
+>> MMID: 9240447
+>> Mobile: 8588875531
+>>
+>> Regards,
+>> Rachit Sachdeva
+>>
+>>
+>> On Thu, Sep 8, 2016 at 1:17 PM, Rachit Sachdeva <rachit@unicommerce.com>
+>> wrote:
+>>
+>>> Total Bill: 33610
+>>> Total People: 28
+>>>
+>>> Charges per person: 1200.35 (:P)
+>>>
+>>> Account Details:
+>>>
+>>> Account Name: Rachit Sachdeva
+>>> Account Number: 50100047857008, HDFC Barakhamba Road,
+>>> IFSC: HDFC0000708
+>>>
+>>> Regards,
+>>> Rachit Sachdeva
+>>>
+>>>
+>>
+> --
+Regards,
+Samdeesh Singh
+Unicommerce eSolutions Pvt Ltd
+M: 7838037738
+
+--001a113d049a38c8ca053bfb8cda
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">done</div><br><div class=3D"gmail_quote"><div dir=3D"ltr">=
+On Thu, Sep 8, 2016 at 2:43 PM Shipra Gupta &lt;<a href=3D"mailto:shipra@un=
+icommerce.com">shipra@unicommerce.com</a>&gt; wrote:<br></div><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex"><div dir=3D"ltr">Done - =C2=A0Shipra, Garima and Shobhit<=
+/div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Sep =
+8, 2016 at 2:39 PM, Rachit Sachdeva <span dir=3D"ltr">&lt;<a href=3D"mailto=
+:rachit@unicommerce.com" target=3D"_blank">rachit@unicommerce.com</a>&gt;</=
+span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8e=
+x;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">MMID can al=
+so be used for IMPS transfers:<div><br></div><div>MMID: 9240447=C2=A0</div>=
+<div>Mobile: 8588875531</div></div><div class=3D"gmail_extra"><br clear=3D"=
+all"><div><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>Reg=
+ards,</div><div>Rachit Sachdeva</div><img src=3D"https://d3kjp0zrek7zit.clo=
+udfront.net/uploads/product/image/4364/large_detail_1409053661.png" width=
+=3D"96" height=3D"54"><br></div></div></div>
+<br><div class=3D"gmail_quote"><span>On Thu, Sep 8, 2016 at 1:17 PM, Rachit=
+ Sachdeva <span dir=3D"ltr">&lt;<a href=3D"mailto:rachit@unicommerce.com" t=
+arget=3D"_blank">rachit@unicommerce.com</a>&gt;</span> wrote:<br></span><di=
+v><div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-=
+left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div>Total Bill: 336=
+10</div><div>Total People: 28</div><div><br></div><div>Charges per person: =
+1200.35 (:P)</div><div><br></div><div>Account Details:</div><div><br></div>=
+<div>Account Name: Rachit Sachdeva</div><div><div>Account Number: 501000478=
+57008, HDFC Barakhamba Road,</div><div>IFSC: HDFC0000708</div></div><br cle=
+ar=3D"all"><div><div><div dir=3D"ltr"><div>Regards,</div><div>Rachit Sachde=
+va</div><img src=3D"https://d3kjp0zrek7zit.cloudfront.net/uploads/product/i=
+mage/4364/large_detail_1409053661.png" width=3D"96" height=3D"54"><br></div=
+></div></div>
+</div>
+</blockquote></div></div></div><br></div>
+</blockquote></div><br></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Regards,<div>Samdeesh Singh</div><div>Unicom=
+merce eSolutions Pvt Ltd</div><div>M: 7838037738</div></div></div>
+
+--001a113d049a38c8ca053bfb8cda--

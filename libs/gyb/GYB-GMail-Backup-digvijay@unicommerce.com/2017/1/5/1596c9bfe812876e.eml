@@ -1,0 +1,255 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp8440702qgd;
+        Wed, 4 Jan 2017 19:11:19 -0800 (PST)
+X-Received: by 10.36.139.1 with SMTP id g1mr55555125ite.120.1483585879733;
+        Wed, 04 Jan 2017 19:11:19 -0800 (PST)
+Return-Path: <firebase-noreply@google.com>
+Received: from mail-it0-x245.google.com (mail-it0-x245.google.com. [2607:f8b0:4001:c0b::245])
+        by mx.google.com with ESMTPS id 9si48275454itv.103.2017.01.04.19.11.19
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 04 Jan 2017 19:11:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of firebase-noreply@google.com designates 2607:f8b0:4001:c0b::245 as permitted sender) client-ip=2607:f8b0:4001:c0b::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       spf=pass (google.com: domain of firebase-noreply@google.com designates 2607:f8b0:4001:c0b::245 as permitted sender) smtp.mailfrom=firebase-noreply@google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=google.com
+Received: by mail-it0-x245.google.com with SMTP id x2so455301317itf.6
+        for <digvijay@unicommerce.com>; Wed, 04 Jan 2017 19:11:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:message-id:date:subject:from:to;
+        bh=syuZk9jCuqEQHo5WP4IjTrxsE3NUVdMLbLYcuXLfsIc=;
+        b=gdGrB+Cju3jLFPunJ7CglCW9Cle+MtucWWf/bA6LZZon/FhcMvvFNB/NV3kTBtHjQT
+         9WhsngGdYp8W/IMwjD4Z2RncKjIuNtx7J4AzpmwZUCwz1aIA4B10qnkZNRR9FCcwdw83
+         4fl5+TFBa03/ZOty8iEwuTJObldrx/DDCpNSSplHVW/IBJK8Ip3hjlYtVwEPDf2ZvTHx
+         60w7xFdK+kPEhLLA+yZSaemT8o+y6cf+/LVkPBSYl1BdQt+sQndSEbYvyO/FBtUrnlg5
+         VT1DbRpOwp54fb3jFAZFWmBLywuGEmGryr5mygnXxuBgYF9czytsMOCfGI0Cjdu+dypl
+         fwsg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:message-id:date:subject:from:to;
+        bh=syuZk9jCuqEQHo5WP4IjTrxsE3NUVdMLbLYcuXLfsIc=;
+        b=L2KCY7oOsSF6ZvOPTHJOUEQA32q3RvC3MWuV5JeAA+aGJNJLX2ETjlM+VD7QshHiML
+         RnJQV80hcUGC0xY2/kPQkKMQ6dJOoPNE1+oqKAum+iJYJC9uo0bH3VNqNBXAEt05HjiY
+         xb++/WxIJyrW9v6x0L0QMzLRmnqUzPMFRjIIVyeR4ZOAbRJqbrs97DGLXmrmBnctij6k
+         yGrL1eNIVYTiB41vytpaZAuyseckydRhTXl7w0bTyK2riwaAyrg41z9PQVTZhQQJVcWo
+         oE1pNJyDFo9Ir7N2B2aShknQs4CLiS8lxVIUiEnuzltrvegf/XFGYh5J6JufMRm34Viw
+         5LLA==
+X-Gm-Message-State: AIkVDXI6alvbY2aV/wg57dq3/Y4SCcr7wS8n0ibySYhq6/Q9t26DH25hwobboVRBNClicPIgap9518nq3uk=
+MIME-Version: 1.0
+X-Received: by 10.36.76.145 with SMTP id a139mr15326770itb.32.1483585879401;
+ Wed, 04 Jan 2017 19:11:19 -0800 (PST)
+Message-ID: <001a11448cd255e89b0545504125@google.com>
+Date: Thu, 05 Jan 2017 03:11:19 +0000
+Subject: [Firebase] Welcome to Firebase!
+From: Firebase <firebase-noreply@google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a11448cd255e8810545504122
+
+--001a11448cd255e8810545504122
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+Welcome to Firebase!
+
+
+
+OPEN CONSOLE
+
+
+Hi Digvijay,
+
+Welcome to Firebase! You're now part of a community of hundreds of  
+thousands of developers using Firebase to develop high-quality apps, grow  
+their user base, and earn more money. We cover the essentials so you can  
+monetize your business and focus on your users.
+
+Here are some suggestions for next steps:
+
+
+1
+
+
+Add an app to your project
+
+Your new Firebase project is a container that can hold multiple apps (for  
+example, one for Android and one for iOS). These apps share common project  
+resources, like a database. Visit the console to add an app.
+
+
+2
+
+
+Setup Firebase Analytics
+
+At the heart of Firebase is Firebase Analytics, a free and unlimited  
+analytics solution. See user behavior and measure attribution from a single  
+dashboard. Install the iOS or Android SDK to get started.
+
+
+3
+
+
+Develop
+
+Build a better app and leave the operations to us. Save crucial development  
+time and ship a high-quality, bug-free app. Explore our features in the  
+Develop pillar: Cloud Messaging, Authentication, Realtime Database,  
+Storage, Hosting, Remote Config, Test Lab and Crash Reporting.
+
+
+4
+
+
+Grow
+
+Acquire and engage the right users at the right time. Take the guesswork  
+out of growth. Explore our features in the Grow pillar: Notifications, App  
+Indexing, Dynamic Links, Invites and AdWords.
+
+
+5
+
+
+Earn
+
+Monetize your app through rich and engaging ads. Install the AdMob iOS or  
+Android SDK to get started.
+
+
+We're always here to help! Visit the support center for help with technical  
+questions. You can also find us on Twitter @Firebase or join our Google  
+Group to chat with other Firebase developers.
+
+We can't wait to see what you create!
+
+The Firebase Team
+
+
+Google Inc.
+1600 Amphitheatre Parkway
+Mountain View, CA, 94043 USA
+
+
+
+
+--001a11448cd255e8810545504122
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body style=3D"max-width:800px; font-family:roboto, sans-serif; font-=
+weight:400;"><div style=3D"font-size:16px; border:1px solid #dedede"><div s=
+tyle=3D"text-align: center; padding: 24px;"><img src=3D"http://gstatic.com/=
+pantheon/images/iam/email/firebase_lockup.png" height=3D"40" style=3D"heigh=
+t: 40px; vertical-align: middle"></img></div><div id=3D"email"><div style=
+=3D"padding:24px 20px 24px 20px; background-color:#039be5;"><table style=3D=
+"width:100%; color:#ffffff;" cellpadding=3D"0" cellspacing=3D"0"><tr><td><d=
+iv style=3D"font-size:20px; line-height:24px;">Welcome to Firebase!</div></=
+td></tr></table></div><div style=3D"background-color:#0288d1; padding:8px 2=
+0px 8px 20px;"><table style=3D"width:100%; color:#b3dbf1" cellpadding=3D"0"=
+ cellspacing=3D"0"><tr><td style=3D"text-align:right"><a target=3D"_blank" =
+href=3D"https://console.firebase.google.com" style=3D"color:#b3dbf1; font-s=
+ize:13px; text-decoration: none;">OPEN CONSOLE</a></td></tr></table></div><=
+div id=3D"content" style=3D"margin:auto 30px 10px 30px; font-size:14px; lin=
+e-height:20px;"><div style=3D"font-size:20px; font-weight: 700; line-height=
+:24px; padding-top:20px;">Hi Digvijay,</div><div style=3D"padding-top:20px;=
+">Welcome to Firebase! You're now part of a community of hundreds of thousa=
+nds of developers using Firebase to develop high-quality apps, grow their u=
+ser base, and earn more money. We cover the essentials so you can monetize =
+your business and focus on your users.</div><div style=3D"padding-top:20px;=
+">Here are some suggestions for next steps:</div><div style=3D"background-c=
+olor:#f9f9f9; box-shadow:1px 1px 5px #b3b3c3; margin-bottom:24px; border-ra=
+dius:5px; padding-left:20px; margin-top:24px;"><div style=3D"float: left; p=
+adding-top: 20px;"><div style=3D"height: 48px; width: 48px; border-radius: =
+50%; background-color: #0288d1; display:table"><span style=3D"vertical-alig=
+n: middle; display:table-cell; text-align: center; color: #ffffff">1</span>=
+</div></div><div style=3D"padding-left: 65px"><div style=3D"line-height:20p=
+x; padding-top:20px; padding-right: 15px;"><div style=3D"font-weight: 700; =
+color:#202020;">Add an app to your project</div><div style=3D"color:#737373=
+;">Your new Firebase project is a container that can hold multiple apps (fo=
+r example, one for Android and one for iOS). These apps share common projec=
+t resources, like a database. Visit <a target=3D"_blank" href=3D"https://co=
+nsole.firebase.google.com" style=3D"color:#0288d1; text-decoration: none;">=
+the console</a> to add an app.</div></div></div><div style=3D"float: left; =
+padding-top: 20px;"><div style=3D"height: 48px; width: 48px; border-radius:=
+ 50%; background-color: #0288d1; display:table"><span style=3D"vertical-ali=
+gn: middle; display:table-cell; text-align: center; color: #ffffff">2</span=
+></div></div><div style=3D"padding-left: 65px"><div style=3D"line-height:20=
+px; padding-top:20px; padding-right: 15px;"><div style=3D"font-weight: 700;=
+ color:#202020;">Setup Firebase Analytics</div><div style=3D"color:#737373;=
+">At the heart of Firebase is Firebase Analytics, a free and unlimited anal=
+ytics solution. See user behavior and measure attribution from a single das=
+hboard. Install the <a target=3D"_blank" href=3D"https://firebase.google.co=
+m/docs/analytics/ios/start" style=3D"color:#0288d1; text-decoration: none;"=
+>iOS</a> or <a target=3D"_blank" href=3D"https://firebase.google.com/docs/a=
+nalytics/android/start" style=3D"color:#0288d1; text-decoration: none;">And=
+roid</a> SDK to get started.</div></div></div><div style=3D"float: left; pa=
+dding-top: 20px;"><div style=3D"height: 48px; width: 48px; border-radius: 5=
+0%; background-color: #0288d1; display:table"><span style=3D"vertical-align=
+: middle; display:table-cell; text-align: center; color: #ffffff">3</span><=
+/div></div><div style=3D"padding-left: 65px"><div style=3D"line-height:20px=
+; padding-top:20px; padding-right: 15px;"><div style=3D"font-weight: 700; c=
+olor:#202020;">Develop</div><div style=3D"color:#737373;">Build a better ap=
+p and leave the operations to us. Save crucial development time and ship a =
+high-quality, bug-free app. Explore our features in the Develop pillar: <a =
+target=3D"_blank" href=3D"https://firebase.google.com/docs/cloud-messaging/=
+" style=3D"color:#0288d1; text-decoration: none;">Cloud Messaging</a>, <a t=
+arget=3D"_blank" href=3D"https://firebase.google.com/docs/auth/" style=3D"c=
+olor:#0288d1; text-decoration: none;">Authentication</a>, <a target=3D"_bla=
+nk" href=3D"https://firebase.google.com/docs/database/" style=3D"color:#028=
+8d1; text-decoration: none;">Realtime Database</a>, <a target=3D"_blank" hr=
+ef=3D"https://firebase.google.com/docs/storage/" style=3D"color:#0288d1; te=
+xt-decoration: none;">Storage</a>, <a target=3D"_blank" href=3D"https://fir=
+ebase.google.com/docs/hosting/" style=3D"color:#0288d1; text-decoration: no=
+ne;">Hosting</a>, <a target=3D"_blank" href=3D"https://firebase.google.com/=
+docs/remote-config/" style=3D"color:#0288d1; text-decoration: none;">Remote=
+ Config</a>, <a target=3D"_blank" href=3D"https://firebase.google.com/docs/=
+test-lab/" style=3D"color:#0288d1; text-decoration: none;">Test Lab</a> and=
+ <a target=3D"_blank" href=3D"https://firebase.google.com/docs/crash/" styl=
+e=3D"color:#0288d1; text-decoration: none;">Crash Reporting</a>.</div></div=
+></div><div style=3D"float: left; padding-top: 20px;"><div style=3D"height:=
+ 48px; width: 48px; border-radius: 50%; background-color: #0288d1; display:=
+table"><span style=3D"vertical-align: middle; display:table-cell; text-alig=
+n: center; color: #ffffff">4</span></div></div><div style=3D"padding-left: =
+65px"><div style=3D"line-height:20px; padding-top:20px; padding-right: 15px=
+;"><div style=3D"font-weight: 700; color:#202020;">Grow</div><div style=3D"=
+color:#737373;">Acquire and engage the right users at the right time. Take =
+the guesswork out of growth. Explore our features in the Grow pillar: <a ta=
+rget=3D"_blank" href=3D"https://firebase.google.com/docs/notifications/" st=
+yle=3D"color:#0288d1; text-decoration: none;">Notifications</a>, <a target=
+=3D"_blank" href=3D"https://firebase.google.com/docs/app-indexing/" style=
+=3D"color:#0288d1; text-decoration: none;">App Indexing</a>, <a target=3D"_=
+blank" href=3D"https://firebase.google.com/docs/dynamic-links/" style=3D"co=
+lor:#0288d1; text-decoration: none;">Dynamic Links</a>, <a target=3D"_blank=
+" href=3D"https://firebase.google.com/docs/invites/" style=3D"color:#0288d1=
+; text-decoration: none;">Invites</a> and <a target=3D"_blank" href=3D"http=
+s://firebase.google.com/docs/adwords/" style=3D"color:#0288d1; text-decorat=
+ion: none;">AdWords</a>.</div></div></div><div style=3D"float: left; paddin=
+g-top: 20px;"><div style=3D"height: 48px; width: 48px; border-radius: 50%; =
+background-color: #0288d1; display:table"><span style=3D"vertical-align: mi=
+ddle; display:table-cell; text-align: center; color: #ffffff">5</span></div=
+></div><div style=3D"padding-left: 65px"><div style=3D"line-height:20px; pa=
+dding-top:20px; padding-right: 15px; padding-bottom:20px;"><div style=3D"fo=
+nt-weight: 700; color:#202020;">Earn</div><div style=3D"color:#737373;">Mon=
+etize your app through rich and engaging ads. Install the AdMob <a target=
+=3D"_blank" href=3D"https://firebase.google.com/docs/admob/ios/quick-start"=
+ style=3D"color:#0288d1; text-decoration: none;">iOS</a> or <a target=3D"_b=
+lank" href=3D"https://firebase.google.com/docs/admob/android/quick-start" s=
+tyle=3D"color:#0288d1; text-decoration: none;">Android</a> SDK to get start=
+ed.</div></div></div></div><div>We're always here to help! Visit the suppor=
+t center for help with technical questions. You can also find us on Twitter=
+ <a target=3D"_blank" href=3D"https://twitter.com/Firebase" style=3D"color:=
+#0288d1; text-decoration: none;">@Firebase</a> or join our <a target=3D"_bl=
+ank" href=3D"https://groups.google.com/forum/#!forum/firebase-talk" style=
+=3D"color:#0288d1; text-decoration: none;">Google Group</a> to chat with ot=
+her Firebase developers.</div><div style=3D"padding-top:20px;">We can't wai=
+t to see what you create!</div><div style=3D"font-weight: 700; color:#20202=
+0; padding-top:20px; padding-bottom:12px;">The Firebase Team</div></div><di=
+v style=3D"background-color:#78909c; padding:24px; height:42px;"><table sty=
+le=3D"width:100%;" cellpadding=3D"0" cellspacing=3D"0"><tr><td><img src=3D"=
+https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_light_colo=
+r_74x24dp.png" height=3D"24" width=3D"70"></td><td style=3D"text-align:righ=
+t; padding:0"><div style=3D"line-height:14px; font-size:12px; color:#d7dee1=
+;">Google Inc.<br>1600 Amphitheatre Parkway<br>Mountain View, CA, 94043 USA=
+<br></div></td></tr></table></div></div></body></html>
+--001a11448cd255e8810545504122--

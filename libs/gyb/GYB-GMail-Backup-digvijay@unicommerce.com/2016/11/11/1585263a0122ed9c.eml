@@ -1,0 +1,115 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1207914qge;
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+X-Received: by 10.159.38.41 with SMTP id 38mr866721uag.26.1478851010718;
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+Return-Path: <tech+bncBD5OFR7U6MMRBQXTSXAQKGQEIHUIFXQ@unicommerce.com>
+Received: from mail-vk0-x247.google.com (mail-vk0-x247.google.com. [2607:f8b0:400c:c05::247])
+        by mx.google.com with ESMTPS id 68si2194583uag.23.2016.11.10.23.56.50
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbd5ofr7u6mmrbqxtsxaqkgqeihuifxq@unicommerce.com) client-ip=2607:f8b0:400c:c05::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbd5ofr7u6mmrbqxtsxaqkgqeihuifxq@unicommerce.com) smtp.mailfrom=tech+bncBD5OFR7U6MMRBQXTSXAQKGQEIHUIFXQ@unicommerce.com
+Received: by mail-vk0-x247.google.com with SMTP id x186sf6364827vkd.1
+        for <digvijay@unicommerce.com>; Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=E0BUqGvO/gq0vNtXCC8vC52qA6mkuLyiz1+/46SISm4=;
+        b=KC+0GqWn6SSKZPMbHs2rvunIu85YaVBynlYcclPIECODT9gORi58oN7yy6fRkqmPpn
+         CIRT8it65/apO9qNEi2z5bsAm1lcE7AfNv9Rt4i5ApAPxzBh0M0rdt4S3Bpj+9eOqrqd
+         WPof+4Yb7XRprs5nCYq6gyH5JGz6OH6q3eiBmQ30iiLamnsGdEday9HNIJGMmHEYJako
+         kDqhg+HdhICqqR2oOUsC64wjntdqWX8MVrKlJ224O31lSZh85rMJvhQusIjBDRSjtCCO
+         9RDIngbz2aZSw1jd+s859aXr+t//knJKgfDlg9nmrkRed8y6frXdPrGxbywulewu6pBD
+         A2/w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=E0BUqGvO/gq0vNtXCC8vC52qA6mkuLyiz1+/46SISm4=;
+        b=XhSiM5+uEWGx0FPmZvd5vB3ZrG6rLvsGxWKRZpuCCxUKIqzOzISQSiEhIDgY5GlR2p
+         qotCnXfEXJo9uF43b+Ig73+r9NUKz7DCzIvpBWjhjvyO7Y+i3pBtrDOhcbgtPqJKjRPC
+         hH9Grrn5cPNEnCjLXxGln/sVMvYgC0nLMgtQdsrdQv3jVaxGJm/uInfVhlGWvt8kpFy7
+         FSV9W10oZDCJ5kyLq+OXqGjg08VKSeTPKv/oUkQNqDo3XbPREN/CO9kCLBoYOnRSdx5l
+         l6y7S3/QNQS7Fa6MYxfvTO7E9k9Zk+KEGV4LWZYxz3vLXV/ihEjKtQHRLIKftbynQ/Zw
+         YIkA==
+X-Gm-Message-State: ABUngveDEprh2NrHm7ZDDKNOmL0vtXS6PNyP+20yDI2m+XUNukwLSFaq5UkxS2vMpKvgWg==
+X-Received: by 10.31.201.197 with SMTP id z188mr528486vkf.2.1478851010450;
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.17.195 with SMTP id y3ls996389oty.26.gmail; Thu, 10 Nov
+ 2016 23:56:50 -0800 (PST)
+X-Received: by 10.129.20.214 with SMTP id 205mr1369466ywu.315.1478851010303;
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+Received: from mail-yw0-x22e.google.com (mail-yw0-x22e.google.com. [2607:f8b0:4002:c05::22e])
+        by mx.google.com with ESMTPS id w27si716845ybi.17.2016.11.10.23.56.50
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22e is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) client-ip=2607:f8b0:4002:c05::22e;
+Received: by mail-yw0-x22e.google.com with SMTP id i145so5336497ywg.2
+        for <tech@unicommerce.com>; Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+X-Received: by 10.13.241.199 with SMTP id a190mr1411814ywf.141.1478851010103;
+ Thu, 10 Nov 2016 23:56:50 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.37.170.146 with HTTP; Thu, 10 Nov 2016 23:56:49 -0800 (PST)
+In-Reply-To: <CAASAXwx4ryO96vFizR-YF7QdkOh0YxfAv+LSGeidgBzp-UniMA@mail.gmail.com>
+References: <CAASAXwx4ryO96vFizR-YF7QdkOh0YxfAv+LSGeidgBzp-UniMA@mail.gmail.com>
+From: Akshay Kochhar <akshay@unicommerce.com>
+Date: Fri, 11 Nov 2016 13:26:49 +0530
+Message-ID: <CAOkTFmjuKUBi9ofHSW+NSD8UY2+HRqLexyDnX2ETkOyOo7kSeA@mail.gmail.com>
+Subject: Re: Sweets at my desk :)
+To: Kumar Animesh <animesh@unicommerce.com>
+Cc: Tech Team <tech@unicommerce.com>, Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>
+Content-Type: multipart/alternative; boundary=94eb2c03272022385d054101d59b
+X-Original-Sender: akshay@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::22e is neither permitted nor denied by best
+ guess record for domain of akshay@unicommerce.com) smtp.mailfrom=akshay@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c03272022385d054101d59b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Congrats =F0=9F=98=8A
+
+On Friday 11 November 2016, Kumar Animesh <animesh@unicommerce.com> wrote:
+
+>
+>
+
+--=20
+-- Regards, Akshay Kochhar
+Software Engineer
+M:9999315765
+Unicommerce eSolutions Pvt. Ltd.
+
+--94eb2c03272022385d054101d59b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Congrats =F0=9F=98=8A<br><br>On Friday 11 November 2016, Kumar Animesh &lt;=
+<a href=3D"mailto:animesh@unicommerce.com">animesh@unicommerce.com</a>&gt; =
+wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bord=
+er-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><br></div>
+</blockquote><br><br>-- <br><div dir=3D"ltr"><div><div>-- Regards, Akshay K=
+ochhar<br></div>Software Engineer<br></div><div>M:9999315765<br></div>Unico=
+mmerce eSolutions Pvt. Ltd.<br><img src=3D"https://demo.ucdn.in/img/uniThem=
+e/logo.png?v=3D1"><br><div><div><br></div></div></div><br>
+
+--94eb2c03272022385d054101d59b--

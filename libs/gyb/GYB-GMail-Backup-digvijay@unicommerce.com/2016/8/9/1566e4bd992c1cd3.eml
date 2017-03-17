@@ -1,0 +1,116 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp492833oic;
+        Tue, 9 Aug 2016 00:54:39 -0700 (PDT)
+X-Received: by 10.107.53.156 with SMTP id k28mr99823657ioo.134.1470729279633;
+        Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+Return-Path: <tech+bncBDXLTO4I5UBBBP4YU26QKGQETXEE5SA@unicommerce.com>
+Received: from mail-it0-x245.google.com (mail-it0-x245.google.com. [2607:f8b0:4001:c0b::245])
+        by mx.google.com with ESMTPS id z198si29440626iod.137.2016.08.09.00.54.39
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::245 is neither permitted nor denied by best guess record for domain of tech+bncbdxlto4i5ubbbp4yu26qkgqetxee5sa@unicommerce.com) client-ip=2607:f8b0:4001:c0b::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::245 is neither permitted nor denied by best guess record for domain of tech+bncbdxlto4i5ubbbp4yu26qkgqetxee5sa@unicommerce.com) smtp.mailfrom=tech+bncBDXLTO4I5UBBBP4YU26QKGQETXEE5SA@unicommerce.com
+Received: by mail-it0-x245.google.com with SMTP id i64sf22865814ith.2
+        for <digvijay@unicommerce.com>; Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=xvCQdSazrPVtv60oknOBuVVaIIbl7TYzLw5QzIuYK2I=;
+        b=FSfKzZibPuSxBtgEGSPZe/E+Zo5l//G37UtfbQreq+KmmDti7KAuc80wbzztyhMjGV
+         5h8i12aSCEGIvYRFBQXtfoAdyLkFFjURoC6xonWb0pPXwqPpHZPQ/TK4Y32m/JG9mDsE
+         JGVuROVgZC9BHNZ/Kxe5jJmiYSbt5ZsPdlHNERrENAj9YNe3SMZUgVWnBltA1is1XHQq
+         3dM/V3hDfgh/GE06nKV5j9g4wqDDl4mc7oCgBrkOBmpszjQ2yIwcE58S+7fDaQrH95l8
+         SQwcZsIq3wx7KIf9skDpFUj1kbjJhDMgT2hMtqwMON05VqN+BIOMYNns7LHzoUcSpOCg
+         wnVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=xvCQdSazrPVtv60oknOBuVVaIIbl7TYzLw5QzIuYK2I=;
+        b=E9K5tsnqy9Wpmcez9k1OwsV4D7kGkrBIIyG6LkRw3ZAnBKbV7Y0Uwb7duEDACKB0wE
+         EZXUy/u2cSQlRLY4GyAmbEHW0tF+xp2GHEqd7FxSxgczr9Xbncdnf/zoE7GQz+Uzlykz
+         gaLB5K4oiXZx25ciBBID5LotlmP1+rnb5NOfNiTAysNrdbpxt0xp8xQoioS55xjFDJrB
+         TWSfFsovHQv66nsWxQknSqeeYj6mN6IEB8u18z1DlwLvBA8tD8wzdGxCZ8a90iZEgXo7
+         +/PN15rnoQOkKvHjtImDhfixupx+GqIWVXLwJOREwCj8PRi9L+UV9CmziBDXUSI4TlS6
+         8u6g==
+X-Gm-Message-State: AEkooutHYwawieZRWWuSk7SWhmWpPRuFD3sOglClca12qL6IbJNDFos6MqKpwYkQ2KefeA==
+X-Received: by 10.36.57.69 with SMTP id l66mr18413980ita.5.1470729279339;
+        Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.30.227 with SMTP id n90ls10867432otn.43.gmail; Tue, 09 Aug
+ 2016 00:54:39 -0700 (PDT)
+X-Received: by 10.55.132.198 with SMTP id g189mr31813257qkd.87.1470729279171;
+        Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+Received: from mail-qk0-x234.google.com (mail-qk0-x234.google.com. [2607:f8b0:400d:c09::234])
+        by mx.google.com with ESMTPS id 37si22838643qtu.94.2016.08.09.00.54.39
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::234 is neither permitted nor denied by best guess record for domain of vani@unicommerce.com) client-ip=2607:f8b0:400d:c09::234;
+Received: by mail-qk0-x234.google.com with SMTP id t7so5509547qkh.0
+        for <tech@unicommerce.com>; Tue, 09 Aug 2016 00:54:39 -0700 (PDT)
+X-Received: by 10.55.123.5 with SMTP id w5mr33794838qkc.172.1470729278972;
+ Tue, 09 Aug 2016 00:54:38 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.55.80.215 with HTTP; Tue, 9 Aug 2016 00:54:38 -0700 (PDT)
+From: Vani Verma <vani@unicommerce.com>
+Date: Tue, 9 Aug 2016 13:24:38 +0530
+Message-ID: <CALmT4vm5NAaMvKxoDZ9zZE1OB3xs3JJ5BdGQGo5wxZ0t319kyg@mail.gmail.com>
+Subject: Lunch outing today @ 1340 hrs
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	Designer Team <designer@unicommerce.com>, UI Team <ui@unicommerce.com>, 
+	Mukesh Bhardwaj <mukesh.bhardwaj@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c065db43bf92d05399ed8e1
+X-Original-Sender: vani@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c09::234 is neither permitted nor denied by best
+ guess record for domain of vani@unicommerce.com) smtp.mailfrom=vani@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c065db43bf92d05399ed8e1
+Content-Type: text/plain; charset=UTF-8
+
+Dear All
+
+We are planning a lunch outing to bid farewell to our very lovely team mate
+Radhika today. Please be available for the same.
+
+Details:
+Time of departure: 1:40 pm
+Venue: Indian Grill Room, 315, Suncity Business Tower, Golf Course Road,
+Gurgaon
+
+Thanks.
+
+--94eb2c065db43bf92d05399ed8e1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear All<div><br></div><div>We are planning a lunch outing=
+ to bid farewell to our very lovely team mate Radhika today. Please be avai=
+lable for the same.</div><div><br></div><div>Details:</div><div>Time of dep=
+arture: 1:40 pm</div><div>Venue: Indian Grill Room,=C2=A0<span style=3D"col=
+or:rgb(51,55,61);font-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Ne=
+ue&quot;,Helvetica,Arial,sans-serif;font-size:14px;line-height:19.999px">31=
+5, Suncity Business Tower,=C2=A0</span><span style=3D"color:rgb(51,55,61);f=
+ont-family:&quot;Source Sans Pro&quot;,&quot;Helvetica Neue&quot;,Helvetica=
+,Arial,sans-serif;font-size:14px;line-height:19.999px">Golf Course Road</sp=
+an><span style=3D"color:rgb(51,55,61);font-family:&quot;Source Sans Pro&quo=
+t;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;font-size:14px;lin=
+e-height:19.999px">, Gurgaon</span></div><div><br></div><div>Thanks.</div><=
+/div>
+
+--94eb2c065db43bf92d05399ed8e1--

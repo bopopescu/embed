@@ -1,0 +1,365 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp686940qge;
+        Sun, 6 Nov 2016 10:16:35 -0800 (PST)
+X-Received: by 10.202.205.71 with SMTP id d68mr2191638oig.120.1478456195410;
+        Sun, 06 Nov 2016 10:16:35 -0800 (PST)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o6.em.bitbucket.org (o6.em.bitbucket.org. [167.89.38.188])
+        by mx.google.com with ESMTPS id s16si12847831otd.270.2016.11.06.10.16.35
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 06 Nov 2016 10:16:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) client-ip=167.89.38.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=I8J56srWictxwJyhSNFNXwg8NtY=; b=WoTi581WonLWDuBiyrXD51p
+	3NW33q5VNAqXaGA6QLZ4Gs9BFZXLc1K8/zU33W9vqbJG8HMXdA5Pl2aFhqI/0LSy
+	+AwZuc1GZxvdRlcSvnjQkTiQnowGYrTYfY42t2DuIik2PiOasAlnrZO2PCOW68Dy
+	SJ40VmrNaTXM4fjBfIbE=
+Received: by filter0824p1mdw1.sendgrid.net with SMTP id filter0824p1mdw1-10810-581F7382-C
+        2016-11-06 18:16:34.101090922 +0000 UTC
+Received: from celery-worker-107.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0002p1iad1.sendgrid.net (SG) with ESMTP id cd2OT8QxRDKZYOFDTU-lZg
+	for <digvijay@unicommerce.com>; Sun, 06 Nov 2016 18:16:34.135 +0000 (UTC)
+Received: from celery-worker-107.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-107.ash1.bb-inf.net (Postfix) with ESMTP id 1F3472C093C
+	for <digvijay@unicommerce.com>; Sun,  6 Nov 2016 18:16:34 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============5996295903551938848=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #22: GoPigeon Integrated!
+ (unicommercetechnology/uniware)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Sun, 06 Nov 2016 18:16:34 -0000
+Auto-Submitted: auto-generated
+Message-ID: <prcomment-26343698@bitbucket.org>
+References: <pr-unicommercetechnology/uniware/22@bitbucket.org>
+ <pr-unicommercetechnology/uniware/22@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniware/22@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/vyN3rhteYKsMbUsFFHdfSH9StgExRDgEqvzl
+ EnltvmfLJ1nik/gR1mPb8g5dqryoPvrROKx+c10mWDAVSIUGzpKfviMHlDzfz5Htnkyt1lQr2Ptz0h
+ eb474g7jb9FfB3sR0Y0c6XsFyI+5nV3JPu+k/eYo717pNQcQ19cRJw3Fze0QOPWGy/9wi4w9sxTvHS
+ P6NMNQzOnWbJawQn1A8eoc
+
+--===============5996295903551938848==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+New comment on pull request:
+
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/22/gopigeon-integrated#comment-26343698
+
+Akshay Agarwal said:
+
+Remove all the remove queries. They wont be needed as GOPIGEON is integrated for first time.
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/22/unwatch/digvijay095/8377a105d1ef7e0606b8746c868a298627e7e62f/
+
+--===============5996295903551938848==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" class="comment-container no-box" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: none; border-radius: 5px; padding: 0; background: #f5f5f5">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td class="main-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <div style="border: 1px solid #ccc; border-radius: 5px; background-color: #fff; padding: 0">
+                
+<span style="display: none; display: none !important;">
+  
+    Akshay Agarwal commented on pull request #22: GoPigeon Integrated!
+  
+</span>
+<table style="width: 100%; border-collapse: collapse">
+  <tbody>
+    
+      <tr>
+        <td class="comment-filename" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-radius: 5px 5px 0 0">UniwareResources/db-scripts/mongo/commonMongo_2.js</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    
+    
+      <tr>
+        <td class="diff-line addition first" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px; border-top: 1px solid #ccc">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>275</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+})</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>276</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>277</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+db.uniwareScript.re<wbr>move({name : 'SCRAPE<wbr>R_SCRIPT_GOPIGEON'},<wbr>{multi : true})</wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>278</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+db.scriptVersion.re<wbr>move({name : 'SCRAPE<wbr>R_SCRIPT_GOPIGEON'},<wbr>{multi : true})</wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="line-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc">
+            <div style="border: 1px solid #ccc; background: #fff; padding: 20px; border-radius: 5px">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    
+                      
+
+<td class="comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+  <table style="width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td class="comment-avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+          
+            
+              <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1478452970" style="border-radius: 3px">
+            
+          
+        </td>
+        <td class="comment-main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              
+                <tr>
+                  <td class="comment-user" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+                    
+                      
+                        <strong>Akshay Agarwal</strong> commented on pull request #22:
+                      
+                    
+                  </td>
+                </tr>
+                
+                  <tr>
+                    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+                      <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/22/gopigeon-integrated#comment-26343698" style="color: #3572b0; text-decoration: none">GoPigeon Integrated!</a>
+                    </td>
+                  </tr>
+                
+              
+              <tr>
+                <td class="comment-content markup-content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 15px">
+                  
+                    <p style="margin-bottom: 0; margin: 10px 0 0 0; padding: 0; margin-top: 0">Remove all the remove queries. They wont be needed as GOPIGEON is integrated for first time.</p>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="actions secondary" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 20px 0 0; color: #707070; border-top: 1px solid #cccccc; line-height: 1">
+            
+            
+              
+                <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/22/gopigeon-integrated#comment-26343698" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+              
+            
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</td>
+
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>279</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+db.getSiblingDB('un<wbr>iware')['uniwareScri<wbr>pt'].insert({_class:<wbr>"com.uniware.core.vo<wbr>.UniwareScriptVO", n<wbr>ame:"SCRAPER_SCRIPT_<wbr>GOPIGEON",script:"",<wbr>version:"1.0",http_p<wbr>roxy_server:"",enabl<wbr>ed:true,created: new<wbr> Date(),updated: new<wbr> Date()});</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>280</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+db.tenantProfile.fi<wbr>nd().forEach(functio<wbr>n(doc){db.uniwareScr<wbr>ipt.find({name:"SCRA<wbr>PER_SCRIPT_GOPIGEON"<wbr>}).forEach(function(<wbr>x){db.scriptVersion.<wbr>insert({_class:"com.<wbr>uniware.core.vo.Scri<wbr>ptVersionVO", tenant<wbr>Code:doc.tenantCode,<wbr>name:x.name,version:<wbr>"1.0",created: new D<wbr>ate(),updated: new D<wbr>ate()});})})</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition last" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-bottom-left-radius: 5px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>281</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc; border-bottom-right-radius: 5px'>+var decoded_SCRAPER<wbr>_SCRIPT_GOPIGEON = d<wbr>b.eval('decodeHex (\<wbr>"3c73637261706572206<wbr>e616d653d22534352415<wbr>045525f5343524950545<wbr>f474f504947454f4e223<wbr>e0a202020203c7661722<wbr>06e616d653d2275726c2<wbr>22076616c75653d22687<wbr>474703a2f2f676f70696<wbr>7656f6e2e62697a2f656<wbr>36f6d2d6170692f76332<wbr>f747261636b2f7368697<wbr>06d656e747322202f3e0<wbr>a202020203c766172206<wbr>e616d653d22736869706<wbr>d656e7444657461696c4<wbr>c697374222076616c756<wbr>53d22237b6e6577206a6<wbr>176612e7574696c2e417<wbr>27261794c69737428297<wbr>d222f3e0a202020203c7<wbr>66172206e616d653d227<wbr>3656c6c65724170694e6<wbr>16d65222076616c75653<wbr>d22237b2373686970706<wbr>96e6750726f766964657<wbr>2506172616d657465727<wbr>32e67657428276d61726<wbr>b65745f6e616d6527297<wbr>d222f3e0a
+ 20202020
+ 3c6<wbr>66f726561636820636f6<wbr>c6c656374696f6e3d222<wbr>37b23747261636b696e6<wbr>74e756d626572737d222<wbr>07661723d22747261636<wbr>b696e674e756d6265722<wbr>23e0a202020202020202<wbr>03c766172206e616d653<wbr>d22736869706d656e744<wbr>4657461696c4974656d2<wbr>23e0a202020202020202<wbr>0202020203c215b43444<wbr>154415b0a20202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020207b0a202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020226177625f6e756<wbr>d626572223a2022237b2<wbr>3747261636b696e674e7<wbr>56d6265727d222c0a202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>0202022706172746e657<wbr>222203a2022220a20202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020207<wbr>d0a0a202020202020202<wbr>02020202020202020202<wbr>020205d5d3e3c2f76617<wbr>23e0a202020202020202<wbr>03c6c6f67206c6576656<wbr>c3d22696e666f2220766<wbr>16c756
+ 53d22237
+ b23736<wbr>869706d656e744465746<wbr>1696c4974656d7d222f3<wbr>e0a20202020202020203<wbr>c7661722076616c75653<wbr>d22237b23736869706d6<wbr>56e7444657461696c4c6<wbr>973742e6164642823736<wbr>869706d656e744465746<wbr>1696c4974656d297d222<wbr>f3e0a202020203c2f666<wbr>f72656163683e0a20202<wbr>0203c766172206e616d6<wbr>53d22726571756573744<wbr>26f6479223e0a2020202<wbr>0202020203c215b43444<wbr>154415b0a20202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>020207b0a20202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202273686<wbr>9706d656e745f6465746<wbr>1696c73223a205b237b2<wbr>3736869706d656e74446<wbr>57461696c4c6973747d5<wbr>d2c0a202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>020202020226170695f7<wbr>6657273696f6e223a202<wbr>2302e31222c0a2020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202020202020226<wbr>d61726b65745f6e616d6<wbr>5223a2022237b2373656<wbr>c6c65724170694e616d6<wbr>57d222c0a20202020202<wbr>020
+ 20202020
+ 202020202<wbr>02020202020202020202<wbr>02020202020202276656<wbr>e646f725f6e616d65223<wbr>a2022237b2373656c6c6<wbr>5724170694e616d657d2<wbr>22c0a202020202020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>02020202022706173737<wbr>76f7264223a2022237b2<wbr>373656c6c65724170694<wbr>e616d657d220a2020202<wbr>02020202020202020202<wbr>02020202020202020202<wbr>0202020207d0a0a20202<wbr>020202020205d5d3e3c2<wbr>f7661723e0a202020203<wbr>c6c6f67206c6576656c3<wbr>d22696e666f222076616<wbr>c75653d22237b2372657<wbr>175657374426f64797d2<wbr>22f3e0a202020203c687<wbr>474702075726c3d22237<wbr>b2375726c7d22206d657<wbr>4686f643d22706f73742<wbr>2207661723d227265737<wbr>06f6e7365222074696d6<wbr>56f75743d223830223e0<wbr>a20202020202020203c6<wbr>86561646572206e616d6<wbr>53d22436f6e74656e742<wbr>d54797065222076616c7<wbr>5653d226170706c69636<wbr>174696f6e2f6a736f6e2<wbr>22f3e0a2020202020202<wbr>0203c626f64793e237b2<wbr>372657175657374426f6<wbr>4797d3c2f626f64793e0<wbr>a202020203c2f6874747<wbr>
+ 03e0a202
+ 020203c6c6f6<wbr>7206c6576656c3d22696<wbr>e666f222076616c75653<wbr>d22237b23726573706f6<wbr>e73657d222f3e0a20202<wbr>0203c7472793e0a20202<wbr>020202020203c7661722<wbr>06e616d653d227265737<wbr>06f6e73654a736f6e222<wbr>076616c75653d22237b5<wbr>428636f6d2e756e69666<wbr>965722e636f72652e757<wbr>4696c732e4a736f6e557<wbr>4696c73292e737472696<wbr>e67546f4a736f6e28237<wbr>26573706f6e7365297d2<wbr>22f3e0a2020202020202<wbr>0203c696620636f6e646<wbr>974696f6e3d22237b237<wbr>26573706f6e73654a736<wbr>f6e2e676574282765727<wbr>26f7227292e676574417<wbr>3537472696e6728292e6<wbr>57175616c73282774727<wbr>56527297d223e0a20202<wbr>02020202020202020203<wbr>c7363726970744572726<wbr>f72206d6573736167653<wbr>d22547261636b696e672<wbr>053746174757320436f7<wbr>56c64204e6f742042652<wbr>05570646174656421222<wbr>f3e0a202020202020202<wbr>03c2f69663e0a2020202<wbr>0202020203c737461727<wbr>4546167206e616d653d2<wbr>2536869706d656e74732<wbr>2202f3e0a20202020202<wbr>020203c76616c7565546<wbr>167206e616d653d22446<w
+ br>17465
+ 466f726d6174222<wbr>076616c75653d2264642<wbr>d4d4d4d2d79797979204<wbr>8483a6d6d3a7373222f3<wbr>e0a20202020202020203<wbr>c766172206e616d653d2<wbr>2726573756c747349746<wbr>57261746f72222076616<wbr>c75653d22237b2372657<wbr>3706f6e73654a736f6e2<wbr>e6765742827726573756<wbr>c747327292e676574417<wbr>34a736f6e41727261792<wbr>8292e6974657261746f7<wbr>228297d222f3e0a20202<wbr>020202020203c7768696<wbr>c6520636f6e646974696<wbr>f6e3d22237b237265737<wbr>56c74734974657261746<wbr>f722e6861734e6578742<wbr>8297d223e0a202020202<wbr>0202020202020203c766<wbr>172206e616d653d22736<wbr>869706d656e742220766<wbr>16c75653d22237b23726<wbr>573756c7473497465726<wbr>1746f722e6e657874282<wbr>97d222f3e0a202020202<wbr>0202020202020203c766<wbr>172206e616d653d22737<wbr>46174757344617465546<wbr>56d70222076616c75653<wbr>d22237b23736869706d6<wbr>56e742e6765742827647<wbr>427292e6765744173537<wbr>472696e6728297d222f3<wbr>e0a20202020202020202<wbr>02020203c766172206e6<wbr>16d653d2273746174757<wbr>344617465222076616c
+ 7<wbr>56
+ 53d22237b5428636f6<wbr>d2e756e69666965722e6<wbr>36f72652e7574696c732<wbr>e446174655574696c732<wbr>92e737472696e67546f4<wbr>46174652823737461747<wbr>5734461746554656d702<wbr>e737562737472696e672<wbr>8302c237374617475734<wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wb
+ r></wbr>
+ </wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr>
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/22/unwatch/digvijay095/8377a105d1ef7e0606b8746c868a298627e7e62f/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/427545736/06888730bd56cecb419ebf1896812ea188548f9b/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/92cdfbf06888/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4ACT-2FRFb2qjoqjClsgwZL-2FGs-2Bm6HQzIqB7aFUJavigvimCngeNYf24GGSLcUd1s953zB8OuAMZ9VeVK-2BG693YSbMkIPWMoMSH188vv1XaklbboOiy-2BUWh5bPbR6Qf01p6znA9la1qEWa-2FUHpvLZrgljyYDnFWKtf-2FN5GqQyUYxzpJHt9Fz-2F1B-2BwM5fLJ0Q7-2B0-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============5996295903551938848==--

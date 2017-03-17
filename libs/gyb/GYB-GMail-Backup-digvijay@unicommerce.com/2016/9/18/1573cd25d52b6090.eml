@@ -1,0 +1,554 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.190.130 with SMTP id i124csp26419itf;
+        Sun, 18 Sep 2016 03:23:22 -0700 (PDT)
+X-Received: by 10.55.86.7 with SMTP id k7mr25476382qkb.202.1474194201841;
+        Sun, 18 Sep 2016 03:23:21 -0700 (PDT)
+Return-Path: <112-TZM-766.0.11220.0.0.5648.7.29614550-2@em-sj-77.mktomail.com>
+Received: from smtp-out-212-42.amazon.com (smtp-out-212-42.amazon.com. [72.21.212.42])
+        by mx.google.com with ESMTP id d141si6939564qka.32.2016.09.18.03.23.20
+        for <digvijay@unicommerce.com>;
+        Sun, 18 Sep 2016 03:23:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 112-tzm-766.0.11220.0.0.5648.7.29614550-2@em-sj-77.mktomail.com designates 72.21.212.42 as permitted sender) client-ip=72.21.212.42;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amazon.com;
+       spf=pass (google.com: domain of 112-tzm-766.0.11220.0.0.5648.7.29614550-2@em-sj-77.mktomail.com designates 72.21.212.42 as permitted sender) smtp.mailfrom=112-TZM-766.0.11220.0.0.5648.7.29614550-2@em-sj-77.mktomail.com;
+       dmarc=pass (p=QUARANTINE dis=NONE) header.from=amazon.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=amazon.com; i=@amazon.com; q=dns/txt; s=amazon201209;
+  t=1474194201; x=1505730201;
+  h=date:from:reply-to:to:message-id:subject:mime-version:
+   list-unsubscribe;
+  bh=yT4oXtMaAy4hArRvv4wvuTJEW2w5xLPHGaDY+TQY52A=;
+  b=jzKX4q5Rezljh3OMFYtW/9LiNgJQv0hB+LUM3bAvSXgcz6LwU9DzxdsW
+   Hy/4Me7D6PfZMZjt2PDJiZyuxi1ATCqfNaJq78R6jcjGgznOOsYIQQrWf
+   A/qm+P3TwUNBE2soW5NYsFgY/HW2vujs6DNJ2Krj5PSewL7Zai2Necxlu
+   A=;
+Return-Path: <aws-marketing-email-replies@amazon.com>
+X-MSFBL: ZGlndmlqYXlAdW5pY29tbWVyY2UuY29tQGR2cC0xOTktMTUtMjE1LTY0QGJnLXNq
+	ZC0wM0AxMTItVFpNLTc2Njo0ODczNjoxMTIyMDo4MzAzNTowOjU2NDg6NzoyOTYx
+	NDU1MC0y
+Received: from [10.0.87.249] ([10.0.87.249:53938] helo=sjmas03.marketo.org)
+	by sjmta13.marketo.org (envelope-from <aws-marketing-email-replies@amazon.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 71/1C-50731-5BA6ED75; Sun, 18 Sep 2016 05:21:41 -0500
+Date: Sun, 18 Sep 2016 05:21:41 -0500 (CDT)
+From: Amazon Web Services <aws-marketing-email-replies@amazon.com>
+Reply-To: aws-marketing-email-replies@amazon.com
+To: digvijay@unicommerce.com
+Message-ID: <1091275880.-1664560719.1474194101161.JavaMail.root@sjmas03.marketo.org>
+Subject: Get free hands-on practice with AWS in a live environment
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_-1664560720_71362358.1474194101161"
+X-PVIQ: mkto-112TZM766-000001-000000-082224
+X-Binding: bg-sjd-03
+X-MarketoID: 112-TZM-766:48736:11220:83035:0:5648:7:29614550-2
+X-MktArchive: false
+List-Unsubscribe: <mailto:O4ZHIOKNONXVIZLQNU4USNCJLAZHMUDXNBUEOTCCKJLFOVKJJFGGQQZYN5XGISS2J5XVSPI.11220.5648.7@unsub-sj.mktomail.com>
+X-Mailfrom: 112-TZM-766.0.11220.0.0.5648.7.29614550-2@em-sj-77.mktomail.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+
+------=_Part_-1664560720_71362358.1474194101161
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Get free hands-on practice with AWS using Self-Paced Labs
+
+
+Looking to get hands-on practice with AWS? Free =E2=80=9CIntroduction to AW=
+S=E2=80=9D self-paced labs from qwikLABS provide real-world experience with=
+ our most popular cloud products and services.
+
+
+Take a Self-Paced Lab =C2=BB <http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3=
+MdelD1hIp1f2qRxHRhoDJWBUmM5GfPq871ASOkCI2HR5W8K-SuiftSIhjHxfseac98w6vQnKioi=
+OGom7tAaJgLqCehia5D9Rk-4_wvNi7--I05SWbtcgQBiVK4GuKl0h0Lbt3k21yZck7FcocS8ujZ=
+UKaiUVdvaGKnB70HVFk-1Iex92DsIat4iugihtZ0HKXMbiXGIBJRpcLHnSJAbeyY5NdCSoSJVYC=
+b-XuNOZo64XoxMUIET7kB7tNgEUOeUdzqtZ-zef-cli8_fQe2LC2tCOBNDvzrdxQE4r162MsRzS=
+69B1PctoZVf-VB7m60VpRr5EAYgLeji4u9_Vy0SShgV97Oo=3D/ek062M00020ZTY0g0bQO20t>
+
+
+Self-paced labs use a live practice environment and step-by-step instructio=
+ns to help you gain confidence with AWS and learn how to:
+
+ - Launch and configure a virtual machine using Amazon Elastic Compute Clou=
+d (EC2) <http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelDwB2g2d6MqGg7Z3cx=
+Rlzmfei3Sqj_MwbWEJwrH1oJ9bw7iNNYLvXeE_Ir2krPAkGJXPGEfcQAjCgB26OgWi94ohRqst6=
+hGZKXwea4Y9dcNYexehp05HZKTfnlJFMozJMjlsk7SlUhx1xp33AolMZ7xzM3IO_Gn6vDkbts8I=
+OooH6boIzp59BrNvRjtWEMUbIUnCCzfNMjvu6NpTCDfvAZbbAA94-qgsuHgLDXKQboit5R243MM=
+wRidl7b8p12XNRXqp02aX3BMcNE1qSYAMZ8vY2tOrIr75vFhbKeIHgSKtdgblfOU6Zpi1TKSTXi=
+VQSug=3D=3D/ek062M00020ZTY0g0bQO20t>
+ - Manage files or objects using Amazon Simple Storage Service (S3) <http:/=
+/email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelD-XWr1Ly0tRQ7j9UaHTDPxNemLa3CjjP=
+8VoC1SyX0P7mwm5p_j6DXLJmpjExwGpzDCKqHgbqPHHNbhY9B04CMKoStTtbqqP2ehR1kCPpq5w=
+yXxFsTBXyPwMTIUtq_N5t4lfEy6wtbQrpvRrKFRheiCH5VQ6gEAocqTbGQt3Q8uFpzimsVi4SRU=
+RhFfcOf9ABSslg7mzEJcWGQqArzBXGhqQ_U_BJFK9KLu84yIhkJ73X8of4_WrLcAjbHGXZW8dvH=
+iM4kXYxbGjTa5x-XebDJOol3PsMGwUrVOl1nTFxqO8A-W3MIiCNRlnwwvUOQoq8CQ=3D=3D/ek0=
+62M00020ZTY0g0bQO20t>
+ - Create a MySQL database using Amazon Relational Database Service (RDS) <=
+http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelDzIBDliLRmhhMwSC9xpZWM9qHb=
+BwvQedRecQIMuyfbqbMISY1cgxTTJ7V9KlfwxKPUBaJYRae93Ico-uwNs48h7j1VojOvzW4pL-H=
+reMTjWpuyXz2o_pAGv70i_eZ51YjbC-XpgU8ZVqYINiCqK5dTqyOuklBYEM0ZcYxzvR0t8zfkTW=
+9_aWtItRSU25ctNuokEqFlySEtjlMkr40MDJzwWR7w8nHrOhenzfJCZvBUR5usKVhR3BhY2sy_y=
+ol0rQq6R4DAABW3pUzoKI3H0ThbxSYJeuYulTX7kEQmLFzNy-fCW7VxqZYt2gRtNuK8HDbA=3D=
+=3D/ek062M00020ZTY0g0bQO20t>
+
+
+
+
+We hope you enjoyed receiving this message. If you'd rather not receive fut=
+ure emails from Amazon Web Services,  unsubscribe here <http://email.awsclo=
+ud.com/dc/sRhgdM26bquWWERQj_H99lCavgYp1xy4_-5c9n1WxRAg-Iit3iVTUYZUZlQmzz1BT=
+dI04NvsSqvrTM6rSnQGNK7Z_G6-zH4bcFNO__1cW3sTvCSmdsJCkMCAxX_fMt_jmAyaMG98kj5x=
+S89vW6jhf5s98bKBQjQI9FcnfeONxq1PQBTSXKsA2X3q4SXQeenIEdsucOZZVU4basXZ8d1J1Ll=
+mKkVl6yYOSyAUiV4zWjT85yqWuOxMJ81H7QVVB2A1Xnvz2dosBpO0kIlupTumuVvva440V4ImO4=
+NDYM_k1xM=3D/ek062M00020ZTY0g0bQO20t>.=20
+Amazon Web Services, Inc. is a subsidiary of Amazon.com, Inc. Amazon.com is=
+ a registered trademark of Amazon.com, Inc.
+ This message was produced and distributed by Amazon Web Services, Inc., 41=
+0 Terry Ave. North, Seattle, WA 98109-5210.=20
+ =C2=A9 2016, Amazon Web Services, Inc. or its affiliates. All rights reser=
+ved. View our  privacy policy <http://email.awscloud.com/dc/ajD_BapU74vzOhW=
+VQvr7p2gvewIU_49R6VB0mTGKdZVexaS6HkCMOe9KHtV6i_MeuDLe0Hyf3HBUgSh0KtROykKSW2=
+CSU_L92ODSm3iK-DbqU5b6AOaFGusBEaNepC1Ptvkp_Uzk7QSjQPQML_ZnydVw1G_JEIynvzMac=
+359d1IKYn-H9XyTKUoXtccKGKqTo248Bu_ojnpILElr1k4ZCVGLhx87mmuxyy7FSPvmCWsyDkeC=
+38WACu-cmkyO-H6G7KytHkYWEefRWPAwIUL7sA=3D=3D/ek062M00020ZTY0g0bQO20t>.
+
+--------------------------------------------
+
+------=_Part_-1664560720_71362358.1474194101161
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<style type="text/css">
+/* Specifics */
+#outlook a {
+        padding: 0;
+}
+.ReadMsgBody {
+        width: 100%;
+}
+.ExternalClass {
+        width: 100%;
+}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+        line-height: 100%;
+}
+body, table, td, a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+table, td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        border-collapse: collapse;
+}
+img {
+        -ms-interpolation-mode: bicubic;
+}
+/* Resets */
+body {
+        Margin: 0;
+        padding: 0;
+        min-width: 100%;
+        background-color: #f8f8f8;
+}
+img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+}
+table {
+        border-collapse: collapse !important;
+}
+body {
+        height: 100% !important;
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+}
+body {
+        margin: 0 !important;
+}
+div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+}
+/* iOS Links */
+.apple-footer a {
+        color: #000000;
+        text-decoration: none;
+}
+a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+}
+.wrapper {
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+/* Responsive Columns */
+.one-column .contents {
+        text-align: left;
+}
+.one-column p {
+        font-size: 14px;
+        Margin-bottom: 10px;
+}
+.two-column {
+        text-align: center;
+        font-size: 0;
+}
+.two-column .column {
+        width: 100%;
+        max-width: 278px;
+        display: inline-block;
+        vertical-align: middle;
+}
+.contents {
+        width: 100%;
+}
+.two-column .contents {
+        font-size: 14px;
+        text-align: left;
+}
+.two-column img {
+        max-width: 280px;
+        height: auto;
+}
+.two-column .text {
+        padding-top: 10px;
+}
+.three-column {
+        text-align: center;
+        font-size: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+.three-column .column {
+        width: 100%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+}
+.three-column .contents {
+        font-size: 14px;
+        text-align: center;
+}
+.three-column img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+}
+.three-column .text {
+        padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 525px) {
+table[class="responsive-table"] {
+        width: 100% !important;
+}
+table[class="responsive-column"] {
+        width: 100% !important;
+        height: auto !important;
+}
+td[class="full"] {
+        width: 100% !important;
+        padding: 0px !important;
+        border: 0px solid #ffffff !important;
+}
+td[class="col-centered"] {
+        text-align: center !important;
+        padding: 10px 0px 10px 0px !important;
+}
+td[class="col-centered-line"] {
+        text-align: center !important;
+        padding: 10px 0px 10px 0px !important;
+        border-bottom: 1px solid #e8e8e8 !important;
+}
+td[class="padding-main"] {
+        padding: 10px 5% 10px 5% !important;
+        text-align: left !important;
+}
+td[class="social-container"] {
+        margin: 0 auto;
+        padding-top: 10px !important;
+        width: 100% !important;
+        text-align: center !important;
+        display: inline-block !important;
+}
+td[class="padding-footer"] {
+        padding: 10px 5% 10px 5% !important;
+        text-align: center !important;
+        font-size: 9px !important;
+}
+img[class="Logo-Shrink"] {
+        width: 100px !important;
+        height: auto !important;
+        text-align: left;
+}
+img[class="img-max"] {
+        width: 100% !important;
+        height: auto !important;
+}
+.socialPod {
+        display: inline-block;
+        width: 14%;
+        text-align: center;
+}
+.socialDivider {
+        display: inline-block;
+        width: 7%;
+}
+/* Buttons on Mobile */
+td[class="mobile-wrapper"] {
+        padding: 10px 5% 15px 5% !important;
+}
+table[class="mobile-button-container"] {
+        margin: 0 auto;
+        width: 100% !important;
+}
+a[class="mobile-button"] {
+        width: 80% !important;
+        padding: 15px !important;
+        border: 0 !important;
+        font-size: 18px !important;
+}
+/* Responsive Columns */
+.two-column .column, .three-column .column {
+        max-width: 100% !important;
+}
+.two-column img {
+        max-width: 100% !important;
+}
+.three-column img {
+        max-width: 50% !important;
+}
+}
+</style>
+</head>
+<body bgcolor="#F8F8F8" style="margin:0px; padding:0px; background-color:#f8f8f8; " ><!-- Hidden Preheader -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; " ><tr style="font-size:0px; line-height:0; mso-line-height-alt:0; -webkit-text-size-adjust:none; mso-margin-top-alt:0px; " ><td style="display:none !important; visibility:hidden; mso-hide:all; font-size:1px; color:#f8f8f8; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; " ><div class="mktEditable" id="Preview-Line" ><div></div></div>
+</td>
+</tr>
+</table>
+<center class="wrapper" style="width:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; " ><!-- Outer Table -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#F8F8F8" style="background-color:#f8f8f8; " ><tr ><td align="center" style="padding:15px; " class="full" ><table width="600" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#ffffff; width:600px; " class="responsive-table" ><!-- Inner Containter Table -->
+<tr ><td style="border:1px solid #e8e8e8; font-family:Helvetica, Arial, sans-serif; color:#000000; " class="full" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border-collapse:collapse; background-color:#ffffff; " ><tr ><td style="padding:0px; margin:0px; display:block; font-family:Helvetica, Arial, sans-serif; " ><div class="mktEditable" id="logo" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="padding: 20px 20px 10px 20px;" class="padding-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="left"><a href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelD1hIp1f2qRxHRhoDJWBUmM5wW620mmvVv6FECKR0rLCa8CI5BvGK75lJEN-V1l2z_WPuLAr06c5QX4OHmk8MCSwGYhYYHSxfXMfWMlQSMdR-3U3IJ1ZImgTNy3Cr4veErgGZqlELPmMKUjG2GAyZGdPk8AYSjcct6nh96TGMvcIdVUzaOaH_Z5PVqERLhmG3dzrppJW3T2QvOsubN0JHvZ3-w71g0E6JfpbXDkDlsGn1qCZIwnxkg8pUVT5BASrHEFu0rjqCNQKG9UQtL8jm-Hc=/ek062M00020ZTY0g0bQO20t" target="_blank"
+><img src="https://s3.amazonaws.com/awsemailuploads/uploads/aws_tandc.png" alt="Amazon Web Services" border="0" class="Logo-Shrink" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="mktEditable" id="full-banner" ></div>
+</td>
+</tr>
+<!-- Main Content -->
+<tr ><td style="padding:10px 20px 20px 20px; " class="padding-main" ><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#ffffff; " ><!-- Block 1 -->
+<tr ><td align="left" style="padding:0px; margin:0px; display:block; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:24px; " ><div class="mktEditable" id="Heading" ><div align="center" style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 20px; text-align: center;">Get free hands-on practice with AWS&nbsp;using Self-Paced Labs<br /><br /> <br /></div></div>
+<div class="mktEditable" id="Block-1" ><div>Looking to get hands-on practice with AWS? Free &ldquo;Introduction to AWS&rdquo; self-paced labs from qwikLABS provide real-world experience with our most popular cloud products and services.<br /></div></div>
+<div class="mktEditable" id="Event-Details" ></div>
+<div class="mktEditable" id="OrangeButton" ></div>
+<div class="mktEditable" id="Block-2" ></div>
+<div class="mktEditable" id="Featured-Speaker" ></div>
+<div class="mktEditable" id="DarkGrey-Button" ><table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody>
+<tr>
+<td align="left" style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 14px; line-height: 24px; padding: 0px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+<tbody>
+<tr>
+<td align="center" style="padding: 20px 0px 20px 0px;">
+<table border="0" cellspacing="0" cellpadding="0" class="responsive-table">
+<tbody>
+<tr>
+<td align="center" style="border-radius: 3px; font-size: 18px; font-family: Helvetica, Arial, sans-serif; line-height: 24px;" bgcolor="#333333"><a href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelD1hIp1f2qRxHRhoDJWBUmM5GfPq871ASOkCI2HR5W8K-SuiftSIhjHxfseac98w6vVJKWGMZvTPJScMOo8liUmMS0fjB2M9UqVSB5b8o4UNWprdwjX9XANhQRUWBu50Ko6LLkG6dV3npWNU5uZ7PnVhWq_KGjE165g74h3gSscCxehipT_qUa5a4498jmLg-Gotrr_1KoYFeeNRnCTwBV-ZnXOXsJHeQnjJECGgNRKpbnsPlKdLLlvxhcq-vV_OOgdSZFy3Ykxrojskd-tgoGlhSuKb6aC_Tmx-QGv-3W3M56p4-zps4I8dXLo2UT76iXmBSmTdkcHR3IWVzrGA7hQEw8U8VcPH2mlVUx4iQpt6ncs5VCJ5z8BlxIfUgSwcKaw==/ek062M00020ZTY0g0bQO20t" style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px 15px 25px; border: 2px solid #333333; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button" target="_blank" title="Take a Self-Paced Lab &raquo;"
+><strong>Take a Self-Paced Lab &raquo;</strong></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="mktEditable" id="Secondary-CTA" ></div>
+<div class="mktEditable" id="Signature-Block" ><div>Self-paced labs use a live practice environment and step-by-step instructions to help you gain confidence with AWS and learn how to:</div>
+<ul>
+<li>Launch and configure a virtual machine using <a href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelDwB2g2d6MqGg7Z3cxRlzmfeGLu53HwLK7un_allOdQX_jDyGNH-kI6bL55yZy1b8lIgi2g5Quy3hDB3mju-Q46pRHGDg4VVMg0rTtyLdeYryfmghvT0qv2PXBHy1WINHs3DgXOaWZDI5BkD1DTzUsolOTc2ySEUMO_T7t6Vc0JUSkbxi6u46u791zb9_VRvpx2dqG6GmgABJc2iCug3zlmcQ69b6R7uFtwgzGASkjFD3k8pF6cZjnrfFd--MfYqn5cAsWd5gpi7uqMYj6_fuNDxP0ZjNrbqItnmRk1zqjUz_JXhZ_hCu2Ue2zs0EjdCMfBttvH8GaKyR4zt2CncjF1_GrxCkogKIzKUCYCP1En7d/ek062M00020ZTY0g0bQO20t" target="_blank" title="Amazon Elastic Compute Cloud (EC2)" style="color: #146eb4; text-decoration: none;"
+>Amazon Elastic Compute Cloud (EC2)</a></li>
+<li>Manage files or objects using <a href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelD-XWr1Ly0tRQ7j9UaHTDPxMe08Rb4b4mP6dmfHNcA7AXTbNWTSu0VG7D2QQFv_ukwWg1ny3NBl4dgaVNebiWSfi62jbOrVNtDghyQVLTnLnskuLzd6Atr9j5BhCoybzFaBG0Fn0wfwFHmL5zdSEMD-Kq7JnptuJAZhtw1Mp0xfKipigqmP230KyDWrZFUImJYM3Aa1nEmR7zFjg1Qehuj5fRbA50OFdLE_mt9NNSjnCOvZ5y167RhsboyzcmAaVB4AjKMjx2FXJHcwFJfr7qLL8HQ2Iia7RIjP7ELHpnVZOMqMqqtrIiFO_QQqFIdlkc7Xsdy0spMzgE-zHpFscK8DBe9teAVH_x6OAHmdGPNg5F/ek062M00020ZTY0g0bQO20t" target="_blank" title="Amazon Simple Storage Service (S3)" style="color: #146eb4; text-decoration: none;"
+>Amazon Simple Storage Service (S3)</a></li>
+<li>Create a MySQL database using <a href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelDzIBDliLRmhhMwSC9xpZWM87bmDDATyqlMYni9Ek9LezYVUufjI2ASlx1xq9i5WA5QhoKZb3MYi-AX9TpB5seIcLrO_BxvW6oN8fc2XDo9b_C8_9SwyciYT6RaPNS28q_b0EmGn6YzbPZi3OQyZFSs96CJBZZLcxCpe9yJCvnDDOAQ-cYTewB61IhKqc0BXjAoSNR4OgQa6iiI2JTWtbB4vKwnrAOLBiylw4oWdCl4HImfBVVA7YW2xTGfVP40o1PeXKRJsy_n5oEf8P-6XgAxpYmwneeh5142HsnfloPoOUB9rTzINW7iXTCY258PLkomXj6HLvtus2leXG_u-8aY9PFjYofH2VNtLzs33VtN8B/ek062M00020ZTY0g0bQO20t" target="_blank" title="Amazon Relational Database Service (RDS)" style="color: #146eb4; text-decoration: none;"
+>Amazon Relational Database Service (RDS)</a></li>
+</ul></div>
+<div class="mktEditable" id="Social-Media" >
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="right" width="100%" class="social-container" style="padding: 20px 0px 10px 0px;"><span class="socialPod"> <a href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7pwr993A-PVrTjB0O_rEx8WJ7dBQUfoxL9U1eE0YKWSfesEuZ2ZNJk-jRvZYLCHJI-Sy_LWCaPuiDhHoYOKdcDbGi4RSSmLFmiJ6m1MRhHO8bWRIUWlD2pWHJg_AdLnK8mHtlU3vwbnpmkGC_GmL--y6NXFlk4zLEh5IVB9uMfqWVyY2UFDTcEv3MqhkulVPT8CW7kErfherNxDhxJ4NeIvauPMd_HMhAyHRs76t5S2jjk2paxW_wCq9--K0E8rz0wx1MHLNRat_253vF0a8yhNs=/ek062M00020ZTY0g0bQO20t"
+><img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/aws-email-blog.png" alt="AWS Blog" 
+width="20" height="20" border="0" /></a></span>&nbsp;<span class="socialDivider">&nbsp;<img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/aws-email-footer-line.png" alt="ln brk" />&nbsp;</span>&nbsp;<span class="socialPod"> <a href=
+"http://email.awscloud.com/n0T20bZ00gkO0MZ06b20tY0"
+><img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/icon_fb.png" alt="Facebook" width="20" height="20" 
+border="0" /></a></span>&nbsp;&nbsp;<span class="socialPod"> <a href=
+"http://email.awscloud.com/Q0YM06Z0Tc0Og2kbt000020"
+><img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/icon_tw.png" alt="Twitter" width="20" height="20" border="0" /></a></span>&nbsp;&nbsp;<span class="socialPod"> <a href=
+"http://email.awscloud.com/b0000tZOYTd2M2b1000g60k"
+><img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/icon_yt.png" 
+alt="YouTube" width="20" height="20" border="0" /></a></span>&nbsp;&nbsp;<span class="socialPod"> <a href=
+"http://email.awscloud.com/AY2U00TZ00ktb2g00O0606M"
+><img src="http://na-sj06.marketo.com/rs/112-TZM-766/images/icon_ss.png" alt="Slideshare" width="20" height="20" border="0" /></a> </span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mktEditable" id="Quick-Links" >
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td style="padding: 10px 0px 10px 0px; border-top: 1px solid #e8e8e8;">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+<tbody>
+<tr>
+<td align="center">
+<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+<tbody>
+<tr>
+<td align="center" style="font-family: Helvetica, Arial, Sans-serif; font-size: 9px; color: #999999; line-height: 16px;"><a href=
+"http://email.awscloud.com/dc/yuZkfPEXXFT65tdReNucEvTRm1nqq5Eg9ByfCCxPZLBhFWAGCfvufj6dhVwTzEtOVQivE0qjzQstOCi372qn58a3tnGWs7bB9lyzUeyEMrw4L-pkLZ4CwRj5HeXtIews5eaiq6GjQ86hxhjtCK_Tv53Omvxh7hPwijZ614gzeFap9kiI5gV7WM4ZBiOd3WakN-aiDiU_l5p0LFQKFprbLMCxUqTmaTwzlmFWM1Zhm1djNzykd8B_4zrtzCp2zGLFx_zPPx2bjkWTUEC1P7fY7xEX_RObhy58EsdoIEyyUAw=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> My Account </a>| <a  href=
+"http://email.awscloud.com/dc/KwqiTCOQ16Q1JCi3MdelD3ZZGcncVANDEUTkhckMhmjKLpc5CeluLOBeryeJSliZOd7HSaDnjFzd0Abmoc1XBiuESPcbeU4s_xxSnWccLcokcepbhcfiOX9vojxZJEI_j92HLzzHwtAyKxhysxRJykxdirsBXAADBmXwR2-SNGS0GDYDbTbZzqaXYRiOOeO0bFbeFzVisz46Rw5esKc2G984VfWjngbPqaAnl6OHxQ6QDF5n_hkDkJzJ7Vij7LTXfaBE4G9Rwz_86On9wfgsvplINNqzrvszycro0JvWn7TGEVozvjdT0FM6PtBCeMe9/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Getting Started</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p4cqVisGqB1O6HX4o5TDTFPHjYjB0mnTCzeqU2ae_UKuvLf4SGbP4p2v8y9oC1lgBYAZ3G6PPriIt9Z9RMWWuKlk42yQUNiozS52NjQNnMmI4B1zjOntJ2JOJWglw5wX5iCnOx9j37MmYF6fKhMOenqHnEAw9N_DI4n7_vfVBhgUDDbPsYFqcUXtVFVOYFau8kDNzGJOmFMUmWVch1udyIgynUfgOUTeBAUwLEBwoeAcMPEL1373o0EgzV6iy_fzLVWhZXGQqb3POnuWhzPBRmc=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Products</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p8U1m0pThWPS8HDkzJoucnUuXHXiDe7Ph7gqGCnX3LZQrKUENeKCXVfgm9tMLvlJf5VL5fN-YavhbG37X-gAX6dkIjuIVFarIwqeqS7Rdqe1mtxASDhVbliaQMTnV83-yVfPwJkI6tk5QbKccg8uXnUu88nyf5Yo1XbQfMTP65RL9ub-DYaS0djYKfOPcpF0bb2jU7paUptgRVXQNr2YbiBN6b6xUrTmi5_7v2TD3fI5togLFKg3vQIh3pEJZgBKQw8Dh8JGdBModCUwgRhtcN0=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Solutions</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p2cy1ELLlkvByqWei9bfR--hojGlhPzUN78r_Zch2HtbeIbd_VDVEdQnxMWNbo5ZsdBPlm_eKuWJafn_sKbsGHvb_nuIvcNHHhx4qT6QMhWHHIGky06KfIhtjAro2B8dGhRkQxt0V9FNxCX7Xml400RM9ItKIeqAguLLUxXGOqW-fhaKE-4DS4-wW9djziQfSGJ3syQ0fVwPo_-q_g7NnG3b4ve2hUFizm2bU3AxiFcL2qzO6s73pbUy8JlE5RqOiCRieZSMSaszLsWgAjBD4LY=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Pricing</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7pwZEstDV9Ps9416YONcLSEF8r-AaBoFaCUYu1ZF75He0sIk8yzHNxdPEhJ4UNNMc61X0AowT979R6Ju_XbmysGnx2lkoVUgfkilRxhNH-4Bkkul3evFV4AQaureSLhXDUvPKuGiLJzxXtC5u9VNIwSwKh11zt-sftSTGVCTAnLdobQX8gLejRd1GsvHwK32uRXG7yPJjRxWSGVfYXf0nGwZ-7BOhbjOwcIkOtpBz_ShQQyuorrntYXXCdSbSfZDIpmOoHCkPPYn_7AxpWbM80Uc=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Partners</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p-ZQ749iALJ6Yd3d1oPtC01N1IC_o2OvptCjYrzUTP1po01fJ_fh0V7xQxTUh1G9tvM6ywKJIkxuKH4exoWnKpaBcK5dhL8SDzxEOJtp3Nk1JNRgP7FzANmAci72eU-3fuONe7K2sk0yAyhr8_my_qbFfHR5zHNhCVNcWKeXNz2OZ2SAGuVvYP259EplAayQFbDyNrROSBKQstY3EI5ifnPFUav7_nmtZr1nZehWEr0MvXXW58Sttl-OgT_kVTrU68hyi14qxjfYR3rOK8xb3-4=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Documentation</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p_qWKeonTop1TVJlHau9PECVqCWxK_yFPuI6uoEMmeaCNsiIz0g9j-eAwIscMR4WgiZZ44BBUUXG_e5prByc5jMmNOKAEtaoZWEEuXR0M9YxhN7Qri574XxBIp2lqPpDMblE0Zz62LdzCVhJuP5o1b0wHmO-ePsY8FHuA4K2U6zFC7CcW39Vzv6zJ6QrXH5QxJmVPTEnPCq25PlwTV7VfKnJKB22hmtaiwl-DrkY-kos4I32T8xn3-j6yzQktxDgxtV2he6rkdclvGaXdejLLV4=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Training</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p9MwfMxNMOCe_0VHXzfN8dN-Pg8LCpQSQaN0TBrjXosT8IVHM7g9SjZ9JhEtgldhBbE61cNIsQQOawSlciDAWFrRIfSmnZ8uGLrcvl4XlEwbIVYeFq8S8yqPB8MOE0Str2XT6x6IljpGUfoNwq73owSS-7e1WtRiQPUGxAzLSZkwc8maKFyCqMxHUsxrbijk1MdjDQ-gLRGYLt5cdg0432U0_Led8qcxuhqNwIBXuI6hCfnuWd5kZycciiJjCrYy6Cvbdc1KGEeYuCg3njZkHAIqRLAxQbUKOUxpSPtAFlw_/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> Events &amp; Webinars</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p_6kJwt0TTW5-lUgzrRRksWwNnZYFu3dhhhur2StMVZQFg1cUIitrT8WWDwBZaIYh_ZYZ-xjCa32FemduAw7vSSz-7QCumbJp3HcAE1wCdOeUQsjQ54A3PnpNbjtv9Mhk9NFs7Mo83N99XGiGQAZcUAugMCHS2n0r27OjAhHvzP5h_vi45w3py8CaLAF0xlZs5m4fpr-CvArxnUMQPPXz0kR9UK26A9iy6hzZ2MPT6YZAzRdFLYcFwks7JyV9-SIKVawkEpDs0hwygyzzee97IWzXoH6XNmnJ2E0ERTxTkFg/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> AWS Activate</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p7og2A_qEWVUdkv18t9fey9FRpCN_3oiMil77N9r0aFd-GccevKgcNSPO3coplfTZ3_kgODYQnLljqxnWL-jTjyjAFWkDm3COIMRoeolJpk0Od4gOpVJatJKbGuFl8uNcURPOHNvj0Plrg-dLZnQsz_DuwW2Yo8JwFHTnXFb42F5ARlpPkMsc9clP6C6NR_7_X_bBBwGl64-sbShlCCUzx-yPYvfmmM-gAk63GVgbdNA1yxjeW-HUH3U4f2uigcRhK8XrA403F2VBfol-_qiJuc=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+> What's&nbsp;New</a> | <a  href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p0486BTljVMiJxb-dUE36Fa71K9s92Yg6Y5tTGnJhLaJejTDXVIYVfoMD3UDh4kiaRzIrUvOYHsHYObkjxLo0Tx_fvBXadZtYHUe9E5bZ5kNu6n544QWqDFb4awq-bmiTSN_Y7hFsMUbnbSLxJJN8D1q_oyJj9nd8Gi6ypMQcvH5fNd9n3RAxVY4l52_-i4X7mxLBMyi-d7UhsUPIXFA4I2atSvISyTm39gnyKSAfUnUTzS9N5MzjNNfWhC40a9ANgtfSjppKmXlsj1j9lY0kvc=/ek062M00020ZTY0g0bQO20t" style="color: #146eb4; text-decoration: none;"
+>Blog</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mktEditable" id="Footer" >
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td style="padding: 10px 0px 10px 0px; border-top: 1px solid #e8e8e8;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" width="100%" style="font-size: 9px; font-family: Helvetica, Arial, sans-serif; color: #999999; line-height: 16px;">We hope you enjoyed receiving this message.
+ If you'd rather not receive future emails from Amazon Web Services, <a style="color: #666666; text-decoration: none;" href=
+"http://email.awscloud.com/dc/sRhgdM26bquWWERQj_H99lCavgYp1xy4_-5c9n1WxRAg-Iit3iVTUYZUZlQmzz1BTdI04NvsSqvrTM6rSnQGNE7u0izR2mDymghKXNuyYsudUrrtxaGAobg8-Ot4QymF55pgX15kJDZjJ1P3slj4l4kLbv5wWf8vicmXkWMQ66LzoYNgKHhba9IPDH-aSFnIbzVl15SvgFqM-iH4d776DagCgmZEyPFnnPNbah9w-kRXQtVWZK7K0Cs9KP33ToOgaQxWbkukOdJZ4LglQtpdoMBRgG8nFpGdDnqXKwEhfedKJ1jjinVQCFdrmDsOUDoeQ9fVXE5PF44m5XFBcrGgdA==/ek062M00020ZTY0g0bQO20t" target="_blank"
+> unsubscribe here</a>.
+ <br />Amazon Web Services, Inc.
+ is a subsidiary of Amazon.com, Inc.
+ Amazon.com is a registered trademark of Amazon.com, Inc.<br /> This message was produced and distributed by Amazon Web Services, Inc., 410 Terry Ave.
+ North, Seattle, WA 98109-5210.
+ <br /> &copy; 2016, Amazon Web Services, Inc.
+ or its affiliates.
+ All rights reserved.
+ View our <a style="color: #666666; text-decoration: none;" href=
+"http://email.awscloud.com/dc/ajD_BapU74vzOhWVQvr7p2gvewIU_49R6VB0mTGKdZU2bt0WxsTDK85v5VPSMlXdRpYUpO8FbYTt0zyRNctpWyQUJ71sZIcvSRjr0t8nCqVddfvduyiTOlgCp-Q6pfHP7JdKlQiWGqZOJxk3fFfk8qSF3lxRshI5_NGK6HeGkZDr3IU8nDghaCIYCdcmwEdUbcR9AV6L4WY101CcZT1G6ZfCVPIY8cU8ftIN7_tBHRJh4FChDgt1XnDgRMfCCTWodl9lLroCCDyRtpzoVFUgOYKODQ9wgr8B3fImj14h5nE=/ek062M00020ZTY0g0bQO20t"
+> privacy policy</a>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- End Main Content --></table>
+</td>
+</tr>
+<!-- End Inner Container Table --></table>
+</td>
+</tr>
+</table>
+<!-- End Outer Table -->
+<div class="mktEditable" id="LitmusAnalytics" ><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="font-size: 1px; color: #f8f8f8; display: block;"><style>@media print{ #_t { background-image: url('https://rmeuaotk.emltrk.com/rmeuaotk?p&d=[UNIQUE]');}} div.OutlookMessageHeader {background-image:url('https://rmeuaotk.emltrk.com/rmeuaotk?f&d=[UNIQUE]')} table.moz-email-headers-table {background-image:url('https://rmeuaotk.emltrk.com/rmeuaotk?f&d=[UNIQUE]')} blockquote #_t {background-image:url('https://rmeuaotk.emltrk.com/rmeuaotk?f&d=[UNIQUE]')} #MailContainerBody #_t {background-image:url('https://rmeuaotk.emltrk.com/rmeuaotk?f&d=[UNIQUE]')}</style><div id="_t"></div>
+<img src="https://rmeuaotk.emltrk.com/rmeuaotk?d=[UNIQUE]" width="1" height="1" border="0" /></td>
+</tr>
+</tbody>
+</table></div>
+</center>
+
+<img src="http://email.awscloud.com/trk?t=1&mid=MTEyLVRaTS03NjY6NDg3MzY6MTEyMjA6ODMwMzU6MDo1NjQ4Ojc6Mjk2MTQ1NTAtMjpkaWd2aWpheUB1bmljb21tZXJjZS5jb20%3D" width="1" height="1" style="display:none !important;" alt="" />
+
+<p></p>
+</body>
+</html>
+------=_Part_-1664560720_71362358.1474194101161--

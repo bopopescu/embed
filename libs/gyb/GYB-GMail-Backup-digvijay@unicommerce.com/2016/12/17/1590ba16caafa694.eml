@@ -1,0 +1,125 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp192809qgd;
+        Fri, 16 Dec 2016 23:14:05 -0800 (PST)
+X-Received: by 10.176.82.214 with SMTP id w22mr5859049uaw.167.1481958845947;
+        Fri, 16 Dec 2016 23:14:05 -0800 (PST)
+Return-Path: <samdeesh@unicommerce.com>
+Received: from mail-ua0-x22b.google.com (mail-ua0-x22b.google.com. [2607:f8b0:400c:c08::22b])
+        by mx.google.com with ESMTPS id y133si3075956vkc.238.2016.12.16.23.14.05
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Dec 2016 23:14:05 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22b is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) client-ip=2607:f8b0:400c:c08::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22b is neither permitted nor denied by best guess record for domain of samdeesh@unicommerce.com) smtp.mailfrom=samdeesh@unicommerce.com
+Received: by mail-ua0-x22b.google.com with SMTP id y13so11630803uay.1
+        for <digvijay@unicommerce.com>; Fri, 16 Dec 2016 23:14:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=CvMW091nHuOUiggziqmTN1Wfz/L5eMdEelNrNsExIe4=;
+        b=VuPeGel/yEnexQd7792k5S3slwXG/kgaFj09gjlThC/hFikBIRP/uC47tJRVEIIxBx
+         /KKMYzIzaEO8bOgdC3EMVzzUbuJrRELJf98sozjS2o7yNuWGIUWtCq4C0MiwGXux91ZF
+         zrmAa24N2RHZ9IhK1mlMNV8F3FZGPccgeRmOUzbBym4ibGTaL0zFfUCdg1GzJOGFASY2
+         KLU7UKldAdjRaRmC9LqO9H8goLxNQEnKgCq1wnxwf5r/7ZxGdOj+JoGczBqwgRUhbr23
+         towtPR1SYiWk0p/aFrXrsO8p23CVk9QMTh9GQ997vLsALZVc50s1GouHR8e4SYmVcssp
+         0JdA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=CvMW091nHuOUiggziqmTN1Wfz/L5eMdEelNrNsExIe4=;
+        b=Db3sphRr5ASyjBCPQfQ+5Hjvv11yU5gvrDRvwCuMwjWLHAKsgo38hl1x9dHFgY2r3z
+         5m+RzcaMlNuPw+Yy40KQ5Ahw35IP1xHmwawm9oc4ZKGRbNrOeELmPyQiHHBwyaBnbjOz
+         dDfdE7feeiI3kjy2Ht0StGg27aMoYpl17ym71VmRtlt9APStosnRZL/mK7OOZs4yfw9Y
+         wrfgYTrAIhiVj8CSjtdkLzGYLVYW8dD/JMXsxFCb3x7uOvtn1HJB9cyc9dKVCMK8/2fo
+         mCHmVnRA3yWznkTrUdtczA8OvXxy2Uo4rH7yHRtzH12NRbB88C47pxdcYTGSsQ3+W5+j
+         TWxw==
+X-Gm-Message-State: AKaTC028JKPOy0lSEXVRVhmztkAPJqPwOXc+uH/KT6tmhkZ7G9x/INPr3msFbZ8UvOePUyJCxW7YU2cK7kmkDg==
+X-Received: by 10.176.0.169 with SMTP id 38mr6052243uaj.34.1481958845613; Fri,
+ 16 Dec 2016 23:14:05 -0800 (PST)
+MIME-Version: 1.0
+References: <CAGz2fOf8MEYve9MCy+5Vk4oDBYZsnbU+QrFucqSBWg-LKV-2eQ@mail.gmail.com>
+ <CALmT4v=MjaRT6TmawxXjCSD26H+b3BHkxF96MYPi3e277d0zvw@mail.gmail.com>
+In-Reply-To: <CALmT4v=MjaRT6TmawxXjCSD26H+b3BHkxF96MYPi3e277d0zvw@mail.gmail.com>
+From: Samdeesh Singh <samdeesh@unicommerce.com>
+Date: Sat, 17 Dec 2016 07:13:55 +0000
+Message-ID: <CAOrbZ4aCQUSE_bJSoYwPGT-9bZD8nZOMJcDXh7ghbOsXOMSkNg@mail.gmail.com>
+Subject: Re: Prankster
+To: Vani Verma <vani@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Garima Arora <garima@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Akshay Kochhar <akshay@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c169da909f160543d56e64
+
+--001a11c169da909f160543d56e64
+Content-Type: text/plain; charset=UTF-8
+
+Done on amex.
+
+On Fri, Dec 16, 2016 at 3:39 PM Vani Verma <vani@unicommerce.com> wrote:
+
+> Done. Paid in the a/c ending with 7008.
+>
+> On Fri, Dec 16, 2016 at 1:12 PM, Rachit Sachdeva <rachit@unicommerce.com>
+> wrote:
+>
+> Total Bill: 6877
+> Total People: 11
+> Per Person: 626
+>
+> Payment Link:
+> https://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp
+>
+> Card Number: 3744 339168 41001
+>
+> Regards,
+> Rachit Sachdeva
+>
+>
+> --
+Regards,
+Samdeesh Singh
+Unicommerce eSolutions Pvt Ltd
+M: 7838037738
+
+--001a11c169da909f160543d56e64
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done on amex.</div><br><div class=3D"gmail_quote"><div dir=
+=3D"ltr">On Fri, Dec 16, 2016 at 3:39 PM Vani Verma &lt;<a href=3D"mailto:v=
+ani@unicommerce.com">vani@unicommerce.com</a>&gt; wrote:<br></div><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc so=
+lid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">Done. Paid in th=
+e a/c ending with 7008.</div><div class=3D"gmail_extra gmail_msg"><br class=
+=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On Fri, Dec 16, 2016 at=
+ 1:12 PM, Rachit Sachdeva <span dir=3D"ltr" class=3D"gmail_msg">&lt;<a href=
+=3D"mailto:rachit@unicommerce.com" class=3D"gmail_msg" target=3D"_blank">ra=
+chit@unicommerce.com</a>&gt;</span> wrote:<br class=3D"gmail_msg"><blockquo=
+te class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1=
+px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg"><div c=
+lass=3D"gmail_msg">Total Bill: 6877</div><div class=3D"gmail_msg">Total Peo=
+ple: 11</div><div class=3D"gmail_msg">Per Person: 626</div><div class=3D"gm=
+ail_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg">Payment Lin=
+k:=C2=A0<a href=3D"https://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_car=
+d.jsp" class=3D"gmail_msg" target=3D"_blank">https://www.billdesk.com/pgids=
+k/pgmerc/amexcard/amex_card.jsp</a></div><div class=3D"gmail_msg"><br class=
+=3D"gmail_msg"></div><div class=3D"gmail_msg">Card Number: 3744 339168 4100=
+1</div><br clear=3D"all" class=3D"gmail_msg"><div class=3D"gmail_msg"><div =
+class=3D"m_-204568779684447127m_-1921790624317871180gmail_signature gmail_m=
+sg"><div dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_msg">Regards,<=
+/div><div class=3D"gmail_msg">Rachit Sachdeva</div><img src=3D"https://d3kj=
+p0zrek7zit.cloudfront.net/uploads/product/image/4364/large_detail_140905366=
+1.png" width=3D"96" height=3D"54" class=3D"gmail_msg"><br class=3D"gmail_ms=
+g"></div></div></div>
+</div>
+</blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Regards,<div>Samdeesh Singh</div><div>Unicom=
+merce eSolutions Pvt Ltd</div><div>M: 7838037738</div></div></div>
+
+--001a11c169da909f160543d56e64--

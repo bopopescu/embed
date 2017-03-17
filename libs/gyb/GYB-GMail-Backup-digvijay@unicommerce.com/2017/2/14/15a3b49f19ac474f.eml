@@ -1,0 +1,461 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Mon, 13 Feb 2017 22:23:06 -0800 (PST)
+Date: Tue, 14 Feb 2017 11:53:06 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sordr9WXyMe=RDUM6Dyv8_7fhN8PfF+z1k9y8Z+w6V+U1g@mail.gmail.com>
+Subject: Error
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Kapil Makhija <kapil@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113a54a2d6b6a905487798b3
+
+--001a113a54a2d6b6a905487798b3
+Content-Type: text/plain; charset=UTF-8
+
+http get failed for url:'https://www.singlekart.com/wp-json/wc/v1/products'
+11:51:37,409 ERROR
+[HTTP-562:rohitgarments:digvijay@unicommerce.com:/data/channel/addChannelConnector][][HttpInstruction]
+- Exception executing Http Instruction
+com.unifier.core.transport.http.HttpTransportException: Unable to
+execute http get
+	at com.unifier.core.transport.http.HttpSender.executeGet(HttpSender.java:247)
+~[HttpSender.class:?]
+	at com.unifier.core.transport.http.HttpSender.download(HttpSender.java:176)
+~[HttpSender.class:?]
+	at com.unifier.scraper.sl.runtime.HttpInstruction.execute(HttpInstruction.java:239)
+[HttpInstruction.class:?]
+	at com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15)
+[AbstractCompositePI.class:?]
+	at com.unifier.scraper.sl.runtime.RetryInstruction.execute(RetryInstruction.java:29)
+[RetryInstruction.class:?]
+	at com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15)
+[AbstractCompositePI.class:?]
+	at com.unifier.scraper.sl.runtime.ScraperScript.execute(ScraperScript.java:94)
+[ScraperScript.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.verifyAndSyncChannelConnectorParameters(ChannelServiceImpl.java:1063)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody14(ChannelServiceImpl.java:742)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody15$advice(ChannelServiceImpl.java:61)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody16(ChannelServiceImpl.java:1)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl$AjcClosure17.run(ChannelServiceImpl.java:1)
+[ChannelServiceImpl$AjcClosure17.class:?]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+[aspectjrt-1.7.4.jar:?]
+	at com.unifier.services.aspect.TransactionTimerAspect.startTimer(TransactionTimerAspect.java:63)
+[TransactionTimerAspect.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody18(ChannelServiceImpl.java:711)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl$AjcClosure19.run(ChannelServiceImpl.java:1)
+[ChannelServiceImpl$AjcClosure19.class:?]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96cproceed(AbstractTransactionAspect.aj:66)
+[spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect$AbstractTransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72)
+[spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+[spring-tx-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96c(AbstractTransactionAspect.aj:70)
+[spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector(ChannelServiceImpl.java:711)
+[ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.addChannelConnector(ChannelServiceImpl.java:700)
+[ChannelServiceImpl.class:?]
+	at com.unifier.web.controller.ChannelResource.addChannelConnector(ChannelResource.java:200)
+[ChannelResource.class:?]
+	at sun.reflect.GeneratedMethodAccessor4051.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+~[?:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_111]
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:154)
+[resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+[resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+[resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211)
+[resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(ResteasyHandlerAdapter.java:87)
+[resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:74)
+[resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:24)
+[resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWebHandlerTemplate.java:39)
+[resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:45)
+[resteasy-spring-2.3.0.GA.jar:?]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943)
+[spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877)
+[spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966)
+[spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868)
+[spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:644)
+[servlet-api.jar:?]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+[spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+[servlet-api.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+[tomcat-websocket.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at com.codahale.metrics.servlet.AbstractInstrumentedFilter.doFilter(AbstractInstrumentedFilter.java:104)
+[metrics-servlet-3.1.2.jar:3.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at com.unifier.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:68)
+[AccessControlFilter.class:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176)
+[urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145)
+[urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92)
+[urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381)
+[urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:154)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.unifier.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:127)
+[UniwareTokenBasedLoginFilter.class:?]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.unifier.web.security.UniwareSingleSignonFilter.doFilter(UniwareSingleSignonFilter.java:139)
+[UniwareSingleSignonFilter.class:?]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+[spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at com.uniware.web.filter.LockingContextFilter.doFilter(LockingContextFilter.java:29)
+[LockingContextFilter.class:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at com.uniware.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:75)
+[RequestIdentifierFilter.class:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+[spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66)
+[log4j-core-2.0-rc1.jar:2.0-rc1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:673)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+[catalina.jar:8.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:537)
+[catalina.jar:8.0.15]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1085)
+[tomcat-coyote.jar:8.0.15]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658)
+[tomcat-coyote.jar:8.0.15]
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+[tomcat-coyote.jar:8.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1556)
+[tomcat-coyote.jar:8.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1513)
+[tomcat-coyote.jar:8.0.15]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[?:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[tomcat-util.jar:8.0.15]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
+	at sun.security.ssl.SSLSessionImpl.getPeerCertificates(SSLSessionImpl.java:431)
+~[?:1.8.0_111]
+	at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:126)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:437)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DecompressingHttpClient.execute(DecompressingHttpClient.java:130)
+~[DecompressingHttpClient.class:4.2.5]
+	at org.apache.http.impl.client.DecompressingHttpClient.execute(DecompressingHttpClient.java:103)
+~[DecompressingHttpClient.class:4.2.5]
+	at com.unifier.core.transport.http.HttpSender.processGetRequest(HttpSender.java:261)
+~[HttpSender.class:?]
+	at com.unifier.core.transport.http.HttpSender.executeGet(HttpSender.java:243)
+~[HttpSender.class:?]
+	... 131 more
+
+--001a113a54a2d6b6a905487798b3
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><pre style="color:rgb(0,0,0);word-wrap:break-word;white-space:pre-wrap">http get failed for url:&#39;<a href="https://www.singlekart.com/wp-json/wc/v1/products">https://www.singlekart.com/wp-json/wc/v1/products</a>&#39; 
+11:51:37,409 ERROR [HTTP-562:rohitgarments:digvijay@unicommerce.com:/data/channel/addChannelConnector][][HttpInstruction] - Exception executing Http Instruction
+com.unifier.core.transport.http.HttpTransportException: Unable to execute http get
+	at com.unifier.core.transport.http.HttpSender.executeGet(HttpSender.java:247) ~[HttpSender.class:?]
+	at com.unifier.core.transport.http.HttpSender.download(HttpSender.java:176) ~[HttpSender.class:?]
+	at com.unifier.scraper.sl.runtime.HttpInstruction.execute(HttpInstruction.java:239) [HttpInstruction.class:?]
+	at com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15) [AbstractCompositePI.class:?]
+	at com.unifier.scraper.sl.runtime.RetryInstruction.execute(RetryInstruction.java:29) [RetryInstruction.class:?]
+	at com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15) [AbstractCompositePI.class:?]
+	at com.unifier.scraper.sl.runtime.ScraperScript.execute(ScraperScript.java:94) [ScraperScript.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.verifyAndSyncChannelConnectorParameters(ChannelServiceImpl.java:1063) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody14(ChannelServiceImpl.java:742) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody15$advice(ChannelServiceImpl.java:61) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody16(ChannelServiceImpl.java:1) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl$AjcClosure17.run(ChannelServiceImpl.java:1) [ChannelServiceImpl$AjcClosure17.class:?]
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149) [aspectjrt-1.7.4.jar:?]
+	at com.unifier.services.aspect.TransactionTimerAspect.startTimer(TransactionTimerAspect.java:63) [TransactionTimerAspect.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector_aroundBody18(ChannelServiceImpl.java:711) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl$AjcClosure19.run(ChannelServiceImpl.java:1) [ChannelServiceImpl$AjcClosure19.class:?]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96cproceed(AbstractTransactionAspect.aj:66) [spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect$AbstractTransactionAspect$1.proceedWithInvocation(AbstractTransactionAspect.aj:72) [spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281) [spring-tx-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.transaction.aspectj.AbstractTransactionAspect.ajc$around$org_springframework_transaction_aspectj_AbstractTransactionAspect$1$2a73e96c(AbstractTransactionAspect.aj:70) [spring-aspects-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.doAddChannelConnector(ChannelServiceImpl.java:711) [ChannelServiceImpl.class:?]
+	at com.uniware.services.channel.impl.ChannelServiceImpl.addChannelConnector(ChannelServiceImpl.java:700) [ChannelServiceImpl.class:?]
+	at com.unifier.web.controller.ChannelResource.addChannelConnector(ChannelResource.java:200) [ChannelResource.class:?]
+	at sun.reflect.GeneratedMethodAccessor4051.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_111]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_111]
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:154) [resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257) [resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222) [resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:211) [resteasy-jaxrs-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.createModelAndView(ResteasyHandlerAdapter.java:87) [resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:74) [resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:24) [resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyWebHandlerTemplate.handle(ResteasyWebHandlerTemplate.java:39) [resteasy-spring-2.3.0.GA.jar:?]
+	at org.jboss.resteasy.springmvc.ResteasyHandlerAdapter.handle(ResteasyHandlerAdapter.java:45) [resteasy-spring-2.3.0.GA.jar:?]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966) [spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) [spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:644) [servlet-api.jar:?]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) [spring-webmvc-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:725) [servlet-api.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-websocket.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at com.codahale.metrics.servlet.AbstractInstrumentedFilter.doFilter(AbstractInstrumentedFilter.java:104) [metrics-servlet-3.1.2.jar:3.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at com.unifier.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:68) [AccessControlFilter.class:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176) [urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145) [urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92) [urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:381) [urlrewritefilter-3.2.0.jar:3.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:146) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:154) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilter(BasicAuthenticationFilter.java:150) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:107) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.unifier.web.security.UniwareTokenBasedLoginFilter.doFilter(UniwareTokenBasedLoginFilter.java:127) [UniwareTokenBasedLoginFilter.class:?]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at com.unifier.web.security.UniwareSingleSignonFilter.doFilter(UniwareSingleSignonFilter.java:139) [UniwareSingleSignonFilter.class:?]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:112) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:73) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160) [spring-security-web-3.2.4.RELEASE.jar:3.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at com.uniware.web.filter.LockingContextFilter.doFilter(LockingContextFilter.java:29) [LockingContextFilter.class:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at com.uniware.web.filter.RequestIdentifierFilter.doFilterInternal(RequestIdentifierFilter.java:75) [RequestIdentifierFilter.class:?]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.1.4.RELEASE.jar:4.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.apache.logging.log4j.core.web.Log4jServletFilter.doFilter(Log4jServletFilter.java:66) [log4j-core-2.0-rc1.jar:2.0-rc1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [catalina.jar:8.0.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142) [catalina.jar:8.0.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [catalina.jar:8.0.15]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610) [catalina.jar:8.0.15]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:673) [catalina.jar:8.0.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [catalina.jar:8.0.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:537) [catalina.jar:8.0.15]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1085) [tomcat-coyote.jar:8.0.15]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:658) [tomcat-coyote.jar:8.0.15]
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222) [tomcat-coyote.jar:8.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1556) [tomcat-coyote.jar:8.0.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1513) [tomcat-coyote.jar:8.0.15]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.0.15]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
+	at sun.security.ssl.SSLSessionImpl.getPeerCertificates(SSLSessionImpl.java:431) ~[?:1.8.0_111]
+	at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:126) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:437) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:643) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906) ~[httpclient-4.2.5.jar:4.2.5]
+	at org.apache.http.impl.client.DecompressingHttpClient.execute(DecompressingHttpClient.java:130) ~[DecompressingHttpClient.class:4.2.5]
+	at org.apache.http.impl.client.DecompressingHttpClient.execute(DecompressingHttpClient.java:103) ~[DecompressingHttpClient.class:4.2.5]
+	at com.unifier.core.transport.http.HttpSender.processGetRequest(HttpSender.java:261) ~[HttpSender.class:?]
+	at com.unifier.core.transport.http.HttpSender.executeGet(HttpSender.java:243) ~[HttpSender.class:?]
+	... 131 more</pre></div>
+
+--001a113a54a2d6b6a905487798b3--

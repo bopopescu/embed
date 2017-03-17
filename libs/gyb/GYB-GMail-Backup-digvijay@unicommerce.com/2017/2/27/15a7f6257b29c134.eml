@@ -1,0 +1,865 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp828763qgu;
+        Mon, 27 Feb 2017 03:43:55 -0800 (PST)
+X-Received: by 10.223.139.68 with SMTP id v4mr15206274wra.70.1488195835704;
+        Mon, 27 Feb 2017 03:43:55 -0800 (PST)
+Return-Path: <shipra@unicommerce.com>
+Received: from mail-wr0-x232.google.com (mail-wr0-x232.google.com. [2a00:1450:400c:c0c::232])
+        by mx.google.com with ESMTPS id 74si13202384wmq.55.2017.02.27.03.43.55
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 27 Feb 2017 03:43:55 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c0c::232 is neither permitted nor denied by best guess record for domain of shipra@unicommerce.com) client-ip=2a00:1450:400c:c0c::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c0c::232 is neither permitted nor denied by best guess record for domain of shipra@unicommerce.com) smtp.mailfrom=shipra@unicommerce.com
+Received: by mail-wr0-x232.google.com with SMTP id g10so50289621wrg.2
+        for <digvijay@unicommerce.com>; Mon, 27 Feb 2017 03:43:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=n8f90Mi7OLalNC1z9MRw3q//wkOIvco9722XnXwwRHM=;
+        b=2Sy0dYUYooraLeGwsZ/poA9j9mpHZHMJW4zidp3XdK+2KNIlBMvYoySUg3dMaQsioU
+         6ofMRD5m3OweFaOWDqWERYqMg/98pIFrwawJR0xy8uhDQ2/1eQ2hY6G4Q/WtoUDQldLa
+         4z96j4qQ3g1l8IJKOUJ4Y2dHBA10xbSchZn7NGZ/zlRrwPv8plnM7ETvU6nSXx3E/0BP
+         hljGS1r5XHiBRSN3hnevmDmWfwm3XnR6v9XyQiFf+qSVXk3FwRlRKKCbDf8bZLnPQgBC
+         rf4dpZXm9Yz/vwv5ehuXBdPDejSBrYuAKgAR3GMRtZZuA6A64TVTcwu+J2pXcmO6JZhO
+         ECZg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=n8f90Mi7OLalNC1z9MRw3q//wkOIvco9722XnXwwRHM=;
+        b=RaPfY5Aja9Hs7dbWR8/D4xmmPglfToeCP/HKExCmgwhQsUmNLKsWUrq/LGDLHO2029
+         LuXE/bVjZ6qryZzEd3brAeg7u/fQ3wUUSlfwxlvDDSUsPQsjHraDweEl9Udk54o+p48j
+         z0e42/4lylNYqlpNbCirV1PJ3W8ONW2MXmzwWpzeEBmjxvH3j+js3nta4uhpL8idMsCg
+         Be98s3G1xYbmLQHyk9vi352H4w0qfTNw3iZlHt5+S5Nvdjc5BL+TGOqaM+F30LS9KzZt
+         KuFW7xwB3kR1npihpAj2FXeStG1JBU/LwQV1eSLaVBXHowxQxPe7KSyFwBtLtG/dZOan
+         hfZw==
+X-Gm-Message-State: AMke39n3iqODCINU3wfqe4ntfPcII9h2RVOA/YKRsct1VIj38eTAc7tpjVIFJUAA1NiYMbt1y3P8zuhr66nyIA==
+X-Received: by 10.223.149.137 with SMTP id p9mr14173288wrp.89.1488195834906;
+ Mon, 27 Feb 2017 03:43:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.28.174.137 with HTTP; Mon, 27 Feb 2017 03:43:39 -0800 (PST)
+From: Shipra Gupta <shipra@unicommerce.com>
+Date: Mon, 27 Feb 2017 17:13:39 +0530
+Message-ID: <CAEvR4bST6BMjPJ3i=E5Mf62FZTS5NP_LZFzdCuSag+nNZwM16g@mail.gmail.com>
+Subject: html decodehex
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045ddca218a1ad05498198f0
+
+--f403045ddca218a1ad05498198f0
+Content-Type: text/plain; charset=UTF-8
+
+<html>
+<body>
+<table cellspacing="0" cellpadding="0" dir="ltr" border="1"
+       style="table-layout: fixed; width: 100%; font-family:
+'Helvetica Neue', Helvetica, Arial, sans-serif; border-collapse:
+collapse; border: none;">
+    <colgroup>
+        <col width="52">
+        <col width="52">
+        <col width="52">
+        <col width="52">
+        <col width="52">
+        <col width="58">
+        <col width="58">
+    </colgroup>
+    <tbody>
+    <tr style="height: 30px;">
+        <td style="padding: 0px 3px; vertical-align: bottom;
+border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0);
+font-family: arial; font-size: 160%; white-space: nowrap; text-align:
+center;"
+            rowspan="1" colspan="7">#if(${source.name})${source.name}#end
+            to #if(${destination.name})${destination.name}#end
+        </td>
+    </tr>
+    <tr style="height: 23px;">
+        #set ($bagWeight = 0.00)
+        #if($batch.weightInGram)
+            #set($weightInGram=$numberutils.newBigDecimal($batch.weightInGram))
+            #set($divisor=$numberutils.newBigDecimal(1000))
+            #set($bagWeight = $numberutils.divide($weightInGram,$divisor,2))
+        #end
+        <td style="padding: 0px 3px; vertical-align: bottom;
+border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0,
+0, 0); border-left: 1px solid rgb(0, 0, 0); font-size: 100%;
+white-space: nowrap;"
+            rowspan="1" colspan="2">Wt: $bagWeight Kgs
+        </td>
+        <td style="padding: 0px 3px; vertical-align: bottom;
+border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0,
+0, 0); font-size: 100%; white-space: nowrap; text-align: center;"
+            rowspan="1" colspan="3">#if(${dateutils.dateToString($batch.created,
+            'dd-MMM-yyyy
+hh:mm:ss')})${dateutils.dateToString($batch.created,'dd-MMM-yyyy
+hh:mm:ss')} #end
+        </td>
+        <td style="padding: 0px 3px; border-right: 1px solid rgb(0, 0,
+0); border-bottom: 1px solid rgb(0, 0, 0); font-family: arial;
+font-size: 110%; font-weight: bold; word-wrap: break-word;
+vertical-align: middle; text-align: center;"
+            rowspan="3" colspan="2">
+            <div style="max-height:
+68px;">#if(${destination.code})${destination.code}#end</div>
+        </td>
+    </tr>
+    <tr style="height: 23px;">
+        <td style="padding: 0px 3px; border-right: 1px solid rgb(0, 0,
+0); border-bottom: 1px solid rgb(0, 0, 0); border-left: 1px solid
+rgb(0, 0, 0); font-size: 180%; font-weight: bold; white-space: nowrap;
+vertical-align: middle; text-align: center;"
+            rowspan="2" colspan="5">
+            <div style="max-height:
+45px;">#if(${batch.sortCode})${batch.sortCode}#end</div>
+        </td>
+    </tr>
+    <tr style="height: 23px;"></tr>
+    <tr style="height: 23px;">
+        <td style="padding: 0px 3px; vertical-align: middle;
+text-align: center; border-right: 1px solid rgb(0, 0, 0);
+border-bottom: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0,
+0, 0); font-size: 110%;"
+            rowspan="3" colspan="5">
+            <img style="max-height: 68px;" id="barcode"></img>
+        </td>
+        <td style="padding: 0px 3px; border-right: 1px solid rgb(0, 0,
+0); border-bottom: 1px solid rgb(0, 0, 0); font-size: 110%;
+font-weight: bold; color: rgb(0, 0, 0); word-wrap: break-word;
+vertical-align: middle; text-align: center;"
+            rowspan="3" colspan="2">
+            <div style="max-height:
+68px;">#if(${destination.address.city})${destination.address.city}#end</div>
+        </td>
+    </tr>
+    <tr style="height: 23px;"></tr>
+    <tr style="height: 23px;"></tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+--f403045ddca218a1ad05498198f0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><span style=3D"background-color:rgb(239,239,239)">&lt;</span><span st=
+yle=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bol=
+d">html</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span>=
+<br><span style=3D"background-color:rgb(239,239,239)">&lt;</span><span styl=
+e=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold"=
+>body</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><b=
+r><span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">=
+table </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239=
+,239);font-weight:bold">cellspacing=3D</span><span style=3D"color:rgb(0,128=
+,0);background-color:rgb(239,239,239);font-weight:bold">&quot;0&quot; </spa=
+n><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-=
+weight:bold">cellpadding=3D</span><span style=3D"color:rgb(0,128,0);backgro=
+und-color:rgb(239,239,239);font-weight:bold">&quot;0&quot; </span><span sty=
+le=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold=
+">dir=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,2=
+39,239);font-weight:bold">&quot;ltr&quot; </span><span style=3D"color:rgb(0=
+,0,255);background-color:rgb(239,239,239);font-weight:bold">border=3D</span=
+><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-w=
+eight:bold">&quot;1&quot;<br></span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">       </span><span style=3D=
+"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">sty=
+le=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,=
+239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0,255);font-=
+weight:bold">table-layout</span>: <span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">fixed</span>; <span style=3D"color:rgb(0,0,255);font-weight:bold=
+">width</span>: <span style=3D"color:rgb(0,0,255)">100</span>%; <span style=
+=3D"color:rgb(0,0,255);font-weight:bold">font-family</span>: <span style=3D=
+"color:rgb(0,128,0);font-weight:bold">&#39;Helvetica Neue&#39;</span>, <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">Helvetica</span>, <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">Arial</span>, <span style=3D"col=
+or:rgb(0,128,0);font-weight:bold">sans-serif</span>; <span style=3D"color:r=
+gb(0,0,255);font-weight:bold">border-collapse</span>: <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">collapse</span>; <span style=3D"color:rgb(0,=
+0,255);font-weight:bold">border</span>: <span style=3D"color:rgb(0,128,0);f=
+ont-weight:bold">none</span>;<span style=3D"color:rgb(0,128,0);background-c=
+olor:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"backgro=
+und-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"background-co=
+lor:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);backgrou=
+nd-color:rgb(239,239,239);font-weight:bold">colgroup</span><span style=3D"b=
+ackground-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"bac=
+kground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128=
+);background-color:rgb(239,239,239);font-weight:bold">col </span><span styl=
+e=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold"=
+>width=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,=
+239,239);font-weight:bold">&quot;52&quot;</span><span style=3D"background-c=
+olor:rgb(239,239,239)">&gt;</span><br>        <span style=3D"background-col=
+or:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">col </span><span style=3D"color:=
+rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">width=3D</=
+span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);fo=
+nt-weight:bold">&quot;52&quot;</span><span style=3D"background-color:rgb(23=
+9,239,239)">&gt;</span><br>        <span style=3D"background-color:rgb(239,=
+239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb=
+(239,239,239);font-weight:bold">col </span><span style=3D"color:rgb(0,0,255=
+);background-color:rgb(239,239,239);font-weight:bold">width=3D</span><span =
+style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:b=
+old">&quot;52&quot;</span><span style=3D"background-color:rgb(239,239,239)"=
+>&gt;</span><br>        <span style=3D"background-color:rgb(239,239,239)">&=
+lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,23=
+9);font-weight:bold">col </span><span style=3D"color:rgb(0,0,255);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">width=3D</span><span style=3D"co=
+lor:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;=
+52&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span=
+><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;</span><=
+span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-wei=
+ght:bold">col </span><span style=3D"color:rgb(0,0,255);background-color:rgb=
+(239,239,239);font-weight:bold">width=3D</span><span style=3D"color:rgb(0,1=
+28,0);background-color:rgb(239,239,239);font-weight:bold">&quot;52&quot;</s=
+pan><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>      =
+  <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">=
+col </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,2=
+39);font-weight:bold">width=3D</span><span style=3D"color:rgb(0,128,0);back=
+ground-color:rgb(239,239,239);font-weight:bold">&quot;58&quot;</span><span =
+style=3D"background-color:rgb(239,239,239)">&gt;</span><br>        <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">col </span>=
+<span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-we=
+ight:bold">width=3D</span><span style=3D"color:rgb(0,128,0);background-colo=
+r:rgb(239,239,239);font-weight:bold">&quot;58&quot;</span><span style=3D"ba=
+ckground-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"backgrou=
+nd-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);ba=
+ckground-color:rgb(239,239,239);font-weight:bold">colgroup</span><span styl=
+e=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"b=
+ackground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,1=
+28);background-color:rgb(239,239,239);font-weight:bold">tbody</span><span s=
+tyle=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);background-color:rgb(239,239,239);font-weight:bold">tr </span><spa=
+n style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight=
+:bold">style=3D</span><span style=3D"color:rgb(0,128,0);background-color:rg=
+b(239,239,239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0,=
+255);font-weight:bold">height</span>: <span style=3D"color:rgb(0,0,255)">30=
+</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<span =
+style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:b=
+old">&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</s=
+pan><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;</spa=
+n><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-=
+weight:bold">td </span><span style=3D"color:rgb(0,0,255);background-color:r=
+gb(239,239,239);font-weight:bold">style=3D</span><span style=3D"color:rgb(0=
+,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</span><s=
+pan style=3D"color:rgb(0,0,255);font-weight:bold">padding</span>: <span sty=
+le=3D"color:rgb(0,0,255)">0</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">px </span><span style=3D"color:rgb(0,0,255)">3</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <span style=3D"color:rg=
+b(0,0,255);font-weight:bold">vertical-align</span>: <span style=3D"color:rg=
+b(0,128,0);font-weight:bold">bottom</span>; <span style=3D"color:rgb(0,0,25=
+5);font-weight:bold">border-width</span>: <span style=3D"color:rgb(0,0,255)=
+">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <s=
+pan style=3D"color:rgb(0,0,255);font-weight:bold">border-style</span>: <spa=
+n style=3D"color:rgb(0,128,0);font-weight:bold">solid</span>; <span style=
+=3D"color:rgb(0,0,255);font-weight:bold">border-color</span>: <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<span style=3D"color:rg=
+b(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>, <span st=
+yle=3D"color:rgb(0,0,255)">0</span>); <span style=3D"color:rgb(0,0,255);fon=
+t-weight:bold">font-family</span>: <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">arial</span>; <span style=3D"color:rgb(0,0,255);font-weight:bol=
+d">font-size</span>: <span style=3D"color:rgb(0,0,255)">160</span>%; <span =
+style=3D"color:rgb(0,0,255);font-weight:bold">white-space</span>: <span sty=
+le=3D"color:rgb(0,128,0);font-weight:bold">nowrap</span>; <span style=3D"co=
+lor:rgb(0,0,255);font-weight:bold">text-align</span>: <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">center</span>;<span style=3D"color:rgb(0,128=
+,0);background-color:rgb(239,239,239);font-weight:bold">&quot;<br></span><s=
+pan style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weig=
+ht:bold">            </span><span style=3D"color:rgb(0,0,255);background-co=
+lor:rgb(239,239,239);font-weight:bold">rowspan=3D</span><span style=3D"colo=
+r:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;1&=
+quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239=
+,239);font-weight:bold">colspan=3D</span><span style=3D"color:rgb(0,128,0);=
+background-color:rgb(239,239,239);font-weight:bold">&quot;7&quot;</span><sp=
+an style=3D"background-color:rgb(239,239,239)">&gt;</span><span style=3D"co=
+lor:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">#if</s=
+pan><span style=3D"background-color:rgb(247,250,255)">(</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">=
+${</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255=
+);font-weight:bold">source</span><span style=3D"background-color:rgb(247,25=
+0,255)">.</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,=
+250,255);font-weight:bold">name</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(247,250,255);font-weight:bold">}</span><span style=3D"bac=
+kground-color:rgb(247,250,255)">)</span><span style=3D"color:rgb(0,0,128);b=
+ackground-color:rgb(247,250,255);font-weight:bold">${</span><span style=3D"=
+color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">sour=
+ce</span><span style=3D"background-color:rgb(247,250,255)">.</span><span st=
+yle=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bol=
+d">name</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,25=
+0,255);font-weight:bold">}#end</span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold"><br></span><span style=3D"color:rgb(0,0,128);font-weight:bold=
+">            </span>to <span style=3D"color:rgb(0,0,128);background-color:=
+rgb(247,250,255);font-weight:bold">#if</span><span style=3D"background-colo=
+r:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128);background-co=
+lor:rgb(247,250,255);font-weight:bold">${</span><span style=3D"color:rgb(0,=
+0,255);background-color:rgb(247,250,255);font-weight:bold">destination</spa=
+n><span style=3D"background-color:rgb(247,250,255)">.</span><span style=3D"=
+color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">name=
+</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);=
+font-weight:bold">}</span><span style=3D"background-color:rgb(247,250,255)"=
+>)</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255=
+);font-weight:bold">${</span><span style=3D"color:rgb(0,0,255);background-c=
+olor:rgb(247,250,255);font-weight:bold">destination</span><span style=3D"ba=
+ckground-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);=
+background-color:rgb(247,250,255);font-weight:bold">name</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">=
+}#end</span><span style=3D"color:rgb(0,0,128);font-weight:bold"><br></span>=
+<span style=3D"color:rgb(0,0,128);font-weight:bold">        </span><span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:=
+rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">td</span><=
+span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span s=
+tyle=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color=
+:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">tr</span>=
+<span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span =
+style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color=
+:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">tr </span=
+><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-w=
+eight:bold">style=3D</span><span style=3D"color:rgb(0,128,0);background-col=
+or:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"color:rgb=
+(0,0,255);font-weight:bold">height</span>: <span style=3D"color:rgb(0,0,255=
+)">23</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<=
+span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-wei=
+ght:bold">&quot;</span><span style=3D"background-color:rgb(239,239,239)">&g=
+t;</span><br>        <span style=3D"color:rgb(0,0,128);background-color:rgb=
+(247,250,255);font-weight:bold">#set </span><span style=3D"background-color=
+:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128);background-col=
+or:rgb(247,250,255);font-weight:bold">$</span><span style=3D"color:rgb(0,0,=
+255);background-color:rgb(247,250,255);font-weight:bold">bagWeight </span><=
+span style=3D"background-color:rgb(247,250,255)">=3D </span><span style=3D"=
+color:rgb(0,0,255);background-color:rgb(247,250,255)">0.00</span><span styl=
+e=3D"background-color:rgb(247,250,255)">)</span><br>        <span style=3D"=
+color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">#if<=
+/span><span style=3D"background-color:rgb(247,250,255)">(</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">=
+$</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255)=
+;font-weight:bold">batch</span><span style=3D"background-color:rgb(247,250,=
+255)">.</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,25=
+0,255);font-weight:bold">weightInGram</span><span style=3D"background-color=
+:rgb(247,250,255)">)</span><br>            <span style=3D"color:rgb(0,0,128=
+);background-color:rgb(247,250,255);font-weight:bold">#set</span><span styl=
+e=3D"background-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,=
+0,128);background-color:rgb(247,250,255);font-weight:bold">$</span><span st=
+yle=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bol=
+d">weightInGram</span><span style=3D"background-color:rgb(247,250,255)">=3D=
+</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);=
+font-weight:bold">$</span><span style=3D"color:rgb(0,0,255);background-colo=
+r:rgb(247,250,255);font-weight:bold">numberutils</span><span style=3D"backg=
+round-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);bac=
+kground-color:rgb(247,250,255);font-weight:bold">newBigDecimal</span><span =
+style=3D"background-color:rgb(247,250,255)">(</span><span style=3D"color:rg=
+b(0,0,128);background-color:rgb(247,250,255);font-weight:bold">$</span><spa=
+n style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight=
+:bold">batch</span><span style=3D"background-color:rgb(247,250,255)">.</spa=
+n><span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-=
+weight:bold">weightInGram</span><span style=3D"background-color:rgb(247,250=
+,255)">))</span><br>            <span style=3D"color:rgb(0,0,128);backgroun=
+d-color:rgb(247,250,255);font-weight:bold">#set</span><span style=3D"backgr=
+ound-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128);back=
+ground-color:rgb(247,250,255);font-weight:bold">$</span><span style=3D"colo=
+r:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">divisor<=
+/span><span style=3D"background-color:rgb(247,250,255)">=3D</span><span sty=
+le=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold=
+">$</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,25=
+5);font-weight:bold">numberutils</span><span style=3D"background-color:rgb(=
+247,250,255)">.</span><span style=3D"color:rgb(0,0,255);background-color:rg=
+b(247,250,255);font-weight:bold">newBigDecimal</span><span style=3D"backgro=
+und-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,255);backg=
+round-color:rgb(247,250,255)">1000</span><span style=3D"background-color:rg=
+b(247,250,255)">))</span><br>            <span style=3D"color:rgb(0,0,128);=
+background-color:rgb(247,250,255);font-weight:bold">#set</span><span style=
+=3D"background-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0=
+,128);background-color:rgb(247,250,255);font-weight:bold">$</span><span sty=
+le=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold=
+">bagWeight </span><span style=3D"background-color:rgb(247,250,255)">=3D </=
+span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);fo=
+nt-weight:bold">$</span><span style=3D"color:rgb(0,0,255);background-color:=
+rgb(247,250,255);font-weight:bold">numberutils</span><span style=3D"backgro=
+und-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);backg=
+round-color:rgb(247,250,255);font-weight:bold">divide</span><span style=3D"=
+background-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128=
+);background-color:rgb(247,250,255);font-weight:bold">$</span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">=
+weightInGram</span><span style=3D"background-color:rgb(247,250,255)">,</spa=
+n><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-=
+weight:bold">$</span><span style=3D"color:rgb(0,0,255);background-color:rgb=
+(247,250,255);font-weight:bold">divisor</span><span style=3D"background-col=
+or:rgb(247,250,255)">,</span><span style=3D"color:rgb(0,0,255);background-c=
+olor:rgb(247,250,255)">2</span><span style=3D"background-color:rgb(247,250,=
+255)">))</span><br>        <span style=3D"color:rgb(0,0,128);background-col=
+or:rgb(247,250,255);font-weight:bold">#end</span><span style=3D"color:rgb(0=
+,0,128);font-weight:bold"><br></span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold">        </span><span style=3D"background-color:rgb(239,239,23=
+9)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,2=
+39,239);font-weight:bold">td </span><span style=3D"color:rgb(0,0,255);backg=
+round-color:rgb(239,239,239);font-weight:bold">style=3D</span><span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+&quot;</span><span style=3D"color:rgb(0,0,255);font-weight:bold">padding</s=
+pan>: <span style=3D"color:rgb(0,0,255)">0</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold">px </span><span style=3D"color:rgb(0,0,255)">3</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <span st=
+yle=3D"color:rgb(0,0,255);font-weight:bold">vertical-align</span>: <span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold">bottom</span>; <span style=3D"c=
+olor:rgb(0,0,255);font-weight:bold">border-right</span>: <span style=3D"col=
+or:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold=
+">px solid </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</=
+span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb=
+(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span st=
+yle=3D"color:rgb(0,0,255);font-weight:bold">border-bottom</span>: <span sty=
+le=3D"color:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">px solid </span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">rgb</span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"=
+color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>);=
+ <span style=3D"color:rgb(0,0,255);font-weight:bold">border-left</span>: <s=
+pan style=3D"color:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);=
+font-weight:bold">px solid </span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">rgb</span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span st=
+yle=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</=
+span>); <span style=3D"color:rgb(0,0,255);font-weight:bold">font-size</span=
+>: <span style=3D"color:rgb(0,0,255)">100</span>%; <span style=3D"color:rgb=
+(0,0,255);font-weight:bold">white-space</span>: <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">nowrap</span>;<span style=3D"color:rgb(0,128,0);ba=
+ckground-color:rgb(239,239,239);font-weight:bold">&quot;<br></span><span st=
+yle=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bol=
+d">            </span><span style=3D"color:rgb(0,0,255);background-color:rg=
+b(239,239,239);font-weight:bold">rowspan=3D</span><span style=3D"color:rgb(=
+0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;1&quot; =
+</span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);=
+font-weight:bold">colspan=3D</span><span style=3D"color:rgb(0,128,0);backgr=
+ound-color:rgb(239,239,239);font-weight:bold">&quot;2&quot;</span><span sty=
+le=3D"background-color:rgb(239,239,239)">&gt;</span>Wt: <span style=3D"colo=
+r:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">$</span>=
+<span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-we=
+ight:bold">bagWeight</span><span style=3D"color:rgb(0,0,255);font-weight:bo=
+ld"> </span>Kgs<br>        <span style=3D"background-color:rgb(239,239,239)=
+">&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,23=
+9,239);font-weight:bold">td</span><span style=3D"background-color:rgb(239,2=
+39,239)">&gt;</span><br>        <span style=3D"background-color:rgb(239,239=
+,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(23=
+9,239,239);font-weight:bold">td </span><span style=3D"color:rgb(0,0,255);ba=
+ckground-color:rgb(239,239,239);font-weight:bold">style=3D</span><span styl=
+e=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold"=
+>&quot;</span><span style=3D"color:rgb(0,0,255);font-weight:bold">padding</=
+span>: <span style=3D"color:rgb(0,0,255)">0</span><span style=3D"color:rgb(=
+0,128,0);font-weight:bold">px </span><span style=3D"color:rgb(0,0,255)">3</=
+span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <span s=
+tyle=3D"color:rgb(0,0,255);font-weight:bold">vertical-align</span>: <span s=
+tyle=3D"color:rgb(0,128,0);font-weight:bold">bottom</span>; <span style=3D"=
+color:rgb(0,0,255);font-weight:bold">border-right</span>: <span style=3D"co=
+lor:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bol=
+d">px solid </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb<=
+/span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rg=
+b(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span s=
+tyle=3D"color:rgb(0,0,255);font-weight:bold">border-bottom</span>: <span st=
+yle=3D"color:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-w=
+eight:bold">px solid </span><span style=3D"color:rgb(0,0,128);font-weight:b=
+old">rgb</span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D=
+"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>)=
+; <span style=3D"color:rgb(0,0,255);font-weight:bold">font-size</span>: <sp=
+an style=3D"color:rgb(0,0,255)">100</span>%; <span style=3D"color:rgb(0,0,2=
+55);font-weight:bold">white-space</span>: <span style=3D"color:rgb(0,128,0)=
+;font-weight:bold">nowrap</span>; <span style=3D"color:rgb(0,0,255);font-we=
+ight:bold">text-align</span>: <span style=3D"color:rgb(0,128,0);font-weight=
+:bold">center</span>;<span style=3D"color:rgb(0,128,0);background-color:rgb=
+(239,239,239);font-weight:bold">&quot;<br></span><span style=3D"color:rgb(0=
+,128,0);background-color:rgb(239,239,239);font-weight:bold">            </s=
+pan><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);fon=
+t-weight:bold">rowspan=3D</span><span style=3D"color:rgb(0,128,0);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">&quot;1&quot; </span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">=
+colspan=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239=
+,239,239);font-weight:bold">&quot;3&quot;</span><span style=3D"background-c=
+olor:rgb(239,239,239)">&gt;</span><span style=3D"color:rgb(0,0,128);backgro=
+und-color:rgb(247,250,255);font-weight:bold">#if</span><span style=3D"backg=
+round-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(247,250,255);font-weight:bold">${</span><span style=3D"co=
+lor:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">dateut=
+ils</span><span style=3D"background-color:rgb(247,250,255)">.</span><span s=
+tyle=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bo=
+ld">dateToString</span><span style=3D"background-color:rgb(247,250,255)">(<=
+/span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);f=
+ont-weight:bold">$</span><span style=3D"color:rgb(0,0,255);background-color=
+:rgb(247,250,255);font-weight:bold">batch</span><span style=3D"background-c=
+olor:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);background=
+-color:rgb(247,250,255);font-weight:bold">created</span><span style=3D"back=
+ground-color:rgb(247,250,255)">,<br></span><span style=3D"background-color:=
+rgb(247,250,255)">            </span><span style=3D"color:rgb(0,128,0);back=
+ground-color:rgb(247,250,255);font-weight:bold">&#39;dd-MMM-yyyy hh:mm:ss&#=
+39;</span><span style=3D"background-color:rgb(247,250,255)">)</span><span s=
+tyle=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bo=
+ld">}</span><span style=3D"background-color:rgb(247,250,255)">)</span><span=
+ style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:=
+bold">${</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,2=
+50,255);font-weight:bold">dateutils</span><span style=3D"background-color:r=
+gb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);background-color=
+:rgb(247,250,255);font-weight:bold">dateToString</span><span style=3D"backg=
+round-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(247,250,255);font-weight:bold">$</span><span style=3D"col=
+or:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">batch</=
+span><span style=3D"background-color:rgb(247,250,255)">.</span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">=
+created</span><span style=3D"background-color:rgb(247,250,255)">,</span><sp=
+an style=3D"color:rgb(0,128,0);background-color:rgb(247,250,255);font-weigh=
+t:bold">&#39;dd-MMM-yyyy hh:mm:ss&#39;</span><span style=3D"background-colo=
+r:rgb(247,250,255)">)</span><span style=3D"color:rgb(0,0,128);background-co=
+lor:rgb(247,250,255);font-weight:bold">}</span><span style=3D"color:rgb(0,0=
+,128);font-weight:bold"> </span><span style=3D"color:rgb(0,0,128);backgroun=
+d-color:rgb(247,250,255);font-weight:bold">#end</span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold"><br></span><span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">        </span><span style=3D"background-color:rgb(239,2=
+39,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb=
+(239,239,239);font-weight:bold">td</span><span style=3D"background-color:rg=
+b(239,239,239)">&gt;</span><br>        <span style=3D"background-color:rgb(=
+239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color=
+:rgb(239,239,239);font-weight:bold">td </span><span style=3D"color:rgb(0,0,=
+255);background-color:rgb(239,239,239);font-weight:bold">style=3D</span><sp=
+an style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weigh=
+t:bold">&quot;</span><span style=3D"color:rgb(0,0,255);font-weight:bold">pa=
+dding</span>: <span style=3D"color:rgb(0,0,255)">0</span><span style=3D"col=
+or:rgb(0,128,0);font-weight:bold">px </span><span style=3D"color:rgb(0,0,25=
+5)">3</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>; =
+<span style=3D"color:rgb(0,0,255);font-weight:bold">border-right</span>: <s=
+pan style=3D"color:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);=
+font-weight:bold">px solid </span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">rgb</span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span st=
+yle=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</=
+span>); <span style=3D"color:rgb(0,0,255);font-weight:bold">border-bottom</=
+span>: <span style=3D"color:rgb(0,0,255)">1</span><span style=3D"color:rgb(=
+0,128,0);font-weight:bold">px solid </span><span style=3D"color:rgb(0,0,128=
+);font-weight:bold">rgb</span>(<span style=3D"color:rgb(0,0,255)">0</span>,=
+ <span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,=
+255)">0</span>); <span style=3D"color:rgb(0,0,255);font-weight:bold">font-f=
+amily</span>: <span style=3D"color:rgb(0,0,128);font-weight:bold">arial</sp=
+an>; <span style=3D"color:rgb(0,0,255);font-weight:bold">font-size</span>: =
+<span style=3D"color:rgb(0,0,255)">110</span>%; <span style=3D"color:rgb(0,=
+0,255);font-weight:bold">font-weight</span>: <span style=3D"color:rgb(0,128=
+,0);font-weight:bold">bold</span>; <span style=3D"color:rgb(0,0,255);font-w=
+eight:bold">word-wrap</span>: <span style=3D"color:rgb(0,128,0);font-weight=
+:bold">break-word</span>; <span style=3D"color:rgb(0,0,255);font-weight:bol=
+d">vertical-align</span>: <span style=3D"color:rgb(0,128,0);font-weight:bol=
+d">middle</span>; <span style=3D"color:rgb(0,0,255);font-weight:bold">text-=
+align</span>: <span style=3D"color:rgb(0,128,0);font-weight:bold">center</s=
+pan>;<span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);fo=
+nt-weight:bold">&quot;<br></span><span style=3D"color:rgb(0,128,0);backgrou=
+nd-color:rgb(239,239,239);font-weight:bold">            </span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">=
+rowspan=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239=
+,239,239);font-weight:bold">&quot;3&quot; </span><span style=3D"color:rgb(0=
+,0,255);background-color:rgb(239,239,239);font-weight:bold">colspan=3D</spa=
+n><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-=
+weight:bold">&quot;2&quot;</span><span style=3D"background-color:rgb(239,23=
+9,239)">&gt;</span><br>            <span style=3D"background-color:rgb(239,=
+239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb=
+(239,239,239);font-weight:bold">div </span><span style=3D"color:rgb(0,0,255=
+);background-color:rgb(239,239,239);font-weight:bold">style=3D</span><span =
+style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:b=
+old">&quot;</span><span style=3D"color:rgb(0,0,255);font-weight:bold">max-h=
+eight</span>: <span style=3D"color:rgb(0,0,255)">68</span><span style=3D"co=
+lor:rgb(0,128,0);font-weight:bold">px</span>;<span style=3D"color:rgb(0,128=
+,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</span><span =
+style=3D"background-color:rgb(239,239,239)">&gt;</span><span style=3D"color=
+:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">#if</span=
+><span style=3D"background-color:rgb(247,250,255)">(</span><span style=3D"c=
+olor:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold">${</s=
+pan><span style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);fon=
+t-weight:bold">destination</span><span style=3D"background-color:rgb(247,25=
+0,255)">.</span><span style=3D"color:rgb(0,0,255);background-color:rgb(247,=
+250,255);font-weight:bold">code</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(247,250,255);font-weight:bold">}</span><span style=3D"bac=
+kground-color:rgb(247,250,255)">)</span><span style=3D"color:rgb(0,0,128);b=
+ackground-color:rgb(247,250,255);font-weight:bold">${</span><span style=3D"=
+color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">dest=
+ination</span><span style=3D"background-color:rgb(247,250,255)">.</span><sp=
+an style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weigh=
+t:bold">code</span><span style=3D"color:rgb(0,0,128);background-color:rgb(2=
+47,250,255);font-weight:bold">}#end</span><span style=3D"background-color:r=
+gb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);background-c=
+olor:rgb(239,239,239);font-weight:bold">div</span><span style=3D"background=
+-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"background-c=
+olor:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);backgr=
+ound-color:rgb(239,239,239);font-weight:bold">td</span><span style=3D"backg=
+round-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"background-=
+color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);backg=
+round-color:rgb(239,239,239);font-weight:bold">tr</span><span style=3D"back=
+ground-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"background=
+-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);backg=
+round-color:rgb(239,239,239);font-weight:bold">tr </span><span style=3D"col=
+or:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">style=
+=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,23=
+9);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0,255);font-we=
+ight:bold">height</span>: <span style=3D"color:rgb(0,0,255)">23</span><span=
+ style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<span style=3D"col=
+or:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;<=
+/span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    =
+    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span styl=
+e=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold"=
+>td </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,2=
+39);font-weight:bold">style=3D</span><span style=3D"color:rgb(0,128,0);back=
+ground-color:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D=
+"color:rgb(0,0,255);font-weight:bold">padding</span>: <span style=3D"color:=
+rgb(0,0,255)">0</span><span style=3D"color:rgb(0,128,0);font-weight:bold">p=
+x </span><span style=3D"color:rgb(0,0,255)">3</span><span style=3D"color:rg=
+b(0,128,0);font-weight:bold">px</span>; <span style=3D"color:rgb(0,0,255);f=
+ont-weight:bold">border-right</span>: <span style=3D"color:rgb(0,0,255)">1<=
+/span><span style=3D"color:rgb(0,128,0);font-weight:bold">px solid </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<span style=
+=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</spa=
+n>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"color:rgb(=
+0,0,255);font-weight:bold">border-bottom</span>: <span style=3D"color:rgb(0=
+,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px sol=
+id </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<s=
+pan style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255=
+)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"c=
+olor:rgb(0,0,255);font-weight:bold">border-left</span>: <span style=3D"colo=
+r:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold"=
+>px solid </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</s=
+pan>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(=
+0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span sty=
+le=3D"color:rgb(0,0,255);font-weight:bold">font-size</span>: <span style=3D=
+"color:rgb(0,0,255)">180</span>%; <span style=3D"color:rgb(0,0,255);font-we=
+ight:bold">font-weight</span>: <span style=3D"color:rgb(0,128,0);font-weigh=
+t:bold">bold</span>; <span style=3D"color:rgb(0,0,255);font-weight:bold">wh=
+ite-space</span>: <span style=3D"color:rgb(0,128,0);font-weight:bold">nowra=
+p</span>; <span style=3D"color:rgb(0,0,255);font-weight:bold">vertical-alig=
+n</span>: <span style=3D"color:rgb(0,128,0);font-weight:bold">middle</span>=
+; <span style=3D"color:rgb(0,0,255);font-weight:bold">text-align</span>: <s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold">center</span>;<span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+&quot;<br></span><span style=3D"color:rgb(0,128,0);background-color:rgb(239=
+,239,239);font-weight:bold">            </span><span style=3D"color:rgb(0,0=
+,255);background-color:rgb(239,239,239);font-weight:bold">rowspan=3D</span>=
+<span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-we=
+ight:bold">&quot;2&quot; </span><span style=3D"color:rgb(0,0,255);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">colspan=3D</span><span style=3D"=
+color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quo=
+t;5&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</spa=
+n><br>            <span style=3D"background-color:rgb(239,239,239)">&lt;</s=
+pan><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fon=
+t-weight:bold">div </span><span style=3D"color:rgb(0,0,255);background-colo=
+r:rgb(239,239,239);font-weight:bold">style=3D</span><span style=3D"color:rg=
+b(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</span=
+><span style=3D"color:rgb(0,0,255);font-weight:bold">max-height</span>: <sp=
+an style=3D"color:rgb(0,0,255)">45</span><span style=3D"color:rgb(0,128,0);=
+font-weight:bold">px</span>;<span style=3D"color:rgb(0,128,0);background-co=
+lor:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"backgrou=
+nd-color:rgb(239,239,239)">&gt;</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(247,250,255);font-weight:bold">#if</span><span style=3D"b=
+ackground-color:rgb(247,250,255)">(</span><span style=3D"color:rgb(0,0,128)=
+;background-color:rgb(247,250,255);font-weight:bold">${</span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">=
+batch</span><span style=3D"background-color:rgb(247,250,255)">.</span><span=
+ style=3D"color:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:=
+bold">sortCode</span><span style=3D"color:rgb(0,0,128);background-color:rgb=
+(247,250,255);font-weight:bold">}</span><span style=3D"background-color:rgb=
+(247,250,255)">)</span><span style=3D"color:rgb(0,0,128);background-color:r=
+gb(247,250,255);font-weight:bold">${</span><span style=3D"color:rgb(0,0,255=
+);background-color:rgb(247,250,255);font-weight:bold">batch</span><span sty=
+le=3D"background-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0=
+,0,255);background-color:rgb(247,250,255);font-weight:bold">sortCode</span>=
+<span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-we=
+ight:bold">}#end</span><span style=3D"background-color:rgb(239,239,239)">&l=
+t;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,23=
+9);font-weight:bold">div</span><span style=3D"background-color:rgb(239,239,=
+239)">&gt;</span><br>        <span style=3D"background-color:rgb(239,239,23=
+9)">&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,=
+239,239);font-weight:bold">td</span><span style=3D"background-color:rgb(239=
+,239,239)">&gt;</span><br>    <span style=3D"background-color:rgb(239,239,2=
+39)">&lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239=
+,239,239);font-weight:bold">tr</span><span style=3D"background-color:rgb(23=
+9,239,239)">&gt;</span><br>    <span style=3D"background-color:rgb(239,239,=
+239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239=
+,239,239);font-weight:bold">tr </span><span style=3D"color:rgb(0,0,255);bac=
+kground-color:rgb(239,239,239);font-weight:bold">style=3D</span><span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+&quot;</span><span style=3D"color:rgb(0,0,255);font-weight:bold">height</sp=
+an>: <span style=3D"color:rgb(0,0,255)">23</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold">px</span>;<span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"=
+background-color:rgb(239,239,239)">&gt;&lt;/</span><span style=3D"color:rgb=
+(0,0,128);background-color:rgb(239,239,239);font-weight:bold">tr</span><spa=
+n style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span styl=
+e=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb=
+(0,0,128);background-color:rgb(239,239,239);font-weight:bold">tr </span><sp=
+an style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weigh=
+t:bold">style=3D</span><span style=3D"color:rgb(0,128,0);background-color:r=
+gb(239,239,239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0=
+,255);font-weight:bold">height</span>: <span style=3D"color:rgb(0,0,255)">2=
+3</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<span=
+ style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:=
+bold">&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</=
+span><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;</sp=
+an><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font=
+-weight:bold">td </span><span style=3D"color:rgb(0,0,255);background-color:=
+rgb(239,239,239);font-weight:bold">style=3D</span><span style=3D"color:rgb(=
+0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</span><=
+span style=3D"color:rgb(0,0,255);font-weight:bold">padding</span>: <span st=
+yle=3D"color:rgb(0,0,255)">0</span><span style=3D"color:rgb(0,128,0);font-w=
+eight:bold">px </span><span style=3D"color:rgb(0,0,255)">3</span><span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <span style=3D"color:r=
+gb(0,0,255);font-weight:bold">vertical-align</span>: <span style=3D"color:r=
+gb(0,128,0);font-weight:bold">middle</span>; <span style=3D"color:rgb(0,0,2=
+55);font-weight:bold">text-align</span>: <span style=3D"color:rgb(0,128,0);=
+font-weight:bold">center</span>; <span style=3D"color:rgb(0,0,255);font-wei=
+ght:bold">border-right</span>: <span style=3D"color:rgb(0,0,255)">1</span><=
+span style=3D"color:rgb(0,128,0);font-weight:bold">px solid </span><span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<span style=3D"color=
+:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>, <span=
+ style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"color:rgb(0,0,255);=
+font-weight:bold">border-bottom</span>: <span style=3D"color:rgb(0,0,255)">=
+1</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px solid </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<span style=
+=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</spa=
+n>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"color:rgb(=
+0,0,255);font-weight:bold">border-left</span>: <span style=3D"color:rgb(0,0=
+,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px solid=
+ </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<spa=
+n style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)"=
+>0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"col=
+or:rgb(0,0,255);font-weight:bold">font-size</span>: <span style=3D"color:rg=
+b(0,0,255)">110</span>%;<span style=3D"color:rgb(0,128,0);background-color:=
+rgb(239,239,239);font-weight:bold">&quot;<br></span><span style=3D"color:rg=
+b(0,128,0);background-color:rgb(239,239,239);font-weight:bold">            =
+</span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);=
+font-weight:bold">rowspan=3D</span><span style=3D"color:rgb(0,128,0);backgr=
+ound-color:rgb(239,239,239);font-weight:bold">&quot;3&quot; </span><span st=
+yle=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bol=
+d">colspan=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(=
+239,239,239);font-weight:bold">&quot;5&quot;</span><span style=3D"backgroun=
+d-color:rgb(239,239,239)">&gt;</span><br>            <span style=3D"backgro=
+und-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);ba=
+ckground-color:rgb(239,239,239);font-weight:bold">img </span><span style=3D=
+"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">sty=
+le=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,=
+239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0,255);font-=
+weight:bold">max-height</span>: <span style=3D"color:rgb(0,0,255)">68</span=
+><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+&quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,23=
+9,239);font-weight:bold">id=3D</span><span style=3D"color:rgb(0,128,0);back=
+ground-color:rgb(239,239,239);font-weight:bold">&quot;barcode&quot;</span><=
+span style=3D"background-color:rgb(239,239,239)">&gt;&lt;/</span><span styl=
+e=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold"=
+>img</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br=
+>        <span style=3D"background-color:rgb(239,239,239)">&lt;/</span><spa=
+n style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight=
+:bold">td</span><span style=3D"background-color:rgb(239,239,239)">&gt;</spa=
+n><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;</span>=
+<span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-we=
+ight:bold">td </span><span style=3D"color:rgb(0,0,255);background-color:rgb=
+(239,239,239);font-weight:bold">style=3D</span><span style=3D"color:rgb(0,1=
+28,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</span><spa=
+n style=3D"color:rgb(0,0,255);font-weight:bold">padding</span>: <span style=
+=3D"color:rgb(0,0,255)">0</span><span style=3D"color:rgb(0,128,0);font-weig=
+ht:bold">px </span><span style=3D"color:rgb(0,0,255)">3</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold">px</span>; <span style=3D"color:rg=
+b(0,0,255);font-weight:bold">border-right</span>: <span style=3D"color:rgb(=
+0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px so=
+lid </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</span>(<=
+span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,25=
+5)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=3D"=
+color:rgb(0,0,255);font-weight:bold">border-bottom</span>: <span style=3D"c=
+olor:rgb(0,0,255)">1</span><span style=3D"color:rgb(0,128,0);font-weight:bo=
+ld">px solid </span><span style=3D"color:rgb(0,0,128);font-weight:bold">rgb=
+</span>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:r=
+gb(0,0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span =
+style=3D"color:rgb(0,0,255);font-weight:bold">font-size</span>: <span style=
+=3D"color:rgb(0,0,255)">110</span>%; <span style=3D"color:rgb(0,0,255);font=
+-weight:bold">font-weight</span>: <span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">bold</span>; <span style=3D"color:rgb(0,0,255);font-weight:bold"=
+>color</span>: <span style=3D"color:rgb(0,0,128);font-weight:bold">rgb</spa=
+n>(<span style=3D"color:rgb(0,0,255)">0</span>, <span style=3D"color:rgb(0,=
+0,255)">0</span>, <span style=3D"color:rgb(0,0,255)">0</span>); <span style=
+=3D"color:rgb(0,0,255);font-weight:bold">word-wrap</span>: <span style=3D"c=
+olor:rgb(0,128,0);font-weight:bold">break-word</span>; <span style=3D"color=
+:rgb(0,0,255);font-weight:bold">vertical-align</span>: <span style=3D"color=
+:rgb(0,128,0);font-weight:bold">middle</span>; <span style=3D"color:rgb(0,0=
+,255);font-weight:bold">text-align</span>: <span style=3D"color:rgb(0,128,0=
+);font-weight:bold">center</span>;<span style=3D"color:rgb(0,128,0);backgro=
+und-color:rgb(239,239,239);font-weight:bold">&quot;<br></span><span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+            </span><span style=3D"color:rgb(0,0,255);background-color:rgb(2=
+39,239,239);font-weight:bold">rowspan=3D</span><span style=3D"color:rgb(0,1=
+28,0);background-color:rgb(239,239,239);font-weight:bold">&quot;3&quot; </s=
+pan><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);fon=
+t-weight:bold">colspan=3D</span><span style=3D"color:rgb(0,128,0);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">&quot;2&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br>            <span sty=
+le=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rg=
+b(0,0,128);background-color:rgb(239,239,239);font-weight:bold">div </span><=
+span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-wei=
+ght:bold">style=3D</span><span style=3D"color:rgb(0,128,0);background-color=
+:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0=
+,0,255);font-weight:bold">max-height</span>: <span style=3D"color:rgb(0,0,2=
+55)">68</span><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>=
+;<span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-w=
+eight:bold">&quot;</span><span style=3D"background-color:rgb(239,239,239)">=
+&gt;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,2=
+55);font-weight:bold">#if</span><span style=3D"background-color:rgb(247,250=
+,255)">(</span><span style=3D"color:rgb(0,0,128);background-color:rgb(247,2=
+50,255);font-weight:bold">${</span><span style=3D"color:rgb(0,0,255);backgr=
+ound-color:rgb(247,250,255);font-weight:bold">destination</span><span style=
+=3D"background-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0=
+,255);background-color:rgb(247,250,255);font-weight:bold">address</span><sp=
+an style=3D"background-color:rgb(247,250,255)">.</span><span style=3D"color=
+:rgb(0,0,255);background-color:rgb(247,250,255);font-weight:bold">city</spa=
+n><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-=
+weight:bold">}</span><span style=3D"background-color:rgb(247,250,255)">)</s=
+pan><span style=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);fon=
+t-weight:bold">${</span><span style=3D"color:rgb(0,0,255);background-color:=
+rgb(247,250,255);font-weight:bold">destination</span><span style=3D"backgro=
+und-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,255);backg=
+round-color:rgb(247,250,255);font-weight:bold">address</span><span style=3D=
+"background-color:rgb(247,250,255)">.</span><span style=3D"color:rgb(0,0,25=
+5);background-color:rgb(247,250,255);font-weight:bold">city</span><span sty=
+le=3D"color:rgb(0,0,128);background-color:rgb(247,250,255);font-weight:bold=
+">}#end</span><span style=3D"background-color:rgb(239,239,239)">&lt;/</span=
+><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-w=
+eight:bold">div</span><span style=3D"background-color:rgb(239,239,239)">&gt=
+;</span><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;/=
+</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);=
+font-weight:bold">td</span><span style=3D"background-color:rgb(239,239,239)=
+">&gt;</span><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;=
+/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239)=
+;font-weight:bold">tr</span><span style=3D"background-color:rgb(239,239,239=
+)">&gt;</span><br>    <span style=3D"background-color:rgb(239,239,239)">&lt=
+;</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239)=
+;font-weight:bold">tr </span><span style=3D"color:rgb(0,0,255);background-c=
+olor:rgb(239,239,239);font-weight:bold">style=3D</span><span style=3D"color=
+:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">&quot;</s=
+pan><span style=3D"color:rgb(0,0,255);font-weight:bold">height</span>: <spa=
+n style=3D"color:rgb(0,0,255)">23</span><span style=3D"color:rgb(0,128,0);f=
+ont-weight:bold">px</span>;<span style=3D"color:rgb(0,128,0);background-col=
+or:rgb(239,239,239);font-weight:bold">&quot;</span><span style=3D"backgroun=
+d-color:rgb(239,239,239)">&gt;&lt;/</span><span style=3D"color:rgb(0,0,128)=
+;background-color:rgb(239,239,239);font-weight:bold">tr</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"ba=
+ckground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,12=
+8);background-color:rgb(239,239,239);font-weight:bold">tr </span><span styl=
+e=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold"=
+>style=3D</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,=
+239,239);font-weight:bold">&quot;</span><span style=3D"color:rgb(0,0,255);f=
+ont-weight:bold">height</span>: <span style=3D"color:rgb(0,0,255)">23</span=
+><span style=3D"color:rgb(0,128,0);font-weight:bold">px</span>;<span style=
+=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=
+&quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;&lt;/</s=
+pan><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fon=
+t-weight:bold">tr</span><span style=3D"background-color:rgb(239,239,239)">&=
+gt;</span><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;/</=
+span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fo=
+nt-weight:bold">tbody</span><span style=3D"background-color:rgb(239,239,239=
+)">&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">&lt;/</=
+span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fo=
+nt-weight:bold">table</span><span style=3D"background-color:rgb(239,239,239=
+)">&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">&lt;/</=
+span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fo=
+nt-weight:bold">body</span><span style=3D"background-color:rgb(239,239,239)=
+">&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">&lt;/</s=
+pan><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);fon=
+t-weight:bold">html</span><span style=3D"background-color:rgb(239,239,239)"=
+>&gt;</span><br></pre></div>
+
+--f403045ddca218a1ad05498198f0--

@@ -1,0 +1,127 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1164056qgu;
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+X-Received: by 10.36.94.66 with SMTP id h63mr12717665itb.41.1487583963752;
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+Return-Path: <tech+bncBCH4DZHF6UIBBW7VVLCQKGQE6GLXPLY@unicommerce.com>
+Received: from mail-io0-x246.google.com (mail-io0-x246.google.com. [2607:f8b0:4001:c06::246])
+        by mx.google.com with ESMTPS id w28si17247413ioe.164.2017.02.20.01.46.03
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::246 is neither permitted nor denied by best guess record for domain of tech+bncbch4dzhf6uibbw7vvlcqkgqe6glxply@unicommerce.com) client-ip=2607:f8b0:4001:c06::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c06::246 is neither permitted nor denied by best guess record for domain of tech+bncbch4dzhf6uibbw7vvlcqkgqe6glxply@unicommerce.com) smtp.mailfrom=tech+bncBCH4DZHF6UIBBW7VVLCQKGQE6GLXPLY@unicommerce.com
+Received: by mail-io0-x246.google.com with SMTP id q20sf80660317ioi.0
+        for <digvijay@unicommerce.com>; Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=E7U2ovS7X/fdttHa5f8/nt9vaNL8oEh9pzU9FjHei38=;
+        b=FS38idxC4R2I2Pu0jIjmasp387VrdrukQeWfOVZ11vvCmCSZpLCnmwp7IRV1wji3pb
+         7GFZqc3Un5sl+r1LYinqt7R96qNY8bRftQvflTZV9Fu46W5DVUkHiSbndoztCxD9L4OB
+         vwqHb10s1Utz5XRgL6Te8XsTKw7HhynT1TKx0HFDAvboSm2297XmAUkCv36/RNV8A2IX
+         Ar/ri5aAcf4Da4VO7Yml85fW28S2tXsyv0yRjG+G27z52iA7JnZKx8Y5/CpSmhGY8QBn
+         K0rNv4u4gCLWM+tsMZI2v89kZ6XHAn9Zxryyf/5BHRL62Fxrgx3rX45Ecjzpe2HgETgF
+         MNYQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=E7U2ovS7X/fdttHa5f8/nt9vaNL8oEh9pzU9FjHei38=;
+        b=q7O4GsDy02RVyn2E1OuHWDoe9zl44c/seEWqqO01FoM4f9D2CA77HiNhISkeI/UkqI
+         VnteH+ge2k0E38mEfR42E1QKm5QFdeGrbjcfKdCJuVfB/3Cls8S4ESaD4At8KBUw/Qj1
+         +zKAU+U+nKM7FylMwku9TE6kWi0faCGPX3f60h/ZSZwR6tgrbkQHCHnqJlYX3UJF6gXP
+         nx6FXljKEtCTmvy0mxHLNRH4T8QuPIjaCrOkj8xZFkiO7TBgQ/+NJrhotOwvF8WJFghH
+         9ZFPcpacdWsD9LeELDCSHG3zRz1siEEbtjCcdJSiS6t9S1fsPxpDk6Y1DMNrV9fC5pMN
+         o/Dw==
+X-Gm-Message-State: AMke39n6TQpJs2BOZK9ORcx3H4vezzTopF7tmc8LppvQOv+0p860dKVXvdYPc1cKr1IPEw==
+X-Received: by 10.36.23.3 with SMTP id 3mr7729019ith.17.1487583963490;
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.11.133 with SMTP id 5ls4374333oth.45.gmail; Mon, 20 Feb
+ 2017 01:46:03 -0800 (PST)
+X-Received: by 10.202.175.8 with SMTP id y8mr3206495oie.190.1487583963359;
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+Received: from mail-ot0-x236.google.com (mail-ot0-x236.google.com. [2607:f8b0:4003:c0f::236])
+        by mx.google.com with ESMTPS id q56si7953819otq.283.2017.02.20.01.46.03
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::236;
+Received: by mail-ot0-x236.google.com with SMTP id w44so2444949otw.2
+        for <tech@unicommerce.com>; Mon, 20 Feb 2017 01:46:03 -0800 (PST)
+X-Received: by 10.157.15.103 with SMTP id 94mr10972208ott.104.1487583962996;
+ Mon, 20 Feb 2017 01:46:02 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.50.225 with HTTP; Mon, 20 Feb 2017 01:46:02 -0800 (PST)
+In-Reply-To: <CAGjOsgSCG6woKEQo+ANBDpw4zLHJwK+vR-Xpch8iepMpc=yLgA@mail.gmail.com>
+References: <CAGjOsgSCG6woKEQo+ANBDpw4zLHJwK+vR-Xpch8iepMpc=yLgA@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 20 Feb 2017 15:16:02 +0530
+Message-ID: <CA+zaFGi2i99=P7XVFjn8T5S5Hoc-Axa9bTvJtu=HVR8z9ys31Q@mail.gmail.com>
+Subject: Re: Party at 22nd feb
+To: Guhapriya Velu <guhapriya@unicommerce.com>
+Cc: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	Kunal Garg <kunal.garg@unicommerce.com>, Shilpa Suri <shilpa@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c036852b037050548f32191
+X-Original-Sender: sunny@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best
+ guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c036852b037050548f32191
+Content-Type: text/plain; charset=UTF-8
+
+Are we sure there are 3?
+
+- Sunny
+
+On Mon, Feb 20, 2017 at 3:13 PM, Guhapriya Velu <guhapriya@unicommerce.com>
+wrote:
+
+> Hi
+>
+>
+> We are planning a party on 22nd feb.
+> Venue: Gurgaon
+> Time: After 6 PM
+>
+> Please confirm your availability
+> This party is meant for 3 of our dear friends who are leaving.
+>
+> - Guha
+>
+
+--94eb2c036852b037050548f32191
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Are we sure there are 3?<div><br></div><div>- Sunny</div><=
+/div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Mon, Feb =
+20, 2017 at 3:13 PM, Guhapriya Velu <span dir=3D"ltr">&lt;<a href=3D"mailto=
+:guhapriya@unicommerce.com" target=3D"_blank">guhapriya@unicommerce.com</a>=
+&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0=
+ 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi
+<div><br></div><div><br></div><div>We are planning a party on 22nd feb.=C2=
+=A0</div><div>Venue: Gurgaon</div><div>Time: After 6 PM</div><div><br></div=
+><div>Please confirm your availability=C2=A0</div><div>This party is meant =
+for 3 of our dear friends who are leaving.</div><div><br></div><div>- Guha<=
+/div></div>
+</blockquote></div><br></div>
+
+--94eb2c036852b037050548f32191--

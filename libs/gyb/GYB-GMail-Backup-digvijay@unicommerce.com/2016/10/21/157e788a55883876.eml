@@ -1,0 +1,32 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp1754945qgj;
+        Fri, 21 Oct 2016 06:57:54 -0700 (PDT)
+X-Received: by 10.99.43.8 with SMTP id r8mr1523779pgr.165.1477058274403;
+        Fri, 21 Oct 2016 06:57:54 -0700 (PDT)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id rm9si2358904pab.226.2016.10.21.06.57.53
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 Oct 2016 06:57:54 -0700 (PDT)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id u9LDvqPV023054;
+	Fri, 21 Oct 2016 19:27:52 +0530
+Date: Fri, 21 Oct 2016 19:27:52 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, akshay.agarwal.js@snapdeal.com,
+        digvijay@unicommerce.com
+Message-ID: <1699618427.56.1477058272839.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <84110687.55.1477058062211.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <84110687.55.1477058062211.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Jenkins build is back to normal : UnicommerceWormholeTest #42
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Jenkins-Job: UnicommerceWormholeTest
+X-Jenkins-Result: SUCCESS
+
+See <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/42/changes>
+

@@ -1,0 +1,62 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1729174qgu;
+        Mon, 30 Jan 2017 23:58:34 -0800 (PST)
+X-Received: by 10.98.27.149 with SMTP id b143mr27705810pfb.5.1485849513983;
+        Mon, 30 Jan 2017 23:58:33 -0800 (PST)
+Return-Path: <adnotification@jasperindia.co.in>
+Received: from mx.jasperindia.co.in ([111.93.51.75])
+        by mx.google.com with ESMTP id g197si15151907pfb.151.2017.01.30.23.58.33
+        for <digvijay@unicommerce.com>;
+        Mon, 30 Jan 2017 23:58:33 -0800 (PST)
+Received-SPF: neutral (google.com: 111.93.51.75 is neither permitted nor denied by best guess record for domain of adnotification@jasperindia.co.in) client-ip=111.93.51.75;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@jasperindia.co.in;
+       spf=neutral (google.com: 111.93.51.75 is neither permitted nor denied by best guess record for domain of adnotification@jasperindia.co.in) smtp.mailfrom=adnotification@jasperindia.co.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=jasperindia.co.in
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by mx.jasperindia.co.in (Postfix) with ESMTP id C68FF348684
+	for <digvijay@unicommerce.com>; Tue, 31 Jan 2017 13:26:05 +0530 (IST)
+Received: from mx.jasperindia.co.in ([127.0.0.1])
+	by localhost (mx.jasperindia.co.in [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id 6Y_5S2ediAGR for <digvijay@unicommerce.com>;
+	Tue, 31 Jan 2017 13:26:05 +0530 (IST)
+Received: from mx.jasperindia.co.in (localhost.localdomain [127.0.0.1])
+	by mx.jasperindia.co.in (Postfix) with ESMTP id 4F35B3486E5
+	for <digvijay@unicommerce.com>; Tue, 31 Jan 2017 13:26:05 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.7.1 mx.jasperindia.co.in 4F35B3486E5
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jasperindia.co.in;
+	s=9A1C4ADE-AE17-11E5-A3B1-0CAFEBD658BB; t=1485849365;
+	bh=FFxQwj+bKXDBZRmIxKPbn3YHx1cPFF1gAsP4VNiXmYw=;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=mcDZtOdYkIzwsOwD5bxtI5u8rs9E3bD1vZBJXwkI+bME/+de0Z8cCYegcU0s/WoXu
+	 feC7LfVwA20So/H8uKTr/emFXm+KQu43o6kDPwp6KSB12mTThAnX1/pseegFFHXnXE
+	 5aDKcxtuZqt/EW6ni8kzvE6HaipOkYi1AYcBxbZY=
+Received: from WIN-Tools (unknown [10.20.49.29])
+	by mx.jasperindia.co.in (Postfix) with ESMTPA id 4C42F348684
+	for <digvijay@unicommerce.com>; Tue, 31 Jan 2017 13:26:05 +0530 (IST)
+Date: Tue, 31 Jan 2017 13:28:31 +0530 (IST)
+From: adnotification@jasperindia.co.in
+To: digvijay@unicommerce.com
+Message-ID: <21582874.1359.1485849511068.JavaMail.Administrator@WIN-Tools>
+Subject: Password Expiry Notification
+MIME-Version: 1.0
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Dear Digvijay Sharma Js,
+
+Your password will expire on 2017/02/05 06:16 PM. So, please change your domain password as soon as possible.
+
+You can change your password while connecting to Corporate Network by two ways - Wi-Fi/VPN
+
+Please go through the below portal.
+
+Https://adselfservice.snapdeal.com
+
+Document Guide- https://drive.google.com/a/jasperindia.com/file/d/0B7F-fJl7L0z1a2cwcXlpQUdPaEk/view?usp=sharing
+
+Thank you.
+
+Regards
+Administrator

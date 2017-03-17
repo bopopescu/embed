@@ -1,0 +1,41 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Tue, 20 Dec 2016 22:29:33 -0800 (PST)
+In-Reply-To: <CAJF3soqs2V-ZV+-Dfq8bVYi51T6=xSz=+n9RzzgcATmQr=3zfw@mail.gmail.com>
+References: <CAJF3soqs2V-ZV+-Dfq8bVYi51T6=xSz=+n9RzzgcATmQr=3zfw@mail.gmail.com>
+Date: Wed, 21 Dec 2016 11:59:33 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soqv5FprZ1vs05FXCMYd-tr7jBeVRyBqeEzTpNAcJ4KsXQ@mail.gmail.com>
+Subject: Re: WormholeTest tomcat not working
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Vikas Goyal <vikas@unicommerce.com>, Nitin Yadav <nitin@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c03eaea3741505442546e6
+
+--001a11c03eaea3741505442546e6
+Content-Type: text/plain; charset=UTF-8
+
+ROOT.xml is still not correct. There is no UnicommerceDS in it on
+WormholeTest Server. Please check and change.
+
+On Tue, Dec 20, 2016 at 5:49 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> The catalina.sh and ROOT.xml file are both not correct for WormholeTest
+> server. Thats why tomcat is not booting up. Please check and replace.
+>
+
+--001a11c03eaea3741505442546e6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">ROOT.xml is still not correct. There is no UnicommerceDS i=
+n it on WormholeTest Server. Please check and change.</div><div class=3D"gm=
+ail_extra"><br><div class=3D"gmail_quote">On Tue, Dec 20, 2016 at 5:49 PM, =
+Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerc=
+e.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br>=
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr">The catalina.sh and ROOT.xm=
+l file are both not correct for WormholeTest server. Thats why tomcat is no=
+t booting up. Please check and replace.</div>
+</blockquote></div><br></div>
+
+--001a11c03eaea3741505442546e6--

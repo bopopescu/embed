@@ -1,0 +1,62 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Wed, 1 Feb 2017 21:15:36 -0800 (PST)
+In-Reply-To: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+References: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+Date: Thu, 2 Feb 2017 10:45:36 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soosvkzfPoNWTjC0Tbfxdyf-NUPPWRXr3EUZwrSsWCO5bw@mail.gmail.com>
+Subject: Re: Reconciliation Update
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c0aed86351e705478541ed
+
+--001a11c0aed86351e705478541ed
+Content-Type: text/plain; charset=UTF-8
+
+And i have changed the flipkart script to use that invoice code for status.
+Its live on one tenant right now. Soon we will make it live on all.
+
+On Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <
+akshay.agarwal@unicommerce.com> wrote:
+
+> Hi Sir,
+> We have updated the last column of the settlement invoices page from
+> "status on channel" to "other info".
+> Earlier it used to represent the payment reason for which the transaction
+> is made (Like Refund, Return, MarketPlaceFee). But since Flipkart doesn't
+> give any such reason in its sheet (we mapped it with order status as of
+> now, which resulted in duplicate invoices), we have to put in invoice code
+> in that field to maintain uniqueness of invoices. Hence renamed the column
+> to "other info".
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+
+--001a11c0aed86351e705478541ed
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">And i have changed the flipkart script to use that invoice=
+ code for status. Its live on one tenant right now. Soon we will make it li=
+ve on all.</div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">O=
+n Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <span dir=3D"ltr">&lt;<a hre=
+f=3D"mailto:akshay.agarwal@unicommerce.com" target=3D"_blank">akshay.agarwa=
+l@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote=
+" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><=
+div dir=3D"ltr">Hi Sir,<div>We have updated the last column of the settleme=
+nt invoices page from &quot;status on channel&quot; to &quot;other info&quo=
+t;.</div><div>Earlier it used to represent the payment reason for which the=
+ transaction is made (Like Refund, Return, MarketPlaceFee). But since Flipk=
+art doesn&#39;t give any such reason in its sheet (we mapped it with order =
+status as of now, which resulted in duplicate invoices), we have to put in =
+invoice code in that field to maintain uniqueness of invoices. Hence rename=
+d the column to &quot;other info&quot;.</div></div><span class=3D"HOEnZb"><=
+font color=3D"#888888"><div dir=3D"ltr">-- <br></div><div data-smartmail=3D=
+"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Soft=
+ware Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+</font></span></blockquote></div><br></div>
+
+--001a11c0aed86351e705478541ed--

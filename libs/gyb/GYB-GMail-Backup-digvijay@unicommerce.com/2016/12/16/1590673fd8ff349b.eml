@@ -1,0 +1,99 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1232136qgd;
+        Thu, 15 Dec 2016 23:06:21 -0800 (PST)
+X-Received: by 10.37.105.201 with SMTP id e192mr1078128ybc.18.1481871981671;
+        Thu, 15 Dec 2016 23:06:21 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-yb0-x236.google.com (mail-yb0-x236.google.com. [2607:f8b0:4002:c09::236])
+        by mx.google.com with ESMTPS id u4si1711290ywi.15.2016.12.15.23.06.21
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 15 Dec 2016 23:06:21 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4002:c09::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-yb0-x236.google.com with SMTP id v78so36728833ybe.3
+        for <digvijay@unicommerce.com>; Thu, 15 Dec 2016 23:06:21 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=c1DjHHEx++nOVwgd+gi16vf9qtGlQnW34E9FfB2W+i0=;
+        b=OxSwoLHAq7zyVf558DmH4KtYTxKZdqJaD5cELx1T8105we9dEnfLaPhg3kbA5NFUH0
+         Uff3+e2ETicL4oz3nGWVC6gXlXQ7BlsBQ4QFr1D2wJrAru3eymQ3Pni1WRoV22n5e4ER
+         xShcKrZcKRR/SQItEAWUbHFAjt0UwB3BSSY4jg/d7jTMAhV1A/U8t3Lk93JcsAvkd6KA
+         O5DWW17lfw8NypZAVgc4CUN+fw6dDA87sVGWri0Q1AHSeczyzRGhGys3PAiZC+VE1s1n
+         v5xIzbeTPehMwIpW9V9DOIOBNGRfbC9mH0CsB236L/M3bTUqYLmtfiU+eAYaY3d9r1ex
+         kj2A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=c1DjHHEx++nOVwgd+gi16vf9qtGlQnW34E9FfB2W+i0=;
+        b=CDQ48OWB2dUtQfIEy43DqBPZcSgaMOvDT9TixNjejVrcLcnA7gJyEhZyvhz/gxTVPm
+         +N5VQpqDf6VQFAVTei+Y6Bq9nvnreS0P3Gkb3sQj0SX1kNvHB9Ql3trke9r+yxFDo1sy
+         s8b6jx7kfLzphiodDqVsz/t7HfxrwddVo+Auv6IO/YMNk2MrlwsrqsgPJNszSF0HmKU0
+         gNxtnYFZOqKddCUJy1Ot9Eams6VcsTTCkBQX0U1o/vW4DfHwuNLMUqvVxTvAU2Al8STj
+         9OhgAYJEVkSGKLtqG8DVZpLBDmlgwLwxjRHH+NIODGym3oP7SH9mbPPYH+turdnCfgld
+         t72A==
+X-Gm-Message-State: AIkVDXK5ucAVl2EquGr2Avgt+U6K+zZYQJdMIFeoMN94XU35OxEysiKWHDMzJpbd7xw5qfpdFvN6xW9kxnXswA==
+X-Received: by 10.37.85.70 with SMTP id j67mr1079044ybb.95.1481871981265; Thu,
+ 15 Dec 2016 23:06:21 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.129.137.194 with HTTP; Thu, 15 Dec 2016 23:06:20 -0800 (PST)
+In-Reply-To: <CAJF3sor7mm12_W8JXZhdazbNcOgdZ5Nfbt1ecod2eyP-JLZWoQ@mail.gmail.com>
+References: <CAJF3sor7mm12_W8JXZhdazbNcOgdZ5Nfbt1ecod2eyP-JLZWoQ@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Fri, 16 Dec 2016 12:36:20 +0530
+Message-ID: <CA+zaFGhdZ-0tzMKQ7tH-C8RhO3fYtZBhGV6w4xztfCdOVk0c4A@mail.gmail.com>
+Subject: Re: DB_QUERIES
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113ff8580c1ebf0543c1351a
+
+--001a113ff8580c1ebf0543c1351a
+Content-Type: text/plain; charset=UTF-8
+
+Done
+
+On Fri, Dec 16, 2016 at 12:11 AM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Sir, wormhole Test k db pe yeh queries chala do :
+>
+> insert into role values(null,'ACTIVATE_TENANT',
+> 'activate',NULL,0,NOW(),NOW());
+>
+> db.createCollection('cloudServers');
+>
+> var tenants =  db.tenantProfile.distinct('serverName');
+>
+> tenants.forEach(function(tenant) {
+>
+> db.cloudServers.insert({"serverName":tenant});
+> });
+>
+>
+
+--001a113ff8580c1ebf0543c1351a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done</div><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Fri, Dec 16, 2016 at 12:11 AM, Digvijay Sharma <span dir=3D"lt=
+r">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvij=
+ay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=
+<div dir=3D"ltr">Sir, wormhole Test k db pe yeh queries chala do :<div><br>=
+<div><div>insert into role values(null,&#39;ACTIVATE_TENANT&#39;,<wbr>&#39;=
+activate&#39;,NULL,0,NOW(),NOW())<wbr>;</div><div><br></div><div>db.createC=
+ollection(&#39;<wbr>cloudServers&#39;);</div><div><br></div><div>var tenant=
+s =3D =C2=A0db.tenantProfile.distinct(&#39;<wbr>serverName&#39;);</div><div=
+><br></div><div>tenants.forEach(function(<wbr>tenant) {</div><div><br></div=
+><div><span class=3D"m_2975471829182979369gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre-wrap">	</span>db.cloudServers.insert({&quot;<wbr>serverName&q=
+uot;:tenant});<span class=3D"m_2975471829182979369gmail-Apple-tab-span" sty=
+le=3D"white-space:pre-wrap">	</span></div><div>});</div></div><div><br></di=
+v></div></div>
+</blockquote></div><br></div>
+
+--001a113ff8580c1ebf0543c1351a--

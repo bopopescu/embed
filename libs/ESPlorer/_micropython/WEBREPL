@@ -1,0 +1,10 @@
+from machine import Pin
+import time
+myLed = Pin(12, Pin.OUT)
+for i in range(30):
+	myLed.high()
+	time.sleep_ms(500)
+	myLed.low()
+	time.sleep_ms(500)
+
+

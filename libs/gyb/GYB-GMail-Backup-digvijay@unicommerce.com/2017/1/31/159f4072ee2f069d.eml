@@ -1,0 +1,189 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1772559qgu;
+        Tue, 31 Jan 2017 02:17:08 -0800 (PST)
+X-Received: by 10.99.160.84 with SMTP id u20mr29260260pgn.141.1485857828482;
+        Tue, 31 Jan 2017 02:17:08 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id 32si15526114plf.34.2017.01.31.02.17.06
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 31 Jan 2017 02:17:08 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v0VAH5ek018389;
+	Tue, 31 Jan 2017 15:47:05 +0530
+Date: Tue, 31 Jan 2017 15:47:05 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, apple@apples-MacBook-Air-2.local,
+        bhuvneshwarkumar@Bhuvneshwars-MacBook-Air.local, sunny@unicommerce.com,
+        amit.dalal.js@snapdeal.com, harsh@unicommerce.com,
+        garima@unicommerce.com, digvijay@unicommerce.com,
+        piyush@unicommerce.com, akshay@unicommerce.com, bhupi@unicommerce.com,
+        garima.arora.js@snapdeal.com, kunika@unicommerce.com,
+        ankitbansal@Chinmays-MacBook-Air.local, piyush.arora.js@snapdeal.com,
+        akshay.agarwal@unicommerce.com, shobhit@Shobhits-MacBook-Air.local,
+        pradhika@unicommerce.com, shipra@unicommerce.com,
+        Samdeesh@admins-MacBook-Air-4.local, amit.dalal@unicommerce.com,
+        rachit@Rachits-MacBook-Air.local, harsh.pal.js@snapdeal.com,
+        ankur@unicommerce.com, akshay.agarwal.js@snapdeal.com,
+        akshay.kochhar.js@snapdeal.com, admin@Admins-MacBook-Air-4.local
+Message-ID: <1382881535.2.1485857825394.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1532369608.1.1485849418530.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1532369608.1.1485849418530.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #1992
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/Uniware/1992/Changes:
+
+[digvijay] FBA Inventory changes
+
+------------------------------------------
+Started by an SCM change
+Building in workspace <http://jenkins.unicommerce.com:8080/job/Uniware/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision c5147b6d898498ea9134a298e5abef9c1981b838 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c5147b6d898498ea9134a298e5abef9c1981b838
+ > git rev-list 2910492f5f86904e9f051723285743e2e66177be # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #4063 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[Uniware] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for unicommerce:UniwareCore:jar:1.0
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> duplicate declaration of version 4.8.1 @ line 102, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: io.dropwizard.metrics:metrics-core:jar -> duplicate declaration of version 3.1.2 @ line 152, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Uniware
+[INFO] UniwareCore
+[INFO] UniwareServices
+[INFO] UniwareWeb
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Uniware 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Uniware ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ Uniware ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1943 source files to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareCore/target/classes>
+[INFO] 
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareCore ---
+[INFO] Running JiBX binding compiler (single-module mode) on 8 binding file(s)
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareCore ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareCore ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareCore ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareCore ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareCore/target/UniwareCore-1.0.jar>
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareServices 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareServices ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareServices ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareServices ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 611 source files to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes>
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentServiceImpl.java>: Some input files use or override a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentServiceImpl.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/saleorder/impl/SaleOrderServiceImpl.java>: Some input files use unchecked or unsafe operations.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/saleorder/impl/SaleOrderServiceImpl.java>: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/common/impl/SequenceGeneratorImpl.java>:[78,21] cannot find symbol
+  symbol:   method isFirstDayOfFinancialYear(java.util.Date)
+  location: class com.unifier.core.utils.DateUtils
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Uniware ............................................ SUCCESS [  0.155 s]
+[INFO] UniwareCore ........................................ SUCCESS [ 11.510 s]
+[INFO] UniwareServices .................................... FAILURE [  5.126 s]
+[INFO] UniwareWeb ......................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 16.927 s
+[INFO] Finished at: 2017-01-31T15:47:04+05:30
+[INFO] Final Memory: 144M/567M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniwareServices: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/common/impl/SequenceGeneratorImpl.java>:[78,21] cannot find symbol
+[ERROR] symbol:   method isFirstDayOfFinancialYear(java.util.Date)
+[ERROR] location: class com.unifier.core.utils.DateUtils
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UniwareServices
+Build step 'Invoke top-level Maven targets' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #1955

@@ -1,0 +1,2343 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Tue, 31 Jan 2017 23:53:06 -0800 (PST)
+Date: Wed, 1 Feb 2017 13:23:06 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soodJ0RYFBn7HYfJr7qQMC=HVAZmcauWMX0WEUj0dq9vYA@mail.gmail.com>
+Subject: file
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113a9b86d1e454054773566b
+
+--001a113a9b86d1e454054773566b
+Content-Type: text/plain; charset=UTF-8
+
+package com.uniware.core.entity;
+
+import java.io.Serializable;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import javax.persistence.Transient;
+
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.unifier.core.utils.StringUtils;
+
+@Document(collection = "source") public class Source implements Serializable {
+
+    public enum Code {
+        CUSTOM,
+    }
+
+    public enum Type {
+        B2B, CART, MARKETPLACE
+    }
+
+    public enum Localization {
+        NATIONAL, INTERNATIONAL
+    }
+
+    public enum ShipmentLabelFormat {
+        CSV, HTML, PDF, PNG
+    }
+
+    public enum ShipmentLabelAggregationFormat {
+        NONE("A4", "A4", false), A6_TO_A4("A6", "A4", false),
+A5_TO_A4("A5", "A4", false), A6_TO_A4_LANDSCAPE("A6", "A4", true),
+A5_TO_A4_LANDSCAPE("A5", "A4", true);
+
+        private String  fromSize;
+        private String  toSize;
+        private boolean landscape;
+
+        private ShipmentLabelAggregationFormat(String fromSize, String
+toSize, boolean landscape) {
+            this.fromSize = fromSize;
+            this.toSize = toSize;
+            this.landscape = landscape;
+        }
+
+        public String getFromSize() {
+            return fromSize;
+        }
+
+        public void setFromSize(String fromSize) {
+            this.fromSize = fromSize;
+        }
+
+        public String getToSize() {
+            return toSize;
+        }
+
+        public void setToSize(String toSize) {
+            this.toSize = toSize;
+        }
+
+        public boolean isLandscape() {
+            return landscape;
+        }
+
+        public void setLandscape(boolean landscape) {
+            this.landscape = landscape;
+        }
+
+    }
+
+    public enum ConfigurationStatus {
+        YES, NO, PROMPT
+    }
+
+    // Boolean Properties
+    public static final  String ACTIVE
+      = "active";
+    public static final  String USE_SELLER_SKU_FOR_INVENTORY_UPDATE
+      = "use.seller.sku.for.inventory.update";
+    public static final  String CHANNEL_VERIFICATION_SUPPORTED
+      = "channel.verification.supported";
+    public static final  String NOTIFICATIONS_ENABLED
+      = "notifications.enabled";
+    public static final  String THIRD_PARTY_CONFIGURATION_REQUIRED
+      = "third.party.configuration.required";
+    public static final  String INVENTORY_SYNC_CONFIGURED
+      = "inventory.sync.configured";
+    public static final  String ORDER_SYNC_CONFIGURED
+      = "order.sync.configured";
+    public static final  String ORDER_STATUS_SYNC_CONFIGURED
+      = "order.status.sync.configured";
+    private static final String CATALOG_SYNC_CONFIGURED
+      = "catalog.sync.supported";
+    private static final String
+CHANNEL_WAREHOUSE_INVENTORY_SYNC_CONFIGURED  =
+"channel.warehouse.inventory.sync.configured";
+    public static final  String ALLOW_MULTIPLE_CHANNEL
+      = "allow.multiple.channel";
+    public static final  String PENDENCY_CONFIGURATION_ENABLED
+      = "pendency.configuration.enabled";
+    public static final  String COMMIT_PENDENCY_ON_CHANNEL
+      = "commit.pendency.on.channel";
+    public static final  String ALLOW_COMBINED_MANIFEST
+      = "allow.combined.manifest";
+    public static final  String PROMPT_FOR_SHIPMENT_LABEL_FORMAT
+      = "prompt.for.shipment.label.format";
+    public static final  String AUTO_VERIFY_ORDERS
+      = "auto.verify.orders";
+    public static final  String ALLOW_ANY_SHIPPING_METHOD
+      = "allow.any.shipping.method";
+    public static final  String ALLOW_VENDOR_SELF
+      = "allow.vendor.self";
+    public static final  String
+MANIFEST_ALL_READY_TO_SHIP_ORDERS_TOGETHER   =
+"manifest.all.ready.to.ship.orders.together";
+    public static final  String DISPLAY_ORDER_CODE_UNIQUE
+      = "display.order.code.unique";
+    public static final  String PAYMENT_RECONCILIATION_ENABLED
+      = "payment.reconciliation.enabled";
+    public static final  String PACKAGE_TYPE_CONFIGURED
+      = "package.type.configured";
+    public static final  String THIRD_PARTY_SHIPPING_AVAILABLE
+      = "third.party.shipping.available";
+    public static final  String ORDER_RECONCILIATION_ENABLED
+      = "order.reconciliation.enabled";
+    public static final  String PRODUCT_DELISTING_CONFIGURED
+      = "product.delisting.configured";
+    public static final  String SHIPPING_LABEL_AGGREGATION_CONFIGURED
+      = "shipping.label.aggregation.enabled";
+    public static final  String HTTP_PROXY_REQUIRED
+      = "http.proxy.required";
+    public static final  String DISPATCH_PACKAGE_ON_MANIFEST_CLOSE
+      = "dispatch.package.on.manifest.close";
+    public static final  String
+RESTRICT_CUSTOMER_NOTIFICATION_ON_DISPATCH   =
+"restrict.customer.notification.on.dispatch";
+    public static final  String REFETCH_SHIPPING_LABEL_ALLOWED
+      = "refetch.shipping.label.allowed";
+    public static final  String HEARTBEAT_SYNC_ENABLED
+      = "heartbeat.sync.enabled";
+    public static final  String ORDER_REFRESH_ENABLED
+      = "order.refresh.enabled";
+    public static final  String
+DISPLAY_ORDER_CODE_TO_SALE_ORDER_CODE_UNIQUE =
+"display.order.code.to.sale.order.code.unique";
+    public static final  String FETCH_CURRENT_CHANNEL_MANIFEST_ENABLED
+      = "fetch.current.channel.manifest.enabled";
+    public static final  String SELECTIVE_CATALOG_SYNC_ENABLED
+      = "selective.catalog.sync.enabled";
+    public static final  String FREQUENT_ORDER_SYNC_ENABLED
+      = "frequent.order.sync.enabled";
+    public static final  String DISALLOW_PACKAGE_SPLIT
+      = "disallow.package.split";
+    public static final  String TAT_AVAILABLE_FROM_CHANNEL
+      = "tat.available.from.channel";
+    public static final  String POD_REQUIRED
+      = "pod.required";
+    public static final  String FACILITY_ASSOCIATION_REQUIRED
+      = "facility.association.required";
+    public static final  String FETCH_COMPLETE_ORDERS
+      = "fetch.complete.orders";
+    public static final  String FULFILLMENT_BY_CHANNEL
+      = "fulfillment.by.channel";
+    public static final  String PRICING_SYNC_CONFIGURED
+      = "pricing.sync.configured";
+    public static final  String PRICE_COMPUTATION_SUPPORTED
+      = "price.computation.supported";
+    public static final  String FRACTIONAL_PRICE_SUPPORTED
+      = "fractional.price.supported";
+    public static final  String PERIODIC_SYNC_DISABLED
+      = "periodic.sync.disabled";
+    public static final  String ASYNC_CATALOG_SYNC_SUPPORTED
+      = "async.catalog.sync.supported";
+    private static final String ASYNC_RECONCILIATION_SYNC_SUPPORTED
+      = "async.reconciliation.sync.supported";
+
+    // Integer Properties
+    public static final String PROCESS_INVENTORY_COUNT    =
+"process.inventory.count";
+    public static final String PROCESS_NOTIFICATION_COUNT =
+"process.notification.count";
+    public static final String PROCESS_PRICE_COUNT        =
+"process.price.count";
+    public static final String HTTP_PROXY_THRESHOLD       =
+"http.proxy.threshold";
+
+    // String properties
+    public static final  String ASSOCIATED_FACILITY
+                      = "associated.facility";
+    public static final  String SHIPMENT_LABEL_FORMAT
+                      = "shipment.label.format";
+    public static final  String SALE_ORDER_PRE_PROCESSING_SCRIPT_NAME
+                      = "sale.order.pre.processing.script.name";
+    public static final  String SALE_ORDER_LIST_SCRIPT_NAME
+                      = "sale.order.list.script.name";
+    public static final  String SALE_ORDER_DETAILS_SCRIPT_NAME
+                      = "sale.order.details.script.name";
+    public static final  String MANIFEST_VERIFICATION_SCRIPT_NAME
+                      = "manifest.verification.script.name";
+    public static final  String NOTIFICATION_SCRIPT_NAME
+                      = "notification.script.name";
+    public static final  String PRE_CONFIGURATION_SCRIPT_NAME
+                      = "pre.configuration.script.name";
+    public static final  String POST_CONFIGURATION_SCRIPT_NAME
+                      = "post.configuration.script.name";
+    public static final  String POST_INVOICE_SCRIPT_NAME
+                      = "post.invoice.script.name";
+    public static final  String
+SHIPPING_PROVIDER_ALLOCATION_SCRIPT_NAME                     =
+"shipping.provider.allocation.script.name";
+    public static final  String SALE_ORDER_STATUS_SYNC_SCRIPT_NAME
+                      = "sale.order.status.sync.script.name";
+    public static final  String DISPATCH_VERIFICATION_SCRIPT_NAME
+                      = "dispatch.verification.script.name";
+    public static final  String PRE_MANIFEST_SCRIPT_NAME
+                      = "pre.manifest.script.name";
+    public static final  String POST_MANIFEST_SCRIPT_NAME
+                      = "post.manifest.script.name";
+    public static final  String
+CHANNEL_WAREHOUSE_INVENTORY_SCRIPT_NAME                      =
+"channel.warehouse.inventory.script.name";
+    public static final  String CHANNEL_ITEM_TYPE_LIST_SCRIPT_NAME
+                      = "channel.item.type.list.script.name";
+    public static final  String CHANNEL_ITEM_TYPE_DETAILS_SCRIPT_NAME
+                      = "channel.item.type.details.script.name";
+    public static final  String INVENTORY_UPDATE_SCRIPT_NAME
+                      = "inventory.update.script.name";
+    public static final  String FETCH_PENDENCY_SCRIPT_NAME
+                      = "fetch.pendency.script.name";
+    public static final  String PROCESS_PENDENCY_SCRIPT_NAME
+                      = "process.pendency.script.name";
+    public static final  String FETCH_SHIPPING_LABEL_SCRIPT_NAME
+                      = "fetch.shipping.label.script.name";
+    public static final  String VERIFY_ORDER_SCRIPT_NAME
+                      = "verify.order.script.name";
+    public static final  String INVENTORY_UPDATE_CRON_EXPRESSION
+                      = "inventory.update.cron.expression";
+    public static final  String NOTIFICATION_UPDATE_CRON_EXPRESSION
+                      = "notification.update.cron.expression";
+    public static final  String
+STOCKOUT_INVENTORY_ACKNOWLEDGE_CRON_EXPRESSION               =
+"stockout.inventory.acknowledge.cron.expression";
+    public static final  String LANDING_PAGE_SCRIPT_NAME
+                      = "landing.page.script.name";
+    public static final  String SALE_ORDER_CANCELLATION_SCRIPT_NAME
+                      = "sale.order.cancellation.script.name";
+    public static final  String INSTRUCTIONS_TEMPLATE_NAME
+                      = "instructions.template.name";
+    public static final  String
+ORDER_ITEM_PRERECONCILIATION_SCRIPT_NAME                     =
+"order.item.pre.reconciliation.script.name";
+    public static final  String UNRECONCILIED_ORDER_ITEM_SCRIPT_NAME
+                      = "unreconcilied.order.item.script.name";
+    public static final  String RECONCILIATION_TRANSACTION_SCRIPT_NAME
+                      = "reconciliation.transaction.script.name";
+    public static final  String RECONCILIATION_PAYMENT_SCRIPT_NAME
+                      = "reconciliation.payment.script.name";
+    public static final  String SALE_ORDER_ACKNOWLEDGEMENT_SCRIPT_NAME
+                      = "sale.order.acknowledgement.script.name";
+    public static final  String
+CANCEL_SALE_ORDER_ACKNOWLEDGEMENT_SCRIPT_NAME                =
+"cancel.sale.order.acknowledgement.script.name";
+    public static final  String MARK_SALE_ORDER_RETURNED_SCRIPT_NAME
+                      = "mark.sale.order.returned.script.name";
+    public static final  String SHIPPING_LABEL_SIZE
+                      = "shipping.label.size";
+    public static final  String SHIPPING_LABEL_X_OFFSET
+                      = "shipping.label.x.offset";
+    public static final  String SHIPPING_LABEL_Y_OFFSET
+                      = "shipping.label.y.offset";
+    public static final  String THIRD_PARTY_SHIPPING_DEFAULT
+                      = "third.party.shipping.default";
+    public static final  String PRODUCT_RELISTING_CONFIGURED
+                      = "product.relisting.configured";
+    public static final  String
+CHANNEL_CATALOG_SYNC_PREPROCESSOR_SCRIPT_NAME                =
+"channel.catalog.sync.preprocessor.script.name";
+    public static final  String CHANNEL_REFRESH_SALE_ORDER_SCRIPT_NAME
+                      = "channel.refresh.sale.order.script.name";
+    public static final  String HEARTBEAT_SYNC_SCRIPT_NAME
+                      = "heartbeat.sync.script.name";
+    public static final  String
+FORCE_DISPATCH_SHIPPING_PACKAGE_SCRIPT_NAME                  =
+"force.dispatch.shipping.package.script.name";
+    public static final  String
+FETCH_CURRENT_CHANNEL_MANIFEST_SCRIPT_NAME                   =
+"fetch.current.channel.manifest.script.name";
+    public static final  String REFRESH_SHIPPING_LABEL_SCRIPT_NAME
+                      = "refresh.shipping.label.script.name";
+    public static final  String SALE_ORDER_STATUS_SYNC_METADATA
+                      = "sale.order.status.sync.metadata.script.name";
+    public static final  String
+CHANNEL_RECONCILIATION_INVOICE_LIST_SCRIPT_NAME              =
+"reconciliation.invoice.list.script.name";
+    public static final  String
+CHANNEL_RECONCILIATION_INVOICE_DETAIL_SCRIPT_NAME            =
+"reconciliation.invoice.detail.script.name";
+    public static final  String
+CHANNEL_RECONCILIATION_INVOICE_SYNC_PREPROCESSOR_SCRIPT_NAME =
+"reconciliation.invoice.sync.preprocessor.script.name";
+    public static final  String RESERVED_KEYWORDS_FOR_SHORT_NAME
+                      = "reserved.keywords.for.short.name";
+    public static final  String UPDATE_PRICE_SCRIPT_NAME
+                      = "price.update.script.name";
+    public static final  String CHECK_PRICE_SCRIPT_NAME
+                      = "check.price.script.name";
+    public static final  String POST_SHIPPING_PACKAGE_CREATE_SCRIPT
+                      = "post.shipping.package.create.script";
+    public static final  String DEFAULT_INVENTORY_UPDATE_FORMULA
+                      = "default.inventory.update.formula";
+    public static final  String DEFAULT_INVENTORY_UPDATE_FORMULA_CODE
+                      = "default.inventory.update.formula.code";
+    public static final  String
+CHANNEL_WAREHOUSE_INVENTORY_SYNC_PREPROCESSOR_SCRIPT_NAME    =
+"channel.warehouse.inventory.sync.preprocessor.script.name";
+    private static final String
+ASYNC_CHANNEL_WAREHOUSE_INVENTORY_SYNC_SUPPORTED             =
+"async.channel.warehouse.inventory.sync.supported";
+
+    // List properties
+    public static final String SALE_ORDER_CANCELLATION_REASONS =
+"sale.order.cancellation.reasons";
+    public static final String SALE_ORDER_RETURN_REASONS       =
+"sale.order.return.reasons";
+    public static final String AVAILABLE_PRICE_FIELDS          =
+"available.price.fields";
+    public static final String EDITABLE_PRICE_FIELDS           =
+"editable.price.fields";
+    public static final String SUPPORTED_CURRENCIES            =
+"supported.currencies";
+
+    private String id;
+
+    @Indexed(unique = true) private String code;
+
+    private String       name;
+    private boolean      enabled;
+    private int          priority;
+    private Type         type;
+    private Localization localization;
+    private Date         created;
+    private Date         updated;
+    private Set<SourceProperty>               sourceProperties
+     = new HashSet<>();
+    private Set<SourceConnector>              sourceConnectors
+     = new HashSet<>();
+    private Set<SourceConfigurationParameter>
+sourceConfigurationParameters = new HashSet<>();
+
+    private Map<String, Object>                       sourcePropertyToValue;
+    private Map<String, SourceConfigurationParameter> paramterNameToParameter;
+
+    public Source() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public Localization getLocalization() {
+        return localization;
+    }
+
+    public void setLocalization(Localization localization) {
+        this.localization = localization;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public Set<SourceProperty> getSourceProperties() {
+        return sourceProperties;
+    }
+
+    public void setSourceProperties(Set<SourceProperty> sourceProperties) {
+        this.sourceProperties = sourceProperties;
+    }
+
+    public Set<SourceConnector> getSourceConnectors() {
+        return sourceConnectors;
+    }
+
+    public void setSourceConnectors(Set<SourceConnector> sourceConnectors) {
+        this.sourceConnectors = sourceConnectors;
+    }
+
+    public Set<SourceConfigurationParameter>
+getSourceConfigurationParameters() {
+        return sourceConfigurationParameters;
+    }
+
+    public void
+setSourceConfigurationParameters(Set<SourceConfigurationParameter>
+sourceConfigurationParameters) {
+        this.sourceConfigurationParameters = sourceConfigurationParameters;
+    }
+
+    @Transient public boolean isActive() {
+        return Boolean.parseBoolean(getFieldValue(ACTIVE, "true"));
+    }
+
+    @Transient public boolean isInventorySyncConfigured() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(INVENTORY_SYNC_CONFIGURED));
+    }
+
+    @Transient public boolean isOrderSyncConfigured() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ORDER_SYNC_CONFIGURED));
+    }
+
+    @Transient public boolean isCatalogSyncConfigured() {
+        if (StringUtils.isNotBlank(getStringifiedFieldValue(CATALOG_SYNC_CONFIGURED)))
+{
+            return
+Boolean.parseBoolean(getStringifiedFieldValue(CATALOG_SYNC_CONFIGURED));
+        }
+        return true;
+    }
+
+    @Transient public boolean isChannelWarehouseInventorySyncConfigured() {
+        if (StringUtils.isNotBlank(getStringifiedFieldValue(CHANNEL_WAREHOUSE_INVENTORY_SYNC_CONFIGURED)))
+{
+            return
+Boolean.parseBoolean(getStringifiedFieldValue(CHANNEL_WAREHOUSE_INVENTORY_SYNC_CONFIGURED));
+        }
+        return true;
+    }
+
+    @Transient public boolean isPricingSyncConfigured() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PRICING_SYNC_CONFIGURED));
+    }
+
+    @Transient public boolean isPriceComputationSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PRICE_COMPUTATION_SUPPORTED));
+    }
+
+    @Transient public boolean isFractionalPriceSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FRACTIONAL_PRICE_SUPPORTED));
+    }
+
+    @Transient public boolean isPeriodicSyncDisabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PERIODIC_SYNC_DISABLED));
+    }
+
+    @Transient public boolean isAsyncCatalogSyncSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ASYNC_CATALOG_SYNC_SUPPORTED));
+    }
+
+    @Transient public boolean isAsyncChannelWarehouseInventorySyncSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ASYNC_CHANNEL_WAREHOUSE_INVENTORY_SYNC_SUPPORTED));
+    }
+
+    @Transient public boolean isAllowMultipleChannel() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ALLOW_MULTIPLE_CHANNEL));
+    }
+
+    @Transient public boolean isThirdPartyConfigurationRequired() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(THIRD_PARTY_CONFIGURATION_REQUIRED));
+    }
+
+    @Transient public boolean isFulfillmentByChannel() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FULFILLMENT_BY_CHANNEL));
+    }
+
+    @Transient public boolean isAsyncReconciliationSyncSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ASYNC_RECONCILIATION_SYNC_SUPPORTED));
+    }
+
+    @Transient public boolean isFetchCompleteOrders() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FETCH_COMPLETE_ORDERS));
+    }
+
+    @Transient public boolean isNotificationsEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(NOTIFICATIONS_ENABLED));
+    }
+
+    @Transient public int getProcessNotificationCount() {
+        return Integer.parseInt(getFieldValue(PROCESS_NOTIFICATION_COUNT, "1"));
+    }
+
+    @Transient public int getProcessInventoryCount() {
+        return Integer.parseInt(getFieldValue(PROCESS_INVENTORY_COUNT, "1"));
+    }
+
+    @Transient public int getProcessPriceCount() {
+        return Integer.parseInt(getFieldValue(PROCESS_PRICE_COUNT, "1"));
+    }
+
+    @Transient public int getHttpProxyThreshold() {
+        return Integer.parseInt(getFieldValue(HTTP_PROXY_THRESHOLD, "10"));
+    }
+
+    @Transient public String getInventoryUpdateCronExpression() {
+        return getFieldValue(INVENTORY_UPDATE_CRON_EXPRESSION, "0 */30
+* * * *");
+    }
+
+    @Transient public String getNotificationUpdateCronExpression() {
+        return getStringifiedFieldValue(NOTIFICATION_UPDATE_CRON_EXPRESSION);
+    }
+
+    @Transient public String getStockoutInventoryAcknowledgeCronExpression() {
+        return getStringifiedFieldValue(STOCKOUT_INVENTORY_ACKNOWLEDGE_CRON_EXPRESSION);
+    }
+
+    @Transient public boolean isUseSellerSkuForInventoryUpdate() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(USE_SELLER_SKU_FOR_INVENTORY_UPDATE));
+    }
+
+    @Transient public boolean isChannelVerificationSupported() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(CHANNEL_VERIFICATION_SUPPORTED));
+    }
+
+    @Transient public boolean isPendencyConfigurationEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PENDENCY_CONFIGURATION_ENABLED));
+    }
+
+    @Transient public boolean isCommitPendencyOnChannel() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(COMMIT_PENDENCY_ON_CHANNEL));
+    }
+
+    @Transient public ConfigurationStatus getProductRelistingConfigured() {
+        ConfigurationStatus status;
+        String value = getStringifiedFieldValue(PRODUCT_RELISTING_CONFIGURED);
+        if (StringUtils.isBlank(value)) {
+            status = ConfigurationStatus.NO;
+        } else {
+            switch (value) {
+                case "PROMPT":
+                    status = ConfigurationStatus.PROMPT;
+                    break;
+                case "YES":
+                    status = ConfigurationStatus.YES;
+                    break;
+                case "NO":
+                    status = ConfigurationStatus.NO;
+                    break;
+                default:
+                    status = ConfigurationStatus.NO;
+                    break;
+            }
+        }
+        return status;
+    }
+
+    @Transient public float getShippingLabelXOffset() {
+        String value = getStringifiedFieldValue(SHIPPING_LABEL_X_OFFSET);
+        if (StringUtils.isNotBlank(value)) {
+            try {
+                return Float.parseFloat(value);
+            } catch (Exception ex) {
+            }
+        }
+        return 0f;
+    }
+
+    @Transient public float getShippingLabelYOffset() {
+        String value = getStringifiedFieldValue(SHIPPING_LABEL_Y_OFFSET);
+        if (StringUtils.isNotBlank(value)) {
+            try {
+                return Float.parseFloat(value);
+            } catch (Exception ex) {
+            }
+        }
+        return 0f;
+    }
+
+    @Transient public Boolean getThirdPartyShippingDefault() {
+        String value = getStringifiedFieldValue(THIRD_PARTY_SHIPPING_DEFAULT);
+        if (StringUtils.isNotBlank(value)) {
+            try {
+                return Boolean.parseBoolean(value);
+            } catch (Exception ex) {
+            }
+        }
+        return null;
+    }
+
+    @Transient public boolean isOrderRefreshEnabled() {
+        return Boolean.parseBoolean(getFieldValue(ORDER_REFRESH_ENABLED,
+"false"));
+    }
+
+    @Transient public boolean isHeartbeatSyncEnabled() {
+        return Boolean.parseBoolean(getFieldValue(HEARTBEAT_SYNC_ENABLED,
+"false"));
+    }
+
+    @Transient public boolean isOrderReconciliationEnabled() {
+        return Boolean.parseBoolean(getFieldValue(ORDER_RECONCILIATION_ENABLED,
+"false"));
+    }
+
+    @Transient public boolean isProductDelistingConfigured() {
+        return Boolean.parseBoolean(getFieldValue(PRODUCT_DELISTING_CONFIGURED,
+"false"));
+    }
+
+    @Transient public boolean isShippingLabelAggregationConfigured() {
+        return Boolean.parseBoolean(getFieldValue(SHIPPING_LABEL_AGGREGATION_CONFIGURED,
+"false"));
+    }
+
+    @Transient public boolean isHttpProxyRequired() {
+        return Boolean.parseBoolean(getFieldValue(HTTP_PROXY_REQUIRED,
+"false"));
+    }
+
+    @Transient public boolean isDispatchPackageOnManifestClose() {
+        return Boolean.parseBoolean(getFieldValue(DISPATCH_PACKAGE_ON_MANIFEST_CLOSE,
+"false"));
+    }
+
+    @Transient public boolean isPaymentReconciliationEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PAYMENT_RECONCILIATION_ENABLED));
+    }
+
+    @Transient public String getLandingPageScriptName() {
+        return getStringifiedFieldValue(LANDING_PAGE_SCRIPT_NAME);
+    }
+
+    @Transient public String getSaleOrderCancellationScriptName() {
+        return getStringifiedFieldValue(SALE_ORDER_CANCELLATION_SCRIPT_NAME);
+    }
+
+    @Transient public String getShipmentLabelFormat() {
+        if (!Boolean.parseBoolean(getStringifiedFieldValue(PROMPT_FOR_SHIPMENT_LABEL_FORMAT)))
+{
+            return getStringifiedFieldValue(SHIPMENT_LABEL_FORMAT);
+        }
+        return null;
+    }
+
+    @Transient public String getDefaultShipmentLabelFormat() {
+        return getStringifiedFieldValue(SHIPMENT_LABEL_FORMAT);
+    }
+
+    @Transient public boolean isAllowCombinedManifest() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(ALLOW_COMBINED_MANIFEST));
+    }
+
+    @Transient public boolean isAutoVerifyOrders() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(AUTO_VERIFY_ORDERS));
+    }
+
+    @Transient public boolean isPackageTypeConfigured() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(PACKAGE_TYPE_CONFIGURED));
+    }
+
+    @Transient public boolean isThirdPartyShippingAvailable() {
+        String value = getStringifiedFieldValue(THIRD_PARTY_SHIPPING_AVAILABLE);
+        if (StringUtils.isNotBlank(value)) {
+            return Boolean.parseBoolean(value);
+        }
+        return true;
+    }
+
+    @Transient public boolean isAllowAnyShippingMethod() {
+        String value = getStringifiedFieldValue(ALLOW_ANY_SHIPPING_METHOD);
+        if (StringUtils.isNotBlank(value)) {
+            return Boolean.parseBoolean(value);
+        }
+        return true;
+    }
+
+    @Transient public boolean isAllowVendorSelf() {
+        String value = getStringifiedFieldValue(ALLOW_VENDOR_SELF);
+        if (StringUtils.isNotBlank(value)) {
+            return Boolean.parseBoolean(value);
+        }
+        return false;
+    }
+
+    @Transient public boolean isManifestAllReadyToShipOrdersTogether() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(MANIFEST_ALL_READY_TO_SHIP_ORDERS_TOGETHER));
+    }
+
+    @Transient public boolean isDisplayOrderCodeUnique() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(DISPLAY_ORDER_CODE_UNIQUE));
+    }
+
+    @Transient public boolean isDisplayOrderCodeToSaleOrderCodeUnique() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(DISPLAY_ORDER_CODE_TO_SALE_ORDER_CODE_UNIQUE));
+    }
+
+    @Transient public boolean isFetchCurrentChannelManifestEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FETCH_CURRENT_CHANNEL_MANIFEST_ENABLED));
+    }
+
+    @Transient public boolean isSelectiveCatalogSyncEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(SELECTIVE_CATALOG_SYNC_ENABLED));
+    }
+
+    @Transient public boolean isFrequentOrderSyncEnabled() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FREQUENT_ORDER_SYNC_ENABLED));
+    }
+
+    @Transient public boolean isDisallowPackageSplit() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(DISALLOW_PACKAGE_SPLIT));
+    }
+
+    @Transient public boolean isTatAvailableFromChannel() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(TAT_AVAILABLE_FROM_CHANNEL));
+    }
+
+    @Transient public boolean isPODRequired() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(POD_REQUIRED));
+    }
+
+    @Transient public boolean isFacilityAssociationRequired() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(FACILITY_ASSOCIATION_REQUIRED));
+    }
+
+    @Transient public boolean isRestrictCustomerNotificationOnDispatch() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(RESTRICT_CUSTOMER_NOTIFICATION_ON_DISPATCH));
+    }
+
+    @Transient public boolean isRefetchShippingLabelAllowed() {
+        return Boolean.parseBoolean(getStringifiedFieldValue(REFETCH_SHIPPING_LABEL_ALLOWED));
+    }
+
+    @Transient public boolean isOrderStatusSyncAvailable() {
+        return getStringifiedFieldValue(SALE_ORDER_STATUS_SYNC_SCRIPT_NAME)
+!= null;
+    }
+
+    @SuppressWarnings("unchecked") @Transient public List<String>
+getSaleOrderCancellationReasons() {
+        Object value = getFieldValue(SALE_ORDER_CANCELLATION_REASONS);
+        if (value != null) {
+            return (List<String>) value;
+        }
+        return Collections.emptyList();
+    }
+
+    @SuppressWarnings("unchecked") @Transient public List<String>
+getSaleOrderReturnReasons() {
+        Object value = getFieldValue(SALE_ORDER_RETURN_REASONS);
+        if (value != null) {
+            return (List<String>) value;
+        }
+        return Collections.emptyList();
+    }
+
+    @SuppressWarnings("unchecked") @Transient public List<String>
+getAvailablePriceFields() {
+        Object value = getFieldValue(AVAILABLE_PRICE_FIELDS);
+        if (value != null) {
+            return (List<String>) value;
+        }
+        return Collections.emptyList();
+    }
+
+    @SuppressWarnings("unchecked") @Transient public List<String>
+getEditablePriceFields() {
+        Object value = getFieldValue(EDITABLE_PRICE_FIELDS);
+        if (value != null) {
+            return (List<String>) value;
+        }
+        return Collections.emptyList();
+    }
+
+    @SuppressWarnings("unchecked") @Transient public List<String>
+getSupportedCurrencies() {
+        Object value = getFieldValue(SUPPORTED_CURRENCIES);
+        if (value != null) {
+            return (List<String>) value;
+        }
+        return Collections.EMPTY_LIST;
+    }
+
+    @Transient public String getStringifiedFieldValue(String fieldName) {
+        if (sourcePropertyToValue == null) {
+            sourcePropertyToValue = new HashMap<>();
+            for (SourceProperty property : getSourceProperties()) {
+                sourcePropertyToValue.put(property.getName(),
+property.getValue());
+            }
+        }
+        Object value = sourcePropertyToValue.get(fieldName);
+        return value != null ? String.valueOf(value) : null;
+    }
+
+    @Transient public Object getFieldValue(String fieldName) {
+        if (sourcePropertyToValue == null) {
+            sourcePropertyToValue = new HashMap<>();
+            for (SourceProperty property : getSourceProperties()) {
+                sourcePropertyToValue.put(property.getName(),
+property.getValue());
+            }
+        }
+        return sourcePropertyToValue.get(fieldName);
+    }
+
+    @Transient public String getFieldValue(String fieldName, String
+defaultValue) {
+        String value = getStringifiedFieldValue(fieldName);
+        return StringUtils.isBlank(value) ? defaultValue : value;
+    }
+
+    @Transient public String getReservedKeywordsForShortName() {
+        return getStringifiedFieldValue(RESERVED_KEYWORDS_FOR_SHORT_NAME);
+    }
+
+    @Transient public String getDefaultInventoryUpdateFormula() {
+        return getStringifiedFieldValue(DEFAULT_INVENTORY_UPDATE_FORMULA);
+    }
+
+    @Transient public String getDefaultInventoryUpdateFormulaCode() {
+        return getStringifiedFieldValue(DEFAULT_INVENTORY_UPDATE_FORMULA_CODE);
+    }
+
+    @Transient public SourceConfigurationParameter
+getSourceConfigutaionParameter(String fieldName) {
+        if (paramterNameToParameter == null) {
+            paramterNameToParameter = new HashMap<>();
+            for (SourceConfigurationParameter param :
+getSourceConfigurationParameters()) {
+                paramterNameToParameter.put(param.getName(), param);
+            }
+        }
+        return paramterNameToParameter.get(fieldName);
+    }
+
+    @Override public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        Source source = (Source) o;
+
+        return code.equals(source.code);
+    }
+
+    @Override public int hashCode() {
+        return code.hashCode();
+    }
+
+    public static void main(String args[]) {
+        System.out.println(Boolean.parseBoolean(null));
+    }
+}
+
+--001a113a9b86d1e454054773566b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><span style=3D"color:rgb(0,0,128);font-weight:bold">package </span>co=
+m.uniware.core.entity;<br><br><span style=3D"color:rgb(0,0,128);font-weight=
+:bold">import </span>java.io.Serializable;<br><span style=3D"color:rgb(0,0,=
+128);font-weight:bold">import </span>java.util.Collections;<br><span style=
+=3D"color:rgb(0,0,128);font-weight:bold">import </span>java.util.Date;<br><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">import </span>java.util.=
+HashMap;<br><span style=3D"color:rgb(0,0,128);font-weight:bold">import </sp=
+an>java.util.HashSet;<br><span style=3D"color:rgb(0,0,128);font-weight:bold=
+">import </span>java.util.List;<br><span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">import </span>java.util.Map;<br><span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">import </span>java.util.Set;<br><br><span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">import </span>javax.persistence.<span sty=
+le=3D"color:rgb(128,128,0)">Transient</span>;<br><br><span style=3D"color:r=
+gb(0,0,128);font-weight:bold">import </span>org.springframework.data.mongod=
+b.core.index.<span style=3D"color:rgb(128,128,0)">Indexed</span>;<br><span =
+style=3D"color:rgb(0,0,128);font-weight:bold">import </span>org.springframe=
+work.data.mongodb.core.mapping.<span style=3D"color:rgb(128,128,0)">Documen=
+t</span>;<br><br><span style=3D"color:rgb(0,0,128);font-weight:bold">import=
+ </span>com.unifier.core.utils.StringUtils;<br><br><span style=3D"color:rgb=
+(128,128,0)">@Document</span>(collection =3D <span style=3D"color:rgb(0,128=
+,0);font-weight:bold">&quot;source&quot;</span>) <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">public class </span>Source <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">implements </span>Serializable {<br><br>    <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public enum </span>Code =
+{<br>        <span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">CUSTOM</span>,<br>    }<br><br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public enum </span>Type {<br>        <span style=3D"=
+color:rgb(102,14,122);font-weight:bold;font-style:italic">B2B</span>, <span=
+ style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">CART</s=
+pan>, <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">MARKETPLACE<br></span><span style=3D"color:rgb(102,14,122);font-weight:=
+bold;font-style:italic">    </span>}<br><br>    <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">public enum </span>Localization {<br>        <span=
+ style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">NATIONA=
+L</span>, <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:=
+italic">INTERNATIONAL<br></span><span style=3D"color:rgb(102,14,122);font-w=
+eight:bold;font-style:italic">    </span>}<br><br>    <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">public enum </span>ShipmentLabelFormat {<br>=
+        <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:it=
+alic">CSV</span>, <span style=3D"color:rgb(102,14,122);font-weight:bold;fon=
+t-style:italic">HTML</span>, <span style=3D"color:rgb(102,14,122);font-weig=
+ht:bold;font-style:italic">PDF</span>, <span style=3D"color:rgb(102,14,122)=
+;font-weight:bold;font-style:italic">PNG<br></span><span style=3D"color:rgb=
+(102,14,122);font-weight:bold;font-style:italic">    </span>}<br><br>    <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">public enum </span>Shipme=
+ntLabelAggregationFormat {<br>        <span style=3D"color:rgb(102,14,122);=
+font-weight:bold;font-style:italic">NONE</span>(<span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;A4&quot;</span>, <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;A4&quot;</span>, <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">false</span>), <span style=3D"color:rgb(102,14,122=
+);font-weight:bold;font-style:italic">A6_TO_A4</span>(<span style=3D"color:=
+rgb(0,128,0);font-weight:bold">&quot;A6&quot;</span>, <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">&quot;A4&quot;</span>, <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">false</span>), <span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">A5_TO_A4</span>(<span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;A5&quot;</span>, <span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;A4&quot;</span>, <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">false</span>), <span style=3D"color:rg=
+b(102,14,122);font-weight:bold;font-style:italic">A6_TO_A4_LANDSCAPE</span>=
+(<span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;A6&quot;</span>,=
+ <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;A4&quot;</span>,=
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">true</span>), <span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">A5_TO_A4_L=
+ANDSCAPE</span>(<span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;A=
+5&quot;</span>, <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;A=
+4&quot;</span>, <span style=3D"color:rgb(0,0,128);font-weight:bold">true</s=
+pan>);<br><br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">p=
+rivate </span>String  <span style=3D"color:rgb(102,14,122);font-weight:bold=
+">fromSize</span>;<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">private </span>String  <span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold">toSize</span>;<br>        <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">private boolean </span><span style=3D"color:rgb(102,14,122);fo=
+nt-weight:bold">landscape</span>;<br><br>        <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">private </span>ShipmentLabelAggregationFormat(Str=
+ing fromSize, String toSize, <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">boolean </span>landscape) {<br>            <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);=
+font-weight:bold">fromSize </span>=3D fromSize;<br>            <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:r=
+gb(102,14,122);font-weight:bold">toSize </span>=3D toSize;<br>            <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=
+=3D"color:rgb(102,14,122);font-weight:bold">landscape </span>=3D landscape;=
+<br>        }<br><br>        <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public </span>String getFromSize() {<br>            <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">return </span><span style=3D"color:rgb(1=
+02,14,122);font-weight:bold">fromSize</span>;<br>        }<br><br>        <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setFr=
+omSize(String fromSize) {<br>            <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold">fromSize </span>=3D fromSize;<br>        }<br><br>        <span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">public </span>String getToSize=
+() {<br>            <span style=3D"color:rgb(0,0,128);font-weight:bold">ret=
+urn </span><span style=3D"color:rgb(102,14,122);font-weight:bold">toSize</s=
+pan>;<br>        }<br><br>        <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public void </span>setToSize(String toSize) {<br>            <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D=
+"color:rgb(102,14,122);font-weight:bold">toSize </span>=3D toSize;<br>     =
+   }<br><br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">pub=
+lic boolean </span>isLandscape() {<br>            <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">return </span><span style=3D"color:rgb(102,14,12=
+2);font-weight:bold">landscape</span>;<br>        }<br><br>        <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setLandscape=
+(<span style=3D"color:rgb(0,0,128);font-weight:bold">boolean </span>landsca=
+pe) {<br>            <span style=3D"color:rgb(0,0,128);font-weight:bold">th=
+is</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">landscape =
+</span>=3D landscape;<br>        }<br><br>    }<br><br>    <span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">public enum </span>ConfigurationStatus =
+{<br>        <span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">YES</span>, <span style=3D"color:rgb(102,14,122);font-weight:bol=
+d;font-style:italic">NO</span>, <span style=3D"color:rgb(102,14,122);font-w=
+eight:bold;font-style:italic">PROMPT<br></span><span style=3D"color:rgb(102=
+,14,122);font-weight:bold;font-style:italic">    </span>}<br><br>    <span =
+style=3D"color:rgb(128,128,128);font-style:italic">// Boolean Properties<br=
+></span><span style=3D"color:rgb(128,128,128);font-style:italic">    </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  <=
+/span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">ACTIVE                                       </span>=3D <span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold">&quot;active&quot;</span>;<br> =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">public static final =
+ </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-s=
+tyle:italic">USE_SELLER_SKU_FOR_INVENTORY_UPDATE          </span>=3D <span =
+style=3D"color:rgb(0,128,0);font-weight:bold">&quot;use.seller.sku.for.inve=
+ntory.update&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public static final  </span>String <span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">CHANNEL_VERIFICATION_SUPPORTED =
+              </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold=
+">&quot;channel.verification.supported&quot;</span>;<br>    <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public static final  </span>String <sp=
+an style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">NOTIF=
+ICATIONS_ENABLED                        </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;notifications.enabled&quot;</span>;<br>  =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  =
+</span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-st=
+yle:italic">THIRD_PARTY_CONFIGURATION_REQUIRED           </span>=3D <span s=
+tyle=3D"color:rgb(0,128,0);font-weight:bold">&quot;third.party.configuratio=
+n.required&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">public static final  </span>String <span style=3D"color:rgb(102,14=
+,122);font-weight:bold;font-style:italic">INVENTORY_SYNC_CONFIGURED        =
+            </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">=
+&quot;inventory.sync.configured&quot;</span>;<br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public static final  </span>String <span styl=
+e=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ORDER_SYNC_C=
+ONFIGURED                        </span>=3D <span style=3D"color:rgb(0,128,=
+0);font-weight:bold">&quot;order.sync.configured&quot;</span>;<br>    <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>=
+String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ita=
+lic">ORDER_STATUS_SYNC_CONFIGURED                 </span>=3D <span style=3D=
+"color:rgb(0,128,0);font-weight:bold">&quot;order.status.sync.configured&qu=
+ot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">priv=
+ate static final </span>String <span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">CATALOG_SYNC_CONFIGURED                      <=
+/span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;catalog=
+.sync.supported&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">private static final </span>String <span style=3D"color:rgb(1=
+02,14,122);font-weight:bold;font-style:italic">CHANNEL_WAREHOUSE_INVENTORY_=
+SYNC_CONFIGURED  </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:b=
+old">&quot;channel.warehouse.inventory.sync.configured&quot;</span>;<br>   =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  <=
+/span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">ALLOW_MULTIPLE_CHANNEL                       </span>=3D <span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold">&quot;allow.multiple.channel&qu=
+ot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publ=
+ic static final  </span>String <span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">PENDENCY_CONFIGURATION_ENABLED               <=
+/span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;pendenc=
+y.configuration.enabled&quot;</span>;<br>    <span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">public static final  </span>String <span style=3D"col=
+or:rgb(102,14,122);font-weight:bold;font-style:italic">COMMIT_PENDENCY_ON_C=
+HANNEL                   </span>=3D <span style=3D"color:rgb(0,128,0);font-=
+weight:bold">&quot;commit.pendency.on.channel&quot;</span>;<br>    <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>Str=
+ing <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic=
+">ALLOW_COMBINED_MANIFEST                      </span>=3D <span style=3D"co=
+lor:rgb(0,128,0);font-weight:bold">&quot;allow.combined.manifest&quot;</spa=
+n>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public stati=
+c final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bol=
+d;font-style:italic">PROMPT_FOR_SHIPMENT_LABEL_FORMAT             </span>=
+=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;prompt.for.sh=
+ipment.label.format&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public static final  </span>String <span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">AUTO_VERIFY_ORDERS      =
+                     </span>=3D <span style=3D"color:rgb(0,128,0);font-weig=
+ht:bold">&quot;auto.verify.orders&quot;</span>;<br>    <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">public static final  </span>String <span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ALLOW_ANY_=
+SHIPPING_METHOD                    </span>=3D <span style=3D"color:rgb(0,12=
+8,0);font-weight:bold">&quot;allow.any.shipping.method&quot;</span>;<br>   =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  <=
+/span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">ALLOW_VENDOR_SELF                            </span>=3D <span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold">&quot;allow.vendor.self&quot;</=
+span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public st=
+atic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:=
+bold;font-style:italic">MANIFEST_ALL_READY_TO_SHIP_ORDERS_TOGETHER   </span=
+>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;manifest.all=
+.ready.to.ship.orders.together&quot;</span>;<br>    <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">public static final  </span>String <span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">DISPLAY_ORDER=
+_CODE_UNIQUE                    </span>=3D <span style=3D"color:rgb(0,128,0=
+);font-weight:bold">&quot;display.order.code.unique&quot;</span>;<br>    <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </sp=
+an>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:=
+italic">PAYMENT_RECONCILIATION_ENABLED               </span>=3D <span style=
+=3D"color:rgb(0,128,0);font-weight:bold">&quot;payment.reconciliation.enabl=
+ed&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>public static final  </span>String <span style=3D"color:rgb(102,14,122);fo=
+nt-weight:bold;font-style:italic">PACKAGE_TYPE_CONFIGURED                  =
+    </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;pa=
+ckage.type.configured&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public static final  </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">THIRD_PARTY_SHIPPING_A=
+VAILABLE               </span>=3D <span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">&quot;third.party.shipping.available&quot;</span>;<br>    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>S=
+tring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">ORDER_RECONCILIATION_ENABLED                 </span>=3D <span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;order.reconciliation.enabled&quo=
+t;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publi=
+c static final  </span>String <span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold;font-style:italic">PRODUCT_DELISTING_CONFIGURED                 </=
+span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;product.=
+delisting.configured&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">public static final  </span>String <span style=3D"color:=
+rgb(102,14,122);font-weight:bold;font-style:italic">SHIPPING_LABEL_AGGREGAT=
+ION_CONFIGURED        </span>=3D <span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold">&quot;shipping.label.aggregation.enabled&quot;</span>;<br>    <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </spa=
+n>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">HTTP_PROXY_REQUIRED                          </span>=3D <span style=
+=3D"color:rgb(0,128,0);font-weight:bold">&quot;http.proxy.required&quot;</s=
+pan>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public sta=
+tic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:b=
+old;font-style:italic">DISPATCH_PACKAGE_ON_MANIFEST_CLOSE           </span>=
+=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;dispatch.pack=
+age.on.manifest.close&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public static final  </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">RESTRICT_CUSTOMER_NOTI=
+FICATION_ON_DISPATCH   </span>=3D <span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">&quot;restrict.customer.notification.on.dispatch&quot;</span>;<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fin=
+al  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fon=
+t-style:italic">REFETCH_SHIPPING_LABEL_ALLOWED               </span>=3D <sp=
+an style=3D"color:rgb(0,128,0);font-weight:bold">&quot;refetch.shipping.lab=
+el.allowed&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">public static final  </span>String <span style=3D"color:rgb(102,14=
+,122);font-weight:bold;font-style:italic">HEARTBEAT_SYNC_ENABLED           =
+            </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">=
+&quot;heartbeat.sync.enabled&quot;</span>;<br>    <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">public static final  </span>String <span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ORDER_REFRESH=
+_ENABLED                        </span>=3D <span style=3D"color:rgb(0,128,0=
+);font-weight:bold">&quot;order.refresh.enabled&quot;</span>;<br>    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>S=
+tring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">DISPLAY_ORDER_CODE_TO_SALE_ORDER_CODE_UNIQUE </span>=3D <span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;display.order.code.to.sale.order=
+.code.unique&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public static final  </span>String <span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">FETCH_CURRENT_CHANNEL_MANIFEST_=
+ENABLED       </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold=
+">&quot;fetch.current.channel.manifest.enabled&quot;</span>;<br>    <span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>St=
+ring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:itali=
+c">SELECTIVE_CATALOG_SYNC_ENABLED               </span>=3D <span style=3D"c=
+olor:rgb(0,128,0);font-weight:bold">&quot;selective.catalog.sync.enabled&qu=
+ot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publ=
+ic static final  </span>String <span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">FREQUENT_ORDER_SYNC_ENABLED                  <=
+/span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;frequen=
+t.order.sync.enabled&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">public static final  </span>String <span style=3D"color:=
+rgb(102,14,122);font-weight:bold;font-style:italic">DISALLOW_PACKAGE_SPLIT =
+                      </span>=3D <span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold">&quot;disallow.package.split&quot;</span>;<br>    <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public static final  </span>String <sp=
+an style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">TAT_A=
+VAILABLE_FROM_CHANNEL                   </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;tat.available.from.channel&quot;</span>;<=
+br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fi=
+nal  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fo=
+nt-style:italic">POD_REQUIRED                                 </span>=3D <s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold">&quot;pod.required&quot;<=
+/span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public s=
+tatic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">FACILITY_ASSOCIATION_REQUIRED                </spa=
+n>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;facility.as=
+sociation.required&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public static final  </span>String <span style=3D"color:rg=
+b(102,14,122);font-weight:bold;font-style:italic">FETCH_COMPLETE_ORDERS    =
+                    </span>=3D <span style=3D"color:rgb(0,128,0);font-weigh=
+t:bold">&quot;fetch.complete.orders&quot;</span>;<br>    <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">public static final  </span>String <span =
+style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">FULFILLM=
+ENT_BY_CHANNEL                       </span>=3D <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;fulfillment.by.channel&quot;</span>;<br>    =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </=
+span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-styl=
+e:italic">PRICING_SYNC_CONFIGURED                      </span>=3D <span sty=
+le=3D"color:rgb(0,128,0);font-weight:bold">&quot;pricing.sync.configured&qu=
+ot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publ=
+ic static final  </span>String <span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">PRICE_COMPUTATION_SUPPORTED                  <=
+/span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;price.c=
+omputation.supported&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">public static final  </span>String <span style=3D"color:=
+rgb(102,14,122);font-weight:bold;font-style:italic">FRACTIONAL_PRICE_SUPPOR=
+TED                   </span>=3D <span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold">&quot;fractional.price.supported&quot;</span>;<br>    <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>String=
+ <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">P=
+ERIODIC_SYNC_DISABLED                       </span>=3D <span style=3D"color=
+:rgb(0,128,0);font-weight:bold">&quot;periodic.sync.disabled&quot;</span>;<=
+br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fi=
+nal  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fo=
+nt-style:italic">ASYNC_CATALOG_SYNC_SUPPORTED                 </span>=3D <s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold">&quot;async.catalog.sync.=
+supported&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold">private static final </span>String <span style=3D"color:rgb(102,14,=
+122);font-weight:bold;font-style:italic">ASYNC_RECONCILIATION_SYNC_SUPPORTE=
+D          </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&=
+quot;async.reconciliation.sync.supported&quot;</span>;<br><br>    <span sty=
+le=3D"color:rgb(128,128,128);font-style:italic">// Integer Properties<br></=
+span><span style=3D"color:rgb(128,128,128);font-style:italic">    </span><s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">public static final </spa=
+n>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">PROCESS_INVENTORY_COUNT    </span>=3D <span style=3D"color:rgb(0,128=
+,0);font-weight:bold">&quot;process.inventory.count&quot;</span>;<br>    <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">public static final </spa=
+n>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">PROCESS_NOTIFICATION_COUNT </span>=3D <span style=3D"color:rgb(0,128=
+,0);font-weight:bold">&quot;process.notification.count&quot;</span>;<br>   =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">public static final </=
+span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-styl=
+e:italic">PROCESS_PRICE_COUNT        </span>=3D <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;process.price.count&quot;</span>;<br>    <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public static final </span=
+>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:it=
+alic">HTTP_PROXY_THRESHOLD       </span>=3D <span style=3D"color:rgb(0,128,=
+0);font-weight:bold">&quot;http.proxy.threshold&quot;</span>;<br><br>    <s=
+pan style=3D"color:rgb(128,128,128);font-style:italic">// String properties=
+<br></span><span style=3D"color:rgb(128,128,128);font-style:italic">    </s=
+pan><span style=3D"color:rgb(0,0,128);font-weight:bold">public static final=
+  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-=
+style:italic">ASSOCIATED_FACILITY                                          =
+</span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;associ=
+ated.facility&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">public static final  </span>String <span style=3D"color:rgb(102=
+,14,122);font-weight:bold;font-style:italic">SHIPMENT_LABEL_FORMAT         =
+                               </span>=3D <span style=3D"color:rgb(0,128,0)=
+;font-weight:bold">&quot;shipment.label.format&quot;</span>;<br>    <span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>St=
+ring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:itali=
+c">SALE_ORDER_PRE_PROCESSING_SCRIPT_NAME                        </span>=3D =
+<span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http:/=
+/sale.order.pre.processing.script.name">sale.order.pre.processing.script.na=
+me</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">public static final  </span>String <span style=3D"color:rgb(102,14,122=
+);font-weight:bold;font-style:italic">SALE_ORDER_LIST_SCRIPT_NAME          =
+                        </span>=3D <span style=3D"color:rgb(0,128,0);font-w=
+eight:bold">&quot;<a href=3D"http://sale.order.list.script.name">sale.order=
+.list.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public static final  </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_DETAILS_SCR=
+IPT_NAME                               </span>=3D <span style=3D"color:rgb(=
+0,128,0);font-weight:bold">&quot;<a href=3D"http://sale.order.details.scrip=
+t.name">sale.order.details.script.name</a>&quot;</span>;<br>    <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>String=
+ <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">M=
+ANIFEST_VERIFICATION_SCRIPT_NAME                            </span>=3D <spa=
+n style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://man=
+ifest.verification.script.name">manifest.verification.script.name</a>&quot;=
+</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public =
+static final  </span>String <span style=3D"color:rgb(102,14,122);font-weigh=
+t:bold;font-style:italic">NOTIFICATION_SCRIPT_NAME                         =
+            </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">=
+&quot;<a href=3D"http://notification.script.name">notification.script.name<=
+/a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">public static final  </span>String <span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold;font-style:italic">PRE_CONFIGURATION_SCRIPT_NAME           =
+                     </span>=3D <span style=3D"color:rgb(0,128,0);font-weig=
+ht:bold">&quot;<a href=3D"http://pre.configuration.script.name">pre.configu=
+ration.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public static final  </span>String <span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold;font-style:italic">POST_CONFIGURATION_SC=
+RIPT_NAME                               </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;<a href=3D"http://post.configuration.scri=
+pt.name">post.configuration.script.name</a>&quot;</span>;<br>    <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>Strin=
+g <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">=
+POST_INVOICE_SCRIPT_NAME                                     </span>=3D <sp=
+an style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://po=
+st.invoice.script.name">post.invoice.script.name</a>&quot;</span>;<br>    <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </s=
+pan>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style=
+:italic">SHIPPING_PROVIDER_ALLOCATION_SCRIPT_NAME                     </spa=
+n>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"=
+http://shipping.provider.allocation.script.name">shipping.provider.allocati=
+on.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public static final  </span>String <span style=3D"color:rg=
+b(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_STATUS_SYNC_SC=
+RIPT_NAME                           </span>=3D <span style=3D"color:rgb(0,1=
+28,0);font-weight:bold">&quot;<a href=3D"http://sale.order.status.sync.scri=
+pt.name">sale.order.status.sync.script.name</a>&quot;</span>;<br>    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>S=
+tring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">DISPATCH_VERIFICATION_SCRIPT_NAME                            </span>=3D=
+ <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http:=
+//dispatch.verification.script.name">dispatch.verification.script.name</a>&=
+quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic static final  </span>String <span style=3D"color:rgb(102,14,122);font-=
+weight:bold;font-style:italic">PRE_MANIFEST_SCRIPT_NAME                    =
+                 </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:b=
+old">&quot;<a href=3D"http://pre.manifest.script.name">pre.manifest.script.=
+name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">public static final  </span>String <span style=3D"color:rgb(102,14,1=
+22);font-weight:bold;font-style:italic">POST_MANIFEST_SCRIPT_NAME          =
+                          </span>=3D <span style=3D"color:rgb(0,128,0);font=
+-weight:bold">&quot;<a href=3D"http://post.manifest.script.name">post.manif=
+est.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public static final  </span>String <span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">CHANNEL_WAREHOUSE_INVENT=
+ORY_SCRIPT_NAME                      </span>=3D <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;<a href=3D"http://channel.warehouse.inventor=
+y.script.name">channel.warehouse.inventory.script.name</a>&quot;</span>;<br=
+>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fina=
+l  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font=
+-style:italic">CHANNEL_ITEM_TYPE_LIST_SCRIPT_NAME                          =
+ </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a hr=
+ef=3D"http://channel.item.type.list.script.name">channel.item.type.list.scr=
+ipt.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public static final  </span>String <span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">CHANNEL_ITEM_TYPE_DETAILS_SCRIP=
+T_NAME                        </span>=3D <span style=3D"color:rgb(0,128,0);=
+font-weight:bold">&quot;<a href=3D"http://channel.item.type.details.script.=
+name">channel.item.type.details.script.name</a>&quot;</span>;<br>    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>S=
+tring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">INVENTORY_UPDATE_SCRIPT_NAME                                 </span>=3D=
+ <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http:=
+//inventory.update.script.name">inventory.update.script.name</a>&quot;</spa=
+n>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public stati=
+c final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bol=
+d;font-style:italic">FETCH_PENDENCY_SCRIPT_NAME                            =
+       </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot=
+;<a href=3D"http://fetch.pendency.script.name">fetch.pendency.script.name</=
+a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>public static final  </span>String <span style=3D"color:rgb(102,14,122);fo=
+nt-weight:bold;font-style:italic">PROCESS_PENDENCY_SCRIPT_NAME             =
+                    </span>=3D <span style=3D"color:rgb(0,128,0);font-weigh=
+t:bold">&quot;<a href=3D"http://process.pendency.script.name">process.pende=
+ncy.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public static final  </span>String <span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">FETCH_SHIPPING_LABEL_SCR=
+IPT_NAME                             </span>=3D <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;<a href=3D"http://fetch.shipping.label.scrip=
+t.name">fetch.shipping.label.script.name</a>&quot;</span>;<br>    <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>Stri=
+ng <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic"=
+>VERIFY_ORDER_SCRIPT_NAME                                     </span>=3D <s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://v=
+erify.order.script.name">verify.order.script.name</a>&quot;</span>;<br>    =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </=
+span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-styl=
+e:italic">INVENTORY_UPDATE_CRON_EXPRESSION                             </sp=
+an>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;inventory.=
+update.cron.expression&quot;</span>;<br>    <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public static final  </span>String <span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold;font-style:italic">NOTIFICATION_UPDATE_C=
+RON_EXPRESSION                          </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;notification.update.cron.expression&quot;=
+</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public =
+static final  </span>String <span style=3D"color:rgb(102,14,122);font-weigh=
+t:bold;font-style:italic">STOCKOUT_INVENTORY_ACKNOWLEDGE_CRON_EXPRESSION   =
+            </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">=
+&quot;stockout.inventory.acknowledge.cron.expression&quot;</span>;<br>    <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </s=
+pan>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style=
+:italic">LANDING_PAGE_SCRIPT_NAME                                     </spa=
+n>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"=
+http://landing.page.script.name">landing.page.script.name</a>&quot;</span>;=
+<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static f=
+inal  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;f=
+ont-style:italic">SALE_ORDER_CANCELLATION_SCRIPT_NAME                      =
+    </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a=
+ href=3D"http://sale.order.cancellation.script.name">sale.order.cancellatio=
+n.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">public static final  </span>String <span style=3D"color:rgb=
+(102,14,122);font-weight:bold;font-style:italic">INSTRUCTIONS_TEMPLATE_NAME=
+                                   </span>=3D <span style=3D"color:rgb(0,12=
+8,0);font-weight:bold">&quot;<a href=3D"http://instructions.template.name">=
+instructions.template.name</a>&quot;</span>;<br>    <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">public static final  </span>String <span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ORDER_ITEM_PR=
+ERECONCILIATION_SCRIPT_NAME                     </span>=3D <span style=3D"c=
+olor:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://order.item.pre.=
+reconciliation.script.name">order.item.pre.reconciliation.script.name</a>&q=
+uot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">pub=
+lic static final  </span>String <span style=3D"color:rgb(102,14,122);font-w=
+eight:bold;font-style:italic">UNRECONCILIED_ORDER_ITEM_SCRIPT_NAME         =
+                </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bo=
+ld">&quot;<a href=3D"http://unreconcilied.order.item.script.name">unreconci=
+lied.order.item.script.name</a>&quot;</span>;<br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public static final  </span>String <span styl=
+e=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">RECONCILIATI=
+ON_TRANSACTION_SCRIPT_NAME                       </span>=3D <span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://reconciliation=
+.transaction.script.name">reconciliation.transaction.script.name</a>&quot;<=
+/span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public s=
+tatic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">RECONCILIATION_PAYMENT_SCRIPT_NAME                =
+           </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&=
+quot;<a href=3D"http://reconciliation.payment.script.name">reconciliation.p=
+ayment.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public static final  </span>String <span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_ACKNOWLEDG=
+EMENT_SCRIPT_NAME                       </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;<a href=3D"http://sale.order.acknowledgem=
+ent.script.name">sale.order.acknowledgement.script.name</a>&quot;</span>;<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fin=
+al  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fon=
+t-style:italic">CANCEL_SALE_ORDER_ACKNOWLEDGEMENT_SCRIPT_NAME              =
+  </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a h=
+ref=3D"http://cancel.sale.order.acknowledgement.script.name">cancel.sale.or=
+der.acknowledgement.script.name</a>&quot;</span>;<br>    <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">public static final  </span>String <span =
+style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">MARK_SAL=
+E_ORDER_RETURNED_SCRIPT_NAME                         </span>=3D <span style=
+=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://mark.sale.=
+order.returned.script.name">mark.sale.order.returned.script.name</a>&quot;<=
+/span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public s=
+tatic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">SHIPPING_LABEL_SIZE                               =
+           </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&=
+quot;shipping.label.size&quot;</span>;<br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public static final  </span>String <span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">SHIPPING_LABEL_X_OF=
+FSET                                      </span>=3D <span style=3D"color:r=
+gb(0,128,0);font-weight:bold">&quot;shipping.label.x.offset&quot;</span>;<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fin=
+al  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fon=
+t-style:italic">SHIPPING_LABEL_Y_OFFSET                                    =
+  </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;ship=
+ping.label.y.offset&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public static final  </span>String <span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">THIRD_PARTY_SHIPPING_DEF=
+AULT                                 </span>=3D <span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;third.party.shipping.default&quot;</span>;<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public static fin=
+al  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bold;fon=
+t-style:italic">PRODUCT_RELISTING_CONFIGURED                               =
+  </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;prod=
+uct.relisting.configured&quot;</span>;<br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public static final  </span>String <span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">CHANNEL_CATALOG_SYN=
+C_PREPROCESSOR_SCRIPT_NAME                </span>=3D <span style=3D"color:r=
+gb(0,128,0);font-weight:bold">&quot;<a href=3D"http://channel.catalog.sync.=
+preprocessor.script.name">channel.catalog.sync.preprocessor.script.name</a>=
+&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">p=
+ublic static final  </span>String <span style=3D"color:rgb(102,14,122);font=
+-weight:bold;font-style:italic">CHANNEL_REFRESH_SALE_ORDER_SCRIPT_NAME     =
+                  </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:=
+bold">&quot;<a href=3D"http://channel.refresh.sale.order.script.name">chann=
+el.refresh.sale.order.script.name</a>&quot;</span>;<br>    <span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">public static final  </span>String <spa=
+n style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">HEARTB=
+EAT_SYNC_SCRIPT_NAME                                   </span>=3D <span sty=
+le=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://heartbea=
+t.sync.script.name">heartbeat.sync.script.name</a>&quot;</span>;<br>    <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </spa=
+n>String <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">FORCE_DISPATCH_SHIPPING_PACKAGE_SCRIPT_NAME                  </span>=
+=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"ht=
+tp://force.dispatch.shipping.package.script.name">force.dispatch.shipping.p=
+ackage.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public static final  </span>String <span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold;font-style:italic">FETCH_CURRENT_CHANNEL=
+_MANIFEST_SCRIPT_NAME                   </span>=3D <span style=3D"color:rgb=
+(0,128,0);font-weight:bold">&quot;<a href=3D"http://fetch.current.channel.m=
+anifest.script.name">fetch.current.channel.manifest.script.name</a>&quot;</=
+span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public st=
+atic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:=
+bold;font-style:italic">REFRESH_SHIPPING_LABEL_SCRIPT_NAME                 =
+          </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&q=
+uot;<a href=3D"http://refresh.shipping.label.script.name">refresh.shipping.=
+label.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public static final  </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_STATUS_SYNC=
+_METADATA                              </span>=3D <span style=3D"color:rgb(=
+0,128,0);font-weight:bold">&quot;<a href=3D"http://sale.order.status.sync.m=
+etadata.script.name">sale.order.status.sync.metadata.script.name</a>&quot;<=
+/span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public s=
+tatic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">CHANNEL_RECONCILIATION_INVOICE_LIST_SCRIPT_NAME   =
+           </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&=
+quot;<a href=3D"http://reconciliation.invoice.list.script.name">reconciliat=
+ion.invoice.list.script.name</a>&quot;</span>;<br>    <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">public static final  </span>String <span sty=
+le=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">CHANNEL_REC=
+ONCILIATION_INVOICE_DETAIL_SCRIPT_NAME            </span>=3D <span style=3D=
+"color:rgb(0,128,0);font-weight:bold">&quot;<a href=3D"http://reconciliatio=
+n.invoice.detail.script.name">reconciliation.invoice.detail.script.name</a>=
+&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">p=
+ublic static final  </span>String <span style=3D"color:rgb(102,14,122);font=
+-weight:bold;font-style:italic">CHANNEL_RECONCILIATION_INVOICE_SYNC_PREPROC=
+ESSOR_SCRIPT_NAME </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:=
+bold">&quot;<a href=3D"http://reconciliation.invoice.sync.preprocessor.scri=
+pt.name">reconciliation.invoice.sync.preprocessor.script.name</a>&quot;</sp=
+an>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public stat=
+ic final  </span>String <span style=3D"color:rgb(102,14,122);font-weight:bo=
+ld;font-style:italic">RESERVED_KEYWORDS_FOR_SHORT_NAME                     =
+        </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quo=
+t;<a href=3D"http://reserved.keywords.for.short.name">reserved.keywords.for=
+.short.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">public static final  </span>String <span style=3D"color:rgb(1=
+02,14,122);font-weight:bold;font-style:italic">UPDATE_PRICE_SCRIPT_NAME    =
+                                 </span>=3D <span style=3D"color:rgb(0,128,=
+0);font-weight:bold">&quot;<a href=3D"http://price.update.script.name">pric=
+e.update.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public static final  </span>String <span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">CHECK_PRICE_SCRIPT_=
+NAME                                      </span>=3D <span style=3D"color:r=
+gb(0,128,0);font-weight:bold">&quot;<a href=3D"http://check.price.script.na=
+me">check.price.script.name</a>&quot;</span>;<br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public static final  </span>String <span styl=
+e=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">POST_SHIPPIN=
+G_PACKAGE_CREATE_SCRIPT                          </span>=3D <span style=3D"=
+color:rgb(0,128,0);font-weight:bold">&quot;post.shipping.package.create.scr=
+ipt&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">public static final  </span>String <span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold;font-style:italic">DEFAULT_INVENTORY_UPDATE_FORMULA        =
+                     </span>=3D <span style=3D"color:rgb(0,128,0);font-weig=
+ht:bold">&quot;default.inventory.update.formula&quot;</span>;<br>    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public static final  </span>S=
+tring <span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">DEFAULT_INVENTORY_UPDATE_FORMULA_CODE                        </span>=3D=
+ <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;default.inventor=
+y.update.formula.code&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public static final  </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">CHANNEL_WAREHOUSE_INVE=
+NTORY_SYNC_PREPROCESSOR_SCRIPT_NAME    </span>=3D <span style=3D"color:rgb(=
+0,128,0);font-weight:bold">&quot;<a href=3D"http://channel.warehouse.invent=
+ory.sync.preprocessor.script.name">channel.warehouse.inventory.sync.preproc=
+essor.script.name</a>&quot;</span>;<br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">private static final </span>String <span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">ASYNC_CHANNEL_WAREHOUS=
+E_INVENTORY_SYNC_SUPPORTED             </span>=3D <span style=3D"color:rgb(=
+0,128,0);font-weight:bold">&quot;async.channel.warehouse.inventory.sync.sup=
+ported&quot;</span>;<br><br>    <span style=3D"color:rgb(128,128,128);font-=
+style:italic">// List properties<br></span><span style=3D"color:rgb(128,128=
+,128);font-style:italic">    </span><span style=3D"color:rgb(0,0,128);font-=
+weight:bold">public static final </span>String <span style=3D"color:rgb(102=
+,14,122);font-weight:bold;font-style:italic">SALE_ORDER_CANCELLATION_REASON=
+S </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;sale=
+.order.cancellation.reasons&quot;</span>;<br>    <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">public static final </span>String <span style=3D"=
+color:rgb(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_RETURN=
+_REASONS       </span>=3D <span style=3D"color:rgb(0,128,0);font-weight:bol=
+d">&quot;sale.order.return.reasons&quot;</span>;<br>    <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">public static final </span>String <span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">AVAILABLE_=
+PRICE_FIELDS          </span>=3D <span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold">&quot;available.price.fields&quot;</span>;<br>    <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public static final </span>String <spa=
+n style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">EDITAB=
+LE_PRICE_FIELDS           </span>=3D <span style=3D"color:rgb(0,128,0);font=
+-weight:bold">&quot;editable.price.fields&quot;</span>;<br>    <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public static final </span>String =
+<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">SU=
+PPORTED_CURRENCIES            </span>=3D <span style=3D"color:rgb(0,128,0);=
+font-weight:bold">&quot;supported.currencies&quot;</span>;<br><br>    <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">private </span>String <span =
+style=3D"color:rgb(102,14,122);font-weight:bold">id</span>;<br><br>    <spa=
+n style=3D"color:rgb(128,128,0)">@Indexed</span>(unique =3D <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">true</span>) <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">private </span>String <span style=3D"color:rgb(1=
+02,14,122);font-weight:bold">code</span>;<br><br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">private </span>String       <span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold">name</span>;<br>    <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">private boolean      </span><span style=
+=3D"color:rgb(102,14,122);font-weight:bold">enabled</span>;<br>    <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">private int          </span><sp=
+an style=3D"color:rgb(102,14,122);font-weight:bold">priority</span>;<br>   =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">private </span>Type   =
+      <span style=3D"color:rgb(102,14,122);font-weight:bold">type</span>;<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private </span>Lo=
+calization <span style=3D"color:rgb(102,14,122);font-weight:bold">localizat=
+ion</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">priv=
+ate </span>Date         <span style=3D"color:rgb(102,14,122);font-weight:bo=
+ld">created</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">private </span>Date         <span style=3D"color:rgb(102,14,122);font-w=
+eight:bold">updated</span>;<br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">private </span>Set&lt;SourceProperty&gt;               <span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold">sourceProperties            =
+  </span>=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">new </span=
+>HashSet&lt;&gt;();<br>    <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">private </span>Set&lt;SourceConnector&gt;              <span style=3D"c=
+olor:rgb(102,14,122);font-weight:bold">sourceConnectors              </span=
+>=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>HashSet=
+&lt;&gt;();<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">priv=
+ate </span>Set&lt;SourceConfigurationParameter&gt; <span style=3D"color:rgb=
+(102,14,122);font-weight:bold">sourceConfigurationParameters </span>=3D <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">new </span>HashSet&lt;&gt;=
+();<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private =
+</span>Map&lt;String, Object&gt;                       <span style=3D"color=
+:rgb(102,14,122);font-weight:bold">sourcePropertyToValue</span>;<br>    <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">private </span>Map&lt;Stri=
+ng, SourceConfigurationParameter&gt; <span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold">paramterNameToParameter</span>;<br><br>    <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public </span>Source() {<br>    }<br><=
+br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>St=
+ring getId() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">return </span><span style=3D"color:rgb(102,14,122);font-weight:bold">id<=
+/span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">public void </span>setId(String id) {<br>        <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,=
+122);font-weight:bold">id </span>=3D id;<br>    }<br><br>    <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">public </span>String getCode() {<br> =
+       <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span><s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold">code</span>;<br>    }<=
+br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public void =
+</span>setCode(String code) {<br>        <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold">code </span>=3D code;<br>    }<br><br>    <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">public </span>String getName() {<br>        <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=
+=3D"color:rgb(102,14,122);font-weight:bold">name</span>;<br>    }<br><br>  =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>se=
+tName(String name) {<br>        <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold"=
+>name </span>=3D name;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">public boolean </span>isEnabled() {<br>        <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold">enabled</span>;<br>    }<br><br>    <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setEn=
+abled(<span style=3D"color:rgb(0,0,128);font-weight:bold">boolean </span>en=
+abled) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">thi=
+s</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">enabled </s=
+pan>=3D enabled;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">public int </span>getPriority() {<br>        <span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">return </span><span style=3D"color:rgb(=
+102,14,122);font-weight:bold">priority</span>;<br>    }<br><br>    <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setPriority(=
+<span style=3D"color:rgb(0,0,128);font-weight:bold">int </span>priority) {<=
+br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.=
+<span style=3D"color:rgb(102,14,122);font-weight:bold">priority </span>=3D =
+priority;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">public </span>Localization getLocalization() {<br>        <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold">localization</span>;<br>    }<br><br>  =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>se=
+tLocalization(Localization localization) {<br>        <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,=
+122);font-weight:bold">localization </span>=3D localization;<br>    }<br><b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Typ=
+e getType() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">return </span><span style=3D"color:rgb(102,14,122);font-weight:bold">type=
+</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public void </span>setType(Type type) {<br>        <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,=
+14,122);font-weight:bold">type </span>=3D type;<br>    }<br><br>    <span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">public </span>Date getCreated(=
+) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return <=
+/span><span style=3D"color:rgb(102,14,122);font-weight:bold">created</span>=
+;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">p=
+ublic void </span>setCreated(Date created) {<br>        <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold">created </span>=3D created;<br>    }<br><br>    <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Date getUpd=
+ated() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">ret=
+urn </span><span style=3D"color:rgb(102,14,122);font-weight:bold">updated</=
+span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">public void </span>setUpdated(Date updated) {<br>        <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(=
+102,14,122);font-weight:bold">updated </span>=3D updated;<br>    }<br><br> =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Set&lt=
+;SourceProperty&gt; getSourceProperties() {<br>        <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">return </span><span style=3D"color:rgb(102,=
+14,122);font-weight:bold">sourceProperties</span>;<br>    }<br><br>    <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setSourc=
+eProperties(Set&lt;SourceProperty&gt; sourceProperties) {<br>        <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold">sourceProperties </span>=3D sourcePro=
+perties;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public </span>Set&lt;SourceConnector&gt; getSourceConnectors() {<br> =
+       <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span><s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold">sourceConnectors</span=
+>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">=
+public void </span>setSourceConnectors(Set&lt;SourceConnector&gt; sourceCon=
+nectors) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">t=
+his</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">sourceCon=
+nectors </span>=3D sourceConnectors;<br>    }<br><br>    <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">public </span>Set&lt;SourceConfigurationP=
+arameter&gt; getSourceConfigurationParameters() {<br>        <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D"color:rg=
+b(102,14,122);font-weight:bold">sourceConfigurationParameters</span>;<br>  =
+  }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public v=
+oid </span>setSourceConfigurationParameters(Set&lt;SourceConfigurationParam=
+eter&gt; sourceConfigurationParameters) {<br>        <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,1=
+22);font-weight:bold">sourceConfigurationParameters </span>=3D sourceConfig=
+urationParameters;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)"=
+>@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">publ=
+ic boolean </span>isActive() {<br>        <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">return </span>Boolean.<span style=3D"font-style:italic">=
+parseBoolean</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);font=
+-weight:bold;font-style:italic">ACTIVE</span>, <span style=3D"color:rgb(0,1=
+28,0);font-weight:bold">&quot;true&quot;</span>));<br>    }<br><br>    <spa=
+n style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold">public boolean </span>isInventorySyncConfigured=
+() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return =
+</span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(getStr=
+ingifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;fo=
+nt-style:italic">INVENTORY_SYNC_CONFIGURED</span>));<br>    }<br><br>    <s=
+pan style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public boolean </span>isOrderSyncConfigured()=
+ {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return </=
+span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(getStrin=
+gifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font=
+-style:italic">ORDER_SYNC_CONFIGURED</span>));<br>    }<br><br>    <span st=
+yle=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0=
+,128);font-weight:bold">public boolean </span>isCatalogSyncConfigured() {<b=
+r>        <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(St=
+ringUtils.<span style=3D"font-style:italic">isNotBlank</span>(getStringifie=
+dFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-styl=
+e:italic">CATALOG_SYNC_CONFIGURED</span>))) {<br>            <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"=
+font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">CATALOG_SYNC_=
+CONFIGURED</span>));<br>        }<br>        <span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">return true</span>;<br>    }<br><br>    <span style=
+=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public boolean </span>isChannelWarehouseInventorySyncC=
+onfigured() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">if </span>(StringUtils.<span style=3D"font-style:italic">isNotBlank</span=
+>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">CHANNEL_WAREHOUSE_INVENTORY_SYNC_CONFIGURED</span>=
+))) {<br>            <span style=3D"color:rgb(0,0,128);font-weight:bold">re=
+turn </span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(g=
+etStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bo=
+ld;font-style:italic">CHANNEL_WAREHOUSE_INVENTORY_SYNC_CONFIGURED</span>));=
+<br>        }<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">return true</span>;<br>    }<br><br>    <span style=3D"color:rgb(128,128,=
+0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">p=
+ublic boolean </span>isPricingSyncConfigured() {<br>        <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"f=
+ont-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">PRICING_SYNC_=
+CONFIGURED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0=
+)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic boolean </span>isPriceComputationSupported() {<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=
+=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span s=
+tyle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">PRICE_COM=
+PUTATION_SUPPORTED</span>));<br>    }<br><br>    <span style=3D"color:rgb(1=
+28,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public boolean </span>isFractionalPriceSupported() {<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span =
+style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">FRAC=
+TIONAL_PRICE_SUPPORTED</span>));<br>    }<br><br>    <span style=3D"color:r=
+gb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">public boolean </span>isPeriodicSyncDisabled() {<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span =
+style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">PERI=
+ODIC_SYNC_DISABLED</span>));<br>    }<br><br>    <span style=3D"color:rgb(1=
+28,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public boolean </span>isAsyncCatalogSyncSupported() {<br>        <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span=
+ style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<=
+span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ASY=
+NC_CATALOG_SYNC_SUPPORTED</span>));<br>    }<br><br>    <span style=3D"colo=
+r:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-=
+weight:bold">public boolean </span>isAsyncChannelWarehouseInventorySyncSupp=
+orted() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">re=
+turn </span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(g=
+etStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bo=
+ld;font-style:italic">ASYNC_CHANNEL_WAREHOUSE_INVENTORY_SYNC_SUPPORTED</spa=
+n>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient <=
+/span><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </=
+span>isAllowMultipleChannel() {<br>        <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">return </span>Boolean.<span style=3D"font-style:italic"=
+>parseBoolean</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">ALLOW_MULTIPLE_CHANNEL</span>))=
+;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </spa=
+n><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span=
+>isThirdPartyConfigurationRequired() {<br>        <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"font-style:=
+italic">parseBoolean</span>(getStringifiedFieldValue(<span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">THIRD_PARTY_CONFIGURATIO=
+N_REQUIRED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0=
+)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic boolean </span>isFulfillmentByChannel() {<br>        <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"fon=
+t-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=3D=
+"color:rgb(102,14,122);font-weight:bold;font-style:italic">FULFILLMENT_BY_C=
+HANNEL</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@=
+Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public=
+ boolean </span>isAsyncReconciliationSyncSupported() {<br>        <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span styl=
+e=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span =
+style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">ASYNC_RE=
+CONCILIATION_SYNC_SUPPORTED</span>));<br>    }<br><br>    <span style=3D"co=
+lor:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">public boolean </span>isFetchCompleteOrders() {<br>        <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<s=
+pan style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValu=
+e(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">=
+FETCH_COMPLETE_ORDERS</span>));<br>    }<br><br>    <span style=3D"color:rg=
+b(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">public boolean </span>isNotificationsEnabled() {<br>        <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span s=
+tyle=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<sp=
+an style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">NOTIF=
+ICATIONS_ENABLED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128=
+,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">public int </span>getProcessNotificationCount() {<br>        <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">return </span>Integer.<span style=
+=3D"font-style:italic">parseInt</span>(getFieldValue(<span style=3D"color:r=
+gb(102,14,122);font-weight:bold;font-style:italic">PROCESS_NOTIFICATION_COU=
+NT</span>, <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;1&quot=
+;</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Trans=
+ient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public int =
+</span>getProcessInventoryCount() {<br>        <span style=3D"color:rgb(0,0=
+,128);font-weight:bold">return </span>Integer.<span style=3D"font-style:ita=
+lic">parseInt</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold;font-style:italic">PROCESS_INVENTORY_COUNT</span>, <span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold">&quot;1&quot;</span>));<br>    }<=
+br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">public int </span>getProcessPric=
+eCount() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">r=
+eturn </span>Integer.<span style=3D"font-style:italic">parseInt</span>(getF=
+ieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:=
+italic">PROCESS_PRICE_COUNT</span>, <span style=3D"color:rgb(0,128,0);font-=
+weight:bold">&quot;1&quot;</span>));<br>    }<br><br>    <span style=3D"col=
+or:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold">public int </span>getHttpProxyThreshold() {<br>        <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Integer.<span s=
+tyle=3D"font-style:italic">parseInt</span>(getFieldValue(<span style=3D"col=
+or:rgb(102,14,122);font-weight:bold;font-style:italic">HTTP_PROXY_THRESHOLD=
+</span>, <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;10&quot;=
+</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transi=
+ent </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public </spa=
+n>String getInventoryUpdateCronExpression() {<br>        <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">return </span>getFieldValue(<span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">INVENTORY_UPD=
+ATE_CRON_EXPRESSION</span>, <span style=3D"color:rgb(0,128,0);font-weight:b=
+old">&quot;0 */30 * * * *&quot;</span>);<br>    }<br><br>    <span style=3D=
+"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public </span>String getNotificationUpdateCronExpression(=
+) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return <=
+/span>getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">NOTIFICATION_UPDATE_CRON_EXPRESSION</span>);<b=
+r>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>String get=
+StockoutInventoryAcknowledgeCronExpression() {<br>        <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">return </span>getStringifiedFieldValue(<=
+span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">STO=
+CKOUT_INVENTORY_ACKNOWLEDGE_CRON_EXPRESSION</span>);<br>    }<br><br>    <s=
+pan style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public boolean </span>isUseSellerSkuForInvent=
+oryUpdate() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean</spa=
+n>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weigh=
+t:bold;font-style:italic">USE_SELLER_SKU_FOR_INVENTORY_UPDATE</span>));<br>=
+    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>isCh=
+annelVerificationSupported() {<br>        <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">return </span>Boolean.<span style=3D"font-style:italic">=
+parseBoolean</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold;font-style:italic">CHANNEL_VERIFICATION_SUPPORTED</=
+span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transien=
+t </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean=
+ </span>isPendencyConfigurationEnabled() {<br>        <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"font-st=
+yle:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=3D"col=
+or:rgb(102,14,122);font-weight:bold;font-style:italic">PENDENCY_CONFIGURATI=
+ON_ENABLED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0=
+)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic boolean </span>isCommitPendencyOnChannel() {<br>        <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"=
+font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">COMMIT_PENDEN=
+CY_ON_CHANNEL</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,12=
+8,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>public </span>ConfigurationStatus getProductRelistingConfigured() {<br>   =
+     ConfigurationStatus status;<br>        String value =3D getStringified=
+FieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style=
+:italic">PRODUCT_RELISTING_CONFIGURED</span>);<br>        <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">if </span>(StringUtils.<span style=3D"fo=
+nt-style:italic">isBlank</span>(value)) {<br>            status =3D Configu=
+rationStatus.<span style=3D"color:rgb(102,14,122);font-weight:bold;font-sty=
+le:italic">NO</span>;<br>        } <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">else </span>{<br>            <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">switch </span>(value) {<br>                <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">case </span><span style=3D"color:rgb(=
+0,128,0);font-weight:bold">&quot;PROMPT&quot;</span>:<br>                  =
+  status =3D ConfigurationStatus.<span style=3D"color:rgb(102,14,122);font-=
+weight:bold;font-style:italic">PROMPT</span>;<br>                    <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">break</span>;<br>            =
+    <span style=3D"color:rgb(0,0,128);font-weight:bold">case </span><span s=
+tyle=3D"color:rgb(0,128,0);font-weight:bold">&quot;YES&quot;</span>:<br>   =
+                 status =3D ConfigurationStatus.<span style=3D"color:rgb(10=
+2,14,122);font-weight:bold;font-style:italic">YES</span>;<br>              =
+      <span style=3D"color:rgb(0,0,128);font-weight:bold">break</span>;<br>=
+                <span style=3D"color:rgb(0,0,128);font-weight:bold">case </=
+span><span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;NO&quot;</sp=
+an>:<br>                    status =3D ConfigurationStatus.<span style=3D"c=
+olor:rgb(102,14,122);font-weight:bold;font-style:italic">NO</span>;<br>    =
+                <span style=3D"color:rgb(0,0,128);font-weight:bold">break</=
+span>;<br>                <span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">default</span>:<br>                    status =3D ConfigurationStatus.<s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">NO</=
+span>;<br>                    <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">break</span>;<br>            }<br>        }<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">return </span>status;<br>    }<br>=
+<br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public float </span>getShippingLab=
+elXOffset() {<br>        String value =3D getStringifiedFieldValue(<span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">SHIPPING_L=
+ABEL_X_OFFSET</span>);<br>        <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">if </span>(StringUtils.<span style=3D"font-style:italic">isNotBl=
+ank</span>(value)) {<br>            <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">try </span>{<br>                <span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">return </span>Float.<span style=3D"font-style:italic"=
+>parseFloat</span>(value);<br>            } <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">catch </span>(Exception ex) {<br>            }<br>    =
+    }<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return=
+ </span><span style=3D"color:rgb(0,0,255)">0f</span>;<br>    }<br><br>    <=
+span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold">public float </span>getShippingLabelYOffset(=
+) {<br>        String value =3D getStringifiedFieldValue(<span style=3D"col=
+or:rgb(102,14,122);font-weight:bold;font-style:italic">SHIPPING_LABEL_Y_OFF=
+SET</span>);<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>if </span>(StringUtils.<span style=3D"font-style:italic">isNotBlank</span>=
+(value)) {<br>            <span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">try </span>{<br>                <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">return </span>Float.<span style=3D"font-style:italic">parseFloa=
+t</span>(value);<br>            } <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">catch </span>(Exception ex) {<br>            }<br>        }<br> =
+       <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span><s=
+pan style=3D"color:rgb(0,0,255)">0f</span>;<br>    }<br><br>    <span style=
+=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public </span>Boolean getThirdPartyShippingDefault() {=
+<br>        String value =3D getStringifiedFieldValue(<span style=3D"color:=
+rgb(102,14,122);font-weight:bold;font-style:italic">THIRD_PARTY_SHIPPING_DE=
+FAULT</span>);<br>        <span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">if </span>(StringUtils.<span style=3D"font-style:italic">isNotBlank</spa=
+n>(value)) {<br>            <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">try </span>{<br>                <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">return </span>Boolean.<span style=3D"font-style:italic">parse=
+Boolean</span>(value);<br>            } <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">catch </span>(Exception ex) {<br>            }<br>        =
+}<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return nul=
+l</span>;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transie=
+nt </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolea=
+n </span>isOrderRefreshEnabled() {<br>        <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">return </span>Boolean.<span style=3D"font-style:ital=
+ic">parseBoolean</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);=
+font-weight:bold;font-style:italic">ORDER_REFRESH_ENABLED</span>, <span sty=
+le=3D"color:rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br> =
+   }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>isHea=
+rtbeatSyncEnabled() {<br>        <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBool=
+ean</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:b=
+old;font-style:italic">HEARTBEAT_SYNC_ENABLED</span>, <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br>    }<br><br>=
+    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">public boolean </span>isOrderReconcilia=
+tionEnabled() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean</s=
+pan>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;fo=
+nt-style:italic">ORDER_RECONCILIATION_ENABLED</span>, <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br>    }<br><br>=
+    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">public boolean </span>isProductDelistin=
+gConfigured() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean</s=
+pan>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;fo=
+nt-style:italic">PRODUCT_DELISTING_CONFIGURED</span>, <span style=3D"color:=
+rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br>    }<br><br>=
+    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">public boolean </span>isShippingLabelAg=
+gregationConfigured() {<br>        <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBo=
+olean</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">SHIPPING_LABEL_AGGREGATION_CONFIGURED</span>, <spa=
+n style=3D"color:rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));=
+<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>=
+isHttpProxyRequired() {<br>        <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBo=
+olean</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">HTTP_PROXY_REQUIRED</span>, <span style=3D"color:r=
+gb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br>    }<br><br> =
+   <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">public boolean </span>isDispatchPackageO=
+nManifestClose() {<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean=
+</span>(getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold=
+;font-style:italic">DISPATCH_PACKAGE_ON_MANIFEST_CLOSE</span>, <span style=
+=3D"color:rgb(0,128,0);font-weight:bold">&quot;false&quot;</span>));<br>   =
+ }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span =
+style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>isPayme=
+ntReconciliationEnabled() {<br>        <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">return </span>Boolean.<span style=3D"font-style:italic">par=
+seBoolean</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,1=
+22);font-weight:bold;font-style:italic">PAYMENT_RECONCILIATION_ENABLED</spa=
+n>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient <=
+/span><span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Str=
+ing getLandingPageScriptName() {<br>        <span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">return </span>getStringifiedFieldValue(<span style=3D"=
+color:rgb(102,14,122);font-weight:bold;font-style:italic">LANDING_PAGE_SCRI=
+PT_NAME</span>);<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@=
+Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public=
+ </span>String getSaleOrderCancellationScriptName() {<br>        <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">return </span>getStringifiedField=
+Value(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">SALE_ORDER_CANCELLATION_SCRIPT_NAME</span>);<br>    }<br><br>    <span =
+style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0=
+,0,128);font-weight:bold">public </span>String getShipmentLabelFormat() {<b=
+r>        <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(!B=
+oolean.<span style=3D"font-style:italic">parseBoolean</span>(getStringified=
+FieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style=
+:italic">PROMPT_FOR_SHIPMENT_LABEL_FORMAT</span>))) {<br>            <span =
+style=3D"color:rgb(0,0,128);font-weight:bold">return </span>getStringifiedF=
+ieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:=
+italic">SHIPMENT_LABEL_FORMAT</span>);<br>        }<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">return null</span>;<br>    }<br><b=
+r>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D=
+"color:rgb(0,0,128);font-weight:bold">public </span>String getDefaultShipme=
+ntLabelFormat() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">return </span>getStringifiedFieldValue(<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold;font-style:italic">SHIPMENT_LABEL_FORMAT</span>);<b=
+r>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>is=
+AllowCombinedManifest() {<br>        <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">return </span>Boolean.<span style=3D"font-style:italic">parse=
+Boolean</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122=
+);font-weight:bold;font-style:italic">ALLOW_COMBINED_MANIFEST</span>));<br>=
+    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>isAu=
+toVerifyOrders() {<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean=
+</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-=
+weight:bold;font-style:italic">AUTO_VERIFY_ORDERS</span>));<br>    }<br><br=
+>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public boolean </span>isPackageTypeCon=
+figured() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">=
+return </span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>=
+(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:=
+bold;font-style:italic">PACKAGE_TYPE_CONFIGURED</span>));<br>    }<br><br> =
+   <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">public boolean </span>isThirdPartyShippi=
+ngAvailable() {<br>        String value =3D getStringifiedFieldValue(<span =
+style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">THIRD_PA=
+RTY_SHIPPING_AVAILABLE</span>);<br>        <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">if </span>(StringUtils.<span style=3D"font-style:italic=
+">isNotBlank</span>(value)) {<br>            <span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">return </span>Boolean.<span style=3D"font-style:itali=
+c">parseBoolean</span>(value);<br>        }<br>        <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">return true</span>;<br>    }<br><br>    <sp=
+an style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rg=
+b(0,0,128);font-weight:bold">public boolean </span>isAllowAnyShippingMethod=
+() {<br>        String value =3D getStringifiedFieldValue(<span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">ALLOW_ANY_SHIPPING_=
+METHOD</span>);<br>        <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">if </span>(StringUtils.<span style=3D"font-style:italic">isNotBlank</sp=
+an>(value)) {<br>            <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">return </span>Boolean.<span style=3D"font-style:italic">parseBoolean<=
+/span>(value);<br>        }<br>        <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">return true</span>;<br>    }<br><br>    <span style=3D"colo=
+r:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-=
+weight:bold">public boolean </span>isAllowVendorSelf() {<br>        String =
+value =3D getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold;font-style:italic">ALLOW_VENDOR_SELF</span>);<br>        <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(StringUtils.<spa=
+n style=3D"font-style:italic">isNotBlank</span>(value)) {<br>            <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<sp=
+an style=3D"font-style:italic">parseBoolean</span>(value);<br>        }<br>=
+        <span style=3D"color:rgb(0,0,128);font-weight:bold">return false</s=
+pan>;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient <=
+/span><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </=
+span>isManifestAllReadyToShipOrdersTogether() {<br>        <span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"fo=
+nt-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=
+=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">MANIFEST_ALL_=
+READY_TO_SHIP_ORDERS_TOGETHER</span>));<br>    }<br><br>    <span style=3D"=
+color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public boolean </span>isDisplayOrderCodeUnique() {<br>    =
+    <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boole=
+an.<span style=3D"font-style:italic">parseBoolean</span>(getStringifiedFiel=
+dValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ita=
+lic">DISPLAY_ORDER_CODE_UNIQUE</span>));<br>    }<br><br>    <span style=3D=
+"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public boolean </span>isDisplayOrderCodeToSaleOrderCodeUn=
+ique() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">ret=
+urn </span>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(ge=
+tStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bol=
+d;font-style:italic">DISPLAY_ORDER_CODE_TO_SALE_ORDER_CODE_UNIQUE</span>));=
+<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>=
+isFetchCurrentChannelManifestEnabled() {<br>        <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">return </span>Boolean.<span style=3D"font-styl=
+e:italic">parseBoolean</span>(getStringifiedFieldValue(<span style=3D"color=
+:rgb(102,14,122);font-weight:bold;font-style:italic">FETCH_CURRENT_CHANNEL_=
+MANIFEST_ENABLED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128=
+,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">public boolean </span>isSelectiveCatalogSyncEnabled() {<br>        <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span=
+ style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<=
+span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">SEL=
+ECTIVE_CATALOG_SYNC_ENABLED</span>));<br>    }<br><br>    <span style=3D"co=
+lor:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">public boolean </span>isFrequentOrderSyncEnabled() {<br>    =
+    <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boole=
+an.<span style=3D"font-style:italic">parseBoolean</span>(getStringifiedFiel=
+dValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ita=
+lic">FREQUENT_ORDER_SYNC_ENABLED</span>));<br>    }<br><br>    <span style=
+=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public boolean </span>isDisallowPackageSplit() {<br>  =
+      <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boo=
+lean.<span style=3D"font-style:italic">parseBoolean</span>(getStringifiedFi=
+eldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">DISALLOW_PACKAGE_SPLIT</span>));<br>    }<br><br>    <span style=3D"=
+color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public boolean </span>isTatAvailableFromChannel() {<br>   =
+     <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Bool=
+ean.<span style=3D"font-style:italic">parseBoolean</span>(getStringifiedFie=
+ldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:it=
+alic">TAT_AVAILABLE_FROM_CHANNEL</span>));<br>    }<br><br>    <span style=
+=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,12=
+8);font-weight:bold">public boolean </span>isPODRequired() {<br>        <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<spa=
+n style=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(=
+<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">PO=
+D_REQUIRED</span>));<br>    }<br><br>    <span style=3D"color:rgb(128,128,0=
+)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic boolean </span>isFacilityAssociationRequired() {<br>        <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">return </span>Boolean.<span style=
+=3D"font-style:italic">parseBoolean</span>(getStringifiedFieldValue(<span s=
+tyle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">FACILITY_=
+ASSOCIATION_REQUIRED</span>));<br>    }<br><br>    <span style=3D"color:rgb=
+(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold">public boolean </span>isRestrictCustomerNotificationOnDispatch() {<=
+br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return </spa=
+n>Boolean.<span style=3D"font-style:italic">parseBoolean</span>(getStringif=
+iedFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;font-st=
+yle:italic">RESTRICT_CUSTOMER_NOTIFICATION_ON_DISPATCH</span>));<br>    }<b=
+r><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>isRefetchSh=
+ippingLabelAllowed() {<br>        <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">return </span>Boolean.<span style=3D"font-style:italic">parseBoo=
+lean</span>(getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold;font-style:italic">REFETCH_SHIPPING_LABEL_ALLOWED</span>));=
+<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span=
+><span style=3D"color:rgb(0,0,128);font-weight:bold">public boolean </span>=
+isOrderStatusSyncAvailable() {<br>        <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">return </span>getStringifiedFieldValue(<span style=3D"co=
+lor:rgb(102,14,122);font-weight:bold;font-style:italic">SALE_ORDER_STATUS_S=
+YNC_SCRIPT_NAME</span>) !=3D <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">null</span>;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)"=
+>@SuppressWarnings</span>(<span style=3D"color:rgb(0,128,0);font-weight:bol=
+d">&quot;unchecked&quot;</span>) <span style=3D"color:rgb(128,128,0)">@Tran=
+sient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public </s=
+pan>List&lt;String&gt; getSaleOrderCancellationReasons() {<br>        Objec=
+t value =3D getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:=
+bold;font-style:italic">SALE_ORDER_CANCELLATION_REASONS</span>);<br>       =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(value !=3D =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {<br>     =
+       <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>(L=
+ist&lt;String&gt;) value;<br>        }<br>        <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">return </span>Collections.<span style=3D"font-st=
+yle:italic">emptyList</span>();<br>    }<br><br>    <span style=3D"color:rg=
+b(128,128,0)">@SuppressWarnings</span>(<span style=3D"color:rgb(0,128,0);fo=
+nt-weight:bold">&quot;unchecked&quot;</span>) <span style=3D"color:rgb(128,=
+128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">public </span>List&lt;String&gt; getSaleOrderReturnReasons() {<br>      =
+  Object value =3D getFieldValue(<span style=3D"color:rgb(102,14,122);font-=
+weight:bold;font-style:italic">SALE_ORDER_RETURN_REASONS</span>);<br>      =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(value !=3D=
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {<br>    =
+        <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>(=
+List&lt;String&gt;) value;<br>        }<br>        <span style=3D"color:rgb=
+(0,0,128);font-weight:bold">return </span>Collections.<span style=3D"font-s=
+tyle:italic">emptyList</span>();<br>    }<br><br>    <span style=3D"color:r=
+gb(128,128,0)">@SuppressWarnings</span>(<span style=3D"color:rgb(0,128,0);f=
+ont-weight:bold">&quot;unchecked&quot;</span>) <span style=3D"color:rgb(128=
+,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">public </span>List&lt;String&gt; getAvailablePriceFields() {<br>       =
+ Object value =3D getFieldValue(<span style=3D"color:rgb(102,14,122);font-w=
+eight:bold;font-style:italic">AVAILABLE_PRICE_FIELDS</span>);<br>        <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(value !=3D <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {<br>        =
+    <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span>(List=
+&lt;String&gt;) value;<br>        }<br>        <span style=3D"color:rgb(0,0=
+,128);font-weight:bold">return </span>Collections.<span style=3D"font-style=
+:italic">emptyList</span>();<br>    }<br><br>    <span style=3D"color:rgb(1=
+28,128,0)">@SuppressWarnings</span>(<span style=3D"color:rgb(0,128,0);font-=
+weight:bold">&quot;unchecked&quot;</span>) <span style=3D"color:rgb(128,128=
+,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">=
+public </span>List&lt;String&gt; getEditablePriceFields() {<br>        Obje=
+ct value =3D getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight=
+:bold;font-style:italic">EDITABLE_PRICE_FIELDS</span>);<br>        <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">if </span>(value !=3D <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {<br>            <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">return </span>(List&lt;St=
+ring&gt;) value;<br>        }<br>        <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">return </span>Collections.<span style=3D"font-style:itali=
+c">emptyList</span>();<br>    }<br><br>    <span style=3D"color:rgb(128,128=
+,0)">@SuppressWarnings</span>(<span style=3D"color:rgb(0,128,0);font-weight=
+:bold">&quot;unchecked&quot;</span>) <span style=3D"color:rgb(128,128,0)">@=
+Transient </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public=
+ </span>List&lt;String&gt; getSupportedCurrencies() {<br>        Object val=
+ue =3D getFieldValue(<span style=3D"color:rgb(102,14,122);font-weight:bold;=
+font-style:italic">SUPPORTED_CURRENCIES</span>);<br>        <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">if </span>(value !=3D <span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold">null</span>) {<br>            <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">return </span>(List&lt;String&gt=
+;) value;<br>        }<br>        <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">return </span>Collections.<span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold;font-style:italic">EMPTY_LIST</span>;<br>    }<br><br>    <=
+span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold">public </span>String getStringifiedFieldValu=
+e(String fieldName) {<br>        <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">if </span>(<span style=3D"color:rgb(102,14,122);font-weight:bold"=
+>sourcePropertyToValue </span>=3D=3D <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">null</span>) {<br>            <span style=3D"color:rgb(102,14=
+,122);font-weight:bold">sourcePropertyToValue </span>=3D <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">new </span>HashMap&lt;&gt;();<br>        =
+    <span style=3D"color:rgb(0,0,128);font-weight:bold">for </span>(SourceP=
+roperty property : getSourceProperties()) {<br>                <span style=
+=3D"color:rgb(102,14,122);font-weight:bold">sourcePropertyToValue</span>.pu=
+t(property.getName(), property.getValue());<br>            }<br>        }<b=
+r>        Object value =3D <span style=3D"color:rgb(102,14,122);font-weight=
+:bold">sourcePropertyToValue</span>.get(fieldName);<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">return </span>value !=3D <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">null </span>? String.<span style=
+=3D"font-style:italic">valueOf</span>(value) : <span style=3D"color:rgb(0,0=
+,128);font-weight:bold">null</span>;<br>    }<br><br>    <span style=3D"col=
+or:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold">public </span>Object getFieldValue(String fieldName) {<br>   =
+     <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(<span s=
+tyle=3D"color:rgb(102,14,122);font-weight:bold">sourcePropertyToValue </spa=
+n>=3D=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">null</span>) {=
+<br>            <span style=3D"color:rgb(102,14,122);font-weight:bold">sour=
+cePropertyToValue </span>=3D <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">new </span>HashMap&lt;&gt;();<br>            <span style=3D"color:rgb=
+(0,0,128);font-weight:bold">for </span>(SourceProperty property : getSource=
+Properties()) {<br>                <span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold">sourcePropertyToValue</span>.put(property.getName(), propert=
+y.getValue());<br>            }<br>        }<br>        <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">return </span><span style=3D"color:rgb(102=
+,14,122);font-weight:bold">sourcePropertyToValue</span>.get(fieldName);<br>=
+    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public </span>String getFi=
+eldValue(String fieldName, String defaultValue) {<br>        String value =
+=3D getStringifiedFieldValue(fieldName);<br>        <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">return </span>StringUtils.<span style=3D"font-=
+style:italic">isBlank</span>(value) ? defaultValue : value;<br>    }<br><br=
+>    <span style=3D"color:rgb(128,128,0)">@Transient </span><span style=3D"=
+color:rgb(0,0,128);font-weight:bold">public </span>String getReservedKeywor=
+dsForShortName() {<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">return </span>getStringifiedFieldValue(<span style=3D"color:rgb(102,=
+14,122);font-weight:bold;font-style:italic">RESERVED_KEYWORDS_FOR_SHORT_NAM=
+E</span>);<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transi=
+ent </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public </spa=
+n>String getDefaultInventoryUpdateFormula() {<br>        <span style=3D"col=
+or:rgb(0,0,128);font-weight:bold">return </span>getStringifiedFieldValue(<s=
+pan style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">DEFA=
+ULT_INVENTORY_UPDATE_FORMULA</span>);<br>    }<br><br>    <span style=3D"co=
+lor:rgb(128,128,0)">@Transient </span><span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">public </span>String getDefaultInventoryUpdateFormulaCode() =
+{<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return </s=
+pan>getStringifiedFieldValue(<span style=3D"color:rgb(102,14,122);font-weig=
+ht:bold;font-style:italic">DEFAULT_INVENTORY_UPDATE_FORMULA_CODE</span>);<b=
+r>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Transient </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>SourceConf=
+igurationParameter getSourceConfigutaionParameter(String fieldName) {<br>  =
+      <span style=3D"color:rgb(0,0,128);font-weight:bold">if </span>(<span =
+style=3D"color:rgb(102,14,122);font-weight:bold">paramterNameToParameter </=
+span>=3D=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">null</span>=
+) {<br>            <span style=3D"color:rgb(102,14,122);font-weight:bold">p=
+aramterNameToParameter </span>=3D <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">new </span>HashMap&lt;&gt;();<br>            <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">for </span>(SourceConfigurationParameter p=
+aram : getSourceConfigurationParameters()) {<br>                <span style=
+=3D"color:rgb(102,14,122);font-weight:bold">paramterNameToParameter</span>.=
+put(param.getName(), param);<br>            }<br>        }<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D=
+"color:rgb(102,14,122);font-weight:bold">paramterNameToParameter</span>.get=
+(fieldName);<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Over=
+ride </span><span style=3D"color:rgb(0,0,128);font-weight:bold">public bool=
+ean </span>equals(Object o) {<br>        <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">if </span>(<span style=3D"color:rgb(0,0,128);font-weight:=
+bold">this </span>=3D=3D o)<br>            <span style=3D"color:rgb(0,0,128=
+);font-weight:bold">return true</span>;<br>        <span style=3D"color:rgb=
+(0,0,128);font-weight:bold">if </span>(o =3D=3D <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">null </span>|| getClass() !=3D o.getClass())<br>  =
+          <span style=3D"color:rgb(0,0,128);font-weight:bold">return false<=
+/span>;<br><br>        Source source =3D (Source) o;<br><br>        <span s=
+tyle=3D"color:rgb(0,0,128);font-weight:bold">return </span><span style=3D"c=
+olor:rgb(102,14,122);font-weight:bold">code</span>.equals(source.<span styl=
+e=3D"color:rgb(102,14,122);font-weight:bold">code</span>);<br>    }<br><br>=
+    <span style=3D"color:rgb(128,128,0)">@Override </span><span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">public int </span>hashCode() {<br>      =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">return </span><span s=
+tyle=3D"color:rgb(102,14,122);font-weight:bold">code</span>.hashCode();<br>=
+    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public=
+ static void </span>main(String args[]) {<br>        System.<span style=3D"=
+color:rgb(102,14,122);font-weight:bold;font-style:italic">out</span>.printl=
+n(Boolean.<span style=3D"font-style:italic">parseBoolean</span>(<span style=
+=3D"color:rgb(0,0,128);font-weight:bold">null</span>));<br>    }<br>}<br></=
+pre></div>
+
+--001a113a9b86d1e454054773566b--

@@ -1,0 +1,56 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp108444qge;
+        Wed, 16 Nov 2016 22:26:05 -0800 (PST)
+X-Received: by 10.98.92.133 with SMTP id q127mr2421633pfb.152.1479363965419;
+        Wed, 16 Nov 2016 22:26:05 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id h75si1691089pfk.290.2016.11.16.22.26.04
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 16 Nov 2016 22:26:05 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uAH6Q3uO025205;
+	Thu, 17 Nov 2016 11:56:03 +0530
+Date: Thu, 17 Nov 2016 11:56:03 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <409758386.40.1479363963384.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareAccountTest #204
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareAccountTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/204/Changes:
+
+[digvijay] Promo Code
+
+------------------------------------------
+Started by user sagar
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/UniwareAccounts.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/UniwareAccounts.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/UniwareAccounts.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision efa84a6b7ae0ed1d526c3e43590608478f39f8ca (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f efa84a6b7ae0ed1d526c3e43590608478f39f8ca
+ > git rev-list 09eb637b1ae1b1de7652ffa646e5853e97b7a7b0 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3919 completed. Result was SUCCESS
+Waiting for the completion of UniwareUIAccounts
+UniwareUIAccounts #112 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareAccountTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+Error: JAVA_HOME is not defined correctly.
+  We cannot execute /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.75.x86_64/bin/java
+Build step 'Invoke top-level Maven targets' marked build as failure

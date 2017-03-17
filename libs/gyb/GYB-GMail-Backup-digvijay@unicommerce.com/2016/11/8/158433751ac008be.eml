@@ -1,0 +1,278 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1485546qge;
+        Tue, 8 Nov 2016 01:14:08 -0800 (PST)
+X-Received: by 10.176.69.196 with SMTP id u62mr6522795uau.106.1478596448742;
+        Tue, 08 Nov 2016 01:14:08 -0800 (PST)
+Return-Path: <ashish@unicommerce.com>
+Received: from mail-ua0-x235.google.com (mail-ua0-x235.google.com. [2607:f8b0:400c:c08::235])
+        by mx.google.com with ESMTPS id e1si7675282uab.220.2016.11.08.01.14.08
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 01:14:08 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::235 is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) client-ip=2607:f8b0:400c:c08::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::235 is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) smtp.mailfrom=ashish@unicommerce.com
+Received: by mail-ua0-x235.google.com with SMTP id 12so141807897uas.2
+        for <digvijay@unicommerce.com>; Tue, 08 Nov 2016 01:14:08 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=FHXAp+m3rUTDQh8nWD+KUtXqHqeiVhXo407dDM4EaVk=;
+        b=LryQeJ3FdT77Ww35PgQ7Ihs6gGJ8HuqZeW9095TWeA99VEWZgOgGSr6vOz4TgN0TXX
+         TFzmoytlEjjoVkjHMKkN8YLnn+5rvKjiDvSbl9QYGaO7rgUCjkZj338RyHE6a6yxjW1v
+         2VA99PWboaz+xECdsSA5N6IBYO47loA4z7mM+QJeif+hAhiaLPOjr6K+Zd+wWmr6viRX
+         O2DkOl19W7QhAGs/2g6Ylt/z2oPkiAOmSeTNrEkSmKx2sn3u3tCLc5WrLTj2ZodqtU+4
+         Uz/RRi4q5MVo3Qh+HYaaIbazqs9PyqS18s4tc+jPgSmKhBcuxglKQYlYG6/lhdUuaL2g
+         XwAA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=FHXAp+m3rUTDQh8nWD+KUtXqHqeiVhXo407dDM4EaVk=;
+        b=feAEH19xypOtEg0ZiHmWldTTiQi7/G1PWoVmvZGew1rNlT3U+tM9Z6gQWraUe+f5Am
+         SBtsUr5IyJ3aE9wnJage84umdOPmrNnBLotiDo7tRSbxzGK8X+4pOTr5ento7KmcBxGG
+         s77nLjvtF74uCfsnVJUzl2Ldz0VkkGVu0LYcbZmH4FD+08OzPRGF2JN6IAWLNnfWeuTa
+         PNO2Fjd7OoQSS4vgrqWmkUJKfgiQJoK583Vl806hMqIAQAYZf+5r7yKS3JlXhinzH66p
+         wwj8Y1QNflwxaGzRNk2KF8Wn2DvjVO3M3+eGaTktSgygvoXehcgQDqdIY9Toefy+t60d
+         AFrw==
+X-Gm-Message-State: ABUngvfTeg1X5MBF0ZoITCbHUAi167NGrq7IX4QuaFhbCmOrA6NI5ECqHb9murzP5/ADetwmzPwXLIzHtlIsUw==
+X-Received: by 10.176.80.195 with SMTP id d3mr7655587uaa.125.1478596448455;
+ Tue, 08 Nov 2016 01:14:08 -0800 (PST)
+MIME-Version: 1.0
+References: <CAPe2SZSOjsWiBikYgbyK8=PQW2Hn+FNDWj_9LCmFh-cqUZakzQ@mail.gmail.com>
+ <CAMThih7=L9GHMAS1rP5hDJTe1QYS9u0z9WYY9MfH7CxLWoNNxg@mail.gmail.com>
+In-Reply-To: <CAMThih7=L9GHMAS1rP5hDJTe1QYS9u0z9WYY9MfH7CxLWoNNxg@mail.gmail.com>
+From: Ashish Bansal <ashish@unicommerce.com>
+Date: Tue, 08 Nov 2016 09:13:57 +0000
+Message-ID: <CAMThih61pHkA-aKv4T17f5fryuiwy3gCPwwo5ZXJ=RYGz2NWXQ@mail.gmail.com>
+Subject: Re: Please test reco on StgEnterprise1.
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c190d8a13a0720540c69009
+
+--94eb2c190d8a13a0720540c69009
+Content-Type: text/plain; charset=UTF-8
+
+Vijay ,
+
+Pls check
+
+4:42:22,424 ERROR
+[CONSUMER-238:stgenterprise1][][ChannelReconciliationInvoiceSyncServiceImpl]
+- Exception in creating reconciliation invoice NFT-161102083GN00039XXXXXXX,
+Message - Missing required element "{
+http://uniware.unicommerce.com/services/}InvoiceItemOrderStatus"(line 1,
+col 15819), Stack Trace:
+[org.jibx.runtime.impl.UnmarshallingContext.throwNameException(UnmarshallingContext.java:249),
+com.JiBX_unicommerceServicesBinding13MungeAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_784(),
+com.JiBX_unicommerceServicesBinding13MungeAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_785(),
+com.JiBX_unicommerceServicesBinding13MungeAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_786(),
+com.JiBX_unicommerceServicesBinding13MungeAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_787(),
+com.JiBX_unicommerceServicesBinding17CreateChannelReconciliationInvoiceRequest_access.unmarshal(),
+org.jibx.runtime.impl.UnmarshallingContext.unmarshalElement(UnmarshallingContext.java:2757),
+org.jibx.runtime.impl.UnmarshallingContext.unmarshalDocument(UnmarshallingContext.java:2900),
+com.unifier.core.utils.JibxUtils.unmarshall(JibxUtils.java:70),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.getChannelInvoiceItems(ChannelReconciliationInvoiceSyncServiceImpl.java:350),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.doRunReconciliationInvoiceSync(ChannelReconciliationInvoiceSyncServiceImpl.java:296),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync_aroundBody2(ChannelReconciliationInvoiceSyncServiceImpl.java:262),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync_aroundBody3$advice(ChannelReconciliationInvoiceSyncServiceImpl.java:61),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync(ChannelReconciliationInvoiceSyncServiceImpl.java:1),
+com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.syncChannelReconciliationInvoices(ChannelReconciliationInvoiceSyncServiceImpl.java:227),
+com.uniware.services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(SyncReconciliationInvoiceMessageListener.java:38),
+com.uniware.services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(SyncReconciliationInvoiceMessageListener.java:1),
+com.uniware.services.messaging.jms.UniwareMessageListener.onMessage(UniwareMessageListener.java:69),
+org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1390),
+org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:131),
+org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:202),
+org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133),
+org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48),
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142),
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617),
+java.lang.Thread.run(Thread.java:745)]
+
+On Tue, Nov 8, 2016 at 11:47 AM Ashish Bansal <ashish@unicommerce.com>
+wrote:
+
+> Hi Digvijay ,
+>
+> pls check
+>
+> ChannelReconciliationInvoiceSyncServiceImpl] - Exception in creating
+> reconciliation invoice NFT-161102083GN00039XXXXXXX, Message - Unable to
+> evaluate e
+>
+> xpression:#{#transactionJson.get('data').get('data').getAsJsonArray().iterator()},
+> Stack Trace:
+> [com.unifier.scraper.sl.expression.SLExpression.evaluate(SLExpression.java:33),
+> com.unifier.scraper.sl.runti
+>
+> me.VarInstruction.execute(VarInstruction.java:12),
+> com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15),
+> com.unifier.scraper.sl.runtime.WhileInstruction.execute(Wh
+>
+> ileInstruction.java:35),
+> com.unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompositePI.java:15),
+> com.unifier.scraper.sl.runtime.ScraperScript.execute(ScraperScript.java:94),
+> com.uni
+>
+> ware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.getChannelInvoiceItems(ChannelReconciliationInvoiceSyncServiceImpl.java:347),
+> com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.doRunReconciliationInvoiceSync(ChannelReconciliationInvoiceSyncServiceImpl.java:296),
+> com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync_aroundBody2(ChannelReconciliationInvoiceSyncServiceImpl.java:262),
+> com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync_aroundBody3$advice(ChannelReconciliationInvoiceSyncServiceImpl.java:61),
+> com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync(ChannelReconciliationInvoiceSyncServiceImpl.java:1),
+> com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.syncChannelReconciliationInvoices(ChannelReconciliationInvoiceSyncServiceImpl.java:227),
+> com.uniware.services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(SyncReconciliationInvoiceMessageListener.java:38),
+> com.uniware.services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(SyncReconciliationInvoiceMessageListener.java:1),
+> com.uniware.services.messaging.jms.UniwareMessageListener.onMessage(UniwareMessageListener.java:69),
+> org.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.java:1390),
+> org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSessionExecutor.java:131),
+> org.apache.activemq.ActiveMQSessionExecutor.iterate(ActiveMQSessionExecutor.java:202),
+> org.apache.activemq.thread.PooledTaskRunner.runTask(PooledTaskRunner.java:133),
+> org.apache.activemq.thread.PooledTaskRunner$1.run(PooledTaskRunner.java:48),
+> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142),
+> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617),
+> java.lang.Thread.run(Thread.java:745)]
+>
+> On Mon, Nov 7, 2016 at 7:51 PM Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+>  Try syncing for snapdeal and flipkart once. as scripts are updated.
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129
+>
+>
+
+--94eb2c190d8a13a0720540c69009
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div>Vijay ,=C2=A0</div><div><br></div><div>Pls check=
+=C2=A0</div><div><br></div><div>
+
+
+
+
+
+<p class=3D"inbox-inbox-p1"><span class=3D"inbox-inbox-s1">4:42:22,424 ERRO=
+R [CONSUMER-238:stgenterprise1][][ChannelReconciliationInvoiceSyncServiceIm=
+pl] - Exception in creating reconciliation invoice NFT-161102083GN00039XXXX=
+XXX, Message - Missing required element &quot;{<a href=3D"http://uniware.un=
+icommerce.com/services/}InvoiceItemOrderStatus">http://uniware.unicommerce.=
+com/services/}InvoiceItemOrderStatus</a>&quot;(line 1, col 15819), Stack Tr=
+ace: [org.jibx.runtime.impl.UnmarshallingContext.throwNameException(Unmarsh=
+allingContext.java:249), com.JiBX_unicommerceServicesBinding13MungeAdapter.=
+JiBX_unicommerceServicesBinding17_unmarshal_1_784(), com.JiBX_unicommerceSe=
+rvicesBinding13MungeAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_7=
+85(), com.JiBX_unicommerceServicesBinding13MungeAdapter.JiBX_unicommerceSer=
+vicesBinding17_unmarshal_1_786(), com.JiBX_unicommerceServicesBinding13Mung=
+eAdapter.JiBX_unicommerceServicesBinding17_unmarshal_1_787(), com.JiBX_unic=
+ommerceServicesBinding17CreateChannelReconciliationInvoiceRequest_access.un=
+marshal(), org.jibx.runtime.impl.UnmarshallingContext.unmarshalElement(Unma=
+rshallingContext.java:2757), org.jibx.runtime.impl.UnmarshallingContext.unm=
+arshalDocument(UnmarshallingContext.java:2900), com.unifier.core.utils.Jibx=
+Utils.unmarshall(JibxUtils.java:70), com.uniware.services.channel.impl.Chan=
+nelReconciliationInvoiceSyncServiceImpl.getChannelInvoiceItems(ChannelRecon=
+ciliationInvoiceSyncServiceImpl.java:350), com.uniware.services.channel.imp=
+l.ChannelReconciliationInvoiceSyncServiceImpl.doRunReconciliationInvoiceSyn=
+c(ChannelReconciliationInvoiceSyncServiceImpl.java:296), com.uniware.servic=
+es.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconciliati=
+onInvoiceSync_aroundBody2(ChannelReconciliationInvoiceSyncServiceImpl.java:=
+262), com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncSer=
+viceImpl.runReconciliationInvoiceSync_aroundBody3$advice(ChannelReconciliat=
+ionInvoiceSyncServiceImpl.java:61), com.uniware.services.channel.impl.Chann=
+elReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync(Channel=
+ReconciliationInvoiceSyncServiceImpl.java:1), com.uniware.services.channel.=
+impl.ChannelReconciliationInvoiceSyncServiceImpl.syncChannelReconciliationI=
+nvoices(ChannelReconciliationInvoiceSyncServiceImpl.java:227), com.uniware.=
+services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMess=
+age(SyncReconciliationInvoiceMessageListener.java:38), com.uniware.services=
+.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(Sync=
+ReconciliationInvoiceMessageListener.java:1), com.uniware.services.messagin=
+g.jms.UniwareMessageListener.onMessage(UniwareMessageListener.java:69), org=
+.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer.j=
+ava:1390), org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQSes=
+sionExecutor.java:131), org.apache.activemq.ActiveMQSessionExecutor.iterate=
+(ActiveMQSessionExecutor.java:202), org.apache.activemq.thread.PooledTaskRu=
+nner.runTask(PooledTaskRunner.java:133), org.apache.activemq.thread.PooledT=
+askRunner$1.run(PooledTaskRunner.java:48), java.util.concurrent.ThreadPoolE=
+xecutor.runWorker(ThreadPoolExecutor.java:1142), java.util.concurrent.Threa=
+dPoolExecutor$Worker.run(ThreadPoolExecutor.java:617), java.lang.Thread.run=
+(Thread.java:745)]</span></p></div></div><br><div class=3D"gmail_quote"><di=
+v dir=3D"ltr">On Tue, Nov 8, 2016 at 11:47 AM Ashish Bansal &lt;<a href=3D"=
+mailto:ashish@unicommerce.com">ashish@unicommerce.com</a>&gt; wrote:<br></d=
+iv><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left=
+:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">Hi D=
+igvijay ,=C2=A0<div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div =
+class=3D"gmail_msg">pls check=C2=A0</div><div class=3D"gmail_msg">
+
+
+
+
+
+<p class=3D"m_8734013709052784000inbox-inbox-p1 gmail_msg"><span class=3D"m=
+_8734013709052784000inbox-inbox-s1 gmail_msg">ChannelReconciliationInvoiceS=
+yncServiceImpl] - Exception in creating reconciliation invoice NFT-16110208=
+3GN00039XXXXXXX, Message - Unable to evaluate e</span></p>
+<p class=3D"m_8734013709052784000inbox-inbox-p1 gmail_msg"><span class=3D"m=
+_8734013709052784000inbox-inbox-s1 gmail_msg">xpression:#{#transactionJson.=
+get(&#39;data&#39;).get(&#39;data&#39;).getAsJsonArray().iterator()}, Stack=
+ Trace: [com.unifier.scraper.sl.expression.SLExpression.evaluate(SLExpressi=
+on.java:33), com.unifier.scraper.sl.runti</span></p>
+<p class=3D"m_8734013709052784000inbox-inbox-p1 gmail_msg"><span class=3D"m=
+_8734013709052784000inbox-inbox-s1 gmail_msg">me.VarInstruction.execute(Var=
+Instruction.java:12), com.unifier.scraper.sl.runtime.AbstractCompositePI.ex=
+ecuteChilds(AbstractCompositePI.java:15), com.unifier.scraper.sl.runtime.Wh=
+ileInstruction.execute(Wh</span></p>
+<p class=3D"m_8734013709052784000inbox-inbox-p1 gmail_msg"><span class=3D"m=
+_8734013709052784000inbox-inbox-s1 gmail_msg">ileInstruction.java:35), com.=
+unifier.scraper.sl.runtime.AbstractCompositePI.executeChilds(AbstractCompos=
+itePI.java:15), com.unifier.scraper.sl.runtime.ScraperScript.execute(Scrape=
+rScript.java:94), com.uni</span></p>
+<p class=3D"m_8734013709052784000inbox-inbox-p1 gmail_msg"><span class=3D"m=
+_8734013709052784000inbox-inbox-s1 gmail_msg">ware.services.channel.impl.Ch=
+annelReconciliationInvoiceSyncServiceImpl.getChannelInvoiceItems(ChannelRec=
+onciliationInvoiceSyncServiceImpl.java:347), com.uniware.services.channel.i=
+mpl.ChannelReconciliationInvoiceSyncServiceImpl.doRunReconciliationInvoiceS=
+ync(ChannelReconciliationInvoiceSyncServiceImpl.java:296), com.uniware.serv=
+ices.channel.impl.ChannelReconciliationInvoiceSyncServiceImpl.runReconcilia=
+tionInvoiceSync_aroundBody2(ChannelReconciliationInvoiceSyncServiceImpl.jav=
+a:262), com.uniware.services.channel.impl.ChannelReconciliationInvoiceSyncS=
+erviceImpl.runReconciliationInvoiceSync_aroundBody3$advice(ChannelReconcili=
+ationInvoiceSyncServiceImpl.java:61), com.uniware.services.channel.impl.Cha=
+nnelReconciliationInvoiceSyncServiceImpl.runReconciliationInvoiceSync(Chann=
+elReconciliationInvoiceSyncServiceImpl.java:1), com.uniware.services.channe=
+l.impl.ChannelReconciliationInvoiceSyncServiceImpl.syncChannelReconciliatio=
+nInvoices(ChannelReconciliationInvoiceSyncServiceImpl.java:227), com.uniwar=
+e.services.messaging.jms.SyncReconciliationInvoiceMessageListener.processMe=
+ssage(SyncReconciliationInvoiceMessageListener.java:38), com.uniware.servic=
+es.messaging.jms.SyncReconciliationInvoiceMessageListener.processMessage(Sy=
+ncReconciliationInvoiceMessageListener.java:1), com.uniware.services.messag=
+ing.jms.UniwareMessageListener.onMessage(UniwareMessageListener.java:69), o=
+rg.apache.activemq.ActiveMQMessageConsumer.dispatch(ActiveMQMessageConsumer=
+.java:1390), org.apache.activemq.ActiveMQSessionExecutor.dispatch(ActiveMQS=
+essionExecutor.java:131), org.apache.activemq.ActiveMQSessionExecutor.itera=
+te(ActiveMQSessionExecutor.java:202), org.apache.activemq.thread.PooledTask=
+Runner.runTask(PooledTaskRunner.java:133), org.apache.activemq.thread.Poole=
+dTaskRunner$1.run(PooledTaskRunner.java:48), java.util.concurrent.ThreadPoo=
+lExecutor.runWorker(ThreadPoolExecutor.java:1142), java.util.concurrent.Thr=
+eadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617), java.lang.Thread.r=
+un(Thread.java:745)]</span></p></div></div><br class=3D"gmail_msg"><div cla=
+ss=3D"gmail_quote gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">On Mon, N=
+ov 7, 2016 at 7:51 PM Akshay Agarwal &lt;<a href=3D"mailto:akshay.agarwal@u=
+nicommerce.com" class=3D"gmail_msg" target=3D"_blank">akshay.agarwal@unicom=
+merce.com</a>&gt; wrote:<br class=3D"gmail_msg"></div><blockquote class=3D"=
+gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">=C2=A0Try syncing =
+for snapdeal and flipkart once. as scripts are updated.<br class=3D"gmail_m=
+sg"></div><div dir=3D"ltr" class=3D"gmail_msg">-- <br class=3D"gmail_msg"><=
+/div><div data-smartmail=3D"gmail_signature" class=3D"gmail_msg"><div dir=
+=3D"ltr" class=3D"gmail_msg">Thanks<div class=3D"gmail_msg">Akshay Agarwal<=
+/div><div class=3D"gmail_msg">Software Engineer, Unicommerce</div><div clas=
+s=3D"gmail_msg">+91 9999-872-129</div></div></div>
+</blockquote></div></blockquote></div>
+
+--94eb2c190d8a13a0720540c69009--

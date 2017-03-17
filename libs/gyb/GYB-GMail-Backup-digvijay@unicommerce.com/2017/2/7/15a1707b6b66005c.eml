@@ -1,0 +1,121 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1951105qgu;
+        Mon, 6 Feb 2017 21:24:26 -0800 (PST)
+X-Received: by 10.84.218.5 with SMTP id q5mr23092447pli.80.1486445065962;
+        Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+Return-Path: <tech+bncBCGJ5SVI3EKRBCNU4XCAKGQEQZSKQ6A@unicommerce.com>
+Received: from mail-pf0-x248.google.com (mail-pf0-x248.google.com. [2607:f8b0:400e:c00::248])
+        by mx.google.com with ESMTPS id j62si2954642pfg.51.2017.02.06.21.24.25
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c00::248 is neither permitted nor denied by best guess record for domain of tech+bncbcgj5svi3ekrbcnu4xcakgqeqzskq6a@unicommerce.com) client-ip=2607:f8b0:400e:c00::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c00::248 is neither permitted nor denied by best guess record for domain of tech+bncbcgj5svi3ekrbcnu4xcakgqeqzskq6a@unicommerce.com) smtp.mailfrom=tech+bncBCGJ5SVI3EKRBCNU4XCAKGQEQZSKQ6A@unicommerce.com
+Received: by mail-pf0-x248.google.com with SMTP id 204sf134581740pfx.1
+        for <digvijay@unicommerce.com>; Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=itNIC/oSznfgD5TkJCjp5TlHVR7bim+41ZuS8DTxFdg=;
+        b=ejYIz/++QAe6FCVSObUckkN2SKGHzDbO7JMaa2HFBbc+O/XIdoimBDgj5QbFfGZ2de
+         CI8Ivt4eDO8CVKBMYxz/cARV5tMZQ6TdVZmP6tR8sPVTXp0mgKSgdz/WYBQoEEqlT+NS
+         uiuZlRmz8PkAowNMzpdmFhspIh7eY04oxm0O61lZsb+8VzXPKMig1GKnSGTrkuGWwkOm
+         CuobB7uMY5rEsxVWaS+HaeLztDvsrCt/ET52lYzO9Epf81F86MhDY7vWB6GtmN0hX4Jz
+         tvmU6IIcAeLF0LYqwBomnnZU8rxqp+dAIaYZiz63m5XfOcOm/UQ3i4oERfOsZDWmp0ca
+         fYAA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=itNIC/oSznfgD5TkJCjp5TlHVR7bim+41ZuS8DTxFdg=;
+        b=Inm5M5gfQ9FmonDbfSn3oKJoQUz0DLhqvGL7KXhLsOiKdIAT/gsRd/FZnmCljRmfIN
+         Ep/f2XFDBYEzVEVmq+3RWsUFJdo7AD22sfs2JDO+T35CTnLkeJHShFgbpu9nVlrnbLA4
+         EjyebOalS5hoHOnu0YDYeykW7THMmYkkF1JhUQJplPnUcfBt5t558QhzWV25DLpLL0mG
+         WVGj2lcfnPtqaerqYDcnxHzsBxhNhYFWZaF2bqB0DebHS2XlRoDxzfdoS4WIt9/PMvF9
+         FvrVV+8DuJJzTEOAS64dnO9DuynivZ79+Xze3746JS0P7mCFFSqS/ktjLMSCer3aH3AV
+         uOwQ==
+X-Gm-Message-State: AIkVDXLyKbnlKEjg+c00U30IWcGFXGo7ZRPpzspm80ZJGovxtIzkD1wRMbGyPQjTtssGXw==
+X-Received: by 10.99.44.85 with SMTP id s82mr3645811pgs.150.1486445065542;
+        Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.8.69 with SMTP id 63ls870685oty.30.gmail; Mon, 06 Feb 2017
+ 21:24:25 -0800 (PST)
+X-Received: by 10.157.32.17 with SMTP id n17mr6744309ota.81.1486445065414;
+        Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+Received: from mail-ot0-x22e.google.com (mail-ot0-x22e.google.com. [2607:f8b0:4003:c0f::22e])
+        by mx.google.com with ESMTPS id y45si1175984oty.217.2017.02.06.21.24.25
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::22e is neither permitted nor denied by best guess record for domain of rishu@unicommerce.com) client-ip=2607:f8b0:4003:c0f::22e;
+Received: by mail-ot0-x22e.google.com with SMTP id 73so78564301otj.0
+        for <tech@unicommerce.com>; Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+X-Received: by 10.157.8.120 with SMTP id 111mr6514654oty.197.1486445065242;
+ Mon, 06 Feb 2017 21:24:25 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.157.16.89 with HTTP; Mon, 6 Feb 2017 21:23:44 -0800 (PST)
+From: Rishu Goyal <rishu@unicommerce.com>
+Date: Tue, 7 Feb 2017 10:53:44 +0530
+Message-ID: <CAF+w_SHXANRGcakbXic-ToUZVfijNaKAfDX6Y5s6vHmkAus2sQ@mail.gmail.com>
+Subject: Sweets at my desk :)
+To: Product Team <product@unicommerce.com>, Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c11529817a0960547e9f662
+X-Original-Sender: rishu@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c0f::22e is neither permitted nor denied by best
+ guess record for domain of rishu@unicommerce.com) smtp.mailfrom=rishu@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c11529817a0960547e9f662
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+  Got married=E2=80=8B.
+
+
+
+
+
+
+
+
+
+
+--=20
+
+Thanks & Regards
+ Rishu
+
+--94eb2c11529817a0960547e9f662
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"color:#3d85c6"><br><=
+/div><div><div class=3D"gmail_default" style=3D"color:rgb(61,133,198)">=C2=
+=A0 Got married=E2=80=8B.</div><div class=3D"gmail_default" style=3D"color:=
+rgb(61,133,198)"><br></div><div class=3D"gmail_default" style=3D"color:rgb(=
+61,133,198)"><br></div><div class=3D"gmail_default" style=3D"color:rgb(61,1=
+33,198)"><br></div><div class=3D"gmail_default" style=3D"color:rgb(61,133,1=
+98)"><br></div><div class=3D"gmail_default" style=3D"color:rgb(61,133,198)"=
+><br></div><div class=3D"gmail_default" style=3D"color:rgb(61,133,198)"><br=
+></div><div class=3D"gmail_default" style=3D"color:rgb(61,133,198)"><br></d=
+iv><div class=3D"gmail_default" style=3D"color:rgb(61,133,198)"><br></div><=
+div class=3D"gmail_default" style=3D"color:rgb(61,133,198)"><br></div><br><=
+/div>-- <br><div class=3D"gmail_signature" data-smartmail=3D"gmail_signatur=
+e"><div dir=3D"ltr"><div><br></div><div>Thanks &amp; Regards<div>=C2=A0Rish=
+u</div></div></div></div>
+</div>
+
+--94eb2c11529817a0960547e9f662--

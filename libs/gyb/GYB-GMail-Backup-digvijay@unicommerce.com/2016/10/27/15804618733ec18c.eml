@@ -1,0 +1,374 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp491005qgj;
+        Wed, 26 Oct 2016 21:24:10 -0700 (PDT)
+X-Received: by 10.157.45.46 with SMTP id v43mr4527014ota.24.1477542250022;
+        Wed, 26 Oct 2016 21:24:10 -0700 (PDT)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o6.em.bitbucket.org (o6.em.bitbucket.org. [167.89.38.188])
+        by mx.google.com with ESMTPS id d12si3536001oih.118.2016.10.26.21.24.09
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Oct 2016 21:24:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) client-ip=167.89.38.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.38.188 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=3uiwhpu7EnmhBCRh+I5+7jaL3no=; b=Xn1jdT3xQTKdfDJuNv88s5O
+	vQG6wdbKNecAHcbQ5uePXofwhKhA1m1zjMeQoekpK/vvH7Zfi7HQaDZzvn8s0v6+
+	Cytr9lzX9f9oQtkHflCMfB6jV+K/9nQK1CjNzVqPdScgMzE75fhAlx7sf1tOYhT2
+	pJXccjIjUyS3MjT1xdwM=
+Received: by filter0830p1mdw1.sendgrid.net with SMTP id filter0830p1mdw1-30257-58118169-11
+        2016-10-27 04:24:09.437432556 +0000 UTC
+Received: from celery-worker-108.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0001p1iad1.sendgrid.net (SG) with ESMTP id nftrby7PREOpEgOUpgwU2g
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 04:24:09.332 +0000 (UTC)
+Received: from celery-worker-108.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-108.ash1.bb-inf.net (Postfix) with ESMTP id 4C52452039B
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 04:24:09 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============9081882338864900809=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #5:
+ ReleaseUpdateFinal+EmailScriptVersionFinal
+ (unicommercetechnology/uniwaretroubleshoot)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Thu, 27 Oct 2016 04:24:09 -0000
+Auto-Submitted: auto-generated
+Message-ID: <prcomment-25835909@bitbucket.org>
+References: <pr-unicommercetechnology/uniwaretroubleshoot/5@bitbucket.org>
+ <pr-unicommercetechnology/uniwaretroubleshoot/5@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniwaretroubleshoot/5@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/t5wyek3A1qLqZ7xWnps/RKNY/HXialIBK7gQ
+ KnhKmgu9EbcKmEVf8VXhB1sYgH7byCQA41p2+eHbqcB+hEUE9Ns43dWvL62jf3gpShBaheMimUrkXQ
+ c7jehGPWRfLx47KmiIsS131od0S/02H8m1Q7kPDWzPb+QX/5jZF7MKvt5MHnVnnZWJ22ksJ1BpCZ73
+ EIH5yw8Y8TPzwwl6ORZv12
+
+--===============9081882338864900809==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+New comment on pull request:
+
+https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/5/releaseupdatefinal-emailscriptversionfinal#comment-25835909
+
+Akshay Agarwal said:
+
+Optimise imports. Cmd+Shft+O
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/5/unwatch/digvijay095/711e1222ad2a8caff09471cbe93324efc8ea1448/
+
+--===============9081882338864900809==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" class="comment-container no-box" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: none; border-radius: 5px; padding: 0; background: #f5f5f5">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td class="main-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <div style="border: 1px solid #ccc; border-radius: 5px; background-color: #fff; padding: 0">
+                
+<span style="display: none; display: none !important;">
+  
+    Akshay Agarwal commented on pull request #5: ReleaseUpdateFinal+EmailScriptVersionFinal
+  
+</span>
+<table style="width: 100%; border-collapse: collapse">
+  <tbody>
+    
+      <tr>
+        <td class="comment-filename" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-radius: 5px 5px 0 0">UniwareNotifications/src/main/java/com/uniware/services/scripts/impl/ScriptServiceImpl.java</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    
+    
+      <tr>
+        <td class="diff-line addition first" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px; border-top: 1px solid #ccc">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>36</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+import com.uniware.<wbr>services.email.GMail<wbr>Server.Testing;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>46</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>37</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'> import com.uniware.<wbr>services.scripts.ISc<wbr>riptService;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>47</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>38</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'> import com.uniware.<wbr>services.tenant.ITen<wbr>antService;</wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>39</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+import java.util.Ar<wbr>rayList;</wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="line-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc">
+            <div style="border: 1px solid #ccc; background: #fff; padding: 20px; border-radius: 5px">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    
+                      
+
+<td class="comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+  <table style="width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td class="comment-avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+          
+            
+              <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1477540461" style="border-radius: 3px">
+            
+          
+        </td>
+        <td class="comment-main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              
+                <tr>
+                  <td class="comment-user" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+                    
+                      
+                        <strong>Akshay Agarwal</strong> commented on pull request #5:
+                      
+                    
+                  </td>
+                </tr>
+                
+                  <tr>
+                    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+                      <a href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/5/releaseupdatefinal-emailscriptversionfinal#comment-25835909" style="color: #3572b0; text-decoration: none">ReleaseUpdateFinal+EmailScriptVersionFinal</a>
+                    </td>
+                  </tr>
+                
+              
+              <tr>
+                <td class="comment-content markup-content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 15px">
+                  
+                    <p style="margin-bottom: 0; margin: 10px 0 0 0; padding: 0; margin-top: 0">Optimise imports. Cmd+Shft+O</p>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="actions secondary" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 20px 0 0; color: #707070; border-top: 1px solid #cccccc; line-height: 1">
+            
+            
+              
+                <a href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/5/releaseupdatefinal-emailscriptversionfinal#comment-25835909" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+              
+            
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</td>
+
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>40</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+import java.util.Ha<wbr>shSet;</wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>41</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc'>+import java.util.Li<wbr>nkedList;</wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition last" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-bottom-left-radius: 5px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>42</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc; border-bottom-right-radius: 5px'>+import java.util.Li<wbr>st;</wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+  </tbody>
+</table>
+
+              </div>
+            </td>
+          </tr>
+          
+  
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/5/unwatch/digvijay095/711e1222ad2a8caff09471cbe93324efc8ea1448/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/420783910/ca35dd9d28d286495fe8fd98766f7850ea552bf9/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/c2f011c629a2/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm5KwbBgVtcEJTxijE9qCYBI1VmQV7g4Kgv-2BI8iF-2BdJ3SWgxhXlMGmNVOYjJ8CbOwF8ZACv9wVOU-2FIJE-2FCy0FZm9Uwd3ecBlX5efl86mkUhYDoNH0u47d04oY2YxH7uGkipoLqpy-2B7-2FmPOoHpYT1yibJbQSeqdl6LTF5lVKjq1iHPqMWv8mXs-2BmP0E3X0Fzze8s-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============9081882338864900809==--

@@ -1,0 +1,97 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp609080itg;
+        Sat, 1 Oct 2016 01:32:28 -0700 (PDT)
+X-Received: by 10.37.29.133 with SMTP id d127mr7293087ybd.58.1475310748512;
+        Sat, 01 Oct 2016 01:32:28 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yw0-x232.google.com (mail-yw0-x232.google.com. [2607:f8b0:4002:c05::232])
+        by mx.google.com with ESMTPS id t142si1453376ywg.259.2016.10.01.01.32.28
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 Oct 2016 01:32:28 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c05::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yw0-x232.google.com with SMTP id t67so81873894ywg.3
+        for <digvijay@unicommerce.com>; Sat, 01 Oct 2016 01:32:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=8H+How05I0ziCop9DuRix3ABGOwp1Ue9lgzyp2j1uO4=;
+        b=A3SP25C3t15nst9MA+ryXOfmYaC+c5Y4x2vFhZqu+prEfzbVNuq476u5BnDnDe5Jim
+         dkjBfvASK1YHQLPuQRNdHDabU2kgaSqsmNxi00rDzztTUH3KWSyOGV3zqaph/5PdhkvV
+         Oodk4RIlq6yS/YewzwNt3T/Zq5cvAvdbky1Sn0PIkhUo7FarlgdHnGDPz8mB7EaHCKTz
+         SwHj5s2pbZU9xQho/F2jI3+JGVi//PZQ7QBvXmoBG55pwQNuZZnIaZscjfkBOvDCq6HJ
+         6h9L/YPkUk4sUR8VPdF0dSY4mWX0m94CUG5lafyiAUbO2dCoTefpqhlBZrTpRQzaT1F+
+         rF8Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=8H+How05I0ziCop9DuRix3ABGOwp1Ue9lgzyp2j1uO4=;
+        b=jCufhCYUo0K5RhBXEqXGUKlHj8ew/8ywKmB+U1YIQl8qdGfEb1CeJsiShZH/5lDaCg
+         YbWzqQWLa8Qkmla9+KG9B58Dt570x573ZZC+pp/4+D0VB5b7rKzPFVhPO4/k00CrxS4y
+         Q63naDznZQ0NhqWLkzRKZD3Y5tVEGI8jplu17kOk5esEJZrRynJf0bpSeeUbM+kal/xS
+         Cilk6dyXPqSwg7BOFQNnN9qDewG1MI0CyuUy15Sn+vDuOiHm3Qs2qsL5mFa73OmyBKZj
+         NOHQxK6uZsvG5vYIGpcyM7WQLNt5OEYorb0Z6E95iql1vbD80feMoJ47JjikLCjIxBZ4
+         CJBg==
+X-Gm-Message-State: AA6/9Rl8UH3TkiZADh+dhvBBwm2XR/jymofLscw1aqOlqTKqZPdJt/DE26lO1eNSRPvAR0aVqJR0BpY2cZszig==
+X-Received: by 10.13.244.129 with SMTP id d123mr7114464ywf.276.1475310748067;
+ Sat, 01 Oct 2016 01:32:28 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.129.124.135 with HTTP; Sat, 1 Oct 2016 01:32:27 -0700 (PDT)
+From: karan Garg <karangarg@unicommerce.com>
+Date: Sat, 1 Oct 2016 14:02:27 +0530
+Message-ID: <CAG=LqmNfqfDRqm-XapqVJ4Yqa195CL0mUDg7wEatRN5S412q-Q@mail.gmail.com>
+Subject: sql conf
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=94eb2c08650412cce7053dc98dcb
+
+--94eb2c08650412cce7053dc98dcb
+Content-Type: multipart/alternative; boundary=94eb2c08650412cce2053dc98dc9
+
+--94eb2c08650412cce2053dc98dc9
+Content-Type: text/plain; charset=UTF-8
+
+-- 
+Regards,
+Karan Garg
+
+--94eb2c08650412cce2053dc98dc9
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmai=
+l_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span=
+ style=3D"color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"c=
+olor:rgb(102,102,102)">Karan Garg</span><br></div></div>
+</div>
+
+--94eb2c08650412cce2053dc98dc9--
+--94eb2c08650412cce7053dc98dcb
+Content-Type: application/octet-stream; name="my-default.cnf"
+Content-Disposition: attachment; filename="my-default.cnf"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itqxx6gx0
+
+IyBGb3IgYWR2aWNlIG9uIGhvdyB0byBjaGFuZ2Ugc2V0dGluZ3MgcGxlYXNlIHNlZQojIGh0dHA6
+Ly9kZXYubXlzcWwuY29tL2RvYy9yZWZtYW4vNS43L2VuL3NlcnZlci1jb25maWd1cmF0aW9uLWRl
+ZmF1bHRzLmh0bWwKIyAqKiogRE8gTk9UIEVESVQgVEhJUyBGSUxFLiBJdCdzIGEgdGVtcGxhdGUg
+d2hpY2ggd2lsbCBiZSBjb3BpZWQgdG8gdGhlCiMgKioqIGRlZmF1bHQgbG9jYXRpb24gZHVyaW5n
+IGluc3RhbGwsIGFuZCB3aWxsIGJlIHJlcGxhY2VkIGlmIHlvdQojICoqKiB1cGdyYWRlIHRvIGEg
+bmV3ZXIgdmVyc2lvbiBvZiBNeVNRTC4KCltteXNxbGRdCgojIFJlbW92ZSBsZWFkaW5nICMgYW5k
+IHNldCB0byB0aGUgYW1vdW50IG9mIFJBTSBmb3IgdGhlIG1vc3QgaW1wb3J0YW50IGRhdGEKIyBj
+YWNoZSBpbiBNeVNRTC4gU3RhcnQgYXQgNzAlIG9mIHRvdGFsIFJBTSBmb3IgZGVkaWNhdGVkIHNl
+cnZlciwgZWxzZSAxMCUuCiMgaW5ub2RiX2J1ZmZlcl9wb29sX3NpemUgPSAxMjhNCgojIFJlbW92
+ZSBsZWFkaW5nICMgdG8gdHVybiBvbiBhIHZlcnkgaW1wb3J0YW50IGRhdGEgaW50ZWdyaXR5IG9w
+dGlvbjogbG9nZ2luZwojIGNoYW5nZXMgdG8gdGhlIGJpbmFyeSBsb2cgYmV0d2VlbiBiYWNrdXBz
+LgojIGxvZ19iaW4KCiMgVGhlc2UgYXJlIGNvbW1vbmx5IHNldCwgcmVtb3ZlIHRoZSAjIGFuZCBz
+ZXQgYXMgcmVxdWlyZWQuCiMgYmFzZWRpciA9IC4uLi4uCiMgZGF0YWRpciA9IC4uLi4uCiMgcG9y
+dCA9IC4uLi4uCiMgc2VydmVyX2lkID0gLi4uLi4KIyBzb2NrZXQgPSAuLi4uLgoKIyBSZW1vdmUg
+bGVhZGluZyAjIHRvIHNldCBvcHRpb25zIG1haW5seSB1c2VmdWwgZm9yIHJlcG9ydGluZyBzZXJ2
+ZXJzLgojIFRoZSBzZXJ2ZXIgZGVmYXVsdHMgYXJlIGZhc3RlciBmb3IgdHJhbnNhY3Rpb25zIGFu
+ZCBmYXN0IFNFTEVDVHMuCiMgQWRqdXN0IHNpemVzIGFzIG5lZWRlZCwgZXhwZXJpbWVudCB0byBm
+aW5kIHRoZSBvcHRpbWFsIHZhbHVlcy4KIyBqb2luX2J1ZmZlcl9zaXplID0gMTI4TQojIHNvcnRf
+YnVmZmVyX3NpemUgPSAyTQojIHJlYWRfcm5kX2J1ZmZlcl9zaXplID0gMk0gCgpzcWxfbW9kZT1O
+T19FTkdJTkVfU1VCU1RJVFVUSU9OLFNUUklDVF9UUkFOU19UQUJMRVMgCg==
+--94eb2c08650412cce7053dc98dcb--

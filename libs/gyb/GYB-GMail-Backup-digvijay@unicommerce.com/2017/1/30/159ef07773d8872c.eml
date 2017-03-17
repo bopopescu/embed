@@ -1,0 +1,169 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1313938qgu;
+        Mon, 30 Jan 2017 02:59:21 -0800 (PST)
+X-Received: by 10.157.29.182 with SMTP id y51mr9257191otd.256.1485773961043;
+        Mon, 30 Jan 2017 02:59:21 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x231.google.com (mail-oi0-x231.google.com. [2607:f8b0:4003:c06::231])
+        by mx.google.com with ESMTPS id f6si5268497otc.247.2017.01.30.02.59.20
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jan 2017 02:59:20 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::231 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::231 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x231.google.com with SMTP id j15so192664072oih.2
+        for <digvijay@unicommerce.com>; Mon, 30 Jan 2017 02:59:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=MS1aesfNq1cryzFl+VvOiNAIMQW0lHlPGckKTOj5XWg=;
+        b=CjWZJ68mteP5KIQQOIpFltkbN+l8a8DpbFd58e9Z5ZtCK7Mgc9klhnp4ggxWQ1XEVF
+         3ZtIQOkrgUavCBPwNx3lrYPAxRp1aQzOrDB087TIDbdSsF7RbaDtxnXMCCQi1LatgPtH
+         h7TvseeZqZNsqujOkmu0Sr6e1JdXd730NG7Gy3uumHKxpRFcTbVux3ZxI1Mlmurb9yql
+         ejJ3l7bCilGmcD9wVOSDnloJHU+2DyssXnhXTKM7Ls7PJFz5DAlGDXZuZJyd27d/Lyw3
+         bwTGvlwCdmJoFy1hlHpHK/oapnkGYGE/nRTz9PDBAkJeKl7h8xVbmLzgUo9JlCdRjVZW
+         20oQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=MS1aesfNq1cryzFl+VvOiNAIMQW0lHlPGckKTOj5XWg=;
+        b=LcLyXaW/+Wt7EajuIqTp43crnIg5HX0PU12qqWgzvRv+JH05P3iv3jvbQF4AINXLn8
+         8OGNNDDRHx5IE75MLTGyfw5isx3qtgcHsobfLL+1aiKpFmp5gzjxoAIotkzkOnJBC5ey
+         1WGckuM2JI40u9mxU+gYxQVpOUi/Oz77kinf8cp1mkNf0duIJMRNF7q0XDTP9OWVfc8h
+         mmif1UVJPwfKU5/o01LjCR6uq0ykQwkL4EFu+DmRA+sRIRhHiJUYwpVojWzqyraSfL0B
+         Y4sSkVjI1apQlyzhHfO1W8EH0n11MwTBYsP05aykiL+xh5YkA7+gNsH6Mqwb1rJAFvlA
+         X+JQ==
+X-Gm-Message-State: AIkVDXLkuZlzDsFqe7ot5/In/BDAHsYL5xJ98UaqOK68rTXLelHdseNXernXEgWCctCRuw5RhtWzUf9RXXD9eA==
+X-Received: by 10.202.182.7 with SMTP id g7mr11777818oif.175.1485773960683;
+ Mon, 30 Jan 2017 02:59:20 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Mon, 30 Jan 2017 02:59:20 -0800 (PST)
+In-Reply-To: <CAJF3sor+ZBQZaB5=1UHQ=gmP5y2=ppat=QmOUhmNFM1OHjqcbw@mail.gmail.com>
+References: <CAJF3sor+ZBQZaB5=1UHQ=gmP5y2=ppat=QmOUhmNFM1OHjqcbw@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 30 Jan 2017 16:29:20 +0530
+Message-ID: <CA+zaFGj2ihBjE+0Nw6rfTC1tKVFBzqofCMjTsrSfXNY0oGcV7A@mail.gmail.com>
+Subject: Re: Queries for fba recon of amazon
+To: Digvijay Sharma <digvijay@unicommerce.com>, Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113cf22424b2b805474db5f3
+
+--001a113cf22424b2b805474db5f3
+Content-Type: text/plain; charset=UTF-8
+
+Sagar,
+
+Let me know when the script changes are done. I'll run this query then.
+
+- Sunny
+
+On Mon, Jan 30, 2017 at 3:18 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> db.source.update({"code":"AMAZON_FBA"},{$addToSet:{"sourceProperties" :{
+> $each:[
+> {
+> "sourceCode" : "AMAZON_FBA",
+> "name" : "reconciliation.invoice.list.script.name",
+> "value" : "amazonIndiaReconciliationInvoiceListScript"
+> },
+> {
+> "sourceCode" : "AMAZON_FBA",
+> "name" : "reconciliation.invoice.detail.script.name",
+> "value" : "amazonIndiaReconciliationInvoiceDetailScript"
+> },
+> {
+> "sourceCode" : "AMAZON_FBA",
+> "name" : "unreconcilied.order.item.script.name",
+> "value" : "amazonIndiaUnreconciliedOrdersScript"
+> },
+> {
+> "sourceCode" : "AMAZON_FBA",
+> "name" : "order.reconciliation.enabled",
+> "value" : "true"
+> },
+> {
+> "sourceCode" : "AMAZON_FBA",
+> "name" : "payment.reconciliation.enabled",
+> "value" : "false"
+> }
+> ]
+> }
+> }})
+>
+
+--001a113cf22424b2b805474db5f3
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Sagar,<div><br></div><div>Let me know when the script chan=
+ges are done. I&#39;ll run this query then.</div><div><br></div><div>- Sunn=
+y</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On M=
+on, Jan 30, 2017 at 3:18 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce=
+.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r"><div>db.source.update({&quot;code&quot;:&quot;<wbr>AMAZON_FBA&quot;},{$a=
+ddToSet:{&quot;<wbr>sourceProperties&quot; :{ $each:[</div><div><span class=
+=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wr=
+ap">			</span>{</div><div><span class=3D"m_-4037670784595873755gmail-Apple-=
+tab-span" style=3D"white-space:pre-wrap">			</span>&quot;sourceCode&quot; :=
+ &quot;AMAZON_FBA&quot;,</div><div><span class=3D"m_-4037670784595873755gma=
+il-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;name&quot=
+; : &quot;<a href=3D"http://reconciliation.invoice.list.script.name" target=
+=3D"_blank">reconciliation.invoice.list.<wbr>script.name</a>&quot;,</div><d=
+iv><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"whit=
+e-space:pre-wrap">			</span>&quot;value&quot; : &quot;<wbr>amazonIndiaRecon=
+ciliationInvoi<wbr>ceListScript&quot;</div><div><span class=3D"m_-403767078=
+4595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">		</span>},<=
+/div><div><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=
+=3D"white-space:pre-wrap">		</span>{</div><div><span class=3D"m_-4037670784=
+595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&qu=
+ot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=3D"m_-4=
+037670784595873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			<=
+/span>&quot;name&quot; : &quot;<a href=3D"http://reconciliation.invoice.det=
+ail.script.name" target=3D"_blank">reconciliation.invoice.<wbr>detail.scrip=
+t.name</a>&quot;,</div><div><span class=3D"m_-4037670784595873755gmail-Appl=
+e-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;value&quot; : &q=
+uot;<wbr>amazonIndiaReconciliationInvoi<wbr>ceDetailScript&quot;</div><div>=
+<span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-s=
+pace:pre-wrap">		</span>},</div><div><span class=3D"m_-4037670784595873755g=
+mail-Apple-tab-span" style=3D"white-space:pre-wrap">		</span>{</div><div><s=
+pan class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre-wrap">			</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</di=
+v><div><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"=
+white-space:pre-wrap">			</span>&quot;name&quot; : &quot;<a href=3D"http://=
+unreconcilied.order.item.script.name" target=3D"_blank">unreconcilied.order=
+.item.<wbr>script.name</a>&quot;,</div><div><span class=3D"m_-4037670784595=
+873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;=
+value&quot; : &quot;<wbr>amazonIndiaUnreconciliedOrders<wbr>Script&quot;</d=
+iv><div><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D=
+"white-space:pre-wrap">		</span>},</div><div><span class=3D"m_-403767078459=
+5873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">				</span>{</d=
+iv><div><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D=
+"white-space:pre-wrap">			</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&=
+quot;,</div><div><span class=3D"m_-4037670784595873755gmail-Apple-tab-span"=
+ style=3D"white-space:pre-wrap">			</span>&quot;name&quot; : &quot;order.re=
+conciliation.enabled&quot;<wbr>,</div><div><span class=3D"m_-40376707845958=
+73755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;v=
+alue&quot; : &quot;true&quot;</div><div><span class=3D"m_-40376707845958737=
+55gmail-Apple-tab-span" style=3D"white-space:pre-wrap">		</span>},</div><di=
+v><span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white=
+-space:pre-wrap">	</span>{</div><div><span class=3D"m_-4037670784595873755g=
+mail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quot;sourceC=
+ode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=3D"m_-40376707845=
+95873755gmail-Apple-tab-span" style=3D"white-space:pre-wrap">			</span>&quo=
+t;name&quot; : &quot;payment.reconciliation.<wbr>enabled&quot;,</div><div><=
+span class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-sp=
+ace:pre-wrap">			</span>&quot;value&quot; : &quot;false&quot;</div><div><sp=
+an class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-spac=
+e:pre-wrap">		</span>}</div><div><span class=3D"m_-4037670784595873755gmail=
+-Apple-tab-span" style=3D"white-space:pre-wrap">		</span>]</div><div><span =
+class=3D"m_-4037670784595873755gmail-Apple-tab-span" style=3D"white-space:p=
+re-wrap">		</span>}</div><div><span class=3D"m_-4037670784595873755gmail-Ap=
+ple-tab-span" style=3D"white-space:pre-wrap">		</span>}})</div></div>
+</blockquote></div><br></div>
+
+--001a113cf22424b2b805474db5f3--

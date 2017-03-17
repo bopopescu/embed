@@ -1,0 +1,76 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1353315qgu;
+        Tue, 14 Feb 2017 00:49:49 -0800 (PST)
+X-Received: by 10.202.84.68 with SMTP id i65mr14305246oib.193.1487062189309;
+        Tue, 14 Feb 2017 00:49:49 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x232.google.com (mail-oi0-x232.google.com. [2607:f8b0:4003:c06::232])
+        by mx.google.com with ESMTPS id y3si5957679oie.191.2017.02.14.00.49.49
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Feb 2017 00:49:49 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::232 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::232 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x232.google.com with SMTP id u143so64311205oif.3
+        for <digvijay@unicommerce.com>; Tue, 14 Feb 2017 00:49:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=URl5mLxwavOmYd9VCtCYlsQJwWkxoheQ/ecL9AT657Y=;
+        b=tqZOQTvVk4/e0ETxdRH8b6XaNXRVJ/K7c09NehsHvad2U25SGl42ngkxuo8D1Dr8PL
+         lVNT/lFWnH0bn6Z41u1t62SyJNy/V/VD1W0OFrwfgwGsqV5djEry3VQk1EwbiaTV8kNX
+         KX8UzR4BaI51aEjfsChJIt6gfGJXRHRigmzGcvAd4TBTjmbm85OJ1tCwoj6kK8nMwMt8
+         4CJzmZF2GKzIKzxhJZ8iujRG93M3JBPFasZvcrMRe4PA6PThb86zy86SnbSd3kvRDxoX
+         HTTgoCBBEL4XveBZjH0F2c/Cny/V9AivWbZmLXTytVFkO6fXmd+H4c/YJCU7BB8LQpu6
+         JZBg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=URl5mLxwavOmYd9VCtCYlsQJwWkxoheQ/ecL9AT657Y=;
+        b=KcIwAsatAabDRgD9v8gPfgh1FM72le2TbePLzyhdRR6WI7TX5Xv/RuL4FeU1YLebPL
+         9BElPIktHajlpRFHNiO+coUT9phFYyw0HjRap3bePc0tCmCD4RwnPj5AF7qalBycDX0K
+         i6TWBMfNSQsTX8iudYg3wYARVhPfFjq5qEX7vjO+VMT+aZB9h5IRPkKTDelheO0RUe0j
+         TgaKVok0liFwKbOVhvQA7CLZ4RvU9ftT9q/WrksgCH7jXW3C+hfXL2KE+Iyl2PZXHUas
+         biY+pLGHLPYh4sZ6oVwKvGiMA841GzJA4yz3Uv4yT/7RuW5p82zCwVWskrV74Itvp1rr
+         70XQ==
+X-Gm-Message-State: AMke39m3kTF2zIRcwwo2RoYf2p1b7E5tYck5tU7JPx/bY4cQfO9ROSwl4Fkgvku6gvewtJxaSO2JGiMbDK4EMA==
+X-Received: by 10.202.79.138 with SMTP id d132mr13543455oib.169.1487062188760;
+ Tue, 14 Feb 2017 00:49:48 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.50.225 with HTTP; Tue, 14 Feb 2017 00:49:48 -0800 (PST)
+In-Reply-To: <CAJF3soq+ZRb2je+cbVZib_+pFuSzBeNtj1Fddz52BvWRRp7_5g@mail.gmail.com>
+References: <CAJF3soq+ZRb2je+cbVZib_+pFuSzBeNtj1Fddz52BvWRRp7_5g@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Tue, 14 Feb 2017 14:19:48 +0530
+Message-ID: <CA+zaFGhBZgQcYpgf=xMDw+GevoqTCMGKHHY+2o2tzW1D5CU2Vw@mail.gmail.com>
+Subject: Re: Queries PAYTM+SC CatSyncPreprocessor
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113dca1485356d054879a577
+
+--001a113dca1485356d054879a577
+Content-Type: text/plain; charset=UTF-8
+
+Done
+
+On Tue, Feb 14, 2017 at 11:32 AM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+>
+>
+
+--001a113dca1485356d054879a577
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done</div><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Tue, Feb 14, 2017 at 11:32 AM, Digvijay Sharma <span dir=3D"lt=
+r">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvij=
+ay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">=
+<div dir=3D"ltr"><br></div>
+</blockquote></div><br></div>
+
+--001a113dca1485356d054879a577--

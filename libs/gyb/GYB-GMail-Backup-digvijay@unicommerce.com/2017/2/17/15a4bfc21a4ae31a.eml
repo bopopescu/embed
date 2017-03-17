@@ -1,0 +1,133 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Fri, 17 Feb 2017 04:11:39 -0800 (PST)
+In-Reply-To: <CAJF3sopEgaUMADwPMKmYnaymqZ-xNJiVk=jHjbgCnxR6LQseCA@mail.gmail.com>
+References: <CAJF3sopEgaUMADwPMKmYnaymqZ-xNJiVk=jHjbgCnxR6LQseCA@mail.gmail.com>
+Date: Fri, 17 Feb 2017 17:41:39 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sop582HwL9R-Jv=fAyhHDvtAB0d6k8ZD3OfMUPZz3Gaxgw@mail.gmail.com>
+Subject: Re:
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c11f58e333670548b8d0df
+
+--001a11c11f58e333670548b8d0df
+Content-Type: text/plain; charset=UTF-8
+
+    public static void main(String[] args) throws
+HttpTransportException, IOException, InterruptedException {
+//        System.out.println(new BigDecimal("0.00"));
+
+//        Process p = Runtime.getRuntime().exec("/bin/bash -c wget
+--quiet   --output-document   -
+'https://www.singlekart.com/wp-json/wc/v1/products?consumer_key=ck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&consumer_secret=cc9ec0eeb500af6b34bcec948ac6ee88396daf4cc&per_page=1&page=1'");
+//        p.waitFor();
+////        System.out.println(p.getOutputStream());
+//        String s = null;
+//        try {
+//            BufferedReader br = new BufferedReader(
+//                    new InputStreamReader(p.getInputStream()));
+//            while ((s = br.readLine()) != null) {
+//                System.out.println(s);
+//            }
+//        } catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        }
+//        System.out.println(new
+HttpSender(true).executeGet("https://www.singlekart.com/wp-json/wc/v1/products?consumer_key=ck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&consumer_secret=cs_c9ec0eeb500af6b34bcec948ac6ee88396daf4cc&per_page=1&page=1",null));
+        System.out.println(new
+HttpSender(true).executeGet("http://www.singlekart.com",null));
+
+
+//        System.out.println(dateToString(addToDate(getCurrentDate(),
+Calendar.DATE, -30),"yyyy-MM-ddTmm:HH:ssZ"));
+    }
+
+
+On Fri, Feb 17, 2017 at 5:39 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> sudo keytool -import -alias alias -keystore  /Library/Java/
+> JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/security/cacerts
+> -file ~/Downloads/u1.cer
+>
+>
+>
+>
+
+--001a11c11f58e333670548b8d0df
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public st=
+atic void </span>main(String[] args) <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">throws </span>HttpTransportException, IOException, Interrupte=
+dException {<br><span style=3D"color:rgb(128,128,128);font-style:italic">//=
+        System.out.println(new BigDecimal(&quot;0.00&quot;));<br></span><sp=
+an style=3D"color:rgb(128,128,128);font-style:italic"><br></span><span styl=
+e=3D"color:rgb(128,128,128);font-style:italic">//        Process p =3D Runt=
+ime.getRuntime().exec(&quot;/bin/bash -c wget --quiet   --output-document  =
+ - &#39;<a href=3D"https://www.singlekart.com/wp-json/wc/v1/products?consum=
+er_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&amp;consumer_secret=3D=
+cc9ec0eeb500af6b34bcec948ac6ee88396daf4cc&amp;per_page=3D1&amp;page=3D1">ht=
+tps://www.singlekart.com/wp-json/wc/v1/products?consumer_key=3Dck_ac07ede27=
+ebf2884d9a06dada0fb1eb3a6f19810&amp;consumer_secret=3Dcc9ec0eeb500af6b34bce=
+c948ac6ee88396daf4cc&amp;per_page=3D1&amp;page=3D1</a>&#39;&quot;);<br></sp=
+an><span style=3D"color:rgb(128,128,128);font-style:italic">//        p.wai=
+tFor();<br></span><span style=3D"color:rgb(128,128,128);font-style:italic">=
+////        System.out.println(p.getOutputStream());<br></span><span style=
+=3D"color:rgb(128,128,128);font-style:italic">//        String s =3D null;<=
+br></span><span style=3D"color:rgb(128,128,128);font-style:italic">//      =
+  try {<br></span><span style=3D"color:rgb(128,128,128);font-style:italic">=
+//            BufferedReader br =3D new BufferedReader(<br></span><span sty=
+le=3D"color:rgb(128,128,128);font-style:italic">//                    new I=
+nputStreamReader(p.getInputStream()));<br></span><span style=3D"color:rgb(1=
+28,128,128);font-style:italic">//            while ((s =3D br.readLine()) !=
+=3D null) {<br></span><span style=3D"color:rgb(128,128,128);font-style:ital=
+ic">//                System.out.println(s);<br></span><span style=3D"color=
+:rgb(128,128,128);font-style:italic">//            }<br></span><span style=
+=3D"color:rgb(128,128,128);font-style:italic">//        } catch (IOExceptio=
+n ioe) {<br></span><span style=3D"color:rgb(128,128,128);font-style:italic"=
+>//            ioe.printStackTrace();<br></span><span style=3D"color:rgb(12=
+8,128,128);font-style:italic">//        }<br></span><span style=3D"color:rg=
+b(128,128,128);font-style:italic">//        System.out.println(new HttpSend=
+er(true).executeGet(&quot;<a href=3D"https://www.singlekart.com/wp-json/wc/=
+v1/products?consumer_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&amp;=
+consumer_secret=3Dcs_c9ec0eeb500af6b34bcec948ac6ee88396daf4cc&amp;per_page=
+=3D1&amp;page=3D1">https://www.singlekart.com/wp-json/wc/v1/products?consum=
+er_key=3Dck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&amp;consumer_secret=3D=
+cs_c9ec0eeb500af6b34bcec948ac6ee88396daf4cc&amp;per_page=3D1&amp;page=3D1</=
+a>&quot;,null));<br></span><span style=3D"color:rgb(128,128,128);font-style=
+:italic">        </span>System.<span style=3D"color:rgb(102,14,122);font-we=
+ight:bold;font-style:italic">out</span>.println(<span style=3D"color:rgb(0,=
+0,128);font-weight:bold">new </span>HttpSender(<span style=3D"color:rgb(0,0=
+,128);font-weight:bold">true</span>).executeGet(<span style=3D"color:rgb(0,=
+128,0);font-weight:bold">&quot;<a href=3D"http://www.singlekart.com">http:/=
+/www.singlekart.com</a>&quot;</span>,<span style=3D"color:rgb(0,0,128);font=
+-weight:bold">null</span>));<br><br><br><span style=3D"color:rgb(128,128,12=
+8);font-style:italic">//        System.out.println(dateToString(addToDate(g=
+etCurrentDate(), Calendar.DATE, -30),&quot;yyyy-MM-ddTmm:HH:ssZ&quot;));<br=
+></span><span style=3D"color:rgb(128,128,128);font-style:italic">    </span=
+>}</pre></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On =
+Fri, Feb 17, 2017 at 5:39 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce=
+.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r">
+
+
+
+
+
+
+
+<p class=3D"m_-9200278520830816835gmail-p1"><span class=3D"m_-9200278520830=
+816835gmail-s1">sudo keytool -import -alias alias -keystore=C2=A0 /Library/=
+Java/<wbr>JavaVirtualMachines/jdk1.8.0_<wbr>112.jdk/Contents/Home/jre/lib/<=
+wbr>security/cacerts -file ~/Downloads/u1.cer</span></p><p class=3D"m_-9200=
+278520830816835gmail-p1"><span class=3D"m_-9200278520830816835gmail-s1"><br=
+></span></p><p class=3D"m_-9200278520830816835gmail-p1"><span class=3D"m_-9=
+200278520830816835gmail-s1"><br></span></p></div>
+</blockquote></div><br></div>
+
+--001a11c11f58e333670548b8d0df--

@@ -1,0 +1,426 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp7202250qgd;
+        Sun, 1 Jan 2017 23:30:17 -0800 (PST)
+X-Received: by 10.36.137.84 with SMTP id s81mr39303008itd.117.1483342217167;
+        Sun, 01 Jan 2017 23:30:17 -0800 (PST)
+Return-Path: <bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com>
+Received: from o1.email.splitwise.com (o1.email.splitwise.com. [50.31.54.10])
+        by mx.google.com with ESMTPS id z69si23542200ioz.60.2017.01.01.23.30.16
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 01 Jan 2017 23:30:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com designates 50.31.54.10 as permitted sender) client-ip=50.31.54.10;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@splitwise.com;
+       spf=pass (google.com: domain of bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com designates 50.31.54.10 as permitted sender) smtp.mailfrom=bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=splitwise.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=splitwise.com; 
+	h=from:reply-to:to:subject:mime-version:content-type:content-transfer-encoding:list-unsubscribe; 
+	s=smtpapi; bh=DziouXkrFL4wlbWrqNMsmKrlu74=; b=mkDelp+/9gL9AxirBT
+	cKQK1QFsZqfTn70IETlUo0beLEOQgEPdkmBLadPjm+ET+y0L8Z10/ij78wZO0BEX
+	8Pgv2Uu8G0NDfeN/4k9IXUf2y+N08e/QPU9V7wg3+WRB/Sb22okJ7+AFu7voBpVD
+	qUR0RGSfNOO5hjlwuwVtOC5Bg=
+Received: by filter1136p1mdw1.sendgrid.net with SMTP id filter1136p1mdw1-3868-586A0187-6A
+        2017-01-02 07:30:15.798826805 +0000 UTC
+Received: from splitwise.com (ec2-54-161-139-90.compute-1.amazonaws.com [54.161.139.90])
+	by ismtpd0004p1iad1.sendgrid.net (SG) with ESMTP id KcKlyKi5QeSQgsBSK1PMSQ
+	for <digvijay@unicommerce.com>; Mon, 02 Jan 2017 07:30:15.700 +0000 (UTC)
+Date: Mon, 02 Jan 2017 07:30:14 +0000
+From: Splitwise <hello@splitwise.com>
+Reply-To: ayush@unicommerce.com
+To: digvijay@unicommerce.com
+Message-ID: <586a0186c1097_414c3ffd3ecdf11020851@4708238f-bcff-4a4b-9f9b-f96db3d226ef.mail>
+Subject: 'Cab + lunch outing (7th december)' (=?UTF-8?Q?=E2=82=B91?=,072.00)
+  updated by Ayush
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_586a0186bfb14_414c3ffd3ecdf110207e8";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/suoL7t7PdOLwtMvGTxDAwHZy1dxZ7JhJAo6h
+ /7iBiWzk0MqNHqLJXyI/A1Fhz6NcJm2KDMi442+Vew37Hh0mxJH3GXMxMra1/YX+kLpmk0M4K2MOo8
+ OyDrsMe4ksHnqz0bMF3HVAp0/KRXQwuU9JdLWBO8X6c+ciWtrbmtPscW8aiCtB7s9Fh3OO/AklK2Ql
+ U=
+X-SG-ID: YDTqBOjidbCUo/ar1oAtZquLhrnP5+em0wWIKbLteQTI/qjxJ5VZXhQbJi/zK3lZkjKSZDUASI0Lgb
+ sX0xWZFOx8JORZfT4eGFrbqKqHrLo=
+List-Unsubscribe: <http://email.splitwise.com/asm/unsubscribe/?user_id=256585&data=ZvC1Xxerb0oOqmjCm75puzMhw-Gr0zgpfvcoR8C3gnUssDmlA1MZ7HHwgRQeSSLcsp8lT7V4A-CG_rkio9huh_8tPhGZZ9RE7HitEcLgmycGcxFUtCqCh0Sfws4D1xhiixXBfewX8XPnwv_AcYctTCzLOt_cOV2IqK_pT9_htbH_J_8WkirG1VNWMvTXiuh--0ON4Yicl6OIpT0ftFeYDBNhm0B0jPWxuAY2RMLwLQl1ibS76BYlgEOqiwH9bkpVOql-yF4cQWrs7X3_bkzfNKIhstUX4Kiw1UxQ6NHfdTeFrv0nP_Xz05okyjQ9ylMjpZYOU2XHWMRMvmelcNZPF4AY1fu_0cJN7lLOwyoTxAXNLfRZlBmoO5-fVVSoMCMOJOAsIMA6gHf82FuI2jxKrajpNKsLJSRzr1xco-2LqKr7Sj6biZocK8eMH1OHvPQ3Upd6qCGMVg1HeGR-JHeXYw==>, <mailto:unsubscribe@email.splitwise.com?subject=http://email.splitwise.com/asm/unsubscribe/*q*user_id=256585&data=ZvC1Xxerb0oOqmjCm75puzMhw-Gr0zgpfvcoR8C3gnUssDmlA1MZ7HHwgRQeSSLcsp8lT7V4A-CG_rkio9huh_8tPhGZZ9RE7HitEcLgmycGcxFUtCqCh0Sfws4D1xhiixXBfewX8XPnwv_AcYctTCzLOt_cOV2IqK_pT9_htbH_J_8WkirG1VNWMvTXiuh--0ON4Yicl6OIpT0ftFeYDBNhm0B0jPWxuAY2RMLwLQl1ibS76BYlgEOqiwH9bkpVOql-yF4cQWrs7X3_bkzfNKIhstUX4Kiw1UxQ6NHfdTeFrv0nP_Xz05okyjQ9ylMjpZYOU2XHWMRMvmelcNZPF4AY1fu_0cJN7lLOwyoTxAXNLfRZlBmoO5-fVVSoMCMOJOAsIMA6gHf82FuI2jxKrajpNKsLJSRzr1xco-2LqKr7Sj6biZocK8eMH1OHvPQ3Upd6qCGMVg1HeGR-JHeXYw==>
+
+----==_mimepart_586a0186bfb14_414c3ffd3ecdf110207e8
+content-type: text/plain; charset="UTF-8"
+content-transfer-encoding: quoted-printable
+
+https://secure.splitwise.com=0D
+=0D
+
+  Hey Digvijay!
+=20=20
+
+      Ayush just updated =E2=80=9CCab + lunch outing (7th december)=E2=80=
+=9D in the group =E2=80=9COffice money settlements=E2=80=9D.
+=20=20
+
+=20=20
+=20=20=20=20
+=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+            =C2=A0
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                    January  2, 2017
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                    Dining out
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+              Cab + lunch outing (7th december)
+              =C2=A0
+              Total: =E2=82=B91,072.00
+
+                You owe =E2=82=B9153.14
+
+
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+              View on Splitwise
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20
+            =C2=A0
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20
+=20=20=20=20
+=20=20
+
+  If you=E2=80=99re confused about this, just hit reply to send an email to=
+ Ayush and figure out what=E2=80=99s going on.
+=20=20
+  Have a great day! =E2=80=93The Splitwise Team
+
+
+
+=0D
+=0D
+Copyright =C2=A9 2016 Splitwise, all rights reserved.=0D
+=0D
+Click here http://email.splitwise.com/asm/unsubscribe/global/?user_id=3D256=
+585&data=3DssAU7F0X_MwQRfKNezK6BJrIyg5267vPhaiC8jtUv55CJi78KgJiUUeimHuENm9F=
+ovjN-dTpDTmf-CoHqj_C_YAvXlQFD_L2SFB3lMZfzf2BRz82UHEGdudSCY_ED-vk2Y78x7hWoib=
+vjD3nhjMl7ESY2m1yJ0YAXScj5CCxAhUcsMbtoYATUjJRemOxH7L17UmGqhk3nyp81zr2up4Zvg=
+LbxlroY-gyMAW0vSxwBaN3g0ENqaz9hKPSKZMoMIxuvqxw0sOykuAzurXJ8mH_d7FllYPXsdtL-=
+3NCO7tzmt0nHzsAjHFJRNTcfQtonYqoS2uoKDyo03f49Fn10J0DipKlYaoNV6iB74iqtR4t0jBs=
+r_YK8S1S1JDjeuwGYnQXuJTLEo_wop0gRq91Zq-3c-HgVcWlGITSNr7kgDCrwWH4_FQtOrHuPfy=
+G6a8ceU-qjBa0PrjKpZJjRB_KKAy25Zq6DwyJPc1dNTJ8aLHYJEE=3D to unsubscribe from=
+ all mail.=0D
+=0D
+150 Union St, Suite 606=0D
+=0D
+Providence, RI 02903=
+
+----==_mimepart_586a0186bfb14_414c3ffd3ecdf110207e8
+content-type: text/html; charset="UTF-8"
+content-transfer-encoding: quoted-printable
+
+<html><body><style type=3D"text/css">=0D
+  #outlook a{padding:0}body{width:100%!important;-webkit-text-size-adjust:n=
+one;margin:0;padding:0}img{border:0;font-size:14px;font-weight:700;height:a=
+uto;line-height:100%;outline:0;text-decoration:none;text-transform:capitali=
+ze}#backgroundTable{height:100%!important;margin:0;padding:0;width:100%!imp=
+ortant}#backgroundTable,body{background-color:#f3f3f3}#templateContainer{bo=
+rder:1px solid transparent}.h1,h1{color:#202020;display:block;font-family:"=
+Helvetica Neue",Helvetica,Arial,sans-serif;font-size:34px;font-weight:700;l=
+ine-height:100%;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:=
+0;text-align:left}.h2,h2{color:#202020;display:block;font-family:"Helvetica=
+ Neue",Helvetica,Arial,sans-serif;font-size:30px;font-weight:700;line-heigh=
+t:100%;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;text-al=
+ign:left}.h3,h3{color:#202020;display:block;font-family:"Helvetica Neue",He=
+lvetica,Arial,sans-serif;font-size:26px;font-weight:700;line-height:100%;ma=
+rgin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left}=
+.h4,h4{color:#202020;display:block;font-family:"Helvetica Neue",Helvetica,A=
+rial,sans-serif;font-size:22px;font-weight:700;line-height:100%;margin-top:=
+0;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left}#template=
+Preheader{background-color:transparent}.preheaderContent div{color:#505050;=
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;line=
+-height:100%;text-align:left}.preheaderContent div a:link,.preheaderContent=
+ div a:visited{color:#369;font-weight:400;text-decoration:underline}#templa=
+teHeader{background-color:#D8E2EA;border-bottom:0}.headerContent{color:#202=
+020;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:34px;=
+font-weight:700;line-height:100%;padding:0;text-align:center;vertical-align=
+:middle}.headerContent a:link,.headerContent a:visited{color:#369;font-weig=
+ht:400;text-decoration:underline}#headerImage{height:auto;max-width:600px!i=
+mportant}#templateContainer,.bodyContent{background-color:#fff}.bodyContent=
+ div{color:#505050;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;=
+font-size:14px;line-height:150%;text-align:left}.bodyContent div a:link,.bo=
+dyContent div a:visited{color:#369;font-weight:400;text-decoration:underlin=
+e}.bodyContent img{display:inline;height:auto}#templateFooter{background-co=
+lor:#fff;border-top:0}.footerContent div{color:#707070;font-family:"Helveti=
+ca Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:125%;text-al=
+ign:left}.footerContent div a:link,.footerContent div a:visited{color:#369;=
+font-weight:400;text-decoration:underline}.footerContent img{display:inline=
+}#social{background-color:#fff;border:0}#social div{text-align:center}#util=
+ity{background-color:#fff;border:0}#utility div{text-align:center}#monkeyRe=
+wards img{max-width:190px}=0D
+</style>=0D
+<center>=0D
+  <table border=3D"0" cellpadding=3D"20" cellspacing=3D"0" height=3D"100%" =
+id=3D"backgroundTable" style=3D"background-color: #f3f3f3" width=3D"100%">=
+=0D
+    <tbody>=0D
+      <tr>=0D
+        <td align=3D"center" valign=3D"top">=0D
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"tem=
+plateContainer" style=3D"background-color:transparent; border: 1px solid tr=
+ansparent" width=3D"600">=0D
+            <tbody>=0D
+              <tr>=0D
+                <td align=3D"center" valign=3D"top">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" i=
+d=3D"templateHeader" width=3D"600">=0D
+                    <tbody>=0D
+                      <tr>=0D
+                        <td class=3D"headerContent" style=3D"background: #5=
+bc5a7; color: #fff">=0D
+                          <a href=3D"http://email.splitwise.com/wf/click?up=
+n=3DaGLmPL7htUDYcFixDKEHcWJoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2=
+BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4K6j0KkGYFuQlZ1cZ74BC0iRGB-2BKMIO4irm=
+DQl79aeHcZPHXsloPImuiT2dpWZCp786EUEkghgyuLYWdnd7wDyuJ4wJUs-2FgOJdAd-2BsuihD=
+4am5XVjJuXrIltpiIH8nLCnzq6IQzfI0NoT87zIrma5ZUsjKDUgtzXfQgHVgdLfMzvtWPfbwrVv=
+x2fYk52MA9mQ9Nyc5tTrtig-2B03BPtNjA8uuC2TwrJ7KXaeIRpBOVkici-2BWh-2F-2F8UmVuS=
+wsBwsLXPpncUd6oGnXMFA5nWlp1Wa-2Bh8TVpMf7P5kU0uWH7-2B9h5lXO94qckc-2FM11KUIop=
+9Nco-3D"><img alt=3D"Splitwise" border=3D"0" id=3D"headerImage campaign-ico=
+n" mc:allowdesigner=3D"" mc:allowtext=3D"" mc:edit=3D"header_image" mc:labe=
+l=3D"header_image" src=3D"http://dx0qysuen8cbs.cloudfront.net/assets/fat_ra=
+bbit/email/slim_header.png" style=3D"width:600px; height:44px" title=3D"Spl=
+itwise" /></a></td>=0D
+                      </tr>=0D
+                    </tbody>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+              <tr>=0D
+                <td align=3D"center" valign=3D"top">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" i=
+d=3D"templateBody" style=3D"background-color: #fff" width=3D"600">=0D
+                    <tbody>=0D
+                      <tr>=0D
+                        <td class=3D"bodyContent" style=3D"color:#505050;fo=
+nt-size:14px;line-height:150%;text-align:left;" valign=3D"top">=0D
+                          <table border=3D"0" cellpadding=3D"20" cellspacin=
+g=3D"0" width=3D"100%">=0D
+                            <tbody>=0D
+                              <tr>=0D
+                                <td style=3D"border: 1px solid #ddd; border=
+-top: none" valign=3D"top">=0D
+                                  <div mc:edit=3D"std_content00" style=3D"p=
+adding-top: 1px">=0D
+                                   =0D
+                                  <div style=3D"font-size: 14px; line-heigh=
+t: 19px; color: #000; text-align: center">
+  <div style=3D"font-size: 18px; color: #000; text-align: center; margin-to=
+p: -3px">Hey Digvijay!</div>
+  <div style=3D"font-size: 14px; color: #000; text-align: center; margin-to=
+p: 5px">
+
+      <strong>Ayush</strong> just updated <strong>=E2=80=9CCab + lunch outi=
+ng (7th december)=E2=80=9D</strong> in the group <strong>=E2=80=9COffice mo=
+ney settlements=E2=80=9D</strong>.
+  </div>
+
+  <table cellspacing=3D"0" style=3D"margin: 20px 0; border-spacing: 0; bord=
+er-collapse: collapse; width: 350px; padding: 0 125px">
+    <tr>
+      <td style=3D"padding: 0 105px">
+        <table cellspacing=3D"0" style=3D"border-spacing: 0; border-collaps=
+e: collapse; width: 350px">
+          <tr bgcolor=3D"#faf9f4" style=3D"background-image: url(https://s3=
+.amazonaws.com/splitwise-assets/assets/email/receipt/border-top-6e6d53d8a4b=
+4265fb6ccbb9a04a4f7c2.png)" background=3D"https://s3.amazonaws.com/splitwis=
+e-assets/assets/email/receipt/border-top-6e6d53d8a4b4265fb6ccbb9a04a4f7c2.p=
+ng">
+            <td style=3D"width: 350px; height: 16px; line-height: 16px; pad=
+ding: 0; font-size: 1px" colspan=3D"1">&nbsp;</td>
+          </tr>
+          <tr bgcolor=3D"#faf9f4" style=3D"background-image: url(https://s3=
+.amazonaws.com/splitwise-assets/assets/email/receipt/filling-da2595f9186ffb=
+7f5bd7946fe6dd1433.png)" background=3D"https://s3.amazonaws.com/splitwise-a=
+ssets/assets/email/receipt/filling-da2595f9186ffb7f5bd7946fe6dd1433.png">
+            <td style=3D"padding: 0 10px">
+              <table style=3D"margin: 3px auto 10px; width: 330px">
+                <tr>
+                  <td style=3D"text-align: left; padding: 0 10px; color: #8=
+a887b; font-size: 12px">
+                    January  2, 2017
+                  </td>
+                  <td style=3D"text-align: right; padding: 0 10px; color: #=
+8a887b; font-size: 12px">
+                    Dining out
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr bgcolor=3D"#faf9f4" style=3D"background-image: url(https://s3=
+.amazonaws.com/splitwise-assets/assets/email/receipt/filling-da2595f9186ffb=
+7f5bd7946fe6dd1433.png)" background=3D"https://s3.amazonaws.com/splitwise-a=
+ssets/assets/email/receipt/filling-da2595f9186ffb7f5bd7946fe6dd1433.png">
+            <td style=3D"text-align: center; padding: 6px 10px 10px; font-w=
+eight: bold; font-size: 18px; text-decoration: none;" colspan=3D"1">
+              <a style=3D"font-size: 28px; font-weight: bold; text-align: c=
+enter; color: #000000; text-decoration: none;" href=3D"http://email.splitwi=
+se.com/wf/click?upn=3DaGLmPL7htUDYcFixDKEHcWJoNM7oG718lhK74KfsUsTf1QEEwewjK=
+StjuTCIpI9Gi5XFLKHAuON9OY7viguvVQ-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfU=
+mRF9p2Dtm4K6j0KkGYFuQlZ1cZ74BC0iRGB-2BKMIO4irmDQl79aeHcZPHXsloPImuiT2dpWZCp=
+786EUEkghgyuLYWdnd7wDy-2FIa7nSn2waezBAr6rLS9IT5cS2IWN3xM2A7ra5L-2FCsqLvtcRT=
+YLRoPsU6pLB9gVKu3Nr-2Fnw2HEuT1kTYo8QX4D95HLA6bb6LLRW2N8iwoqrhIVzOICDNhJCTCF=
+-2FSF1RNsp-2BTdho60hYjSlXwZVRJfcXgqIjJvKhFi4x2s-2FcBwIlSUxZUAWUSDyq96LYyT-2=
+FrbX04xq91lBZIrpeZwy4o10xqMNdAVA3d6PFPyTxSO-2FpA-3D">Cab + lunch outing (7t=
+h december)</a><br>
+              <div style=3D"height: 15px; line-height: 15px; text-decoratio=
+n: none; font-size: 0px">&nbsp;</div>
+              Total: =E2=82=B91,072.00<br>
+
+                <span style=3D"color: #ff5216">You owe =E2=82=B9153.14</spa=
+n>
+
+
+            </td>
+          </tr>
+          <tr bgcolor=3D"#faf9f4" style=3D"background-image: url(https://s3=
+.amazonaws.com/splitwise-assets/assets/email/receipt/filling-da2595f9186ffb=
+7f5bd7946fe6dd1433.png)" background=3D"https://s3.amazonaws.com/splitwise-a=
+ssets/assets/email/receipt/filling-da2595f9186ffb7f5bd7946fe6dd1433.png">
+            <td style=3D"text-align: center; padding: 13px 80px 18px; font-=
+weight: bold; font-size: 18px" colspan=3D"1">
+              <a style=3D"display:inline-block; width:100%; background-colo=
+r:#ff5216; text-decoration:none; color:#fff; font-size:18px; font-weight:60=
+0; text-align:center; padding:10px 0px 10px 0px; -webkit-border-radius:5px;=
+ -moz-border-radius:5px; border-radius:5px; border: 1px solid #c83400" href=
+=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDYcFixDKEHcWJoNM7oG=
+718lhK74KfsUsTf1QEEwewjKStjuTCIpI9Gi5XFLKHAuON9OY7viguvVQ-3D-3D_9Pbo-2BQtn9=
+sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4K6j0KkGYFuQlZ1cZ74BC0iRGB-2BKMIO4irmDQl79=
+aeHcZPHXsloPImuiT2dpWZCp786EUEkghgyuLYWdnd7wDyYU6TElB-2BjYcFZUrjrBB5uW5QP1s=
+hDTcQMoWq4vWsjZVzLclqYqfOjC8-2B4a5gUVPRLZo48rYygv0NqrzuBlilOKxdF77L9yyNME5F=
+5JoWj5LtywIB8Y-2B-2B-2BPWWHnUSwFHLi-2Bv98-2BvyQAvlXyqcSImiBHf2uDWdofq5nLMq1=
+mYp8qDA5ayiHqykaEvrZC5kPmJ2KolTmf5tmXt1rFQusTjBNH8IIZPPrFDrU0A-2BjpPOZ14-3D=
+">View on Splitwise</a>
+            </td>
+          </tr>
+          <tr bgcolor=3D"#faf9f4" style=3D"background-image: url(https://s3=
+.amazonaws.com/splitwise-assets/assets/email/receipt/border-bottom-84e94410=
+e017d9fe0bbbc836f2053244.png)" background=3D"https://s3.amazonaws.com/split=
+wise-assets/assets/email/receipt/border-bottom-84e94410e017d9fe0bbbc836f205=
+3244.png">
+            <td style=3D"width: 350px; height: 17px; line-height: 17px; pad=
+ding: 0; font-size: 1px" colspan=3D"1">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  If you=E2=80=99re confused about this, just hit reply to send an email to=
+ Ayush and figure out what=E2=80=99s going on.
+  <br>
+  Have a great day! <span style=3D"color: #999">&ndash;The Splitwise Team</=
+span>
+
+</div>
+=0D
+=0D
+                                  </div>=0D
+                                </td>=0D
+                              </tr>=0D
+                            </tbody>=0D
+                          </table>=0D
+                        </td>=0D
+                      </tr>=0D
+                    </tbody>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+              <tr>=0D
+                <td align=3D"center" valign=3D"top">=0D
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" i=
+d=3D"templateFooter" width=3D"600">=0D
+                    <tbody>=0D
+                      <tr>=0D
+                        <td class=3D"footerContent" style=3D"background: #f=
+3f3f3; color:#707070;font-size:11px;line-height:125%;text-align:left;" vali=
+gn=3D"top">=0D
+                          <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border: 1px solid transparent" width=3D"100%">=0D
+                            <tbody>=0D
+                              <tr>=0D
+                                <td valign=3D"top" width=3D"310">=0D
+                                  <div mc:edit=3D"std_footer" style=3D"colo=
+r: #999999; font-size: 11px; line-height: 15px">=0D
+                                    <br />=0D
+                                    Copyright &copy; 2016 Splitwise, all ri=
+ghts reserved.<br />=0D
+                                    <a href=3D"http://email.splitwise.com/a=
+sm/unsubscribe/global/?user_id=3D256585&data=3DssAU7F0X_MwQRfKNezK6BJrIyg52=
+67vPhaiC8jtUv55CJi78KgJiUUeimHuENm9FovjN-dTpDTmf-CoHqj_C_YAvXlQFD_L2SFB3lMZ=
+fzf2BRz82UHEGdudSCY_ED-vk2Y78x7hWoibvjD3nhjMl7ESY2m1yJ0YAXScj5CCxAhUcsMbtoY=
+ATUjJRemOxH7L17UmGqhk3nyp81zr2up4ZvgLbxlroY-gyMAW0vSxwBaN3g0ENqaz9hKPSKZMoM=
+Ixuvqxw0sOykuAzurXJ8mH_d7FllYPXsdtL-3NCO7tzmt0nHzsAjHFJRNTcfQtonYqoS2uoKDyo=
+03f49Fn10J0DipKlYaoNV6iB74iqtR4t0jBsr_YK8S1S1JDjeuwGYnQXuJTLEo_wop0gRq91Zq-=
+3c-HgVcWlGITSNr7kgDCrwWH4_FQtOrHuPfyG6a8ceU-qjBa0PrjKpZJjRB_KKAy25Zq6DwyJPc=
+1dNTJ8aLHYJEE=3D" style=3D"color:#6B8299">Click here</a> to unsubscribe fro=
+m all mail.=0D
+                                  </div>=0D
+                                </td>=0D
+                                <td id=3D"monkeyRewards" valign=3D"top" wid=
+th=3D"230">=0D
+                                  <div mc:edit=3D"monkeyrewards" style=3D"t=
+ext-align:right;color:#999999; font-size: 11px; line-height: 15px">=0D
+                                    <br />=0D
+                                    150 Union St, Suite 606<br />=0D
+                                    Providence, RI 02903</div>=0D
+                                </td>=0D
+                              </tr>=0D
+                            </tbody>=0D
+                          </table>=0D
+                        </td>=0D
+                      </tr>=0D
+                    </tbody>=0D
+                  </table>=0D
+                </td>=0D
+              </tr>=0D
+            </tbody>=0D
+          </table>=0D
+        </td>=0D
+      </tr>=0D
+    </tbody>=0D
+  </table>=0D
+  <p>=0D
+    &nbsp;=0D
+  </p>=0D
+</center>=0D
+
+<img src=3D"http://email.splitwise.com/wf/open?upn=3D9Pbo-2BQtn9sw9Z4UL8nTE=
+WPoOoyKOsUHfUmRF9p2Dtm4K6j0KkGYFuQlZ1cZ74BC0iRGB-2BKMIO4irmDQl79aeHcZPHXslo=
+PImuiT2dpWZCp786EUEkghgyuLYWdnd7wDy1XuYJnjyNABfLWU5FuZtgc1PKX-2FtUoSaupDjek=
+shtzlMJtGIg1olC9c29Lzx9Zl2D8dnoFrRpnYElM5F9F2Gl7kgaG-2BKytl3SV16BoEVTE5QXsm=
+L1yZ0oLDXzbFLgxZuFGIR8Io3MnlEJQ3sQqq-2FQcDouedhBIJmRYw1-2BpWLVS8pbNJYDN-2FS=
+MmG4-2FS7RChTjnw0XFBIGRUwSGwN-2BZ4LakHWn07z6Fs15NLim3qJzsQU-3D" alt=3D"" wi=
+dth=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1p=
+x !important;border-width:0 !important;margin-top:0 !important;margin-botto=
+m:0 !important;margin-right:0 !important;margin-left:0 !important;padding-t=
+op:0 !important;padding-bottom:0 !important;padding-right:0 !important;padd=
+ing-left:0 !important;"/>
+</body></html>
+
+
+----==_mimepart_586a0186bfb14_414c3ffd3ecdf110207e8--

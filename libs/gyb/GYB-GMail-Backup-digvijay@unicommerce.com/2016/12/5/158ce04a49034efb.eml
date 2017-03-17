@@ -1,0 +1,142 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1318921qgd;
+        Mon, 5 Dec 2016 00:06:00 -0800 (PST)
+X-Received: by 10.129.168.131 with SMTP id f125mr62949142ywh.215.1480925160916;
+        Mon, 05 Dec 2016 00:06:00 -0800 (PST)
+Return-Path: <bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com>
+Received: from mail135-15.atl141.mandrillapp.com (mail135-15.atl141.mandrillapp.com. [198.2.135.15])
+        by mx.google.com with ESMTPS id u1si4188644ybf.159.2016.12.05.00.06.00
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Dec 2016 00:06:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com designates 198.2.135.15 as permitted sender) client-ip=198.2.135.15;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.unicommerce.com;
+       dkim=pass header.i=@mandrillapp.com;
+       spf=pass (google.com: domain of bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com designates 198.2.135.15 as permitted sender) smtp.mailfrom=bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=e.unicommerce.com;
+ h=From:Subject:Reply-To:To:Message-Id:Date:MIME-Version:Content-Type; i=noreply@e.unicommerce.com;
+ bh=h2M134oksZ1GRJaRyDqBNbUdv4I=;
+ b=lS0JLjcQzvPHdbbO9ybVWR6CIy8T9CFstmwlMd3ScmgLz0mYCZLgMMLPnfKt68WyPf45MKU5m3OX
+   xWW0Uc87o1q4QE2je0YHLyi6RYVHVkQFEZci7OJ3rg5KyEaB6/VaUUPTFRfloB0ov1Hty9+bB7aW
+   yVpacxu1b66JAD4jDZg=
+Received: from pmta03.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail135-15.atl141.mandrillapp.com id h8kfug1sau8d for <digvijay@unicommerce.com>; Mon, 5 Dec 2016 08:06:00 +0000 (envelope-from <bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1480925123; h=From : 
+ Subject : Reply-To : To : Message-Id : Date : MIME-Version : 
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=qbQkSRaDzP8bSdDQui1LQ0aroP6BBSs/bf8e6Hjlhjc=; 
+ b=FLnaqVcOwMk/QZYSUdP6IFJ2a6uaYa2kcfgJlvEfoiG0dG+zmsP/l4BQprCuuCunN7sliS
+ l0Zc1d0VOL6vQ9jXMDYFkl/ZojNYhui3PczT89r8345+fE75CyPfjZPFEJW6BXCHbn/dbshQ
+ 1AAlylOb6g9x3LT3icYI339mu50+Y=
+From: Unicommerce <noreply@e.unicommerce.com>
+Subject: Welcome to Uniware!
+Return-Path: <bounce-md_30242679.58451fc3.v1-d0bf0df473c94ce49809e04d9edac1d1@mandrillapp.com>
+Received: from [54.169.119.113] by mandrillapp.com id d0bf0df473c94ce49809e04d9edac1d1; Mon, 05 Dec 2016 08:05:23 +0000
+Reply-To: <noreply@e.unicommerce.com>
+To: <digvijay@unicommerce.com>
+Message-Id: <1682920622.1428902.1480925160222.JavaMail.root@activemq1.unicommerce.infra>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30242679.d0bf0df473c94ce49809e04d9edac1d1
+X-Mandrill-User: md_30242679
+Date: Mon, 05 Dec 2016 08:05:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-269_0dtvVKp5GFpNwzAfog"
+
+--_av-269_0dtvVKp5GFpNwzAfog
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+    Untitled Document                         *New Account Created*   Hi
+Digvijay Sharma,   Your account has been created in Unicommerce with
+following credentials: 
+
+ *Username* : digvijay@unicommerce.com 
+    Click the button below to verify and login to system.
+       *Verify digvijay@unicommerce.com*
+<https://auth.unicommerce.com/resetpassword?token=36343639363737363639366136313739343037353665363936333666366436643635373236333635326536333666366433613331333433383331333733383339333133363330333033373339336133363331363436313330333333393332333436313339333836323333333733363636333433323334363233393332333533343333333636333633333533323339>
+          Thanks,   Team Unicommerce
+--_av-269_0dtvVKp5GFpNwzAfog
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+        body {margin: 0; padding: 0; min-width: 100%!important;}
+    </style>
+</head>
+
+<body bgcolor="#eeeeee">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#eeeeee" style="background-color:#eeeeee; padding-top:30px; padding-bottom:30px; table-layout:fixed;">
+    <tr>
+        <td width="100%" align="center" bgcolor="#eeeeee" style="background-color:#eeeeee">
+            <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top">
+                        <table width="540" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                            <tr>
+                                <td>&nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><img src="https://uniauth.ucdn.in/img/images/emailVerificationTopbar.png" alt="Uniware" width="600" height="45" align="left"></td>
+                </tr>
+                <tr>
+                    <td valign="top"><table width="540" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                        <tr>
+                            <td align="left" style="font-size:18px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-top:30px;"><b>New Account Created</b></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-right:30px; padding-top:20px; color:#333333;">Hi Digvijay Sharma,</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-right:30px; padding-top:5px; color:#333333;">Your account has been created in Unicommerce with following credentials: <br /><br />
+                                <b>Username</b> : digvijay@unicommerce.com <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-right:30px; padding-top:20px; padding-bottom:10px; color:#333333;">Click the button below to verify and login to system.<br />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="font-size:16px; padding:10px 10px 10px 40px; border-color:#CCC; border-radius:5px; color:white; background:#6699FF; text-align:center;"><a target="_blank" href="https://auth.unicommerce.com/resetpassword?token=36343639363737363639366136313739343037353665363936333666366436643635373236333635326536333666366433613331333433383331333733383339333133363330333033373339336133363331363436313330333333393332333436313339333836323333333733363636333433323334363233393332333533343333333636333633333533323339"><b>Verify digvijay@unicommerce.com</b></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top:10px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-top:20px; color:#333333;">Thanks,</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-top:5px; color:#333333;">Team Unicommerce</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px; font-family:Arial, Helvetica, sans-serif; padding-left:30px; padding-right:30px; padding-top:10px; color:#333333;">&nbsp;</td>
+                        </tr>
+
+                    </table></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<img src="http://mandrillapp.com/track/open.php?u=30242679&id=d0bf0df473c94ce49809e04d9edac1d1" height="1" width="1"></body>
+</html>
+<div class="C1" />
+--_av-269_0dtvVKp5GFpNwzAfog--
+

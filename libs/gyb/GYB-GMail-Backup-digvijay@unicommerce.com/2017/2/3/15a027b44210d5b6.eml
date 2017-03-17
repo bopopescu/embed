@@ -1,0 +1,122 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp416548qgu;
+        Thu, 2 Feb 2017 21:38:37 -0800 (PST)
+X-Received: by 10.202.86.15 with SMTP id k15mr6337349oib.212.1486100317673;
+        Thu, 02 Feb 2017 21:38:37 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x229.google.com (mail-oi0-x229.google.com. [2607:f8b0:4003:c06::229])
+        by mx.google.com with ESMTPS id d53si10402652otd.87.2017.02.02.21.38.37
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 02 Feb 2017 21:38:37 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x229.google.com with SMTP id j15so5580727oih.2
+        for <digvijay@unicommerce.com>; Thu, 02 Feb 2017 21:38:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=Dh7pWUgydqNb4H7oC2VKvLbcQ0H3w5J5H4cSMertdh8=;
+        b=OmyMC7TymDYEWY5EeQxmJQRC/v0VJViKRPTioBzng+S1NmgLmwbWivOa58sqVKWnEb
+         CZ84/ue/yZUk1IX/xuL309WhoL8W6hRIf872lEFLFubFQAmaZZp+dfKAkL2MP5F6MQz9
+         tcKp352tyN/aquPzBYCr96rm2rYwlM9BPdCAgsXsTtPC1VeTPZ0ELcjTQ7wYzgtH5DlF
+         CZ4bT3k3kClh4N8uwNRiNStdi+oo56J0qLEXML08GuhDz1QBOS70Ziy7o5bCWWxvWzJg
+         XeohG2AhG+oOBNmqqDD4idKzyYnYjBIwqC2rMXr+d70YC2mBjtmG+6jWSmQFpforVhAc
+         Df7w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=Dh7pWUgydqNb4H7oC2VKvLbcQ0H3w5J5H4cSMertdh8=;
+        b=Prw4iHFpFTk3+udX4iJq+329PvlS1zLOdP9nHZ2XeHcaaCpijRAa7uLZHNBu9kfal0
+         3E00Q+GQDvABVzZ/ISLISKBTQhuC53RtN6e2hCQIVAx+osdtrWRExYBIk0HDR+I5QOa/
+         X7RDefnw7jqftjw0imrZvKzkRa1XNVSvYvp63VAX6wfQi+tSo763C/thJGDXxsA0ZkCy
+         heMuro0M4s5mGYvZsnxnjhiBj3cidCC1DzCeFe987d3WO76EmZw9UQr4anaqcKSGfORi
+         8p09zbGWdzYSdH7Mo/dvsprtmNuzwP3FKxCZ5ggS12uKBB91nj1YHo2158W+/1zebFJ9
+         m5lQ==
+X-Gm-Message-State: AIkVDXL5jbE7JaPhabtMcjJLMS7mhMAlb+lfgOvYhRqDn2YdUjaOvk4IwkqfQWUERd3DOiNZu6lWbDQD501W5w==
+X-Received: by 10.202.219.9 with SMTP id s9mr6389205oig.88.1486100316879; Thu,
+ 02 Feb 2017 21:38:36 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Thu, 2 Feb 2017 21:38:36 -0800 (PST)
+In-Reply-To: <CAJF3sorpgSp7=ErGRUKLq6eRz-AivuvNqLbb-tKp+Ryx1Qn+cg@mail.gmail.com>
+References: <CAJF3sorgT+F+KHQfWNHPj0XgQL9d4-o3zuQmi_CuA2GPLkw+Yw@mail.gmail.com>
+ <CA+zaFGijGopKJT7erOCyBho=p+X0PL=pD41aYi6jfYf2p0P4dA@mail.gmail.com> <CAJF3sorpgSp7=ErGRUKLq6eRz-AivuvNqLbb-tKp+Ryx1Qn+cg@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Fri, 3 Feb 2017 11:08:36 +0530
+Message-ID: <CA+zaFGjjDvzcrM4hiBmxe+hHrYet0dBynzzTT5YWt2_3zK7Z4Q@mail.gmail.com>
+Subject: Re: Query
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113d3d2e7d20b6054799b189
+
+--001a113d3d2e7d20b6054799b189
+Content-Type: text/plain; charset=UTF-8
+
+Chalaani to hai but this is not the right way.
+
+On Fri, Feb 3, 2017 at 10:40 AM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Toh test kaise hoga agar table nhn banegi toh store kahan krenge warehouse
+> inventory ko
+>
+> On 03-Feb-2017 9:04 AM, "Sunny Agarwal" <sunny@unicommerce.com> wrote:
+>
+>> no
+>>
+>> On Thu, Feb 2, 2017 at 7:37 PM, Digvijay Sharma <digvijay@unicommerce.com
+>> > wrote:
+>>
+>>> Sir yeh query chalado ek bari stgenterprise1 pe :
+>>>
+>>> create table channel_warehouse_inventory (id int(10) unsigned not null
+>>> primary key auto_increment, tenant_id int(10) unsigned not null,
+>>> item_type_id int(10) unsigned not null, facility_id int(10) unsigned not
+>>> null, unfulfillable_quantity int(10) unsigned not null,
+>>> fulfillable_quantity int(10) unsigned not null, inbound_quantity int(10)
+>>> unsigned not null, reserved_quantity int(10) unsigned not null,
+>>> total_quantity int(10) unsigned not null, created datetime not null,
+>>> updated timestamp not null default current_timestamp on update
+>>> current_timestamp);
+>>>
+>>
+>>
+
+--001a113d3d2e7d20b6054799b189
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Chalaani to hai but this is not the right way.</div><div c=
+lass=3D"gmail_extra"><br><div class=3D"gmail_quote">On Fri, Feb 3, 2017 at =
+10:40 AM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@=
+unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> =
+wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bord=
+er-left:1px #ccc solid;padding-left:1ex"><p dir=3D"ltr">Toh test kaise hoga=
+ agar table nhn banegi toh store kahan krenge warehouse inventory ko</p><di=
+v class=3D"HOEnZb"><div class=3D"h5">
+<div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On 03-Feb-2017 9:=
+04 AM, &quot;Sunny Agarwal&quot; &lt;<a href=3D"mailto:sunny@unicommerce.co=
+m" target=3D"_blank">sunny@unicommerce.com</a>&gt; wrote:<br type=3D"attrib=
+ution"><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-=
+left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">no</div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Feb 2, 2017 at 7:37=
+ PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unico=
+mmerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote=
+:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div>Sir yeh query cha=
+lado ek bari stgenterprise1 pe :=C2=A0</div><div><br></div>create table cha=
+nnel_warehouse_inventory (id int(10) unsigned not null primary key auto_inc=
+rement, tenant_id int(10) unsigned not null, item_type_id int(10) unsigned =
+not null, facility_id int(10) unsigned not null, unfulfillable_quantity int=
+(10) unsigned not null, fulfillable_quantity int(10) unsigned not null, inb=
+ound_quantity int(10) unsigned not null, reserved_quantity int(10) unsigned=
+ not null, total_quantity int(10) unsigned not null, created datetime not n=
+ull, updated timestamp not null default current_timestamp on update current=
+_timestamp);<br></div>
+</blockquote></div><br></div>
+</blockquote></div></div>
+</div></div></blockquote></div><br></div>
+
+--001a113d3d2e7d20b6054799b189--

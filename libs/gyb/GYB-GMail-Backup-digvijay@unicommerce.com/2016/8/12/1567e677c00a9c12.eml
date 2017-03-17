@@ -1,0 +1,668 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp128214oic;
+        Fri, 12 Aug 2016 03:58:46 -0700 (PDT)
+X-Received: by 10.37.51.132 with SMTP id z126mr9236265ybz.2.1470999526566;
+        Fri, 12 Aug 2016 03:58:46 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yw0-x22f.google.com (mail-yw0-x22f.google.com. [2607:f8b0:4002:c05::22f])
+        by mx.google.com with ESMTPS id i7si1523584ywd.467.2016.08.12.03.58.46
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 12 Aug 2016 03:58:46 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c05::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yw0-x22f.google.com with SMTP id z8so13115568ywa.1
+        for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 03:58:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=qZwZ7vDlzLtal+e9en56YqnWFN03EF0Gyd2YZ/+0kkg=;
+        b=C2IhZ/NXNkSgFzwhjRI8qCWRNBADctxtskRiv/7Q1Oz9GmmLuYfN2iFPyhcOL8++dD
+         I29Ua7L6kEZxSEO1CwZGNXs9QftrfJAy+F0gX+LuvYU7GhdQsbk2LlyNCbgV9p8KlVU+
+         xXvp4exEOdM4+kwU/+X9+pMHImYwnLYUBX4Cq55C5R3r4jpeaucOjmvwHVkeK0kp67sS
+         Cv6Olm0VITpGCgjk/Ai2eOgXj4Eqg8OdvDTir0f/wQQ/x42Hvm3HMqPCjnHd+fjzAXwH
+         K/boVlNq+CzLxMi5zH0P9rZfJv5TPQ91a40d/wSaCPT+eBMpVqqHNzvdYPnXllzQ+fLI
+         TBTg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=qZwZ7vDlzLtal+e9en56YqnWFN03EF0Gyd2YZ/+0kkg=;
+        b=bPgaMbJ+bUH+NVNR9+yeU7jBClDCeuSILOW8KFpFB45qdyjIpUBkQ7Zi/aHN5pUTE9
+         843mbfofGOvqpsr7dZJodzkU/5igPeE9Ca4rnNAw1Mo4kp/Hx/1RzwUVd93tfRsAS8Zd
+         ZpGDV2/YYJQdcVFtCl5t20txSBhSSlbzSMiWRJ2Ac8QwCOztd1jcawEI7/mvUTgnEoMW
+         gs1WCXjMceG4L228CqYg/VRqwz1Zb48J4hUbsi2xZOTfWpIcePM7sX23vKlUSUN2JMa7
+         AEhR+/87E0RBv5s/+sI+FfggFKUXpFkIJqU2APpagHANP56QZ+/GVCZY4QRHAQEEyBEz
+         FOWw==
+X-Gm-Message-State: AEkoouvTrcQ/E6mRyRZKNZ1AaTSKrjttZCdDr5fLM0HEpL4/JEd30Gjc2jCLW+4VhLjk8P95mdZZh/gGtmWezg==
+X-Received: by 10.129.91.86 with SMTP id p83mr10749950ywb.148.1470999525754;
+ Fri, 12 Aug 2016 03:58:45 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.204.78 with HTTP; Fri, 12 Aug 2016 03:58:45 -0700 (PDT)
+In-Reply-To: <CAEvR4bRU+Ux06G4L3uGTaPzOARdP=auOHQt5PSE8a5i6CZyCow@mail.gmail.com>
+References: <56E6A39E-BF24-4180-B83E-729FCF12BC06@unicommerce.com> <CAEvR4bRU+Ux06G4L3uGTaPzOARdP=auOHQt5PSE8a5i6CZyCow@mail.gmail.com>
+From: karan Garg <karangarg@unicommerce.com>
+Date: Fri, 12 Aug 2016 16:28:45 +0530
+Message-ID: <CAG=LqmMQawM=mNsLDBB8uT-hJkXnpVFi+5t2jVV+WNwDqoCMcA@mail.gmail.com>
+Subject: Fwd: oboarding guide
+To: Digvijay Sharma <digvijay@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1148407e32cc560539ddc41b
+
+--001a1148407e32cc560539ddc41b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ----------
+From: Shipra Gupta <shipra@unicommerce.com>
+Date: Fri, Aug 12, 2016 at 4:05 PM
+Subject: Fwd: oboarding guide
+To: karan Garg <karangarg@unicommerce.com>
+
+
+
+---------- Forwarded message ----------
+From: Bhupinder Garg <bhupi@unicommerce.com>
+Date: Tue, Oct 13, 2015 at 6:06 PM
+Subject: oboarding guide
+To: shipra@unicommerce.com
+
+
+*New joinee onboarding*
+
+
+*welcome formalities*
+submit documents to hr
+get macbook
+get unicommerce email id
+
+connect to =E2=80=9Cunidemo=E2=80=9D network
+provide your mobile=E2=80=99s wifi mac address ti IT for whitelisting
+
+*software installation*
+get the software bundle =E2=80=98airdropped=E2=80=99 from one of your buddi=
+es or download
+the following
+
+   - intellij/eclipse or your favourite IDE. Contact your buddy for
+   enterprise keys of intellij :P
+   - install brew
+   - install xcode
+   - instal git
+   - mysql
+   - mongodb
+   - tomcat
+   - activemq
+   - zookeeper http://www.apache.org/dyn/closer.cgi/zookeeper/
+   - plug idea onboarding email
+
+
+ask for access to unicommerce repos in bitbucket from your buddy
+checkout:
+generate ssh keys for passwords git ops https://confluence.atlassi
+an.com/bitbucket/set-up-ssh-for-git-and-mercurial-on-mac-
+osx-linux-270827678.html
+
+email devops with your rss public key of your host to get access to
+prod/devo
+
+ssh bhupi@wormhole.unicommerce.com
+ssh2server <servername>
+
+unifier mvn clean install
+uniwarecommon mvn clean install
+unicware mvn clean package - war created, put in root.
+- deploy to cloud, enterprise
+
+maria db.
+replica: vikash/puneet
+
+http://it.unicommerce.com/nagios/
+
+
+get wormhole access from your buddy
+I <http://it.unicommerce.com/nagios/>t is a bastion host
+https://en.wikipedia.org/wiki/Bastion_host
+ssh worhmhole.unicommerce.com
+http://wormhole.unicommerce.com:9090/tenant
+
+monitoring
+new relic
+
+business monitoring/config management:
+TS
+
+hazelcast
+innodb
+
+
+ssh2server StgCloud1
+mysql -u root -p uniware
+
+
+server names:
+ssh2server  MongoCommon2
+mongo
+use uniwareConfig
+db.serverDetails.find()
+
+
+insert
+db.tenantProfile.insert({"_class" : "com.unifier.services.
+vo.TenantProfileVO", "tenantCode" : "Triveni", "accessUrl" : "
+bhupi.unicommerce.com", "tenantType" : "PROFESSIONAL", "username" : ""
+, "password" : "", "apiUsername" : "techsupport@unicommerce.com
+", "apiPassword" : "0d1815d16a29d69cf4f5dc993157147a", "
+licenseKey" : "DUMMY_LICENSE_KEY", "statusCode" : "ACTIVE",
+ "loginAccessGranted" : true, "accountStatus" : "WIP", "
+setupStatus" : "COMPLETE", "created" : ISODate("2014-04-
+09T11:52:48.366Z"), "updated" : ISODate("2014-04-09T11:52:48.366Z") })
+
+# mongo dump restore
+mongorestore -d uniware  ~/Downloads/mongo_data_dump/uniware
+mongorestore -d bhupi  ~/Downloads/mongo_data_dump/Triveni
+
+db.system.js.save( { "_id" : "decodeHex", "value" : function (hex) {var str
+=3D "";for (var i =3D 0; i < hex.length; i +=3D 2)str +=3D
+String.fromCharCode(parseInt(hex.substr(i, 2), 16));return str;} })
+
+
+
+
+
+stored procedure: call initTenant("reit");
+now @TENANT_ID and @FACILITY_ID will be set as one for reit tenant.
+mysql2all
+
+slog <SERVER NAME>
+tlog <TENANT CODE>
+
+
+*Command line for snapdealVOI uniware:*
+usr/bin/java
+-Duser.timezone=3DAsia/Kolkata
+-Djava.util.logging.config.file=3D/usr/local/apache-tomcat/con
+f/logging.properties
+-Djava.util.logging.manager=3Dorg.apache.juli.ClassLoaderLogManager
+-DAsyncLogger.ThreadNameStrategy=3DUNCACHED
+
+-Xms30G -Xmx50G -XX:MaxPermSize=3D256M
+-Xloggc:/usr/local/apache-tomcat/logs/gc.log
+-XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:-LoopUnswitching
+
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=3D6969
+-Dcom.sun.management.jmxremote.ssl=3Dfalse
+-Dcom.sun.management.jmxremote.authenticate=3Dfalse
+
+-Djava.endorsed.dirs=3D/usr/local/apache-tomcat/endorsed
+-classpath /usr/local/apache-tomcat/bin/bootstrap.jar:/usr/local/apache
+-tomcat/bin/tomcat-juli.jar
+-Dcatalina.base=3D/usr/local/apache-tomcat
+-Dcatalina.home=3D/usr/local/apache-tomcat
+-Djava.io.tmpdir=3D/usr/local/apache-tomcat/temp
+
+-Denv=3Dc1
+-DserverNames=3DSnapdealVOI
+
+-javaagent:/usr/local/apache-tomcat/UniwareInstrumentation-1
+.0-jar-with-dependencies.jar
+-javaagent:/usr/local/apache-tomcat/newrelic/newrelic.jar
+
+
+-D*elasticSearchServerUrl*=3Delasticsearch1.snapdeal.infra:9300
+-D*hazelcastMembers*=3Dapp1.snapdealvoi.snapdeal.infra,app2.
+snapdealvoi.snapdeal.infra,app3.snapdealvoi.snapdeal.infra,app4.snapdealvoi=
+.
+snapdeal.infra,app5.snapdealvoi.snapdeal.infra,app6.snapdealvoi.snapdeal.in=
+fra
+-DzookeeperConnectionTimeout=3D15000
+-DzookeeperSessionTimeout=3D60000
+-D*zookeeperUrl*=3Dzookeeper1.snapdeal.infra:2181,zookeeper2.
+snapdeal.infra:2181,zookeeper3.snapdeal.infra:2181
+-D*tenantSpecificMongoHosts*=3Dcommon1.mongo.snapdeal.infra:2701
+7,common2.mongo.snapdeal.infra:27017
+-D*commonMongoHosts*=3Dcommon1.mongo.snapdeal.infra:27017,common
+2.mongo.snapdeal.infra:27017
+-D*activeMQBrokerUrl*=3Dtcp://app1.activemq.snapdeal.infra:61616
+-DactiveMQBrokerUsername=3Dsnapdeal
+-DactiveMQBrokerPassword=3Dsnapdeal
+-D*solrServerUrl*=3Dhttp://solr1.unicommerce.infra:8983/solr
+
+org.apache.catalina.startup.Bootstrap
+
+
+
+
+--=20
+Regards,
+Karan Garg
+
+--001a1148407e32cc560539ddc41b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Shipra Gupta</b> <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:shipra@unicommerce.com">shipra@unicommerc=
+e.com</a>&gt;</span><br>Date: Fri, Aug 12, 2016 at 4:05 PM<br>Subject: Fwd:=
+ oboarding guide<br>To: karan Garg &lt;<a href=3D"mailto:karangarg@unicomme=
+rce.com">karangarg@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr"><br>=
+<div class=3D"gmail_quote">---------- Forwarded message ----------<br>From:=
+ <b class=3D"gmail_sendername">Bhupinder Garg</b> <span dir=3D"ltr">&lt;<a =
+href=3D"mailto:bhupi@unicommerce.com" target=3D"_blank">bhupi@unicommerce.c=
+om</a>&gt;</span><br>Date: Tue, Oct 13, 2015 at 6:06 PM<br>Subject: oboardi=
+ng guide<br>To: <a href=3D"mailto:shipra@unicommerce.com" target=3D"_blank"=
+>shipra@unicommerce.com</a><br><br><br><div style=3D"word-wrap:break-word">=
+<div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><b>New j=
+oinee onboarding</b></div><span style=3D"font-family:&#39;Helvetica Neue&#3=
+9;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+u>welcome formalities</u></div><span style=3D"font-family:&#39;Helvetica Ne=
+ue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+ubmit documents to hr</div><span style=3D"font-family:&#39;Helvetica Neue&#=
+39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">g=
+et macbook</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-si=
+ze:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">g=
+et unicommerce email id</div><span style=3D"font-family:&#39;Helvetica Neue=
+&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">c=
+onnect to =E2=80=9Cunidemo=E2=80=9D network</div><span style=3D"font-family=
+:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">p=
+rovide your mobile=E2=80=99s wifi mac address ti IT for whitelisting</div><=
+span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+u>software installation</u></div><div style=3D"font-family:&#39;Helvetica N=
+eue&#39;;font-size:14px">get the software bundle =E2=80=98airdropped=E2=80=
+=99 from one of your buddies or download the following</div><ul style=3D"fo=
+nt-family:&#39;Helvetica Neue&#39;;font-size:14px"><li>intellij/eclipse or =
+your favourite IDE. Contact your buddy for enterprise keys of intellij :P</=
+li><li>install brew</li><li>install xcode</li><li>instal git</li><li>mysql<=
+/li><li>mongodb</li><li>tomcat</li><li>activemq</li><li>zookeeper=C2=A0<a h=
+ref=3D"http://www.apache.org/dyn/closer.cgi/zookeeper/" target=3D"_blank">h=
+ttp://www.apache.or<wbr>g/dyn/closer.cgi/zookeeper/</a></li><li>plug idea o=
+nboarding email</li></ul><span style=3D"font-family:&#39;Helvetica Neue&#39=
+;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">a=
+sk for access to unicommerce repos in bitbucket from your buddy</div><span =
+style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">c=
+heckout:</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">g=
+enerate ssh keys for passwords git ops=C2=A0<a href=3D"https://confluence.a=
+tlassian.com/bitbucket/set-up-ssh-for-git-and-mercurial-on-mac-osx-linux-27=
+0827678.html" target=3D"_blank">https://confluence.atlassi<wbr>an.com/bitbu=
+cket/set-up-ssh-<wbr>for-git-and-mercurial-on-mac-<wbr>osx-linux-270827678.=
+html</a></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">e=
+mail devops with your=C2=A0rss public key of your host to get access to pro=
+d/devo</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:1=
+4px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+sh <a href=3D"mailto:bhupi@wormhole.unicommerce.com" target=3D"_blank">bhup=
+i@wormhole.unicommerce.com</a></div><span style=3D"font-family:&#39;Helveti=
+ca Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+sh2server &lt;servername&gt;</div><span style=3D"font-family:&#39;Helvetica=
+ Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">u=
+nifier=C2=A0mvn clean install</div><span style=3D"font-family:&#39;Helvetic=
+a Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">u=
+niwarecommon=C2=A0mvn clean install</div><span style=3D"font-family:&#39;He=
+lvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">u=
+nicware mvn clean package - war created, put in root.</div><span style=3D"f=
+ont-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+ deploy to cloud, enterprise</div><span style=3D"font-family:&#39;Helvetica=
+ Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+aria db.</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">r=
+eplica: vikash/puneet</div><span style=3D"font-family:&#39;Helvetica Neue&#=
+39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+a href=3D"http://it.unicommerce.com/nagios/" target=3D"_blank">http://it.un=
+icommerce.com/nagi<wbr>os/</a></div><span style=3D"font-family:&#39;Helveti=
+ca Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">g=
+et wormhole access from your buddy</div><span style=3D"font-family:&#39;Hel=
+vetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+a href=3D"http://it.unicommerce.com/nagios/" target=3D"_blank">I</a>t is a =
+bastion host=C2=A0<a href=3D"https://en.wikipedia.org/wiki/Bastion_host" ta=
+rget=3D"_blank">https://en.wikipedia.org/<wbr>wiki/Bastion_host</a></div><s=
+pan style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+sh <a href=3D"http://worhmhole.unicommerce.com" target=3D"_blank">worhmhole=
+.unicommerce.com</a></div><span style=3D"font-family:&#39;Helvetica Neue&#3=
+9;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+a href=3D"http://wormhole.unicommerce.com:9090/tenant" target=3D"_blank">ht=
+tp://wormhole.unicommerce.co<wbr>m:9090/tenant</a></div><span style=3D"font=
+-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+onitoring</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-siz=
+e:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">n=
+ew relic</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">b=
+usiness monitoring/config management:</div><span style=3D"font-family:&#39;=
+Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">T=
+S</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">h=
+azelcast</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">i=
+nnodb</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14=
+px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+sh2server StgCloud1</div><span style=3D"font-family:&#39;Helvetica Neue&#39=
+;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+ysql -u root -p uniware</div><span style=3D"font-family:&#39;Helvetica Neue=
+&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+erver names:</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-=
+size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+sh2server=C2=A0 MongoCommon2</div><span style=3D"font-family:&#39;Helvetica=
+ Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+ongo</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14p=
+x">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">u=
+se uniwareConfig</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;f=
+ont-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">d=
+b.serverDetails.find()</div><span style=3D"font-family:&#39;Helvetica Neue&=
+#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">i=
+nsert</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14=
+px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">d=
+b.tenantProfile.insert({&quot;_cla<wbr>ss&quot;=C2=A0:=C2=A0&quot;com.unifi=
+er.services.<wbr>vo.TenantProfileVO&quot;,=C2=A0&quot;<wbr>tenantCode&quot;=
+=C2=A0:=C2=A0&quot;Triveni&quot;,=C2=A0&quot;acce<wbr>ssUrl&quot;=C2=A0:=C2=
+=A0&quot;<a href=3D"http://bhupi.unicommerce.com" target=3D"_blank">bhupi.u=
+nicommerce.<wbr>com</a>&quot;,=C2=A0&quot;tenantType&quot;=C2=A0:=C2=A0&quo=
+t;<wbr>PROFESSIONAL&quot;,=C2=A0&quot;username&quot;=C2=A0:=C2=A0&quot;&quo=
+t;<wbr>,=C2=A0&quot;password&quot;=C2=A0:=C2=A0&quot;&quot;,=C2=A0&quot;api=
+Usernam<wbr>e&quot;=C2=A0:=C2=A0&quot;<a href=3D"mailto:techsupport@unicomm=
+erce.com" target=3D"_blank">techsupport@unicommerce.<wbr>com</a>&quot;,=C2=
+=A0&quot;apiPassword&quot;=C2=A0:=C2=A0&quot;0d1815d<wbr>16a29d69cf4f5dc993=
+157147a&quot;,=C2=A0&quot;<wbr>licenseKey&quot;=C2=A0:=C2=A0&quot;DUMMY_LIC=
+ENSE_<wbr>KEY&quot;,=C2=A0&quot;statusCode&quot;=C2=A0:=C2=A0&quot;ACTIVE&q=
+uot;,<wbr>=C2=A0&quot;loginAccessGranted&quot;=C2=A0:=C2=A0true,=C2=A0<wbr>=
+&quot;accountStatus&quot;=C2=A0:=C2=A0&quot;WIP&quot;,=C2=A0&quot;<wbr>setu=
+pStatus&quot;=C2=A0:=C2=A0&quot;COMPLETE&quot;,=C2=A0&quot;<wbr>created&quo=
+t;=C2=A0:=C2=A0ISODate(&quot;2014-04-<wbr>09T11:52:48.366Z&quot;),=C2=A0&qu=
+ot;updated&quot;=C2=A0<wbr>:=C2=A0ISODate(&quot;2014-04-09T11:52:<wbr>48.36=
+6Z&quot;)=C2=A0})</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;=
+font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">#=
+ mongo dump restore</div><span style=3D"font-family:&#39;Helvetica Neue&#39=
+;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+ongorestore -d uniware=C2=A0 ~/Downloads/mongo_data_dump/un<wbr>iware</div>=
+<span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+ongorestore -d bhupi=C2=A0 ~/Downloads/mongo_data_dump/Tr<wbr>iveni</div><s=
+pan style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">d=
+b.system.js.save( { &quot;_id&quot; : &quot;decodeHex&quot;, &quot;value&qu=
+ot; : function (hex) {var str =3D &quot;&quot;;for (var i =3D 0; i &lt; hex=
+.length; i +=3D 2)str +=3D String.fromCharCode(parseInt(h<wbr>ex.substr(i, =
+2), 16));return str;} })</div><span style=3D"font-family:&#39;Helvetica Neu=
+e&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+tored procedure: call initTenant(&quot;reit&quot;);</div><span style=3D"fon=
+t-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">n=
+ow @TENANT_ID and @FACILITY_ID will be set as one for reit tenant.</div><sp=
+an style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">m=
+ysql2all</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size=
+:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">s=
+log &lt;SERVER NAME&gt;</div><span style=3D"font-family:&#39;Helvetica Neue=
+&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">t=
+log &lt;TENANT CODE&gt;</div><span style=3D"font-family:&#39;Helvetica Neue=
+&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+u>Command line for snapdealVOI uniware:</u></div><span style=3D"font-family=
+:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">u=
+sr/bin/java</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-s=
+ize:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Duser.timezone=3DAsia/Kolkata=C2=A0=C2=A0</div><span style=3D"font-family:&=
+#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Djava.util.logging.config.fil<wbr>e=3D/usr/local/apache-tomcat/con<wbr>f/lo=
+gging.properties</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;f=
+ont-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Djava.util.logging.manager=3Dor<wbr>g.apache.juli.ClassLoaderLogMa<wbr>nage=
+r</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+DAsyncLogger.ThreadNameStrate<wbr>gy=3DUNCACHED</div><span style=3D"font-fa=
+mily:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Xms30G -Xmx50G -XX:MaxPermSize=3D256M</div><span style=3D"font-family:&#39;=
+Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+<div>
+<div>-Xloggc:/usr/local/apache-tomc<wbr>at/logs/gc.log</div>
+<div>-XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:-LoopUnswitching</div>
+</div>
+</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Dcom.sun.management.jmxremote<wbr>=C2=A0</div><span style=3D"font-family:&#=
+39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+<div>-Dcom.sun.management.jmxremote<wbr>.port=3D6969</div>
+<div>-Dcom.sun.management.jmxremote<wbr>.ssl=3Dfalse</div>
+<div>-Dcom.sun.management.jmxremote<wbr>.authenticate=3Dfalse</div>
+</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+<div>-Djava.endorsed.dirs=3D/usr/loca<wbr>l/apache-tomcat/endorsed</div>
+<div>-classpath /usr/local/apache-tomcat/bin/b<wbr>ootstrap.jar:/usr/local/=
+apache<wbr>-tomcat/bin/tomcat-juli.jar</div>
+<div>-Dcatalina.base=3D/usr/local/apa<wbr>che-tomcat</div>
+<div>-Dcatalina.home=3D/usr/local/apa<wbr>che-tomcat</div>
+</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Djava.io.tmpdir=3D/usr/local/ap<wbr>ache-tomcat/temp</div><span style=3D"fo=
+nt-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+Denv=3Dc1</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-siz=
+e:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+DserverNames=3DSnapdealVOI</div><span style=3D"font-family:&#39;Helvetica N=
+eue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+javaagent:/usr/local/apache-t<wbr>omcat/UniwareInstrumentation-1<wbr>.0-jar=
+-with-dependencies.jar</div><span style=3D"font-family:&#39;Helvetica Neue&=
+#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+javaagent:/usr/local/apache-t<wbr>omcat/newrelic/newrelic.jar=C2=A0</div><s=
+pan style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+br></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>elasticSearchServerUrl</b>=3Delast<wbr>icsearch1.snapdeal.infra:9300=C2=
+=A0</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px=
+">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>hazelcastMembers</b>=3Dapp1.snapde<wbr>alvoi.snapdeal.infra,app2.<wbr>s=
+napdealvoi.snapdeal.infra,<wbr>app3.snapdealvoi.snapdeal.<wbr>infra,app4.sn=
+apdealvoi.<wbr>snapdeal.infra,app5.<wbr>snapdealvoi.snapdeal.infra,<wbr>app=
+6.snapdealvoi.snapdeal.<wbr>infra -DzookeeperConnectionTimeout=3D1<wbr>5000=
+</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+DzookeeperSessionTimeout=3D6000<wbr>0</div><span style=3D"font-family:&#39;=
+Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>zookeeperUrl</b>=3Dzookeeper1.snap<wbr>deal.infra:2181,zookeeper2.<wbr>=
+snapdeal.infra:2181,<wbr>zookeeper3.snapdeal.infra:2181</div><span style=3D=
+"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>tenantSpecificMongoHosts</b>=3Dcom<wbr>mon1.mongo.snapdeal.infra:2701<w=
+br>7,common2.mongo.snapdeal.infra<wbr>:27017</div><span style=3D"font-famil=
+y:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>commonMongoHosts</b>=3Dcommon1.mon<wbr>go.snapdeal.infra:27017,common<w=
+br>2.mongo.snapdeal.infra:27017</div><span style=3D"font-family:&#39;Helvet=
+ica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>activeMQBrokerUrl</b>=3D<a>tcp://app1<wbr>.activemq.snapdeal.infra:6161=
+6</a></div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14=
+px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+DactiveMQBrokerUsername=3Dsnapd<wbr>eal</div><span style=3D"font-family:&#3=
+9;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+DactiveMQBrokerPassword=3Dsnapd<wbr>eal</div><span style=3D"font-family:&#3=
+9;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">-=
+D<b>solrServerUrl</b>=3D<a href=3D"http://solr1.unicommerce.infra:8983/solr=
+" target=3D"_blank">http://solr1.u<wbr>nicommerce.infra:8983/solr</a></div>=
+<span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px">=
+=C2=A0</div><span style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:1=
+4px">
+</span><div style=3D"font-family:&#39;Helvetica Neue&#39;;font-size:14px"><=
+a href=3D"http://org.apache.catalina.startup.Bo">org.apache.catalina.startu=
+p.Bo</a><wbr>otstrap</div></div></div><br></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=
+=3D"color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:r=
+gb(102,102,102)">Karan Garg</span><br></div></div>
+</div>
+
+--001a1148407e32cc560539ddc41b--

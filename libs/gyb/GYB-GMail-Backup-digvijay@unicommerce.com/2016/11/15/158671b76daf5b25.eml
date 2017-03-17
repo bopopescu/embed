@@ -1,0 +1,517 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1479775qge;
+        Tue, 15 Nov 2016 00:30:02 -0800 (PST)
+X-Received: by 10.55.4.134 with SMTP id 128mr20801425qke.281.1479198602805;
+        Tue, 15 Nov 2016 00:30:02 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qk0-x229.google.com (mail-qk0-x229.google.com. [2607:f8b0:400d:c09::229])
+        by mx.google.com with ESMTPS id d39si12051783qtf.148.2016.11.15.00.30.02
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 15 Nov 2016 00:30:02 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::229 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c09::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::229 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qk0-x229.google.com with SMTP id x190so126787796qkb.0
+        for <digvijay@unicommerce.com>; Tue, 15 Nov 2016 00:30:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=NABKgvdt8t+eQumEq+VJf7r643gLMGum2z41/cOE5ts=;
+        b=DYeRnuB2URhcs2JZFY/ka2vW/06RAZAG2dyCyTX5+EovDABn32SN0oG7GgXKhCp6+d
+         AARpm1Pt9fzoYDfdEbbUyNL9Txv/9Z0RjUh3TfQGy3hQkVEpuKxJBoZztDoBHnr8wPaJ
+         FHarlgihwwgwIpb8Vov50//NRWjX1raKEjv3QNvoAQjEcwy/nRQITHDbpM8gOorKKCDI
+         dfjY0mRuI+/+4ylO6cBmqjc31su8o0Gd/AqEmI+feyC9UD1pwbJrvrNfUIrdbs90RcUr
+         X99mJqP073yg/pVRIVkrDdTdmseqjX2l0p5nTaRCKEPwp2Hn8xLb/+JNQocIlqQI+8rF
+         rX5w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=NABKgvdt8t+eQumEq+VJf7r643gLMGum2z41/cOE5ts=;
+        b=OD5X9Qh9BrD35TQ8NTzqKxkHrvOQy18VMEFNYT1iiJFsoB6p51QkXalF8Sp+pfxAPO
+         1Gbw8f1j4j4iMPrpxgAORJhCYvMiMaMmNskt/whdw/5hH9nayssGouKb7nJH/3zPDsGI
+         AU+v0oYsIcDWntGX4XcMHRZNH57xbdKUldGQTngDXkC7/RKTE2GnqkEFPz+Nq13fhXW/
+         6y3QcB3nEXnQBgzKfgsEBfiCzZZYTAR2nBplVOYvmm34Mep95YB3HddoKm1USVqa3iRD
+         ygeD3GnyWtLsAz4sFNbDNopUx3M0+fh8bfyncE7C/Abnd6rYQavmFgEus3w/hYhMBJZw
+         kqHg==
+X-Gm-Message-State: ABUngvdovo94iIqM+rBiV9LGW0eyS4z6t4A/Z+tIPiWcg+XwwHc06ZKTA84fJv/aFh2nHwYzFcSmGuXWRuoqoA==
+X-Received: by 10.55.48.11 with SMTP id w11mr23446841qkw.109.1479198601890;
+ Tue, 15 Nov 2016 00:30:01 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.148.48 with HTTP; Tue, 15 Nov 2016 00:30:01 -0800 (PST)
+In-Reply-To: <CAMThih7WhuMV0=87CqQyNzCXxQE=HuJeGNCx04z93td-udJ4XQ@mail.gmail.com>
+References: <CAMuJ5=oCOuqF4euC-m=oKJGHegKoArV6GS_w6MruecFqUGj7DQ@mail.gmail.com>
+ <CAN32ob2eDOrJ=39P1U-XNq_SD_U3AeM9afKx7wXiuz6qv2Svtg@mail.gmail.com>
+ <CAMuJ5=pj-u-akQ8oADU6+RSS8bOmeDPdgvy2Z_LrF98toFGvOQ@mail.gmail.com>
+ <CAASAXwyFjR9zF5BjeLvjOatDnM89y4+2vsVHdqUQKNvgxgvw0Q@mail.gmail.com>
+ <CAOhZXUt5mV-wcc4c+TosVWMbp2cK4JL=U=x_Gxb=i7s2pkXFMg@mail.gmail.com>
+ <CAF+w_SHkUqaT=OrrK2vKqThDQ-Y-Ar+xTwWWXSPt1em8+LTc0g@mail.gmail.com>
+ <CAOkTFmiqC0YkzhGQa=UUrXSoKOd5nmDfcGdHaSgxHMipnR5Zgw@mail.gmail.com>
+ <CAPyw11YHJM8rOuOot_HMX6jwEQcHRsbyA_iQPB_z3bOOwffbSA@mail.gmail.com>
+ <CAB1KeyH+whxs1z8m8hsNYExA-nD=EnWrv5BaB8iQiKL2upLttg@mail.gmail.com>
+ <CALmT4vk_ydbfAehCCOXUwY=UtZAoOdayT6i28AK5aCgFL7uxUQ@mail.gmail.com>
+ <CAG=LqmO47kMKShCAOUXoTw8o3z+Gi6bfuzpwF33CG=tgF-wp7Q@mail.gmail.com> <CAMThih7WhuMV0=87CqQyNzCXxQE=HuJeGNCx04z93td-udJ4XQ@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Tue, 15 Nov 2016 14:00:01 +0530
+Message-ID: <CAFD_XHEg4z8+Be13LJgSi81GxcjZXHAjPjp5UyAFBF6VGCrszw@mail.gmail.com>
+Subject: Re: yamini farewell contri
+To: Ashish Bansal <ashish@unicommerce.com>
+Cc: karan Garg <karangarg@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Akshay Kochhar <akshay@unicommerce.com>, Rishu Goyal <rishu@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Rachit Sachdeva <rachit@unicommerce.com>, Ankit Bansal <ankit.bansal@unicommerce.com>, 
+	Ankur pratik <ankur.pratik@unicommerce.com>, Promil Bhardwaj <promil@unicommerce.com>, 
+	vikas goyal <vikas@unicommerce.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, Piyush Arora <piyush@unicommerce.com>, 
+	Sushant Majumdar <sushant@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Shipra Gupta <shipra@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, puneet <puneet@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Harsh Pal <harsh@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1146f09037ee30054152c384
+
+--001a1146f09037ee30054152c384
+Content-Type: text/plain; charset=UTF-8
+
+freecharge
+
+On Tue, Nov 15, 2016 at 1:01 PM, Ashish Bansal <ashish@unicommerce.com>
+wrote:
+
+> done on paytm
+>
+> Thanks  & Regards
+> Ashish Bansal
+> Quality Engineer
+> Unicommerce e solution
+> 7838040773
+>
+> ~ never back down !
+>
+> On Tue, Nov 15, 2016 at 12:44 PM, karan Garg <karangarg@unicommerce.com>
+> wrote:
+>
+>> Done on paytm
+>>
+>> On Tue, Nov 15, 2016 at 12:41 PM, Vani Verma <vani@unicommerce.com>
+>> wrote:
+>>
+>>> Done, bank a/c.
+>>>
+>>> On Tue, Nov 15, 2016 at 12:47 AM, Harsh Pal <harsh@unicommerce.com>
+>>> wrote:
+>>>
+>>>> Paytm.
+>>>>
+>>>> On Mon, Nov 14, 2016 at 10:42 AM Garima Arora <garima@unicommerce.com>
+>>>> wrote:
+>>>>
+>>>>> done on freecharge.
+>>>>>
+>>>>> Thanks and Regards
+>>>>> Garima Arora
+>>>>>
+>>>>> On Mon, Nov 14, 2016 at 10:34 AM, Akshay Kochhar <
+>>>>> akshay@unicommerce.com> wrote:
+>>>>>
+>>>>> done on freecharge
+>>>>>
+>>>>>
+>>>>> On Friday 11 November 2016, Rishu Goyal <rishu@unicommerce.com> wrote:
+>>>>>
+>>>>> done on freecharge
+>>>>>
+>>>>> On Fri, Nov 11, 2016 at 3:54 PM, Bhuvneshwar Kumar <
+>>>>> bhuvneshwar@unicommerce.com> wrote:
+>>>>>
+>>>>> sent on freecharge.
+>>>>>
+>>>>> On Fri, Nov 11, 2016 at 3:45 PM, Kumar Animesh <
+>>>>> animesh@unicommerce.com> wrote:
+>>>>>
+>>>>> sent on freecharge
+>>>>>
+>>>>> On Fri, Nov 11, 2016 at 2:48 PM Amit Dalal <amit.dalal@unicommerce.com>
+>>>>> wrote:
+>>>>>
+>>>>> + right karan
+>>>>>
+>>>>>
+>>>>> On Fri, Nov 11, 2016 at 10:11 AM Karan Gupta <karan@unicommerce.com>
+>>>>> wrote:
+>>>>>
+>>>>> Please exclude me from this chain mail
+>>>>>
+>>>>> Regards
+>>>>> Karan Gupta
+>>>>>
+>>>>> On Fri, Nov 11, 2016 at 10:06 AM, Amit Dalal <
+>>>>> amit.dalal@unicommerce.com> wrote:
+>>>>>
+>>>>> 19577/28 = 700
+>>>>>
+>>>>> bank transfer or paytm or freecharge.
+>>>>>
+>>>>> *Bank details:*
+>>>>> HDFC A/C Num: 12031050027117
+>>>>> Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,
+>>>>> State: HARYANA
+>>>>> District: GURGAON
+>>>>> Branch: GLOBAL BUSINESS PARK
+>>>>> IFSC Code: HDFC0001203
+>>>>> MICR Code: 110240182
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>> --
+>>>>> Thanks,
+>>>>> Bhuvneshwar Kumar
+>>>>> Unicommerce Esolutions Pvt. Ltd
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>> --
+>>>>>
+>>>>> Thanks & Regards
+>>>>>  Rishu
+>>>>>
+>>>>>
+>>>>>
+>>>>> --
+>>>>> -- Regards, Akshay Kochhar
+>>>>> Software Engineer
+>>>>> M:9999315765 <099993%2015765>
+>>>>> Unicommerce eSolutions Pvt. Ltd.
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>
+>>
+>>
+>> --
+>> Regards,
+>> Karan Garg
+>>
+>
+>
+
+--001a1146f09037ee30054152c384
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">freecharge</div><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">On Tue, Nov 15, 2016 at 1:01 PM, Ashish Bansal <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:ashish@unicommerce.com" target=3D"_blank">as=
+hish@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+"><div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:verdan=
+a,sans-serif">done on paytm</div></div><div class=3D"gmail_extra"><br clear=
+=3D"all"><div><div class=3D"m_6435104547848419701gmail_signature" data-smar=
+tmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div =
+dir=3D"ltr"><font face=3D"verdana, sans-serif">Thanks =C2=A0&amp; Regards</=
+font><div><font face=3D"verdana, sans-serif">Ashish Bansal=C2=A0</font></di=
+v><div><font face=3D"verdana, sans-serif">Quality Engineer=C2=A0</font></di=
+v><div><font face=3D"verdana, sans-serif">Unicommerce e solution=C2=A0</fon=
+t></div><div><font face=3D"verdana, sans-serif">7838040773</font></div><div=
+><font face=3D"verdana, sans-serif"><br></font></div><div><font face=3D"ver=
+dana, sans-serif">~ never back down !</font></div></div></div></div></div><=
+/div></div></div><div><div class=3D"h5">
+<br><div class=3D"gmail_quote">On Tue, Nov 15, 2016 at 12:44 PM, karan Garg=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:karangarg@unicommerce.com" target=
+=3D"_blank">karangarg@unicommerce.com</a>&gt;</span> wrote:<br><blockquote =
+class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid=
+;padding-left:1ex"><div dir=3D"ltr">Done on paytm</div><div class=3D"gmail_=
+extra"><div><div class=3D"m_6435104547848419701h5"><br><div class=3D"gmail_=
+quote">On Tue, Nov 15, 2016 at 12:41 PM, Vani Verma <span dir=3D"ltr">&lt;<=
+a href=3D"mailto:vani@unicommerce.com" target=3D"_blank">vani@unicommerce.c=
+om</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"marg=
+in:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"=
+>Done, bank a/c.</div><div class=3D"m_6435104547848419701m_1298968215485030=
+831HOEnZb"><div class=3D"m_6435104547848419701m_1298968215485030831h5"><div=
+ class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, Nov 15, 2016 =
+at 12:47 AM, Harsh Pal <span dir=3D"ltr">&lt;<a href=3D"mailto:harsh@unicom=
+merce.com" target=3D"_blank">harsh@unicommerce.com</a>&gt;</span> wrote:<br=
+><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1=
+px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Paytm.</div><div class=3D"=
+m_6435104547848419701m_1298968215485030831m_6726658684205997118HOEnZb"><div=
+ class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118h5=
+"><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Mon, Nov 14, 2016 at 1=
+0:42 AM Garima Arora &lt;<a href=3D"mailto:garima@unicommerce.com" target=
+=3D"_blank">garima@unicommerce.com</a>&gt; wrote:<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><div dir=3D"ltr" class=3D"m_6435104547848419701m_12989682154=
+85030831m_6726658684205997118m_2364277246838963861gmail_msg">done on freech=
+arge.<div class=3D"m_6435104547848419701m_1298968215485030831m_672665868420=
+5997118m_2364277246838963861gmail_msg"><br class=3D"m_6435104547848419701m_=
+1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"></d=
+iv><div class=3D"m_6435104547848419701m_1298968215485030831m_67266586842059=
+97118m_2364277246838963861gmail_msg">Thanks and Regards</div></div><div dir=
+=3D"ltr" class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205=
+997118m_2364277246838963861gmail_msg"><div class=3D"m_6435104547848419701m_=
+1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">Gar=
+ima Arora</div></div><div class=3D"gmail_extra m_6435104547848419701m_12989=
+68215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><br clas=
+s=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_23642=
+77246838963861gmail_msg"><div class=3D"gmail_quote m_6435104547848419701m_1=
+298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">On M=
+on, Nov 14, 2016 at 10:34 AM, Akshay Kochhar <span dir=3D"ltr" class=3D"m_6=
+435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246838=
+963861gmail_msg">&lt;<a href=3D"mailto:akshay@unicommerce.com" class=3D"m_6=
+435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246838=
+963861gmail_msg" target=3D"_blank">akshay@unicommerce.com</a>&gt;</span> wr=
+ote:<br class=3D"m_6435104547848419701m_1298968215485030831m_67266586842059=
+97118m_2364277246838963861gmail_msg"><blockquote class=3D"gmail_quote m_643=
+5104547848419701m_1298968215485030831m_6726658684205997118m_236427724683896=
+3861gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;paddin=
+g-left:1ex">done on freecharge<div class=3D"m_6435104547848419701m_12989682=
+15485030831m_6726658684205997118m_2364277246838963861m_-8637492333290443360=
+HOEnZb m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236=
+4277246838963861gmail_msg"><div class=3D"m_6435104547848419701m_12989682154=
+85030831m_6726658684205997118m_2364277246838963861m_-8637492333290443360h5 =
+m_6435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246=
+838963861gmail_msg"><br class=3D"m_6435104547848419701m_1298968215485030831=
+m_6726658684205997118m_2364277246838963861gmail_msg"><br class=3D"m_6435104=
+547848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861=
+gmail_msg">On Friday 11 November 2016, Rishu Goyal &lt;<a href=3D"mailto:ri=
+shu@unicommerce.com" class=3D"m_6435104547848419701m_1298968215485030831m_6=
+726658684205997118m_2364277246838963861gmail_msg" target=3D"_blank">rishu@u=
+nicommerce.com</a>&gt; wrote:<br class=3D"m_6435104547848419701m_1298968215=
+485030831m_6726658684205997118m_2364277246838963861gmail_msg"><blockquote c=
+lass=3D"gmail_quote m_6435104547848419701m_1298968215485030831m_67266586842=
+05997118m_2364277246838963861gmail_msg" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_6435104547=
+848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gma=
+il_msg"><div class=3D"gmail_default m_6435104547848419701m_1298968215485030=
+831m_6726658684205997118m_2364277246838963861gmail_msg" style=3D"color:rgb(=
+61,133,198)">done on freecharge<br class=3D"m_6435104547848419701m_12989682=
+15485030831m_6726658684205997118m_2364277246838963861gmail_msg"></div></div=
+><div class=3D"gmail_extra m_6435104547848419701m_1298968215485030831m_6726=
+658684205997118m_2364277246838963861gmail_msg"><br class=3D"m_6435104547848=
+419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_=
+msg"><div class=3D"gmail_quote m_6435104547848419701m_1298968215485030831m_=
+6726658684205997118m_2364277246838963861gmail_msg">On Fri, Nov 11, 2016 at =
+3:54 PM, Bhuvneshwar Kumar <span dir=3D"ltr" class=3D"m_6435104547848419701=
+m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">&=
+lt;<a class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997=
+118m_2364277246838963861gmail_msg">bhuvneshwar@unicommerce.com</a>&gt;</spa=
+n> wrote:<br class=3D"m_6435104547848419701m_1298968215485030831m_672665868=
+4205997118m_2364277246838963861gmail_msg"><blockquote class=3D"gmail_quote =
+m_6435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246=
+838963861gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
+adding-left:1ex"><div dir=3D"ltr" class=3D"m_6435104547848419701m_129896821=
+5485030831m_6726658684205997118m_2364277246838963861gmail_msg">sent on free=
+charge.</div><div class=3D"gmail_extra m_6435104547848419701m_1298968215485=
+030831m_6726658684205997118m_2364277246838963861gmail_msg"><div class=3D"m_=
+6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724683=
+8963861gmail_msg"><div class=3D"m_6435104547848419701m_1298968215485030831m=
+_6726658684205997118m_2364277246838963861gmail_msg"><br class=3D"m_64351045=
+47848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861g=
+mail_msg"><div class=3D"gmail_quote m_6435104547848419701m_1298968215485030=
+831m_6726658684205997118m_2364277246838963861gmail_msg">On Fri, Nov 11, 201=
+6 at 3:45 PM, Kumar Animesh <span dir=3D"ltr" class=3D"m_643510454784841970=
+1m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">=
+&lt;<a class=3D"m_6435104547848419701m_1298968215485030831m_672665868420599=
+7118m_2364277246838963861gmail_msg">animesh@unicommerce.com</a>&gt;</span> =
+wrote:<br class=3D"m_6435104547848419701m_1298968215485030831m_672665868420=
+5997118m_2364277246838963861gmail_msg"><blockquote class=3D"gmail_quote m_6=
+435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246838=
+963861gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr" class=3D"m_6435104547848419701m_129896821548=
+5030831m_6726658684205997118m_2364277246838963861gmail_msg">sent on freecha=
+rge</div><div class=3D"m_6435104547848419701m_1298968215485030831m_67266586=
+84205997118m_2364277246838963861gmail_msg"><div class=3D"m_6435104547848419=
+701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg=
+"><br class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997=
+118m_2364277246838963861gmail_msg"><div class=3D"gmail_quote m_643510454784=
+8419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail=
+_msg"><div dir=3D"ltr" class=3D"m_6435104547848419701m_1298968215485030831m=
+_6726658684205997118m_2364277246838963861gmail_msg">On Fri, Nov 11, 2016 at=
+ 2:48 PM Amit Dalal &lt;<a class=3D"m_6435104547848419701m_1298968215485030=
+831m_6726658684205997118m_2364277246838963861gmail_msg">amit.dalal@unicomme=
+rce.com</a>&gt; wrote:<br class=3D"m_6435104547848419701m_12989682154850308=
+31m_6726658684205997118m_2364277246838963861gmail_msg"></div><blockquote cl=
+ass=3D"gmail_quote m_6435104547848419701m_1298968215485030831m_672665868420=
+5997118m_2364277246838963861gmail_msg" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_64351045478=
+48419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmai=
+l_msg">+ right karan</div><div dir=3D"ltr" class=3D"m_6435104547848419701m_=
+1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><br=
+ class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_=
+2364277246838963861gmail_msg"><br class=3D"m_6435104547848419701m_129896821=
+5485030831m_6726658684205997118m_2364277246838963861gmail_msg"><div class=
+=3D"gmail_quote m_6435104547848419701m_1298968215485030831m_672665868420599=
+7118m_2364277246838963861gmail_msg"><div dir=3D"ltr" class=3D"m_64351045478=
+48419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmai=
+l_msg">On Fri, Nov 11, 2016 at 10:11 AM Karan Gupta &lt;<a class=3D"m_64351=
+04547848419701m_1298968215485030831m_6726658684205997118m_23642772468389638=
+61gmail_msg">karan@unicommerce.com</a>&gt; wrote:<br class=3D"m_64351045478=
+48419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmai=
+l_msg"></div><blockquote class=3D"gmail_quote m_6435104547848419701m_129896=
+8215485030831m_6726658684205997118m_2364277246838963861gmail_msg" style=3D"=
+margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"=
+ltr" class=3D"m_6435104547848419701m_1298968215485030831m_67266586842059971=
+18m_2364277246838963861gmail_msg">Please exclude me from this chain mail</d=
+iv><div class=3D"gmail_extra m_6435104547848419701m_1298968215485030831m_67=
+26658684205997118m_2364277246838963861gmail_msg"><br clear=3D"all" class=3D=
+"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724=
+6838963861gmail_msg"><div class=3D"m_6435104547848419701m_12989682154850308=
+31m_6726658684205997118m_2364277246838963861gmail_msg"><div data-smartmail=
+=3D"gmail_signature" class=3D"m_6435104547848419701m_1298968215485030831m_6=
+726658684205997118m_2364277246838963861gmail_msg"><div dir=3D"ltr" class=3D=
+"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724=
+6838963861gmail_msg">Regards</div></div></div></div><div class=3D"gmail_ext=
+ra m_6435104547848419701m_1298968215485030831m_6726658684205997118m_2364277=
+246838963861gmail_msg"><div class=3D"m_6435104547848419701m_129896821548503=
+0831m_6726658684205997118m_2364277246838963861gmail_msg"><div data-smartmai=
+l=3D"gmail_signature" class=3D"m_6435104547848419701m_1298968215485030831m_=
+6726658684205997118m_2364277246838963861gmail_msg"><div dir=3D"ltr" class=
+=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427=
+7246838963861gmail_msg"><div class=3D"m_6435104547848419701m_12989682154850=
+30831m_6726658684205997118m_2364277246838963861gmail_msg">Karan Gupta</div>=
+</div></div></div></div><div class=3D"gmail_extra m_6435104547848419701m_12=
+98968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">
+<br class=3D"m_6435104547848419701m_1298968215485030831m_672665868420599711=
+8m_2364277246838963861gmail_msg"><div class=3D"gmail_quote m_64351045478484=
+19701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_m=
+sg">On Fri, Nov 11, 2016 at 10:06 AM, Amit Dalal <span dir=3D"ltr" class=3D=
+"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724=
+6838963861gmail_msg">&lt;<a class=3D"m_6435104547848419701m_129896821548503=
+0831m_6726658684205997118m_2364277246838963861gmail_msg">amit.dalal@unicomm=
+erce.com</a>&gt;</span> wrote:<br class=3D"m_6435104547848419701m_129896821=
+5485030831m_6726658684205997118m_2364277246838963861gmail_msg"><blockquote =
+class=3D"gmail_quote m_6435104547848419701m_1298968215485030831m_6726658684=
+205997118m_2364277246838963861gmail_msg" style=3D"margin:0 0 0 .8ex;border-=
+left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_643510454=
+7848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gm=
+ail_msg">19577/28 =3D 700<br class=3D"m_6435104547848419701m_12989682154850=
+30831m_6726658684205997118m_2364277246838963861gmail_msg"><br class=3D"m_64=
+35104547848419701m_1298968215485030831m_6726658684205997118m_23642772468389=
+63861gmail_msg">bank transfer or paytm or freecharge.<br class=3D"m_6435104=
+547848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861=
+gmail_msg"><br class=3D"m_6435104547848419701m_1298968215485030831m_6726658=
+684205997118m_2364277246838963861gmail_msg"><b class=3D"m_64351045478484197=
+01m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"=
+><u class=3D"m_6435104547848419701m_1298968215485030831m_672665868420599711=
+8m_2364277246838963861gmail_msg">Bank details:</u></b><br class=3D"m_643510=
+4547848419701m_1298968215485030831m_6726658684205997118m_236427724683896386=
+1gmail_msg">HDFC A/C Num: 12031050027117 <br class=3D"m_6435104547848419701=
+m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">A=
+ddress: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,<br class=3D"m_6435104=
+547848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861=
+gmail_msg">State: HARYANA<br class=3D"m_6435104547848419701m_12989682154850=
+30831m_6726658684205997118m_2364277246838963861gmail_msg">District: GURGAON=
+ <br class=3D"m_6435104547848419701m_1298968215485030831m_67266586842059971=
+18m_2364277246838963861gmail_msg">Branch: GLOBAL BUSINESS PARK<br class=3D"=
+m_6435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246=
+838963861gmail_msg">IFSC Code: HDFC0001203 <br class=3D"m_64351045478484197=
+01m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"=
+>MICR Code: 110240182<br class=3D"m_6435104547848419701m_129896821548503083=
+1m_6726658684205997118m_2364277246838963861gmail_msg"></div>
+</blockquote></div><br class=3D"m_6435104547848419701m_1298968215485030831m=
+_6726658684205997118m_2364277246838963861gmail_msg"></div></blockquote></di=
+v></div></blockquote></div>
+</div></div></blockquote></div><br class=3D"m_6435104547848419701m_12989682=
+15485030831m_6726658684205997118m_2364277246838963861gmail_msg"><br clear=
+=3D"all" class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205=
+997118m_2364277246838963861gmail_msg"><div class=3D"m_6435104547848419701m_=
+1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><br=
+ class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_=
+2364277246838963861gmail_msg"></div></div></div><span class=3D"m_6435104547=
+848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gma=
+il_msg"><font color=3D"#888888" class=3D"m_6435104547848419701m_12989682154=
+85030831m_6726658684205997118m_2364277246838963861gmail_msg">-- <br class=
+=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427=
+7246838963861gmail_msg"><div data-smartmail=3D"gmail_signature" class=3D"m_=
+6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724683=
+8963861gmail_msg"><div dir=3D"ltr" class=3D"m_6435104547848419701m_12989682=
+15485030831m_6726658684205997118m_2364277246838963861gmail_msg"><div class=
+=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427=
+7246838963861gmail_msg"><div dir=3D"ltr" class=3D"m_6435104547848419701m_12=
+98968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><span=
+ style=3D"font-size:12.8000001907349px" class=3D"m_6435104547848419701m_129=
+8968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">Thanks=
+,</span><div style=3D"font-size:12.8000001907349px" class=3D"m_643510454784=
+8419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail=
+_msg">Bhuvneshwar Kumar</div><div style=3D"font-size:12.8000001907349px" cl=
+ass=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236=
+4277246838963861gmail_msg">Unicommerce Esolutions Pvt. Ltd</div></div></div=
+></div></div>
+</font></span></div>
+</blockquote></div><br class=3D"m_6435104547848419701m_1298968215485030831m=
+_6726658684205997118m_2364277246838963861gmail_msg"><br clear=3D"all" class=
+=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_236427=
+7246838963861gmail_msg"><br class=3D"m_6435104547848419701m_129896821548503=
+0831m_6726658684205997118m_2364277246838963861gmail_msg">-- <br class=3D"m_=
+6435104547848419701m_1298968215485030831m_6726658684205997118m_236427724683=
+8963861gmail_msg"><div data-smartmail=3D"gmail_signature" class=3D"m_643510=
+4547848419701m_1298968215485030831m_6726658684205997118m_236427724683896386=
+1gmail_msg"><div dir=3D"ltr" class=3D"m_6435104547848419701m_12989682154850=
+30831m_6726658684205997118m_2364277246838963861gmail_msg"><div class=3D"m_6=
+435104547848419701m_1298968215485030831m_6726658684205997118m_2364277246838=
+963861gmail_msg"><br class=3D"m_6435104547848419701m_1298968215485030831m_6=
+726658684205997118m_2364277246838963861gmail_msg"></div><div class=3D"m_643=
+5104547848419701m_1298968215485030831m_6726658684205997118m_236427724683896=
+3861gmail_msg">Thanks &amp; Regards<div class=3D"m_6435104547848419701m_129=
+8968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">=C2=A0=
+Rishu</div></div></div></div>
+</div>
+</blockquote><br class=3D"m_6435104547848419701m_1298968215485030831m_67266=
+58684205997118m_2364277246838963861gmail_msg"><br class=3D"m_64351045478484=
+19701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_m=
+sg"></div></div><span class=3D"m_6435104547848419701m_1298968215485030831m_=
+6726658684205997118m_2364277246838963861m_-8637492333290443360HOEnZb m_6435=
+104547848419701m_1298968215485030831m_6726658684205997118m_2364277246838963=
+861gmail_msg"><font color=3D"#888888" class=3D"m_6435104547848419701m_12989=
+68215485030831m_6726658684205997118m_2364277246838963861gmail_msg">-- <br c=
+lass=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118m_23=
+64277246838963861gmail_msg"><div dir=3D"ltr" class=3D"m_6435104547848419701=
+m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><=
+div class=3D"m_6435104547848419701m_1298968215485030831m_672665868420599711=
+8m_2364277246838963861gmail_msg"><div class=3D"m_6435104547848419701m_12989=
+68215485030831m_6726658684205997118m_2364277246838963861gmail_msg">-- Regar=
+ds, Akshay Kochhar<br class=3D"m_6435104547848419701m_1298968215485030831m_=
+6726658684205997118m_2364277246838963861gmail_msg"></div>Software Engineer<=
+br class=3D"m_6435104547848419701m_1298968215485030831m_6726658684205997118=
+m_2364277246838963861gmail_msg"></div><div class=3D"m_6435104547848419701m_=
+1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg">M:<=
+a href=3D"tel:099993%2015765" value=3D"+919999315765" class=3D"m_6435104547=
+848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861gma=
+il_msg" target=3D"_blank">9999315765</a><br class=3D"m_6435104547848419701m=
+_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"></=
+div>Unicommerce eSolutions Pvt. Ltd.<br class=3D"m_6435104547848419701m_129=
+8968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"><img s=
+rc=3D"https://demo.ucdn.in/img/uniTheme/logo.png?v=3D1" class=3D"m_64351045=
+47848419701m_1298968215485030831m_6726658684205997118m_2364277246838963861g=
+mail_msg"><br class=3D"m_6435104547848419701m_1298968215485030831m_67266586=
+84205997118m_2364277246838963861gmail_msg"><div class=3D"m_6435104547848419=
+701m_1298968215485030831m_6726658684205997118m_2364277246838963861gmail_msg=
+"><div class=3D"m_6435104547848419701m_1298968215485030831m_672665868420599=
+7118m_2364277246838963861gmail_msg"><br class=3D"m_6435104547848419701m_129=
+8968215485030831m_6726658684205997118m_2364277246838963861gmail_msg"></div>=
+</div></div><br class=3D"m_6435104547848419701m_1298968215485030831m_672665=
+8684205997118m_2364277246838963861gmail_msg">
+</font></span></blockquote></div><br class=3D"m_6435104547848419701m_129896=
+8215485030831m_6726658684205997118m_2364277246838963861gmail_msg"></div>
+</blockquote></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div></div><=
+/div><span class=3D"m_6435104547848419701HOEnZb"><font color=3D"#888888">--=
+ <br><div class=3D"m_6435104547848419701m_1298968215485030831gmail_signatur=
+e" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=3D"=
+color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:rgb(1=
+02,102,102)">Karan Garg</span><br></div></div>
+</font></span></div>
+</blockquote></div><br></div></div></div>
+</blockquote></div><br></div>
+
+--001a1146f09037ee30054152c384--

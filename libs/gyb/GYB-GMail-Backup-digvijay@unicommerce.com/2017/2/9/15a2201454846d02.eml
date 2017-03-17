@@ -1,0 +1,109 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp134311qgu;
+        Thu, 9 Feb 2017 00:33:13 -0800 (PST)
+X-Received: by 10.157.50.197 with SMTP id u63mr947709otb.260.1486629193233;
+        Thu, 09 Feb 2017 00:33:13 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-ot0-x236.google.com (mail-ot0-x236.google.com. [2607:f8b0:4003:c0f::236])
+        by mx.google.com with ESMTPS id b133si4364642oii.47.2017.02.09.00.33.13
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 09 Feb 2017 00:33:13 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-ot0-x236.google.com with SMTP id 65so7884712otq.2
+        for <digvijay@unicommerce.com>; Thu, 09 Feb 2017 00:33:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=lAu1P8rlYyA+KXTkIfE+LBMsii94tRgbeUv3CzFl0Ek=;
+        b=aFm9wN3Df3iv+9ViNWDrvhS77nI+R1pYUPoFBKJPHIbVSENSMmBva4IgHsIfRa0gZS
+         N7cZqDHMAgWy3PxkQNIZMoIoiq12BThAD+n5POvo1jSvW/QU8EIGM1Eg1kWnByBJe4q1
+         i7Iva2NF1XQd0HMGvsXokHLAzwIgYKdoBtYBMihlMVdLrmsqruxd0v9A6209wa7ra7zT
+         Og2lPzK8UpzLDnXVelP5m7zESLCnPSq7qEM8NLYW5Kig9++adu2L+FbUe6Nn30PcGgGK
+         844E8YEy500poUeskBf3NCRwccpVleqX0t8EuUpZ6O8B17cL83wnayb8ndkpUGSc4yhz
+         tnyQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=lAu1P8rlYyA+KXTkIfE+LBMsii94tRgbeUv3CzFl0Ek=;
+        b=Z52r/+15zyVJfXuae7s5RpHNbF24a5AxmQ1phcyof05PKP9gqs+ha+epmgVC3z3IGE
+         QHObteYgPius/67Bqtj4d+Gmhr91IipzNePTd/Rvw2/oyLkWXLHkFwNfOjGNWvaXcGrn
+         nEXZ4+MmLreBYF8CfhzW093TJiCtfctEw0WptefWJsjWv3Sw2xjQqNV+G3AOJBACYWa0
+         +zNMV0MosSLHlO2o4YbgKJouoNEsFlrc6Fv04Zy8RWb94/nUiTOVaO1LfTfpIEuvbjbb
+         /klFTVq4oVN5XOtJuJo9HShGr0VaUSch75ux8USY6mgiBSGc0ehat2N7T/4ODS7x9ms2
+         qhrg==
+X-Gm-Message-State: AMke39nbGEK6s9UJU6zYQlsmhp/IterFxb+uid4wxLiYfM7HL5dR1YzHQi28OmVzlfXDyy+qbVcPhyEt/tVp3w==
+X-Received: by 10.157.1.242 with SMTP id e105mr955004ote.21.1486629192722;
+ Thu, 09 Feb 2017 00:33:12 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Thu, 9 Feb 2017 00:33:11 -0800 (PST)
+Received: by 10.182.151.17 with HTTP; Thu, 9 Feb 2017 00:33:11 -0800 (PST)
+In-Reply-To: <CAFD_XHGY3n8KiSE8ZV9=HP1b+WUKmE0VgGuNdMiNfi+F+0XuFg@mail.gmail.com>
+References: <CA+zaFGib7AoTR7xbEXN0ZH9rrWcWOz5YbUdu3DbUQUh-xkLg_Q@mail.gmail.com>
+ <CAFD_XHGY3n8KiSE8ZV9=HP1b+WUKmE0VgGuNdMiNfi+F+0XuFg@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 9 Feb 2017 14:03:11 +0530
+Message-ID: <CA+zaFGgC_rtm8HgEP51wL0NZDwMqJGru_x9J4ijM6ocQ9BnMOA@mail.gmail.com>
+Subject: Re: Woocommerce is live now!
+To: Varad Singhal <varad@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Kapil Makhija <kapil@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c03b5f8f21f17054814d46d
+
+--94eb2c03b5f8f21f17054814d46d
+Content-Type: text/plain; charset=UTF-8
+
+Diggi,
+
+Please take a look.
+
+On 09-Feb-2017 1:49 PM, "Varad Singhal" <varad@unicommerce.com> wrote:
+
+> Not able to configure channel on prod
+>
+> https://varkalasilksarees.unicommerce.com/files/trace-
+> logs/feee379a-8bba-4f53-8228-df7704443392.log
+> <https://www.google.com/url?q=https%3A%2F%2Fvarkalasilksarees.unicommerce.com%2Ffiles%2Ftrace-logs%2Ffeee379a-8bba-4f53-8228-df7704443392.log&sa=D&sntz=1&usg=AFQjCNFlZUnQnsMcb5OcNVhxPL3L_tnieg>
+>
+> On Thu, Feb 9, 2017 at 12:55 PM, Sunny Agarwal <sunny@unicommerce.com>
+> wrote:
+>
+>>
+>>
+>> - Sunny
+>>
+>
+>
+
+--94eb2c03b5f8f21f17054814d46d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Diggi,<div dir=3D"auto"><br></div><div dir=3D"auto">Pleas=
+e take a look.</div></div><div class=3D"gmail_extra"><br><div class=3D"gmai=
+l_quote">On 09-Feb-2017 1:49 PM, &quot;Varad Singhal&quot; &lt;<a href=3D"m=
+ailto:varad@unicommerce.com">varad@unicommerce.com</a>&gt; wrote:<br type=
+=3D"attribution"><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8=
+ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Not able t=
+o configure channel on prod<div><br></div><div><a rel=3D"nofollow noreferre=
+r" href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fvarkalasilksarees.u=
+nicommerce.com%2Ffiles%2Ftrace-logs%2Ffeee379a-8bba-4f53-8228-df7704443392.=
+log&amp;sa=3DD&amp;sntz=3D1&amp;usg=3DAFQjCNFlZUnQnsMcb5OcNVhxPL3L_tnieg" c=
+lass=3D"m_-3874412314288825966gmail-Xx" dir=3D"ltr" style=3D"unicode-bidi:i=
+solate;color:rgb(38,50,56);font-size:13px" target=3D"_blank">https://varkal=
+asilksarees.<wbr>unicommerce.com/files/trace-<wbr>logs/feee379a-8bba-4f53-8=
+228-<wbr>df7704443392.log</a><br></div></div><div class=3D"gmail_extra"><br=
+><div class=3D"gmail_quote">On Thu, Feb 9, 2017 at 12:55 PM, Sunny Agarwal =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=3D"_b=
+lank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex"><span class=3D"m_-3874412314288825966HOEnZb"><font color=3D"#88888=
+8"><div dir=3D"ltr"><br><div><br></div><div>- Sunny</div></div>
+</font></span></blockquote></div><br></div>
+</blockquote></div></div>
+
+--94eb2c03b5f8f21f17054814d46d--

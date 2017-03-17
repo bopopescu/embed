@@ -1,0 +1,330 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp118743qge;
+        Wed, 16 Nov 2016 23:01:42 -0800 (PST)
+X-Received: by 10.157.44.38 with SMTP id f35mr609276otb.192.1479366102935;
+        Wed, 16 Nov 2016 23:01:42 -0800 (PST)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o3.em.bitbucket.org (o3.em.bitbucket.org. [167.89.90.3])
+        by mx.google.com with ESMTPS id e54si607130otc.168.2016.11.16.23.01.42
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 16 Nov 2016 23:01:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) client-ip=167.89.90.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=/tjxf8pejo9s2V8ahu2T8Ie77+0=; b=m2waqZL+NRmKvUmM+Shv3QM
+	FiDvFKczeVQoXZBQlpRErPb0qg7z8azGuUixWpIED0x9mV13njElfjpt9xO2dOKE
+	LKV+QmIgeEPb1JoM4YMHgqJlvVgnk5e78y9NknSij/vTCgDhOsHomP5cd9JcsVVp
+	V/h+ba5tp/e3mVfMxNoM=
+Received: by filter0525p1mdw1.sendgrid.net with SMTP id filter0525p1mdw1-31930-582D55D4-43
+        2016-11-17 07:01:40.657761479 +0000 UTC
+Received: from celery-worker-105.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0001p1iad1.sendgrid.net (SG) with ESMTP id jSkiZeS-Ryy28b7AjOjxAA
+	for <digvijay@unicommerce.com>; Thu, 17 Nov 2016 07:01:40.668 +0000 (UTC)
+Received: from celery-worker-105.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-105.ash1.bb-inf.net (Postfix) with ESMTP id 9BB6B720147
+	for <digvijay@unicommerce.com>; Thu, 17 Nov 2016 07:01:40 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============6010701245795365716=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #8: Sql query for release
+ (unicommercetechnology/uniwaretroubleshoot)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Thu, 17 Nov 2016 07:01:40 -0000
+Auto-Submitted: auto-generated
+Message-ID: <prcomment-26943546@bitbucket.org>
+References: <pr-unicommercetechnology/uniwaretroubleshoot/8@bitbucket.org>
+ <pr-unicommercetechnology/uniwaretroubleshoot/8@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniwaretroubleshoot/8@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/vjNCgqBwkXk9j0MrD0aFMzTv11AJ8dAx6FyN
+ FIlysQO+4+DSQrV/kc9YGP5/N+suJvz5+3oCzNAeFHc9aw/RCXIqMI8yrazaTe7FJwAMj/hh53pwrI
+ A8sPA446YB/xiaY469B7tiKGNXWKJtbJ4xQTeqwbAu9ev7+IuKJ02runyds2fU6bYtSEAuUw46uLgK
+ Qz9NmGlwe9Rl+tYILAE7bV
+
+--===============6010701245795365716==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+New comment on pull request:
+
+https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/8/sql-query-for-release#comment-26943546
+
+Akshay Agarwal said:
+
+wrong query. Please correct it 
+insert into role values (null, 'RELEASE', 'release', null, 0,now(), now());
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/8/unwatch/digvijay095/3ffedf9793af206792cd9ec4d5f610c34e4ae711/
+
+--===============6010701245795365716==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" class="comment-container no-box" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: none; border-radius: 5px; padding: 0; background: #f5f5f5">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td class="main-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <div style="border: 1px solid #ccc; border-radius: 5px; background-color: #fff; padding: 0">
+                
+<span style="display: none; display: none !important;">
+  
+    Akshay Agarwal commented on pull request #8: Sql query for release
+  
+</span>
+<table style="width: 100%; border-collapse: collapse">
+  <tbody>
+    
+      <tr>
+        <td class="comment-filename" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-radius: 5px 5px 0 0">UniwareNotifications/build.sql</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    
+    
+      <tr>
+        <td class="diff-line common first" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px; border-top: 1px solid #ccc">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>183</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>183</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'> insert into role va<wbr>lues (null, 'O2O_CUS<wbr>TOMER_SUPPORT', 'O2O<wbr> Customer Support', <wbr>0, now(), now(), 'O2<wbr>O');</wbr></wbr></wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line common" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>184</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>184</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fff'> </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line deletion" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px'>185</td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'></td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #fdd'>-insert into role va<wbr>lues(null,2,'RELEASE<wbr>','release','FACILIT<wbr>Y','For Release Upda<wbr>tes',1,NOW(),NOW());</wbr></wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+    
+      <tr>
+        <td class="diff-line addition last" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; font-size: 11px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              <tr>
+                <td class="diff-linenum from" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-bottom-left-radius: 5px'></td>
+                <td class="diff-linenum to" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; background: #f5f5f5; text-align: center; width: 30px; border-right: 1px solid #ccc'>185</td>
+                <td class="diff-line-content" style='font: 11px Consolas, Menlo, "Liberation Mono", Courier, monospace; padding: 0; white-space: pre-wrap; background: #cfc; border-bottom-right-radius: 5px'>+insert into role va<wbr>lues (null, 'RELEASE<wbr>', 'release', 0, now<wbr>(), now(), 'O2O');</wbr></wbr></wbr></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="line-comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px; background: #f5f5f5; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc">
+            <div style="border: 1px solid #ccc; background: #fff; padding: 20px; border-radius: 5px">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    
+                      
+
+<td class="comment" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+  <table style="width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td class="comment-avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+          
+            
+              <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1479361433" style="border-radius: 3px">
+            
+          
+        </td>
+        <td class="comment-main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+          <table style="width: 100%; border-collapse: collapse">
+            <tbody>
+              
+                <tr>
+                  <td class="comment-user" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+                    
+                      
+                        <strong>Akshay Agarwal</strong> commented on pull request #8:
+                      
+                    
+                  </td>
+                </tr>
+                
+                  <tr>
+                    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+                      <a href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/8/sql-query-for-release#comment-26943546" style="color: #3572b0; text-decoration: none">Sql query for release</a>
+                    </td>
+                  </tr>
+                
+              
+              <tr>
+                <td class="comment-content markup-content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 15px">
+                  
+                    <p style="margin-bottom: 0; margin: 10px 0 0 0; padding: 0; margin-top: 0">wrong query. Please correct it 
+insert into role values (null, 'RELEASE', 'release', null, 0,now(), now());</p>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+        <tr>
+          <td class="actions secondary" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 20px 0 0; color: #707070; border-top: 1px solid #cccccc; line-height: 1">
+            
+            
+              
+                <a href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/8/sql-query-for-release#comment-26943546" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+              
+            
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+</td>
+
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      
+    
+  </tbody>
+</table>
+
+              </div>
+            </td>
+          </tr>
+          
+  
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniwaretroubleshoot/pull-requests/8/unwatch/digvijay095/3ffedf9793af206792cd9ec4d5f610c34e4ae711/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/435867257/d1739fbd9c972832a028f8fa4f1deaf6ff4689a9/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/780c07efa687/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm74sT-2Bk8nMMHgJZniDCBvo0AcH9-2B0aTlqWzA2qumn4SYjkkQrqbb4jJfKDVGkWEsHhikrYoN5gO99lQMpg0hcIG38GDWXEZKjghp78MKQMDAPe-2BQ4p3j6ZU2YBqFVJbk23KJWbVAWMu-2Bpy-2BiDPQFM9E7BhiQq8Ue14ZJmrDtKAElEeiqHt-2BIL4svYijlnzuDg0-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============6010701245795365716==--

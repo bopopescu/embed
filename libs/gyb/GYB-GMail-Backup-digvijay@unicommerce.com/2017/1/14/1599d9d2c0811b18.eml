@@ -1,0 +1,136 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp651142qgd;
+        Sat, 14 Jan 2017 07:34:00 -0800 (PST)
+X-Received: by 10.55.72.210 with SMTP id v201mr5022379qka.145.1484408040486;
+        Sat, 14 Jan 2017 07:34:00 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-qt0-x22a.google.com (mail-qt0-x22a.google.com. [2607:f8b0:400d:c0d::22a])
+        by mx.google.com with ESMTPS id d5si10719243qtd.297.2017.01.14.07.34.00
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 14 Jan 2017 07:34:00 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::22a is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:400d:c0d::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::22a is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-qt0-x22a.google.com with SMTP id x49so71782759qtc.2
+        for <digvijay@unicommerce.com>; Sat, 14 Jan 2017 07:34:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=73az7Oftmzyuvwl1I65wr6vS+0pROergNEvoFJzjXRA=;
+        b=hK/VRmby1uUnS7qRKy3FE67TTZBjkxVeNyuwGYrTxoUtB+sEEvhKbtF6oBA459m4TN
+         nC0Efk0uVLyrD2QIPNsycre99hU28w5J5YNBkuefRhtIAIOcP6wBxFPZZm1Ph8TDGynY
+         Jhs8dS2yh9dnvF8JiNQiPTkHSKTbBSnstS875I0N8/oMHiJFtD/EpqFq/z/WWQ8L8yW3
+         5Eua6JaF4DlyVHp/SpODclGhXweZ+VCpHpl3n+moqb6eTYSXCmqAoMLoDncisO9pP/w4
+         1nenXsor56B34P3qLDTRp7T7bMIEiasb0hIr7aanSUec0Q4EiYhbK6JTxRElGseK1lZt
+         0nkw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=73az7Oftmzyuvwl1I65wr6vS+0pROergNEvoFJzjXRA=;
+        b=aVzaUVg53LbRxbNR9Qh/LLptteOSMnQqtik+/LzP6fknhmPXnlIwj4CarO/H5e1tPr
+         vCQAPHJPyWpLubehe7f9PpwTMDMQcYlCAOh0KOz8f7HhDjPpJ1h4e+njabfl3lnH/Qw2
+         EpWisIbGGlKDECP9LORUlWJ4FH69iryo77+djCPfyH5I8jt9k1IrfSKJBiL8mgkpyth3
+         aGSWTtQp8sBoSE2i16/JG8MN5jJHMSFaM7hG3Np/faWC2PRNmOgTWAz6dOW2uwMPjN9Q
+         Is6P/g8myZeKk1JqeWj+BTK2zhohTpmw18uRtIf6INewPfVxhshoGNMbH8RTBVBKrDhn
+         sgCA==
+X-Gm-Message-State: AIkVDXJ759UonHwc3SabJeQZy6yFYpXSfgKu2QiOKyKLwZeYszr0A0OfscQsuZiUrc8FCLSzZllebToozfW/XQ==
+X-Received: by 10.200.42.227 with SMTP id c32mr6866053qta.70.1484408039947;
+ Sat, 14 Jan 2017 07:33:59 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.237.50.199 with HTTP; Sat, 14 Jan 2017 07:33:59 -0800 (PST)
+In-Reply-To: <CAJF3sopNynvFtZvL1pFkd5mOUALwU5EGokm82jC_EP5ZMd112w@mail.gmail.com>
+References: <CAJF3soq==hsjABXHULxaRmaH9dZvURhPE=8dJNaiGt-SSe32mQ@mail.gmail.com>
+ <-5170650639444694567@unknownmsgid> <CAJF3sopNynvFtZvL1pFkd5mOUALwU5EGokm82jC_EP5ZMd112w@mail.gmail.com>
+From: Puneet Sharma <puneet@unicommerce.com>
+Date: Sat, 14 Jan 2017 21:03:59 +0530
+Message-ID: <CAGttGOKU1ow6Lh65bBos=fN4fvXRqC0Y=jbGiABUzMjMWHD+OQ@mail.gmail.com>
+Subject: Re: Queries for prod uniware
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11404b3aec547905460fadee
+
+--001a11404b3aec547905460fadee
+Content-Type: text/plain; charset=UTF-8
+
+This was done .
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+On Fri, Jan 13, 2017 at 3:01 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Please update on the queries
+>
+> On Wed, Jan 11, 2017 at 7:27 PM, Puneet Sharma <puneet@unicommerce.com>
+> wrote:
+>
+>>
+>>
+>> Thanks,
+>> Puneet Sharma
+>> Unicommerce Esolutions Pvt. Ltd
+>> +91-7666182895
+>>
+>> Begin forwarded message:
+>>
+>> *From:* Digvijay Sharma <digvijay@unicommerce.com>
+>> *Date:* 11 January 2017 at 7:20:41 PM IST
+>> *To:* Puneet Sharma <puneet@unicommerce.com>, Sunny Agarwal <
+>> sunny@unicommerce.com>,  Akshay Agarwal <akshay.agarwal@unicommerce.com>
+>> *Subject:* *Queries for prod uniware*
+>>
+>> Please run these queries as mysql2All.
+>>
+>>
+>
+
+--001a11404b3aec547905460fadee
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">This was done .=C2=A0</div><div class=3D"gmail_extra"><br =
+clear=3D"all"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_s=
+ignature"><div dir=3D"ltr"><div><div dir=3D"ltr">Thanks,<div>Puneet Sharma<=
+/div><div>Unicommerce Esolutions Pvt. Ltd</div><div>+91-7666182895</div></d=
+iv></div></div></div></div>
+<br><div class=3D"gmail_quote">On Fri, Jan 13, 2017 at 3:01 PM, Digvijay Sh=
+arma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" targ=
+et=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr">Please update on the queries</div><div=
+ class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div cla=
+ss=3D"gmail_quote">On Wed, Jan 11, 2017 at 7:27 PM, Puneet Sharma <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:puneet@unicommerce.com" target=3D"_blank">pu=
+neet@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_qu=
+ote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex=
+"><div dir=3D"auto"><div><br><br><div><span style=3D"color:rgba(0,0,0,0.701=
+961);font-family:UICTFontTextStyleBody;text-decoration:-webkit-letterpress"=
+>Thanks,</span><div style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFon=
+tTextStyleBody;text-decoration:-webkit-letterpress">Puneet Sharma</div><div=
+ style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text=
+-decoration:-webkit-letterpress">Unicommerce Esolutions Pvt. Ltd</div><div =
+style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-=
+decoration:-webkit-letterpress"><a href=3D"tel:+91-7666182895" target=3D"_b=
+lank">+91-7666182895</a></div></div></div><div><br>Begin forwarded message:=
+<br><br></div><blockquote type=3D"cite"><div><b>From:</b> Digvijay Sharma &=
+lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@u=
+nicommerce.com</a>&gt;<br><b>Date:</b> 11 January 2017 at 7:20:41 PM IST<br=
+><b>To:</b> Puneet Sharma &lt;<a href=3D"mailto:puneet@unicommerce.com" tar=
+get=3D"_blank">puneet@unicommerce.com</a>&gt;, Sunny Agarwal &lt;<a href=3D=
+"mailto:sunny@unicommerce.com" target=3D"_blank">sunny@unicommerce.com</a>&=
+gt;,=C2=A0 Akshay Agarwal &lt;<a href=3D"mailto:akshay.agarwal@unicommerce.=
+com" target=3D"_blank">akshay.agarwal@unicommerce.co<wbr>m</a>&gt;<br><b>Su=
+bject:</b> <b>Queries for prod uniware</b><br><br></div></blockquote><span>=
+<div><span></span></div><blockquote type=3D"cite"><div><div dir=3D"ltr">Ple=
+ase run these queries as mysql2All.</div>
+</div></blockquote><blockquote type=3D"cite"><div></div></blockquote></span=
+></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a11404b3aec547905460fadee--

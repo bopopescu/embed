@@ -1,0 +1,76 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp85370qgd;
+        Thu, 8 Dec 2016 18:29:46 -0800 (PST)
+X-Received: by 10.176.0.168 with SMTP id 37mr61245027uaj.16.1481250586493;
+        Thu, 08 Dec 2016 18:29:46 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-vk0-x22d.google.com (mail-vk0-x22d.google.com. [2607:f8b0:400c:c05::22d])
+        by mx.google.com with ESMTPS id g4si7857092uag.113.2016.12.08.18.29.46
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Dec 2016 18:29:46 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::22d is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c05::22d;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::22d is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-vk0-x22d.google.com with SMTP id x186so2425606vkd.1
+        for <digvijay@unicommerce.com>; Thu, 08 Dec 2016 18:29:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=j7OjVxkpgCbojes7+CSxBCXHPSD3j2b6kHD4Ov2xT88=;
+        b=YfplUvPAcuReiBOKrYKEy3PNWkGlyHiS2UpbwKhPviGMFsoPmYm2kKIjX+DgJTEzKO
+         uFksx0P/SP2J6N+A2SST9a1XVm01UHv8JQHoCkkJdF3sxkJRmqszdkl1lV2lAd5rjx0C
+         wKg3yeivwu7MJIa/bxxcffQaW1ftn9oYg3embud5KQ6OhuSJj8roOd70Ig0dwwi4Gb6n
+         uKKjNaStFar0S6bpPlBFeJlXFDA7lmuYFBb4czRXiBF1ZSoq/+WuVQfjJddb4H7PXEYz
+         oyUa8oImBMPjjW1SiKwUD78GxORb/E4fGqWZ8EhOFkbXNbxvYgCbeJlFtQsSApOedyFx
+         S7DQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=j7OjVxkpgCbojes7+CSxBCXHPSD3j2b6kHD4Ov2xT88=;
+        b=a+8d13q59ejkMPmcO42OjN1qiBFfP2KJ4LL80AVHtO3c8ihEwUhjWBT946m07UNC+f
+         vOwGSrODOSuC36fuDnF/EUsYq6NJT9dd5Gs83xz3kUZU28KFkH0IW2YwlvsLR2R4dyJR
+         rdVCbUqNvms6XnNoj3QpISV4itPfzbButrjqveLgdUBjSb4uEzgFaBMNRlqauQXW5Ejw
+         joyZKxuyBohSs1CcbLTMO8z2uNgcUmGhbCLTm9Dgn4pq04KzlFzOQkXiPI4kzluk6B0X
+         FhR7LZTz6XQmh55RDXq0Gp91VFu917uo1dEYTd/UqZ11Vo+jlYPTaEgnhQnsO6M1JeNJ
+         ebqQ==
+X-Gm-Message-State: AKaTC03HlanhfURXTmjL7qHUML6nhzWBoBf/seeCV5RZ0W5ca5u4cSMdu21k2Yyg6j9Vzo7ycsBc6D4HP9VpWA==
+X-Received: by 10.31.164.204 with SMTP id n195mr24127684vke.58.1481250586100;
+ Thu, 08 Dec 2016 18:29:46 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Fri, 09 Dec 2016 02:29:35 +0000
+Message-ID: <CAPe2SZSi1VSjmjEry5M6+hGU_vqRMuo9e_QGegk2Bt3aH_WGrA@mail.gmail.com>
+Subject: Leave for Friday and Monday
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharam <digvijay@unicommerce.com>, Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1142e10a02188f05433087fd
+
+--001a1142e10a02188f05433087fd
+Content-Type: text/plain; charset=UTF-8
+
+Sir, Tavelling to my hometown. Would need an official leave for Today and
+Monday.
+
+Unofficially will be online jab bhi ghar waale bore kar denge. :P
+
+Have a good weekend :)
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a1142e10a02188f05433087fd
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Sir, Tavelling to my hometown. Would need an official leave for Today and M=
+onday.=C2=A0<div><br></div><div>Unofficially will be online jab bhi ghar wa=
+ale bore kar denge. :P</div><div><br></div><div>Have a good weekend :)</div=
+><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signature"><div=
+ dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, Unicomm=
+erce</div><div>+91 9999-872-129</div></div></div>
+
+--001a1142e10a02188f05433087fd--

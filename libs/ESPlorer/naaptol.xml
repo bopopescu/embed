@@ -1,0 +1,51 @@
+<scraper name="naaptolUserVerificationScript" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.unicommerce.com/schema/scraper-1.0.xsd"  cachehttpclient="true" httpClientName="#{#channel.name}">
+	<method name="fetchCaptcha">
+        <log level="info" value="handling captcha"/>
+        <var name="captchaFileName" value="/tmp/naaptol_captcha_#{T(java.lang.System).currentTimeMillis()}.png"/>
+        <http method="get" url="https://vendoroms.naaptol.com/csp-oms/CaptchaServlet" downloadToFile="#{#captchaFileName}" timeout="80"/>
+        <retry count="3" delayInMillis="2000">
+            <http method="post" url="http://poster.de-captcher.com/" multipart="true" var="captchaScriptResponse" cacheClient="false">
+                <param name="function" value="picture2"/>
+                <param name="username" value="sunnyagarwal@outlook.com"/>
+                <param name="password" value="sunny@123"/>
+                <param name="pict_to" value="0"/>
+                <param name="pict_type" value="0"/>
+                <param name="submit" value="Send"/>
+                <file name="pict" value="#{#captchaFileName}"/>
+            </http>
+        </retry>
+        <log level="info" value="Captcha Response: #{#captchaScriptResponse}"/>     
+        <var name="challengeText" value="#{#captchaScriptResponse.substring(#captchaScriptResponse.lastIndexOf('|') + 1).trim()}"/>
+        <log level="info" value="challengeText: #{#challengeText}"/>
+        <var name="captchaText" value="#{#challengeText}"/>	   
+    </method>
+    <invoke method="fetchCaptcha"/>
+
+	<var name="naaptolURL" value="https://vendoroms.naaptol.com/csp-oms/faces/jsp/oms/vendorLogin.jsp" />
+	<http url="#{#naaptolURL}" method="post" var="loginResponse" timeout="80">
+		<header name="User-Agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36" />
+		<header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+		<header name="Accept-Language" value="en-US,en;q=0.5" />
+		<header name="Accept-Encoding" value="gzip, deflate" />
+		<header name="Referer" value="http://vendoroms.naaptol.com/csp-oms/faces/jsp/oms/vendorLogin.jsp" />
+		<header name="Connection" value="keep-alive" />
+		<header name="Content-Type" value="application/x-www-form-urlencoded" />
+		<header name="Origin" value="https://vendoroms.naaptol.com" />
+		<header name="Host" value="vendoroms.naaptol.com" />
+		<param name="jsf_state_64"
+			value="H4sIAAAAAAAAAKVVTWwbVRAeb+zaaSPk/BCKqpYgJBBCWpeUQ9UcGv8kykp2UsVpQXDYPu++2puu9y1vZ+0NKBU9AAcuHCgSUhEcuNE7iBsCiRNIBXHhhDhwAq78XGDerv/jiAre4fnt7NuZb775ZnzvV8iEEhZfqu6zDtNd5jX1ncY+t3Dt7W9e+CAfPO1qAJEPADPhy3AL1EoPTlk/WYGEfOwgRMfVq8JiLr/1x/z1u+f//EWDtAG5FgtalrB5FbKWCD2UBwgLcdCCClqoo3S85loVcuoxZE2uYmToeodJh3kYP0b+37QQAEHjnjJlEU5u7dWqZqlYN8oIpwv7gV8Q7aDQ4Z4tZFU0HU8nm8K4OMRYlJIdVJ0Ao9vfnn3vK/b+DKQMSAfOKzzONtVNq32Q6TD75WH2CLOu8n9DyLaPCQWRfoNZPNA3yaYu5inu/DDuFvFQY34m+8PnXyxfvz8D2iacdAWzN5mFQhowiy3Jg5Zw7ci/vB7HmevmaM8r5hHmKJjFDdvwbB4NfMeFKwnhcuZ9vSJf+/7uX79pkHoRMh3mhpRSCuGKkE2d+cxqcb19kKCURBKXNx3UW9gmdLQp4LuxmcsSC7i+ZVQqG9tmeadWK25XTGP7ytW9ulnf2DuaWZ3jZ5XX77z76SfPzSjZdOcU8F4aBOGRAV2XTNfxbpotx7a5Z0YIaY+145rnEVZHiezyBvN9/apRFm1feNzDPdbUN3d2axu7ZnnLqBKkSj1Qn54ei0dkZeN4hk3uTcc+j3AiCBttBxFyPguCrpB2FPnHrNjlKeUo1kJ6ihYemtYT6vAYyWFpNIsaDwISdZB4XThS2ZQyL6ltmQDFv0cATQFwZnCanfI2hnJuUpl7PCIC5oel6JH0IMjG7qTiO1pS2mzD8WxqYRLFM6PRrH7VdLOIqMRn15Ehf15SVbmsfPzz+uF3O19qoFXhhGm5VBYCNzIZyspEg2HR7MafJJ8nQ2p8hvQGV+R3JDw5Rezc1a+pbiglSI2278JwRcTTo0+8em04NkrUTHoYcGnYh1FfEA/DRHnGe9DwkDe5XPjpw49+v/3mRU1NlV4P9mdkfG87bDe4fOPenbOn3vnxrf6MXZ8mwTV6sUTgco7nh1gS1CypZ/+zHB4nTwujBapzS3LF5FAQ/d74P4pQ5tX45QW1XUQ4c5TcfqCYXnXt0iS5fQJWjmdGnS4TJ6v/xklmnImVSSZKIaLwqFuGTCTj4oF6NsmVpPfUdOnVOLaEfZz2BtA0hHNjRBUtdERCV4zrkNKkbCcJ6S36g0gw95NJXVDmKPoHrtnFSOoHAAA=" />
+		<param name="jsf_tree_64"
+			value="H4sIAAAAAAAAAK2Rv0oDQRDGx5AYA4qoha2gEAu5s09nIHohQdAoyBXH5m5zuXC3u+7OmbOxs/cBfALJE/gEdra+hK21c+ZvIcTCZthvmN9+386OPqFkNJxKHVpMMb/PreS+x3xuSKo48hlGUlgdzfkl6tTHVPM2Eyzk+mDerMtEScEFNm52P56bX+8FKLpQ8fx+FAea+tB0W2Rhjy3siYW9YGH/1aLWgk3Pn6p6zIxB2G4N2B2zYyZCm+YjEdLY+nzMCW7hAQoulL3cGQnZcReY8+6A+1jLVKonUf9jG7XXUfVt6/HppQCQKQBYMXkMSPNaIl0ca4VQzbNk1thrFtvqYxJbZ1Ta3BiyodxFLwqO1Qw8XAI6QqXY4RkilGMZRsIJpnBeNxDWFK1wKHUwv/RoyaX0woSJ4CRFlPS5qybtJhESuL8EbEidIFR+gvToTMje78iVcx3x4YWUqNQ3eKj2wqUCAAA=" />
+		<param name="jsf_viewid" value="/jsp/oms/vendorLogin.jsp" />
+		<param name="loginform:_link_hidden_" value="" />
+		<param name="loginform:loginId" value="#{#username}" />
+		<param name="loginform:password" value="#{#password}" />
+		<param name="loginform:captchaInputIdLogin" value="#{#captchaText}" />
+		<param name="loginform:submit" value="" />
+		<param name="loginform_SUBMIT" value="1" />
+	</http>
+	<log level="info" value="TESTING : #{#loginResponse}"/>
+	<if condition="#{#loginResponse.contains('Please enter valid UserId and Password') or #loginResponse.contains('Your Password has been expired')}">
+		<scriptError message="Unable to login with the given credentials, please check if username and password are correct" />
+	</if>
+</scraper>

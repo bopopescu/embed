@@ -1,0 +1,109 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp447752oic;
+        Mon, 8 Aug 2016 22:22:08 -0700 (PDT)
+X-Received: by 10.237.40.132 with SMTP id b4mr31946717qtd.109.1470720128748;
+        Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+Return-Path: <tech+bncBCMKPJGHRQMBBAGRUW6QKGQEBQDM4ZA@unicommerce.com>
+Received: from mail-qt0-x246.google.com (mail-qt0-x246.google.com. [2607:f8b0:400d:c0d::246])
+        by mx.google.com with ESMTPS id k196si19929355qke.225.2016.08.08.22.22.08
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::246 is neither permitted nor denied by best guess record for domain of tech+bncbcmkpjghrqmbbagruw6qkgqebqdm4za@unicommerce.com) client-ip=2607:f8b0:400d:c0d::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::246 is neither permitted nor denied by best guess record for domain of tech+bncbcmkpjghrqmbbagruw6qkgqebqdm4za@unicommerce.com) smtp.mailfrom=tech+bncBCMKPJGHRQMBBAGRUW6QKGQEBQDM4ZA@unicommerce.com
+Received: by mail-qt0-x246.google.com with SMTP id 93sf4812322qtg.1
+        for <digvijay@unicommerce.com>; Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=j7zJCYHWwsobW8kb3UD+MhiUP0E5HKc8wg9+bNO1IYo=;
+        b=C8o6AbPDRkVJsCwZ8vaAzM1BEfAjQvMYc119bKiPq+J1EIuWthd6sGfAsrSgeH6GBo
+         bMR8lPpdtuS50S+3qK0GejIQEybbgfkREHr7mC6cT5zxtuyrt1DO2F6ExlMhqs669js/
+         I+/pyPsoVgEQab3CJ/vvyHU44s6MDIAHDRQGjKhYNaltbCDQrMr4tgLQHZ+Yqx0axOlC
+         fw3+h8zkKmU8WRt+RJkv/fmfmfefwyHq4a7gHwmfHQ6OxaOqDm+flncHxjdcaBOi9m5p
+         SsJo5iIWKrHTgLPhGh6k6mFvl5FvlzdhPo67+jTJ639En7piLz+Qkh1uLhQFTAChFUnp
+         GxFA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=j7zJCYHWwsobW8kb3UD+MhiUP0E5HKc8wg9+bNO1IYo=;
+        b=DRJvLNLMGBK4UrJoytbPbt1sLurcqsO40bOFASvhcNppzkN1l6PUf2qSuuWM7dXOiw
+         JmSLYLZuFWGijhOcZQvg3QhcblOwvtwILaPTo6wWJvdbtpodD8r2ug9mtVnVLq+sWoay
+         JF3ID6NAMPiVYnP/xTXjxoto4M4V58czyYa7CBR0Oz7nxMHpjWKYuLal4fke8Pwuc7Q0
+         XokeNH2ymBTiGNtLhuZVwokwbmOIdc0rrGmxWSI+3ye2MPM826BxYHwdKQdb7/EDnybT
+         Il4dipMsA8IevT6CgwcdlqZrtlabbvtEqbjIv99IUbeczUbjIF8jtJ+eNGmS5E6KOpI+
+         khyA==
+X-Gm-Message-State: AEkooutqgr73yFwH2IpLBbu+oBC/LhMXusf4o/xMiP/ZSddv32CN6VNB4rfLYaenMS73gw==
+X-Received: by 10.31.135.203 with SMTP id j194mr69518366vkd.1.1470720128444;
+        Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.21.60 with SMTP id u57ls12063535otf.26.gmail; Mon, 08 Aug
+ 2016 22:22:08 -0700 (PDT)
+X-Received: by 10.237.39.34 with SMTP id n31mr32737186qtd.55.1470720128312;
+        Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+Received: from mail-qk0-x22c.google.com (mail-qk0-x22c.google.com. [2607:f8b0:400d:c09::22c])
+        by mx.google.com with ESMTPS id i4si22565419qtd.91.2016.08.08.22.22.08
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22c is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) client-ip=2607:f8b0:400d:c09::22c;
+Received: by mail-qk0-x22c.google.com with SMTP id t7so3311335qkh.0
+        for <tech@unicommerce.com>; Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+X-Received: by 10.55.104.139 with SMTP id d133mr30852188qkc.126.1470720128097;
+ Mon, 08 Aug 2016 22:22:08 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.200.39.170 with HTTP; Mon, 8 Aug 2016 22:22:07 -0700 (PDT)
+From: Ashish Bansal <ashish@unicommerce.com>
+Date: Tue, 9 Aug 2016 10:52:07 +0530
+Message-ID: <CAMThih6TcPxYkNdHWneo=-TFRW9B5N_GJ7gURHDpKRxZSRH7=g@mail.gmail.com>
+Subject: [OLP] Do not initiate Build on Staging| Demo in progress <eom>
+To: "OLP.QA" <olp.qa@snapdeal.com>, Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c055e9cccb18b05399cb695
+X-Original-Sender: ashish@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c09::22c is neither permitted nor denied by best
+ guess record for domain of ashish@unicommerce.com) smtp.mailfrom=ashish@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--94eb2c055e9cccb18b05399cb695
+Content-Type: text/plain; charset=UTF-8
+
+Thanks  & Regards
+Ashish Bansal
+Quality Engineer
+Unicommerce e solution
+7838040773
+
+~ never back down !
+
+--94eb2c055e9cccb18b05399cb695
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:verdana,=
+sans-serif"><br clear=3D"all"></div><div><div class=3D"gmail_signature" dat=
+a-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div=
+><div dir=3D"ltr"><font face=3D"verdana, sans-serif">Thanks =C2=A0&amp; Reg=
+ards</font><div><font face=3D"verdana, sans-serif">Ashish Bansal=C2=A0</fon=
+t></div><div><font face=3D"verdana, sans-serif">Quality Engineer=C2=A0</fon=
+t></div><div><font face=3D"verdana, sans-serif">Unicommerce e solution=C2=
+=A0</font></div><div><font face=3D"verdana, sans-serif">7838040773</font></=
+div><div><font face=3D"verdana, sans-serif"><br></font></div><div><font fac=
+e=3D"verdana, sans-serif">~ never back down !</font></div></div></div></div=
+></div></div></div></div>
+</div>
+
+--94eb2c055e9cccb18b05399cb695--

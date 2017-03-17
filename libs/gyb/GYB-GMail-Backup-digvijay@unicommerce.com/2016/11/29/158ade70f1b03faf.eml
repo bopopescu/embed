@@ -1,0 +1,126 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.89.134 with SMTP id v6csp1354318qgd;
+        Mon, 28 Nov 2016 18:25:50 -0800 (PST)
+X-Received: by 10.13.225.151 with SMTP id k145mr28964225ywe.121.1480386350833;
+        Mon, 28 Nov 2016 18:25:50 -0800 (PST)
+Return-Path: <bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com>
+Received: from mail177-2.suw61.mandrillapp.com (mail177-2.suw61.mandrillapp.com. [198.2.177.2])
+        by mx.google.com with ESMTPS id i189si15548363ybc.35.2016.11.28.18.25.50
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 28 Nov 2016 18:25:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com designates 198.2.177.2 as permitted sender) client-ip=198.2.177.2;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.unicommerce.com;
+       dkim=pass header.i=@mandrillapp.com;
+       spf=pass (google.com: domain of bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com designates 198.2.177.2 as permitted sender) smtp.mailfrom=bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=e.unicommerce.com;
+ h=From:Subject:Reply-To:To:Message-Id:Date:MIME-Version:Content-Type; i=noreply@e.unicommerce.com;
+ bh=7nqJe2STbSsO4Cxehh03ziKo0gs=;
+ b=eIEZXQ64Sn1FqkKQ9TgFqHEerWlqtS7OWY9K0q6feEBWKs1cy23GDu7ztqXUDtIz9XAQs4+ivPeK
+   9bEWn00DV1TmJCwzvFOccQdEW/agG6XR/ShrhTPrL6Qf4o1hCPQ6eASB+NgeTVCsrOStBE17EzdR
+   Jg97QHq90o9gIIMk0cc=
+Received: from pmta06.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail177-2.suw61.mandrillapp.com id h7jjis22rtka for <digvijay@unicommerce.com>; Tue, 29 Nov 2016 02:25:50 +0000 (envelope-from <bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1480386350; h=From : 
+ Subject : Reply-To : To : Message-Id : Date : MIME-Version : 
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=GEGwEU5CHsauf//yU3lbamZ61mGOm6DCEwTkIcse9Ts=; 
+ b=RsBxOnJtP2oKh7mzkYMak7IackoKOUf96u39wgkFWZPY7+WXJeJcChZ92GVIsxQZxzKOH3
+ 0ChsV9yRVWQIQ18sYyJEhXLTKs5l9Vl2WKTXY7zW5AeywJpZDd10/i0kn5NZj64G/9jsR90o
+ 2EIVC0dwzFF6Zr481ph0Pk/7pBV/c=
+From: <noreply@e.unicommerce.com>
+Subject: Export Job Complete - Inventory Snapshot
+Return-Path: <bounce-md_30242679.583ce72e.v1-cdeec1fb39bc4ee09e2baf6f2647bfe4@mandrillapp.com>
+Received: from [54.169.119.113] by mandrillapp.com id cdeec1fb39bc4ee09e2baf6f2647bfe4; Tue, 29 Nov 2016 02:25:50 +0000
+Reply-To: <noreply@e.unicommerce.com>
+To: <digvijay@unicommerce.com>
+Message-Id: <503884414.888755.1480386349190.JavaMail.root@activemq1.unicommerce.infra>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30242679.cdeec1fb39bc4ee09e2baf6f2647bfe4
+X-Mandrill-User: md_30242679
+Date: Tue, 29 Nov 2016 02:25:50 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-gEr48gOrxFCprUj2QNigFA"
+
+--_av-gEr48gOrxFCprUj2QNigFA
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+          Task Result 
+    *Export:* Export Job Inventory Snapshot created by
+techsupport@unicommerce.com at Tue Nov 29 07:55:48 IST 2016   *Status :*
+SUCCESSFUL   *Message:* Export successful   *Export File Path:*
+https://unicommerce-export.s3.amazonaws.com/583ce72ce4b051ccb785146b_b68293=
+0d186bb370b7d75c76eb69fcd7.csv
+  
+    =A9 2012 Unicommerce eSolutions Pvt. Ltd. India
+ All brands are trademarks of their respective owners.
+
+--_av-gEr48gOrxFCprUj2QNigFA
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"width:600px; margin:0 auto; border:3px solid #cecece; padding=
+:2px; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10=
+px; ">
+<style>
+=09.text{
+=09color:#3c3b3b; font-size: 12px; font-family:Lucida Grande,Helvetica,Aria=
+l,Verdana,sans-serif;
+}
+</style>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"background:url(https://demo.unicommerce.com/img/backgrounds/bg-x.png) =
+repeat-x scroll 0 -220px transparent">
+=09<tbody>
+    =09<tr>
+        =09<td style=3D"padding:10px; border-bottom:1px solid #e6f0e9;"><im=
+g src=3D"https://demo.unicommerce.com/img/uniware.png"></td>
+        </tr>
+=09=09<tr>
+=09=09=09<td style=3D"padding:20px 10px">
+=09=09=09=09<div align=3D"left" style=3D"color:#3c3c3c; font-size: 18px; fo=
+nt-family:Lucida Grande,Helvetica,Arial,Verdana,sans-serif; padding-bottom:=
+10px">
+=09=09=09=09=09Task Result
+=09=09=09=09</div>
+=09=09=09=09<div style=3D"border:1px solid #f0f0f0;">
+                =09<table width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"8">
+                      <tr>
+                        <td class=3D"text"><strong>Export:</strong> Export =
+Job Inventory Snapshot created by techsupport@unicommerce.com at Tue Nov 29=
+ 07:55:48 IST 2016</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor=3D"#f2f2f2" class=3D"text"><strong>Stat=
+us :</strong> SUCCESSFUL</td>
+                      </tr>
+                      <tr>
+                        <td class=3D"text"><strong>Message:</strong> Export=
+ successful</td>
+                      </tr>
+                      <tr>
+                        <td bgcolor=3D"#f2f2f2" class=3D"text"><strong>Expo=
+rt File Path:</strong> https://unicommerce-export.s3.amazonaws.com/583ce72c=
+e4b051ccb785146b_b682930d186bb370b7d75c76eb69fcd7.csv</td>
+                      </tr>
+                    </table>
+=09=09=09  </div>
+=09=09=09</td>
+=09=09</tr>
+        <tr>
+        =09<td align=3D"center" style=3D"color:#bbbbbb; font-size: 11px; fo=
+nt-family:Lucida Grande,Helvetica,Arial,Verdana,sans-serif; padding-bottom:=
+20px">=A9 2012 Unicommerce eSolutions Pvt. Ltd. India<br />
+All brands are trademarks of their respective owners. </td>
+        </tr>
+=09</tbody>
+</table>
+</div>
+<div class=3D"C1" /><img src=3D"http://mandrillapp.com/track/open.php?u=3D3=
+0242679&id=3Dcdeec1fb39bc4ee09e2baf6f2647bfe4" height=3D"1" width=3D"1">
+
+--_av-gEr48gOrxFCprUj2QNigFA--
+

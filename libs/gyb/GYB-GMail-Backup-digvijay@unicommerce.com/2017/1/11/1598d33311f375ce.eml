@@ -1,0 +1,258 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp686776qgd;
+        Wed, 11 Jan 2017 03:04:19 -0800 (PST)
+X-Received: by 10.25.161.8 with SMTP id k8mr2644912lfe.165.1484132659473;
+        Wed, 11 Jan 2017 03:04:19 -0800 (PST)
+Return-Path: <kapil@unicommerce.com>
+Received: from mail-lf0-x231.google.com (mail-lf0-x231.google.com. [2a00:1450:4010:c07::231])
+        by mx.google.com with ESMTPS id 203si3263558lfk.346.2017.01.11.03.04.19
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 11 Jan 2017 03:04:19 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:4010:c07::231 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) client-ip=2a00:1450:4010:c07::231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:4010:c07::231 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) smtp.mailfrom=kapil@unicommerce.com
+Received: by mail-lf0-x231.google.com with SMTP id v186so80128167lfa.1
+        for <digvijay@unicommerce.com>; Wed, 11 Jan 2017 03:04:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=5URQV0et7b4T7BjDIPKWZswvJsTkoXFfE4+pQRPjyHI=;
+        b=YGtQwH6RbDMQ4LJdeICae14zWFxZk/Dlrr+x7VZO57KFNQsD+cR6FfV1+ci/4WMhL9
+         Sb6HR/9h0r7BjGEUPX3yJq9z78oKMs93lUosNxpVb7EUGgUn2ocbe9jienL2JhRH1YuX
+         RjZUCMzUgTkIbL4Rc1T6F0bMHRIm7CjLzp3bMynUxblDyEvLvkJ6jeMSrua0CV0xbz/b
+         SUpr5OhPD21U6Q2bKo6e+tRT3uVrLb4ZM0iJvWEuDeOS7iz6On4VOoUfFzgC9kz8wNAp
+         Ic7w8r/Mo38WK8kwnN314awQ/SeP0atbvBmumCG2fnkpi0bTey5H97UurNw90LKrdlDZ
+         1bYA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=5URQV0et7b4T7BjDIPKWZswvJsTkoXFfE4+pQRPjyHI=;
+        b=hEsctVGTmIslXSwvKaCSP/vQkhdXeGWokfOj1dRMDosQ/N8VTBnSZcd2HoiGOn0qC3
+         Y/PoSk92hw8VCoLHv2MCBlZp7aLLUUyNbd6ugjt0rZEx0IfAF15HkZJMSEJzV3dIWZMU
+         B1TNpI+t3agzPuPf8nn2I6zlxCFOGPRfawtQDicnchCjygfj7WpxfMA3hN16oSmixqPq
+         RMSsU6QD4e1Ew33X/AWxRB6MFM999FUh65M7tubV53tGhFa8teEWhN3+Z3EOmhXzxTWq
+         4v0P1sUcxEff/TJExfBYDK5ptzqkSpFx8DdsPSXflmZGcpFTfP1U7oxjvziJ67y+qjxm
+         DVyg==
+X-Gm-Message-State: AIkVDXI8t/LxFrTcC6vgyyqM/oSLYZNYB9DQDmiemS10OF9fpRboo7eiv413yOOnsyLPzC7GCCILeWskZsw1Tw==
+X-Received: by 10.46.76.26 with SMTP id z26mr3200482lja.9.1484132658998; Wed,
+ 11 Jan 2017 03:04:18 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.114.161.45 with HTTP; Wed, 11 Jan 2017 03:04:18 -0800 (PST)
+In-Reply-To: <CAOzor=6VSRgCwuwQ+Qf3h7VYZGX_r6Lo8ahQVahYc10d4-TPjA@mail.gmail.com>
+References: <CAO6BqLfvs=yVH5j-bCARkQSFvJei9HRWEmhp5zidS6yq5X5e+g@mail.gmail.com>
+ <CAJktTX4o3M7_1K_=11n7qaxej49qjX6vqBf8BX5YWNHvNj80vg@mail.gmail.com>
+ <CAOzor=7HTX2jX_L1ZCMgEgxhxQpEO5VpJ5FfkEKn6SDa-vgXHw@mail.gmail.com>
+ <CAJv2J3BDLfUhLjbJdEtaKb4SMZHFdS1QpcUe9G0au61=j8-qHA@mail.gmail.com>
+ <CAOzor=4wQRjGwsAeEnV72jToy+uPYi2f2CN5+d4vrgS4D5ONuw@mail.gmail.com>
+ <CAJv2J3BKSqvyDWZwsAxxo1gUHbezpOHpSc=Mx5qGVzddp6U62w@mail.gmail.com>
+ <CAOzor=7kdLBdYc6gBxwYZUOiV+t9b2Vp4PAoOv7UBLWhv2nWvw@mail.gmail.com>
+ <CAJv2J3DbwJc6-NEWtJA-Ctq2HE76ryhRF8JZ6wqaHULX5aAi5w@mail.gmail.com>
+ <CAJv2J3AFTRSuZ3jVuHJzr=rUCGTCLfA+j4jqy2+ef5D-PALUUg@mail.gmail.com>
+ <CAOzor=41OqgqW_QwFeNjzAA3TjqLHwBSLnLFYXBHdsDwjyUM9g@mail.gmail.com>
+ <CAKEHM652U7UVVDYEUdaZdRK1+uH9egScrcNe-D-nptYT7iDMDw@mail.gmail.com> <CAOzor=6VSRgCwuwQ+Qf3h7VYZGX_r6Lo8ahQVahYc10d4-TPjA@mail.gmail.com>
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Wed, 11 Jan 2017 16:34:18 +0530
+Message-ID: <CAOzor=5O8Zzbz9cXPvR+maxv96KMv2oy0TtrDcOzYc+5bt59GA@mail.gmail.com>
+Subject: Fwd: Reference to our interaction
+To: Sunny Agarwal <sunny@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045ea0acf085210545cf8f20
+
+--f403045ea0acf085210545cf8f20
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+FYI, possible API for inventory
+---------- Forwarded message ----------
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Wed, Aug 17, 2016 at 1:41 AM
+Subject: Re: Reference to our interaction
+To: Ankur Gupta <ankur@unicommerce.com>
+Cc: Varad Singhal <varad@unicommerce.com>, Vibhu Garg <vibhu@unicommerce.co=
+m
+>
+
+
+Hi Ankur,
+
+In product, there is a variable stock_quantity, we will have to manage the
+inventory using that. Please refer https://github.com/
+woothemes/woocommerce/issues/7673 this for further details.
+
+Regards,
+Kapil Makhija
+
+On Tue, Aug 16, 2016 at 4:52 PM, Ankur Gupta <ankur@unicommerce.com> wrote:
+
+> Hi kapil,
+>
+>
+> Apis for order and products are available but inventory api is not
+> available.
+>
+> So is there any POC from woocommerce ?
+>
+> On Sat, Aug 13, 2016 at 2:26 PM, Kapil Makhija <kapil@unicommerce.com>
+> wrote:
+>
+>> Hi Ankur,
+>>
+>> FYI, the API key details for Woocommerce. Please let me know if you need
+>> any further details to test Woocommerce.
+>>
+>> Regards,
+>> Kapil Makhija
+>> ---------- Forwarded message ----------
+>> From: GadgetsNCases Retail <info@gadgetsncases.in>
+>> Date: Sat, Aug 13, 2016 at 2:19 PM
+>> Subject: Re: Reference to our interaction
+>> To: Kapil Makhija <kapil@unicommerce.com>
+>> Cc: Praveen K Nair <praveenknair1983@gmail.com>, Manish Gupta <
+>> manish@unicommerce.com>, Rohit Singhal <rohitsingal1@gmail.com>
+>>
+>>
+>> Hekki Kapil,
+>>
+>> As discussed couple of days ago, PFB the WooCommerce API details for my
+>> store.  I'm sharing the woocommerece API Key & secret of my WebSite, whi=
+ch
+>> is already *LIVE*.
+>>
+>> *Website URL:* https://www.fidesbox.com
+>>
+>> So, please make sure you confirm with me if you need to create any test
+>> order & we can do it together on need basic.
+>>
+>> *Consumer Key:* ck_e9c7f289f518b12c67f570e3c611798bf24a559e
+>> *Consumer Secret:* cs_6bbdef52d4737cd4f02bfc4357f93d3dc31c10bd=E2=80=8B
+>>
+>> =E2=80=8BPlease let me know if you're looking for any other information.=
+  Thanks!=E2=80=8B
+>>
+>>
+>>
+>>
+>>
+>>
+>
+>
+> --
+> ANKUR
+> M.8287780606
+>
+
+
+
+--=20
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+
+
+--=20
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+--f403045ea0acf085210545cf8f20
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">FYI, possible API for inventory<br><div class=3D"gmail_quo=
+te">---------- Forwarded message ----------<br>From: <b class=3D"gmail_send=
+ername">Kapil Makhija</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:kapil@uni=
+commerce.com">kapil@unicommerce.com</a>&gt;</span><br>Date: Wed, Aug 17, 20=
+16 at 1:41 AM<br>Subject: Re: Reference to our interaction<br>To: Ankur Gup=
+ta &lt;<a href=3D"mailto:ankur@unicommerce.com">ankur@unicommerce.com</a>&g=
+t;<br>Cc: Varad Singhal &lt;<a href=3D"mailto:varad@unicommerce.com">varad@=
+unicommerce.com</a>&gt;, Vibhu Garg &lt;<a href=3D"mailto:vibhu@unicommerce=
+.com">vibhu@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr">Hi Ankur,<d=
+iv><br></div><div>In product, there is a variable stock_quantity, we will h=
+ave to manage the inventory using that. Please refer=C2=A0<a href=3D"https:=
+//github.com/woothemes/woocommerce/issues/7673" target=3D"_blank">https://g=
+ithub.com/<wbr>woothemes/woocommerce/issues/<wbr>7673</a> this for further =
+details.</div><div><br></div><div>Regards,</div><div>Kapil Makhija</div></d=
+iv><div class=3D"gmail_extra"><div><div class=3D"h5"><br><div class=3D"gmai=
+l_quote">On Tue, Aug 16, 2016 at 4:52 PM, Ankur Gupta <span dir=3D"ltr">&lt=
+;<a href=3D"mailto:ankur@unicommerce.com" target=3D"_blank">ankur@unicommer=
+ce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"=
+margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"=
+ltr"><div style=3D"font-family:arial,helvetica,sans-serif">Hi kapil,</div><=
+div style=3D"font-family:arial,helvetica,sans-serif"><br></div><div style=
+=3D"font-family:arial,helvetica,sans-serif"><br></div><div style=3D"font-fa=
+mily:arial,helvetica,sans-serif">Apis for order and products are available =
+but inventory api is not available.</div><div style=3D"font-family:arial,he=
+lvetica,sans-serif"><br></div><div style=3D"font-family:arial,helvetica,san=
+s-serif">So is there any POC from woocommerce ?</div></div><div class=3D"gm=
+ail_extra"><div><div class=3D"m_940183790295205336h5"><br><div class=3D"gma=
+il_quote">On Sat, Aug 13, 2016 at 2:26 PM, Kapil Makhija <span dir=3D"ltr">=
+&lt;<a href=3D"mailto:kapil@unicommerce.com" target=3D"_blank">kapil@unicom=
+merce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr">Hi Ankur,<div><br></div><div>FYI, the API key details for Woocomme=
+rce. Please let me know if you need any further details to test Woocommerce=
+.</div><div><br></div><div>Regards,</div><div>Kapil Makhija<br><div class=
+=3D"gmail_quote"><span>---------- Forwarded message ----------<br>From: <b =
+class=3D"gmail_sendername">GadgetsNCases Retail</b> <span dir=3D"ltr">&lt;<=
+a href=3D"mailto:info@gadgetsncases.in" target=3D"_blank">info@gadgetsncase=
+s.in</a>&gt;</span><br>Date: Sat, Aug 13, 2016 at 2:19 PM<br>Subject: Re: R=
+eference to our interaction<br></span>To: Kapil Makhija &lt;<a href=3D"mail=
+to:kapil@unicommerce.com" target=3D"_blank">kapil@unicommerce.com</a>&gt;<b=
+r>Cc: Praveen K Nair &lt;<a href=3D"mailto:praveenknair1983@gmail.com" targ=
+et=3D"_blank">praveenknair1983@gmail.com</a>&gt;, Manish Gupta &lt;<a href=
+=3D"mailto:manish@unicommerce.com" target=3D"_blank">manish@unicommerce.com=
+</a>&gt;, Rohit Singhal &lt;<a href=3D"mailto:rohitsingal1@gmail.com" targe=
+t=3D"_blank">rohitsingal1@gmail.com</a>&gt;<br><br><br><div dir=3D"ltr"><di=
+v style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif;font-size:small"=
+>Hekki Kapil,</div><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-=
+serif;font-size:small"><br></div><div style=3D"font-family:&quot;trebuchet =
+ms&quot;,sans-serif;font-size:small">As discussed couple of days ago, PFB t=
+he WooCommerce API details for my store.=C2=A0 I&#39;m sharing the woocomme=
+rece API Key &amp; secret of my WebSite, which is already <b><font color=3D=
+"#ff0000">LIVE</font></b>.</div><div style=3D"font-family:&quot;trebuchet m=
+s&quot;,sans-serif;font-size:small"><br></div><div style=3D"font-family:&qu=
+ot;trebuchet ms&quot;,sans-serif;font-size:small"><div><b>Website URL:</b>=
+=C2=A0<a href=3D"https://www.fidesbox.com" target=3D"_blank">https://www.fi=
+desbox.com</a></div><div><br></div></div><div style=3D"font-family:&quot;tr=
+ebuchet ms&quot;,sans-serif;font-size:small">So, please make sure you confi=
+rm with me if you need to create any test order &amp; we can do it together=
+ on need basic.</div><div style=3D"font-family:&quot;trebuchet ms&quot;,san=
+s-serif;font-size:small"><br></div><div style=3D"font-family:&quot;trebuche=
+t ms&quot;,sans-serif;font-size:small"><b>Consumer Key:</b>=C2=A0<span styl=
+e=3D"background-color:rgb(255,242,204)">ck_e9c7f289f518b12c67f570<wbr>e3c61=
+1798bf24a559e</span></div><div style=3D"font-family:&quot;trebuchet ms&quot=
+;,sans-serif;font-size:small"><b>Consumer Secret:</b>=C2=A0<font color=3D"#=
+000000" style=3D"background-color:rgb(255,242,204)">cs_6bbdef52d4737cd4f02<=
+wbr>bfc4357f93d3dc31c10bd</font>=E2=80=8B</div><div class=3D"gmail_extra"><=
+br></div><div class=3D"gmail_extra"><div style=3D"font-family:&quot;trebuch=
+et ms&quot;,sans-serif;font-size:small">=E2=80=8BPlease let me know if you&=
+#39;re looking for any other information.=C2=A0 Thanks!=E2=80=8B</div></div=
+><div class=3D"gmail_extra"><br></div><div class=3D"gmail_extra"><span><div=
+><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr">=
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><br><div><br></div></div=
+></div></div></div></div></div></div>
+<br></span><div><div><div class=3D"gmail_quote"><br></div></div></div></div=
+></div></div>
+</div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div></div></div><span c=
+lass=3D"m_940183790295205336HOEnZb"><font color=3D"#888888">-- <br><div dat=
+a-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>ANKUR<br></div>M.8287=
+780606<br></div></div>
+</font></span></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div></div></div><span c=
+lass=3D"">-- <br><div class=3D"m_940183790295205336gmail_signature" data-sm=
+artmail=3D"gmail_signature"><div dir=3D"ltr">Kapil Makhija<div>Director, St=
+rategy - Unicommerce</div><div>M: +91-9718470888</div></div></div>
+</span></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Kapil Makhija<div=
+>Director, Strategy - Unicommerce</div><div>M: +91-9718470888</div></div></=
+div>
+</div>
+
+--f403045ea0acf085210545cf8f20--

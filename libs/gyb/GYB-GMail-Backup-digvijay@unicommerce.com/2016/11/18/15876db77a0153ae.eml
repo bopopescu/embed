@@ -1,0 +1,232 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp761651qge;
+        Fri, 18 Nov 2016 01:54:04 -0800 (PST)
+X-Received: by 10.55.6.141 with SMTP id 135mr9320338qkg.79.1479462844312;
+        Fri, 18 Nov 2016 01:54:04 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qk0-x233.google.com (mail-qk0-x233.google.com. [2607:f8b0:400d:c09::233])
+        by mx.google.com with ESMTPS id k41si4693473qkh.316.2016.11.18.01.54.04
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Nov 2016 01:54:04 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::233 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c09::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::233 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qk0-x233.google.com with SMTP id n204so256299130qke.2
+        for <digvijay@unicommerce.com>; Fri, 18 Nov 2016 01:54:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=ZA0Q3xCpfKTTzZ0k5igxW9AWONuKJlh/77Be2v6tPmg=;
+        b=BO1FWZfc1O24fFQ/TVCoRZb/5oxjaUQnXqy4bS4BmCQ3Ah8c/BZpYfbXlyNwCp2LnH
+         gdjGtGG3lLRXLw1Fb2wX360ovCjiX94bWhsJ55rZW2msnNlftp1mQ3a6Y5iCmkkSLo1E
+         bDmispvA8OrHgQivap1l3xOoICKkGadS0F8wyvZ6rJ9XoZRc+xnM9d9YK+aN6cTcqPem
+         iuTP+2X/HNGhFiIA/zA3k7LJyGd5L/94BrusXNB7By1SFA7EN+5ggKLXZOfLn3KuMHzw
+         FYva66NGibhdGFPtldxf5j20P7jYC8xZ15g6wo3VZjOy1MnNLEV4PM8VLROT6KPgVh9e
+         5Sqw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=ZA0Q3xCpfKTTzZ0k5igxW9AWONuKJlh/77Be2v6tPmg=;
+        b=M3rPs20+LRjjRc1Qrg8gTVerajfkMuvFidHZ4Wf0S3BjZG3r3vt63klpYfZMdEuVLW
+         5r6D414TosC+7U8uFf95pAPS+88z+TxHaiqmlNaRkVO5stselfnRzrzausT8iDqPJQqx
+         G/y/N7l5SQWFpEWWJEOjd8EWpnMA3iQvQDMjnRzA47HVplP/5vYPoJo5ybdcwXrDw7QO
+         g1Ft4L0Kh8M1J3Zk8rEDKi6vk5P58+rUJIvNn0ODTbFSMlq7Ua93m+XdaL/Ln/WCLx2y
+         Dv+V44xkoby06U0qaRpRLY1hJHtWBlxwDdyH3AXm2gwuk7uG7l2uMZ6EYRfUDlDzofLe
+         eWWA==
+X-Gm-Message-State: AKaTC02VVXByG89JlC6J0t2rT1tVk58S+9f7IPJOXOqXrf3MR5GdnrTCp5ZTVRrEkqJMuGrjxBV1ut9n3gc2Qw==
+X-Received: by 10.55.16.147 with SMTP id 19mr9004134qkq.255.1479462844044;
+ Fri, 18 Nov 2016 01:54:04 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.148.48 with HTTP; Fri, 18 Nov 2016 01:54:03 -0800 (PST)
+In-Reply-To: <CAB-px3QSjaZgJvOPTzmmfzbQbYyMwGGRzefE0dz1o4UN6SzMsg@mail.gmail.com>
+References: <CAB-px3RdBwLq-D1M3yj-fq5A_GnuuHtipZqBYHbSdAV73i7Y3Q@mail.gmail.com>
+ <CAFD_XHFVq06MtvT=1RxrVkEkdwtfwBe401NbWTiLNHUGCWW=LA@mail.gmail.com> <CAB-px3QSjaZgJvOPTzmmfzbQbYyMwGGRzefE0dz1o4UN6SzMsg@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Fri, 18 Nov 2016 15:24:03 +0530
+Message-ID: <CAFD_XHG6gpsXnv=V2xDtJ1sgUrbsiRZv=dzsvZ_UB=p+R072KA@mail.gmail.com>
+Subject: Re: Provogue label issue
+To: Harsh Joshi <harsh@pigen.in>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>, Sourav Sarkar <sourav@pigen.in>, 
+	santosh.dalvi@provogue.com
+Content-Type: multipart/alternative; boundary=001a11475b104752e70541904971
+
+--001a11475b104752e70541904971
+Content-Type: text/plain; charset=UTF-8
+
+Ok, so it will be seller specific changes?
+
+On Fri, Nov 18, 2016 at 2:28 PM, Harsh Joshi <harsh@pigen.in> wrote:
+
+> Hi Varad,
+>
+> For provogue it would be essential to use only AWB number only on there
+> labels.
+>
+>
+>
+>  Sent with Mailtrack
+> <https://mailtrack.io/install?source=signature&lang=en&referral=harsh@pigen.in&idSignature=22>
+>
+> Best,
+> Harsh Joshi
+>
+> [image: stylio theme]
+>
+> Disclaimer:
+> "The information contained herein (including any accompanying documents)
+> is confidential and is intended solely for the addressee(s). If you have
+> erroneously received this message, please immediately delete it and notify
+> the sender. Also, if you are not the intended recipient, you are hereby
+> notified that any disclosure, copying, distribution or taking any action in
+> reliance on the contents of this message or any accompanying document is
+> strictly prohibited and is unlawful. The organization is not responsible
+> for any damage caused by a virus or alteration of the e-mail by a third
+> party or otherwise.
+>
+> On Fri, Nov 18, 2016 at 2:27 PM, Varad Singhal <varad@unicommerce.com>
+> wrote:
+>
+>> Hi Harsh,
+>>
+>> We are fetching label from gopigeon for all sellers as per current
+>> system's configurations.
+>>
+>> Please confirm if we need to remove it and only use your AWB number.
+>>
+>> Regards
+>>
+>> On Fri, Nov 18, 2016 at 1:35 PM, Harsh Joshi <harsh@pigen.in> wrote:
+>>
+>>> Hi Varad,
+>>>
+>>>
+>>> Please check with Provogue label it is not coming customized according
+>>> to what they have designed on uni commerce. Current label are coming
+>>> according to gopigeon format.
+>>>
+>>>
+>>> Best,
+>>> Harsh Joshi
+>>>
+>>> [image: stylio theme]
+>>>
+>>> Disclaimer:
+>>> "The information contained herein (including any accompanying documents)
+>>> is confidential and is intended solely for the addressee(s). If you have
+>>> erroneously received this message, please immediately delete it and notify
+>>> the sender. Also, if you are not the intended recipient, you are hereby
+>>> notified that any disclosure, copying, distribution or taking any action in
+>>> reliance on the contents of this message or any accompanying document is
+>>> strictly prohibited and is unlawful. The organization is not responsible
+>>> for any damage caused by a virus or alteration of the e-mail by a third
+>>> party or otherwise.
+>>>
+>>>
+>>>
+>>>  Sent with Mailtrack
+>>> <https://mailtrack.io/install?source=signature&lang=en&referral=harsh@pigen.in&idSignature=22>
+>>>
+>>
+>>
+>
+
+--001a11475b104752e70541904971
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Ok, so it will be seller specific changes?</div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Fri, Nov 18, 2016 at 2:2=
+8 PM, Harsh Joshi <span dir=3D"ltr">&lt;<a href=3D"mailto:harsh@pigen.in" t=
+arget=3D"_blank">harsh@pigen.in</a>&gt;</span> wrote:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr">Hi Varad,<div><br></div><div>For provogue it=
+ would be essential to use only AWB number only on there labels.<br><br><br=
+><br><div class=3D"m_5117490842439262373mt-signature"><img src=3D"https://s=
+3-eu-west-1.amazonaws.com/mailtrack-crx/icon-signature.png" width=3D"16" he=
+ight=3D"14">=C2=A0<font color=3D"#999999" class=3D"m_5117490842439262373mt-=
+signature-text">Sent with <a href=3D"https://mailtrack.io/install?source=3D=
+signature&amp;lang=3Den&amp;referral=3Dharsh@pigen.in&amp;idSignature=3D22"=
+ class=3D"m_5117490842439262373mt-install" target=3D"_blank">Mailtrack</a><=
+/font></div></div><img width=3D"0" height=3D"0" class=3D"m_5117490842439262=
+373mailtrack-img" src=3D"https://mailtrack.io/trace/mail/8ac4a592b8bbde3ff8=
+0063b10c3854ecdd13b4f3.png?u=3D747180"></div><div class=3D"gmail_extra"><sp=
+an class=3D""><br clear=3D"all"><div><div class=3D"m_5117490842439262373gma=
+il_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div=
+ dir=3D"ltr"><div style=3D"font-size:12.8px"><font face=3D"georgia, serif">=
+Best,</font></div><div style=3D"font-size:12.8px"><font face=3D"georgia, se=
+rif">Harsh Joshi</font></div><div style=3D"font-size:12.8px"><br></div><div=
+ style=3D"font-size:12.8px"><img src=3D"http://pigen.in/img/pigen-home-logo=
+-final-4.png" alt=3D"stylio theme" style=3D"border:0px;vertical-align:middl=
+e">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<br><span styl=
+e=3D"font-family:Arial;font-size:10px"><br></span></div><div style=3D"font-=
+size:12.8px"><span style=3D"font-family:Arial;font-size:10px">Disclaimer:</=
+span><br style=3D"font-family:Arial;font-size:10px"><span style=3D"font-fam=
+ily:Arial;font-size:10px">&quot;The information contained herein (including=
+ any accompanying documents) is confidential and is intended solely for the=
+ addressee(s). If you have erroneously received this message, please immedi=
+ately delete it and notify the sender. Also, if you are not the intended re=
+cipient, you are hereby notified that any disclosure, copying, distribution=
+ or taking any action in reliance on the contents of this message or any ac=
+companying document is strictly prohibited and is unlawful. The organizatio=
+n is not responsible for any damage caused by a virus or alteration of the =
+e-mail by a third party or otherwise.</span></div></div></div></div></div><=
+/div>
+<br></span><div><div class=3D"h5"><div class=3D"gmail_quote">On Fri, Nov 18=
+, 2016 at 2:27 PM, Varad Singhal <span dir=3D"ltr">&lt;<a href=3D"mailto:va=
+rad@unicommerce.com" target=3D"_blank">varad@unicommerce.com</a>&gt;</span>=
+ wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bor=
+der-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Harsh,<div><b=
+r></div><div>We are fetching label from gopigeon for all sellers as per cur=
+rent system&#39;s configurations.</div><div><br></div><div>Please confirm i=
+f we need to remove it and only use your AWB number.</div><div><br></div><d=
+iv>Regards</div></div><div class=3D"m_5117490842439262373HOEnZb"><div class=
+=3D"m_5117490842439262373h5"><div class=3D"gmail_extra"><br><div class=3D"g=
+mail_quote">On Fri, Nov 18, 2016 at 1:35 PM, Harsh Joshi <span dir=3D"ltr">=
+&lt;<a href=3D"mailto:harsh@pigen.in" target=3D"_blank">harsh@pigen.in</a>&=
+gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 =
+0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Var=
+ad,<div><br></div><div><br></div><div>Please check with Provogue label it i=
+s not coming customized according to what they have designed on uni commerc=
+e. Current label are coming according to gopigeon format.=C2=A0</div><div><=
+br></div><div><br clear=3D"all"><div><div class=3D"m_5117490842439262373m_5=
+004607623193859415m_-5397334688261667444gmail_signature" data-smartmail=3D"=
+gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"font-=
+size:12.8px"><font face=3D"georgia, serif">Best,</font></div><div style=3D"=
+font-size:12.8px"><font face=3D"georgia, serif">Harsh Joshi</font></div><di=
+v style=3D"font-size:12.8px"><br></div><div style=3D"font-size:12.8px"><img=
+ src=3D"http://pigen.in/img/pigen-home-logo-final-4.png" alt=3D"stylio them=
+e" style=3D"border:0px;vertical-align:middle">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<br><span style=3D"font-family:Arial;font-siz=
+e:10px"><br></span></div><div style=3D"font-size:12.8px"><span style=3D"fon=
+t-family:Arial;font-size:10px">Disclaimer:</span><br style=3D"font-family:A=
+rial;font-size:10px"><span style=3D"font-family:Arial;font-size:10px">&quot=
+;The information contained herein (including any accompanying documents) is=
+ confidential and is intended solely for the addressee(s). If you have erro=
+neously received this message, please immediately delete it and notify the =
+sender. Also, if you are not the intended recipient, you are hereby notifie=
+d that any disclosure, copying, distribution or taking any action in relian=
+ce on the contents of this message or any accompanying document is strictly=
+ prohibited and is unlawful. The organization is not responsible for any da=
+mage caused by a virus or alteration of the e-mail by a third party or othe=
+rwise.</span></div></div></div></div></div></div>
+<br><br><br><div class=3D"m_5117490842439262373m_5004607623193859415m_-5397=
+334688261667444mt-signature"><img src=3D"https://s3-eu-west-1.amazonaws.com=
+/mailtrack-crx/icon-signature.png" width=3D"16" height=3D"14">=C2=A0<font c=
+olor=3D"#999999" class=3D"m_5117490842439262373m_5004607623193859415m_-5397=
+334688261667444mt-signature-text">Sent with <a href=3D"https://mailtrack.io=
+/install?source=3Dsignature&amp;lang=3Den&amp;referral=3Dharsh@pigen.in&amp=
+;idSignature=3D22" class=3D"m_5117490842439262373m_5004607623193859415m_-53=
+97334688261667444mt-install" target=3D"_blank">Mailtrack</a></font></div></=
+div><img width=3D"0" height=3D"0" class=3D"m_5117490842439262373m_500460762=
+3193859415m_-5397334688261667444mailtrack-img"></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div></div></div>
+</blockquote></div><br></div>
+
+--001a11475b104752e70541904971--

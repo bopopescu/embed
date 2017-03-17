@@ -1,0 +1,140 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2042343qgd;
+        Tue, 13 Dec 2016 00:10:06 -0800 (PST)
+X-Received: by 10.200.0.132 with SMTP id c4mr27225139qtg.44.1481616606269;
+        Tue, 13 Dec 2016 00:10:06 -0800 (PST)
+Return-Path: <sagar@unicommerce.com>
+Received: from mail-qt0-x232.google.com (mail-qt0-x232.google.com. [2607:f8b0:400d:c0d::232])
+        by mx.google.com with ESMTPS id b18si27675908qtc.75.2016.12.13.00.10.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Dec 2016 00:10:06 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::232 is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) client-ip=2607:f8b0:400d:c0d::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::232 is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) smtp.mailfrom=sagar@unicommerce.com
+Received: by mail-qt0-x232.google.com with SMTP id p16so99704163qta.0
+        for <digvijay@unicommerce.com>; Tue, 13 Dec 2016 00:10:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=w7deyhFu34cmeMYJ7qqhh8ym9a04jP0STGp1cFqsPag=;
+        b=p7JVa3MAjXVjONj+7fB1JqkFucw0+g9koCkSTC1qDSwICbIqGhBQM8fHJNqxL1bU51
+         3opMS2IAiK8+txKrA1EpWYsRnQafgD8TZFoEw1F/La0UQUvkBr8NEYJAxsb/qUhBMQxN
+         4U9z2/arwF3ISkRaPRcLLgjmihRRpOZ8seWjTSxJ62Cljboz1V6wl92nfcQ7pbvx6o3G
+         4Mx0HzhclYyAwi9wXobbK8TZPnl+vHGMkAoZfDqdvtZSiWnKgftZgvOgvDvu9L8BnRFG
+         ldeC0ZVCe+oHDHR9iIsICry5bUdA/VaH617eTqAQ6QWZlOGZQ01yO/jZpPxS5Kjxx+Pv
+         pxOA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=w7deyhFu34cmeMYJ7qqhh8ym9a04jP0STGp1cFqsPag=;
+        b=jgLjV49TfE9GnaS8oZLNKazPG/0RIeLT3hfXp5Z7cVitZte0aeSJr22mAd+x7tcUBG
+         2Clx2DiQwQu6e68QU0A9UvKY/KY2soXXailRPtp8VQYtI8v0CRXVN05hybyLz98UyiM2
+         4ZKi3ioJUDL3tsuizjFfpeeL6T2AJa+44mKfIU6Yg3xQ+YHAE6SqtzokWmCu/Ra34Jwu
+         hbKnONXzAPiUqV9hUNMLGFSStgmTFst4T+X/dQlg0gPPkJ8m0CbpA0eH/vZkdXaJlZkF
+         fRKtFgS/HzRcAGbdFelI12a7I3NgIyMoyaMIq+FcHc9xeGeVWzunvktDipbBeVSxqSoQ
+         xIUQ==
+X-Gm-Message-State: AKaTC00TZ2BAbpNHhfia96BV0emk+sHcCk0KqWjkaDIMZoSP/wbhYZ1Gg1acE73qI9PLC4qjxTyEw4zN/BTn9w==
+X-Received: by 10.200.35.139 with SMTP id q11mr91634464qtq.274.1481616605749;
+ Tue, 13 Dec 2016 00:10:05 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.140.39.203 with HTTP; Tue, 13 Dec 2016 00:10:05 -0800 (PST)
+In-Reply-To: <001a114188c23c99a30538fdf915@google.com>
+References: <0f57b82a-ca77-4599-92b5-f83e633b9f42@docs-share.google.com> <001a114188c23c99a30538fdf915@google.com>
+From: Sagar Sahni <sagar@unicommerce.com>
+Date: Tue, 13 Dec 2016 13:40:05 +0530
+Message-ID: <CAAgrUr8gvWW8Oa=-ce1yGwkiCDYLtOSu1VdsqFUGZ7b2tyDWXw@mail.gmail.com>
+Subject: Re: UniwareInstrumentation-1.0-jar-with-dependencies.jar
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114162847ab081054385bf93
+
+--001a114162847ab081054385bf93
+Content-Type: text/plain; charset=UTF-8
+
+On Mon, Aug 1, 2016 at 1:29 PM, <sagar@unicommerce.com> wrote:
+
+> Sagar Sahni <sagar@unicommerce.com> has shared the following file:
+> UniwareInstrumentation-1.0-jar-with-dependencies.jar
+> <https://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view?usp=sharing_eid&ts=579f0146>
+> Open
+> <https://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view?usp=sharing_eid&ts=579f0146>
+> This is a courtesy copy of an email for your record only. It's not the
+> same email your collaborators received. Click here
+> <https://support.google.com/drive/?p=courtesy_copy> to learn more. [image:
+> Logo for Google Drive] <https://drive.google.com>
+>
+
+--001a114162847ab081054385bf93
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br></div><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Mon, Aug 1, 2016 at 1:29 PM,  <span dir=3D"ltr">&lt;<a href=3D=
+"mailto:sagar@unicommerce.com" target=3D"_blank">sagar@unicommerce.com</a>&=
+gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 =
+0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div><div style=3D"widt=
+h:100%;padding:24px 0 16px 0;background-color:#f5f5f5;text-align:center"><d=
+iv style=3D"display:inline-block;width:90%;max-width:680px;min-width:280px;=
+text-align:left;font-family:Roboto,Arial,Helvetica,sans-serif"><div style=
+=3D"height:0px" dir=3D"ltr"></div><div style=3D"display:block;padding:0 2px=
+"><div style=3D"display:block;background:#fff;height:2px"></div></div><div =
+style=3D"border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0"><div=
+ style=3D"padding:24px 32px 24px 32px;background:#fff;border-right:1px soli=
+d #eaeaea;border-left:1px solid #eaeaea" dir=3D"ltr"><div style=3D"font-siz=
+e:14px;line-height:18px;color:#444"><a href=3D"mailto:sagar@unicommerce.com=
+" style=3D"color:inherit;text-decoration:none" target=3D"_blank">Sagar Sahn=
+i</a> has shared the following file:</div><div style=3D"height:10px"></div>=
+<div style=3D"font-size:18px;display:table"><div style=3D"display:table-row=
+;border-bottom:4px solid #fff"><span style=3D"display:table-cell"><div styl=
+e=3D"height:32px"><img src=3D"https://ssl.gstatic.com/docs/documents/share/=
+images/services/generic-1.png" style=3D"vertical-align:middle;max-width:24p=
+x"></div></span><span style=3D"display:table-cell;padding-left:12px"><a hre=
+f=3D"https://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGt=
+CeFF3REE/view?usp=3Dsharing_eid&amp;ts=3D579f0146" style=3D"color:#3367d6;t=
+ext-decoration:none;vertical-align:middle" target=3D"_blank">UniwareInstrum=
+entation-1.0-<wbr>jar-with-dependencies.jar</a><div></div></span></div></di=
+v><div style=3D"height:32px"></div><div><a href=3D"https://drive.google.com=
+/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view?usp=3Dsharing_e=
+id&amp;ts=3D579f0146" style=3D"background-color:#4d90fe;border:1px solid #3=
+079ed;border-radius:2px;color:white;display:inline-block;font-family:Roboto=
+,Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;height:29px;lin=
+e-height:29px;min-width:54px;outline:0px;padding:0 8px;text-align:center;te=
+xt-decoration:none" target=3D"_blank">Open</a></div></div></div><table styl=
+e=3D"width:100%;border-collapse:collapse"><tbody><tr><td style=3D"padding:0=
+px"><table style=3D"border-collapse:collapse;width:3px"><tbody><tr height=
+=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><td w=
+idth=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" b=
+gcolor=3D"#e5e5e5" style=3D"padding:0px"></td></tr><tr height=3D"1"><td wid=
+th=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td><td width=3D"1" bgc=
+olor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#eae=
+aea" style=3D"padding:0px"></td></tr><tr height=3D"1"><td width=3D"1" bgcol=
+or=3D"#f5f5f5" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f=
+0" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"=
+padding:0px"></td></tr></tbody></table></td><td style=3D"width:100%;padding=
+:0px"><div style=3D"height:1px;width:auto;border-top:1px solid #ddd;backgro=
+und:#eaeaea;border-bottom:1px solid #f0f0f0"></div></td><td style=3D"paddin=
+g:0px"><table style=3D"border-collapse:collapse;width:3px"><tbody><tr heigh=
+t=3D"1"><td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"padding:0px"></td><td =
+width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" =
+bgcolor=3D"#f0f0f0" style=3D"padding:0px"></td></tr><tr height=3D"1"><td wi=
+dth=3D"1" bgcolor=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" bg=
+color=3D"#eaeaea" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0=
+f0f0" style=3D"padding:0px"></td></tr><tr height=3D"1"><td width=3D"1" bgco=
+lor=3D"#f0f0f0" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f0f0=
+f0" style=3D"padding:0px"></td><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D=
+"padding:0px"></td></tr></tbody></table></td></tr></tbody></table><table st=
+yle=3D"padding:14px 10px 0 10px" dir=3D"ltr"><tbody><tr><td style=3D"width:=
+100%;font-size:11px;font-family:Roboto,Arial,Helvetica,sans-serif;color:#64=
+6464;line-height:20px;min-height:40px;vertical-align:middle">This is a cour=
+tesy copy of an email for your record only. It&#39;s not the same email you=
+r collaborators received. Click <a href=3D"https://support.google.com/drive=
+/?p=3Dcourtesy_copy" target=3D"_blank">here</a> to learn more.</td><td styl=
+e=3D"padding-left:20px;vertical-align:middle"><a href=3D"https://drive.goog=
+le.com" target=3D"_blank"><img src=3D"https://www.gstatic.com/images/brandi=
+ng/googlelogo/1x/googlelogo_tm_black54_color_96x40dp.png" width=3D"96" alt=
+=3D"Logo for Google Drive" border=3D"0"></a></td></tr></tbody></table></div=
+></div></div></blockquote></div><br></div>
+
+--001a114162847ab081054385bf93--

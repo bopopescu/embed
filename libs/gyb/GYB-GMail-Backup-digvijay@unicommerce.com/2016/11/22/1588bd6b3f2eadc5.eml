@@ -1,0 +1,160 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp2146004qge;
+        Tue, 22 Nov 2016 03:40:53 -0800 (PST)
+X-Received: by 10.107.133.206 with SMTP id p75mr7123692ioi.175.1479814853203;
+        Tue, 22 Nov 2016 03:40:53 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id j188si2407900ith.60.2016.11.22.03.40.52
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 22 Nov 2016 03:40:53 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uAMBepG8007105;
+	Tue, 22 Nov 2016 17:10:51 +0530
+Date: Tue, 22 Nov 2016 17:10:51 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1426731436.86.1479814851298.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareAccountTest #233
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareAccountTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/233/Changes:
+
+[digvijay] Promo refactored
+
+------------------------------------------
+Started by user digvijay
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/UniwareAccounts.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/UniwareAccounts.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/UniwareAccounts.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 47da1909d48e977067304fcd08b69446f26baf37 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 47da1909d48e977067304fcd08b69446f26baf37
+ > git rev-list 87a60c6eaa0146042e2d19b8b9e6e4ca13a59ddf # timeout=10
+Waiting for the completion of UniwareCommon7
+UniwareCommon7 #20 completed. Result was SUCCESS
+Waiting for the completion of UniwareUIAccounts
+UniwareUIAccounts #140 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareAccountTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] UniwareAccounts
+[INFO] UniwareAccountCore
+[INFO] UniwareAccountServices
+[INFO] UniwareAccount Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccounts 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccounts ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccounts ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccountCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/src/main/resources>
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 206 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/classes>
+[INFO] 
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareAccountCore ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding files
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareAccountCore ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareAccountCore ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareAccountCore ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareAccountCore ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountCore/target/UniwareAccountCore-1.0.jar>
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareAccountServices 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareAccountServices ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareAccountServices ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareAccountServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareAccountServices ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 133 source files to <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/target/classes>
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java>: <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java> uses or overrides a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/pdf/impl/PdfDocumentServiceImpl.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/configuration/ExportJobConfiguration.java>: Some input files use unchecked or unsafe operations.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/services/configuration/ExportJobConfiguration.java>: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/dao/saleorder/impl/SaleOrderDaoImpl.java>:[17,8] com.uniaccounts.dao.saleorder.impl.SaleOrderDaoImpl is not abstract and does not override abstract method getAllSaleOrderWithPromo(java.lang.String,java.lang.Integer) in com.uniaccounts.dao.saleorder.ISaleOrderDao
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] UniwareAccounts .................................... SUCCESS [  0.293 s]
+[INFO] UniwareAccountCore ................................. SUCCESS [  5.537 s]
+[INFO] UniwareAccountServices ............................. FAILURE [  2.053 s]
+[INFO] UniwareAccount Webapp .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.034 s
+[INFO] Finished at: 2016-11-22T11:40:51+00:00
+[INFO] Final Memory: 34M/261M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniwareAccountServices: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/ws/UniwareAccountServices/src/main/java/com/uniaccounts/dao/saleorder/impl/SaleOrderDaoImpl.java>:[17,8] com.uniaccounts.dao.saleorder.impl.SaleOrderDaoImpl is not abstract and does not override abstract method getAllSaleOrderWithPromo(java.lang.String,java.lang.Integer) in com.uniaccounts.dao.saleorder.ISaleOrderDao
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UniwareAccountServices
+Build step 'Invoke top-level Maven targets' marked build as failure

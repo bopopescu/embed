@@ -1,0 +1,119 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.242.3 with SMTP id j3csp21168ith;
+        Thu, 25 Aug 2016 23:08:12 -0700 (PDT)
+X-Received: by 10.157.41.226 with SMTP id g31mr862749otd.69.1472191691628;
+        Thu, 25 Aug 2016 23:08:11 -0700 (PDT)
+Return-Path: <tech+bncBCMKPJGHRQMBBSNZ766QKGQE4NUCZMY@unicommerce.com>
+Received: from mail-oi0-x245.google.com (mail-oi0-x245.google.com. [2607:f8b0:4003:c06::245])
+        by mx.google.com with ESMTPS id w128si3739843oib.124.2016.08.25.23.08.09
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Aug 2016 23:08:11 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::245 is neither permitted nor denied by best guess record for domain of tech+bncbcmkpjghrqmbbsnz766qkgqe4nuczmy@unicommerce.com) client-ip=2607:f8b0:4003:c06::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::245 is neither permitted nor denied by best guess record for domain of tech+bncbcmkpjghrqmbbsnz766qkgqe4nuczmy@unicommerce.com) smtp.mailfrom=tech+bncBCMKPJGHRQMBBSNZ766QKGQE4NUCZMY@unicommerce.com
+Received: by mail-oi0-x245.google.com with SMTP id w136sf146589643oie.2
+        for <digvijay@unicommerce.com>; Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=Rq9V0vTts4oaaY88rt+kaQZyOi2//wmv+8l+5rQm7ug=;
+        b=uamAFLMyd2xSwYFXV/1wX+lnW3Nq1FJZT51f2mlW3WSyKyu/Dnq4H1MH+NQKD6M9Im
+         ueg8PBGo25VcnaMgSgrU0n+bs1A02g5FQlIg3kYKLMDhniZDgP3nJUp8XsZsOWAaqkc7
+         Lky1BW4oDxj2yU/k1MAAWSSfInpJivESV+RLXoZkAYbW5+RDTfsaQNUefr1mRagGyOTL
+         DPy/Ol5LKCHxptt+G9hQTC2OKIF1/OZ5aakQKb//xbV4CYBrQRgwzvKKOLcIsoRSe8Ea
+         1pUdkft61ItZi24OaeRYKAQtD6cfozV4rAbjbvF1B+Wa93hwAqAMzoupVKg3g5LlGPxO
+         CDoA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=Rq9V0vTts4oaaY88rt+kaQZyOi2//wmv+8l+5rQm7ug=;
+        b=PW5WZb8j87TaMFSca9SjYnVz8Cy55sEo4z70PxNVDECq8f/YS5JhtLFqasQj/8Dt1m
+         VtdCSEsq++XwtS7Pc4S+p1RpIACOuYr8zJrCqSW7d2K1RCKx5rPQPiUGUI7p2K+KFyUX
+         mLKyeukjVVNRz2+rw8G9FLgxejAZMlTusb/xsm6J94XTX6xCscqYK50ornV1yLEzKxFO
+         vL9PlGL6k22jTH4sqZWRUHsnaRU1VANdlbwCsAv6xn+8BAZjCQgEtH0R1pxGFYRT0n5k
+         5nSpQBPqKhKO6AAT9HslUAeo8nUlAV7UY2TxFUj8UE2Q9jKmUp780LwWovx8RV2fqru6
+         8PXg==
+X-Gm-Message-State: AE9vXwMTymjdB3HfreC4b6es1kRhrhtbIs14o9se939I9u39ogFYYU47/MqOHh9Vq8sg/A==
+X-Received: by 10.107.6.81 with SMTP id 78mr1458829iog.1.1472191689832;
+        Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.39.36 with SMTP id r33ls2518068ota.28.gmail; Thu, 25 Aug
+ 2016 23:08:09 -0700 (PDT)
+X-Received: by 10.55.167.69 with SMTP id q66mr1307982qke.287.1472191689679;
+        Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+Received: from mail-qt0-x231.google.com (mail-qt0-x231.google.com. [2607:f8b0:400d:c0d::231])
+        by mx.google.com with ESMTPS id n13si13206026qta.15.2016.08.25.23.08.09
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of ashish@unicommerce.com) client-ip=2607:f8b0:400d:c0d::231;
+Received: by mail-qt0-x231.google.com with SMTP id u25so33451037qtb.1
+        for <tech@unicommerce.com>; Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+X-Received: by 10.200.47.92 with SMTP id k28mr1428437qta.50.1472191689431;
+ Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.200.39.170 with HTTP; Thu, 25 Aug 2016 23:08:09 -0700 (PDT)
+From: Ashish Bansal <ashish@unicommerce.com>
+Date: Fri, 26 Aug 2016 11:38:09 +0530
+Message-ID: <CAMThih5-1m=zK2_NvtUscuU=pmWrZV97ui-HAVrO0R3g0qq0zw@mail.gmail.com>
+Subject: do not build OLP Staging | Demo is going on
+To: Tech Team <tech@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>, 
+	"OLP.QA" <olp.qa@snapdeal.com>
+Content-Type: multipart/alternative; boundary=001a11356d62b0c154053af35627
+X-Original-Sender: ashish@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best
+ guess record for domain of ashish@unicommerce.com) smtp.mailfrom=ashish@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a11356d62b0c154053af35627
+Content-Type: text/plain; charset=UTF-8
+
+Hello Team ,
+
+Do not initiate build on staging demo is going on . Will communicate once
+demo is over .
+
+Thanks  & Regards
+Ashish Bansal
+Quality Engineer
+Unicommerce e solution
+7838040773
+
+~ never back down !
+
+--001a11356d62b0c154053af35627
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:verdana,=
+sans-serif">Hello Team ,=C2=A0</div><div class=3D"gmail_default" style=3D"f=
+ont-family:verdana,sans-serif"><br></div><div class=3D"gmail_default" style=
+=3D"font-family:verdana,sans-serif">Do not initiate build on staging demo i=
+s going on . Will communicate once demo is over .</div><div class=3D"gmail_=
+default" style=3D"font-family:verdana,sans-serif"><br></div><div><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv><div dir=3D"ltr"><div><div dir=3D"ltr"><font face=3D"verdana, sans-serif=
+">Thanks =C2=A0&amp; Regards</font><div><font face=3D"verdana, sans-serif">=
+Ashish Bansal=C2=A0</font></div><div><font face=3D"verdana, sans-serif">Qua=
+lity Engineer=C2=A0</font></div><div><font face=3D"verdana, sans-serif">Uni=
+commerce e solution=C2=A0</font></div><div><font face=3D"verdana, sans-seri=
+f">7838040773</font></div><div><font face=3D"verdana, sans-serif"><br></fon=
+t></div><div><font face=3D"verdana, sans-serif">~ never back down !</font><=
+/div></div></div></div></div></div></div></div>
+</div>
+
+--001a11356d62b0c154053af35627--

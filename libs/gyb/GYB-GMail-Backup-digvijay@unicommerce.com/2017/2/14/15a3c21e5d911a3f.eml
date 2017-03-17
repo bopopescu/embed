@@ -1,0 +1,123 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1378628qgu;
+        Tue, 14 Feb 2017 02:18:58 -0800 (PST)
+X-Received: by 10.157.59.72 with SMTP id z66mr14386257otb.191.1487067538651;
+        Tue, 14 Feb 2017 02:18:58 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x235.google.com (mail-oi0-x235.google.com. [2607:f8b0:4003:c06::235])
+        by mx.google.com with ESMTPS id c197si55604oib.26.2017.02.14.02.18.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Feb 2017 02:18:58 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::235 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::235 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x235.google.com with SMTP id w204so65564321oiw.0
+        for <digvijay@unicommerce.com>; Tue, 14 Feb 2017 02:18:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=T5GoKx6wsdMzFCBiJROSvR9xinGbuUZASdoqsHDgUjY=;
+        b=Oe9IiuGDNa7C263jV3bhmb6mOT6pY7w5FGJ+eOEZPs+GAw9h7LTZN8BfMlRNZs0naf
+         2bkBfXfpnZjit74z3MCk/wZkxCH+UcJd3rUVll2HQ7M7oYMSI7bW9wbdh/6CBHrQYvIc
+         Crzz8RUOiXhhrmtIYFxASiTlynVoizOAfU8kw3/uMDp+7150IjZ7SEbUYJbea8hr3haD
+         jY+gb2bM7zDnsgmXUd+UIvi+Jrqi0r4sJ3Vbc7nzvxeFwaeKvKHseCG4l7hY0MxxVVvv
+         ODk2wsiQxa+rEKn6behxliGSkVidoemMz6kq1FNlwl9j/nhZO0sZvbbRAHR9X2HKdZnO
+         zVQA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=T5GoKx6wsdMzFCBiJROSvR9xinGbuUZASdoqsHDgUjY=;
+        b=GMlg+72zIGxci8osmWE2/zin89ZT/MlHhMRKK2gfb7B9ZnzS4Nmb3hgWYQnKrCWCt+
+         J/C6XCb/c1whRp1bAXT8RZVKRf3dZJqwTnPdrB9aSdHv+jo334IiQ8BgI2i5q4hrQIUQ
+         YXsQGLB81e2KZum38tSV0OJjTwmr5Sldbqe4gkP4780GdIllK8CKeAM1C8I6Se7J3pa3
+         +1uV8Vmvh/5MSQiXksGNYzMiRz6bSrTvf7HXSOUyUEuCnT2q/G72kVhW0tK6EUryZeDH
+         +lO/bbf6t7tgTt7PBUKDP2RIrkx0i9iFAjDvEFgNfNr6Z9cV4VgyUPIovwzlMKxYRPDR
+         TJNg==
+X-Gm-Message-State: AMke39nt4xgeVsOEh5cyg1C5JjWbDJIsOtAmob+P0QEbo4BgpPiDtGV0Q1ZY4WDcFHQneeMsmqsxudMWhw431g==
+X-Received: by 10.202.197.135 with SMTP id v129mr13807869oif.131.1487067538035;
+ Tue, 14 Feb 2017 02:18:58 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.50.225 with HTTP; Tue, 14 Feb 2017 02:18:57 -0800 (PST)
+In-Reply-To: <CAJF3soqhtnUprX0DR9Wx_in-LVVehZRngmqN9pAYb=1TaNfjqQ@mail.gmail.com>
+References: <CAJF3soq+ZRb2je+cbVZib_+pFuSzBeNtj1Fddz52BvWRRp7_5g@mail.gmail.com>
+ <CA+zaFGhBZgQcYpgf=xMDw+GevoqTCMGKHHY+2o2tzW1D5CU2Vw@mail.gmail.com> <CAJF3soqhtnUprX0DR9Wx_in-LVVehZRngmqN9pAYb=1TaNfjqQ@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Tue, 14 Feb 2017 15:48:57 +0530
+Message-ID: <CA+zaFGh5ykkZUhY1BUX9jJ0SCSSoFtk=ZzbCNoGnh3efABc97w@mail.gmail.com>
+Subject: Re: Queries PAYTM+SC CatSyncPreprocessor
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1134fc065ca81905487ae462
+
+--001a1134fc065ca81905487ae462
+Content-Type: text/plain; charset=UTF-8
+
+>
+db.source.update({"code":"WOOCOMMERCE"},{$set:{"sourceProperties.4.value":"true"}})
+
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 0 })
+
+On Tue, Feb 14, 2017 at 2:49 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Sir ek yeh query bhi h inventory sync ka option aa jayega isse woocommerce
+> pe
+> db.source.update({"code":"WOOCOMMERCE"},{$set:{"
+> sourceProperties.4.value":"true"}})
+>
+> On Tue, Feb 14, 2017 at 2:19 PM, Sunny Agarwal <sunny@unicommerce.com>
+> wrote:
+>
+>> Done
+>>
+>> On Tue, Feb 14, 2017 at 11:32 AM, Digvijay Sharma <
+>> digvijay@unicommerce.com> wrote:
+>>
+>>>
+>>>
+>>
+>
+
+--001a1134fc065ca81905487ae462
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">&gt; db.source.update({&quot=
+;code&quot;:&quot;WOOCOMMERCE&quot;},{$set:{&quot;sourceProperties.4.value&=
+quot;:&quot;true&quot;}})</span></p>
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">WriteResult({ &quot;nMatched=
+&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 0 })</span><=
+/p></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, =
+Feb 14, 2017 at 2:49 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"m=
+ailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com<=
+/a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Si=
+r ek yeh query bhi h inventory sync ka option aa jayega isse woocommerce pe=
+<div>db.source.update({&quot;code&quot;:&quot;<wbr>WOOCOMMERCE&quot;},{$set=
+:{&quot;<wbr>sourceProperties.4.value&quot;:&quot;<wbr>true&quot;}})<br></d=
+iv></div><div class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"=
+><br><div class=3D"gmail_quote">On Tue, Feb 14, 2017 at 2:19 PM, Sunny Agar=
+wal <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=
+=3D"_blank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><div dir=3D"ltr">Done</div><div class=3D"gmail_extra"><br><d=
+iv class=3D"gmail_quote">On Tue, Feb 14, 2017 at 11:32 AM, Digvijay Sharma =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D=
+"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><div dir=3D"ltr"><br></div>
+</blockquote></div><br></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a1134fc065ca81905487ae462--

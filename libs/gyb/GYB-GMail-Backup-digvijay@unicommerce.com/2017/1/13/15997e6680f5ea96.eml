@@ -1,0 +1,139 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp165717qgd;
+        Fri, 13 Jan 2017 04:56:16 -0800 (PST)
+X-Received: by 10.25.166.131 with SMTP id p125mr723995lfe.142.1484312176862;
+        Fri, 13 Jan 2017 04:56:16 -0800 (PST)
+Return-Path: <kapil@unicommerce.com>
+Received: from mail-lf0-x22c.google.com (mail-lf0-x22c.google.com. [2a00:1450:4010:c07::22c])
+        by mx.google.com with ESMTPS id a196si7848779lfb.24.2017.01.13.04.56.16
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 13 Jan 2017 04:56:16 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:4010:c07::22c is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) client-ip=2a00:1450:4010:c07::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:4010:c07::22c is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) smtp.mailfrom=kapil@unicommerce.com
+Received: by mail-lf0-x22c.google.com with SMTP id z134so33206194lff.3
+        for <digvijay@unicommerce.com>; Fri, 13 Jan 2017 04:56:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=krQ7N7sBr9/EW0HNLPIf65E+80kZwuRAsXjvMAFuLBs=;
+        b=U9U6gEOYAw8NRDfhRm9SR39hrE6EUQ+oIJa0P6ADKiMWO+AgNvQoFtZmn7widsahlZ
+         9cVcmtNw0FSq+WIy6kgfMbWwUYcQuddxDnwACWC9I7r2n1t1aeaUSgW72lcPdtviXGef
+         lhAkKqlYG4/I2pTpMla+/B8NkZQ4cu6t0bEZ0PrSo+GB21mai9sfMw5zf8pxfq4aBYHf
+         NsfrELjfoek8SuSucemn79OeXtA9bEQ0JPw88wzDkLoEs4HQLLE+kg2mI7i+r+heHHQ6
+         afTDCLU3bETrhm/T/dziv9MeJZQxnF97YZCGKTM0WA5h6e3bpBWrlxf3i7qWhTJQUvyr
+         aWPQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=krQ7N7sBr9/EW0HNLPIf65E+80kZwuRAsXjvMAFuLBs=;
+        b=Ty6uZkyaTxNlLAoV0dh0nCHxrfV38pynCiVQ+N0vDe8uvuDfe0sjoGxc4bn3vEAQLW
+         DcJVPzga7Rew49LsNpepqd474UakDOHv0u30I8qbGj+Gwvco0Ct/ca9gaMm2lEPJ3Plu
+         p0ojQ4GJFwLAWfMQBP45Irs2+4OFAJwm6uaHTu64TrjWXXgFqIL3/iW7oWCn8nVfe2HP
+         U3l4YwqSNTnqza4MszIFLW5QcTdytje4Fa2t90imz6R4cUC+0WXJnEycG1wSeFLN0jB1
+         7bhR+bGZjfsJoZ2n9DK1c4bMaP6ONSkYNDZLlXSZd/Y0H7QwD2DuYKxcH5gAAQS2Yr0L
+         k5uA==
+X-Gm-Message-State: AIkVDXJszZBmfRJr75Pi8WRjjtpCrqfJrtc1TFrM5aXVpONLarTcQx+yAYTrbU4Pmf4WsttDKheEJZzb9+8o6A==
+X-Received: by 10.25.18.102 with SMTP id h99mr4804981lfi.63.1484312176169;
+ Fri, 13 Jan 2017 04:56:16 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.114.161.45 with HTTP; Fri, 13 Jan 2017 04:56:15 -0800 (PST)
+In-Reply-To: <CAJF3sorz+7PaZfyM2sE_1J_nxhA7ghq3Tiv31xqCVFp3psDZgQ@mail.gmail.com>
+References: <CAJF3sorz+7PaZfyM2sE_1J_nxhA7ghq3Tiv31xqCVFp3psDZgQ@mail.gmail.com>
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Fri, 13 Jan 2017 18:26:15 +0530
+Message-ID: <CAOzor=5i2805SP_Xb-=GQYp_FqD26+02w4no=+1C9nQYfK=bqA@mail.gmail.com>
+Subject: Re: Woocommerce Apis not working
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113fb2ecff27210545f95b90
+
+--001a113fb2ecff27210545f95b90
+Content-Type: text/plain; charset=UTF-8
+
+I have written to the seller who provided the keys, he will revert by today
+EoD.
+
+Regards,
+Kapil Makhija
+
+On Fri, Jan 13, 2017 at 3:05 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Hi Kapil,
+>
+> The consumer key and secret pair that were given on the mail are not
+> working and it shows :
+> Request :
+>
+> curl https://www.fidesbox.com/wp-json/wc/v1/orders -u
+> ck_e9c7f289f518b12c67f570e3c611798bf24a559e:cs_6bbdef52d4737
+> cd4f02bfc4357f93d3dc31c10bd
+>
+>
+> Response :
+> {
+>   "code": "woocommerce_rest_cannot_view",
+>   "message": "Sorry, you cannot list resources.",
+>   "data": {
+>     "status": 401
+>   }
+> }
+> I think when these keys were generated, maybe someone did not give read
+> and write access to the user for which he created the keys. Please check
+> and confirm.
+>
+> Unable to integrate woocomerce right now because of this problem.
+>
+
+
+
+-- 
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+--001a113fb2ecff27210545f95b90
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I have written to the seller who provided the keys, he wil=
+l revert by today EoD.<div><br></div><div>Regards,</div><div>Kapil Makhija<=
+/div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Fri=
+, Jan 13, 2017 at 3:05 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D=
+"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.co=
+m</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margi=
+n:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">=
+Hi Kapil,<div><br></div><div><div style=3D"font-size:12.8px">The consumer k=
+ey and secret pair that were given on the mail are not working and it shows=
+ :</div><div style=3D"font-size:12.8px">Request :=C2=A0</div><div style=3D"=
+font-size:12.8px"><p class=3D"m_4303824826784375871gmail-m_5687733833881313=
+209gmail-p1"><span class=3D"m_4303824826784375871gmail-m_568773383388131320=
+9gmail-s1">curl=C2=A0<a href=3D"https://www.fidesbox.com/wp-json/wc/v1/orde=
+rs" target=3D"_blank">https://www.fidesbox.com/<wbr>wp-json/wc/v1/orders</a=
+>=C2=A0-u ck_e9c7f289f518b12c67f570e3c61<wbr>1798bf24a559e:cs_6bbdef52d4737=
+<wbr>cd4f02bfc4357f93d3dc31c10bd</span></p><p class=3D"m_430382482678437587=
+1gmail-m_5687733833881313209gmail-p1"><span class=3D"m_4303824826784375871g=
+mail-m_5687733833881313209gmail-s1"><br></span></p><p class=3D"m_4303824826=
+784375871gmail-m_5687733833881313209gmail-p1">Response :</p></div><div styl=
+e=3D"font-size:12.8px"><div>{</div><div>=C2=A0 &quot;code&quot;: &quot;wooc=
+ommerce_rest_cannot_view&quot;<wbr>,</div><div>=C2=A0 &quot;message&quot;: =
+&quot;Sorry, you cannot list resources.&quot;,</div><div>=C2=A0 &quot;data&=
+quot;: {</div><div>=C2=A0 =C2=A0 &quot;status&quot;: 401</div><div>=C2=A0 }=
+</div><div>}</div></div><div style=3D"font-size:12.8px">I think when these =
+keys were generated, maybe someone did not give read and write access to th=
+e user for which he created the keys. Please check and confirm.=C2=A0</div>=
+</div><div style=3D"font-size:12.8px"><br></div><div style=3D"font-size:12.=
+8px">Unable to integrate woocomerce right now because of this problem.</div=
+></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Ka=
+pil Makhija<div>Director, Strategy - Unicommerce</div><div>M: +91-971847088=
+8</div></div></div>
+</div>
+
+--001a113fb2ecff27210545f95b90--

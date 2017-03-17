@@ -1,0 +1,88 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp46277qgd;
+        Tue, 13 Dec 2016 23:28:53 -0800 (PST)
+X-Received: by 10.129.137.194 with SMTP id z185mr109709872ywf.159.1481700533878;
+        Tue, 13 Dec 2016 23:28:53 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-yb0-x229.google.com (mail-yb0-x229.google.com. [2607:f8b0:4002:c09::229])
+        by mx.google.com with ESMTPS id i7si15602235ywf.123.2016.12.13.23.28.53
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Dec 2016 23:28:53 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::229 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:4002:c09::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::229 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-yb0-x229.google.com with SMTP id v78so8950689ybe.3
+        for <digvijay@unicommerce.com>; Tue, 13 Dec 2016 23:28:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=iD2K6n+CYpYmohXrb5aMKeJ4iVSYSdTxHpviGH3uhnE=;
+        b=Uavsu4DARdmKGc/IGIXhr/pBuqps183e2HZs5kUmi1cdF78mUL6kJh9UNXNJWbAYAE
+         e46SY7yEQZo5zWLqdl/0klMuqzctT+/D1P/fvtQvhhpH1dn3TT2ezc62uqlnaKc1uQxK
+         f8BVIbq8UwXKYRfJvIx6tajJemgRSw8awZUs+WVYO3Am4Kz6Z9I0mscrAXGG76KxzS8A
+         40A11Z3/F6ErfwEbAeQAAkNt+fa76sJ4u/fDF/tcBQ5pfEnaZsqHco9lwpcWoMmwOynt
+         zTHOVrFzigNbe7VRAKGvW9hTgGEUe7iUW0tVFFB9Vb4uzbWGTPTgkDpPIpr1c2T96sQ3
+         Vq3A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=iD2K6n+CYpYmohXrb5aMKeJ4iVSYSdTxHpviGH3uhnE=;
+        b=dMSOXyriBs4AHsC9Qoh+nRzkx3NRxCNXmoJqVvbNvefhloCc0YyaKH80lnRwRuEKYJ
+         3Ga1F7I+C3my9fXibziBXWFQwBq/BNgGtBPITSVZS2T+Eq/ybDpcVs2djSQdvh7IOxoo
+         HC20+Klge2NiooPhQFcMzs9otfr1mMUKqxmYaYOQDozABDh6eMx2FV5+lEzkSrYyzoWF
+         E49xkP29GCgOOeYOhqoKV02pJc95rl0tw+V0bcGnPdUkokLkz0U+tn6x5okZC1lNp/Yn
+         /weyHrvPwvws8vFp/G7GhW58PhiqXAmRj2vK2ueb+fImQp/aFrOBUwl3caTXCxogfJFM
+         Yzcw==
+X-Gm-Message-State: AKaTC019okICq2SMQiAb+FzFzzj1nui13nIBu0UawRLeZCzt9zicAJHrBrxhEJ4d73BxqpzMjupNeBl9etZlTg==
+X-Received: by 10.129.119.7 with SMTP id s7mr109812801ywc.57.1481700533267;
+ Tue, 13 Dec 2016 23:28:53 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.37.215.193 with HTTP; Tue, 13 Dec 2016 23:28:52 -0800 (PST)
+In-Reply-To: <CAJF3soomUj_avNH63hqzvKiaPhT+wff1heb7Ob=N1-x4mfwFOQ@mail.gmail.com>
+References: <CAJF3soomUj_avNH63hqzvKiaPhT+wff1heb7Ob=N1-x4mfwFOQ@mail.gmail.com>
+From: Puneet Sharma <puneet@unicommerce.com>
+Date: Wed, 14 Dec 2016 12:58:52 +0530
+Message-ID: <CAGttGOKA0KCyAEmnjauDHNB_D-tTfh-tuQzAaGFYvmrXwzg=VQ@mail.gmail.com>
+Subject: Re: Request for build access wormhole staging
+To: Digvijay Sharma <digvijay@unicommerce.com>, Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1149008cf3407f05439949be
+
+--001a1149008cf3407f05439949be
+Content-Type: text/plain; charset=UTF-8
+
++ Sunny
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+On Wed, Dec 14, 2016 at 12:55 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Sir, i have to test my new 2 service on wormhole. Please move the
+> uniwareTroubleshoot repository on gitlab so that changes can be fetched.
+>
+
+--001a1149008cf3407f05439949be
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">+ Sunny =C2=A0</div><div class=3D"gmail_extra"><br clear=
+=3D"all"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><div><div dir=3D"ltr">Thanks,<div>Puneet Sharma</div>=
+<div>Unicommerce Esolutions Pvt. Ltd</div><div>+91-7666182895</div></div></=
+div></div></div></div>
+<br><div class=3D"gmail_quote">On Wed, Dec 14, 2016 at 12:55 PM, Digvijay S=
+harma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" tar=
+get=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc sol=
+id;padding-left:1ex"><div dir=3D"ltr">Sir, i have to test my new 2 service =
+on wormhole. Please move the uniwareTroubleshoot repository on gitlab so th=
+at changes can be fetched.</div>
+</blockquote></div><br></div>
+
+--001a1149008cf3407f05439949be--

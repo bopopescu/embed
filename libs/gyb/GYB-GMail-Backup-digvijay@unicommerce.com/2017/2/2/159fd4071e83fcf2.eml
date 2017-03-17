@@ -1,0 +1,127 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2662268qgu;
+        Wed, 1 Feb 2017 21:16:16 -0800 (PST)
+X-Received: by 10.28.27.14 with SMTP id b14mr5537807wmb.82.1486012575989;
+        Wed, 01 Feb 2017 21:16:15 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x22a.google.com (mail-wm0-x22a.google.com. [2a00:1450:400c:c09::22a])
+        by mx.google.com with ESMTPS id h63si6075307wme.168.2017.02.01.21.16.15
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Feb 2017 21:16:15 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x22a.google.com with SMTP id r141so71400190wmg.1
+        for <digvijay@unicommerce.com>; Wed, 01 Feb 2017 21:16:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=hs7AdmfQPuslYdhJ3JLo/QcPsDvsrx6b3IIvaMtasMA=;
+        b=r8yDKhXEwEoOGhyb5PID0VkVIhZ/K/f6nx00iAeor5Ng+T5zVKXEfGVMMvdOhRhGt5
+         evDPUy2PR3YF+KVNdAa5Q1n+MhEYmcUr9bF1Cl7uZxm2jAIqWgaAqFBp0oZqonLM5P8Y
+         JMQ1GVke8XLeH1Q0P+LuI7MiPVOYHtxovg3huGgXnTUhc2c3DFBQ9qtUCqBmCZFpTbMH
+         ZD8n8d5dja32bwOGImIHCd2A/iO/GUkpFomDYhVPy9XuYBHVpQJZIKGCYNQ/zDjxfcN2
+         OQtWpt2byY0kLQBUOf1c/IZM7fXojBUrtiGV928l0+JxYop0+Bgq/Wz5aLq3S+m7eSKQ
+         N9Gg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=hs7AdmfQPuslYdhJ3JLo/QcPsDvsrx6b3IIvaMtasMA=;
+        b=cxkGR9uOH/F6Lsgk7QfwD+bJ58s/wnztD3981GLsX6Oilwziquax9kJFpkCAxyd5i8
+         USNNz0UC+RfdFLUeKgcZgqhOtrqCnlbzUPDhBBb38D/Eqp/fbX/yYvj3frGKN7DdVpL9
+         s36RVfqKeyn2QKIyBExfcz4YRDVgX5AgTjvpEEkwp1iJ/tHRoKvFvnZoE/aLlNE9AXmZ
+         ZEvuJovP+7AkhbHSYDdJv2f3+6dEFA6vbGY/J8ZoNQCsESy3ZflZoCq8UES8ya6J9VCq
+         b6T483hSCcMyfFJYQ3ZpDiIEd9GjnIIjiPOaAWIemyrZJFnee+J+h9gn4SPSnBf964RW
+         0Dyw==
+X-Gm-Message-State: AIkVDXIwuzYJAhAmz0JGio8/5ckqkvFbv6DaVs3AA63HoLDg2WU0TYyDWiqGqI8ODRle5Z25DEl9jt22SkXC6w==
+X-Received: by 10.28.229.193 with SMTP id c184mr6416712wmh.83.1486012575429;
+ Wed, 01 Feb 2017 21:16:15 -0800 (PST)
+MIME-Version: 1.0
+References: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+ <CAJF3soosvkzfPoNWTjC0Tbfxdyf-NUPPWRXr3EUZwrSsWCO5bw@mail.gmail.com>
+In-Reply-To: <CAJF3soosvkzfPoNWTjC0Tbfxdyf-NUPPWRXr3EUZwrSsWCO5bw@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 02 Feb 2017 05:16:04 +0000
+Message-ID: <CAPe2SZQ42DbxJqrHQ0CPBw8NY06kbPJDQ_n8Gbs22mj-beeOdA@mail.gmail.com>
+Subject: Re: Reconciliation Update
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11471322b0c86905478543da
+
+--001a11471322b0c86905478543da
+Content-Type: text/plain; charset=UTF-8
+
+Okay.
+
+On Thu, Feb 2, 2017 at 10:45 AM Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> And i have changed the flipkart script to use that invoice code for
+> status. Its live on one tenant right now. Soon we will make it live on all.
+>
+> On Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+> Hi Sir,
+> We have updated the last column of the settlement invoices page from
+> "status on channel" to "other info".
+> Earlier it used to represent the payment reason for which the transaction
+> is made (Like Refund, Return, MarketPlaceFee). But since Flipkart doesn't
+> give any such reason in its sheet (we mapped it with order status as of
+> now, which resulted in duplicate invoices), we have to put in invoice code
+> in that field to maintain uniqueness of invoices. Hence renamed the column
+> to "other info".
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129 <+91%2099998%2072129>
+>
+>
+> --
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a11471322b0c86905478543da
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Okay.</div><br><div class=3D"gmail_quote"><div dir=3D"ltr"=
+>On Thu, Feb 2, 2017 at 10:45 AM Digvijay Sharma &lt;<a href=3D"mailto:digv=
+ijay@unicommerce.com">digvijay@unicommerce.com</a>&gt; wrote:<br></div><blo=
+ckquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">And i have =
+changed the flipkart script to use that invoice code for status. Its live o=
+n one tenant right now. Soon we will make it live on all.</div><div class=
+=3D"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div class=3D"gmail_quot=
+e gmail_msg">On Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <span dir=3D"l=
+tr" class=3D"gmail_msg">&lt;<a href=3D"mailto:akshay.agarwal@unicommerce.co=
+m" class=3D"gmail_msg" target=3D"_blank">akshay.agarwal@unicommerce.com</a>=
+&gt;</span> wrote:<br class=3D"gmail_msg"><blockquote class=3D"gmail_quote =
+gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div dir=3D"ltr" class=3D"gmail_msg">Hi Sir,<div class=3D"gmail_msg=
+">We have updated the last column of the settlement invoices page from &quo=
+t;status on channel&quot; to &quot;other info&quot;.</div><div class=3D"gma=
+il_msg">Earlier it used to represent the payment reason for which the trans=
+action is made (Like Refund, Return, MarketPlaceFee). But since Flipkart do=
+esn&#39;t give any such reason in its sheet (we mapped it with order status=
+ as of now, which resulted in duplicate invoices), we have to put in invoic=
+e code in that field to maintain uniqueness of invoices. Hence renamed the =
+column to &quot;other info&quot;.</div></div><span class=3D"m_2330742673914=
+848243HOEnZb gmail_msg"><font color=3D"#888888" class=3D"gmail_msg"><div di=
+r=3D"ltr" class=3D"gmail_msg">-- <br class=3D"gmail_msg"></div><div data-sm=
+artmail=3D"gmail_signature" class=3D"gmail_msg"><div dir=3D"ltr" class=3D"g=
+mail_msg">Thanks<div class=3D"gmail_msg">Akshay Agarwal</div><div class=3D"=
+gmail_msg">Software Engineer, Unicommerce</div><div class=3D"gmail_msg"><a =
+href=3D"tel:+91%2099998%2072129" value=3D"+919999872129" class=3D"gmail_msg=
+" target=3D"_blank">+91 9999-872-129</a></div></div></div>
+</font></span></blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software=
+ Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a11471322b0c86905478543da--

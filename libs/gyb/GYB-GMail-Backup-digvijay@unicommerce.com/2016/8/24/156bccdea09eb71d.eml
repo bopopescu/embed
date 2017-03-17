@@ -1,0 +1,334 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.189.10 with SMTP id x10csp331592ite;
+        Wed, 24 Aug 2016 06:47:07 -0700 (PDT)
+X-Received: by 10.31.94.73 with SMTP id s70mr1700453vkb.78.1472046426944;
+        Wed, 24 Aug 2016 06:47:06 -0700 (PDT)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x22c.google.com (mail-ua0-x22c.google.com. [2607:f8b0:400c:c08::22c])
+        by mx.google.com with ESMTPS id 80si2306720vkd.75.2016.08.24.06.47.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 Aug 2016 06:47:06 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x22c.google.com with SMTP id 97so28690859uav.3
+        for <digvijay@unicommerce.com>; Wed, 24 Aug 2016 06:47:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=7SpU8ezJEQEVzQY5WUu/DHiX775VqV7vr5UmeQUtV7Y=;
+        b=Tle9WyRVL3vcLy+tBpUrQfINzF+MDzIYyjnU3x9bnoQvYQuO/09KwJY5a8yOzK/G86
+         YdG9I134St8MeIrhsVGTCzZHxBjT0e7UtR5Gm+WUxeMtd9SoV6uI9+AM3PybE7TtzeWQ
+         wNmKoRm/Os89HtfnSDrO8RG9yEXi7dHagQ5GdZ6Wc5cD3zoEG0nrDxnWx0pDq25UqHeZ
+         OJ+dLqA/dmL0HdjkzFZjSmFrl8ZZxAOHlkra2pMjSCx7DGh9PVk8siFoXsHqcoHaIr50
+         ccqxmsKmF/cmnFqeppN9n/BktPa/0P/cVkWetbPqzJFRMSs1fGC8P073m6D92wMoA2KJ
+         kNEg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=7SpU8ezJEQEVzQY5WUu/DHiX775VqV7vr5UmeQUtV7Y=;
+        b=m0L5rPFXgn2sUow0l96Ya55TJuUeCcwT1owcjwpEXD8Oyb1wcNfh7pu4TK9MkECfEY
+         P5we72YGi23oh9agc5D9rj353hb/Tgs8lXXxbgZag4wVN748mT2Ead9UzeG1a3ti3pLB
+         lbSJmvBZZSbOjSBwmo2fvEGyXbOdRA9FgA2XyATZxvGC7AbQnlK+Nk6L4KzfPaSHJijV
+         0GqYJ59FKnbNnWG5RPAtcHcbQ+3XzQwTYXrlAvidT6vapsk8xeDh6yNln6M6iZWskz80
+         Xdvu5lIREha/azb0s6GA9SnFjZE5UvCHRS/Sl8Uxu9yLcqDvMcEBXUKwWSAD0VaJdcDL
+         nW5Q==
+X-Gm-Message-State: AEkoous0nK70k5cZbUZOLaqp3TqVvbn1O5XOS1H1NgTdfg6GL+jODekyKUxw04k0LmdJr2a4swuiaZbjzBayeQ==
+X-Received: by 10.31.92.86 with SMTP id q83mr1666120vkb.92.1472046426433; Wed,
+ 24 Aug 2016 06:47:06 -0700 (PDT)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Wed, 24 Aug 2016 13:46:56 +0000
+Message-ID: <CAPe2SZQBHXVmXdTJeZnAdvhxRgwz+C4MkFNzxm3YtYZgRyOcEw@mail.gmail.com>
+Subject: FLipkartInventory update
+To: Digvijay Sharam <digvijay@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114e599e573f54053ad18461
+
+--001a114e599e573f54053ad18461
+Content-Type: text/plain; charset=UTF-8
+
+<scraper name="flipkartInventoryUpdateScript" xmlns:xsi="
+http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="
+http://www.unicommerce.com/schema/scraper-1.0.xsd" cachehttpclient="false"
+httpClientName="#{#channel.name}-seller-panel">
+    <!-- Update inventory using API -->
+    <var name="flipkartApiURL" value="https://api.flipkart.net"/>
+    <http
+url="#{#flipkartApiURL}/oauth-service/oauth/token?grant_type=client_credentials"
+method="get" var="apiInventoryVerificationResponse" timeout="80"
+          basicAuthUsername="#{#applicationId}"
+basicAuthPassword="#{#applicationSecret}"/>
+    <log level="info" value="API Verification
+#{#apiInventoryVerificationResponse}"/>
+    <var name="apiInventoryVerificationResponseJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#apiInventoryVerificationResponse)}"/>
+    <var name="authToken"
+value="#{#apiInventoryVerificationResponseJson.get('access_token').getAsString()}"/>
+    <var name="authToken" value="Bearer #{#authToken}"></var>
+    <log level="info" value="Auth Token:#{#authToken}"/>
+    <if condition="#{#apiInventoryVerificationResponse.contains('error')}">
+        <scriptError message="Flipkart failed in generating access token.
+Message: #{#apiInventoryVerificationResponse}"/>
+    </if>
+
+    <if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#maxAllowedQuantity)}">
+        <var name="maxAllowedQuantity" value="#{new
+Integer(#maxAllowedQuantity)}"/>
+        <else>
+            <var name="maxAllowedQuantity" value="#{new Integer('25')}"/>
+        </else>
+    </if>
+
+    <var name="apiUpdateInventoryJson"><![CDATA[{"listings": []]></var>
+    <foreach collection="#{#inventorySnapshot}" var="inventorySnapShotObj"
+varstatus="foreachcount">
+        <var name="inventoryCount"
+value="#{T(java.lang.Math).min(#inventorySnapShotObj.calculatedInventory,
+#maxAllowedQuantity)}"/>
+        <var name="apiUpdateInventoryJson">
+
+<![CDATA[#{#apiUpdateInventoryJson}{"listingId":"#{#inventorySnapShotObj.channelProductId}","attributeValues":{"stock_count":"#{#inventoryCount}"}}]]></var>
+        <if condition="#{#foreachcount != #inventorySnapshot.size()}">
+            <var
+name="apiUpdateInventoryJson"><![CDATA[#{#apiUpdateInventoryJson},]]></var>
+        </if>
+    </foreach>
+    <var
+name="apiUpdateInventoryJson"><![CDATA[#{#apiUpdateInventoryJson}]}]]></var>
+    <log level="info" value="Flipkart API Inventory Update Request Json:
+#{#apiUpdateInventoryJson.trim()}"/>
+    <retry count="3" delayInMillis="1000">
+<http
+url="#{#flipkartApiURL}/sellers/skus/listings/bulk?_=#{T(com.unifier.core.utils.DateUtils).getCurrentTime().getTime()}"
+method="post" var="apiUpdateInventoryResponse"
+ timeout="80">
+<header name="Content-Type" value="application/json"/>
+<header name="Authorization" value="#{#authToken}"/>
+<body>#{#apiUpdateInventoryJson.trim()}</body>
+</http>
+<log level="info" value="Flipkart API Inventory Update Response:
+#{#apiUpdateInventoryResponse}"/>
+<var name="checkResponse"
+value="#{!#apiUpdateInventoryResponse.contains('success')}" />
+</retry>
+    <if condition="#{!#apiUpdateInventoryResponse.contains('success')}">
+        <if
+condition="#{#apiUpdateInventoryResponse.contains('listingId')}">
+            <var name="errorJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#apiUpdateInventoryResponse)}"></var>
+            <var name="rowIterator"
+value="#{#errorJson.get('response').getAsJsonArray().iterator()}"/>
+            <while condition="#{#rowIterator.hasNext()}">
+                <var name="listingErrorJson"
+value="#{#rowIterator.next()}"></var>
+                <var name="failedAPIListingId"
+value="#{#listingErrorJson.get('listingId') != null ?
+#listingErrorJson.get('listingId').getAsString() : ''}"/>
+                <var name="listingErrors"
+value="#{#listingErrorJson.getAsJsonObject().get('errors').getAsJsonArray()}"/>
+                <if condition="#{#listingErrors.size() > 0}">
+                    <var name="listingError"
+value="#{#listingErrors.get(0)}"/>
+                    <var name="errorMessage" value="#{#listingError != null
+? #listingError.getAsJsonObject().get('message').getAsString() : 'Unknown
+Error'}"></var>
+                    <if condition="#{#failedAPIListingId == ''}">
+                        <var
+value="#{#failedInventorySnapshots.put(#listingError.getAsJsonObject().get('listingId').getAsString(),
+new
+com.uniware.core.script.error.ChannelScriptError(#errorMessage,#errorMessage))}"></var>
+                        <else>
+                            <var
+value="#{#failedInventorySnapshots.put(#failedAPIListingId, new
+com.uniware.core.script.error.ChannelScriptError(#errorMessage,#errorMessage))}"></var>
+                        </else>
+                    </if>
+                </if>
+            </while>
+            <else>
+                <if
+condition="#{#apiUpdateInventoryResponse.contains('error_description')}">
+                    <var name="errorJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#apiUpdateInventoryResponse)}"></var>
+                    <scriptError
+message="#{T(com.unifier.core.utils.JsonUtils).getAsString(#errorJson,
+'error_description') }"/>
+                </if>
+                <if condition="#{#apiUpdateInventoryResponse.contains('502
+Bad Gateway')}">
+                    <scriptError message="Bad Gateway"
+code="CHANNEL_ERROR"/>
+                </if>
+                <log level="info" value="[Flipkart] Inventory Sync error :
+#{#apiUpdateInventoryResponse}"/>
+                <scriptError message="Unknown Error" code="UNKNOWN_ERROR"/>
+            </else>
+        </if>
+    </if>
+</scraper>
+
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a114e599e573f54053ad18461
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>&lt;scraper name=3D&quot;flipkartInventoryUpdateScrip=
+t&quot; xmlns:xsi=3D&quot;<a href=3D"http://www.w3.org/2001/XMLSchema-insta=
+nce">http://www.w3.org/2001/XMLSchema-instance</a>&quot;</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0xsi:noNamespaceSchemaLocation=3D&quot;<a href=3D=
+"http://www.unicommerce.com/schema/scraper-1.0.xsd">http://www.unicommerce.=
+com/schema/scraper-1.0.xsd</a>&quot; cachehttpclient=3D&quot;false&quot; ht=
+tpClientName=3D&quot;#{#<a href=3D"http://channel.name">channel.name</a>}-s=
+eller-panel&quot;&gt;</div><div>=C2=A0 =C2=A0 &lt;!-- Update inventory usin=
+g API --&gt;</div><div>=C2=A0 =C2=A0 &lt;var name=3D&quot;flipkartApiURL&qu=
+ot; value=3D&quot;<a href=3D"https://api.flipkart.net">https://api.flipkart=
+.net</a>&quot;/&gt;</div><div>=C2=A0 =C2=A0 &lt;http url=3D&quot;#{#flipkar=
+tApiURL}/oauth-service/oauth/token?grant_type=3Dclient_credentials&quot; me=
+thod=3D&quot;get&quot; var=3D&quot;apiInventoryVerificationResponse&quot; t=
+imeout=3D&quot;80&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 basicA=
+uthUsername=3D&quot;#{#applicationId}&quot; basicAuthPassword=3D&quot;#{#ap=
+plicationSecret}&quot;/&gt;</div><div>=C2=A0 =C2=A0 &lt;log level=3D&quot;i=
+nfo&quot; value=3D&quot;API Verification #{#apiInventoryVerificationRespons=
+e}&quot;/&gt;</div><div>=C2=A0 =C2=A0 &lt;var name=3D&quot;apiInventoryVeri=
+ficationResponseJson&quot; value=3D&quot;#{T(com.unifier.core.utils.JsonUti=
+ls).stringToJson(#apiInventoryVerificationResponse)}&quot;/&gt;</div><div>=
+=C2=A0 =C2=A0 &lt;var name=3D&quot;authToken&quot; value=3D&quot;#{#apiInve=
+ntoryVerificationResponseJson.get(&#39;access_token&#39;).getAsString()}&qu=
+ot;/&gt;</div><div>=C2=A0 =C2=A0 &lt;var name=3D&quot;authToken&quot; value=
+=3D&quot;Bearer #{#authToken}&quot;&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=A0=
+ &lt;log level=3D&quot;info&quot; value=3D&quot;Auth Token:#{#authToken}&qu=
+ot;/&gt;</div><div>=C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#apiInventoryVe=
+rificationResponse.contains(&#39;error&#39;)}&quot;&gt;</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &lt;scriptError message=3D&quot;Flipkart failed in gen=
+erating access token. Message: #{#apiInventoryVerificationResponse}&quot;/&=
+gt;</div><div>=C2=A0 =C2=A0 &lt;/if&gt;</div><div><br></div><div>=C2=A0 =C2=
+=A0 &lt;if condition=3D&quot;#{T(com.unifier.core.utils.StringUtils).isNotB=
+lank(#maxAllowedQuantity)}&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+&lt;var name=3D&quot;maxAllowedQuantity&quot; value=3D&quot;#{new Integer(#=
+maxAllowedQuantity)}&quot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;e=
+lse&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D=
+&quot;maxAllowedQuantity&quot; value=3D&quot;#{new Integer(&#39;25&#39;)}&q=
+uot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div>=C2=
+=A0 =C2=A0 &lt;/if&gt;</div><div><br></div><div>=C2=A0 =C2=A0 &lt;var name=
+=3D&quot;apiUpdateInventoryJson&quot;&gt;&lt;![CDATA[{&quot;listings&quot;:=
+ []]&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=A0 &lt;foreach collection=3D&quot=
+;#{#inventorySnapshot}&quot; var=3D&quot;inventorySnapShotObj&quot; varstat=
+us=3D&quot;foreachcount&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt=
+;var name=3D&quot;inventoryCount&quot; value=3D&quot;#{T(java.lang.Math).mi=
+n(#inventorySnapShotObj.calculatedInventory, #maxAllowedQuantity)}&quot;/&g=
+t;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;apiUpdateInve=
+ntoryJson&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt=
+;![CDATA[#{#apiUpdateInventoryJson}{&quot;listingId&quot;:&quot;#{#inventor=
+ySnapShotObj.channelProductId}&quot;,&quot;attributeValues&quot;:{&quot;sto=
+ck_count&quot;:&quot;#{#inventoryCount}&quot;}}]]&gt;&lt;/var&gt;</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#foreachcount !=3D =
+#inventorySnapshot.size()}&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;var name=3D&quot;apiUpdateInventoryJson&quot;&gt;&lt;![CD=
+ATA[#{#apiUpdateInventoryJson},]]&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =C2=A0 &lt;/foreach&gt;</div><di=
+v>=C2=A0 =C2=A0 &lt;var name=3D&quot;apiUpdateInventoryJson&quot;&gt;&lt;![=
+CDATA[#{#apiUpdateInventoryJson}]}]]&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=
+=A0 &lt;log level=3D&quot;info&quot; value=3D&quot;Flipkart API Inventory U=
+pdate Request Json: #{#apiUpdateInventoryJson.trim()}&quot;/&gt;</div><div>=
+=C2=A0 =C2=A0 &lt;retry count=3D&quot;3&quot; delayInMillis=3D&quot;1000&qu=
+ot;&gt;</div><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+		</span>&lt;http url=3D&quot;#{#flipkartApiURL}/sellers/skus/listings/bulk=
+?_=3D#{T(com.unifier.core.utils.DateUtils).getCurrentTime().getTime()}&quot=
+; method=3D&quot;post&quot; var=3D&quot;apiUpdateInventoryResponse&quot;</d=
+iv><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">			</span>=
+ =C2=A0timeout=3D&quot;80&quot;&gt;</div><div><span class=3D"Apple-tab-span=
+" style=3D"white-space:pre">			</span>&lt;header name=3D&quot;Content-Type&=
+quot; value=3D&quot;application/json&quot;/&gt;</div><div><span class=3D"Ap=
+ple-tab-span" style=3D"white-space:pre">			</span>&lt;header name=3D&quot;A=
+uthorization&quot; value=3D&quot;#{#authToken}&quot;/&gt;</div><div><span c=
+lass=3D"Apple-tab-span" style=3D"white-space:pre">			</span>&lt;body&gt;#{#=
+apiUpdateInventoryJson.trim()}&lt;/body&gt;</div><div><span class=3D"Apple-=
+tab-span" style=3D"white-space:pre">		</span>&lt;/http&gt;</div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">		</span>&lt;log level=
+=3D&quot;info&quot; value=3D&quot;Flipkart API Inventory Update Response: #=
+{#apiUpdateInventoryResponse}&quot;/&gt;</div><div><span class=3D"Apple-tab=
+-span" style=3D"white-space:pre">			</span>&lt;var name=3D&quot;checkRespon=
+se&quot; value=3D&quot;#{!#apiUpdateInventoryResponse.contains(&#39;success=
+&#39;)}&quot; /&gt;</div><div><span class=3D"Apple-tab-span" style=3D"white=
+-space:pre">	</span>&lt;/retry&gt;</div><div>=C2=A0 =C2=A0 &lt;if condition=
+=3D&quot;#{!#apiUpdateInventoryResponse.contains(&#39;success&#39;)}&quot;&=
+gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#apiUp=
+dateInventoryResponse.contains(&#39;listingId&#39;)}&quot;&gt;</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;errorJson&qu=
+ot; value=3D&quot;#{T(com.unifier.core.utils.JsonUtils).stringToJson(#apiUp=
+dateInventoryResponse)}&quot;&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;rowIterator&quot; value=3D&qu=
+ot;#{#errorJson.get(&#39;response&#39;).getAsJsonArray().iterator()}&quot;/=
+&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;while conditio=
+n=3D&quot;#{#rowIterator.hasNext()}&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;listingErrorJso=
+n&quot; value=3D&quot;#{#rowIterator.next()}&quot;&gt;&lt;/var&gt;</div><di=
+v>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&q=
+uot;failedAPIListingId&quot; value=3D&quot;#{#listingErrorJson.get(&#39;lis=
+tingId&#39;) !=3D null ? #listingErrorJson.get(&#39;listingId&#39;).getAsSt=
+ring() : &#39;&#39;}&quot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;listingErrors&quot; value=3D&=
+quot;#{#listingErrorJson.getAsJsonObject().get(&#39;errors&#39;).getAsJsonA=
+rray()}&quot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;if condition=3D&quot;#{#listingErrors.size() &gt; 0}&quot;&g=
+t;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &lt;var name=3D&quot;listingError&quot; value=3D&quot;#{#listingErr=
+ors.get(0)}&quot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;errorMessage&quot; value=
+=3D&quot;#{#listingError !=3D null ? #listingError.getAsJsonObject().get(&#=
+39;message&#39;).getAsString() : &#39;Unknown Error&#39;}&quot;&gt;&lt;/var=
+&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;if condition=3D&quot;#{#failedAPIListingId =3D=3D &#39;&#39;=
+}&quot;&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var value=3D&quot;#{#failedInventorySna=
+pshots.put(#listingError.getAsJsonObject().get(&#39;listingId&#39;).getAsSt=
+ring(), new com.uniware.core.script.error.ChannelScriptError(#errorMessage,=
+#errorMessage))}&quot;&gt;&lt;/var&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&gt;</d=
+iv><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var value=3D&quot;#{#failedInventorySna=
+pshots.put(#failedAPIListingId, new com.uniware.core.script.error.ChannelSc=
+riptError(#errorMessage,#errorMessage))}&quot;&gt;&lt;/var&gt;</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;/else&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/while&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;else&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#apiUpdateInventoryRespons=
+e.contains(&#39;error_description&#39;)}&quot;&gt;</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quo=
+t;errorJson&quot; value=3D&quot;#{T(com.unifier.core.utils.JsonUtils).strin=
+gToJson(#apiUpdateInventoryResponse)}&quot;&gt;&lt;/var&gt;</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;scri=
+ptError message=3D&quot;#{T(com.unifier.core.utils.JsonUtils).getAsString(#=
+errorJson, &#39;error_description&#39;) }&quot;/&gt;</div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#=
+{#apiUpdateInventoryResponse.contains(&#39;502 Bad Gateway&#39;)}&quot;&gt;=
+</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;scriptError message=3D&quot;Bad Gateway&quot; code=3D&quot;CHANN=
+EL_ERROR&quot;/&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;log level=3D&quot;info&quot; value=3D&quot;[Flipkart] Inv=
+entory Sync error : #{#apiUpdateInventoryResponse}&quot;/&gt;</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;scriptError messag=
+e=3D&quot;Unknown Error&quot; code=3D&quot;UNKNOWN_ERROR&quot;/&gt;</div><d=
+iv>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div>=C2=A0 =C2=A0 &lt;/if&gt;</div>=
+<div>&lt;/scraper&gt;</div><div><br></div></div><div dir=3D"ltr">-- <br></d=
+iv><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Aksh=
+ay Agarwal</div><div>Software Engineer, Unicommerce</div><div>+91 9999-872-=
+129</div></div></div>
+
+--001a114e599e573f54053ad18461--

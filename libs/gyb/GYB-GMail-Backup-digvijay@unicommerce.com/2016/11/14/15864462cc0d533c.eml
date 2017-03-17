@@ -1,0 +1,274 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1199760qge;
+        Mon, 14 Nov 2016 11:17:50 -0800 (PST)
+X-Received: by 10.176.0.52 with SMTP id 49mr10569239uai.9.1479151070260;
+        Mon, 14 Nov 2016 11:17:50 -0800 (PST)
+Return-Path: <harsh@unicommerce.com>
+Received: from mail-vk0-x236.google.com (mail-vk0-x236.google.com. [2607:f8b0:400c:c05::236])
+        by mx.google.com with ESMTPS id k3si368529vkb.155.2016.11.14.11.17.50
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 14 Nov 2016 11:17:50 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of harsh@unicommerce.com) client-ip=2607:f8b0:400c:c05::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of harsh@unicommerce.com) smtp.mailfrom=harsh@unicommerce.com
+Received: by mail-vk0-x236.google.com with SMTP id p9so71355334vkd.3
+        for <digvijay@unicommerce.com>; Mon, 14 Nov 2016 11:17:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=86+otH9NOchUyO6fV6RDJacfykDBLG3Abv1MqsMIy44=;
+        b=P88wc5c/jfHmV1Y+EFv6xsNJ7yQM3Tbu8xbPJMNtJDk8PzDEWkDW7xnD0Bp8h5eE+A
+         u2YS0YbJNYkvM98Up59tQu1R2GTBG4/T9U6xFPNzzoaIwIf5FKtppZ6k/cM8t10Ejk+H
+         pDwXjM7lUvWhT8lg8+WP/CmpcF8ZlcePsRM7sgmDyh4wq7b2OAhtyYbDNd7m8t35+4En
+         3nF+lLJ5lbbP8fdKZUTAcuhVdcOaGjO0uorfTU98H/kcDAGpGZakoVda6N/+bJjIZxK2
+         r8xQIWEetGiD7P7/o1UWPQjh8WH0YuNcNTA9XJo/wja2ckoHSH3pjnIaZF9sXVJnYwIj
+         xN1Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=86+otH9NOchUyO6fV6RDJacfykDBLG3Abv1MqsMIy44=;
+        b=SfrSpH6sk47pdMHtnTgzZJx10fHTuFSWIORzZg+0fEHbXKSaY5Ow5TsVr1+EIehEv1
+         EMVenO1XJa0FYJ4gdlPI2vWmF94SCMKclwtPq11FeWGP+hsWP791FFu1JzNKo62SD6Wc
+         4tGi8StAEGdGPqVEAWRFFphXROlmhlXlh/hIAaHL77YyTVCqTY3qvqPpaT7QwrY88yZ2
+         7kEzQ+vVGUJY0gRn5VSKOxI351zNBoEIoDoVD+S1SrFEJXCm1oY/3oXDqn8HYPWbVkzI
+         gcf+obf2AjoxP4Z4uC4/LH0ZuezjZN8xRKxGFab1DF+eP+dz+7zRg7PF1RT6utc4xt7J
+         2k3w==
+X-Gm-Message-State: ABUngvf4p8ldnEnsFrAyxHvpeHRhLJmvg7j/65AuH1R7xr6uxeOjbuDZvd1gwTPI+dcJtZPFJ2/uKBKS7v3NgA==
+X-Received: by 10.31.8.8 with SMTP id 8mr8484241vki.173.1479151069597; Mon, 14
+ Nov 2016 11:17:49 -0800 (PST)
+MIME-Version: 1.0
+References: <CAMuJ5=oCOuqF4euC-m=oKJGHegKoArV6GS_w6MruecFqUGj7DQ@mail.gmail.com>
+ <CAN32ob2eDOrJ=39P1U-XNq_SD_U3AeM9afKx7wXiuz6qv2Svtg@mail.gmail.com>
+ <CAMuJ5=pj-u-akQ8oADU6+RSS8bOmeDPdgvy2Z_LrF98toFGvOQ@mail.gmail.com>
+ <CAASAXwyFjR9zF5BjeLvjOatDnM89y4+2vsVHdqUQKNvgxgvw0Q@mail.gmail.com>
+ <CAOhZXUt5mV-wcc4c+TosVWMbp2cK4JL=U=x_Gxb=i7s2pkXFMg@mail.gmail.com>
+ <CAF+w_SHkUqaT=OrrK2vKqThDQ-Y-Ar+xTwWWXSPt1em8+LTc0g@mail.gmail.com>
+ <CAOkTFmiqC0YkzhGQa=UUrXSoKOd5nmDfcGdHaSgxHMipnR5Zgw@mail.gmail.com> <CAPyw11YHJM8rOuOot_HMX6jwEQcHRsbyA_iQPB_z3bOOwffbSA@mail.gmail.com>
+In-Reply-To: <CAPyw11YHJM8rOuOot_HMX6jwEQcHRsbyA_iQPB_z3bOOwffbSA@mail.gmail.com>
+From: Harsh Pal <harsh@unicommerce.com>
+Date: Mon, 14 Nov 2016 19:17:39 +0000
+Message-ID: <CAB1KeyH+whxs1z8m8hsNYExA-nD=EnWrv5BaB8iQiKL2upLttg@mail.gmail.com>
+Subject: Re: yamini farewell contri
+To: Garima Arora <garima@unicommerce.com>, Akshay Kochhar <akshay@unicommerce.com>
+Cc: Rishu Goyal <rishu@unicommerce.com>, Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, 
+	Kumar Animesh <animesh@unicommerce.com>, Amit Dalal <amit.dalal@unicommerce.com>, 
+	karan Garg <karangarg@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>, 
+	Ankit Bansal <ankit.bansal@unicommerce.com>, Ankur pratik <ankur.pratik@unicommerce.com>, 
+	Promil Bhardwaj <promil@unicommerce.com>, ashish <ashish@unicommerce.com>, 
+	vikas goyal <vikas@unicommerce.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, Piyush Arora <piyush@unicommerce.com>, 
+	Sushant Majumdar <sushant@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Shipra Gupta <shipra@unicommerce.com>, vani verma <vani@unicommerce.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, puneet <puneet@unicommerce.com>, 
+	Varad Singhal <varad@unicommerce.com>, Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Aditya Harit <aditya@unicommerce.com>, Samdeesh Singh <samdeesh@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11454c6412a789054147b205
+
+--001a11454c6412a789054147b205
+Content-Type: text/plain; charset=UTF-8
+
+Paytm.
+
+On Mon, Nov 14, 2016 at 10:42 AM Garima Arora <garima@unicommerce.com>
+wrote:
+
+> done on freecharge.
+>
+> Thanks and Regards
+> Garima Arora
+>
+> On Mon, Nov 14, 2016 at 10:34 AM, Akshay Kochhar <akshay@unicommerce.com>
+> wrote:
+>
+> done on freecharge
+>
+>
+> On Friday 11 November 2016, Rishu Goyal <rishu@unicommerce.com> wrote:
+>
+> done on freecharge
+>
+> On Fri, Nov 11, 2016 at 3:54 PM, Bhuvneshwar Kumar <
+> bhuvneshwar@unicommerce.com> wrote:
+>
+> sent on freecharge.
+>
+> On Fri, Nov 11, 2016 at 3:45 PM, Kumar Animesh <animesh@unicommerce.com>
+> wrote:
+>
+> sent on freecharge
+>
+> On Fri, Nov 11, 2016 at 2:48 PM Amit Dalal <amit.dalal@unicommerce.com>
+> wrote:
+>
+> + right karan
+>
+>
+> On Fri, Nov 11, 2016 at 10:11 AM Karan Gupta <karan@unicommerce.com>
+> wrote:
+>
+> Please exclude me from this chain mail
+>
+> Regards
+> Karan Gupta
+>
+> On Fri, Nov 11, 2016 at 10:06 AM, Amit Dalal <amit.dalal@unicommerce.com>
+> wrote:
+>
+> 19577/28 = 700
+>
+> bank transfer or paytm or freecharge.
+>
+> *Bank details:*
+> HDFC A/C Num: 12031050027117
+> Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,
+> State: HARYANA
+> District: GURGAON
+> Branch: GLOBAL BUSINESS PARK
+> IFSC Code: HDFC0001203
+> MICR Code: 110240182
+>
+>
+>
+>
+>
+> --
+> Thanks,
+> Bhuvneshwar Kumar
+> Unicommerce Esolutions Pvt. Ltd
+>
+>
+>
+>
+> --
+>
+> Thanks & Regards
+>  Rishu
+>
+>
+>
+> --
+> -- Regards, Akshay Kochhar
+> Software Engineer
+> M:9999315765 <099993%2015765>
+> Unicommerce eSolutions Pvt. Ltd.
+>
+>
+>
+>
+>
+
+--001a11454c6412a789054147b205
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Paytm.</div><br><div class=3D"gmail_quote"><div dir=3D"ltr=
+">On Mon, Nov 14, 2016 at 10:42 AM Garima Arora &lt;<a href=3D"mailto:garim=
+a@unicommerce.com">garima@unicommerce.com</a>&gt; wrote:<br></div><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc so=
+lid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">done on freechar=
+ge.<div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gma=
+il_msg">Thanks and Regards</div></div><div dir=3D"ltr" class=3D"gmail_msg">=
+<div class=3D"gmail_msg">Garima Arora</div></div><div class=3D"gmail_extra =
+gmail_msg"><br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On =
+Mon, Nov 14, 2016 at 10:34 AM, Akshay Kochhar <span dir=3D"ltr" class=3D"gm=
+ail_msg">&lt;<a href=3D"mailto:akshay@unicommerce.com" class=3D"gmail_msg" =
+target=3D"_blank">akshay@unicommerce.com</a>&gt;</span> wrote:<br class=3D"=
+gmail_msg"><blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 =
+0 .8ex;border-left:1px #ccc solid;padding-left:1ex">done on freecharge<div =
+class=3D"m_-8637492333290443360HOEnZb gmail_msg"><div class=3D"m_-863749233=
+3290443360h5 gmail_msg"><br class=3D"gmail_msg"><br class=3D"gmail_msg">On =
+Friday 11 November 2016, Rishu Goyal &lt;<a href=3D"mailto:rishu@unicommerc=
+e.com" class=3D"gmail_msg" target=3D"_blank">rishu@unicommerce.com</a>&gt; =
+wrote:<br class=3D"gmail_msg"><blockquote class=3D"gmail_quote gmail_msg" s=
+tyle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div=
+ dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_default gmail_msg" sty=
+le=3D"color:rgb(61,133,198)">done on freecharge<br class=3D"gmail_msg"></di=
+v></div><div class=3D"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div c=
+lass=3D"gmail_quote gmail_msg">On Fri, Nov 11, 2016 at 3:54 PM, Bhuvneshwar=
+ Kumar <span dir=3D"ltr" class=3D"gmail_msg">&lt;<a class=3D"gmail_msg">bhu=
+vneshwar@unicommerce.com</a>&gt;</span> wrote:<br class=3D"gmail_msg"><bloc=
+kquote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-le=
+ft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">se=
+nt on freecharge.</div><div class=3D"gmail_extra gmail_msg"><div class=3D"g=
+mail_msg"><div class=3D"gmail_msg"><br class=3D"gmail_msg"><div class=3D"gm=
+ail_quote gmail_msg">On Fri, Nov 11, 2016 at 3:45 PM, Kumar Animesh <span d=
+ir=3D"ltr" class=3D"gmail_msg">&lt;<a class=3D"gmail_msg">animesh@unicommer=
+ce.com</a>&gt;</span> wrote:<br class=3D"gmail_msg"><blockquote class=3D"gm=
+ail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">sent on freecharge</=
+div><div class=3D"gmail_msg"><div class=3D"gmail_msg"><br class=3D"gmail_ms=
+g"><div class=3D"gmail_quote gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg=
+">On Fri, Nov 11, 2016 at 2:48 PM Amit Dalal &lt;<a class=3D"gmail_msg">ami=
+t.dalal@unicommerce.com</a>&gt; wrote:<br class=3D"gmail_msg"></div><blockq=
+uote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left=
+:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"gmail_msg">+ ri=
+ght karan</div><div dir=3D"ltr" class=3D"gmail_msg"><br class=3D"gmail_msg"=
+><br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg"><div dir=3D"l=
+tr" class=3D"gmail_msg">On Fri, Nov 11, 2016 at 10:11 AM Karan Gupta &lt;<a=
+ class=3D"gmail_msg">karan@unicommerce.com</a>&gt; wrote:<br class=3D"gmail=
+_msg"></div><blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:0 0=
+ 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=
+=3D"gmail_msg">Please exclude me from this chain mail</div><div class=3D"gm=
+ail_extra gmail_msg"><br clear=3D"all" class=3D"gmail_msg"><div class=3D"gm=
+ail_msg"><div data-smartmail=3D"gmail_signature" class=3D"gmail_msg"><div d=
+ir=3D"ltr" class=3D"gmail_msg">Regards</div></div></div></div><div class=3D=
+"gmail_extra gmail_msg"><div class=3D"gmail_msg"><div data-smartmail=3D"gma=
+il_signature" class=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg"><div=
+ class=3D"gmail_msg">Karan Gupta</div></div></div></div></div><div class=3D=
+"gmail_extra gmail_msg">
+<br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On Fri, Nov 11=
+, 2016 at 10:06 AM, Amit Dalal <span dir=3D"ltr" class=3D"gmail_msg">&lt;<a=
+ class=3D"gmail_msg">amit.dalal@unicommerce.com</a>&gt;</span> wrote:<br cl=
+ass=3D"gmail_msg"><blockquote class=3D"gmail_quote gmail_msg" style=3D"marg=
+in:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"=
+ class=3D"gmail_msg">19577/28 =3D 700<br class=3D"gmail_msg"><br class=3D"g=
+mail_msg">bank transfer or paytm or freecharge.<br class=3D"gmail_msg"><br =
+class=3D"gmail_msg"><b class=3D"gmail_msg"><u class=3D"gmail_msg">Bank deta=
+ils:</u></b><br class=3D"gmail_msg">HDFC A/C Num: 12031050027117 <br class=
+=3D"gmail_msg">Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,<br cl=
+ass=3D"gmail_msg">State: HARYANA<br class=3D"gmail_msg">District: GURGAON <=
+br class=3D"gmail_msg">Branch: GLOBAL BUSINESS PARK<br class=3D"gmail_msg">=
+IFSC Code: HDFC0001203 <br class=3D"gmail_msg">MICR Code: 110240182<br clas=
+s=3D"gmail_msg"></div>
+</blockquote></div><br class=3D"gmail_msg"></div></blockquote></div></div><=
+/blockquote></div>
+</div></div></blockquote></div><br class=3D"gmail_msg"><br clear=3D"all" cl=
+ass=3D"gmail_msg"><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div></=
+div></div><span class=3D"gmail_msg"><font color=3D"#888888" class=3D"gmail_=
+msg">-- <br class=3D"gmail_msg"><div data-smartmail=3D"gmail_signature" cla=
+ss=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_m=
+sg"><div dir=3D"ltr" class=3D"gmail_msg"><span style=3D"font-size:12.800000=
+1907349px" class=3D"gmail_msg">Thanks,</span><div style=3D"font-size:12.800=
+0001907349px" class=3D"gmail_msg">Bhuvneshwar Kumar</div><div style=3D"font=
+-size:12.8000001907349px" class=3D"gmail_msg">Unicommerce Esolutions Pvt. L=
+td</div></div></div></div></div>
+</font></span></div>
+</blockquote></div><br class=3D"gmail_msg"><br clear=3D"all" class=3D"gmail=
+_msg"><br class=3D"gmail_msg">-- <br class=3D"gmail_msg"><div data-smartmai=
+l=3D"gmail_signature" class=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_m=
+sg"><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gm=
+ail_msg">Thanks &amp; Regards<div class=3D"gmail_msg">=C2=A0Rishu</div></di=
+v></div></div>
+</div>
+</blockquote><br class=3D"gmail_msg"><br class=3D"gmail_msg"></div></div><s=
+pan class=3D"m_-8637492333290443360HOEnZb gmail_msg"><font color=3D"#888888=
+" class=3D"gmail_msg">-- <br class=3D"gmail_msg"><div dir=3D"ltr" class=3D"=
+gmail_msg"><div class=3D"gmail_msg"><div class=3D"gmail_msg">-- Regards, Ak=
+shay Kochhar<br class=3D"gmail_msg"></div>Software Engineer<br class=3D"gma=
+il_msg"></div><div class=3D"gmail_msg">M:<a href=3D"tel:099993%2015765" val=
+ue=3D"+919999315765" class=3D"gmail_msg" target=3D"_blank">9999315765</a><b=
+r class=3D"gmail_msg"></div>Unicommerce eSolutions Pvt. Ltd.<br class=3D"gm=
+ail_msg"><img src=3D"https://demo.ucdn.in/img/uniTheme/logo.png?v=3D1" clas=
+s=3D"gmail_msg"><br class=3D"gmail_msg"><div class=3D"gmail_msg"><div class=
+=3D"gmail_msg"><br class=3D"gmail_msg"></div></div></div><br class=3D"gmail=
+_msg">
+</font></span></blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div>
+
+--001a11454c6412a789054147b205--

@@ -1,0 +1,106 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1123196qgu;
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+X-Received: by 10.36.214.86 with SMTP id o83mr14553307itg.97.1485166738883;
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+Return-Path: <tech+bncBD76JV5FQ4PRBEVRS7CAKGQETB2EGFA@unicommerce.com>
+Received: from mail-it0-x245.google.com (mail-it0-x245.google.com. [2607:f8b0:4001:c0b::245])
+        by mx.google.com with ESMTPS id r194si1323751itb.59.2017.01.23.02.18.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::245 is neither permitted nor denied by best guess record for domain of tech+bncbd76jv5fq4prbevrs7cakgqetb2egfa@unicommerce.com) client-ip=2607:f8b0:4001:c0b::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::245 is neither permitted nor denied by best guess record for domain of tech+bncbd76jv5fq4prbevrs7cakgqetb2egfa@unicommerce.com) smtp.mailfrom=tech+bncBD76JV5FQ4PRBEVRS7CAKGQETB2EGFA@unicommerce.com
+Received: by mail-it0-x245.google.com with SMTP id k197sf103637079itk.0
+        for <digvijay@unicommerce.com>; Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=cq4eFJ6LfEDGNmLT3Wk5fhgKdj6yN0j4Uioqy5kelOc=;
+        b=cKEcF2MSKi+LaNpoRN6fHcPomHC3wQt2ZV4SBz+kdDodw7oZEzInOktA9VxCrewz/j
+         jnmt6C8oHInNx6btvXrLafvckCeTD5bKSnDwNXBHgJUalG2OubflJuhM0QFY/DfO6AIy
+         G1YjzIgOl68Toc9D+JFuHy3C85AiPHskvsj4apK2ItFvsBzAI6pd5wIZ/itU3z9G+DSw
+         ykYPyqmjUdieL3mLw+kTM7FGfqdU8oasBO+KuIGfpSqb6LycdDoLkvWyFs/YjoYxlQ3r
+         FROIfSUMhr+2pV5A6zw2kPRO1uHwQqYnp6ahE551dDzZGqRQw2kWEo3WeNVqCpHb4TtE
+         L1AQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=cq4eFJ6LfEDGNmLT3Wk5fhgKdj6yN0j4Uioqy5kelOc=;
+        b=JMTTFjWovgPAxcSuJCHIahuuyLlxriKC6CurydvRApD8+tfnEQ1m9aYHWUMgYL5EN/
+         VYBU8lC63u6Mk9Do7hOOSTpcBP0URrzEy28WJQelc2nu2oz+g/CRkym24KDvuWvEo2ol
+         dmuozgOZkvGmwdQS1lLYlbtM1QVOnAWIdj9WLsOpzSo+FVMzlEskfobkcrdtxJa+6Fsd
+         3co936adjJ1RFWmAsFG31ryIe/HZfP/XqgP3rmvG+s2CCyYEX5QoIVg/0GHZ14vYQJOs
+         YvbGmA9+l3+Bnzmg2JteymL/vBKwDSSrwAoCLtae6+OyOXhHl9LG8Bm8rtO1mrqAYAnf
+         qk9g==
+X-Gm-Message-State: AIkVDXJ8SORb8LVbG4FcVczg5MwJiKWQpCZykFbE/hiDO/rKx8MU0nBSnVxyt79UOJphrA==
+X-Received: by 10.107.130.81 with SMTP id e78mr7323104iod.19.1485166738714;
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.47.1 with SMTP id h1ls4945585otb.22.gmail; Mon, 23 Jan
+ 2017 02:18:58 -0800 (PST)
+X-Received: by 10.202.71.137 with SMTP id u131mr14216416oia.111.1485166738611;
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+Received: from mail-ot0-x22f.google.com (mail-ot0-x22f.google.com. [2607:f8b0:4003:c0f::22f])
+        by mx.google.com with ESMTPS id t130si5844403oib.87.2017.01.23.02.18.58
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::22f is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4003:c0f::22f;
+Received: by mail-ot0-x22f.google.com with SMTP id 65so99038869otq.2
+        for <tech@unicommerce.com>; Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+X-Received: by 10.157.54.206 with SMTP id s14mr12326102otd.59.1485166738352;
+ Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.202.71.213 with HTTP; Mon, 23 Jan 2017 02:18:58 -0800 (PST)
+From: karan Garg <karangarg@unicommerce.com>
+Date: Mon, 23 Jan 2017 15:48:58 +0530
+Message-ID: <CAG=LqmPT2bK_4OKQUb3x4tKznL-xgt_3_iZB+59dsmrarMitxA@mail.gmail.com>
+Subject: Submit tax related documents
+To: team@unicommerce.com, Tech Team <tech@unicommerce.com>, 
+	Product Team <product@unicommerce.com>, UI Team <ui@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113e494edf3b5b0546c05360
+X-Original-Sender: karangarg@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c0f::22f is neither permitted nor denied by best
+ guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113e494edf3b5b0546c05360
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Sudesh (8527255683) will leave Snapdeal office by 4:15 so please submit
+your documents before that.
+
+-- 
+Regards,
+Karan Garg
+
+--001a113e494edf3b5b0546c05360
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi,<div><br></div><div><span style=3D"font-size:12.8px">Su=
+desh (8527255683) will leave Snapdeal office by 4:15 so please submit your =
+documents before that.</span><br clear=3D"all"><div><br></div>-- <br><div c=
+lass=3D"gmail_signature"><div dir=3D"ltr"><div><span style=3D"color:rgb(102=
+,102,102)">Regards,<br></span></div><span style=3D"color:rgb(102,102,102)">=
+Karan Garg</span><br></div></div>
+</div></div>
+
+--001a113e494edf3b5b0546c05360--

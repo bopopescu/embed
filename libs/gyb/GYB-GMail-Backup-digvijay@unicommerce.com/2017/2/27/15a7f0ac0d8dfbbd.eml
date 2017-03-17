@@ -1,0 +1,108 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp796534qgu;
+        Mon, 27 Feb 2017 02:08:15 -0800 (PST)
+X-Received: by 10.157.41.102 with SMTP id d93mr7358312otb.247.1488190095687;
+        Mon, 27 Feb 2017 02:08:15 -0800 (PST)
+Return-Path: <3j_qzWAcKCCAJKNALHUCKKCHA.8KI9ECREF6UQJE8KIIAN8A.8KI@takeout.bounces.google.com>
+Received: from mail-oi0-x245.google.com (mail-oi0-x245.google.com. [2607:f8b0:4003:c06::245])
+        by mx.google.com with ESMTPS id v64si6124679otb.38.2017.02.27.02.08.15
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 27 Feb 2017 02:08:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3j_qzwackccajknalhuckkcha.8ki9ecref6uqje8kiian8a.8ki@takeout.bounces.google.com designates 2607:f8b0:4003:c06::245 as permitted sender) client-ip=2607:f8b0:4003:c06::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       spf=pass (google.com: domain of 3j_qzwackccajknalhuckkcha.8ki9ecref6uqje8kiian8a.8ki@takeout.bounces.google.com designates 2607:f8b0:4003:c06::245 as permitted sender) smtp.mailfrom=3j_qzWAcKCCAJKNALHUCKKCHA.8KI9ECREF6UQJE8KIIAN8A.8KI@takeout.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Received: by mail-oi0-x245.google.com with SMTP id 62so77939795oih.5
+        for <digvijay@unicommerce.com>; Mon, 27 Feb 2017 02:08:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:message-id:date:subject:from:to;
+        bh=7mjAlYb8aS9q2kjHXBtxwZ4Sa5evnwE2t3L6MNBY6Ik=;
+        b=dG45TdbNqvbs1F1AZSGv62YeV6WbtMHHoKlW3/szrlIibjbxziVzU/COXBFxVRzbrn
+         d8n4JcaGEfbh3m536K6yr87UWKwxs/NZAokp/jZjPEyN8kOvcaLr0kPL0TztMS37V4zt
+         Ji8FDzgnsdqW52MwNyCLjeoOfE8D0k80sLTGhLHF/yoOYWkgkHGmfiDk7ejV16JcPNMB
+         s+n+9FnMiiUdQawZ1GyQLZBSUgBZWjMvySCnhdbxBhAK+mq3+45OOg6Bb/tKKk9f2vWG
+         Y6yoqklcc1UzshvSOAkAv4ef0J9Xict3N7pkjBbo9tPY/cpFVHcBowHWU2NS4VexK62j
+         vblA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:message-id:date:subject:from:to;
+        bh=7mjAlYb8aS9q2kjHXBtxwZ4Sa5evnwE2t3L6MNBY6Ik=;
+        b=rO6p2OlZeGnGYsc4+2sH/MiA5/ZnO4oE//3MCqY5b4GdKnHCxFuel3QtoUCaUIcGj5
+         Ly10Cc89R6UnaPVpPWeqSIe2HTl1nPxpO8SEhko4KbnZeOdRM3xkpFNbcrfsucu/WfRx
+         njgH1AijlRHmm/nXRedS0HQqpongoDt8FUBi7d3HWOGjxw9RjaJefNa96RRK148KqusC
+         m4o0ApNM6bbDkTnQJtIC1pyBfmZ5AtgMAne9fR5IiW/68GVG9mw/hohHgzON2zLpjsvt
+         uv0glZV7HG/P9OoHWyjbHR9urc+1k6OZ6vrdGvjhsnYI//ns4r9hqfBfvjCo3FaoAWTi
+         1wMQ==
+X-Gm-Message-State: AMke39nbWKvAkEc/p+xHJ/nzsUZfXtp7cDLKDf3ILfLQfiDwJJa7Z2bMwf9unBBNpyh8K+kBMuRm7MhgyNuPNphuEVKolp3bkVCY71eW/CfWC53z7xONPVK6p4qNoJ/e3RgoMjAWykQtNQPmKSUSP3N7Nn8O2sy+
+MIME-Version: 1.0
+X-Received: by 10.157.82.36 with SMTP id e36mr4246966oth.127.1488190095350;
+ Mon, 27 Feb 2017 02:08:15 -0800 (PST)
+Message-ID: <f403043554e8fe09bb05498041f5@google.com>
+Date: Mon, 27 Feb 2017 10:08:15 +0000
+Subject: Your Google data archive is ready
+From: Google Download Your Data <noreply@google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=f403043554e8fe09a505498041f2
+
+--f403043554e8fe09a505498041f2
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+The Google data archive you started on February 27, 2017 is ready. It
+contains your +1s, Bookmarks, Calendar, Chrome, Fit, Google Photos,
+Handsfree, Hangouts, Hangouts on Air, Keep, Mail, Maps (your places),
+Profile, Tasks, Contacts, Drive, Google Play Books, Google+ Circles,
+Google+ Pages, Google+ Stream, Location History, and YouTube data. It will
+be available for you to download until March 6, 2017. Manage archives
+(https://takeout.google.com/settings/takeout/downloads) Download archive
+(https://takeout.google.com/settings/takeout/download?j=202e058d-890c-4554-a0a7-dab202f56061&i=0&delegatedUser=)
+Privacy Policy (https://www.google.com/privacy/privacy-policy.html) Terms
+of Service (https://www.google.com/accounts/TOS) This message was sent to
+you because you recently used Google's Download your data service
+(https://takeout.google.com/settings/takeout/).
+
+--f403043554e8fe09a505498041f2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"border: solid 1px rgba(0, 0, 0, 0.14902); color: #686868; fon=
+t: 13px Arial; width:650px;"><div style=3D"display: inline-block; color: #6=
+86868; width: 350px; margin-top: 2px; margin-left: 20px; margin-right: 4px;=
+ padding-bottom: 6px;"><div style=3D"color: #262626; font-size: 20px; paddi=
+ng-top: 40px; font-weight: 200;">Your account, your data.</div><p>The Googl=
+e data archive you started on February 27, 2017 is ready. It contains your =
++1s, Bookmarks, Calendar, Chrome, Fit, Google Photos, Handsfree, Hangouts, =
+Hangouts on Air, Keep, Mail, Maps (your places), Profile, Tasks, Contacts, =
+Drive, Google Play Books, Google+ Circles, Google+ Pages, Google+ Stream, L=
+ocation History, and YouTube data. It will be available for you to download=
+ until March 6, 2017. </p><div style=3D"margin-top: 25px;"><p><a style=3D"b=
+ackground-color: #fff;; color: #000;; display: inline-block; padding: 7px 1=
+5px; font-size: 15px; font-weight: bold; white-space: normal; border: solid=
+ 1px rgba(0, 0, 0, 0.14902); text-decoration: none; border-radius: 3px;" hr=
+ef=3D"https://takeout.google.com/settings/takeout/downloads">Manage archive=
+s</a></p><p><a style=3D"background-color: #427fed;; color: #fff;; display: =
+inline-block; padding: 7px 15px; font-size: 15px; font-weight: bold; white-=
+space: normal; border: solid 1px rgba(0, 0, 0, 0.14902); text-decoration: n=
+one; border-radius: 3px;" href=3D"https://takeout.google.com/settings/takeo=
+ut/download?j=3D202e058d-890c-4554-a0a7-dab202f56061&amp;i=3D0&amp;delegate=
+dUser=3D">Download archive</a></p></div></div><div style=3D"text-align:righ=
+t; display: inline-block; padding-left: 75px;"><img style=3D"width: 196px; =
+height: 180px;" src=3D"https://www.gstatic.com/ac/takeout/takeout_intro_ima=
+ge_1d1dadb23cff61084b48eeb09b619e6e.png" alt=3D"Download your Data logo" />=
+</div><div style=3D"border-top: solid 1px #dfdfdf; color: #636363; font: 11=
+px Arial; line-height: 1.5em; padding: 10px 20px; background-color: #f5f5f5=
+; height: 33px;"><div style=3D"width: 350px; display:inline-block; float: l=
+eft;">This message was sent to you because you recently used Google's <a st=
+yle=3D"color: #3366CC; text-decoration: none;" href=3D"https://takeout.goog=
+le.com/settings/takeout/">Download your data</a> service.&nbsp;<a style=3D"=
+color: #3366CC; text-decoration: none;" href=3D"https://www.google.com/priv=
+acy/privacy-policy.html">Privacy Policy</a> | <a style=3D"color: #3366CC; t=
+ext-decoration: none;" href=3D"https://www.google.com/accounts/TOS">Terms o=
+f Service</a></div><div style=3D"border-style: none; width: 77px; height: 2=
+7px; display:inline-block; float: right;"><img src=3D"https://gstatic.com/i=
+mages/branding/googlelogo/1x/googlelogo_color_74x24dp.png" style=3D"border-=
+style: none; width: 74px; height: 24px; padding-top:5px;" alt=3D"Google log=
+o"/><div><br/></div></div>
+--f403043554e8fe09a505498041f2--

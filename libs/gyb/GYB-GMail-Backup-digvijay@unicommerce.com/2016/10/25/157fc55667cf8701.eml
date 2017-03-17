@@ -1,0 +1,201 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp3868156qgj;
+        Tue, 25 Oct 2016 07:53:57 -0700 (PDT)
+X-Received: by 10.200.36.13 with SMTP id c13mr18967932qtc.26.1477407237765;
+        Tue, 25 Oct 2016 07:53:57 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-qt0-x22f.google.com (mail-qt0-x22f.google.com. [2607:f8b0:400d:c0d::22f])
+        by mx.google.com with ESMTPS id 89si13685683qku.328.2016.10.25.07.53.57
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Oct 2016 07:53:57 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::22f is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:400d:c0d::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::22f is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-qt0-x22f.google.com with SMTP id g32so8478543qta.2
+        for <digvijay@unicommerce.com>; Tue, 25 Oct 2016 07:53:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=PzegLoVPEN9G0VUEdM6lAaeD0NSqkCfQh0kDGhRchyg=;
+        b=oqQIcsAuy9eA+FHAfgaODyTOK7oZViOuBx+zBW6/qP9bNPZnrefhejTAGLR4rvN7hh
+         Tg4IJdvVN/WDQmfG6MKGYHuqGeaXiHRQnYcrME7y/n7Hpj6pRc5wrAFUUja9K6uTQecQ
+         T01xJPKC9kiNQ3HH7Vyp6SHzJWlEPGslxjqOuyNnOswBoD9y47Ec1xprXuMD9uuXEYbj
+         IMoViPiAfZG9KSRJE2llEOT3ojKwESJ0iptS8woctQuPqWoO7G096H4OtK6Pr51HzaMN
+         3Tb2A/NEHKuZmv3ipNeyKg3bgmOB9JfsgSol2CHjGBGh7D1YSEHvuX20Cb/k34JRBDM9
+         1SoA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=PzegLoVPEN9G0VUEdM6lAaeD0NSqkCfQh0kDGhRchyg=;
+        b=MfBMW3/8xrxgLr5qJj22c/uh5/dKH0Mw+ZcN5FLVrYg8qDU7bqc0PNoprLA+xGRH/R
+         S/WnUd+DpakWybLjGmv+HcdplRBosH/xoas1LyDw/EEMXxUGWjVRLHFDmS4kvGgYxn/s
+         y67aOSkIefSuz9qf3L+fwGcH28s4PCD4v8fzDgaN6HMQ8xeogeENKldFuF4dUIU7lPjU
+         sXc1pSlXMDt4NFlT+6molN4//sDZeoWzwVrT4zMqs5C6Hs0YcCc+LSbxPjf63AmWaJum
+         Z8vYV0vgwVEU9vij7pdjtklgh9UWhbEsH200M2QZ1lob5FTGnQiJmL9Rk85OCWB3nLUC
+         I94w==
+X-Gm-Message-State: ABUngvfK56peq7w+O3i5+69TTfYGa3dgrWg7Sm8KwcJFh6S71IcC64toS95OM4FxkyRLFDhjhv6yYxYJitKyLg==
+X-Received: by 10.237.60.116 with SMTP id u49mr20484043qte.47.1477407237249;
+ Tue, 25 Oct 2016 07:53:57 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.55.105.197 with HTTP; Tue, 25 Oct 2016 07:53:56 -0700 (PDT)
+In-Reply-To: <1487640689.0.1477406718750.JavaMail.root@unicoms-MacBook-Air-3.local>
+References: <1487640689.0.1477406718750.JavaMail.root@unicoms-MacBook-Air-3.local>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Tue, 25 Oct 2016 20:23:56 +0530
+Message-ID: <CA+zaFGirmhM188gHag2Fxw0ctZv7YogocTY4kmR6L+z5FyzMqA@mail.gmail.com>
+Subject: Re: Script Versions Created Today
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: akshay <akshay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c191400913bef053fb1ad88
+
+--94eb2c191400913bef053fb1ad88
+Content-Type: text/plain; charset=UTF-8
+
+Thanks Vijay.
+
+But why are there 2 entries for the same script and version?
+
+Name of Script : *flipkartVerifyOrderScript*
+Version : *2.0*
+Comments : test
+Created By : digvijay@unicommerce.com
+
+
+, Name of Script : *flipkartVerifyOrderScript*
+Version : *2.0*
+Comments : test
+Created By : digvijay@unicommerce.com
+
+Similar entry for tradus.
+
+- Sunny
+
+On Tue, Oct 25, 2016 at 8:15 PM, <scriptcron@gmail.com> wrote:
+
+> [Name of Script : flipkartVerifyOrderScript
+> Version : 2.0
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : flipkartVerifyOrderScript
+> Version : 2.0
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : tradusItemTypeListScript
+> Version : 2.0
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : tradusDispatchVerificationScript
+> Version : 1.2
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : tradusDispatchVerificationScript
+> Version : 1.2
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : flipkartReconcilationInvoiceDetailScript
+> Version : 3.0
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : flipkartReconcilationInvoiceDetailScript
+> Version : 2.0
+> Comments : asda
+> Created By : digvijay@unicommerce.com
+>
+>
+> ]
+>
+
+--94eb2c191400913bef053fb1ad88
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Thanks Vijay.<div><br></div><div>But why are there 2 entri=
+es for the same script and version?</div><div><br></div><div><span style=3D=
+"font-size:12.8px">Name of Script : <b>flipkartVerifyOrderScript</b></span>=
+<br style=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Version : <=
+b>2.0</b></span><br style=3D"font-size:12.8px"><span style=3D"font-size:12.=
+8px">Comments : test</span><br style=3D"font-size:12.8px"><span style=3D"fo=
+nt-size:12.8px">Created By :=C2=A0</span><a href=3D"mailto:digvijay@unicomm=
+erce.com" style=3D"font-size:12.8px">digvijay@unicommerce.com</a><br style=
+=3D"font-size:12.8px"><br style=3D"font-size:12.8px"><br style=3D"font-size=
+:12.8px"><span style=3D"font-size:12.8px">, Name of Script : <b>flipkartVer=
+ifyOrderScript</b></span><br style=3D"font-size:12.8px"><span style=3D"font=
+-size:12.8px">Version : <b>2.0</b></span><br style=3D"font-size:12.8px"><sp=
+an style=3D"font-size:12.8px">Comments : test</span><br style=3D"font-size:=
+12.8px"><span style=3D"font-size:12.8px">Created By :=C2=A0</span><a href=
+=3D"mailto:digvijay@unicommerce.com" style=3D"font-size:12.8px">digvijay@un=
+icommerce.com</a><br style=3D"font-size:12.8px"></div><div><br></div><div>S=
+imilar entry for tradus.</div><div><br></div><div>- Sunny</div></div><div c=
+lass=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, Oct 25, 2016 at=
+ 8:15 PM,  <span dir=3D"ltr">&lt;<a href=3D"mailto:scriptcron@gmail.com" ta=
+rget=3D"_blank">scriptcron@gmail.com</a>&gt;</span> wrote:<br><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex">[Name of Script : flipkartVerifyOrderScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartVerifyOrderScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusItemTypeListScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusDispatchVerificationScri<wbr>pt<br>
+Version : 1.2<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusDispatchVerificationScri<wbr>pt<br>
+Version : 1.2<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartReconcilationInvoiceDe<wbr>tailScript<br>
+Version : 3.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartReconcilationInvoiceDe<wbr>tailScript<br>
+Version : 2.0<br>
+Comments : asda<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommer=
+ce.com</a><br>
+<br>
+<br>
+]<br>
+</blockquote></div><br></div>
+
+--94eb2c191400913bef053fb1ad88--

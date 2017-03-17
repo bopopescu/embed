@@ -1,0 +1,199 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Tue, 3 Jan 2017 10:47:08 -0800 (PST)
+In-Reply-To: <CAGttGOKES50+_hStNap+bcgX=4ZFQCohYfTGJ=261+D-exnt=w@mail.gmail.com>
+References: <CAJF3soq5_=QX3iNj-yhFWFym8HtquTb--ff2ijY7+7t1Zed8xg@mail.gmail.com>
+	<CAGttGOKES50+_hStNap+bcgX=4ZFQCohYfTGJ=261+D-exnt=w@mail.gmail.com>
+Date: Wed, 4 Jan 2017 00:17:08 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopyTnKYFc3GwQgDtxO3-Fp9ntXZDVyR0FS_K5zHQFaeUw@mail.gmail.com>
+Subject: Re: Queries for prod uniware
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Puneet Sharma <puneet@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c15278694249054535182b
+
+--001a11c15278694249054535182b
+Content-Type: text/plain; charset=UTF-8
+
+Sir yeh same queries mongo pe chalayi maine koi errors nhn the. Aapne konse
+mongo pe check kiya tha?
+
+
+On Tue, Jan 3, 2017 at 10:51 PM, Puneet Sharma <puneet@unicommerce.com>
+wrote:
+
+> Done for mysql , got some of these error for mongo . Please check and
+> confirm .
+>
+> 2017-01-03T22:39:50.107+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:39:50.107+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:39:50.107+0530 ReferenceError: decoded_
+> trendyBharatDropshipInventoryUpdateScript is not defined
+>
+> WriteResult({ "nInserted" : 1 })
+>
+> 2017-01-03T22:40:29.904+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:40:29.905+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:40:29.905+0530 ReferenceError: decoded_
+> trendyBharatStagingCustomNotificationsScript is not defined
+>
+> WriteResult({ "nInserted" : 1 })
+>
+>
+>
+> 2017-01-03T22:40:51.749+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:40:51.749+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:40:51.750+0530 ReferenceError: decoded_
+> trendyBharatDropshipItemTypedetailScript is not defined
+>
+> WriteResult({ "nInserted" : 1 })
+>
+> 2017-01-03T22:41:35.465+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:41:35.465+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:41:35.466+0530 ReferenceError: decoded_
+> trendyBharatDropshipItemTypeListScript is not defined
+>
+> WriteResult({ "nInserted" : 1 })
+>
+>
+> 2017-01-03T22:42:23.899+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:42:23.900+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:42:23.900+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:42:23.901+0530 SyntaxError: Unexpected token ILLEGAL
+>
+> 2017-01-03T22:42:23.902+0530 ReferenceError: decoded_
+> trendyBharatDropshipSaleOrderDetailsScript is not defined
+>
+> WriteResult({ "nInserted" : 1 })
+>
+> Thanks,
+> Puneet Sharma
+> Unicommerce Esolutions Pvt. Ltd
+> +91-7666182895
+>
+> On Thu, Dec 29, 2016 at 8:05 PM, Digvijay Sharma <digvijay@unicommerce.com
+> > wrote:
+>
+>> Please run these queries on prod:
+>> For common mongos,  .js file is attached. Run using that.
+>> For mysql file do mysql2All.
+>> This is for the integration of a new channel named TrendyBharat.
+>>
+>
+>
+
+--001a11c15278694249054535182b
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Sir yeh same queries mongo pe chalayi maine koi errors nhn=
+ the. Aapne konse mongo pe check kiya tha?<div><br></div></div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, Jan 3, 2017 at 10:5=
+1 PM, Puneet Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:puneet@unicomme=
+rce.com" target=3D"_blank">puneet@unicommerce.com</a>&gt;</span> wrote:<br>=
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">Done for mysql , got some of these error for mongo . Please c=
+heck and confirm .=C2=A0</span></p><p class=3D"m_3316178862314848262gmail-p=
+1"><span class=3D"m_3316178862314848262gmail-s1">2017-01-03T22:39:50.107+05=
+30 SyntaxError: Unexpected token ILLEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:39:50.107+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:39:50.107+0530 ReferenceError: decoded_<wbr>tre=
+ndyBharatDropshipInventoryU<wbr>pdateScript is not defined</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">WriteResult({ &quot;nInserted&quot; : 1 })</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:29.904+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:29.905+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:29.905+0530 ReferenceError: decoded_<wbr>tre=
+ndyBharatStagingCustomNotif<wbr>icationsScript is not defined</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">WriteResult({ &quot;nInserted&quot; : 1 })</span></p>
+<p class=3D"m_3316178862314848262gmail-p2"><span class=3D"m_331617886231484=
+8262gmail-s1"></span><br></p>
+<p class=3D"m_3316178862314848262gmail-p2"><span class=3D"m_331617886231484=
+8262gmail-s1"></span><br></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:51.749+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:51.749+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:40:51.750+0530 ReferenceError: decoded_<wbr>tre=
+ndyBharatDropshipItemTypede<wbr>tailScript is not defined</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">WriteResult({ &quot;nInserted&quot; : 1 })</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:41:35.465+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:41:35.465+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:41:35.466+0530 ReferenceError: decoded_<wbr>tre=
+ndyBharatDropshipItemTypeLi<wbr>stScript is not defined</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">WriteResult({ &quot;nInserted&quot; : 1 })</span></p>
+<p class=3D"m_3316178862314848262gmail-p2"><span class=3D"m_331617886231484=
+8262gmail-s1"></span><br></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:42:23.899+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:42:23.900+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:42:23.900+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:42:23.901+0530 SyntaxError: Unexpected token IL=
+LEGAL</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">2017-01-03T22:42:23.902+0530 ReferenceError: decoded_<wbr>tre=
+ndyBharatDropshipSaleOrderD<wbr>etailsScript is not defined</span></p>
+<p class=3D"m_3316178862314848262gmail-p1"><span class=3D"m_331617886231484=
+8262gmail-s1">WriteResult({ &quot;nInserted&quot; : 1 })</span></p></div><d=
+iv class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"m_33161788623=
+14848262gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr=
+"><div><div dir=3D"ltr">Thanks,<div>Puneet Sharma</div><div>Unicommerce Eso=
+lutions Pvt. Ltd</div><div>+91-7666182895</div></div></div></div></div></di=
+v>
+<br><div class=3D"gmail_quote"><span class=3D"">On Thu, Dec 29, 2016 at 8:0=
+5 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unic=
+ommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrot=
+e:<br></span><div><div class=3D"h5"><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr">Please run these queries on prod:<div>For common mongos, =C2=A0.js=
+ file is attached. Run using that.</div><div>For mysql file do mysql2All.</=
+div><div>This is for the integration of a new channel named TrendyBharat.</=
+div></div>
+</blockquote></div></div></div><br></div>
+</blockquote></div><br></div>
+
+--001a11c15278694249054535182b--

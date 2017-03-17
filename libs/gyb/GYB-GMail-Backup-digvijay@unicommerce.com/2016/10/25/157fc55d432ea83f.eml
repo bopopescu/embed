@@ -1,0 +1,218 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp3868378qgj;
+        Tue, 25 Oct 2016 07:54:26 -0700 (PDT)
+X-Received: by 10.55.41.79 with SMTP id p76mr22936257qkh.93.1477407265999;
+        Tue, 25 Oct 2016 07:54:25 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-qt0-x229.google.com (mail-qt0-x229.google.com. [2607:f8b0:400d:c0d::229])
+        by mx.google.com with ESMTPS id r126si13675104qkf.286.2016.10.25.07.54.25
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Oct 2016 07:54:25 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:400d:c0d::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-qt0-x229.google.com with SMTP id g49so10674671qtc.6
+        for <digvijay@unicommerce.com>; Tue, 25 Oct 2016 07:54:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=LCkRSB2dSb/pf/0sYnHa1CEb9po98P93M+808BpyaxE=;
+        b=jwO2ftXeFw+pzo2Ia9Rw9CGa6wOY483VZix2YLRqVzBrBMES+80JRQuezvyW1WEkzZ
+         z8Wz69kJX2uGwubNhcciBmYPaE6UoPteozel1rqF8FH5hiGbfdGq0PZUoUyw6L/wGTvu
+         L19KUKvyjZhnOkLxUzDnTluyVoCV1LQ1xeSVA1SOqDmFQ6WomLbcqn6QcdS5IKN//Yuz
+         AY1dTll+IlQFw88jXJErFC1KbE86hOmHu8Yn7Ng9Ik32OHUfC5Yud3a64mK4fZzeLFxW
+         DZPiZ7GIt5iyrgHIs+w5Mx1dcm1GRoRDWBH3OOy1ZTXWqfBqU9reuP8R9Mq0fA7d9cqh
+         G1Xg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=LCkRSB2dSb/pf/0sYnHa1CEb9po98P93M+808BpyaxE=;
+        b=eRSip7R2jz0oocUbV0pp3NSVwQRhv/H9MCQBfa9bau6WOisazUybwbFbmC1m5Q39aB
+         Onj84nxCBejgd0/MQNzFt9lg8iI9rm00NfswbhMfB27XjdE1pjxp4UarpOsWwEv0tsXU
+         JOMzcrILIZxS16DmhPlXay8PPo2+QTcdhQVElXqbxAGhVAGiHdWoFSwXgE+lCveSZiyQ
+         +h7JLQPUdOm9MowIdS2QbZhNho/y5X7+CGLxt1RMYq7KC+BrU/8WZ15++pafOicq83vH
+         a/Zj6ytULG8ywtW2uG0a0wShqZHtsaHQjvcTnZZ4B1ipo7j+3yYky1TseIQB6pZdB55X
+         p+Ww==
+X-Gm-Message-State: ABUngve4AbgpcwA08iBhcgQpViX8x6VmO2rNLMhiN8QXbSMCrZNb1ocwZe86C5QWYklGxwu8/ORlGN101TtYnA==
+X-Received: by 10.237.36.235 with SMTP id u40mr20456016qtc.152.1477407265649;
+ Tue, 25 Oct 2016 07:54:25 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.55.105.197 with HTTP; Tue, 25 Oct 2016 07:54:25 -0700 (PDT)
+In-Reply-To: <CA+zaFGirmhM188gHag2Fxw0ctZv7YogocTY4kmR6L+z5FyzMqA@mail.gmail.com>
+References: <1487640689.0.1477406718750.JavaMail.root@unicoms-MacBook-Air-3.local>
+ <CA+zaFGirmhM188gHag2Fxw0ctZv7YogocTY4kmR6L+z5FyzMqA@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Tue, 25 Oct 2016 20:24:25 +0530
+Message-ID: <CA+zaFGgojdmMn9d7VJXsJzzNjqh2DhehcynfCDdfpQMXnAVu3w@mail.gmail.com>
+Subject: Re: Script Versions Created Today
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: akshay <akshay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11407360420eff053fb1af26
+
+--001a11407360420eff053fb1af26
+Content-Type: text/plain; charset=UTF-8
+
+Also, can we have the results in a tabular format?
+
+On Tue, Oct 25, 2016 at 8:23 PM, Sunny Agarwal <sunny@unicommerce.com>
+wrote:
+
+> Thanks Vijay.
+>
+> But why are there 2 entries for the same script and version?
+>
+> Name of Script : *flipkartVerifyOrderScript*
+> Version : *2.0*
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+>
+> , Name of Script : *flipkartVerifyOrderScript*
+> Version : *2.0*
+> Comments : test
+> Created By : digvijay@unicommerce.com
+>
+> Similar entry for tradus.
+>
+> - Sunny
+>
+> On Tue, Oct 25, 2016 at 8:15 PM, <scriptcron@gmail.com> wrote:
+>
+>> [Name of Script : flipkartVerifyOrderScript
+>> Version : 2.0
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : flipkartVerifyOrderScript
+>> Version : 2.0
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : tradusItemTypeListScript
+>> Version : 2.0
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : tradusDispatchVerificationScript
+>> Version : 1.2
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : tradusDispatchVerificationScript
+>> Version : 1.2
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : flipkartReconcilationInvoiceDetailScript
+>> Version : 3.0
+>> Comments : test
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> , Name of Script : flipkartReconcilationInvoiceDetailScript
+>> Version : 2.0
+>> Comments : asda
+>> Created By : digvijay@unicommerce.com
+>>
+>>
+>> ]
+>>
+>
+>
+
+--001a11407360420eff053fb1af26
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Also, can we have the results in a tabular format?</div><d=
+iv class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, Oct 25, 201=
+6 at 8:23 PM, Sunny Agarwal <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@u=
+nicommerce.com" target=3D"_blank">sunny@unicommerce.com</a>&gt;</span> wrot=
+e:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Thanks Vijay.<div><br=
+></div><div>But why are there 2 entries for the same script and version?</d=
+iv><span class=3D""><div><br></div><div><span style=3D"font-size:12.8px">Na=
+me of Script : <b>flipkartVerifyOrderScript</b></span><br style=3D"font-siz=
+e:12.8px"><span style=3D"font-size:12.8px">Version : <b>2.0</b></span><br s=
+tyle=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Comments : test<=
+/span><br style=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Creat=
+ed By :=C2=A0</span><a href=3D"mailto:digvijay@unicommerce.com" style=3D"fo=
+nt-size:12.8px" target=3D"_blank">digvijay@unicommerce.com</a><br style=3D"=
+font-size:12.8px"><br style=3D"font-size:12.8px"><br style=3D"font-size:12.=
+8px"><span style=3D"font-size:12.8px">, Name of Script : <b>flipkartVerifyO=
+rderScript</b></span><br style=3D"font-size:12.8px"><span style=3D"font-siz=
+e:12.8px">Version : <b>2.0</b></span><br style=3D"font-size:12.8px"><span s=
+tyle=3D"font-size:12.8px">Comments : test</span><br style=3D"font-size:12.8=
+px"><span style=3D"font-size:12.8px">Created By :=C2=A0</span><a href=3D"ma=
+ilto:digvijay@unicommerce.com" style=3D"font-size:12.8px" target=3D"_blank"=
+>digvijay@unicommerce.com</a><br style=3D"font-size:12.8px"></div><div><br>=
+</div></span><div>Similar entry for tradus.</div><span class=3D"HOEnZb"><fo=
+nt color=3D"#888888"><div><br></div><div>- Sunny</div></font></span></div><=
+div class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div =
+class=3D"gmail_quote">On Tue, Oct 25, 2016 at 8:15 PM,  <span dir=3D"ltr">&=
+lt;<a href=3D"mailto:scriptcron@gmail.com" target=3D"_blank">scriptcron@gma=
+il.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"=
+margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">[Name of Scr=
+ipt : flipkartVerifyOrderScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartVerifyOrderScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusItemTypeListScript<br>
+Version : 2.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusDispatchVerificationScri<wbr>pt<br>
+Version : 1.2<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : tradusDispatchVerificationScri<wbr>pt<br>
+Version : 1.2<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartReconcilationInvoiceDe<wbr>tailScript<br>
+Version : 3.0<br>
+Comments : test<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+, Name of Script : flipkartReconcilationInvoiceDe<wbr>tailScript<br>
+Version : 2.0<br>
+Comments : asda<br>
+Created By : <a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">=
+digvijay@unicommerce.com</a><br>
+<br>
+<br>
+]<br>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a11407360420eff053fb1af26--

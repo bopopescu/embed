@@ -1,0 +1,693 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Tue, 17 Jan 2017 00:27:10 -0800 (PST)
+Date: Tue, 17 Jan 2017 13:57:10 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopHL39iAUo3k9+5Uok9PCO0dKsDMzqL1fRWRykHnoSkww@mail.gmail.com>
+Subject: Access resource
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Aditya Harit <aditya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c139b804dab005464611d8
+
+--001a11c139b804dab005464611d8
+Content-Type: text/plain; charset=UTF-8
+
+@Entity
+@Table(name = "access_pattern", uniqueConstraints =
+@UniqueConstraint(columnNames = "url_pattern"))
+public class AccessPattern implements java.io.Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1777206518938215745L;
+    private Integer           id;
+    private AccessResource    accessResource;
+    private String            urlPattern;
+    private Date              created;
+    private Date              updated;
+
+    public AccessPattern() {
+    }
+
+    public AccessPattern(AccessResource accessResource, String
+urlPattern, Date created, Date updated) {
+        this.accessResource = accessResource;
+        this.urlPattern = urlPattern;
+        this.created = created;
+        this.updated = updated;
+    }
+
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "access_resource_id", nullable = false)
+    public AccessResource getAccessResource() {
+        return this.accessResource;
+    }
+
+    public void setAccessResource(AccessResource accessResource) {
+        this.accessResource = accessResource;
+    }
+
+    @Column(name = "url_pattern", unique = true, nullable = false, length = 100)
+    public String getUrlPattern() {
+        return this.urlPattern;
+    }
+
+    public void setUrlPattern(String urlPattern) {
+        this.urlPattern = urlPattern;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created", nullable = false, length = 19)
+    public Date getCreated() {
+        return this.created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "updated", nullable = false, length = 19,
+insertable = false, updatable = false)
+    public Date getUpdated() {
+        return this.updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+}
+
+
+
+
+
+
+
+
+@Entity
+@Table(name = "role_access_resource", uniqueConstraints =
+@UniqueConstraint(columnNames = { "role_id", "access_resource_id" }))
+public class RoleAccessResource implements java.io.Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = -3756057608358187020L;
+    private Integer           id;
+    private Role              role;
+    private AccessResource    accessResource;
+    private boolean           enabled;
+    private Date              created;
+    private Date              updated;
+
+    public RoleAccessResource() {
+    }
+
+    public RoleAccessResource(Role role, AccessResource
+accessResource, boolean enabled, Date created, Date updated) {
+        this.role = role;
+        this.accessResource = accessResource;
+        this.enabled = enabled;
+        this.created = created;
+        this.updated = updated;
+    }
+
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "role_id", nullable = false)
+    public Role getRole() {
+        return this.role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "access_resource_id", nullable = false)
+    public AccessResource getAccessResource() {
+        return this.accessResource;
+    }
+
+    public void setAccessResource(AccessResource accessResource) {
+        this.accessResource = accessResource;
+    }
+
+    @Column(name = "enabled", nullable = false)
+    public boolean isEnabled() {
+        return this.enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created", nullable = false, length = 19)
+    public Date getCreated() {
+        return this.created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "updated", nullable = false, length = 19,
+insertable = false, updatable = false)
+    public Date getUpdated() {
+        return this.updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+}
+
+
+
+@Entity
+@Table(name = "access_resource", uniqueConstraints =
+@UniqueConstraint(columnNames = "name"))
+public class AccessResource implements java.io.Serializable {
+
+    /**
+     *
+     */
+    private static final long       serialVersionUID    = -6738948660014594718L;
+    private Integer                 id;
+    private String                  name;
+    private Date                    created;
+    private Date                    updated;
+    private Set<RoleAccessResource> roleAccessResources = new
+HashSet<RoleAccessResource>(0);
+    private Set<AccessPattern>      accessPatterns      = new
+HashSet<AccessPattern>(0);
+
+    public AccessResource() {
+    }
+
+    public AccessResource(String name, Date created, Date updated) {
+        this.name = name;
+        this.created = created;
+        this.updated = updated;
+    }
+
+    public AccessResource(String name, Date created, Date updated,
+Set<RoleAccessResource> roleAccessResources,
+            Set<AccessPattern> accessPatterns) {
+        this.name = name;
+        this.created = created;
+        this.updated = updated;
+        this.roleAccessResources = roleAccessResources;
+        this.accessPatterns = accessPatterns;
+    }
+
+    /**
+     * @param accessResourceId
+     */
+    public AccessResource(Integer accessResourceId) {
+        this.id = accessResourceId;
+    }
+
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Column(name = "name", unique = true, nullable = false, length = 45)
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created", nullable = false, length = 19)
+    public Date getCreated() {
+        return this.created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "updated", nullable = false, length = 19,
+insertable = false, updatable = false)
+    public Date getUpdated() {
+        return this.updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "accessResource")
+    public Set<RoleAccessResource> getRoleAccessResources() {
+        return this.roleAccessResources;
+    }
+
+    public void setRoleAccessResources(Set<RoleAccessResource>
+roleAccessResources) {
+        this.roleAccessResources = roleAccessResources;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "accessResource")
+    public Set<AccessPattern> getAccessPatterns() {
+        return this.accessPatterns;
+    }
+
+    public void setAccessPatterns(Set<AccessPattern> accessPatterns) {
+        this.accessPatterns = accessPatterns;
+    }
+
+}
+
+--001a11c139b804dab005464611d8
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><span style=3D"color:rgb(128,128,0)">@Entity<br></span><span style=3D=
+"color:rgb(128,128,0)">@Table</span>(name =3D <span style=3D"color:rgb(0,12=
+8,0);font-weight:bold">&quot;access_pattern&quot;</span>, uniqueConstraints=
+ =3D <span style=3D"color:rgb(128,128,0)">@UniqueConstraint</span>(columnNa=
+mes =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;url_patte=
+rn&quot;</span>))<br><span style=3D"color:rgb(0,0,128);font-weight:bold">pu=
+blic class </span>AccessPattern <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">implements </span>java.io.Serializable {<br><br>    <span style=3D=
+"color:rgb(128,128,128);font-style:italic">/**<br></span><span style=3D"col=
+or:rgb(128,128,128);font-style:italic">     * <br></span><span style=3D"col=
+or:rgb(128,128,128);font-style:italic">     */<br></span><span style=3D"col=
+or:rgb(128,128,128);font-style:italic">    </span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold">private static final long </span><span style=3D"=
+color:rgb(102,14,122);font-weight:bold;font-style:italic">serialVersionUID =
+</span>=3D <span style=3D"color:rgb(0,0,255)">1777206518938215745L</span>;<=
+br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private </span>I=
+nteger           <span style=3D"color:rgb(102,14,122);font-weight:bold">id<=
+/span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private =
+</span>AccessResource    <span style=3D"color:rgb(102,14,122);font-weight:b=
+old">accessResource</span>;<br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">private </span>String            <span style=3D"color:rgb(102,1=
+4,122);font-weight:bold">urlPattern</span>;<br>    <span style=3D"color:rgb=
+(0,0,128);font-weight:bold">private </span>Date              <span style=3D=
+"color:rgb(102,14,122);font-weight:bold">created</span>;<br>    <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">private </span>Date              <=
+span style=3D"color:rgb(102,14,122);font-weight:bold">updated</span>;<br><b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Acc=
+essPattern() {<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">public </span>AccessPattern(AccessResource accessResource, Stri=
+ng urlPattern, Date created, Date updated) {<br>        <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold">accessResource </span>=3D accessResource;<br>     =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold">urlPattern </span>=3D urlPat=
+tern;<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this</=
+span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">created </span=
+>=3D created;<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">update=
+d </span>=3D updated;<br>    }<br><br>    <span style=3D"color:rgb(128,128,=
+0)">@Id<br></span><span style=3D"color:rgb(128,128,0)">    @GeneratedValue<=
+/span>(strategy =3D <span style=3D"color:rgb(102,14,122);font-weight:bold;f=
+ont-style:italic">IDENTITY</span>)<br>    <span style=3D"color:rgb(128,128,=
+0)">@Column</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:b=
+old">&quot;id&quot;</span>, unique =3D <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">true</span>, nullable =3D <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">false</span>)<br>    <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public </span>Integer getId() {<br>        <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">return this</span>.<span style=3D"colo=
+r:rgb(102,14,122);font-weight:bold">id</span>;<br>    }<br><br>    <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setId(Intege=
+r id) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this=
+</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">id </span>=
+=3D id;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@ManyToOne=
+</span>(fetch =3D FetchType.<span style=3D"color:rgb(102,14,122);font-weigh=
+t:bold;font-style:italic">LAZY</span>)<br>    <span style=3D"color:rgb(128,=
+128,0)">@JoinColumn</span>(name =3D <span style=3D"color:rgb(0,128,0);font-=
+weight:bold">&quot;access_resource_id&quot;</span>, nullable =3D <span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold">false</span>)<br>    <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public </span>AccessResource getAc=
+cessResource() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:b=
+old">return this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bo=
+ld">accessResource</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0=
+,128);font-weight:bold">public void </span>setAccessResource(AccessResource=
+ accessResource) {<br>        <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">a=
+ccessResource </span>=3D accessResource;<br>    }<br><br>    <span style=3D=
+"color:rgb(128,128,0)">@Column</span>(name =3D <span style=3D"color:rgb(0,1=
+28,0);font-weight:bold">&quot;url_pattern&quot;</span>, unique =3D <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">true</span>, nullable =3D <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">false</span>, length =3D <sp=
+an style=3D"color:rgb(0,0,255)">100</span>)<br>    <span style=3D"color:rgb=
+(0,0,128);font-weight:bold">public </span>String getUrlPattern() {<br>     =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">return this</span>.<=
+span style=3D"color:rgb(102,14,122);font-weight:bold">urlPattern</span>;<br=
+>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publi=
+c void </span>setUrlPattern(String urlPattern) {<br>        <span style=3D"=
+color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(1=
+02,14,122);font-weight:bold">urlPattern </span>=3D urlPattern;<br>    }<br>=
+<br>    <span style=3D"color:rgb(128,128,0)">@Temporal</span>(TemporalType.=
+<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">TI=
+MESTAMP</span>)<br>    <span style=3D"color:rgb(128,128,0)">@Column</span>(=
+name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;created&=
+quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">false</span>, length =3D <span style=3D"color:rgb(0,0,255)">19</span>)<=
+br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Da=
+te getCreated() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">return this</span>.<span style=3D"color:rgb(102,14,122);font-weight:b=
+old">created</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">public void </span>setCreated(Date created) {<br>        =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=
+=3D"color:rgb(102,14,122);font-weight:bold">created </span>=3D created;<br>=
+    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Temporal</span>(Temp=
+oralType.<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">TIMESTAMP</span>)<br>    <span style=3D"color:rgb(128,128,0)">@Colum=
+n</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot=
+;updated&quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">false</span>, length =3D <span style=3D"color:rgb(0,0,255)">19=
+</span>, insertable =3D <span style=3D"color:rgb(0,0,128);font-weight:bold"=
+>false</span>, updatable =3D <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">false</span>)<br>    <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">public </span>Date getUpdated() {<br>        <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">return this</span>.<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold">updated</span>;<br>    }<br><br>    <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">public void </span>setUpdated(Date up=
+dated) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">thi=
+s</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">updated </s=
+pan>=3D updated;<br>    }<br><br>}<br></pre><pre style=3D"color:rgb(0,0,0);=
+font-family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);f=
+ont-family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);fo=
+nt-family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);fon=
+t-family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);font=
+-family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);font-=
+family:menlo;font-size:9pt"><br></pre><pre style=3D"color:rgb(0,0,0);font-f=
+amily:menlo;font-size:9pt"><pre style=3D"font-family:menlo;font-size:9pt"><=
+br><span style=3D"color:rgb(128,128,0)">@Entity<br></span><span style=3D"co=
+lor:rgb(128,128,0)">@Table</span>(name =3D <span style=3D"color:rgb(0,128,0=
+);font-weight:bold">&quot;role_access_resource&quot;</span>, uniqueConstrai=
+nts =3D <span style=3D"color:rgb(128,128,0)">@UniqueConstraint</span>(colum=
+nNames =3D { <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;role=
+_id&quot;</span>, <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot=
+;access_resource_id&quot; </span>}))<br><span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">public class </span>RoleAccessResource <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">implements </span>java.io.Serializable {<b=
+r><br>    <span style=3D"color:rgb(128,128,128);font-style:italic">/**<br><=
+/span><span style=3D"color:rgb(128,128,128);font-style:italic">     * <br><=
+/span><span style=3D"color:rgb(128,128,128);font-style:italic">     */<br><=
+/span><span style=3D"color:rgb(128,128,128);font-style:italic">    </span><=
+span style=3D"color:rgb(0,0,128);font-weight:bold">private static final lon=
+g </span><span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:i=
+talic">serialVersionUID </span>=3D -<span style=3D"color:rgb(0,0,255)">3756=
+057608358187020L</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">private </span>Integer           <span style=3D"color:rgb(102,14,1=
+22);font-weight:bold">id</span>;<br>    <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">private </span>Role              <span style=3D"color:rgb(=
+102,14,122);font-weight:bold">role</span>;<br>    <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">private </span>AccessResource    <span style=3D"=
+color:rgb(102,14,122);font-weight:bold">accessResource</span>;<br>    <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">private boolean           </=
+span><span style=3D"color:rgb(102,14,122);font-weight:bold">enabled</span>;=
+<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private </span>=
+Date              <span style=3D"color:rgb(102,14,122);font-weight:bold">cr=
+eated</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">pr=
+ivate </span>Date              <span style=3D"color:rgb(102,14,122);font-we=
+ight:bold">updated</span>;<br><br>    <span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">public </span>RoleAccessResource() {<br>    }<br><br>    <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">public </span>RoleAccessRe=
+source(Role role, AccessResource accessResource, <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">boolean </span>enabled, Date created, Date update=
+d) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this</s=
+pan>.<span style=3D"color:rgb(102,14,122);font-weight:bold">role </span>=3D=
+ role;<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this<=
+/span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">accessResourc=
+e </span>=3D accessResource;<br>        <span style=3D"color:rgb(0,0,128);f=
+ont-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weig=
+ht:bold">enabled </span>=3D enabled;<br>        <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);f=
+ont-weight:bold">created </span>=3D created;<br>        <span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,1=
+4,122);font-weight:bold">updated </span>=3D updated;<br>    }<br><br>    <s=
+pan style=3D"color:rgb(128,128,0)">@Id<br></span><span style=3D"color:rgb(1=
+28,128,0)">    @GeneratedValue</span>(strategy =3D <span style=3D"color:rgb=
+(102,14,122);font-weight:bold;font-style:italic">IDENTITY</span>)<br>    <s=
+pan style=3D"color:rgb(128,128,0)">@Column</span>(name =3D <span style=3D"c=
+olor:rgb(0,128,0);font-weight:bold">&quot;id&quot;</span>, unique =3D <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">true</span>, nullable =3D <s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold">false</span>)<br>    <spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Integer getId=
+() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return =
+this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">id</span=
+>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">=
+public void </span>setId(Integer id) {<br>        <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122)=
+;font-weight:bold">id </span>=3D id;<br>    }<br><br>    <span style=3D"col=
+or:rgb(128,128,0)">@ManyToOne</span>(fetch =3D FetchType.<span style=3D"col=
+or:rgb(102,14,122);font-weight:bold;font-style:italic">LAZY</span>)<br>    =
+<span style=3D"color:rgb(128,128,0)">@JoinColumn</span>(name =3D <span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold">&quot;role_id&quot;</span>, nulla=
+ble =3D <span style=3D"color:rgb(0,0,128);font-weight:bold">false</span>)<b=
+r>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>Rol=
+e getRole() {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">return this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold"=
+>role</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public void </span>setRole(Role role) {<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:r=
+gb(102,14,122);font-weight:bold">role </span>=3D role;<br>    }<br><br>    =
+<span style=3D"color:rgb(128,128,0)">@ManyToOne</span>(fetch =3D FetchType.=
+<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">LA=
+ZY</span>)<br>    <span style=3D"color:rgb(128,128,0)">@JoinColumn</span>(n=
+ame =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;access_re=
+source_id&quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128);font=
+-weight:bold">false</span>)<br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">public </span>AccessResource getAccessResource() {<br>        <=
+span style=3D"color:rgb(0,0,128);font-weight:bold">return this</span>.<span=
+ style=3D"color:rgb(102,14,122);font-weight:bold">accessResource</span>;<br=
+>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publi=
+c void </span>setAccessResource(AccessResource accessResource) {<br>       =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span styl=
+e=3D"color:rgb(102,14,122);font-weight:bold">accessResource </span>=3D acce=
+ssResource;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Colum=
+n</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot=
+;enabled&quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">false</span>)<br>    <span style=3D"color:rgb(0,0,128);font-we=
+ight:bold">public boolean </span>isEnabled() {<br>        <span style=3D"co=
+lor:rgb(0,0,128);font-weight:bold">return this</span>.<span style=3D"color:=
+rgb(102,14,122);font-weight:bold">enabled</span>;<br>    }<br><br>    <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setEnable=
+d(<span style=3D"color:rgb(0,0,128);font-weight:bold">boolean </span>enable=
+d) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">this</s=
+pan>.<span style=3D"color:rgb(102,14,122);font-weight:bold">enabled </span>=
+=3D enabled;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Temp=
+oral</span>(TemporalType.<span style=3D"color:rgb(102,14,122);font-weight:b=
+old;font-style:italic">TIMESTAMP</span>)<br>    <span style=3D"color:rgb(12=
+8,128,0)">@Column</span>(name =3D <span style=3D"color:rgb(0,128,0);font-we=
+ight:bold">&quot;created&quot;</span>, nullable =3D <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">false</span>, length =3D <span style=3D"color:=
+rgb(0,0,255)">19</span>)<br>    <span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold">public </span>Date getCreated() {<br>        <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">return this</span>.<span style=3D"color:rgb(=
+102,14,122);font-weight:bold">created</span>;<br>    }<br><br>    <span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setCreated(Da=
+te created) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold=
+">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">create=
+d </span>=3D created;<br>    }<br><br>    <span style=3D"color:rgb(128,128,=
+0)">@Temporal</span>(TemporalType.<span style=3D"color:rgb(102,14,122);font=
+-weight:bold;font-style:italic">TIMESTAMP</span>)<br>    <span style=3D"col=
+or:rgb(128,128,0)">@Column</span>(name =3D <span style=3D"color:rgb(0,128,0=
+);font-weight:bold">&quot;updated&quot;</span>, nullable =3D <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">false</span>, length =3D <span style=
+=3D"color:rgb(0,0,255)">19</span>, insertable =3D <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">false</span>, updatable =3D <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">false</span>)<br>    <span style=3D"color:r=
+gb(0,0,128);font-weight:bold">public </span>Date getUpdated() {<br>        =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">return this</span>.<spa=
+n style=3D"color:rgb(102,14,122);font-weight:bold">updated</span>;<br>    }=
+<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public void=
+ </span>setUpdated(Date updated) {<br>        <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold">updated </span>=3D updated;<br>    }<br><br>}<br></pre><pre =
+style=3D"font-family:menlo;font-size:9pt"><br></pre><pre style=3D"font-fami=
+ly:menlo;font-size:9pt"><br></pre><pre style=3D"font-family:menlo;font-size=
+:9pt"><pre style=3D"font-family:menlo;font-size:9pt"><span style=3D"color:r=
+gb(128,128,0)">@Entity<br></span><span style=3D"color:rgb(128,128,0)">@Tabl=
+e</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot=
+;access_resource&quot;</span>, uniqueConstraints =3D <span style=3D"color:r=
+gb(128,128,0)">@UniqueConstraint</span>(columnNames =3D <span style=3D"colo=
+r:rgb(0,128,0);font-weight:bold">&quot;name&quot;</span>))<br><span style=
+=3D"color:rgb(0,0,128);font-weight:bold">public class </span>AccessResource=
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">implements </span>java=
+.io.Serializable {<br><br>    <span style=3D"color:rgb(128,128,128);font-st=
+yle:italic">/**<br></span><span style=3D"color:rgb(128,128,128);font-style:=
+italic">     * <br></span><span style=3D"color:rgb(128,128,128);font-style:=
+italic">     */<br></span><span style=3D"color:rgb(128,128,128);font-style:=
+italic">    </span><span style=3D"color:rgb(0,0,128);font-weight:bold">priv=
+ate static final long       </span><span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold;font-style:italic">serialVersionUID    </span>=3D -<span styl=
+e=3D"color:rgb(0,0,255)">6738948660014594718L</span>;<br>    <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">private </span>Integer               =
+  <span style=3D"color:rgb(102,14,122);font-weight:bold">id</span>;<br>    =
+<span style=3D"color:rgb(0,0,128);font-weight:bold">private </span>String  =
+                <span style=3D"color:rgb(102,14,122);font-weight:bold">name=
+</span>;<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private=
+ </span>Date                    <span style=3D"color:rgb(102,14,122);font-w=
+eight:bold">created</span>;<br>    <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">private </span>Date                    <span style=3D"color:rgb=
+(102,14,122);font-weight:bold">updated</span>;<br>    <span style=3D"color:=
+rgb(0,0,128);font-weight:bold">private </span>Set&lt;RoleAccessResource&gt;=
+ <span style=3D"color:rgb(102,14,122);font-weight:bold">roleAccessResources=
+ </span>=3D <span style=3D"color:rgb(0,0,128);font-weight:bold">new </span>=
+HashSet&lt;RoleAccessResource&gt;(<span style=3D"color:rgb(0,0,255)">0</spa=
+n>);<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">private </s=
+pan>Set&lt;AccessPattern&gt;      <span style=3D"color:rgb(102,14,122);font=
+-weight:bold">accessPatterns      </span>=3D <span style=3D"color:rgb(0,0,1=
+28);font-weight:bold">new </span>HashSet&lt;AccessPattern&gt;(<span style=
+=3D"color:rgb(0,0,255)">0</span>);<br><br>    <span style=3D"color:rgb(0,0,=
+128);font-weight:bold">public </span>AccessResource() {<br>    }<br><br>   =
+ <span style=3D"color:rgb(0,0,128);font-weight:bold">public </span>AccessRe=
+source(String name, Date created, Date updated) {<br>        <span style=3D=
+"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(=
+102,14,122);font-weight:bold">name </span>=3D name;<br>        <span style=
+=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D"color:r=
+gb(102,14,122);font-weight:bold">created </span>=3D created;<br>        <sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span style=3D=
+"color:rgb(102,14,122);font-weight:bold">updated </span>=3D updated;<br>   =
+ }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </=
+span>AccessResource(String name, Date created, Date updated, Set&lt;RoleAcc=
+essResource&gt; roleAccessResources,<br>            Set&lt;AccessPattern&gt=
+; accessPatterns) {<br>        <span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">=
+name </span>=3D name;<br>        <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold=
+">created </span>=3D created;<br>        <span style=3D"color:rgb(0,0,128);=
+font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold">updated </span>=3D updated;<br>        <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">this</span>.<span style=3D"color:rgb(102,14,122);=
+font-weight:bold">roleAccessResources </span>=3D roleAccessResources;<br>  =
+      <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span=
+ style=3D"color:rgb(102,14,122);font-weight:bold">accessPatterns </span>=3D=
+ accessPatterns;<br>    }<br><br>    <span style=3D"color:rgb(128,128,128);=
+font-style:italic">/**<br></span><span style=3D"color:rgb(128,128,128);font=
+-style:italic">     * </span><span style=3D"color:rgb(128,128,128);font-wei=
+ght:bold;font-style:italic">@param </span><span style=3D"color:rgb(61,61,61=
+);font-weight:bold;font-style:italic">accessResourceId<br></span><span styl=
+e=3D"color:rgb(61,61,61);font-weight:bold;font-style:italic">     </span><s=
+pan style=3D"color:rgb(128,128,128);font-style:italic">*/<br></span><span s=
+tyle=3D"color:rgb(128,128,128);font-style:italic">    </span><span style=3D=
+"color:rgb(0,0,128);font-weight:bold">public </span>AccessResource(Integer =
+accessResourceId) {<br>        <span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">=
+id </span>=3D accessResourceId;<br>    }<br><br>    <span style=3D"color:rg=
+b(128,128,0)">@Id<br></span><span style=3D"color:rgb(128,128,0)">    @Gener=
+atedValue</span>(strategy =3D <span style=3D"color:rgb(102,14,122);font-wei=
+ght:bold;font-style:italic">IDENTITY</span>)<br>    <span style=3D"color:rg=
+b(128,128,0)">@Column</span>(name =3D <span style=3D"color:rgb(0,128,0);fon=
+t-weight:bold">&quot;id&quot;</span>, unique =3D <span style=3D"color:rgb(0=
+,0,128);font-weight:bold">true</span>, nullable =3D <span style=3D"color:rg=
+b(0,0,128);font-weight:bold">false</span>)<br>    <span style=3D"color:rgb(=
+0,0,128);font-weight:bold">public </span>Integer getId() {<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">return this</span>.<span sty=
+le=3D"color:rgb(102,14,122);font-weight:bold">id</span>;<br>    }<br><br>  =
+  <span style=3D"color:rgb(0,0,128);font-weight:bold">public void </span>se=
+tId(Integer id) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">id=
+ </span>=3D id;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@C=
+olumn</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&=
+quot;name&quot;</span>, unique =3D <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">true</span>, nullable =3D <span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold">false</span>, length =3D <span style=3D"color:rgb(0,0,255)">=
+45</span>)<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publi=
+c </span>String getName() {<br>        <span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold">return this</span>.<span style=3D"color:rgb(102,14,122);fon=
+t-weight:bold">name</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,=
+0,128);font-weight:bold">public void </span>setName(String name) {<br>     =
+   <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span st=
+yle=3D"color:rgb(102,14,122);font-weight:bold">name </span>=3D name;<br>   =
+ }<br><br>    <span style=3D"color:rgb(128,128,0)">@Temporal</span>(Tempora=
+lType.<span style=3D"color:rgb(102,14,122);font-weight:bold;font-style:ital=
+ic">TIMESTAMP</span>)<br>    <span style=3D"color:rgb(128,128,0)">@Column</=
+span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;cr=
+eated&quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">false</span>, length =3D <span style=3D"color:rgb(0,0,255)">19</s=
+pan>)<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </s=
+pan>Date getCreated() {<br>        <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">return this</span>.<span style=3D"color:rgb(102,14,122);font-we=
+ight:bold">created</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0=
+,128);font-weight:bold">public void </span>setCreated(Date created) {<br>  =
+      <span style=3D"color:rgb(0,0,128);font-weight:bold">this</span>.<span=
+ style=3D"color:rgb(102,14,122);font-weight:bold">created </span>=3D create=
+d;<br>    }<br><br>    <span style=3D"color:rgb(128,128,0)">@Temporal</span=
+>(TemporalType.<span style=3D"color:rgb(102,14,122);font-weight:bold;font-s=
+tyle:italic">TIMESTAMP</span>)<br>    <span style=3D"color:rgb(128,128,0)">=
+@Column</span>(name =3D <span style=3D"color:rgb(0,128,0);font-weight:bold"=
+>&quot;updated&quot;</span>, nullable =3D <span style=3D"color:rgb(0,0,128)=
+;font-weight:bold">false</span>, length =3D <span style=3D"color:rgb(0,0,25=
+5)">19</span>, insertable =3D <span style=3D"color:rgb(0,0,128);font-weight=
+:bold">false</span>, updatable =3D <span style=3D"color:rgb(0,0,128);font-w=
+eight:bold">false</span>)<br>    <span style=3D"color:rgb(0,0,128);font-wei=
+ght:bold">public </span>Date getUpdated() {<br>        <span style=3D"color=
+:rgb(0,0,128);font-weight:bold">return this</span>.<span style=3D"color:rgb=
+(102,14,122);font-weight:bold">updated</span>;<br>    }<br><br>    <span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold">public void </span>setUpdated(D=
+ate updated) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bol=
+d">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">updat=
+ed </span>=3D updated;<br>    }<br><br>    <span style=3D"color:rgb(128,128=
+,0)">@OneToMany</span>(fetch =3D FetchType.<span style=3D"color:rgb(102,14,=
+122);font-weight:bold;font-style:italic">LAZY</span>, mappedBy =3D <span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold">&quot;accessResource&quot;</spa=
+n>)<br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">public </spa=
+n>Set&lt;RoleAccessResource&gt; getRoleAccessResources() {<br>        <span=
+ style=3D"color:rgb(0,0,128);font-weight:bold">return this</span>.<span sty=
+le=3D"color:rgb(102,14,122);font-weight:bold">roleAccessResources</span>;<b=
+r>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:bold">publ=
+ic void </span>setRoleAccessResources(Set&lt;RoleAccessResource&gt; roleAcc=
+essResources) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld">this</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">role=
+AccessResources </span>=3D roleAccessResources;<br>    }<br><br>    <span s=
+tyle=3D"color:rgb(128,128,0)">@OneToMany</span>(fetch =3D FetchType.<span s=
+tyle=3D"color:rgb(102,14,122);font-weight:bold;font-style:italic">LAZY</spa=
+n>, mappedBy =3D <span style=3D"color:rgb(0,128,0);font-weight:bold">&quot;=
+accessResource&quot;</span>)<br>    <span style=3D"color:rgb(0,0,128);font-=
+weight:bold">public </span>Set&lt;AccessPattern&gt; getAccessPatterns() {<b=
+r>        <span style=3D"color:rgb(0,0,128);font-weight:bold">return this</=
+span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">accessPatterns=
+</span>;<br>    }<br><br>    <span style=3D"color:rgb(0,0,128);font-weight:=
+bold">public void </span>setAccessPatterns(Set&lt;AccessPattern&gt; accessP=
+atterns) {<br>        <span style=3D"color:rgb(0,0,128);font-weight:bold">t=
+his</span>.<span style=3D"color:rgb(102,14,122);font-weight:bold">accessPat=
+terns </span>=3D accessPatterns;<br>    }<br><br>}<br></pre></pre><pre styl=
+e=3D"font-family:menlo;font-size:9pt"><br></pre></pre></div>
+
+--001a11c139b804dab005464611d8--

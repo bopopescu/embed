@@ -1,0 +1,220 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp541878qgu;
+        Thu, 19 Jan 2017 17:39:00 -0800 (PST)
+X-Received: by 10.129.55.136 with SMTP id e130mr9599739ywa.344.1484876340924;
+        Thu, 19 Jan 2017 17:39:00 -0800 (PST)
+Return-Path: <3NGqBWBEKCNc8BK743L7-GH-K7IER9HH9E7.5HF6B9OBC3RNGB5HFF7K57.5HF@scoutcamp.bounces.google.com>
+Received: from mail-yb0-x247.google.com (mail-yb0-x247.google.com. [2607:f8b0:4002:c09::247])
+        by mx.google.com with ESMTPS id z84si1539554ywg.35.2017.01.19.17.39.00
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 19 Jan 2017 17:39:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3ngqbwbekcnc8bk743l7-gh-k7ier9hh9e7.5hf6b9obc3rngb5hff7k57.5hf@scoutcamp.bounces.google.com designates 2607:f8b0:4002:c09::247 as permitted sender) client-ip=2607:f8b0:4002:c09::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       spf=pass (google.com: domain of 3ngqbwbekcnc8bk743l7-gh-k7ier9hh9e7.5hf6b9obc3rngb5hff7k57.5hf@scoutcamp.bounces.google.com designates 2607:f8b0:4002:c09::247 as permitted sender) smtp.mailfrom=3NGqBWBEKCNc8BK743L7-GH-K7IER9HH9E7.5HF6B9OBC3RNGB5HFF7K57.5HF@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Received: by mail-yb0-x247.google.com with SMTP id l23so84413599ybj.6
+        for <digvijay@unicommerce.com>; Thu, 19 Jan 2017 17:39:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:reply-to:feedback-id:message-id:date:subject:from:to;
+        bh=2ywkYNUfYaCUej+KlufUbhhVI2ciljPv8+3NmacgHN8=;
+        b=Ds5tcxnainHSUjKuDuQfr0O27mrMxFOUywMRhIa+dqF5kUdm6Cu/2wL/YSn/hwPfJk
+         6RrUbxxOUEa4cCFUYFBVSH/n2vNUAPhW4hdQXN4BvXy72WgqFLFbhjXS6hnNOIdeTquc
+         Msw9mDlIFRnr+W/+ts2N4CRHLA4dv2S8dMCk/r9qK/kixvbQ9h3oZIaBUk6JGI1UD7bG
+         WZfpDrBQBumTED9Q9TRFAS0NRBaabUe1NCdJ5ccaWCOuxtNLL3fB+NuhvqS2oYnnTjIH
+         TxBcECZBAtJTixNyPUF75jsY990pSNw8LblhVgvfHIlXhi3R9ro2DYvooLYILIsawsyh
+         68CA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:feedback-id:message-id
+         :date:subject:from:to;
+        bh=2ywkYNUfYaCUej+KlufUbhhVI2ciljPv8+3NmacgHN8=;
+        b=lYVC9UMMSgdw7WuCfdoU2IcM3kK+h93yKNpMl6w1A9J9QCXzC2wq2w/8CWrkQMIYGV
+         KQKHWRBKgXa2EtC93b5SAI8iDTeYt9wkJr+IVBI8CJQxxyu5GxtBDTc3LAXi73ZVgjo6
+         1ejqPEVhHt+uQXQ0TFTS8LrzFlMA8BCofLkYTHxoLzW4wD1JRJmIGE+kqZIvtGTphm7S
+         4YmqOyD/i7WYJFq5AgEWNURcRTc3pOV3j+FctfxvP13K0RynVP2xYykWGkZ+qjc/F1WL
+         t+a+ToVxyyuw8ix1bPCJmlFAOrlzqfLf71T/gr9EiOPvbtV/UqQY0lNf+kiEV/4IyqCg
+         8Q3g==
+X-Gm-Message-State: AIkVDXJq5e8k2arZpI9fd+gGsE5VLpNAty0+u9JPSeL6g7eS1ijVVpjPNoAj7MmR22v1G7A=
+MIME-Version: 1.0
+X-Received: by 10.129.49.214 with SMTP id x205mr10484474ywx.119.1484876340678;
+ Thu, 19 Jan 2017 17:39:00 -0800 (PST)
+Reply-To: firebase-no-reply@google.com
+X-Google-Id: 180134 
+Feedback-ID: Len:D192017:C10028698:gamma
+Message-ID: <f733a46783a4774e.1484876339623.100148572.10028698.en.d71c981de0f6843a@google.com>
+Date: Fri, 20 Jan 2017 01:39:00 +0000
+Subject: Fabric and Firebase Joining Forces
+From: firebase-no-reply@google.com
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a11421b7ed250c605467cb63f
+
+--001a11421b7ed250c605467cb63f
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+UPDATE
+
+Fabric and Firebase Joining Forces
+
+
+Dear Firebase Developer,
+
+Happy New Year! Google is excited to announce that we've entered into an  
+agreement to acquire Fabric. Fabric will join Google's Developer Product  
+Group and work closely with the Firebase team. Our missions align closely:  
+help developers build better apps and grow their business.
+
+Please see full details of the announcement.
+
+In the short term, there is no need to make any change to your  
+implementation. The integration of Fabric is part of our larger, long-term  
+effort of delivering a comprehensive suite of features for iOS, Android and  
+mobile Web app development. We'll be working together in the coming weeks  
+to make plans with the Fabric team.
+
+We're deeply committed to Firebase developers and excited about the  
+advancements we can make together in 2017!
+
+Best Regards,
+
+The Firebase Team
+
+
+You've received this mandatory service announcement email to update you  
+about important changes to your Firebase account. If you have questions or  
+feel you've received this message in error, please contact Firebase support.
+
+Thanks for using Firebase!
+
+
+Google Inc.
+1600 Amphitheatre Pkwy
+Mountain View, CA, 94043 USA
+
+
+
+
+--001a11421b7ed250c605467cb63f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+  <html>
+  <body>
+
+    <div id=3D"email" style=3D"font-family: roboto, sans-serif; border: 1px=
+ solid #e0e0e0;">
+
+    <div style=3D"background-color: white; padding: 24px 0;">
+      <img style=3D"margin: auto; display: block; height: 40px; max-height:=
+ 40px; min-height: 40px;" src=3D"https://firebase.google.com/_static/053546=
+c383/images/firebase/lockup.png">
+    </div>
+
+    <div style=3D"padding: 24px; background-color: #039be5;">
+
+      <div style=3D"font-size: 12px; line-height: 16px; color: #b3e1f7;">
+        UPDATE
+      </div>
+
+      <div style=3D"font-size: 20px; line-height: 24px; color: white;">
+        Fabric and Firebase Joining Forces
+      </div>
+    </div>
+
+    <div style=3D"padding: 12px 24px; background-color: #0288d1; text-align=
+: right;"></div>
+
+    <div style=3D"padding: 24px; font-size: 14px; line-height: 20px; color:=
+ #212121; font-weight: 400;">
+
+      <div style=3D"color: #727272">
+      Dear Firebase Developer,
+      </div>
+
+      <div style=3D"margin-top: 24px;">
+        Happy New Year! Google is excited to announce that we=E2=80=99ve en=
+tered into an agreement to acquire Fabric. Fabric will join Google=E2=80=99=
+s Developer Product Group and work closely with the Firebase team. Our miss=
+ions align closely: help developers build better apps and grow their busine=
+ss.
+      </div>
+
+      <div style=3D"margin-top: 12px;">
+        Please see full details of the <a style=3D"text-decoration: none; c=
+olor: #039be5;" href=3D"https://www.google.com/appserve/mkt/p/EssikMVPNzlhM=
+C-D34I90DLB2An0nmepVGVA1tNvnK8G0zdUDplUFt_b67k3RaQN0QQSeBCTnNs3ExQylU_oaCz-=
+cmdmB0sC_ILkg39umdJnDD5q-SupkYs8AQ=3D=3D">announcement</a>.
+      </div>
+
+      <div style=3D"margin-top: 12px;">
+        In the short term, there is no need to make any change to your impl=
+ementation. The integration of Fabric is part of our larger, long-term effo=
+rt of delivering a comprehensive suite of features for iOS, Android and mob=
+ile Web app development. We&#39;ll be working together in the coming weeks =
+to make plans with the Fabric team.
+      </div>
+
+      <div style=3D"margin-top: 12px;">
+        We=E2=80=99re deeply committed to Firebase developers and excited a=
+bout the advancements we can make together in 2017!
+      </div>
+
+      <div style=3D"margin-top: 24px; color: #727272">
+        Best Regards,
+      </div>
+      <div style=3D"margin-top: 4px;">
+        The Firebase Team
+      </div>
+
+
+      <div style=3D"margin-top: 24px; margin-bottom: 24px; height: 1px; wid=
+th: 100%; background-color: #e0e0e0;"></div>
+
+      <div style=3D"font-size: 12px; color: #727272">
+        You&#39;ve received this mandatory service announcement email to up=
+date you about important changes to your Firebase account. If you have ques=
+tions or feel you=E2=80=99ve received this message in error, please contact=
+ <a style=3D"text-decoration: none; color: #039be5;" href=3D"https://www.go=
+ogle.com/appserve/mkt/p/aXBU1Vr_DQUpeqmqrdu4hf4n8QbhHXvTCeIgvPSGtcwbpnspFxx=
+EGz5BBcVBkwhCX226JOWzPjhcIQdGy1MO">Firebase support</a>.
+      </div>
+
+
+      <div style=3D"font-size: 12px; color: #727272; margin-top: 24px;">
+
+          Thanks for using Firebase!
+
+      </div>
+      </div>
+    </div>
+
+    <div style=3D"background-color: #78909c; padding: 24px;">
+      <table style=3D"width:100%;" cellpadding=3D"0" cellspacing=3D"0">
+        <tr>
+          <td>
+            <img style=3D"height: 24px; max-height: 24px; min-height: 24px;=
+" src=3D"https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_l=
+ight_color_74x24dp.png">
+          </td>
+          <td>
+            <div style=3D"font-size: 10px; line-height: 14px; font-weight: =
+400; color: #d6dde1;
+                        text-align:right;">
+                Google Inc.<br>
+                1600 Amphitheatre Pkwy<br>
+                Mountain View, CA, 94043 USA<br>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+<img height=3D"1" width=3D"3" src=3D"https://www.google.com/appserve/mkt/im=
+g/x7sMbqr8qgg3oyMYxVvTrZnuiydKehS2Hxov.gif"></body>
+</html>
+
+--001a11421b7ed250c605467cb63f--

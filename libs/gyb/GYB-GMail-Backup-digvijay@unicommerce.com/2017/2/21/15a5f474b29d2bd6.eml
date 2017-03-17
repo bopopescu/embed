@@ -1,0 +1,128 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp278259qgu;
+        Mon, 20 Feb 2017 22:06:32 -0800 (PST)
+X-Received: by 10.84.231.133 with SMTP id g5mr10294053plk.59.1487657192287;
+        Mon, 20 Feb 2017 22:06:32 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id m10si20441951pln.229.2017.02.20.22.06.31
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Feb 2017 22:06:32 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v1L66UeT028368;
+	Tue, 21 Feb 2017 11:36:30 +0530
+Date: Tue, 21 Feb 2017 11:36:30 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <2141392087.0.1487657190680.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Unifier #4559
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Unifier
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/Unifier/4559/display/redirect?page=changes>
+
+Changes:
+
+[digvijay] SNI Inclusion for Woocommerce
+
+------------------------------------------
+Started by user developer
+Building in workspace <http://jenkins.unicommerce.com:8080/job/Unifier/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/unifier.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/unifier.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/unifier.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 3ffb0ea45235a89faefb9ccec5e2af56c4920464 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3ffb0ea45235a89faefb9ccec5e2af56c4920464
+ > git rev-list 787d6373ad4f39dc4571c8fa7aee4afc3b436f61 # timeout=10
+[Unifier] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean install
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Unifier
+[INFO] UnifierCore
+[INFO] UnifierScraper
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Unifier 2.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Unifier ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ Unifier ---
+[INFO] 
+[INFO] --- maven-source-plugin:2.2.1:jar-no-fork (attach-sources) @ Unifier ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ Unifier ---
+[INFO] Installing <http://jenkins.unicommerce.com:8080/job/Unifier/ws/pom.xml> to /var/lib/jenkins/.m2/repository/unicommerce/Unifier/2.0/Unifier-2.0.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UnifierCore 2.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UnifierCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UnifierCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UnifierCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UnifierCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 99 source files to <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/target/classes>
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/com/unifier/core/transport/http/HttpSender.java>: Some input files use or override a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/com/unifier/core/transport/http/HttpSender.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/com/unifier/core/utils/StringUtils.java>: Some input files use unchecked or unsafe operations.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/com/unifier/core/utils/StringUtils.java>: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/org/apache/http/impl/cookie/BasicPathHandler.java>:[40,8] class BasicPathHandler1 is public, should be declared in a file named BasicPathHandler1.java
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Unifier ............................................ SUCCESS [  0.532 s]
+[INFO] UnifierCore ........................................ FAILURE [  2.573 s]
+[INFO] UnifierScraper ..................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.207 s
+[INFO] Finished at: 2017-02-21T11:36:30+05:30
+[INFO] Final Memory: 26M/262M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UnifierCore: Compilation failure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/Unifier/ws/UnifierCore/src/main/java/org/apache/http/impl/cookie/BasicPathHandler.java>:[40,8] class BasicPathHandler1 is public, should be declared in a file named BasicPathHandler1.java
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UnifierCore
+Build step 'Invoke top-level Maven targets' marked build as failure

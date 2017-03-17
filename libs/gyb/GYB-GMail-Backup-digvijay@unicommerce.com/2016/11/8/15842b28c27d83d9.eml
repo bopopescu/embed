@@ -1,0 +1,22 @@
+Return-Path: <digvijay@unicommerce.com>
+Received: from unicoms-MacBook-Air-3.local ([182.74.159.44])
+        by smtp.gmail.com with ESMTPSA id fg2sm45356522pad.23.2016.11.07.22.49.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 22:49:07 -0800 (PST)
+Date: Tue, 8 Nov 2016 12:19:01 +0530
+From: digvijay <digvijay@unicommerce.com>
+To: digvijay@unicommerce.com
+Subject: Today's Script Version Report- 
+Content-Type: text/html
+Message-ID: <20161108064901.GA37921@unicoms-MacBook-Air-3.local>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.7.1 (2016-10-04)
+
+2016-11-08T12:19:01.325+0530 I NETWORK  [thread1] getaddrinfo("mongo1.test.unicommerce.infra") failed: nodename nor servname provided, or not known
+2016-11-08T12:19:01.331+0530 E QUERY    [thread1] Error: couldn't initialize connection to host mongo1.test.unicommerce.infra, address is invalid :
+connect@src/mongo/shell/mongo.js:231:14
+@(connect):1:6
+

@@ -1,0 +1,184 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1290182qgu;
+        Mon, 30 Jan 2017 01:38:44 -0800 (PST)
+X-Received: by 10.55.44.195 with SMTP id s186mr6273310qkh.151.1485769124222;
+        Mon, 30 Jan 2017 01:38:44 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qk0-x230.google.com (mail-qk0-x230.google.com. [2607:f8b0:400d:c09::230])
+        by mx.google.com with ESMTPS id c5si9162042qke.9.2017.01.30.01.38.44
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jan 2017 01:38:44 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c09::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qk0-x230.google.com with SMTP id s140so123219505qke.0
+        for <digvijay@unicommerce.com>; Mon, 30 Jan 2017 01:38:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=HDmfs+BeIWSYRLtLGYF1tNsiKPJHTPRN2EHviNhO/Qc=;
+        b=JPH5Mtgq/zGj0B+LqYiHvxWnW5M2qyi+1M1xBSpsBa4yXoZpmvkmG8Xdr9dTPEdfGi
+         zpORRCSFZFQx/RIDqH2fWd6/lJ1fpo/d+uXDT0GGklk/mmxBNCCK7L4el0S6OJjFchls
+         2+9ax9Vx6Y5CjQGRGQmboKjf4iqsLLaoaGsVrnhDQy5i3WWvS54e/YEuGR/Rr0V0eMMy
+         YnsVI9nG49ESXS2gzu+qyrYoCQJ+AZEQwY69XbV7uVeVmEMWqnFIAfdF29O33kRXOdXA
+         s8rMUTbOwFXqzhWW6kuulTax8jalptfB5Ir9VLcXyKe/PkraMOkHYB4wobgBNvnHyasc
+         YiUQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=HDmfs+BeIWSYRLtLGYF1tNsiKPJHTPRN2EHviNhO/Qc=;
+        b=BDEHwdLaFED0Uq6fQOSWVN9FRAu2ENynkvYXVjSvrQrDZoFPH689g4tvOeLC7PbqCc
+         uu2HgyG7lAqcC2ubvATfku5YEF/wjM2qmDipKMO1KdW4x7G6N/nbslBApfcuVvXAk4S8
+         f3/dotfnzzRfCBZVTQaLkxghli4TRvwyFy9Jtpq06uUV+CLFvB5vMGbiGjAospd3DU3e
+         +YeDas/y+KcwVBt0NhDacnNRChJ58P7/ztUJq5xYCqKOI1mL0pKwajRbVtUtN0utOFMf
+         +2iQmyhEcZG6gDbjPG9Yezb1UBiZO9FTRDD02vXK9LjvoEAsH/cjHV/ndvMVMAllfd2c
+         I6kw==
+X-Gm-Message-State: AIkVDXJtHs73ib4AfhFbzevAyMSrhilofsRmTCvzKIHQ8Of2WRd8uVDjCsH6LnkoedZaCR7n53u54ts22yyL4Q==
+X-Received: by 10.55.6.210 with SMTP id 201mr20895192qkg.51.1485769123887;
+ Mon, 30 Jan 2017 01:38:43 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.158.31 with HTTP; Mon, 30 Jan 2017 01:38:43 -0800 (PST)
+In-Reply-To: <CAOzor=4_yurWEfBj6zgS1Et1qP=at=XSA_Cov9uxdGfQesS-NA@mail.gmail.com>
+References: <CAOzor=4_yurWEfBj6zgS1Et1qP=at=XSA_Cov9uxdGfQesS-NA@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Mon, 30 Jan 2017 15:08:43 +0530
+Message-ID: <CAFD_XHHqm78pjfphr0r+YM451kafnda2z246F=A2pa3Atc7zJw@mail.gmail.com>
+Subject: Re: Woocommerce credentials
+To: Kapil Makhija <kapil@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114d6d54d90d1005474c94da
+
+--001a114d6d54d90d1005474c94da
+Content-Type: text/plain; charset=UTF-8
+
+varkalasilksarees.com/wp-admin/admin.php?page=wc-settings&tab=api&section=keys&create-key=1
+consumer key
+ck_bd7d62fab7f74a6d7b1f1774d33867793a8ac602
+
+
+consumer secret
+cs_54220c08d96319e01490a7f01c0ad40e49e238d1
+
+On Mon, Jan 30, 2017 at 12:16 PM, Kapil Makhija <kapil@unicommerce.com>
+wrote:
+
+> Hi Varad,
+>
+> The seller I was in touch with for Woocommerce keys has been delaying
+> inordinately, so would request you to reach out to other sellers who have
+> expressed interest in integration and see if anyone is willing to share the
+> details. The following clients had expressed interest:
+>
+>  - Varkalasilksarees
+> - Horabonny
+> - Flexibleapparels
+> - te
+> - brightcotton
+> - instanote9
+> - Momtobeindia
+> - parvatiretail
+>
+> Hope one of them agrees to share the details :)
+>
+> Regards,
+> Kapil Makhija
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888
+>
+
+--001a114d6d54d90d1005474c94da
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><a href=3D"http://varkalasilksarees.com/wp-admin/admin.php=
+?page=3Dwc-settings&amp;tab=3Dapi&amp;section=3Dkeys&amp;create-key=3D1" ta=
+rget=3D"_blank" style=3D"box-sizing:border-box;color:rgb(51,122,183);backgr=
+ound-color:rgb(255,246,218);font-family:&quot;helvetica neue&quot;,helvetic=
+a,arial,sans-serif;font-size:12px">varkalasilksarees.com/wp-admin/admin.php=
+?page=3Dwc-settings&amp;tab=3Dapi&amp;section=3Dkeys&amp;create-key=3D1</a>=
+<br style=3D"box-sizing:border-box;color:rgb(118,118,118);font-family:&quot=
+;helvetica neue&quot;,helvetica,arial,sans-serif;font-size:12px;background-=
+color:rgb(255,246,218)"><span style=3D"color:rgb(118,118,118);font-family:&=
+quot;helvetica neue&quot;,helvetica,arial,sans-serif;font-size:12px;backgro=
+und-color:rgb(255,246,218)">consumer key</span><br style=3D"box-sizing:bord=
+er-box;color:rgb(118,118,118);font-family:&quot;helvetica neue&quot;,helvet=
+ica,arial,sans-serif;font-size:12px;background-color:rgb(255,246,218)"><spa=
+n style=3D"color:rgb(118,118,118);font-family:&quot;helvetica neue&quot;,he=
+lvetica,arial,sans-serif;font-size:12px;background-color:rgb(255,246,218)">=
+ck_bd7d62fab7f74a6d7b1f1774d33867793a8ac602</span><br style=3D"box-sizing:b=
+order-box;color:rgb(118,118,118);font-family:&quot;helvetica neue&quot;,hel=
+vetica,arial,sans-serif;font-size:12px;background-color:rgb(255,246,218)"><=
+br style=3D"box-sizing:border-box;color:rgb(118,118,118);font-family:&quot;=
+helvetica neue&quot;,helvetica,arial,sans-serif;font-size:12px;background-c=
+olor:rgb(255,246,218)"><br style=3D"box-sizing:border-box;color:rgb(118,118=
+,118);font-family:&quot;helvetica neue&quot;,helvetica,arial,sans-serif;fon=
+t-size:12px;background-color:rgb(255,246,218)"><span style=3D"color:rgb(118=
+,118,118);font-family:&quot;helvetica neue&quot;,helvetica,arial,sans-serif=
+;font-size:12px;background-color:rgb(255,246,218)">consumer secret</span><b=
+r style=3D"box-sizing:border-box;color:rgb(118,118,118);font-family:&quot;h=
+elvetica neue&quot;,helvetica,arial,sans-serif;font-size:12px;background-co=
+lor:rgb(255,246,218)"><span style=3D"color:rgb(118,118,118);font-family:&qu=
+ot;helvetica neue&quot;,helvetica,arial,sans-serif;font-size:12px;backgroun=
+d-color:rgb(255,246,218)">cs_54220c08d96319e01490a7f01c0ad40e49e238d1</span=
+><br></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Mon=
+, Jan 30, 2017 at 12:16 PM, Kapil Makhija <span dir=3D"ltr">&lt;<a href=3D"=
+mailto:kapil@unicommerce.com" target=3D"_blank">kapil@unicommerce.com</a>&g=
+t;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0=
+ .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">Hi Vara=
+d,<div><br></div><div>The seller I was in touch with for Woocommerce keys h=
+as been delaying inordinately, so would request you to reach out to other s=
+ellers who have expressed interest in integration and see if anyone is will=
+ing to share the details. The following clients had expressed interest:</di=
+v><div><br></div><div>=C2=A0-=C2=A0<span style=3D"color:rgb(0,0,0);font-fam=
+ily:arial,sans,sans-serif;font-size:13px;white-space:pre-wrap">Varkalasilks=
+arees</span></div><div><font color=3D"#000000" face=3D"arial, sans, sans-se=
+rif"><span style=3D"white-space:pre-wrap"> - </span></font><span style=3D"c=
+olor:rgb(0,0,0);font-family:arial,sans,sans-serif;font-size:13px;white-spac=
+e:pre-wrap">Horabonny</span></div><div><span style=3D"color:rgb(0,0,0);font=
+-family:arial,sans,sans-serif;white-space:pre-wrap"></span><font color=3D"#=
+000000" face=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wra=
+p"> - </span></font><span style=3D"color:rgb(0,0,0);font-family:arial,sans,=
+sans-serif;font-size:13px;white-space:pre-wrap">Flexibleapparels</span></di=
+v><div><span style=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;wh=
+ite-space:pre-wrap"></span><font color=3D"#000000" face=3D"arial, sans, san=
+s-serif"><span style=3D"white-space:pre-wrap"> - te</span></font></div><div=
+><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span style=3D"wh=
+ite-space:pre-wrap"> - </span></font><span style=3D"color:rgb(0,0,0);font-f=
+amily:arial,sans,sans-serif;font-size:13px;white-space:pre-wrap">brightcott=
+on</span></div><div><span style=3D"color:rgb(0,0,0);font-family:arial,sans,=
+sans-serif;white-space:pre-wrap"></span><font color=3D"#000000" face=3D"ari=
+al, sans, sans-serif"><span style=3D"white-space:pre-wrap"> - </span></font=
+><span style=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;font-siz=
+e:13px;white-space:pre-wrap">instanote9</span></div><div><font color=3D"#00=
+0000" face=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap"=
+> - </span></font><span style=3D"color:rgb(0,0,0);font-family:arial,sans,sa=
+ns-serif;font-size:13px;white-space:pre-wrap">Momtobeindia</span></div><div=
+><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span style=3D"wh=
+ite-space:pre-wrap"> - </span></font><span style=3D"color:rgb(0,0,0);font-f=
+amily:arial,sans,sans-serif;font-size:13px;white-space:pre-wrap">parvatiret=
+ail</span></div><div><font color=3D"#000000" face=3D"arial, sans, sans-seri=
+f"><span style=3D"white-space:pre-wrap"><br></span></font></div><div><span =
+style=3D"color:rgb(0,0,0);font-family:arial,sans,sans-serif;white-space:pre=
+-wrap"></span><font color=3D"#000000" face=3D"arial, sans, sans-serif"><spa=
+n style=3D"white-space:pre-wrap">Hope one of them agrees to share the detai=
+ls :)</span></font></div><div><font color=3D"#000000" face=3D"arial, sans, =
+sans-serif"><span style=3D"white-space:pre-wrap"><br></span></font></div><d=
+iv><font color=3D"#000000" face=3D"arial, sans, sans-serif"><span style=3D"=
+white-space:pre-wrap">Regards,</span></font></div><div><font color=3D"#0000=
+00" face=3D"arial, sans, sans-serif"><span style=3D"white-space:pre-wrap">K=
+apil Makhija<span class=3D"HOEnZb"><font color=3D"#888888"><br clear=3D"all=
+"></font></span></span></font><span class=3D"HOEnZb"><font color=3D"#888888=
+"><div><br></div>-- <br><div class=3D"m_7083010618691758139gmail_signature"=
+><div dir=3D"ltr">Kapil Makhija<div>Director, Strategy - Unicommerce</div><=
+div>M: +91-9718470888</div></div></div>
+</font></span></div></div>
+</blockquote></div><br></div>
+
+--001a114d6d54d90d1005474c94da--

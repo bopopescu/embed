@@ -1,0 +1,101 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1401698qgu;
+        Tue, 14 Feb 2017 03:35:15 -0800 (PST)
+X-Received: by 10.237.35.84 with SMTP id i20mr28756573qtc.247.1487072115047;
+        Tue, 14 Feb 2017 03:35:15 -0800 (PST)
+Return-Path: <sagar@unicommerce.com>
+Received: from mail-qt0-x22e.google.com (mail-qt0-x22e.google.com. [2607:f8b0:400d:c0d::22e])
+        by mx.google.com with ESMTPS id g48si173043qtc.233.2017.02.14.03.35.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Feb 2017 03:35:15 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::22e is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) client-ip=2607:f8b0:400d:c0d::22e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::22e is neither permitted nor denied by best guess record for domain of sagar@unicommerce.com) smtp.mailfrom=sagar@unicommerce.com
+Received: by mail-qt0-x22e.google.com with SMTP id v23so108112346qtb.0
+        for <digvijay@unicommerce.com>; Tue, 14 Feb 2017 03:35:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=H/FIajD3+V74PaFNTAaacMavF5PMwcp8G9jB/Q1b+j4=;
+        b=O1Lw+pw/3oHIGuDBUYCbwsHkPNLLRYlzLNB9wBdfDxVuriahWV2dJIR8K2BdWGhLnk
+         WjVrrXh3o7FIvVebDJjxYencK3h3W9+J0RLVua5Eev4frY3K22aveUuY8PxE4T381AKE
+         ABh6rTD+bV+e5JPgx4qk4xs34FFwmVM/go/XgQIvBuQZdjuOIIGV2/vEDBHr3FcpQwfM
+         eAYLnARedwOqhOVDxip+EpsGMquEvrXAPKQZDUEUtabLKLZq+ZY2Soa94/sp+No9T6zp
+         aNOoN+rWgmsRV4XxGSnr2absfkWJQJnaL+6+CPbu0NoKT0T25s0gRdDBg12K9AzWukca
+         /JLg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=H/FIajD3+V74PaFNTAaacMavF5PMwcp8G9jB/Q1b+j4=;
+        b=Rhk9774jkjGuIDJUqAf4oQkbrGMT6535RSLoyz3YrqEWG3jxnMjuBQ/g7+aHiwVnQT
+         H2N0eQ3u2wrrqIhlkbebKkPm8Cf7nl6sRbi6+bTdy525AEwRAZ3x1GIo/9o+t4Ltz6GB
+         aq97Y5pAXTSWqDMUJSnaatTINEdZUk/JMnpeYKomHnYIRqvj/+qEw479ELQuv8am9myT
+         ILURhv0joIXm19v/jdRgpFDPCMJ5E6dPmtXxMXAXeIns77PwvyXIl0wfRnpG8A9OjCJc
+         uhto4GLCQPyhxt7T4Ki65Qj/3HOAp7DfnIA8dqXmDf5Mi41rU/YS/W4mbb5UhO88pEdZ
+         nD6A==
+X-Gm-Message-State: AMke39lw2sLsYe5jFhPEoFaGEkgc0/esg6qGLXGL3ok1Vr8+LqYqS7XAi9lyF/8xlUcwJlN2UcfN5RouTvm0UA==
+X-Received: by 10.237.47.100 with SMTP id l91mr27490164qtd.133.1487072114517;
+ Tue, 14 Feb 2017 03:35:14 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.173.91 with HTTP; Tue, 14 Feb 2017 03:35:13 -0800 (PST)
+From: Sagar Sahni <sagar@unicommerce.com>
+Date: Tue, 14 Feb 2017 17:05:13 +0530
+Message-ID: <CAAgrUr8R2QdoE=-h0jT9hRV1nzU=ikQRKEvi9n23GRHF3amOrQ@mail.gmail.com>
+Subject: 
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=94eb2c124bda245d2705487bf552
+
+--94eb2c124bda245d2705487bf552
+Content-Type: multipart/alternative; boundary=94eb2c124bda245d2205487bf550
+
+--94eb2c124bda245d2205487bf550
+Content-Type: text/plain; charset=UTF-8
+
+
+
+--94eb2c124bda245d2205487bf550
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+
+--94eb2c124bda245d2205487bf550--
+--94eb2c124bda245d2705487bf552
+Content-Type: text/x-python-script; charset=US-ASCII; name="account.py"
+Content-Disposition: attachment; filename="account.py"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_iz5gc4sb0
+
+IyEvdXNyL2Jpbi9weXRob24KaW1wb3J0IE15U1FMZGIKaW1wb3J0IHN5cwpmcm9tIGRhdGV0aW1l
+IGltcG9ydCBkYXRldGltZQojIG9wZW4gYSBkYXRhYmFzZSBjb25uZWN0aW9uCmNvbm5lY3Rpb24g
+PSBNeVNRTGRiLmNvbm5lY3QgKGhvc3QgPSAiMTI3LjAuMC4xIiwgdXNlciA9ICJyb290IiwgcGFz
+c3dkID0gInVuaXdhcmUiLCBkYiA9ICJhY2NvdW50cyIpCiMgcHJlcGFyZSBhIGN1cnNvciBvYmpl
+Y3QgdXNpbmcgY3Vyc29yKCkgbWV0aG9kCmN1cnNvciA9IGNvbm5lY3Rpb24uY3Vyc29yICgpCgpn
+ZXRfYWNjb3VudHNfc3FsID0gInNlbGVjdCAqIGZyb20gYWNjb3VudCIKCmN1cnNvci5leGVjdXRl
+KGdldF9hY2NvdW50c19zcWwpCiAgICMgRmV0Y2ggYWxsIHRoZSByb3dzIGluIGEgbGlzdCBvZiBs
+aXN0cy4KYWNjb3VudF9saXN0ID0gY3Vyc29yLmZldGNoYWxsKCkKCmZvciBhY2NvdW50X3JvdyBp
+biBhY2NvdW50X2xpc3Q6CglhY2NvdW50X2lkID0gYWNjb3VudF9yb3dbMF0KICAgIHRlbmFudF9h
+Y29vdW50X2NvZGUgPSBhY2NvdW50X3Jvd1sxXQogICAgYWNjb3VudF9zdGF0dXNfY29kZSA9IGFj
+Y291bnRfcm93WzE1XQogICAgY3Vyc29yLmV4ZWN1dGUoInNlbGVjdCAqIGZyb20gc3Vic2NyaXB0
+aW9uIHdoZXJlIGFjY291bnRfaWQgPSAlcyIsKGFjY291bnRfaWQpKQogICAgc3Vic2NyaXB0aW9u
+X2xpc3QgPSBjdXJzb3IuZmV0Y2hhbGwoKQogICAgc3Vic2NyaXB0aW9uX2xlbmd0aCA9IGxlbihz
+dWJzY3JpcHRpb25fbGlzdCkKICAgIGkgPSAwCiAgICB3aGlsZSBpIDwgc3Vic2NyaXB0aW9uX2xl
+bmd0aDoKICAgIAlhY3RpdmF0aW9uX2RhdGUgPSBzdWJzY3JpcHRpb25fbGlzdFtpXVs1XQogICAg
+CWFjdGl2YXRpb25fZGF0ZXRpbWUgPSBkYXRldGltZS5jb21iaW5lKGFjdGl2YXRpb25fZGF0ZSwg
+ZGF0ZXRpbWUubWluLnRpbWUoKSkKICAgIAlwcm9kdWN0X2lkID0gc3Vic2NyaXB0aW9uX2xpc3Rb
+aV1bM10KICAgIAlpZiBwcm9kdWN0X2lkID09IDIKICAgIAkJcGVyX3VuaXRfY2hhcmdlcyA9IDIK
+ICAgIAllbHNlIGlmIHByb2R1Y3RfaWQgPT0gMwogICAgCQlwZXJfdW5pdF9jaGFyZ2VzID0gMwog
+ICAgCWlmIGkgPT0gc3Vic2NyaXB0aW9uX2xlbmd0aCAtIDEKICAgIAkJY3Vyc29yLmV4ZWN1dGUo
+InVwZGF0ZSBhY2NvdW50X2xlZGdlciBzZXQgcGVyX3VuaXRfY2hhcmdlcyA9ICVkIHdoZXJlIGFj
+Y291bnRfaWQgPSAlcyBhbmQgdHJhbnNhY3Rpb25fdHlwZSBJTiAoJ1VTQUdFJywnTU9OVEhMWV9D
+SEFSR0VTJykgYW5kIGNyZWF0ZWQgPiAlcyIsKHBlcl91bml0X2NoYXJnZXMsYWNjb3VudF9pZCxh
+Y3RpdmF0aW9uX2RhdGV0aW1lKSkKICAgIAllbHNlCiAgICAJCWRlYWN0aXZhdGlvbl9kYXRldGlt
+ZSA9IHN1YnNjcmlwdGlvbl9saXN0WzEraV1bNV0KICAgIAkJY3Vyc29yLmV4ZWN1dGUoInVwZGF0
+ZSBhY2NvdW50X2xlZGdlciBzZXQgcGVyX3VuaXRfY2hhcmdlcyA9ICVkIHdoZXJlIGFjY291bnRf
+aWQgPSAlcyBhbmQgdHJhbnNhY3Rpb25fdHlwZSBJTiAoJ1VTQUdFJywnTU9OVEhMWV9DSEFSR0VT
+JykgYW5kIGNyZWF0ZWQgPiAlcyBhbmQgY3JlYXRlZCA8ICVzIiwocGVyX3VuaXRfY2hhcmdlcyxh
+Y2NvdW50X2lkLGFjdGl2YXRpb25fZGF0ZXRpbWUsZGVhY3RpdmF0aW9uX2RhdGV0aW1lKSkKCiMg
+Y2xvc2UgdGhlIGN1cnNvciBvYmplY3QKY3Vyc29yLmNsb3NlICgpCiMgY2xvc2UgdGhlIGNvbm5l
+Y3Rpb24KY29ubmVjdGlvbi5jbG9zZSAoKQojIGV4aXQgdGhlIHByb2dyYW0Kc3lzLmV4aXQoKQ==
+--94eb2c124bda245d2705487bf552--

@@ -1,0 +1,59 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp381725qgj;
+        Wed, 26 Oct 2016 00:41:40 -0700 (PDT)
+X-Received: by 10.98.159.130 with SMTP id v2mr1755026pfk.48.1477467700599;
+        Wed, 26 Oct 2016 00:41:40 -0700 (PDT)
+Return-Path: <scriptcron@gmail.com>
+Received: from mail-pf0-x243.google.com (mail-pf0-x243.google.com. [2607:f8b0:400e:c00::243])
+        by mx.google.com with ESMTPS id ig5si998025pad.130.2016.10.26.00.41.40
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Oct 2016 00:41:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c00::243 as permitted sender) client-ip=2607:f8b0:400e:c00::243;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: domain of scriptcron@gmail.com designates 2607:f8b0:400e:c00::243 as permitted sender) smtp.mailfrom=scriptcron@gmail.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=gmail.com
+Received: by mail-pf0-x243.google.com with SMTP id s8so21967713pfj.2
+        for <digvijay@unicommerce.com>; Wed, 26 Oct 2016 00:41:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=iArHhwF4rD9Fc6NZlw/BniniX1hwCvjLae4dAiyqEvs=;
+        b=HESai5ri7MtyoOgw4iCjJDFfO65MHib1/uZVUteaMthFB2IApsrnF8Sjzyg3WKA4vk
+         ynsspHDgocCfLhgN8cbICXohhnXUBt5IFRFvRQIG2yfl9zzZCJ4as9S4s/WKlc1lUDNh
+         gvr6Ys3edMcs/zszbg+5zKDHVyqGmoXNFZokuRZqx1/R3UwTg07JX3fvkAkJGG5HSTjT
+         0q0Y5/2WySbz6ApFIHpoWdRMQQkJ9GaA+oJpffBC0jB3ybEUZ5H09x73qXRQ4EOu63v9
+         f1ahT+N9aaTYrImG9oITkjTsoI/ntH0tNfRTY0YO1u/+PPcLJQ9GCteSrbIfWIX9/ARf
+         AnkA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=iArHhwF4rD9Fc6NZlw/BniniX1hwCvjLae4dAiyqEvs=;
+        b=P4Cmj0fB0AwBnwEsTvnkVvyXqrKbu9zdZzauImloYZ2bdMyayA5SIcfh56q3ySt255
+         ZvSMER3zGRKathZ+YYloL550oua+RhRJi2JH2cjN46eM2LRWe6Ak9d4pvWyOMNYedTny
+         1J2eXFm5ZtLzRN9Ni0pXxYy1bPQFYs0StIbjFL/Butyj7ZTBM7xzcL0LumQVBTXq04Z1
+         iH+zmfP+uFdqLJpVt7K/dYncoZs4B9t1ghiePFUNUuyxL7tN/ZmqjalJUNlKHxpmvSSr
+         FaT8Jbe8Zbxzr+ivsqN6DDZptxwSAb/V+4ZPoRj0gfg29OC1F0HMNKE9JP5zliSdUpwX
+         Sjbg==
+X-Gm-Message-State: ABUngvfChbXWgSa0vo2EK+YACQrqRlrqE86yoSE3sgawruwb4K6NCnB8oElfmX18XJUkwg==
+X-Received: by 10.98.11.147 with SMTP id 19mr1685030pfl.90.1477467699873;
+        Wed, 26 Oct 2016 00:41:39 -0700 (PDT)
+Return-Path: <scriptcron@gmail.com>
+Received: from 10.20.66.28 ([111.93.51.71])
+        by smtp.gmail.com with ESMTPSA id q23sm1836534pfg.95.2016.10.26.00.41.37
+        for <digvijay@unicommerce.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 26 Oct 2016 00:41:38 -0700 (PDT)
+Date: Wed, 26 Oct 2016 00:41:38 -0700 (PDT)
+From: scriptcron@gmail.com
+To: digvijay@unicommerce.com
+Message-ID: <402551386.0.1477467695456.JavaMail.root@unicoms-MacBook-Air-3.local>
+Subject: text/html
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<table><tr><th>Name of Script</th><th>Version</th><th>Comments</th><th>Created By</th></tr><tr><td>flipkartVerifyOrderScript</td><td>2.0</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>flipkartVerifyOrderScript</td><td>2.0</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>tradusItemTypeListScript</td><td>2.0</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>tradusDispatchVerificationScript</td><td>1.2</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>tradusDispatchVerificationScript</td><td>1.2</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>flipkartReconcilationInvoiceDetailScript</td><td>3.0</td><td>test</td><td>digvijay@unicommerce.com</td></tr><tr><td>flipkartReconcilationInvoiceDetailScript</td><td>2.0</td><td>asda</td><td>digvijay@unicommerce.com</td></tr></table><style>table,th,td {width:100%;border: 1px solid black}</style>

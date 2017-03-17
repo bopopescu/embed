@@ -1,0 +1,461 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp659972qgd;
+        Thu, 1 Dec 2016 04:32:39 -0800 (PST)
+X-Received: by 10.107.23.134 with SMTP id 128mr29680640iox.162.1480595559446;
+        Thu, 01 Dec 2016 04:32:39 -0800 (PST)
+Return-Path: <bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com>
+Received: from o1.email.splitwise.com (o1.email.splitwise.com. [50.31.54.10])
+        by mx.google.com with ESMTPS id p128si299186itd.102.2016.12.01.04.32.39
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 01 Dec 2016 04:32:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com designates 50.31.54.10 as permitted sender) client-ip=50.31.54.10;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@splitwise.com;
+       spf=pass (google.com: domain of bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com designates 50.31.54.10 as permitted sender) smtp.mailfrom=bounces+256585-87bf-digvijay=unicommerce.com@email.splitwise.com;
+       dmarc=pass (p=NONE dis=NONE) header.from=splitwise.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=splitwise.com; 
+	h=from:to:subject:mime-version:content-type:content-transfer-encoding:list-unsubscribe; 
+	s=smtpapi; bh=NGodGbAi3D5CXqpD1gvsEB/koS0=; b=W0CqPRHmREgQ6DJfA8
+	mgxxGC6KEQzSIYbwrs7XumJfv/ItQBnrbmHlpTLcE38cBWUWrQ9mCVwBeot97z3a
+	85/bKEVPWWQvEf9a2dX6ItbUNjFkOPaUuyyGnWaZx+QS+RtHcUwDVRocx6gaYGYc
+	SAqj8GVshldpcMTz1dQmfnaxY=
+Received: by filter0626p1mdw1.sendgrid.net with SMTP id filter0626p1mdw1-10020-5840185F-1C
+        2016-12-01 12:32:31.179356322 +0000 UTC
+Received: from splitwise.com (ec2-54-205-50-104.compute-1.amazonaws.com [54.205.50.104])
+	by ismtpd0006p1iad1.sendgrid.net (SG) with ESMTP id RVfVTeQbTCGj-4jXyVBbsg
+	for <digvijay@unicommerce.com>; Thu, 01 Dec 2016 12:32:31.127 +0000 (UTC)
+Date: Thu, 01 Dec 2016 12:32:31 +0000
+From: Splitwise <hello@splitwise.com>
+To: digvijay@unicommerce.com
+Message-ID: <5840185f13cd8_43fe7dde6110824957be@9960d622-f315-44c5-943a-40cba4cec569.mail>
+Subject: Your balance for November
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58401859d3ab6_43fe7dde61108248583b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/s5bxBY6xR4d2EI8pB8Gfv3ryRyKHJIZ98m4P
+ 8UkzBz251dR2849LwdmfSeAjva6XJhpCznPNLymWnz9ZtgPSYtb1ZgJAMCdz6J9QhswubkdP7VsAW5
+ iAgWzagLG60cAOi2TyPbjHqD3gYz+C4AW6IEq1QcEOHjr9GLTI+N+NWYe4O2ELn43y1obk643tHwEz
+ U=
+X-SG-ID: cPIFTv0lH5o+/W5LKrq3TAqxpceBEafsTAAGpSdEFBk=
+List-Unsubscribe: <http://email.splitwise.com/wf/unsubscribe?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrbIaeN2dVh2pTh-2FwvOPkjMQCcAY5PN0pi8wEnQSPFJc6cDBl31lhFlWZbzrx1QcQSK-2F7d6ukYgWlwzwRbOf-2BUfc0QH4jsqCd8E8HI-2FwB5MCKRnScYC-2B6OMi8YUIYC8OJPgnw40v3W8q7eILYrjEphWX9j979-2F2Hm6gm6Rd-2BKaw60SQAw5RuSqw4qxq6kPZB2rQ-3D-3D>, <mailto:unsubscribe@email.splitwise.com?subject=http://email.splitwise.com/wf/unsubscribe*q*upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrbIaeN2dVh2pTh-2FwvOPkjMQCcAY5PN0pi8wEnQSPFJc6cDBl31lhFlWZbzrx1QcQSK-2F7d6ukYgWlwzwRbOf-2BUfc0QH4jsqCd8E8HI-2FwB5MCKRnScYC-2B6OMi8YUIYC8OJPgnw40v3W8q7eILYrjEphWX9j979-2F2Hm6gm6Rd-2BKaw60SQAw5RuSqw4qxq6kPZB2rQ-3D-3D>
+
+----==_mimepart_58401859d3ab6_43fe7dde61108248583b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hey Digvijay,
+
+November is over! Visit Splitwise to see your current debts and IOUs and to settle up with your friends: https://www.splitwise.com
+
+Any comments, thoughts, or suggestions? Hit reply and let us know.
+
+Have a great day!
+-The Splitwise TeamDon't want to receive these messages? Visit http://splitwise.com/users/edit to change your notification settings, or click here to unsubscribe from all Splitwise emails: http://email.splitwise.com/wf/unsubscribe?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrY8KpoqeuDo8awINFN5fL5EhoCoZxLXxlCgRtmecHrGWo-2BRILndhqZTUqDfuGNeGa-2F3Box4QK3j5RNHInKV9-2FcdozpGSaMCNCVPp7zJ25X0BOXD-2FrBEA2kSUWKGSW1vsLyhjjbaknbtZKASPrYfRKwj0XyzJ80ijmivApURBIxw9UxN3pBi23Av2ubCorjbZ7Q-3D-3D.
+
+----==_mimepart_58401859d3ab6_43fe7dde61108248583b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><style type=3D"text/css">=0D
+#outlook a{padding:0}body{width:100%!important;-webkit-text-size-adjust:non=
+e;margin:0;padding:0}img{border:0;font-size:14px;font-weight:700;height:aut=
+o;line-height:100%;outline:0;text-decoration:none;text-transform:capitalize=
+}#backgroundTable{height:100%!important;margin:0;padding:0;width:100%!impor=
+tant}#backgroundTable,body{background-color:#f3f3f3}#templateContainer{bord=
+er:1px solid transparent}.h1,h1{color:#202020;display:block;font-family:"He=
+lvetica Neue",Helvetica,Arial,sans-serif;font-size:34px;font-weight:700;lin=
+e-height:100%;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;=
+text-align:left}.h2,h2{color:#202020;display:block;font-family:"Helvetica N=
+eue",Helvetica,Arial,sans-serif;font-size:30px;font-weight:700;line-height:=
+100%;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;text-alig=
+n:left}.h3,h3{color:#202020;display:block;font-family:"Helvetica Neue",Helv=
+etica,Arial,sans-serif;font-size:26px;font-weight:700;line-height:100%;marg=
+in-top:0;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left}.h=
+4,h4{color:#202020;display:block;font-family:"Helvetica Neue",Helvetica,Ari=
+al,sans-serif;font-size:22px;font-weight:700;line-height:100%;margin-top:0;=
+margin-right:0;margin-bottom:10px;margin-left:0;text-align:left}#templatePr=
+eheader{background-color:transparent}.preheaderContent div{color:#505050;fo=
+nt-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:10px;line-h=
+eight:100%;text-align:left}.preheaderContent div a:link,.preheaderContent d=
+iv a:visited{color:#369;font-weight:400;text-decoration:underline}#template=
+Header{background-color:#D8E2EA;border-bottom:0}.headerContent{color:#20202=
+0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:34px;fo=
+nt-weight:700;line-height:100%;padding:0;text-align:center;vertical-align:m=
+iddle}.headerContent a:link,.headerContent a:visited{color:#369;font-weight=
+:400;text-decoration:underline}#headerImage{height:auto;max-width:600px!imp=
+ortant}#templateContainer,.bodyContent{background-color:#fff}.bodyContent d=
+iv{color:#505050;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;fo=
+nt-size:14px;line-height:150%;text-align:left}.bodyContent div a:link,.body=
+Content div a:visited{color:#369;font-weight:400;text-decoration:underline}=
+.bodyContent img{display:inline;height:auto}#templateFooter{background-colo=
+r:#fff;border-top:0}.footerContent div{color:#707070;font-family:"Helvetica=
+ Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:125%;text-alig=
+n:left}.footerContent div a:link,.footerContent div a:visited{color:#369;fo=
+nt-weight:400;text-decoration:underline}.footerContent img{display:inline}#=
+social{background-color:#fff;border:0}#social div{text-align:center}#utilit=
+y{background-color:#fff;border:0}#utility div{text-align:center}#monkeyRewa=
+rds img{max-width:190px}</style>=0D
+<center>=0D
+	<table border=3D"0" cellpadding=3D"20" cellspacing=3D"0" height=3D"100%" i=
+d=3D"backgroundTable" style=3D"background-color: #f3f3f3" width=3D"100%">=
+=0D
+		<tbody>=0D
+			<tr>=0D
+				<td align=3D"center" valign=3D"top">=0D
+					<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"template=
+Container" style=3D"background-color:transparent; border: 1px solid transpa=
+rent" width=3D"600">=0D
+						<tbody>=0D
+							<tr>=0D
+								<td align=3D"center" valign=3D"top">=0D
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"temp=
+lateHeader" width=3D"600">=0D
+										<tbody>=0D
+											<tr>=0D
+												<td class=3D"headerContent" style=3D"background: #5bc5a7; color=
+: #fff">=0D
+													<a href=3D"http://email.splitwise.com/wf/click?upn=3Dfzn2xXSal=
+C2e9rfXBG69YjhKKe-2BX3ebFuu3WbvInV04-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfU=
+mRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrVe0Asq-2BRxKvXCO3smjoPF=
+CG74Xp2o7ISq7UO0Nqw4VWp7Gcxh52hspTW3mo7RmlvqAhdOtuWs8kLkdD63NN3sDtv2quZKIbd=
+jaf0dbdjaRfWkeiQkoXRMx2Y25I07Jk8Gm-2Ft-2BObMUA6br6vMJWtBtYl33NIoTUHgDpkVyq2=
+mbUDLx-2F4bo-2Fdq8WgrzeIMdfqzw-3D-3D"><img alt=3D"Splitwise" border=3D"0" i=
+d=3D"headerImage campaign-icon" mc:allowdesigner=3D"" mc:allowtext=3D"" mc:=
+edit=3D"header_image" mc:label=3D"header_image" src=3D"http://dx0qysuen8cbs=
+.cloudfront.net/assets/fat_rabbit/email/slim_header.png" style=3D"width:600=
+px; height:44px" title=3D"Splitwise" /></a></td>=0D
+											</tr>=0D
+										</tbody>=0D
+									</table>=0D
+								</td>=0D
+							</tr>=0D
+							<tr>=0D
+								<td align=3D"center" valign=3D"top">=0D
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"temp=
+lateBody" style=3D"background-color: #fff" width=3D"600">=0D
+										<tbody>=0D
+											<tr>=0D
+												<td class=3D"bodyContent" style=3D"color:#505050;font-size:14px=
+;line-height:150%;text-align:left;" valign=3D"top">=0D
+													<table border=3D"0" cellpadding=3D"20" cellspacing=3D"0" width=
+=3D"100%">=0D
+														<tbody>=0D
+															<tr>=0D
+																<td style=3D"border: 1px solid #ddd; border-top: none" vali=
+gn=3D"top">=0D
+																	<div mc:edit=3D"std_content00" style=3D"padding-top: 1px">=
+=0D
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+<div style=3D"font-size: 14px; line-height: 19px; color: #000">
+  <div style=3D"font-size: 14px; color: #000; text-align: center; padding: =
+5px 0 20px;">
+    November is over. <strong>Here=E2=80=99s what=E2=80=99s up</strong> in =
+your account on Splitwise:
+  </div>
+
+  <table cellspacing=3D"0" style=3D"border-spacing: 0; border-collapse: col=
+lapse; width: 560px;">
+    <tr>
+      <td colspan=3D"2"  valign=3D"top" style=3D"padding-bottom:5px; border=
+-bottom: 1px solid #ddd; font-weight: bold; font-size: 20px">
+        Total balance
+      </td>
+      <td valign=3D"top" style=3D"padding-bottom:5px; border-bottom: 1px so=
+lid #ddd; font-size: 20px; text-align: right; color: #ff5216; line-height: =
+30px">
+            <div style=3D"color: #ff5216; font-size: 20px; text-align: righ=
+t">
+              <span style=3D"font-size: 16px">you owe</span>
+              <strong>=E2=82=B9236.10</strong>
+            </div>
+      </td>
+    </tr>
+
+      <tr>
+        <td style=3D"padding-top: 10px; width: 40px; line-height: 30px" val=
+ign=3D"top">
+          <img src=3D"https://dx0qysuen8cbs.cloudfront.net/assets/fat_rabbi=
+t/avatars/50-31b0bb2f5aec77f11d60a1dc3fa14c23a958fed79261b32e94a73e9c27473e=
+bb.png" height=3D"28" width=3D"28" style=3D"border-radius: 15px; border: 1p=
+x solid #ddd; vertical-align: middle">
+        </td>
+        <td style=3D"padding-top: 10px; line-height: 30px; font-size: 16px"=
+ valign=3D"top">
+          <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDY=
+cFixDKEHcWJoNM7oG718lhK74KfsUsQKO5f4bfuL5N0LJOFehhJuGv42lJrpw77Kw4dgIDkPNQ-=
+3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifE=
+dv7BW7oEfTYP9wHjtreO9-2BDa-2B61CqtxzqtykuQLiJSwQGXQigJdCCfpRieQMJYPMzyLJMn1=
+-2FmBmkW47Tw5joVaxVuUK93UMsv3nv7DJYQ2c8KEReo0TclVxVrWYnIFj50i5Gxxj-2BqArvjv=
+Y9wn7t9FFp0WFjTL0pN39YKvCGMBJeuNQuJjg0eXiHJr1VLU-2B4VEjq4msHw1flT-2FBZ0aA-3=
+D-3D" style=3D"color: inherit; text-decoration: none">Lucas</a>
+        </td>
+        <td style=3D"padding-top: 14px; line-height: 20px" valign=3D"top">
+              <div style=3D"color: #ff5216; font-size: 16px; text-align: ri=
+ght">
+                <span style=3D"font-size: 14px">you owe</span>
+                <strong>=E2=82=B9236.10</strong>
+              </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan=3D"3" style=3D"padding-top: 10px">
+          <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDY=
+cFixDKEHcWJoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2BQtn9sw9Z4UL8nTE=
+WPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrUQLMR1NbP0=
+wVs5TyPARMOOHvM6kAyMjndTcBWgX8iY3zNpmBpzYIeijvtBPaqfHIEXME7Begjj8jpxSP7K8ew=
+5YBxsvTcqnbRkMcXMfMkhVDofM4dURqT3pBdqNfAM2e543hJeEPbbOAnu8CPAzfyAh0dVdDBWvZ=
+vXCKe1aoiepkFD9ceqCnt5FP9A5vKDqPw-3D-3D" style=3D"color: #999; font-size: 1=
+4px">See all friends =C2=BB</a>
+        </td>
+      </tr>
+  </table>
+
+  <br><br>
+
+
+=20=20
+    <table cellspacing=3D"0" style=3D"border-spacing: 0; border-collapse: c=
+ollapse; width: 560px;">
+      <tr>
+        <td valign=3D"top" colspan=3D"3" style=3D"padding-bottom: 5px; bord=
+er-bottom: 1px solid #ddd; font-weight: bold; font-size: 20px">
+          Largest expenses
+        </td>
+      </tr>
+        <tr>
+          <td style=3D"padding-top: 11px; width: 30px; padding-right: 3px" =
+valign=3D"top">
+            <div style=3D"font-size: 12px; color: #aaa; line-height: 14px; =
+text-align: center; width: 30px">
+              Nov.<br>22
+            </div>
+          </td>
+          <td style=3D"padding-top: 10px" valign=3D"top">
+            <div style=3D"width: 100.0%; height: 20px; padding: 5px 0; back=
+ground: #ffe3d9; white-space: no-wrap; overflow: visible">
+              <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7h=
+tUDYcFixDKEHcWJoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2BQtn9sw9Z4UL=
+8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrVMu7iI=
+-2F4Wagh8igmJNZFgk6ah0k5xCimDyXulcjF7kpO-2BUoszntfZyq3IF0X4-2BzagiLb3nQ8-2B=
+id7MPLzyM9yjlTE4-2BSRD-2BsfuNQtSScOAWG-2F-2BMgtDdrmH0oUkIxiq5-2BL-2FmvptB0l=
+TWU2pNodePcTvBN-2FDqJ3It-2BJDChN5JuBCZ8yd2oLL2LbFMitr74aBOH-2BA-3D-3D" styl=
+e=3D"color: inherit; text-decoration: none; white-space: nowrap; line-heigh=
+t: 20px; padding: 0 5px; font-size: 16px">Pizza</a>
+            </div>
+          </td>
+          <td style=3D"text-align: right; padding: 10px 0 0 20px; width: 40=
+px; line-height: 30px; white-space: nowrap; color: #ff5216" valign=3D"top">
+            <span style=3D"font-size: 14px; white-space: nowrap">you borrow=
+ed</span><strong style=3D"font-size: 16px">&nbsp;=E2=82=B9188.60</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style=3D"padding-top: 11px; width: 30px; padding-right: 3px" =
+valign=3D"top">
+            <div style=3D"font-size: 12px; color: #aaa; line-height: 14px; =
+text-align: center; width: 30px">
+              Nov.<br>18
+            </div>
+          </td>
+          <td style=3D"padding-top: 10px" valign=3D"top">
+            <div style=3D"width: 25.185577942735949098621421%; height: 20px=
+; padding: 5px 0; background: #ffe3d9; white-space: no-wrap; overflow: visi=
+ble">
+              <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7h=
+tUDYcFixDKEHcWJoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2BQtn9sw9Z4UL=
+8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrQrrD50=
+XIhDAeydk-2BJ6vKmUjZv-2FN24aIQTdSGOgDufpTWMr1FF7mZHgS8k2Fh9vTEXsr9AXDgngOUq=
+36g4ySpbpEu1-2BgPfFliYrKerF2bzXtiz7pkHKQ2jP5abTHuGiwhWtZa4vIRX1ib9Vby3oE5-2=
+FTYs8kTFZ6poxNbM4U1pUrrBiwEA6dmJdf8NqyFJxeXlA-3D-3D" style=3D"color: inheri=
+t; text-decoration: none; white-space: nowrap; line-height: 20px; padding: =
+0 5px; font-size: 16px">Dhaba</a>
+            </div>
+          </td>
+          <td style=3D"text-align: right; padding: 10px 0 0 20px; width: 40=
+px; line-height: 30px; white-space: nowrap; color: #ff5216" valign=3D"top">
+            <span style=3D"font-size: 14px; white-space: nowrap">you borrow=
+ed</span><strong style=3D"font-size: 16px">&nbsp;=E2=82=B947.50</strong>
+          </td>
+        </tr>
+      <tr>
+        <td colspan=3D"3" style=3D"padding-top: 10px">
+          <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDY=
+cFixDKEHcWJoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2BQtn9sw9Z4UL8nTE=
+WPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrZqAwaFwqjB=
+zyzT952Y5PPJVMUqTeSk0YIK0dr7U5vZ94-2BkIY0vwo-2BFa6INJN9NIdElpcwG2-2BGpejLGq=
+YJJ3qm23lxRwg8N-2FBX8D9GlBQRvIa2pYFfZ5xYNwt-2FJhqRFDkV64QSbKg4tZdJpPL-2B1Ne=
+T1kie5g6ta3HOxAw80aNl75x8uw4Equ-2B-2FuI9VomSc61Qw-3D-3D" style=3D"color: #9=
+99; font-size: 14px">See all transactions =C2=BB</a>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+
+
+  <table cellspacing=3D"0" style=3D"border-spacing: 0; border-collapse: col=
+lapse; width: 560px;">
+    <tr>
+      <td colspan=3D"2" valign=3D"top" style=3D"padding-bottom:5px; border-=
+bottom: 1px solid #ddd; font-weight: bold; font-size: 20px">
+        This month
+      </td>
+    </tr>
+    <tr>
+      <td style=3D"padding: 10px 5px 0 0; width: 260px; line-height: 22px;"=
+ valign=3D"top">
+        <div style=3D"padding: 10px; background: #eee; text-align: center">
+          Total you paid for<br>
+          <strong style=3D"font-size: 18px; color: #333">
+            =E2=82=B90.00
+          </strong>
+        </div>
+      </td>
+      <td style=3D"padding: 10px 0 0 5px; width: 260px; line-height: 22px;"=
+ valign=3D"top">
+        <div style=3D"padding: 10px; background: #eee; text-align: center">
+          Your total share<br>
+          <strong style=3D"font-size: 18px; color: #333">
+            =E2=82=B9236.10
+          </strong>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style=3D"padding: 10px 5px 0 0; width: 260px; line-height: 22px;"=
+ valign=3D"top">
+        <div style=3D"padding: 10px; background: #eee; text-align: center">
+          Payments made<br>
+          <strong style=3D"font-size: 18px; color: #333">
+            =E2=82=B90.00
+          </strong>
+        </div>
+      </td>
+      <td style=3D"padding: 10px 0 0 5px; width: 260px; line-height: 22px;"=
+ valign=3D"top">
+        <div style=3D"padding: 10px; background: #eee; text-align: center">
+          Payments received<br>
+          <strong style=3D"font-size: 18px; color: #333">
+            =E2=82=B90.00
+          </strong>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=3D"3" style=3D"padding-top: 10px">
+        <a href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDYcF=
+ixDKEHcWJoNM7oG718lhK74KfsUsQZvw5Ry3Qt4suz24oUezAG_9Pbo-2BQtn9sw9Z4UL8nTEWP=
+oOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrb0x47kR8Lihb=
+mVNUYFKe-2F838Eb-2BuMhE-2BjnnsT67BwtYFtYXDjYH6mLQx41GS-2BkU83PE587ox6uEkBJi=
+SUVDDT0JJj1ni2Ougc5SNwJdYpvDlqRPyOrfL-2FCBt-2BXI1kQFR9dRmzYnxjWOVK6GsbAoweV=
+-2Bg-2BpLB-2BWK8bC39i7IV-2BVvdEHmutiO3oef0s5Ym-2FBu3g-3D-3D" style=3D"color=
+: #999; font-size: 14px">See more details =C2=BB</a>
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <a style=3D"display:inline-block; width:100%; background-color:#ff5216; t=
+ext-decoration:none; color:#fff; font-size:18px; font-weight:600; text-alig=
+n:center; padding:10px 0px 10px 0px; -webkit-border-radius:5px; -moz-border=
+-radius:5px; border-radius:5px; border: 1px solid #c83400; margin-left: -1p=
+x" href=3D"http://email.splitwise.com/wf/click?upn=3DaGLmPL7htUDYcFixDKEHcW=
+JoNM7oG718lhK74KfsUsQYGDR27TIEHaHBnbM3p8sg_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsU=
+HfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrfm2g-2FzS6VhgAWQbkX2=
+BXXD-2Bc8DGfpIQm22JxRYCUZDb7uew5SmflF-2FpbWCFWecwRB-2B8nr4GGzy7UyaL2rQCbBW9=
+zeg6WWkGuH3uaMRd1FIO8u18bK4tEHVhUaEdfNRW7M6YCQmmOI9dFHT6n7WbGNSmdTcptRfawiC=
+NjpUcG-2Fy1TuIxMmEzzM3il5-2F-2FI46sug-3D-3D">Visit Splitwise now</a>
+
+  <br>
+  <br>
+  <div style=3D"text-align: center">
+    Any comments, thoughts, or suggestions? Hit reply and let us know.
+    <br><br>
+    Have a great day! <span style=3D"color: #999">&ndash;The Splitwise Team=
+</span>
+
+  </div>
+</div>
+</div>=0D
+																</td>=0D
+															</tr>=0D
+														</tbody>=0D
+													</table>=0D
+												</td>=0D
+											</tr>=0D
+										</tbody>=0D
+									</table>=0D
+								</td>=0D
+							</tr>=0D
+							<tr>=0D
+								<td align=3D"center" valign=3D"top">=0D
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"temp=
+lateFooter" width=3D"600">=0D
+										<tbody>=0D
+											<tr>=0D
+												<td class=3D"footerContent" style=3D"background: #f3f3f3; color=
+:#707070;font-size:11px;line-height:125%;text-align:left;" valign=3D"top">=
+=0D
+													<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border: 1px solid transparent" width=3D"100%">=0D
+														<tbody>=0D
+															<tr>=0D
+																<td valign=3D"top" width=3D"310">=0D
+																	<div mc:edit=3D"std_footer" style=3D"color: #999999; font-=
+size: 11px; line-height: 15px">=0D
+																		<br />=0D
+																		Copyright &copy; 2015 Splitwise, all rights reserved.<br =
+/>=0D
+																		<a href=3D"http://email.splitwise.com/wf/unsubscribe?upn=
+=3D9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7=
+BW7oEfTYP9wHjtrQtxkhOoy1hfFihtfh7NypnC8eRR7mHcqpG8RUT9u-2F3BMUGW36lG0hk6DDx=
+kgUg-2FuMUnzVb0qff850OL5J-2FBhZ7oSquTW8BFMdjcGzsCP21Sg2DvP9Hu3GA9sGuSSHLtpn=
+8SCki1MobFPXeQZiW0CFcmfXMyEwLyo44ax8L3MMezMLaCjfRLH3ZU0eE4C4LK5Q-3D-3D" sty=
+le=3D"color:#6B8299">Click here</a> to unsubscribe from all mail.</div>=0D
+																</td>=0D
+																<td id=3D"monkeyRewards" valign=3D"top" width=3D"230">=0D
+																	<div mc:edit=3D"monkeyrewards" style=3D"text-align:right;c=
+olor:#999999; font-size: 11px; line-height: 15px">=0D
+																		<br />=0D
+																		95 Chestnut Street, 3rd floor<br />=0D
+																		Providence, RI 02903</div>=0D
+																</td>=0D
+															</tr>=0D
+														</tbody>=0D
+													</table>=0D
+												</td>=0D
+											</tr>=0D
+										</tbody>=0D
+									</table>=0D
+								</td>=0D
+							</tr>=0D
+						</tbody>=0D
+					</table>=0D
+				</td>=0D
+			</tr>=0D
+		</tbody>=0D
+	</table>=0D
+	<p>=0D
+		&nbsp;</p>=0D
+</center>=0D
+
+<img src=3D"http://email.splitwise.com/wf/open?upn=3D9Pbo-2BQtn9sw9Z4UL8nTE=
+WPoOoyKOsUHfUmRF9p2Dtm53sdoxd8OaA4jVGz5U0GG2ifEdv7BW7oEfTYP9wHjtrfctw34Q3WZ=
+h8LTtT6J-2FoY0sh-2BnobbaH8fwHk7KwDwldSn-2F5gdGKAoByHNrNq5-2Fl5b13W0q8OVYGQM=
+Y5z87U6znk5l46mRMsba5-2Bif61yM9k7616bJ4fUu-2FbUYQ7umUgklO2BI18oo4wfewUEXz8s=
+hIH207Zsghw6ED8Nsa3olbH7H22VGKWA0F9RwulrYzDug-3D-3D" alt=3D"" width=3D"1" h=
+eight=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !importan=
+t;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !import=
+ant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !impor=
+tant;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 =
+!important;"/>
+</body></html>
+
+
+----==_mimepart_58401859d3ab6_43fe7dde61108248583b--

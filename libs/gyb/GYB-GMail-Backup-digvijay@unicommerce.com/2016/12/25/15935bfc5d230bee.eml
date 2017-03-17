@@ -1,0 +1,121 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp3969033qgd;
+        Sun, 25 Dec 2016 03:31:17 -0800 (PST)
+X-Received: by 10.194.178.170 with SMTP id cz10mr19511257wjc.224.1482665477309;
+        Sun, 25 Dec 2016 03:31:17 -0800 (PST)
+Return-Path: <akshay@unicommerce.com>
+Received: from mail-wj0-x229.google.com (mail-wj0-x229.google.com. [2a00:1450:400c:c01::229])
+        by mx.google.com with ESMTPS id h14si38791180wmg.22.2016.12.25.03.31.17
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 25 Dec 2016 03:31:17 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c01::229 is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) client-ip=2a00:1450:400c:c01::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c01::229 is neither permitted nor denied by best guess record for domain of akshay@unicommerce.com) smtp.mailfrom=akshay@unicommerce.com
+Received: by mail-wj0-x229.google.com with SMTP id tq7so46588105wjb.0
+        for <digvijay@unicommerce.com>; Sun, 25 Dec 2016 03:31:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=JdiG8PnFx42NG40GVKUEy5yfCp02dZYdIPrh9CHpnZU=;
+        b=mZnFx+q1uuGil/n36fjMGSWkvFh4nWxXn4vIiSnl3PjF4Eunczvifjygcb3fK9Pcel
+         6jLBQOVZ2Qbk4mHXsuxDArSh881YHke8bq5krySLf5G2JbWUw2pPjdRuD9ttSIgllHXi
+         mAEWhNQUGT4qDpw8FJitu9M7akP10i4K3pi6NPuWi3ww86p21B07ggANbWj2Q0VKfrb3
+         Uu/J1KbOGnOJyl1pcpG3zfCM+mGeDwGWBxpnpghprD0szv3e23/D17AapgmOKvJ+nnm3
+         re8X7AukSUX2es2olLIzt2CV+mr7IcmKWipmVzGSJckqthjCxTchsqRoN5VqBkII3PnH
+         2EeQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=JdiG8PnFx42NG40GVKUEy5yfCp02dZYdIPrh9CHpnZU=;
+        b=Zyn/tXhscz5axKyHmEtcHuYJ0T6jpGSwvDbdX8hkRkP3ZZPhirNtFv0kPxqq+67V9H
+         jnex7tzKtXW4/NW1WTxGjb04jyXXaopVxsZL3XyV8nOmnYRRQMIgB/XRseBAqA3Kf6O7
+         ZJduTox4sbV645Y8QkihkK5ZeFuvkbmQe2xMPYESCFxv6xkcA0XBl721we60WGWQ3FsZ
+         wcGmPsK7SvubUuOWg8DW4dm8od5uKLsnV7ckjrpq3yVyh2JFJeucDRHhmevHlOGPNJEZ
+         DDaWb8j5ZAODpgvqKSYHRhbXTInP/Ewf+6do8MbiXHo2MjqDJC9mhikkBZEmdbTaBbEE
+         DmYA==
+X-Gm-Message-State: AIkVDXKXdenlB+RzVCx2TPJ7awbBLuGbkfaOwzMD+7rDlIx8Em8jwbdbV/YbsQUe9iJY3LOLrnWXj8cliwORHw==
+X-Received: by 10.194.153.41 with SMTP id vd9mr11947380wjb.3.1482665476886;
+ Sun, 25 Dec 2016 03:31:16 -0800 (PST)
+MIME-Version: 1.0
+References: <CAGz2fOf8MEYve9MCy+5Vk4oDBYZsnbU+QrFucqSBWg-LKV-2eQ@mail.gmail.com>
+ <CAPyw11aTNb2jCkUBtjqEPypK_xJ52oemthsou3WUsx=HkRcSww@mail.gmail.com>
+In-Reply-To: <CAPyw11aTNb2jCkUBtjqEPypK_xJ52oemthsou3WUsx=HkRcSww@mail.gmail.com>
+From: Akshay Kochhar <akshay@unicommerce.com>
+Date: Sun, 25 Dec 2016 11:31:06 +0000
+Message-ID: <CAOkTFmj175jNBpVrshCtFO2Gs+S=uHEtMqsP7_RRW3GMGjLkgA@mail.gmail.com>
+Subject: Re: Prankster
+To: Garima Arora <garima@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>
+Cc: Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Guhapriya Velu <guhapriya@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Samdeesh Singh <samdeesh@unicommerce.com>, 
+	Shipra Gupta <shipra@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Vani Verma <vani@unicommerce.com>
+Content-Type: multipart/alternative; boundary=089e01176fd5122788054479f587
+
+--089e01176fd5122788054479f587
+Content-Type: text/plain; charset=UTF-8
+
+Done
+
+On Thu, 22 Dec 2016 at 10:02 AM, Garima Arora <garima@unicommerce.com>
+wrote:
+
+> Done ..paytm
+>
+> On Dec 16, 2016 1:12 PM, "Rachit Sachdeva" <rachit@unicommerce.com> wrote:
+>
+> Total Bill: 6877
+> Total People: 11
+> Per Person: 626
+>
+> Payment Link:
+> https://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp
+>
+> Card Number: 3744 339168 41001
+>
+> Regards,
+> Rachit Sachdeva
+>
+>
+>
+>
+>
+>
+>
+>
+
+--089e01176fd5122788054479f587
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div>Done</div><div><br><div class=3D"gmail_quote"><div>On Thu, 22 Dec 2016=
+ at 10:02 AM, Garima Arora &lt;<a href=3D"mailto:garima@unicommerce.com">ga=
+rima@unicommerce.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"=
+><div class=3D"gmail_msg">Done ..paytm</div><div class=3D"gmail_extra gmail=
+_msg"><br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On Dec 1=
+6, 2016 1:12 PM, &quot;Rachit Sachdeva&quot; &lt;<a href=3D"mailto:rachit@u=
+nicommerce.com" class=3D"gmail_msg" target=3D"_blank">rachit@unicommerce.co=
+m</a>&gt; wrote:<br type=3D"attribution" class=3D"gmail_msg"><blockquote cl=
+ass=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex"><div class=3D"gmail_msg"><div class=3D"gmail_msg=
+">Total Bill: 6877</div><div class=3D"gmail_msg">Total People: 11</div><div=
+ class=3D"gmail_msg">Per Person: 626</div><div class=3D"gmail_msg"><br clas=
+s=3D"gmail_msg"></div><div class=3D"gmail_msg">Payment Link:=C2=A0<a href=
+=3D"https://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp" class=3D=
+"gmail_msg" target=3D"_blank">https://www.billdesk.com/pgidsk/pgmerc/amexca=
+rd/amex_card.jsp</a></div><div class=3D"gmail_msg"><br class=3D"gmail_msg">=
+</div><div class=3D"gmail_msg">Card Number: 3744 339168 41001</div><br clea=
+r=3D"all" class=3D"gmail_msg"><div class=3D"gmail_msg"><div class=3D"m_-917=
+2537483047803099m_8213870909652778153gmail_signature gmail_msg"><div class=
+=3D"gmail_msg"><div class=3D"gmail_msg">Regards,</div><div class=3D"gmail_m=
+sg">Rachit Sachdeva</div><img src=3D"https://d3kjp0zrek7zit.cloudfront.net/=
+uploads/product/image/4364/large_detail_1409053661.png" width=3D"96" height=
+=3D"54" class=3D"gmail_msg"><br class=3D"gmail_msg"></div></div></div><br><=
+br></div><br><br></blockquote></div></div><br><br></blockquote></div></div>
+
+--089e01176fd5122788054479f587--

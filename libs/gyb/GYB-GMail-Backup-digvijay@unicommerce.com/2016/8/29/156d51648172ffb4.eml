@@ -1,0 +1,68 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.242.3 with SMTP id j3csp1240207ith;
+        Sun, 28 Aug 2016 23:57:02 -0700 (PDT)
+X-Received: by 10.36.120.197 with SMTP id p188mr12641095itc.44.1472453822710;
+        Sun, 28 Aug 2016 23:57:02 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-it0-x235.google.com (mail-it0-x235.google.com. [2607:f8b0:4001:c0b::235])
+        by mx.google.com with ESMTPS id 195si12305243itv.3.2016.08.28.23.57.01
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 28 Aug 2016 23:57:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::235 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4001:c0b::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::235 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-it0-x235.google.com with SMTP id x131so88288889ite.0
+        for <digvijay@unicommerce.com>; Sun, 28 Aug 2016 23:57:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=CvDk+JVBNPQlM1UFoaUqiAy7laLytCuyqOkxvdp9/kI=;
+        b=HHRE220hdcyg13q9QT24r+myZla5M/Uj2K89X6zvlkY5tvogZvv+k7Z7uYGrzBMx9Y
+         nC0xUnP1bT25CN1X1nhFVm8nL70MdolBq27E/mgAzjpDf60D3sibcQ5Uha9Rih6dTyQN
+         /296aINBzV4HLXSYZ8FQq0SdF3FEWS/IW8macil4zjyO1OsIRWAWz46SoTo6tfGCpqYD
+         J/4sAjsPS2Ut2UC4RFhyUfgsrNTuoBmAqxmmG2YfvieEPM3hhvcmGPlz1Ge/x/p7AHE2
+         nQxXMnmL/22DNBWWP1bDvKNCuRicLwMDdM3up97vEs1XQgz0xZwKOwFeB2dZAuK08X5N
+         blyQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=CvDk+JVBNPQlM1UFoaUqiAy7laLytCuyqOkxvdp9/kI=;
+        b=Mejr0viChCKNn9EWK+lRgoYcXbXnzssGjiTzWUNOPmpm6XQ5pRYDBnycuEuO6WWH0j
+         vrGEBtoGQbWRYUZqkyiJO5xlP/37vJuab73tTJrR+m4Q2x16exHWM/bVgxmN7EyF4LDu
+         EWAISHUuM7O+tT3Cfk5i4uoQXdyxkf+qvC1JSGuORU/J1E9cJfjcYMN8V172LETw4S8y
+         3MQ2JrmiwGb/PeKTqc51FXPGQXPEG7yRkBVV5laQHSzD6txubSNyPtjTHTWXyLT3oPIb
+         yn39463iMW8+6BYLkw2PwC55AIVgmTgD7RKdb0Mv8Bo8ASdpy4K5ihS38PoXTHn+9tnN
+         Af7Q==
+X-Gm-Message-State: AE9vXwPPW6iVX0TKPtfWF+cmmdxfbXlcbw+QNdgumEvBKg8dD8Ns1VIi2SMLbZtVxh/ThS87sBNOd0xQWAgISw==
+X-Received: by 10.36.83.68 with SMTP id n65mr12700349itb.65.1472453821290;
+ Sun, 28 Aug 2016 23:57:01 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.182.197 with HTTP; Sun, 28 Aug 2016 23:57:00 -0700 (PDT)
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 29 Aug 2016 12:27:00 +0530
+Message-ID: <CA+zaFGhvnCrdgBe4XfTBgpVkiCsg6z4ZKjz47SZO6+T6j2VxWQ@mail.gmail.com>
+Subject: Fresher's allocation to teams
+To: Amit Dalal <amit.dalal@unicommerce.com>, Bhupinder Garg <bhupi@unicommerce.com>
+Cc: Karun Singla <karun@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114481f0f7a06d053b305e24
+
+--001a114481f0f7a06d053b305e24
+Content-Type: text/plain; charset=UTF-8
+
+Karan: OLP (Bhupi)
+Aditya: SD+ (Amit Dalal)
+Digvijay: Seller Uniware (Sunny)
+Sagar: Seller Uniware (Sunny)
+
+- Sunny
+
+--001a114481f0f7a06d053b305e24
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">Karan: OLP (Bhupi)<div>Aditya: SD+ (Amit Dalal)</div><div>Digvijay: Seller Uniware (Sunny)</div><div><div>Sagar: Seller Uniware (Sunny)</div></div><div><br></div><div>- Sunny</div><div><br></div></div>
+
+--001a114481f0f7a06d053b305e24--

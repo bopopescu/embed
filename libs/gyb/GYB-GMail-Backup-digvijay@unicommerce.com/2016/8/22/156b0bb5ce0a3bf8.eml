@@ -1,0 +1,83 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.189.10 with SMTP id x10csp1399333ite;
+        Sun, 21 Aug 2016 22:31:24 -0700 (PDT)
+X-Received: by 10.28.153.202 with SMTP id b193mr14015512wme.62.1471843884172;
+        Sun, 21 Aug 2016 22:31:24 -0700 (PDT)
+Return-Path: <aditya@unicommerce.com>
+Received: from mail-wm0-x236.google.com (mail-wm0-x236.google.com. [2a00:1450:400c:c09::236])
+        by mx.google.com with ESMTPS id tg15si16889829wjb.292.2016.08.21.22.31.23
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Aug 2016 22:31:24 -0700 (PDT)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::236 is neither permitted nor denied by best guess record for domain of aditya@unicommerce.com) client-ip=2a00:1450:400c:c09::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::236 is neither permitted nor denied by best guess record for domain of aditya@unicommerce.com) smtp.mailfrom=aditya@unicommerce.com
+Received: by mail-wm0-x236.google.com with SMTP id i5so124642138wmg.0
+        for <digvijay@unicommerce.com>; Sun, 21 Aug 2016 22:31:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=3n/U/R1N51gqMLOXVDsHsmJE/wHMFTBvQufGI4mAyrc=;
+        b=iwBdA8NeQ5Vp1VNAUIgJ2TAOQnw6oqeCH+4M2JtLMCBezp/lP2qPgW40WtPAtajRYZ
+         E3HguRuz+S6TmSFvlexF9HSVqozRhz9m3wZPIs68AGd4t11+EivdlcVosXcp4d+cs9Q8
+         HX5PPoNcR0fLi2mL+b/o4eqePurzlLNZp4ajJlJEDzQXqjHOKATvGMps5nCLyYbIcFhG
+         RO6ZVW1OjRQCXLbdtN9X3jIWqkEfvK1ZnyZLbitno5Si708o3VeuFkOttGH0GEMzk3nd
+         pZrmfp3JpL17CXcEuMceyI6YVDso08J6lK+5ioucpihiJea/8GEbA4ivfDJYxNjkMP4S
+         V0cQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=3n/U/R1N51gqMLOXVDsHsmJE/wHMFTBvQufGI4mAyrc=;
+        b=Az87FIV8W+ZljNzz6wPxeF8jvbeuSZp5JgmStwLs3DuunjzhwWJ5PAnFrKqlBzTCjG
+         l90UJjoL04bzJYPGqZQsYSBRYS6sUJjAVwMm+YXjlalE+7I8lQgxKMWsdpuRTJ9p+aNZ
+         91XQowGoRtaYeYtnaIP6eOF9Pdg1d6jOFXROqp9mP5nWfAW087mje1JopWeHtqRByCUP
+         NGqsiIhX2MkZWAnzn2IdYjr6UhYjYZDMOnjvWjQVzJxmLbQidDuCa4afF6iROxuZFBtq
+         iydSIUS22KkkT0vmlAX2Qo9Rp6OsYD8kzSDbao99vbhXRehbNA7cxKXD7nCHSXEQHyhQ
+         2CMA==
+X-Gm-Message-State: AEkooutI9KYEMBYvp10aZcQ0KS42Qa31iRk6Y+N97sdiyrFADZ04BRh4cGmcRWqW2HYbRaLP4K/HWgCL6/aMpA==
+X-Received: by 10.194.106.200 with SMTP id gw8mr15676077wjb.147.1471843883466;
+ Sun, 21 Aug 2016 22:31:23 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.28.13.193 with HTTP; Sun, 21 Aug 2016 22:31:22 -0700 (PDT)
+From: Aditya Harit <aditya@unicommerce.com>
+Date: Mon, 22 Aug 2016 11:01:22 +0530
+Message-ID: <CAFEa6wakNFGvEQ3ErSzy874WOmHn9fccE23eHWptoaKOVJb62w@mail.gmail.com>
+Subject: start up scripts
+To: Digvijay Sharma <digvijay@unicommerce.com>, karan Garg <karangarg@unicommerce.com>
+Content-Type: multipart/mixed; boundary=e89a8f924154d72c3f053aa25b21
+
+--e89a8f924154d72c3f053aa25b21
+Content-Type: multipart/alternative; boundary=e89a8f924154d72c38053aa25b1f
+
+--e89a8f924154d72c38053aa25b1f
+Content-Type: text/plain; charset=UTF-8
+
+
+
+--e89a8f924154d72c38053aa25b1f
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+
+--e89a8f924154d72c38053aa25b1f--
+--e89a8f924154d72c3f053aa25b21
+Content-Type: application/x-sh; name="startProgs_root.sh"
+Content-Disposition: attachment; filename="startProgs_root.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_is5lub840
+
+IyEvYmluL2Jhc2gKIyMgbGlzdCBvZiBjb21tYW5kcyB0byBydW4gb24gc3RhcnR1cApteXNxbGQg
+LS1kYWVtb25pemUKL3Vzci9sb2NhbC9hcGFjaGUtdG9tY2F0L2Jpbi9zdGFydHVwLnNoCi91c3Iv
+bG9jYWwvQ2VsbGFyL3pvb2tlZXBlci8zLjQuOC9iaW4vemtTZXJ2ZXIgLS1zdGFydAptb25nb2Qg
+LS1xdWlldAovdXNyL2xvY2FsL0NlbGxhci9hY3RpdmVtcS81LjEzLjMvYmluL2FjdGl2ZW1xIHN0
+YXJ0CgkK
+--e89a8f924154d72c3f053aa25b21
+Content-Type: application/x-sh; name="startProgs_user.sh"
+Content-Disposition: attachment; filename="startProgs_user.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_is5lub8n1
+
+IyEvYmluL2Jhc2gKIyMgbGlzdCBvZiBjb21tYW5kcyB0byBydW4gb24gc3RhcnR1cAovdXNyL2xv
+Y2FsL0NlbGxhci9lbGFzdGljc2VhcmNoLzIuMy41L2Jpbi9lbGFzdGljc2VhcmNoIC1kCg==
+--e89a8f924154d72c3f053aa25b21--

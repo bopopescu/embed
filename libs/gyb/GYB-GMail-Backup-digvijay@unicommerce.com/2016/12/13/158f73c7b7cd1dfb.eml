@@ -1,0 +1,148 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2042749qgd;
+        Tue, 13 Dec 2016 00:11:25 -0800 (PST)
+X-Received: by 10.36.26.23 with SMTP id 23mr1377728iti.84.1481616685840;
+        Tue, 13 Dec 2016 00:11:25 -0800 (PST)
+Return-Path: <3La1PWBQKAI4v90Dw-Azs9wA-569w73Gy66y3w.u64@doclist.bounces.google.com>
+Received: from mail-io0-x245.google.com (mail-io0-x245.google.com. [2607:f8b0:4001:c06::245])
+        by mx.google.com with ESMTPS id o139si1114250itc.125.2016.12.13.00.11.25
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Dec 2016 00:11:25 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3la1pwbqkai4v90dw-azs9wa-569w73gy66y3w.u64@doclist.bounces.google.com designates 2607:f8b0:4001:c06::245 as permitted sender) client-ip=2607:f8b0:4001:c06::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       spf=pass (google.com: domain of 3la1pwbqkai4v90dw-azs9wa-569w73gy66y3w.u64@doclist.bounces.google.com designates 2607:f8b0:4001:c06::245 as permitted sender) smtp.mailfrom=3La1PWBQKAI4v90Dw-Azs9wA-569w73Gy66y3w.u64@doclist.bounces.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=google.com
+Received: by mail-io0-x245.google.com with SMTP id y124so233898577iof.4
+        for <digvijay@unicommerce.com>; Tue, 13 Dec 2016 00:11:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:reply-to:references:message-id:date:subject:from:to;
+        bh=6UKmwp+dmzsPxYnMsIxoBaL5Z5BW9G4N8cxq66M9nrI=;
+        b=ORUGfHhPGBW7+/7xty2/AqBexEbg6MThW6EMMA4pTgSK5CaDyLxL2hOb6EKWftMGGl
+         0R4Lzw60DvLIPI0GHpklHGkCF3erscf0qPZY+JQjhCy2MEPPFat9N/njkzjDwdj3vadI
+         EE2LOWovjqK3aqWwdnYO6vUWy1zVvP/DGlEsZS56s45wSM/QGO3hozj0LAFlMfbsj04r
+         cZPbu6zAFXAynSliDbwSMOwUYK+T410uh4BKBx3J8W0iuJO2O5MgwM8g11Z84739dFTJ
+         nyd6vGiUFsEp4bN1r0++QECuXGpUEVaSFs0IhWSwCCVZ3d6SC9mzbnwmEsf8Xs/lSHgR
+         nTLg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:reply-to:references:message-id:date
+         :subject:from:to;
+        bh=6UKmwp+dmzsPxYnMsIxoBaL5Z5BW9G4N8cxq66M9nrI=;
+        b=BdzAFuM/8uQY4dZbCfjRuHBO8kTDKh7GI7g0wGIXz/vEOEDttbGUfBS6dYyP8K4Jwy
+         k1MaJr6FczTtNl36tT1T6OCDm/hmyJFiICWi7YNAIE3z1IrwLA6kdCoFU1O/Lf3+DLlZ
+         BRMsFlRBTCqqQgHR5Ks9sKC3OtgMYLkgRsT8+avL7Xiac3x7viFUEqf7bXMojkW31Zbw
+         HWpF55SMyEdo7OlSF66nqWY4i6T3qp06uj5hdvD6s4iARir74O01AcjLKxT1qhI+Ekek
+         cqWfeAv6wniP+GIVKB1YYX0GsaXtoHIC/PR38Khv2Q3WWb4l+3JOvJhZsB4gYVH44NN8
+         niQQ==
+X-Gm-Message-State: AKaTC02XTmBKYtEFpRodcvZSgcpTpX4y/qv6iZwZnRBnBkVw8NpxDNyVNOKpibvAnFn69QcooykgfUKsARW48p8=
+MIME-Version: 1.0
+X-Received: by 10.107.164.200 with SMTP id d69mr12793208ioj.36.1481616685629;
+ Tue, 13 Dec 2016 00:11:25 -0800 (PST)
+Reply-To: Sagar Sahni <sagar@unicommerce.com>
+X-Originating-IP: 182.74.159.44
+X-No-Auto-Attachment: 1
+References: <19f08643-1313-4ae0-81d9-a357145c1932@docs-share.google.com>
+Message-ID: <001a114222d43d9dfa054385c4f9@google.com>
+Date: Tue, 13 Dec 2016 08:11:25 +0000
+Subject: UniwareInstrumentation-1.0-jar-with-dependencies.jar
+From: "Sagar Sahni (via Google Drive)" <drive-shares-noreply@google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a114222d43d9dc1054385c4f6
+
+--001a114222d43d9dc1054385c4f6
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+
+I've shared an item with you:
+
+UniwareInstrumentation-1.0-jar-with-dependencies.jar
+https://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view?usp=sharing&ts=584fad2d
+
+It's not an attachment -- it's stored online. To open this item, just click  
+the link above.
+
+--001a114222d43d9dc1054385c4f6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><script type=3D"application/json" data-scope=3D"in=
+boxmarkup">{"publisher":{"api_key":"1e6ef4c2b3e67680225868caeb59b7ad","name=
+":"Google Drive"},"api_version":"1.0","updates":{"snippets":[{"icon":"PERSO=
+N","message":"Sagar Sahni has invited you to edit this file"}],"action":{"n=
+ame":"Open","url":"https://drive.google.com/a/unicommerce.com/file/d/0ByqMC=
+mqPS6xtcHVXaGtCeFF3REE/view?usp\u003dsharing_eidd\u0026ts\u003d584fad2d"}},=
+"entity":{"main_image_url":"https://www.gstatic.com/bt/C3341AA7A1A076756462=
+EE2E5CD71C11/smartmail/bt_google_drive_1600dp_r2.png","external_key":"0ByqM=
+CmqPS6xtcHVXaGtCeFF3REE","avatar_image_url":"https://www.gstatic.com/bt/C33=
+41AA7A1A076756462EE2E5CD71C11/smartmail/bt_google_drive_avatar_224dp_r1.png=
+","subtitle":"shared by Sagar Sahni","action":{"name":"Open","url":"https:/=
+/drive.google.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view"},"title":"Uniwa=
+reInstrumentation-1.0-jar-with-dependencies.jar"}}</script><div style=3D"wi=
+dth: 100%; padding: 24px 0 16px 0; background-color: #f5f5f5; text-align: c=
+enter;"><div style=3D"display: inline-block; width: 90%; max-width: 680px;m=
+in-width: 280px; text-align: left; font-family: Roboto,Arial,Helvetica,sans=
+-serif;"><div style=3D"height: 0px;" dir=3D"ltr"></div><div style=3D"displa=
+y: block; padding: 0 2px;"><div style=3D"display: block; background: #fff; =
+height: 2px;"></div></div><div style=3D"border-left: 1px solid #f0f0f0; bor=
+der-right: 1px solid #f0f0f0;"><div style=3D"padding: 24px 32px 24px 32px; =
+background:#fff; border-right: 1px solid #eaeaea; border-left: 1px solid #e=
+aeaea;" dir=3D"ltr"><div style=3D"font-size: 14px; line-height: 18px; color=
+: #444;"><a href=3D"mailto:sagar@unicommerce.com" style=3D"color:inherit;te=
+xt-decoration:none">Sagar Sahni</a> has shared the following file:</div><di=
+v style=3D"height: 10px;"></div><div style=3D"font-size: 18px; display: tab=
+le;"><div style=3D"display: table-row; border-bottom: 4px solid #fff;"><spa=
+n style=3D"display: table-cell;"><div style=3D"height: 32px;"><img src=3D"h=
+ttps://ssl.gstatic.com/docs/documents/share/images/services/generic-1.png" =
+aria-label=3D"Item" style=3D"vertical-align: middle; max-width: 24px;"/></d=
+iv></span><span style=3D"display: table-cell; padding-left: 12px;"><a href=
+=3D"https://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtC=
+eFF3REE/view?usp=3Dsharing_eixpa_nl&amp;ts=3D584fad2d" style=3D"color: #336=
+7d6; text-decoration: none; vertical-align: middle;">UniwareInstrumentation=
+-1.0-jar-with-dependencies.jar</a><div itemprop=3D"action" itemscope itemty=
+pe=3D"http://schema.org/ViewAction"><meta itemprop=3D"url" content=3D"https=
+://drive.google.com/a/unicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/v=
+iew?usp=3Dsharing_eixpa_nl&amp;ts=3D584fad2d"></div></span></div></div><div=
+ style=3D"height: 32px;"></div><div><a href=3D"https://drive.google.com/a/u=
+nicommerce.com/file/d/0ByqMCmqPS6xtcHVXaGtCeFF3REE/view?usp=3Dsharing_eixpa=
+_np&amp;ts=3D584fad2d" target=3D"_blank" style=3D"background-color: #4d90fe=
+; border: 1px solid #3079ed; border-radius: 2px; color: white; display: inl=
+ine-block; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 11px;=
+ font-weight: bold; height: 29px; line-height: 29px; min-width: 54px; outli=
+ne: 0px; padding: 0 8px; text-align: center; text-decoration: none">Open</a=
+></div></div></div><table style=3D"width: 100%; border-collapse: collapse;"=
+ role=3D"presentation"><tr><td style=3D"padding: 0px;"><table style=3D"bord=
+er-collapse: collapse; width: 3px;" role=3D"presentation"><tr height=3D"1">=
+<td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=
+=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" bgc=
+olor=3D"#e5e5e5" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><td wid=
+th=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" b=
+gcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"=
+#eaeaea" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><td width=3D"1"=
+ bgcolor=3D"#f5f5f5" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=
+=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#f0f0f=
+0" style=3D"padding: 0px;"></td></tr></table></td><td style=3D"width: 100%;=
+ padding: 0px;"><div style=3D"height: 1px; width: auto; border-top: 1px sol=
+id #ddd; background:#eaeaea; border-bottom: 1px solid #f0f0f0;"></div></td>=
+<td style=3D"padding: 0px;"><table style=3D"border-collapse: collapse; widt=
+h: 3px;" role=3D"presentation"><tr height=3D"1"><td width=3D"1" bgcolor=3D"=
+#e5e5e5" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" s=
+tyle=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"pa=
+dding: 0px;"></td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#eaeaea"=
+ style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"=
+padding: 0px;"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0=
+px;"></td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=
+=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"paddin=
+g: 0px;"></td><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D"padding: 0px;"><=
+/td></tr></table></td></tr></table><table style=3D"padding: 14px 10px 0 10p=
+x;" role=3D"presentation" dir=3D"ltr"><tr><td style=3D"width: 100%; font-si=
+ze:11px; font-family: Roboto,Arial,Helvetica,sans-serif; color:#646464; lin=
+e-height: 20px; min-height: 40px; vertical-align: middle;">Google Drive: Ha=
+ve all your files within reach from any device. <br/>Google Inc. 1600 Amphi=
+theatre Parkway, Mountain View, CA 94043, USA</td><td style=3D"padding-left=
+: 20px; vertical-align: middle;"><a href=3D"https://drive.google.com" targe=
+t=3D"_blank"><img src=3D"https://www.gstatic.com/images/branding/googlelogo=
+/1x/googlelogo_tm_black54_color_96x40dp.png" width=3D"96" alt=3D"Logo for G=
+oogle Drive" border=3D"0"></a></td></tr></table></div></div></body></html>
+--001a114222d43d9dc1054385c4f6--

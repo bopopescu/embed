@@ -1,0 +1,801 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1488269qgd;
+        Mon, 12 Dec 2016 00:12:45 -0800 (PST)
+X-Received: by 10.159.32.133 with SMTP id 5mr69319961uaa.145.1481530365412;
+        Mon, 12 Dec 2016 00:12:45 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x22c.google.com (mail-ua0-x22c.google.com. [2607:f8b0:400c:c08::22c])
+        by mx.google.com with ESMTPS id l13si10725353vke.180.2016.12.12.00.12.45
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 12 Dec 2016 00:12:45 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::22c;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22c is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x22c.google.com with SMTP id b35so74507141uaa.3
+        for <digvijay@unicommerce.com>; Mon, 12 Dec 2016 00:12:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=AILyUgelwx0VMTXF6cmUTR18a1Hjtz6Y/KwOHC72QT0=;
+        b=dVBXNA7q7L0JlCHxqY0QXIHwptOLFE7hoNnBwgoxQr4vh9rrDq1SQ7Q+FLBMhAVTaZ
+         vKBCuEndy8GpvRWveKDT33L9PPvpEf3fq5kZTIxSNduPDZgeJSWAjLFQfBQADJtiin9I
+         4wYBJqL8Hj6vsAvmIwgPW+plWHj4/UcQuLulo00MRaJ6VHCd1Th37aSA+zTYiGsy0uJL
+         ZszsTonTUPoDQD0+CBiLoxFIWORclteqZkefqccuQPQNtkFhFlt3RckSzbogi4+978GB
+         CDmn4lldLFI6WTTvWKzXUXJiKZ1lzVDECI7Ust18ef+TwpBa89LZFnddr1fHpQux8Jf2
+         PuCA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=AILyUgelwx0VMTXF6cmUTR18a1Hjtz6Y/KwOHC72QT0=;
+        b=J6K4WxuF9ia+YyJadUupteVY13L6aKaPk6U5E/sjeaIQVrAfhQSnMOiedPZ5CQUI3O
+         1lo1Rm/ewUlr/UDKNQblcbYoTFlqoydmJne34G5a9yhRJ4+14RsWz6oFCmDKReNam77P
+         nbthAskFQAqhaNyqapPjKh/y1WszSSbiGDagudd3KyASIysiJMVyYmEonWQ8mnjrmzlJ
+         WApD8lyB0EOTPlrX2J+h5cLyE620esXhRvjfE48ncRi+7643AGBDYI2iCYfr4k8+qkJL
+         kg0dxI11WMGaBjqOsc36unfDr411rJT3HUH0/NF/hU9HNctGGGHjiKW7jE+x9TQyueHU
+         9b7Q==
+X-Gm-Message-State: AKaTC00mEuenGDoiubhX5DJ94ERo6U4TPQm3BS6a/TtNt6S7M89/vCb1zEt1x4aKlivTuuXJJK5VBWaNgjC0/A==
+X-Received: by 10.176.85.83 with SMTP id u19mr2959284uaa.82.1481530364828;
+ Mon, 12 Dec 2016 00:12:44 -0800 (PST)
+MIME-Version: 1.0
+References: <CAJF3soq5aX-RDWWuVTrJVhQKKZ=UxHRCH3nRZ8eROZexRUydYw@mail.gmail.com>
+ <CAJF3sopJLwhfOSu0yu=Urqsixf+Gsch+1V7kYjMu7ks0SxPayw@mail.gmail.com>
+In-Reply-To: <CAJF3sopJLwhfOSu0yu=Urqsixf+Gsch+1V7kYjMu7ks0SxPayw@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Mon, 12 Dec 2016 08:12:34 +0000
+Message-ID: <CAPe2SZQWgA0xd87DswwpWDe9uRRUEDu7k9QipXQkWUQRyxe_jA@mail.gmail.com>
+Subject: Re: New FKRecon_Detail_script
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f403045de9461ee3e0054371abaa
+
+--f403045de9461ee3e0054371abaa
+Content-Type: text/plain; charset=UTF-8
+
+Theek hai. We are getting orderId and orderItemId for these rows right, and
+multiple entry to nahi hai na ek item ke liye?
+Aur pehle stgenterprise1 mein test kar lena.
+
+On Mon, Dec 12, 2016 at 1:17 PM Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Ek bari check krke btao. Maine refactor krdi h marketplaceFee ko include
+> krke.
+>
+>
+> On Mon, Dec 12, 2016 at 1:16 PM, Digvijay Sharma <digvijay@unicommerce.com
+> > wrote:
+>
+> <scraper name="flipkartReconciliationInvoiceDetailScript" xmlns:xsi="
+> http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="
+> http://www.unicommerce.com/schema/scraper-1.0.xsd" cachehttpclient="true"
+> httpClientName="#{#channel.name}-seller-panel">
+>
+>     <var name="params" value="#{new java.util.HashMap()}"/>
+>     <invoke method="doFlipkartLogin" script="flipkartUtils">
+>         <param name="username" value="#{#username}"/>
+>         <param name="password" value="#{#password}"/>
+>         <param name="channel" value="#{#channel}"/>
+>         <param name="params" value="#{#params}"/>
+>     </invoke>
+>
+>     <var name="statusMap" value="#{new java.util.HashMap()}"/>
+>     <http method="get" url="
+> https://seller.flipkart.com/dashboard/statements" var="homePageResponse"
+> fetchCookies="true" />
+>     <var name="sellerId"
+> value="#{#homePageResponseCookies.get('sellerId')}" />
+>
+>     <var name="utrNumber" value="#{#channelReconciliationElement.text()}"
+> />
+>     <startTag name="CreateChannelReconciliationInvoiceRequest">
+>         <attribute name="xmlns" value="
+> http://uniware.unicommerce.com/services/" />
+>     </startTag>
+>     <var name="paymentDate"
+> value="#{T(com.unifier.core.utils.DateUtils).stringToDate(#channelReconciliationDetail.get('payment_date').getAsString(),'MMM
+> dd, yyyy')}" />
+>     <startTag name="ChannelReconciliationInvoice" />
+>     <valueTag name="InvoiceCode" value="#{#utrNumber}" />
+>     <var name="downloadLink" value="
+> https://seller.flipkart.com/exportSettledData/exportData"/>
+>     <log level="info" value="downloadLink: #{#downloadLink}"/>
+>     <try>
+>         <var name="path"
+> value="/reconciliationInvoices/#{T(com.unifier.core.utils.EncryptionUtils).md5Encode(T(com.unifier.core.utils.DateUtils).getCurrentTime().getTime()+
+> '_' + T(com.uniware.core.utils.UserContext).current().tenant.code + '_' +
+> #utrNumber + '_' + 'flipkartReconciliation')}.csv" />
+>         <var name="filePath"
+> value="#{T(com.unifier.core.cache.CacheManager).getInstance().getCache('environmentCache').exportDirectoryPath}#{#path}"
+> />
+>         <log level="info" value="filePath: #{#filePath}"/>
+>         <http method="get" url="#{#downloadLink}"
+> downloadToFile="#{#filePath}">
+>             <param name="sellerId" value="#{#sellerId}"/>
+>             <param name="utr_number" value="#{#utrNumber}"/>
+>         </http>
+>         <catch>
+>             <log level="info" value="Unable to download File!"/>
+>         </catch>
+>     </try>
+>     <valueTag name="DownloadUrl" value="#{#path}"/>
+>     <valueTag name="ChannelCode" value="#{#channel.code}" />
+>     <valueTag name="SettlementDate"
+> value="#{T(com.unifier.core.utils.DateUtils).dateToString(#paymentDate,'dd/MM/yyyy')}"
+> />
+>     <valueTag name="DepositDate"
+> value="#{T(com.unifier.core.utils.DateUtils).dateToString(#paymentDate,'dd/MM/yyyy')}"
+> />
+>     <valueTag name="TotalSettlementValue"
+> value="#{#channelReconciliationDetail.get('transfer_amount').getAsString()}"
+> />
+>
+>     <var name="hasNextPage" value="#{true}"/>
+>     <var name="pageNumber" value="#{0}" />
+>     <var name="end_date"
+> value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).getCurrentDate(),
+> &quot;yyyy-MM-dd&quot;)}" />
+>     <var name="start_date"
+> value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).addToDate(T(com.unifier.core.utils.DateUtils).getCurrentDate(),
+> T(java.util.Calendar).DATE, -7), &quot;yyyy-MM-dd&quot;)}"/>
+>     <startTag name="InvoiceItems" />
+>     <while condition="#{#hasNextPage}">
+>         <var name="hasNextPage" value="#{false}"/>
+>         <var name="pageNumber" value="#{#pageNumber+1}" />
+>         <http method="get" url="
+> https://seller.flipkart.com/seller/#{#sellerId}/transactions/settled"
+> var="transactionResponse" timeout="50">
+>             <param name="utr_number" value="#{#utrNumber}"/>
+>             <param name="sellerId" value="#{#sellerId}"/>
+>             <param name="page_no" value="#{#pageNumber}" />
+>             <param name="page_size" value="10" />
+>         </http>
+>         <log level="info" value="#{#pageNumber}"/>
+>         <var name="transactionJson"
+> value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#transactionResponse)}"
+> />
+>         <log level="info" value="#{#transactionJson}"/>
+>         <if
+> condition="#{!#transactionJson.get('data').get('total_count').isJsonNull()}">
+>             <var name="hasNextPage" value="#{true}"/>
+>             <else>
+>                 <break/>
+>             </else>
+>         </if>
+>         <var name="transactionIterator"
+> value="#{#transactionJson.get('data').get('data').getAsJsonArray().iterator()}"
+> />
+>
+>         <while condition="#{#transactionIterator.hasNext()}">
+>
+>             <var name="order" value="#{#transactionIterator.next()}" />
+>             <var name="shippingFee" value="#{new
+> java.math.BigDecimal(#order.get('shippingFee').getAsString())}" />
+>             <var name="totalFixedFee" value="#{new
+> java.math.BigDecimal(#order.get('fixedFee').getAsString())}" />
+>             <var name="totalCommission" value="#{new
+> java.math.BigDecimal(#order.get('marketPlaceFee').getAsString())}" />
+>             <var name="finalTotalCommision"
+> value="#{#totalCommission.subtract(#totalFixedFee).subtract(#shippingFee)}"/>
+>             <var name="reverseShippingFee" value="#{new
+> java.math.BigDecimal(#order.get('reverseShippingFee').getAsString())}" />
+>             <var name="serviceTax" value="#{new
+> java.math.BigDecimal(#order.get('serviceTax').getAsString())}" />
+>             <var name="sbCessTax" value="#{new
+> java.math.BigDecimal(#order.get('sbCessTax').getAsString())}" />
+>             <var name="kkCessTax" value="#{new
+> java.math.BigDecimal(#order.get('kkCessTax').getAsString())}" />
+>             <var name="orderDate" value=""/>
+>             <if condition="#{#order.get('orderDate') != null and
+> !#order.get('orderDate').isJsonNull()}">
+>                 <var name="orderDate"
+> value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).stringToDate(#order.get('orderDate').getAsString(),'MMM
+> dd, yyyy'),'dd/MM/yyyy')}" />
+>             </if>
+>             <var name="settledValue" value="#{new
+> java.math.BigDecimal(#order.get('settlementValue').getAsString())}" />
+>             <var name="channelRecovery" value="#{new
+> java.math.BigDecimal(#order.get('marketPlaceFee').getAsString())}" />
+>             <var name="channelRecoveryWithTax"
+> value="#{#channelRecovery.add(#serviceTax).add(#kkCessTax).add(#sbCessTax)}"
+> />
+>             <if condition="#{#settledValue &gt; 0}">
+>                 <var name="status" value="CREDIT_INITIATE" />
+>                 <else>
+>                     <var name="status" value="DEBIT_INITIATE" />
+>                 </else>
+>             </if>
+>             <var name="feeDiscount" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <var name="orderItemValue" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <var name="performanceReward" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <var name="protectionFund" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <var name="refund" value="#{new java.math.BigDecimal(0.00)}" />
+>             <var name="invoiceAmount" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <var name="totalSellerEarning" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>             <if condition="#{#order.get('invoiceAmount') != null and
+> !#order.get('invoiceAmount').isJsonNull()}">
+>                 <var name="invoiceAmount" value="#{new
+> java.math.BigDecimal(#order.get('invoiceAmount').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('feeDiscount') != null and
+> !#order.get('feeDiscount').isJsonNull()}">
+>                 <var name="feeDiscount" value="#{new
+> java.math.BigDecimal(#order.get('feeDiscount').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('sale') != null and
+> !#order.get('sale').isJsonNull()}">
+>                 <var name="orderItemValue" value="#{new
+> java.math.BigDecimal(#order.get('sale').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('performanceReward') != null and
+> !#order.get('performanceReward').isJsonNull()}">
+>                 <var name="performanceReward" value="#{new
+> java.math.BigDecimal(#order.get('performanceReward').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('protectionFund') != null and
+> !#order.get('protectionFund').isJsonNull()}">
+>                 <var name="protectionFund" value="#{new
+> java.math.BigDecimal(#order.get('protectionFund').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('refund') != null and
+> !#order.get('refund').isJsonNull()}">
+>                 <var name="refund" value="#{new
+> java.math.BigDecimal(#order.get('refund').getAsString())}" />
+>             </if>
+>             <if condition="#{#order.get('fsn') != null and
+> !#order.get('fsn').isJsonNull()}">
+>                 <var name="channelProductName"
+> value="#{#order.get('fsn').getAsString()}" />
+>                 <else>
+>                     <if condition="#{#order.get('description') != null and
+> !#order.get('description').isJsonNull()}">
+>                         <var name="channelProductName"
+> value="#{#order.get('description').getAsString()}" cdata="true" />
+>                     </if>
+>                 </else>
+>             </if>
+>             <var name="shippingCharge"
+> value="#{#invoiceAmount.subtract(#orderItemValue)}" />
+>             <var name="totalTax"
+> value="#{#serviceTax.add(#kkCessTax).add(#sbCessTax)}"/>
+>             <var name="totalSellerEarning"
+> value="#{#orderItemValue.add(#performanceReward).add(#feeDiscount).add(#protectionFund).add(#refund)}"
+> />
+>             <if condition="#{#order.get('finalStatus') != null and
+> !#order.get('finalStatus').isJsonNull()}">
+>                 <var name="finalStatus"
+> value="#{#order.get('finalStatus').getAsString()}"/>
+>                 <else>
+>                     <var name="finalStatus" value="MarketPlace Fee"/>
+>                 </else>
+>             </if>
+>             <if condition="#{#order.get('orderFullfilmentType') != null
+> and !#order.get('orderFullfilmentType').isJsonNull()}">
+>                 <var name="orderFullfilmentType"
+> value="#{#order.get('orderFullfilmentType').getAsString()}"/>
+>                 <else>
+>                     <var name="orderFullfilmentType" value=""/>
+>                 </else>
+>             </if>
+>             <if
+> condition="#{!#order.get('orderFullfilmentType').equals('FA') or
+> T(com.unifier.core.utils.StringUtils)
+>
+> .isBlank(#order.get('orderFullfilmentType'))}">
+>                 <!-- If MarketPlace Fee Order -->
+>                 <if condition="#{T(com.unifier.core.utils.StringUtils)
+>
+> .isBlank(#order.get('orderFullfilmentType'))}">
+>                     <var name="settledValue" value="#{0}"/>
+>                     <if condition="#{#protectionFund &gt; 0}">
+>                         <var name="protectionFund" value="#{new
+> java.math.BigDecimal(0.00).subtract(#protectionFund)}"/>
+>                     </if>
+>
+>                     <if condition="#{#channelRecovery &gt; 0}">
+>                         <var name="channelRecovery" value="#{new
+> java.math.BigDecimal(0.00).subtract(#channelRecovery)}"/>
+>                     </if>
+>                     <var name="channelRecoveryWithTax"
+> value="#{#protectionFund.add(#channelRecovery)}"/>
+>                     <var name="totalTax" value="#{0}"/>
+>                 </if>
+>
+>                 <startTag name="InvoiceItem" />
+>                 <valueTag name="ReconciliationIdentifier"
+> value="#{#order.get('orderItemId').getAsString()}"/>
+>                 <valueTag name="ChannelSaleOrderCode"
+> value="#{#order.get('orderId').getAsString()}" />
+>                 <valueTag name="OrderDate" value="#{#orderDate}" />
+>                 <valueTag name="InvoiceItemOrderStatus"
+> value="#{#finalStatus}" />
+>                 <valueTag name="OrderItemValue"
+> value="#{#order.get('sale').getAsString()}" />
+>                 <valueTag name="TotalDiscounts" value="#{#feeDiscount}" />
+>                 <valueTag name="TotalRewards"
+> value="#{#performanceReward}" />
+>                 <valueTag name="TotalOtherIncentive"
+> value="#{#protectionFund.add(#refund)}" />
+>                 <valueTag name="TotalSellerEarning"
+> value="#{#totalSellerEarning}" />
+>                 <valueTag name="SettledValue" value="#{#settledValue}" />
+>                 <valueTag name="ChannelProductName"
+> value="#{#channelProductName}" />
+>                 <valueTag name="IsProcessed" value="#{false}" />
+>                 <valueTag name="Quantity"
+> value="#{#order.get('quantity').getAsString()}" />
+>                 <valueTag name="TotalCommission"
+> value="#{#finalTotalCommision}" />
+>                 <valueTag name="TotalFixedFee" value="#{#totalFixedFee}" />
+>                 <valueTag name="TotalShippingFee" value="#{#shippingFee}"
+> />
+>                 <valueTag name="TotalShippingCharge"
+> value="#{#shippingCharge}" />
+>                 <valueTag name="TotalReverseShippingFee"
+> value="#{#reverseShippingFee}" />
+>                 <valueTag name="TotalAdditionalFee" value="#{new
+> java.math.BigDecimal(0.00)}" />
+>                 <valueTag name="TotalTax" value="#{#totalTax}" />
+>                 <valueTag name="TotalChannelRecovery"
+> value="#{#channelRecoveryWithTax}" />
+>                 <valueTag name="AdditionalFeeDescription" value="" />
+>                 <endTag name="InvoiceItem" />
+>                 <else>
+>                     <log level="info" value="Non-FA Order!"/>
+>                 </else>
+>             </if>
+>         </while>
+>     </while>
+>     <endTag name="InvoiceItems" />
+>     <endTag name="ChannelReconciliationInvoice" />
+>     <endTag name="CreateChannelReconciliationInvoiceRequest" />
+> </scraper>
+>
+>
+> --
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--f403045de9461ee3e0054371abaa
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Theek hai. We are getting orderId and orderItemId for thes=
+e rows right, and multiple entry to nahi hai na ek item ke liye?<div>Aur pe=
+hle stgenterprise1 mein test kar lena.</div></div><br><div class=3D"gmail_q=
+uote"><div dir=3D"ltr">On Mon, Dec 12, 2016 at 1:17 PM Digvijay Sharma &lt;=
+<a href=3D"mailto:digvijay@unicommerce.com">digvijay@unicommerce.com</a>&gt=
+; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .=
+8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"=
+gmail_msg">Ek bari check krke btao. Maine refactor krdi h marketplaceFee ko=
+ include krke.<div class=3D"gmail_msg"><br class=3D"gmail_msg"></div></div>=
+<div class=3D"gmail_extra gmail_msg"><br class=3D"gmail_msg"><div class=3D"=
+gmail_quote gmail_msg">On Mon, Dec 12, 2016 at 1:16 PM, Digvijay Sharma <sp=
+an dir=3D"ltr" class=3D"gmail_msg">&lt;<a href=3D"mailto:digvijay@unicommer=
+ce.com" class=3D"gmail_msg" target=3D"_blank">digvijay@unicommerce.com</a>&=
+gt;</span> wrote:<br class=3D"gmail_msg"><blockquote class=3D"gmail_quote g=
+mail_msg" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-lef=
+t:1ex"><div dir=3D"ltr" class=3D"gmail_msg"><div class=3D"gmail_msg">&lt;sc=
+raper name=3D&quot;flipkartReconciliationInvoiceDetailScript&quot; xmlns:xs=
+i=3D&quot;<a href=3D"http://www.w3.org/2001/XMLSchema-instance" class=3D"gm=
+ail_msg" target=3D"_blank">http://www.w3.org/2001/XMLSchema-instance</a>&qu=
+ot; xsi:noNamespaceSchemaLocation=3D&quot;<a href=3D"http://www.unicommerce=
+.com/schema/scraper-1.0.xsd" class=3D"gmail_msg" target=3D"_blank">http://w=
+ww.unicommerce.com/schema/scraper-1.0.xsd</a>&quot; cachehttpclient=3D&quot=
+;true&quot; httpClientName=3D&quot;#{#<a href=3D"http://channel.name" class=
+=3D"gmail_msg" target=3D"_blank">channel.name</a>}-seller-panel&quot;&gt;</=
+div><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gm=
+ail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;params&quot; value=3D&quot;#{ne=
+w java.util.HashMap()}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 &lt;invoke method=3D&quot;doFlipkartLogin&quot; script=3D&quot;flipkart=
+Utils&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &=
+lt;param name=3D&quot;username&quot; value=3D&quot;#{#username}&quot;/&gt;<=
+/div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D=
+&quot;password&quot; value=3D&quot;#{#password}&quot;/&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;channel&q=
+uot; value=3D&quot;#{#channel}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;params&quot; value=3D&quot;=
+#{#params}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;/invo=
+ke&gt;</div><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div cla=
+ss=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;statusMap&quot; value=
+=3D&quot;#{new java.util.HashMap()}&quot;/&gt;</div><div class=3D"gmail_msg=
+">=C2=A0 =C2=A0 &lt;http method=3D&quot;get&quot; url=3D&quot;<a href=3D"ht=
+tps://seller.flipkart.com/dashboard/statements" class=3D"gmail_msg" target=
+=3D"_blank">https://seller.flipkart.com/dashboard/statements</a>&quot; var=
+=3D&quot;homePageResponse&quot; fetchCookies=3D&quot;true&quot; /&gt;</div>=
+<div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;sellerId&quot; =
+value=3D&quot;#{#homePageResponseCookies.get(&#39;sellerId&#39;)}&quot; /&g=
+t;</div><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;utrNumber&quot; value=3D&=
+quot;#{#channelReconciliationElement.text()}&quot; /&gt;</div><div class=3D=
+"gmail_msg">=C2=A0 =C2=A0 &lt;startTag name=3D&quot;CreateChannelReconcilia=
+tionInvoiceRequest&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;attribute name=3D&quot;xmlns&quot; value=3D&quot;<a href=
+=3D"http://uniware.unicommerce.com/services/" class=3D"gmail_msg" target=3D=
+"_blank">http://uniware.unicommerce.com/services/</a>&quot; /&gt;</div><div=
+ class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;/startTag&gt;</div><div class=3D"gma=
+il_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;paymentDate&quot; value=3D&quot;=
+#{T(com.unifier.core.utils.DateUtils).stringToDate(#channelReconciliationDe=
+tail.get(&#39;payment_date&#39;).getAsString(),&#39;MMM dd, yyyy&#39;)}&quo=
+t; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;startTag name=3D&q=
+uot;ChannelReconciliationInvoice&quot; /&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 &lt;valueTag name=3D&quot;InvoiceCode&quot; value=3D&quot;#{#=
+utrNumber}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var =
+name=3D&quot;downloadLink&quot; value=3D&quot;<a href=3D"https://seller.fli=
+pkart.com/exportSettledData/exportData" class=3D"gmail_msg" target=3D"_blan=
+k">https://seller.flipkart.com/exportSettledData/exportData</a>&quot;/&gt;<=
+/div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;log level=3D&quot;info&quot=
+; value=3D&quot;downloadLink: #{#downloadLink}&quot;/&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 &lt;try&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;path&quot; value=3D&quot;/rec=
+onciliationInvoices/#{T(com.unifier.core.utils.EncryptionUtils).md5Encode(T=
+(com.unifier.core.utils.DateUtils).getCurrentTime().getTime()+ &#39;_&#39; =
++ T(com.uniware.core.utils.UserContext).current().tenant.code + &#39;_&#39;=
+ + #utrNumber + &#39;_&#39; + &#39;flipkartReconciliation&#39;)}.csv&quot; =
+/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var nam=
+e=3D&quot;filePath&quot; value=3D&quot;#{T(com.unifier.core.cache.CacheMana=
+ger).getInstance().getCache(&#39;environmentCache&#39;).exportDirectoryPath=
+}#{#path}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;log level=3D&quot;info&quot; value=3D&quot;filePath: #{#filePath=
+}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;=
+http method=3D&quot;get&quot; url=3D&quot;#{#downloadLink}&quot; downloadTo=
+File=3D&quot;#{#filePath}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;sellerId&quot; va=
+lue=3D&quot;#{#sellerId}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;utr_number&quot; =
+value=3D&quot;#{#utrNumber}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;/http&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &lt;catch&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;log level=3D&quot;info&quot; value=3D&q=
+uot;Unable to download File!&quot;/&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/catch&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 &lt;/try&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;val=
+ueTag name=3D&quot;DownloadUrl&quot; value=3D&quot;#{#path}&quot;/&gt;</div=
+><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;valueTag name=3D&quot;ChannelCo=
+de&quot; value=3D&quot;#{#channel.code}&quot; /&gt;</div><div class=3D"gmai=
+l_msg">=C2=A0 =C2=A0 &lt;valueTag name=3D&quot;SettlementDate&quot; value=
+=3D&quot;#{T(com.unifier.core.utils.DateUtils).dateToString(#paymentDate,&#=
+39;dd/MM/yyyy&#39;)}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 &lt;valueTag name=3D&quot;DepositDate&quot; value=3D&quot;#{T(com.unifi=
+er.core.utils.DateUtils).dateToString(#paymentDate,&#39;dd/MM/yyyy&#39;)}&q=
+uot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;valueTag name=3D=
+&quot;TotalSettlementValue&quot; value=3D&quot;#{#channelReconciliationDeta=
+il.get(&#39;transfer_amount&#39;).getAsString()}&quot; /&gt;</div><div clas=
+s=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 &lt;var name=3D&quot;hasNextPage&quot; value=3D&quot;#{true}&quo=
+t;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;pa=
+geNumber&quot; value=3D&quot;#{0}&quot; /&gt;</div><div class=3D"gmail_msg"=
+>=C2=A0 =C2=A0 &lt;var name=3D&quot;end_date&quot; value=3D&quot;#{T(com.un=
+ifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils=
+).getCurrentDate(), &amp;quot;yyyy-MM-dd&amp;quot;)}&quot; /&gt;</div><div =
+class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;var name=3D&quot;start_date&quot; val=
+ue=3D&quot;#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier=
+.core.utils.DateUtils).addToDate(T(com.unifier.core.utils.DateUtils).getCur=
+rentDate(), T(java.util.Calendar).DATE, -7), &amp;quot;yyyy-MM-dd&amp;quot;=
+)}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;startTag name=
+=3D&quot;InvoiceItems&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 &lt;while condition=3D&quot;#{#hasNextPage}&quot;&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;hasNextPage=
+&quot; value=3D&quot;#{false}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;pageNumber&quot; value=3D&quo=
+t;#{#pageNumber+1}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;http method=3D&quot;get&quot; url=3D&quot;<a href=3D"http=
+s://seller.flipkart.com/seller/#%7B%23sellerId%7D/transactions/settled" cla=
+ss=3D"gmail_msg" target=3D"_blank">https://seller.flipkart.com/seller/#{#se=
+llerId}/transactions/settled</a>&quot; var=3D&quot;transactionResponse&quot=
+; timeout=3D&quot;50&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;utr_number&quot; value=
+=3D&quot;#{#utrNumber}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;sellerId&quot; value=
+=3D&quot;#{#sellerId}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;page_no&quot; value=
+=3D&quot;#{#pageNumber}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;param name=3D&quot;page_size&quot; v=
+alue=3D&quot;10&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;/http&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &lt;log level=3D&quot;info&quot; value=3D&quot;#{#pageNumber}&quot;=
+/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var nam=
+e=3D&quot;transactionJson&quot; value=3D&quot;#{T(com.unifier.core.utils.Js=
+onUtils).stringToJson(#transactionResponse)}&quot; /&gt;</div><div class=3D=
+"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;log level=3D&quot;info&quot; va=
+lue=3D&quot;#{#transactionJson}&quot;/&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{!#transactionJson.ge=
+t(&#39;data&#39;).get(&#39;total_count&#39;).isJsonNull()}&quot;&gt;</div><=
+div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var n=
+ame=3D&quot;hasNextPage&quot; value=3D&quot;#{true}&quot;/&gt;</div><div cl=
+ass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&gt;</d=
+iv><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;break/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gmail_msg">=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;transactionIterator&quot; value=3D&q=
+uot;#{#transactionJson.get(&#39;data&#39;).get(&#39;data&#39;).getAsJsonArr=
+ay().iterator()}&quot; /&gt;</div><div class=3D"gmail_msg"><br class=3D"gma=
+il_msg"></div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;whil=
+e condition=3D&quot;#{#transactionIterator.hasNext()}&quot;&gt;</div><div c=
+lass=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;order&quot; =
+value=3D&quot;#{#transactionIterator.next()}&quot; /&gt;</div><div class=3D=
+"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;=
+shippingFee&quot; value=3D&quot;#{new java.math.BigDecimal(#order.get(&#39;=
+shippingFee&#39;).getAsString())}&quot; /&gt;</div><div class=3D"gmail_msg"=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;totalFixedF=
+ee&quot; value=3D&quot;#{new java.math.BigDecimal(#order.get(&#39;fixedFee&=
+#39;).getAsString())}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;totalCommission&quot; =
+value=3D&quot;#{new java.math.BigDecimal(#order.get(&#39;marketPlaceFee&#39=
+;).getAsString())}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;finalTotalCommision&quot; =
+value=3D&quot;#{#totalCommission.subtract(#totalFixedFee).subtract(#shippin=
+gFee)}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 &lt;var name=3D&quot;reverseShippingFee&quot; value=3D&quot;=
+#{new java.math.BigDecimal(#order.get(&#39;reverseShippingFee&#39;).getAsSt=
+ring())}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;serviceTax&quot; value=3D&quot;#{new=
+ java.math.BigDecimal(#order.get(&#39;serviceTax&#39;).getAsString())}&quot=
+; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;var name=3D&quot;sbCessTax&quot; value=3D&quot;#{new java.math.B=
+igDecimal(#order.get(&#39;sbCessTax&#39;).getAsString())}&quot; /&gt;</div>=
+<div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var =
+name=3D&quot;kkCessTax&quot; value=3D&quot;#{new java.math.BigDecimal(#orde=
+r.get(&#39;kkCessTax&#39;).getAsString())}&quot; /&gt;</div><div class=3D"g=
+mail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;or=
+derDate&quot; value=3D&quot;&quot;/&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#order.ge=
+t(&#39;orderDate&#39;) !=3D null and !#order.get(&#39;orderDate&#39;).isJso=
+nNull()}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;orderDate&quot; value=
+=3D&quot;#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.c=
+ore.utils.DateUtils).stringToDate(#order.get(&#39;orderDate&#39;).getAsStri=
+ng(),&#39;MMM dd, yyyy&#39;),&#39;dd/MM/yyyy&#39;)}&quot; /&gt;</div><div c=
+lass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</d=
+iv><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;v=
+ar name=3D&quot;settledValue&quot; value=3D&quot;#{new java.math.BigDecimal=
+(#order.get(&#39;settlementValue&#39;).getAsString())}&quot; /&gt;</div><di=
+v class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var nam=
+e=3D&quot;channelRecovery&quot; value=3D&quot;#{new java.math.BigDecimal(#o=
+rder.get(&#39;marketPlaceFee&#39;).getAsString())}&quot; /&gt;</div><div cl=
+ass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D=
+&quot;channelRecoveryWithTax&quot; value=3D&quot;#{#channelRecovery.add(#se=
+rviceTax).add(#kkCessTax).add(#sbCessTax)}&quot; /&gt;</div><div class=3D"g=
+mail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quo=
+t;#{#settledValue &amp;gt; 0}&quot;&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;s=
+tatus&quot; value=3D&quot;CREDIT_INITIATE&quot; /&gt;</div><div class=3D"gm=
+ail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&g=
+t;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;status&quot; value=3D&quot=
+;DEBIT_INITIATE&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gma=
+il_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div cla=
+ss=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&=
+quot;feeDiscount&quot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&quot=
+; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;var name=3D&quot;orderItemValue&quot; value=3D&quot;#{new java.m=
+ath.BigDecimal(0.00)}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;performanceReward&quot=
+; value=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div cla=
+ss=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&=
+quot;protectionFund&quot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&q=
+uot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &lt;var name=3D&quot;refund&quot; value=3D&quot;#{new java.math.Big=
+Decimal(0.00)}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;invoiceAmount&quot; value=3D&=
+quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div class=3D"gmail=
+_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;totalS=
+ellerEarning&quot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&=
+gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ &lt;if condition=3D&quot;#{#order.get(&#39;invoiceAmount&#39;) !=3D null a=
+nd !#order.get(&#39;invoiceAmount&#39;).isJsonNull()}&quot;&gt;</div><div c=
+lass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+&lt;var name=3D&quot;invoiceAmount&quot; value=3D&quot;#{new java.math.BigD=
+ecimal(#order.get(&#39;invoiceAmount&#39;).getAsString())}&quot; /&gt;</div=
+><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if=
+&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;if condition=3D&quot;#{#order.get(&#39;feeDiscount&#39;) !=3D null =
+and !#order.get(&#39;feeDiscount&#39;).isJsonNull()}&quot;&gt;</div><div cl=
+ass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &=
+lt;var name=3D&quot;feeDiscount&quot; value=3D&quot;#{new java.math.BigDeci=
+mal(#order.get(&#39;feeDiscount&#39;).getAsString())}&quot; /&gt;</div><div=
+ class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;<=
+/div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt=
+;if condition=3D&quot;#{#order.get(&#39;sale&#39;) !=3D null and !#order.ge=
+t(&#39;sale&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;o=
+rderItemValue&quot; value=3D&quot;#{new java.math.BigDecimal(#order.get(&#3=
+9;sale&#39;).getAsString())}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail=
+_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{=
+#order.get(&#39;performanceReward&#39;) !=3D null and !#order.get(&#39;perf=
+ormanceReward&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quo=
+t;performanceReward&quot; value=3D&quot;#{new java.math.BigDecimal(#order.g=
+et(&#39;performanceReward&#39;).getAsString())}&quot; /&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><=
+div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if co=
+ndition=3D&quot;#{#order.get(&#39;protectionFund&#39;) !=3D null and !#orde=
+r.get(&#39;protectionFund&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"=
+gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var =
+name=3D&quot;protectionFund&quot; value=3D&quot;#{new java.math.BigDecimal(=
+#order.get(&#39;protectionFund&#39;).getAsString())}&quot; /&gt;</div><div =
+class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</=
+div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;=
+if condition=3D&quot;#{#order.get(&#39;refund&#39;) !=3D null and !#order.g=
+et(&#39;refund&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quo=
+t;refund&quot; value=3D&quot;#{new java.math.BigDecimal(#order.get(&#39;ref=
+und&#39;).getAsString())}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg=
+">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#ord=
+er.get(&#39;fsn&#39;) !=3D null and !#order.get(&#39;fsn&#39;).isJsonNull()=
+}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;channelProductName&quot; valu=
+e=3D&quot;#{#order.get(&#39;fsn&#39;).getAsString()}&quot; /&gt;</div><div =
+class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ &lt;else&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#order.ge=
+t(&#39;description&#39;) !=3D null and !#order.get(&#39;description&#39;).i=
+sJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=
+=3D&quot;channelProductName&quot; value=3D&quot;#{#order.get(&#39;descripti=
+on&#39;).getAsString()}&quot; cdata=3D&quot;true&quot; /&gt;</div><div clas=
+s=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gmail_m=
+sg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&qu=
+ot;shippingCharge&quot; value=3D&quot;#{#invoiceAmount.subtract(#orderItemV=
+alue)}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;totalTax&quot; value=3D&quot;#{#serv=
+iceTax.add(#kkCessTax).add(#sbCessTax)}&quot;/&gt;</div><div class=3D"gmail=
+_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;totalS=
+ellerEarning&quot; value=3D&quot;#{#orderItemValue.add(#performanceReward).=
+add(#feeDiscount).add(#protectionFund).add(#refund)}&quot; /&gt;</div><div =
+class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condit=
+ion=3D&quot;#{#order.get(&#39;finalStatus&#39;) !=3D null and !#order.get(&=
+#39;finalStatus&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg"=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&qu=
+ot;finalStatus&quot; value=3D&quot;#{#order.get(&#39;finalStatus&#39;).getA=
+sString()}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&gt;</div><div class=3D"gmail_ms=
+g">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &l=
+t;var name=3D&quot;finalStatus&quot; value=3D&quot;MarketPlace Fee&quot;/&g=
+t;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#order.get(&#=
+39;orderFullfilmentType&#39;) !=3D null and !#order.get(&#39;orderFullfilme=
+ntType&#39;).isJsonNull()}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;order=
+FullfilmentType&quot; value=3D&quot;#{#order.get(&#39;orderFullfilmentType&=
+#39;).getAsString()}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&gt;</div><div class=3D"=
+gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;var name=3D&quot;orderFullfilmentType&quot; value=3D&quot;&quot;=
+/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{!#order.g=
+et(&#39;orderFullfilmentType&#39;).equals(&#39;FA&#39;) or T(com.unifier.co=
+re.utils.StringUtils)</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 .isBlank(#order.get(&#39;orderFullfilmentTy=
+pe&#39;))}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;!-- If MarketPlace Fee Order --&gt;</di=
+v><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &lt;if condition=3D&quot;#{T(com.unifier.core.utils.StringUtils)</d=
+iv><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 .isBlank(#order.get(&#39;orderFullfilmentType&#39;))}&quot;&gt;</div=
+><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;settledValue&quot; value=3D&quot;=
+#{0}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if condition=3D&quot;#{#prote=
+ctionFund &amp;gt; 0}&quot;&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;=
+var name=3D&quot;protectionFund&quot; value=3D&quot;#{new java.math.BigDeci=
+mal(0.00).subtract(#protectionFund)}&quot;/&gt;</div><div class=3D"gmail_ms=
+g">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &l=
+t;/if&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0</div><div class=3D"gmail_msg">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;if c=
+ondition=3D&quot;#{#channelRecovery &amp;gt; 0}&quot;&gt;</div><div class=
+=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=3D&quot;channelRecovery&quot; value=
+=3D&quot;#{new java.math.BigDecimal(0.00).subtract(#channelRecovery)}&quot;=
+/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;v=
+ar name=3D&quot;channelRecoveryWithTax&quot; value=3D&quot;#{#protectionFun=
+d.add(#channelRecovery)}&quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;var name=
+=3D&quot;totalTax&quot; value=3D&quot;#{0}&quot;/&gt;</div><div class=3D"gm=
+ail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt=
+; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</div><div class=3D"gmail_msg"><=
+br class=3D"gmail_msg"></div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;startTag name=3D&quot;InvoiceItem&qu=
+ot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;ReconciliationIdentifier&quo=
+t; value=3D&quot;#{#order.get(&#39;orderItemId&#39;).getAsString()}&quot;/&=
+gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;ChannelSaleOrderCode&quot; value=
+=3D&quot;#{#order.get(&#39;orderId&#39;).getAsString()}&quot; /&gt;</div><d=
+iv class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;valueTag name=3D&quot;OrderDate&quot; value=3D&quot;#{#orderDate}&q=
+uot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;InvoiceItemOrderStatus&quot=
+; value=3D&quot;#{#finalStatus}&quot; /&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=
+=3D&quot;OrderItemValue&quot; value=3D&quot;#{#order.get(&#39;sale&#39;).ge=
+tAsString()}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;TotalDiscount=
+s&quot; value=3D&quot;#{#feeDiscount}&quot; /&gt;</div><div class=3D"gmail_=
+msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag n=
+ame=3D&quot;TotalRewards&quot; value=3D&quot;#{#performanceReward}&quot; /&=
+gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;TotalOtherIncentive&quot; value=3D=
+&quot;#{#protectionFund.add(#refund)}&quot; /&gt;</div><div class=3D"gmail_=
+msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag n=
+ame=3D&quot;TotalSellerEarning&quot; value=3D&quot;#{#totalSellerEarning}&q=
+uot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;SettledValue&quot; value=3D=
+&quot;#{#settledValue}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;Cha=
+nnelProductName&quot; value=3D&quot;#{#channelProductName}&quot; /&gt;</div=
+><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &lt;valueTag name=3D&quot;IsProcessed&quot; value=3D&quot;#{false}&q=
+uot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;Quantity&quot; value=3D&quo=
+t;#{#order.get(&#39;quantity&#39;).getAsString()}&quot; /&gt;</div><div cla=
+ss=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &l=
+t;valueTag name=3D&quot;TotalCommission&quot; value=3D&quot;#{#finalTotalCo=
+mmision}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;TotalFixedFee&quo=
+t; value=3D&quot;#{#totalFixedFee}&quot; /&gt;</div><div class=3D"gmail_msg=
+">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=
+=3D&quot;TotalShippingFee&quot; value=3D&quot;#{#shippingFee}&quot; /&gt;</=
+div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &lt;valueTag name=3D&quot;TotalShippingCharge&quot; value=3D&quo=
+t;#{#shippingCharge}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;Tot=
+alReverseShippingFee&quot; value=3D&quot;#{#reverseShippingFee}&quot; /&gt;=
+</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;valueTag name=3D&quot;TotalAdditionalFee&quot; value=3D&q=
+uot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div class=3D"gmail_=
+msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag n=
+ame=3D&quot;TotalTax&quot; value=3D&quot;#{#totalTax}&quot; /&gt;</div><div=
+ class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;valueTag name=3D&quot;TotalChannelRecovery&quot; value=3D&quot;#{#c=
+hannelRecoveryWithTax}&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;valueTag name=3D&quot;Add=
+itionalFeeDescription&quot; value=3D&quot;&quot; /&gt;</div><div class=3D"g=
+mail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;endTa=
+g name=3D&quot;InvoiceItem&quot; /&gt;</div><div class=3D"gmail_msg">=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;else&gt;</div><div cl=
+ass=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &lt;log level=3D&quot;info&quot; value=3D&quot;Non-FA Order!&=
+quot;/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 &lt;/else&gt;</div><div class=3D"gmail_msg">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/if&gt;</div><div class=3D"gmail_msg=
+">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/while&gt;</div><div class=3D"gmail_msg">=
+=C2=A0 =C2=A0 &lt;/while&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &l=
+t;endTag name=3D&quot;InvoiceItems&quot; /&gt;</div><div class=3D"gmail_msg=
+">=C2=A0 =C2=A0 &lt;endTag name=3D&quot;ChannelReconciliationInvoice&quot; =
+/&gt;</div><div class=3D"gmail_msg">=C2=A0 =C2=A0 &lt;endTag name=3D&quot;C=
+reateChannelReconciliationInvoiceRequest&quot; /&gt;</div><div class=3D"gma=
+il_msg">&lt;/scraper&gt;</div></div>
+</blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software=
+ Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--f403045de9461ee3e0054371abaa--

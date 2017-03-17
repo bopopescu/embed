@@ -1,0 +1,127 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp938822qge;
+        Mon, 7 Nov 2016 01:44:11 -0800 (PST)
+X-Received: by 10.237.61.210 with SMTP id j18mr5491177qtf.137.1478511851547;
+        Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+Return-Path: <>
+Received: from mail-qt0-x244.google.com (mail-qt0-x244.google.com. [2607:f8b0:400d:c0d::244])
+        by mx.google.com with ESMTPS id d22si15514650qtc.134.2016.11.07.01.44.11
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-qt0-x244.google.com designates 2607:f8b0:400d:c0d::244 as permitted sender) client-ip=2607:f8b0:400d:c0d::244;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-qt0-x244.google.com designates 2607:f8b0:400d:c0d::244 as permitted sender) smtp.helo=mail-qt0-x244.google.com;
+       dmarc=pass (p=QUARANTINE dis=NONE) header.from=googlemail.com
+Received: by mail-qt0-x244.google.com with SMTP id n34so5534342qtb.3
+        for <digvijay@unicommerce.com>; Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:from:to:auto-submitted:subject:references:in-reply-to
+         :message-id:date;
+        bh=mQaKRiP1vmH1LtQfB2o1pHd/udKZuX2ZxRJ2F02XDV4=;
+        b=KDjerZRNP9Ou0TNBiJRwW6lLfdUlfJpKu7SkPKURyzIDZpnBc0gnvfz+xV6+IPYptG
+         9KwUi6cMRgluxrV8E4BF3NLsA+3lF3a8c2weAwFWO/KZyjP3CwEosUN6lZ1lu+1FkVuz
+         UewhuyuIDt4kA52AxZX8QhSWregO1ZVXdsaI+/FU9nlUx/03tp/DU6JAOzIbQCrFxPve
+         ykqA1uhOwZU4mVWrurdjfd07z1crJyA6e8YRSydcTy+DoENJ0ASd7mUcomHWb7sMpvLv
+         8VYtUzQ86gr03m1xwcRh6t1k6k+D+bEICckFxZaGHGcILWsAM+AJgwnr8Tx1vuonZSq5
+         C+mQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:to:auto-submitted:subject
+         :references:in-reply-to:message-id:date;
+        bh=mQaKRiP1vmH1LtQfB2o1pHd/udKZuX2ZxRJ2F02XDV4=;
+        b=D9cben5PEG7LbbbtjgLdUr52fLvaQmT6gDNcx+MTlMWx9c+H/NhnfMzfyA/nMDVs8f
+         lmvwckyeh4apt2Oxq1xyGEP3zckbPOMxZcTrJ7YXsxDMBuGDj8G8KLyIUKCCkdF0Zaa9
+         addG8bIpv8aqUkx6DT8Ynttz3kBBYsQRJMRF1qSoLNQ/7poH92Fmmrpf1wgqOr/K3M1X
+         WU0R0PgG69SVmwUiT/+NMGr8I+xc2X8j8tJ9B5CxkQLhSSC7zAhBvRvXl3uEjWR/7KGG
+         0WVmNW03HRmFktwFw/0vjy0+bL5xEnihIcEgGyHaLSHrfpkHEnEI85B0nKQ9cA+100Or
+         8T2g==
+X-Gm-Message-State: ABUngvegMwpa7W6NHy6EnI1Pc9MjgfgCVvNzyI06uXxBrAsXidMHfOjjU4wtgtupppexQGzpYny6joxc07AuEMOwZITALmGBXA==
+X-Received: by 10.200.52.138 with SMTP id w10mr5515026qtb.49.1478511851419;
+        Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+MIME-Version: 1.0
+Return-Path: <>
+Received: by 10.200.52.138 with SMTP id w10mr5886671qtb.49; Mon, 07 Nov 2016
+ 01:44:11 -0800 (PST)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+To: digvijay@unicommerce.com
+Auto-Submitted: auto-replied
+Subject: Delivery Status Notification (Failure)
+References: <CAJF3sop-aDuUoQYXYnTWfDKyFy_-W+MoBE8t4tqBJ5RNtAQmgQ@mail.gmail.com>
+In-Reply-To: <CAJF3sop-aDuUoQYXYnTWfDKyFy_-W+MoBE8t4tqBJ5RNtAQmgQ@mail.gmail.com>
+X-Failed-Recipients: itsupport@snapdeal.com
+Message-ID: <001a1143c466b3381a0540b2dde4@google.com>
+Date: Mon, 07 Nov 2016 09:44:11 +0000
+Content-Type: text/plain; charset=UTF-8
+
+Hello digvijay@unicommerce.com,
+
+We're writing to let you know that the group you tried to contact (itsupport) may not exist, or you may not have permission to post messages to the group. A few more details on why you weren't able to post:
+
+ * You might have spelled or formatted the group name incorrectly.
+ * The owner of the group may have removed this group.
+ * You may need to join the group before receiving permission to post.
+ * This group may not be open to posting.
+
+If you have questions related to this or any other Google Group, visit the Help Center at https://support.google.com/a/snapdeal.com/bin/topic.py?topic=25838.
+
+Thanks,
+
+snapdeal.com admins
+
+
+
+----- Original message -----
+
+X-Received: by 10.200.52.138 with SMTP id w10mr5515020qtb.49.1478511851294;
+        Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+Return-Path: <digvijay@unicommerce.com>
+Received: from mail-qt0-x229.google.com (mail-qt0-x229.google.com. [2607:f8b0:400d:c0d::229])
+        by mx.google.com with ESMTPS id 129si15491180qkg.268.2016.11.07.01.44.11
+        for <itsupport@snapdeal.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of digvijay@unicommerce.com) client-ip=2607:f8b0:400d:c0d::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::229 is neither permitted nor denied by best guess record for domain of digvijay@unicommerce.com) smtp.mailfrom=digvijay@unicommerce.com
+Received: by mail-qt0-x229.google.com with SMTP id c47so83534122qtc.2
+        for <itsupport@snapdeal.com>; Mon, 07 Nov 2016 01:44:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=b8LlNRIU+FGGRZ4HHGgR6qOARkSsw9ioyY6gmx4LgA8=;
+        b=KZ78ZBEUIN+jXYKAo0ZhRi1pktXzyOfB0ed/KIyEoenW6OJ6Npg+2p2YAMd/m5Dm99
+         OBkWjMHet7JWjQf834YziiRYGE23kWrsdxLwGluDlVToKSVMlMlQghOzsWckZjbCf/my
+         IoIUZ/8AblTnNW9OAH1YVyVqNDvRgJSsg+I4HFTDQUa02kwQJb4tJSZx4pfzp+/2x3vo
+         MT6B5tB2nqIRs1Th8kjmWFUqZFHIXY6WmYqi+ckDfK/Xzl28LhIx7y4+zSnysprZ2qXe
+         EfWdBIGFyLB2cTiF3vsr2NjHJqYkkjvfCExuAIqW3fgJt6+3+hDCdz0MWjScUR7Bb1Ec
+         WB0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=b8LlNRIU+FGGRZ4HHGgR6qOARkSsw9ioyY6gmx4LgA8=;
+        b=B7d6QqIob+8lT2NnSC9//kT2OcDoE+f8VchASdi3IVGuAj4Kh2Obk9clVHFISv6cmX
+         K8Xmo7eKiyU5kRIAXwdVjfWT3Wy7M9PUjiE8mbPP6cc5J2L8+/GLkyr5VxvNcXjV7wcO
+         wfwfWLunF5nzNCaKr4RLYDf9oYTfm1LbawT/X3qoR3Gzf8lCkpj2sFcHL+lrCFP/kQ3v
+         Gp9EAwHWv8ON/al3cTHoLTWgCA1murUiQehnTU8J7V5wx4QC1tHfCBsfJVRnnJL41cll
+         xggCsYb9xEE/WPIGS78yzKLVKt2LI+/zc6ZxrtTN7fgDt1M6AiFB8gzQazxVn04o66Tb
+         z6jA==
+X-Gm-Message-State: ABUngvclYXR9LTRhWgbP83t3H0acd3vIV7Oex9kfSYYTG4OLCn09Ki7x07WKFeQMNBU8Xc0/S8avseiTw0Ik6w==
+X-Received: by 10.200.49.165 with SMTP id h34mr5909386qte.43.1478511850942;
+ Mon, 07 Nov 2016 01:44:10 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.140.89.71 with HTTP; Mon, 7 Nov 2016 01:44:10 -0800 (PST)
+From: Digvijay Sharma <digvijay@unicommerce.com>
+Date: Mon, 7 Nov 2016 15:14:10 +0530
+Message-ID: <CAJF3sop-aDuUoQYXYnTWfDKyFy_-W+MoBE8t4tqBJ5RNtAQmgQ@mail.gmail.com>
+Subject: Request For Access Card
+To: itsupport@snapdeal.com
+Content-Type: multipart/alternative; boundary=001a11c10850ac42370540b2dd75
+
+Sir,
+This is digvijay sharma from Unicommerce team employee id= 10497.
+I wanted to request you to make me a new access card.
+Thank You

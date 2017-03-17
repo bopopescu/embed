@@ -1,0 +1,69 @@
+MIME-Version: 1.0
+Received: by 10.140.89.71 with HTTP; Mon, 7 Nov 2016 23:55:34 -0800 (PST)
+Date: Tue, 8 Nov 2016 13:25:34 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soo3J53TrRbr=ZpdhsANinvSVQASWmwcHoFoxMvp+fVeJg@mail.gmail.com>
+Subject: Request for Script Version Cron
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a113ac4be16ba540540c57744
+
+--001a113ac4be16ba540540c57744
+Content-Type: multipart/alternative; boundary=001a113ac4be16ba440540c57742
+
+--001a113ac4be16ba440540c57742
+Content-Type: text/plain; charset=UTF-8
+
+0 0 * * * ~/reports/scriptVersionReport.sh
+
+Please run this script on mongoCommon2Replica when it is up.
+
+--001a113ac4be16ba440540c57742
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr">
+
+
+
+
+
+
+
+<p class="gmail-p1"><span class="gmail-s1">0 0 * * * ~/reports/scriptVersionReport.sh</span></p><p class="gmail-p1">Please run this script on mongoCommon2Replica when it is up.</p><p class="gmail-p1"><br></p><p class="gmail-p1"><br></p></div>
+
+--001a113ac4be16ba440540c57742--
+--001a113ac4be16ba540540c57744
+Content-Type: application/x-javascript; name="scriptVersionReport.js"
+Content-Disposition: attachment; filename="scriptVersionReport.js"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_iv978n4h0
+
+dmFyIGN1cnJlbnREYXRlID0gbmV3IERhdGUoKTsKY3VycmVudERhdGUuc2V0SG91cnMoMCwgMCwg
+MCwgMCk7CnZhciBwcmV2aW91c0RhdGUgPSBuZXcgRGF0ZSgpOwpwcmV2aW91c0RhdGUuc2V0RGF0
+ZShuZXcgRGF0ZSgpLmdldERhdGUoKSAtIDUwKTsKcHJldmlvdXNEYXRlLnNldEhvdXJzKDAsIDAs
+IDAsIDApOwoKdmFyIHNjcmlwdHMgPSBkYi51bml3YXJlU2NyaXB0LmZpbmQoeyJjcmVhdGVkIjog
+eyRndDogcHJldmlvdXNEYXRlLCAkbHQ6IGN1cnJlbnREYXRlfX0pLnNvcnQoeyJjcmVhdGVkIjog
+LTF9KTsKdmFyIGRhdGEgPSIiOwpkYXRhID0gZGF0YSArICI8dGFibGUgc3R5bGU9XCJ3aWR0aDox
+MDAlO1wiIGJvcmRlcj1cIjFcIj4iOwpkYXRhID0gZGF0YSArICI8dHI+PHRoPk5hbWUgb2YgU2Ny
+aXB0PC90aD48dGg+VmVyc2lvbjwvdGg+PHRoPkNvbW1lbnRzPC90aD48dGg+Q3JlYXRlZCBCeTwv
+dGg+PC90cj4iOwpmb3IgKGogPSAwOyBqIDwgc2NyaXB0cy5zaXplKCk7IGorKykgewogIHZhciBz
+Y3JpcHQgPSBzY3JpcHRzW2pdOwogIGRhdGEgPSBkYXRhICsgIjx0cj4iOwogIGRhdGEgPSBkYXRh
+ICsgIjx0ZD4iICsgc2NyaXB0Lm5hbWUgKyAiPC90ZD4iOwogIGRhdGEgPSBkYXRhICsgIjx0ZD4i
+ICsgc2NyaXB0LnZlcnNpb24gKyAiPC90ZD4iOwogIGRhdGEgPSBkYXRhICsgIjx0ZD4iICsgc2Ny
+aXB0LmNvbW1lbnRzICsgIjwvdGQ+IjsKICBkYXRhID0gZGF0YSArICI8dGQ+IiArIHNjcmlwdC5j
+cmVhdGVkQnkgKyAiPC90ZD4iOwogIGRhdGEgPSBkYXRhICsgIjwvdHI+IjsKfQpkYXRhID0gZGF0
+YSArICI8L3RhYmxlPiI7CgpwcmludChkYXRhKTsK
+--001a113ac4be16ba540540c57744
+Content-Type: application/x-sh; name="scriptVersionReport.sh"
+Content-Disposition: attachment; filename="scriptVersionReport.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_iv97bux31
+
+bW9uZ28gbW9uZ28xLnRlc3QudW5pY29tbWVyY2UuaW5mcmEvdW5pd2FyZSB+L3JlcG9ydHMvc2Ny
+aXB0VmVyc2lvblJlcG9ydC5qcyB8IGdyZXAgLXYgY29ubmVjdGluZyB8IGdyZXAgLXYgTW9uZ28g
+PiB+L3JlcG9ydHMvc2NyaXB0VmVyc2lvblJlcG9ydC5odG1sCm11dHQgLUYgfi8ubXV0dHJjIC1p
+IH4vcmVwb3J0cy9zY3JpcHRWZXJzaW9uUmVwb3J0Lmh0bWwgLXMgIiQoZWNobyAtZSAiVG9kYXlz
+IFNjcmlwdCBWZXJzaW9uIFJlcG9ydC0gYGRhdGUgLWQgJ3RvZGF5JyArJWQtJWItJVlgXG5Db250
+ZW50LVR5cGU6IHRleHQvaHRtbCIpIiAtLSBha3NoYXkuYWdhcndhbEB1bmljb21tZXJjZS5jb20g
+c3VubnlAdW5pY29tbWVyY2UuY29tCg==
+--001a113ac4be16ba540540c57744--

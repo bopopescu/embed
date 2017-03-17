@@ -1,0 +1,280 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Wed, 11 Jan 2017 05:34:12 -0800 (PST)
+In-Reply-To: <CAOzor=5O8Zzbz9cXPvR+maxv96KMv2oy0TtrDcOzYc+5bt59GA@mail.gmail.com>
+References: <CAO6BqLfvs=yVH5j-bCARkQSFvJei9HRWEmhp5zidS6yq5X5e+g@mail.gmail.com>
+	<CAJktTX4o3M7_1K_=11n7qaxej49qjX6vqBf8BX5YWNHvNj80vg@mail.gmail.com>
+	<CAOzor=7HTX2jX_L1ZCMgEgxhxQpEO5VpJ5FfkEKn6SDa-vgXHw@mail.gmail.com>
+	<CAJv2J3BDLfUhLjbJdEtaKb4SMZHFdS1QpcUe9G0au61=j8-qHA@mail.gmail.com>
+	<CAOzor=4wQRjGwsAeEnV72jToy+uPYi2f2CN5+d4vrgS4D5ONuw@mail.gmail.com>
+	<CAJv2J3BKSqvyDWZwsAxxo1gUHbezpOHpSc=Mx5qGVzddp6U62w@mail.gmail.com>
+	<CAOzor=7kdLBdYc6gBxwYZUOiV+t9b2Vp4PAoOv7UBLWhv2nWvw@mail.gmail.com>
+	<CAJv2J3DbwJc6-NEWtJA-Ctq2HE76ryhRF8JZ6wqaHULX5aAi5w@mail.gmail.com>
+	<CAJv2J3AFTRSuZ3jVuHJzr=rUCGTCLfA+j4jqy2+ef5D-PALUUg@mail.gmail.com>
+	<CAOzor=41OqgqW_QwFeNjzAA3TjqLHwBSLnLFYXBHdsDwjyUM9g@mail.gmail.com>
+	<CAKEHM652U7UVVDYEUdaZdRK1+uH9egScrcNe-D-nptYT7iDMDw@mail.gmail.com>
+	<CAOzor=6VSRgCwuwQ+Qf3h7VYZGX_r6Lo8ahQVahYc10d4-TPjA@mail.gmail.com>
+	<CAOzor=5O8Zzbz9cXPvR+maxv96KMv2oy0TtrDcOzYc+5bt59GA@mail.gmail.com>
+Date: Wed, 11 Jan 2017 19:04:12 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soocT-Q0-nuoEoTa4ittZwbJzvLyuwE19q4NA0ZbPnVJnQ@mail.gmail.com>
+Subject: Re: Reference to our interaction
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Ankur Gupta <ankur@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1139490403fa410545d1a85c
+
+--001a1139490403fa410545d1a85c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ankur,
+The consumer key and secret pair that you gave are not working and it shows
+:
+Request :
+
+curl https://www.fidesbox.com/wp-json/wc/v1/orders -u
+ck_e9c7f289f518b12c67f570e3c611798bf24a559e:cs_6bbdef52d4737cd4f02bfc4357f9=
+3d3dc31c10bd
+
+
+Response :
+{
+  "code": "woocommerce_rest_cannot_view",
+  "message": "Sorry, you cannot list resources.",
+  "data": {
+    "status": 401
+  }
+}
+I think when u generated these keys, maybe you did not give read and write
+access to the user for which you created the keys. Please check and
+confirm.
+
+On Wed, Jan 11, 2017 at 4:34 PM, Kapil Makhija <kapil@unicommerce.com>
+wrote:
+
+> FYI, possible API for inventory
+> ---------- Forwarded message ----------
+> From: Kapil Makhija <kapil@unicommerce.com>
+> Date: Wed, Aug 17, 2016 at 1:41 AM
+> Subject: Re: Reference to our interaction
+> To: Ankur Gupta <ankur@unicommerce.com>
+> Cc: Varad Singhal <varad@unicommerce.com>, Vibhu Garg <
+> vibhu@unicommerce.com>
+>
+>
+> Hi Ankur,
+>
+> In product, there is a variable stock_quantity, we will have to manage th=
+e
+> inventory using that. Please refer https://github.com/wooth
+> emes/woocommerce/issues/7673 this for further details.
+>
+> Regards,
+> Kapil Makhija
+>
+> On Tue, Aug 16, 2016 at 4:52 PM, Ankur Gupta <ankur@unicommerce.com>
+> wrote:
+>
+>> Hi kapil,
+>>
+>>
+>> Apis for order and products are available but inventory api is not
+>> available.
+>>
+>> So is there any POC from woocommerce ?
+>>
+>> On Sat, Aug 13, 2016 at 2:26 PM, Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>>> Hi Ankur,
+>>>
+>>> FYI, the API key details for Woocommerce. Please let me know if you nee=
+d
+>>> any further details to test Woocommerce.
+>>>
+>>> Regards,
+>>> Kapil Makhija
+>>> ---------- Forwarded message ----------
+>>> From: GadgetsNCases Retail <info@gadgetsncases.in>
+>>> Date: Sat, Aug 13, 2016 at 2:19 PM
+>>> Subject: Re: Reference to our interaction
+>>> To: Kapil Makhija <kapil@unicommerce.com>
+>>> Cc: Praveen K Nair <praveenknair1983@gmail.com>, Manish Gupta <
+>>> manish@unicommerce.com>, Rohit Singhal <rohitsingal1@gmail.com>
+>>>
+>>>
+>>> Hekki Kapil,
+>>>
+>>> As discussed couple of days ago, PFB the WooCommerce API details for my
+>>> store.  I'm sharing the woocommerece API Key & secret of my WebSite, wh=
+ich
+>>> is already *LIVE*.
+>>>
+>>> *Website URL:* https://www.fidesbox.com
+>>>
+>>> So, please make sure you confirm with me if you need to create any test
+>>> order & we can do it together on need basic.
+>>>
+>>> *Consumer Key:* ck_e9c7f289f518b12c67f570e3c611798bf24a559e
+>>> *Consumer Secret:* cs_6bbdef52d4737cd4f02bfc4357f93d3dc31c10bd=E2=80=8B
+>>>
+>>> =E2=80=8BPlease let me know if you're looking for any other information=
+.
+>>> Thanks!=E2=80=8B
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>
+>>
+>> --
+>> ANKUR
+>> M.8287780606
+>>
+>
+>
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888
+>
+>
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888
+>
+
+--001a1139490403fa410545d1a85c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Ankur,<div>The consumer key and secret pair that you ga=
+ve are not working and it shows :</div><div>Request :=C2=A0</div><div>
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">curl <a href=3D"https://www.=
+fidesbox.com/wp-json/wc/v1/orders">https://www.fidesbox.com/wp-json/wc/v1/o=
+rders</a> -u ck_e9c7f289f518b12c67f570e3c611798bf24a559e:cs_6bbdef52d4737cd=
+4f02bfc4357f93d3dc31c10bd</span></p><p class=3D"gmail-p1"><span class=3D"gm=
+ail-s1"><br></span></p><p class=3D"gmail-p1">Response :</p></div><div><div>=
+{</div><div>=C2=A0 &quot;code&quot;: &quot;woocommerce_rest_cannot_view&quo=
+t;,</div><div>=C2=A0 &quot;message&quot;: &quot;Sorry, you cannot list reso=
+urces.&quot;,</div><div>=C2=A0 &quot;data&quot;: {</div><div>=C2=A0 =C2=A0 =
+&quot;status&quot;: 401</div><div>=C2=A0 }</div><div>}</div></div><div>I th=
+ink when u generated these keys, maybe you did not give read and write acce=
+ss to the user for which you created the keys. Please check and confirm.=C2=
+=A0</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On=
+ Wed, Jan 11, 2017 at 4:34 PM, Kapil Makhija <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:kapil@unicommerce.com" target=3D"_blank">kapil@unicommerce.com</=
+a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0=
+ 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">FYI=
+, possible API for inventory<br><div class=3D"gmail_quote">---------- Forwa=
+rded message ----------<br>From: <b class=3D"gmail_sendername">Kapil Makhij=
+a</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:kapil@unicommerce.com" target=
+=3D"_blank">kapil@unicommerce.com</a>&gt;</span><br>Date: Wed, Aug 17, 2016=
+ at 1:41 AM<br>Subject: Re: Reference to our interaction<br>To: Ankur Gupta=
+ &lt;<a href=3D"mailto:ankur@unicommerce.com" target=3D"_blank">ankur@unico=
+mmerce.com</a>&gt;<br>Cc: Varad Singhal &lt;<a href=3D"mailto:varad@unicomm=
+erce.com" target=3D"_blank">varad@unicommerce.com</a>&gt;, Vibhu Garg &lt;<=
+a href=3D"mailto:vibhu@unicommerce.com" target=3D"_blank">vibhu@unicommerce=
+.com</a>&gt;<br><br><br><div dir=3D"ltr">Hi Ankur,<div><br></div><div>In pr=
+oduct, there is a variable stock_quantity, we will have to manage the inven=
+tory using that. Please refer=C2=A0<a href=3D"https://github.com/woothemes/=
+woocommerce/issues/7673" target=3D"_blank">https://github.com/wooth<wbr>eme=
+s/woocommerce/issues/7673</a> this for further details.</div><div><br></div=
+><div>Regards,</div><div>Kapil Makhija</div></div><div class=3D"gmail_extra=
+"><div><div class=3D"m_6938923186229785563h5"><br><div class=3D"gmail_quote=
+">On Tue, Aug 16, 2016 at 4:52 PM, Ankur Gupta <span dir=3D"ltr">&lt;<a hre=
+f=3D"mailto:ankur@unicommerce.com" target=3D"_blank">ankur@unicommerce.com<=
+/a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><d=
+iv style=3D"font-family:arial,helvetica,sans-serif">Hi kapil,</div><div sty=
+le=3D"font-family:arial,helvetica,sans-serif"><br></div><div style=3D"font-=
+family:arial,helvetica,sans-serif"><br></div><div style=3D"font-family:aria=
+l,helvetica,sans-serif">Apis for order and products are available but inven=
+tory api is not available.</div><div style=3D"font-family:arial,helvetica,s=
+ans-serif"><br></div><div style=3D"font-family:arial,helvetica,sans-serif">=
+So is there any POC from woocommerce ?</div></div><div class=3D"gmail_extra=
+"><div><div class=3D"m_6938923186229785563m_940183790295205336h5"><br><div =
+class=3D"gmail_quote">On Sat, Aug 13, 2016 at 2:26 PM, Kapil Makhija <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:kapil@unicommerce.com" target=3D"_blank">=
+kapil@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_q=
+uote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1e=
+x"><div dir=3D"ltr">Hi Ankur,<div><br></div><div>FYI, the API key details f=
+or Woocommerce. Please let me know if you need any further details to test =
+Woocommerce.</div><div><br></div><div>Regards,</div><div>Kapil Makhija<br><=
+div class=3D"gmail_quote"><span>---------- Forwarded message ----------<br>=
+From: <b class=3D"gmail_sendername">GadgetsNCases Retail</b> <span dir=3D"l=
+tr">&lt;<a href=3D"mailto:info@gadgetsncases.in" target=3D"_blank">info@gad=
+getsncases.in</a>&gt;</span><br>Date: Sat, Aug 13, 2016 at 2:19 PM<br>Subje=
+ct: Re: Reference to our interaction<br></span>To: Kapil Makhija &lt;<a hre=
+f=3D"mailto:kapil@unicommerce.com" target=3D"_blank">kapil@unicommerce.com<=
+/a>&gt;<br>Cc: Praveen K Nair &lt;<a href=3D"mailto:praveenknair1983@gmail.=
+com" target=3D"_blank">praveenknair1983@gmail.com</a>&gt;, Manish Gupta &lt=
+;<a href=3D"mailto:manish@unicommerce.com" target=3D"_blank">manish@unicomm=
+erce.com</a>&gt;, Rohit Singhal &lt;<a href=3D"mailto:rohitsingal1@gmail.co=
+m" target=3D"_blank">rohitsingal1@gmail.com</a>&gt;<br><br><br><div dir=3D"=
+ltr"><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif;font-siz=
+e:small">Hekki Kapil,</div><div style=3D"font-family:&quot;trebuchet ms&quo=
+t;,sans-serif;font-size:small"><br></div><div style=3D"font-family:&quot;tr=
+ebuchet ms&quot;,sans-serif;font-size:small">As discussed couple of days ag=
+o, PFB the WooCommerce API details for my store.=C2=A0 I&#39;m sharing the =
+woocommerece API Key &amp; secret of my WebSite, which is already <b><font =
+color=3D"#ff0000">LIVE</font></b>.</div><div style=3D"font-family:&quot;tre=
+buchet ms&quot;,sans-serif;font-size:small"><br></div><div style=3D"font-fa=
+mily:&quot;trebuchet ms&quot;,sans-serif;font-size:small"><div><b>Website U=
+RL:</b>=C2=A0<a href=3D"https://www.fidesbox.com" target=3D"_blank">https:/=
+/www.fidesbox.com</a></div><div><br></div></div><div style=3D"font-family:&=
+quot;trebuchet ms&quot;,sans-serif;font-size:small">So, please make sure yo=
+u confirm with me if you need to create any test order &amp; we can do it t=
+ogether on need basic.</div><div style=3D"font-family:&quot;trebuchet ms&qu=
+ot;,sans-serif;font-size:small"><br></div><div style=3D"font-family:&quot;t=
+rebuchet ms&quot;,sans-serif;font-size:small"><b>Consumer Key:</b>=C2=A0<sp=
+an style=3D"background-color:rgb(255,242,204)">ck_e9c7f289f518b12c67f570<wb=
+r>e3c611798bf24a559e</span></div><div style=3D"font-family:&quot;trebuchet =
+ms&quot;,sans-serif;font-size:small"><b>Consumer Secret:</b>=C2=A0<font col=
+or=3D"#000000" style=3D"background-color:rgb(255,242,204)">cs_6bbdef52d4737=
+cd4f02<wbr>bfc4357f93d3dc31c10bd</font>=E2=80=8B</div><div class=3D"gmail_e=
+xtra"><br></div><div class=3D"gmail_extra"><div style=3D"font-family:&quot;=
+trebuchet ms&quot;,sans-serif;font-size:small">=E2=80=8BPlease let me know =
+if you&#39;re looking for any other information.=C2=A0 Thanks!=E2=80=8B</di=
+v></div><div class=3D"gmail_extra"><br></div><div class=3D"gmail_extra"><sp=
+an><div><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><br><div><br></=
+div></div></div></div></div></div></div></div>
+<br></span><div><div><div class=3D"gmail_quote"><br></div></div></div></div=
+></div></div>
+</div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div></div></div><span c=
+lass=3D"m_6938923186229785563m_940183790295205336HOEnZb"><font color=3D"#88=
+8888">-- <br><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>=
+ANKUR<br></div>M.8287780606<span class=3D"HOEnZb"><font color=3D"#888888"><=
+br></font></span></div></div><span class=3D"HOEnZb"><font color=3D"#888888"=
+>
+</font></span></font></span></div><span class=3D"HOEnZb"><font color=3D"#88=
+8888">
+</font></span></blockquote></div><span class=3D"HOEnZb"><font color=3D"#888=
+888"><br><br clear=3D"all"><div><br></div></font></span></div></div><span c=
+lass=3D"HOEnZb"><font color=3D"#888888"><span>-- <br><div class=3D"m_693892=
+3186229785563m_940183790295205336gmail_signature" data-smartmail=3D"gmail_s=
+ignature"><div dir=3D"ltr">Kapil Makhija<div>Director, Strategy - Unicommer=
+ce</div><div>M: +91-9718470888</div></div></div>
+</span></font></span></div><span class=3D"HOEnZb"><font color=3D"#888888">
+</font></span></div><span class=3D"HOEnZb"><font color=3D"#888888"><br><br =
+clear=3D"all"><div><br></div>-- <br><div class=3D"m_6938923186229785563gmai=
+l_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Kapil Makh=
+ija<div>Director, Strategy - Unicommerce</div><div>M: +91-9718470888</div><=
+/div></div>
+</font></span></div>
+</blockquote></div><br></div>
+
+--001a1139490403fa410545d1a85c--

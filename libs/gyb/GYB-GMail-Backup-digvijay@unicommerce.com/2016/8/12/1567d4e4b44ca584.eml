@@ -1,0 +1,205 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp32030oic;
+        Thu, 11 Aug 2016 22:51:38 -0700 (PDT)
+X-Received: by 10.36.139.2 with SMTP id g2mr1073296ite.75.1470981098389;
+        Thu, 11 Aug 2016 22:51:38 -0700 (PDT)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o3.em.bitbucket.org (o3.em.bitbucket.org. [167.89.90.3])
+        by mx.google.com with ESMTPS id s8si1109361itd.87.2016.08.11.22.51.37
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Aug 2016 22:51:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) client-ip=167.89.90.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to; s=s1; 
+	bh=fdf8Jj4dksZe11oZWIla9xUR+0k=; b=nogCXohJZLnkW0GiYccKCbsVGo5+5
+	kk1L1cG4xC8i7vJ1wl4CzV1JyTfw82RJAYTOgZ9kj/2n+W9DUFyJCMJqUwAtZPz3
+	qVfenUpL4T8EtSci62y8j7Ao5bgahffK+r9dlf+746kXCADqGIpD9FT5PtrhmOsr
+	cuFCD7Bcav0g1o=
+Received: by filter0496p1mdw1.sendgrid.net with SMTP id filter0496p1mdw1.18174.57AD63E82
+        2016-08-12 05:51:36.0804142 +0000 UTC
+Received: from app-107.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0003p1iad1.sendgrid.net (SG) with ESMTP id 98vT9DzNTPejVlmRtRgfMA
+	for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 05:51:36.017 +0000 (UTC)
+Received: from app-107.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by app-107.ash1.bb-inf.net (Postfix) with ESMTP id DE92830333246
+	for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 05:51:35 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============3875936238821003990=="
+MIME-Version: 1.0
+Subject: [Bitbucket] SSH key added to digvijay095
+From: "Digvijay Sharma" <notifications-noreply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Fri, 12 Aug 2016 05:51:35 -0000
+Message-ID: <20160812055135.28248.36271@app-107.ash1.bb-inf.net>
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/saBhryxNFpgFY+KlhetQ2a3wuAPQ341c3p+s
+ eULL7tuCTp0B8PSAdZAb9iSnkuEbk5lXkMzHpqBxSlOG2ze6yUNQ8i+Xc8NvcKhHuOTDOKyf4KPUXM
+ MNc/OD4H1B7qDEjplw2+2cD2dffWk37ybrBiBAC00Z+vgmyGzdbpWJ6Cz9/y8j6mXbChl6Zaw0m650
+ 04ZKOyaVjMHHVhj1DeVA4y
+
+--===============3875936238821003990==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+An SSH key was added to account digvijay095:
+
+  ssh-rsa AAAAB3NzaC1yc2EA ... icom@unicoms-MacBook-Air-3.local
+
+Users with this key can access all of the repositories that digvijay095 can access.
+
+Manage SSH keys:
+
+  https://bitbucket.org/account/user/digvijay095/ssh-keys/
+
+
+--
+
+
+Disable notifications from your account settings:
+https://bitbucket.org/account/user/digvijay095/
+
+--===============3875936238821003990==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: 1px solid #cccccc; border-radius: 5px; padding: 20px">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    <td id="avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+                      
+                      <img width="32" height="32" alt="digvijay095" src="https://avatar-cdn.atlassian.com/9a0ad9399f1197ffc10d4f668d51516d?s=32&amp;ts=1470980752" style="border-radius: 3px">
+                      
+                    </td>
+                    <td id="content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+                      
+  <table style="width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td class="user-action" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+          <span>
+            
+              An SSH key was added to account <strong>digvijay095</strong>:
+            
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td class="markup-content" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 15px">
+          <pre style="margin: 10px 0 0 0; border: 1px solid #ccc; border-radius: 5px; background: #f5f5f5; padding: 10px">ssh-rsa AAAAB3NzaC1yc2EA ... icom@unicoms-MacBook-Air-3.local</pre>
+        </td>
+      </tr>
+      <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+      <tr>
+        <td colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+          
+            Users with this key can access all of the repositories
+            that <strong>digvijay095</strong> can access.
+          
+        </td>
+      </tr>
+      <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+    </tbody>
+  </table>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          
+  <tr>
+    <td class="actions" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0; border-top: 1px solid #cccccc; line-height: 1">
+      <a href="https://bitbucket.org/account/user/digvijay095/ssh-keys/" style="color: #3572b0; text-decoration: none">Manage SSH keys</a>
+    </td>
+  </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+          
+            
+              
+              <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/account/user/digvijay095/notifications/">Configure email notifications</a>
+            
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/370041202/a04f83bdbba62286632a1f488a6a806cb35346a5/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/c20507e550ca/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm5-2BdCgZ06RXLrzMvTnIhrTbWDHvJ4RMh59EtjK5oKsZeBIqZTjMXsKCbG5MrYgbi2kEMNAAcGbJN2A5yfFse4VC68vZt9YkeHsgec2i3estrUWk42RMnN-2BYm-2BtDLbta2eaQ-2Fao2nmgbQDWp3CLgfkA14AvlO1H7wQExGRVG9dcUZvBL9HNog2WwI9VC6JZcvsc-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============3875936238821003990==--

@@ -1,0 +1,62 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1026200qge;
+        Mon, 7 Nov 2016 05:16:29 -0800 (PST)
+X-Received: by 10.99.173.3 with SMTP id g3mr10718748pgf.12.1478524589929;
+        Mon, 07 Nov 2016 05:16:29 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id 73si5091410pfw.55.2016.11.07.05.16.29
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 05:16:29 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uA7DGSiO003760;
+	Mon, 7 Nov 2016 18:46:28 +0530
+Date: Mon, 7 Nov 2016 13:16:28 +0000 (UTC)
+From: build@unicommerce.com
+To: devops@unicommerce.com, sunny@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, digvijay@unicommerce.com
+Message-ID: <562295285.17.1478524588213.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1133465677.14.1478516785996.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1133465677.14.1478516785996.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #1924
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/Uniware/1924/changes>
+
+Changes:
+
+[digvijay] Channel Recovery Breakup Fixed
+
+[digvijay] Zero values handled in sheet
+
+[digvijay] EMI Charges removed from Financial Breakup
+
+------------------------------------------
+Started by an SCM change
+Building in workspace <http://jenkins.unicommerce.com:8080/job/Uniware/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git -c core.askpass=true fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 2b2fe0d4886ce84e1ca97e4d2bce28a2502c9e61 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2b2fe0d4886ce84e1ca97e4d2bce28a2502c9e61
+ > git rev-list 54c02e483fa8a635fa70f4cda9ea60ddcdaddb32 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3855 completed. Result was FAILURE
+Build step 'Trigger/call builds on other projects' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #1903

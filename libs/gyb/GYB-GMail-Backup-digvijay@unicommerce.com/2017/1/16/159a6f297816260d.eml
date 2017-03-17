@@ -1,0 +1,80 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Mon, 16 Jan 2017 03:03:53 -0800 (PST)
+In-Reply-To: <CAJF3soqi8i1cJQzg0d+KUjfV3S6+PtHdq_S9QMTV+MQDWk5o1Q@mail.gmail.com>
+References: <CAJF3soqi8i1cJQzg0d+KUjfV3S6+PtHdq_S9QMTV+MQDWk5o1Q@mail.gmail.com>
+Date: Mon, 16 Jan 2017 16:33:53 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soragq3OxLxRVCNT=+J-4p8Lf4+pVoYh_d7breaGgQ8G9g@mail.gmail.com>
+Subject: Fwd: Prod Build
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: devops@unicommerce.com
+Content-Type: multipart/mixed; boundary=001a11392a269bbe9f05463423e1
+
+--001a11392a269bbe9f05463423e1
+Content-Type: multipart/alternative; boundary=001a11392a269bbe8f05463423df
+
+--001a11392a269bbe8f05463423df
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: Digvijay Sharma <digvijay@unicommerce.com>
+Date: Fri, Jan 13, 2017 at 3:21 PM
+Subject: Prod Build
+To: Sunny Agarwal <sunny@unicommerce.com>
+
+
+Please help with the following changes for Wormhole and Uniware Production
+ :
+
+1. Moving tomcat to 8.0.15 alongwith corresponding changes in catalina.sh
+and server.xml
+2. Moving Java to java 8
+3. Changing build script to fetch from bitbucket for Unifier,
+UniwareCommon, Uniware                  ,Wormhole.
+4. Changing build configuration for wormhole to use Unifier, Uniwarecommon
+instead of the        Unifier7 , UniwareCommon7 versions.
+5. Running the Mysql and Mongo queries mentioned in the single attached
+file.
+6. Building Wormhole Production.
+
+--001a11392a269bbe8f05463423df
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Digvijay Sharma</b> <sp=
+an dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com">digvijay@uni=
+commerce.com</a>&gt;</span><br>Date: Fri, Jan 13, 2017 at 3:21 PM<br>Subjec=
+t: Prod Build<br>To: Sunny Agarwal &lt;<a href=3D"mailto:sunny@unicommerce.=
+com">sunny@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr">Please help =
+with the following changes for Wormhole and Uniware Production =C2=A0:<div>=
+<br></div><div>1. Moving tomcat to 8.0.15 alongwith corresponding changes i=
+n catalina.sh and server.xml</div><div>2. Moving Java to java 8=C2=A0</div>=
+<div>3. Changing build script to fetch from bitbucket for Unifier, UniwareC=
+ommon, Uniware =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0,Wormhole.</div><div>4. Changing build configuration for wormhole to use=
+ Unifier, Uniwarecommon instead of the =C2=A0 =C2=A0 =C2=A0 =C2=A0Unifier7 =
+, UniwareCommon7 versions.</div><div>5. Running the Mysql and Mongo queries=
+ mentioned in the single attached file.</div><div>6. Building Wormhole Prod=
+uction.</div></div>
+</div><br></div>
+
+--001a11392a269bbe8f05463423df--
+--001a11392a269bbe9f05463423e1
+Content-Type: application/octet-stream; 
+	name="Cloud_DB_QUERY + ROLE_ACTIVATE"
+Content-Disposition: attachment; filename="Cloud_DB_QUERY + ROLE_ACTIVATE"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_ixvmfaq40
+
+Cldvcm1ob2xlIE15U3FsIFF1ZXJ5IDoKCnVzZSB1bmljb21tZXJjZTsKaW5zZXJ0IGludG8gcm9s
+ZSB2YWx1ZXMobnVsbCwnQUNUSVZBVEVfVEVOQU5UJywnYWN0aXZhdGUnLE5VTEwsMCxOT1coKSxO
+T1coKSk7CgoKCgoKTW9uZ29Db21tb24xIFF1ZXJ5IDoKCmRiLnVuaXdhcmVTY3JpcHQudXBkYXRl
+KHt9LAogICAgICAgICAgICAgICAgICAgICAgICAgIHskc2V0IDogeyJlZGl0YWJsZUJ5Q3VzdG9t
+ZXJTdXBwb3J0IjpmYWxzZX19LAogICAgICAgICAgICAgICAgICAgICAgICAgIHt1cHNlcnQ6ZmFs
+c2UsCiAgICAgICAgICAgICAgICAgICAgICAgICAgbXVsdGk6dHJ1ZX0pCgogICAgICAgICAgICAg
+ICAgICAgICAgICAgIApkYi5jcmVhdGVDb2xsZWN0aW9uKCdjbG91ZFNlcnZlcnMnKTsKdmFyIHRl
+bmFudHMgPSAgZGIudGVuYW50UHJvZmlsZS5kaXN0aW5jdCgnc2VydmVyTmFtZScpOwp0ZW5hbnRz
+LmZvckVhY2goZnVuY3Rpb24odGVuYW50KSB7CgoJZGIuY2xvdWRTZXJ2ZXJzLmluc2VydCh7InNl
+cnZlck5hbWUiOnRlbmFudH0pOwkKfSk7Cg==
+--001a11392a269bbe9f05463423e1--

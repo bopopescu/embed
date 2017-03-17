@@ -1,0 +1,112 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1151263qge;
+        Thu, 10 Nov 2016 20:41:52 -0800 (PST)
+X-Received: by 10.194.14.105 with SMTP id o9mr7350448wjc.66.1478839312364;
+        Thu, 10 Nov 2016 20:41:52 -0800 (PST)
+Return-Path: <karan@unicommerce.com>
+Received: from mail-wm0-x22a.google.com (mail-wm0-x22a.google.com. [2a00:1450:400c:c09::22a])
+        by mx.google.com with ESMTPS id a79si9200876wmi.8.2016.11.10.20.41.52
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 20:41:52 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of karan@unicommerce.com) client-ip=2a00:1450:400c:c09::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::22a is neither permitted nor denied by best guess record for domain of karan@unicommerce.com) smtp.mailfrom=karan@unicommerce.com
+Received: by mail-wm0-x22a.google.com with SMTP id a197so405418190wmd.0
+        for <digvijay@unicommerce.com>; Thu, 10 Nov 2016 20:41:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=adG/4albF9n04p93Bye8Vs2/je2jKvbSLTCp5XEG9ic=;
+        b=jva3rxk5O2+86gHEDWk0/dfbDt885vL43LAO721VzDfSaCK10bvUXiW/wPqyY1ThWt
+         vt1UU9n2ANEA9S+ZEoVmqIGXYULHY9z1n3ZutIKGalcdIfY7Sn+LDmDl2sD0GVRv+vp0
+         ipday6fFlCJC4AbyH8WvtKcmBuAhwPVqnAboaejoJv6EdogqH+4YpnWXmZYnQFoBuNim
+         QJNrHNQfWSZPQ9UwraSUarvO2L2UkeuFROJ8yHEy5RY+Y9PvBTVgFWF5JvwS0m06SpWW
+         d8f/hGISjnnjsw+iL9mSWbAZz8uXtSBSh8b+uLIjIS+pzxmqha9tmLAkeGIB1FRoQ03P
+         B5bw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=adG/4albF9n04p93Bye8Vs2/je2jKvbSLTCp5XEG9ic=;
+        b=LCCJQ8HUycqNBkPiUtcUJ64HNF8m1S6d8QpJ/T/2U4p4AZkBTszN7hiKls3BeLdR97
+         1yY6sZrUKpzyabtPS6g9uXl/91Af9H7i4lkygLUfQIRDdxskqXhEFBU0JKb9MluiDe+g
+         4xc3oaKuY3f30CwQY6e0Ml8U/rfUgYz1B0x1YBO2KpktIpFaF9TvxwEJ4jjQf1ToIXYa
+         PPvREYnx7A/suFIt1aAztLyE1hMOimA2R5FO2kPa6JvJCGaE/ni/lSNd0kzQVr/xorWO
+         LxSwK+3UOM3ZwMRk1RiwAcZG0Vcf45OI1l7e5DkP5IbtQ0ZcsZSOTpmCBitGWOZjg7kf
+         DLYg==
+X-Gm-Message-State: ABUngve353JKGWP1cAl4xRDlV8x6j48179b7YEPFtt2XCN3Ve0FLaxWj7u6Qc0FBI2Imm34+qO9YL+OPFYqtZw==
+X-Received: by 10.194.83.166 with SMTP id r6mr7299247wjy.186.1478839311758;
+ Thu, 10 Nov 2016 20:41:51 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.194.253.97 with HTTP; Thu, 10 Nov 2016 20:41:51 -0800 (PST)
+In-Reply-To: <CAMuJ5=oCOuqF4euC-m=oKJGHegKoArV6GS_w6MruecFqUGj7DQ@mail.gmail.com>
+References: <CAMuJ5=oCOuqF4euC-m=oKJGHegKoArV6GS_w6MruecFqUGj7DQ@mail.gmail.com>
+From: Karan Gupta <karan@unicommerce.com>
+Date: Fri, 11 Nov 2016 10:11:51 +0530
+Message-ID: <CAN32ob2eDOrJ=39P1U-XNq_SD_U3AeM9afKx7wXiuz6qv2Svtg@mail.gmail.com>
+Subject: Re: yamini farewell contri
+To: Amit Dalal <amit.dalal@unicommerce.com>
+Cc: Rachit Sachdeva <rachit@unicommerce.com>, Ankit Bansal <ankit.bansal@unicommerce.com>, 
+	Ankur pratik <ankur.pratik@unicommerce.com>, Promil Bhardwaj <promil@unicommerce.com>, 
+	ashish <ashish@unicommerce.com>, vikas goyal <vikas@unicommerce.com>, 
+	Sonu Goel <sonu@unicommerce.com>, Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, 
+	Piyush Arora <piyush@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Garima Arora <garima@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Sushant Majumdar <sushant@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	vani verma <vani@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, puneet <puneet@unicommerce.com>, 
+	akshay kochhar <akshay@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Rishu Goyal <rishu@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=047d7bb0402cdb81c20540ff1bf2
+
+--047d7bb0402cdb81c20540ff1bf2
+Content-Type: text/plain; charset=UTF-8
+
+Please exclude me from this chain mail
+
+Regards
+Karan Gupta
+
+On Fri, Nov 11, 2016 at 10:06 AM, Amit Dalal <amit.dalal@unicommerce.com>
+wrote:
+
+> 19577/28 = 700
+>
+> bank transfer or paytm or freecharge.
+>
+> *Bank details:*
+> HDFC A/C Num: 12031050027117
+> Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,
+> State: HARYANA
+> District: GURGAON
+> Branch: GLOBAL BUSINESS PARK
+> IFSC Code: HDFC0001203
+> MICR Code: 110240182
+>
+
+--047d7bb0402cdb81c20540ff1bf2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Please exclude me from this chain mail</div><div class=3D"=
+gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_signature" data-sma=
+rtmail=3D"gmail_signature"><div dir=3D"ltr">Regards<div>Karan Gupta</div></=
+div></div></div>
+<br><div class=3D"gmail_quote">On Fri, Nov 11, 2016 at 10:06 AM, Amit Dalal=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:amit.dalal@unicommerce.com" target=
+=3D"_blank">amit.dalal@unicommerce.com</a>&gt;</span> wrote:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr">19577/28 =3D 700<br><br>bank transfer =
+or paytm or freecharge.<br><br><b><u>Bank details:</u></b><br>HDFC A/C Num:=
+ 12031050027117 <br>Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,<=
+br>State: HARYANA<br>District: GURGAON <br>Branch: GLOBAL BUSINESS PARK<br>=
+IFSC Code: HDFC0001203 <br>MICR Code: 110240182<br></div>
+</blockquote></div><br></div>
+
+--047d7bb0402cdb81c20540ff1bf2--

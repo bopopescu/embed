@@ -1,0 +1,175 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.242.3 with SMTP id j3csp14468ith;
+        Thu, 25 Aug 2016 22:46:53 -0700 (PDT)
+X-Received: by 10.98.24.194 with SMTP id 185mr2749989pfy.52.1472190413950;
+        Thu, 25 Aug 2016 22:46:53 -0700 (PDT)
+Return-Path: <bounces+3399158-ceba-digvijay=unicommerce.com@mail.getpostman.com>
+Received: from o1.mail.getpostman.com (o1.mail.getpostman.com. [167.89.76.141])
+        by mx.google.com with ESMTPS id t12si19414733pfj.221.2016.08.25.22.46.51
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Aug 2016 22:46:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+3399158-ceba-digvijay=unicommerce.com@mail.getpostman.com designates 167.89.76.141 as permitted sender) client-ip=167.89.76.141;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@getpostman.com;
+       spf=pass (google.com: domain of bounces+3399158-ceba-digvijay=unicommerce.com@mail.getpostman.com designates 167.89.76.141 as permitted sender) smtp.mailfrom=bounces+3399158-ceba-digvijay=unicommerce.com@mail.getpostman.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=getpostman.com; 
+	h=to:subject:from:reply-to:mime-version:content-type; s=s1; 
+	bh=TvN5P+AfVYSkhDsCEixJo1G1QFo=; b=HX4xjc1R5aRP4tAya7eupwqxSe6+V
+	tgrt+OQgzvydF1vL8/4hTJ22RSDwvfczeZ4vXZgzlcoKh4ZXZQhVGx359vO3CfUw
+	rZgrz5AUVm/tO3DW0/dLryzTuqX2vhxdPRrtJ5IWHATm9x7asIfQntyPfNgwGXVw
+	rglATPXHyxpzzA=
+Received: by filter0554p1mdw1.sendgrid.net with SMTP id filter0554p1mdw1.11054.57BFD7C540
+        2016-08-26 05:46:45.81609317 +0000 UTC
+Received: from getpostman.com (ec2-54-175-60-34.compute-1.amazonaws.com [54.175.60.34])
+	by ismtpd0004p1iad1.sendgrid.net (SG) with ESMTP id RVwlQuSDTTKIuxZni7C5Ag
+	for <digvijay@unicommerce.com>; Fri, 26 Aug 2016 05:46:45.700 +0000 (UTC)
+Received: by getpostman.com (Postfix, from userid 33)
+	id A48E1303C60C; Fri, 26 Aug 2016 05:46:45 +0000 (UTC)
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Subject: Welcome to Postman
+X-PHP-Originating-Script: 33:mail.php
+From: Postman Team <noreply@notifications.getpostman.com>
+Reply-To: help@getpostman.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+Message-Id: <20160826054645.A48E1303C60C@getpostman.com>
+Date: Fri, 26 Aug 2016 05:46:45 +0000 (UTC)
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/s5z7+W/A1+en/lXba/zMKTBp6KJydRXGJtc9
+ 2vkXpnozDX9UCegerZaV7AEU2N6lLh8fxyQSeJ2ONkBggVGR9IvQ1NgdL2zEun2q4gEVrZEGE5FLbd
+ wtdHHtjicgc2cPQV3CGFcHwPZmQQSP5VR3kXX35ZPSw6/3uFN/TiDfBqhiQUb2xIM4mEOSiWipqzqa
+ LWVPsqWWNsJLluedtOpRCF
+X-SG-ID: 8khUSqIJXW9+OQTkkmsqe3B9BWLITmhIr9C1lXDWRok=
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family: verdana, geneva, sans-serif;">
+  <head>
+    <!-- NAME: 1 COLUMN -->
+    <!--[if gte mso 15]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    
+  </head>
+  <body style="font-family: verdana, geneva, sans-serif; margin: 0; padding: 0; width: 100%; height: 100%;">
+    <center style="font-family: verdana, geneva, sans-serif;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="font-family: verdana, geneva, sans-serif; margin: 0; padding: 0; width: 100%; height: 100%;">
+        <tr style="font-family: verdana, geneva, sans-serif;">
+          <td align="center" valign="top" id="bodyCell" style="font-family: verdana, geneva, sans-serif; margin: 0; padding: 10px; width: 100%; height: 100%; border-top: 0;" width="100%" height="100%">
+            <!-- BEGIN TEMPLATE // -->
+            <!--[if gte mso 9]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px !important;">
+              <tr>
+                <td align="center" valign="top" width="600" style="width:600px;">
+                  <![endif]-->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="font-family: verdana, geneva, sans-serif; color: #5b5b5b; line-height: 150%; background-color: #fbfbfb; max-width: 600px !important;" bgcolor="#fbfbfb">
+  <tr style="font-family: verdana, geneva, sans-serif;">
+    <td valign="top" id="templateHeader" style="font-family: verdana, geneva, sans-serif; text-align: center; padding-bottom: 20px;" align="center">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: verdana, geneva, sans-serif;">
+        <tbody style="font-family: verdana, geneva, sans-serif;">
+          <tr style="font-family: verdana, geneva, sans-serif;">
+            <td valign="top" style="font-family: verdana, geneva, sans-serif;">
+              <div class="pm-mail-header" style="font-family: verdana, geneva, sans-serif; width: 100%; height: 100px; padding-top: 35px; background-repeat: no-repeat; background-position: center top;">
+                <img align="center" alt="" src="https://gallery.mailchimp.com/17bfc099b259d64db481dad0e/images/bd67583b-c350-407f-aa27-2b1d0dcb800c.png" width="286" style="font-family: verdana, geneva, sans-serif; width: 100%; max-width: 286px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr style="font-family: verdana, geneva, sans-serif;">
+    <td valign="top" id="templateBody" style="font-family: verdana, geneva, sans-serif; text-align: left; padding-top: 9px; padding-left: 18px; padding-right: 18px; padding-bottom: 64px;" align="left">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: verdana, geneva, sans-serif;">
+        <tbody style="font-family: verdana, geneva, sans-serif;">
+          <tr style="font-family: verdana, geneva, sans-serif;">
+            <td valign="top" style="font-family: verdana, geneva, sans-serif;">
+              <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: verdana, geneva, sans-serif;">
+                <tbody style="font-family: verdana, geneva, sans-serif;">
+                  <tr style="font-family: verdana, geneva, sans-serif;">
+                    <td valign="top" class="textContent" style="font-family: verdana, geneva, sans-serif; word-break: break-word;">
+                      <p style="font-family: verdana, geneva, sans-serif;">Hi there,</p>
+
+                      <p style="font-family: verdana, geneva, sans-serif;">Thanks for signing up for Postman. Here are some tips to speed up your workflow.</p>
+
+                      <h5 style="font-family: verdana, geneva, sans-serif; color: #808080; font-size: 14px; margin-top: 30px; font-weight: 600; line-height: 18px; margin-bottom: 20px;"><a class="light-link" href="http://links.getpostman.com/wf/click?upn=adLV3GOr9ek3RxS7Vo9JB-2FrnvEmP-2Bg7WfLNtPMCHQXzxP-2BkcY1WW0QJhm1ogeAKxbsi4-2B9XGUNGQHPh-2BO-2Fh-2B6A-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoS5FLczY-2FDvm6DFbobGTBQgkg7gz0t7TUNoOLu4tPZr2tT7xeDqhPBOiHtw5fbkkbJ5QSgPSD8qmmDVDpD0geiAT4A8vR9sdadXkQAWVwygVuws9yITpi-2FyjeVfob-2Flk0aFO6Ljn-2BXWRFd5AULZWxrhaF6-2FvulXL-2BgUPuE1ja7UqYdIm5JweP0YR81TDbXhYy1w-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: none; font-weight: 400; font-style: italic;">Save and group requests into collections</a></h5>
+                      <img src="https://gallery.mailchimp.com/17bfc099b259d64db481dad0e/images/1577b5a4-f52d-4360-b3ab-3c4e0fdd284d.png" style="font-family: verdana, geneva, sans-serif; width: 100%;">
+
+                      <h5 style="font-family: verdana, geneva, sans-serif; color: #808080; font-size: 14px; margin-top: 30px; font-weight: 600; line-height: 18px; margin-bottom: 20px;"><a class="light-link" href="http://links.getpostman.com/wf/click?upn=uhWHzvkzXgxDclehFQ2lCZZoP1POU4Mrk2N5GqpVSha8HIJROC5nQ6FSu8PysJgfGLBH-2FUeJ-2BnS-2B6NCZjPMK4w-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoS5F1NBaFnR4CtnvLa5U3nfN7VZZ-2BhA94a0L1QTN0oDNQBdwRZotaC8FeR-2FHBDl7rjwuUyKEcW4LRqbnVukMwanH37QiS4YcLZOwHFC7SPSOyMSHuQ3LFPfm533-2Fjcl5K9NVRRRa9QZ5CPSroVRnMENaPB2HtIuZvHdrDIA71cxoNDC62Mq-2FMZygzoyhlPNu90A-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: none; font-weight: 400; font-style: italic;">Supercharge requests by adding tests and scripts</a></h5>
+                      <img src="https://gallery.mailchimp.com/17bfc099b259d64db481dad0e/images/aa26aef3-43b3-422c-8c83-f2fd70299de6.png" style="font-family: verdana, geneva, sans-serif; width: 100%;">
+
+                      <h5 style="font-family: verdana, geneva, sans-serif; color: #808080; font-size: 14px; margin-top: 30px; font-weight: 600; line-height: 18px; margin-bottom: 20px;"><a class="light-link" href="http://links.getpostman.com/wf/click?upn=uhWHzvkzXgxDclehFQ2lCZZoP1POU4Mrk2N5GqpVShaJekdO95rB4k8j8Gpr8kNVrb8uXS5kqTB-2F0amZr6vg8A-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoSyv1BI2TYu0H6npo4mtFw4GwDRAGXokgaUU6U4Whc9KVI0DoCcwLMTRn0lFuavH41rmrtumTHRZwKpoOIkoeBtXRH-2Bi3f7wugyAIK4bNox7DWVdXNBtdcZYhUAC-2BqYsR2LvC9T8w-2FJ6sQ-2Fo12l6FRbijIk7QIWFuyQLWn-2B5OgAs112TPjpUDzFd3XFqfUNZOrg-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: none; font-weight: 400; font-style: italic;">Test collections in Postman's Runner or CLI</a></h5>
+                      <img src="https://gallery.mailchimp.com/17bfc099b259d64db481dad0e/images/4964bc17-4461-4b0f-a161-4b0d58ceabd0.png" style="font-family: verdana, geneva, sans-serif; width: 100%;">
+
+                      <p style="font-family: verdana, geneva, sans-serif;">Learn more about <a href="http://links.getpostman.com/wf/click?upn=adLV3GOr9ek3RxS7Vo9JB-2FrnvEmP-2Bg7WfLNtPMCHQXw-2Fjq5pJ9ZasPK1KBV7Keyu_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoS-2BXA9PSCk-2BEPyo7mh-2BLrcl-2BsP1UMcrLD88VEDPMhujDBz5EU-2F6BdMU51O1hyvCIzssJYnqzr9kBN4nwFZaJz41rod3vv6T-2Fi6DOTOHUNxT3v8AnPW7Zdn7jWT4lzJ3U6IbTosKSSyanCXZhijGGyFCh79bBY3yafaZDuuYcMhimFONhUKOtNYxV93FE9nnUBAA-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;">how collections can supercharge your workflow</a>. If you like, we'd love to get on a call to talk about advanced testing, workflows and <a href="http://links.getpostman.com/wf/click?upn=adLV3GOr9ek3RxS7Vo9JB-2FrnvEmP-2Bg7WfLNtPMCHQXz9CoZTS6RANscd-2F6j-2BTdNZ_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoS1uaGjcqWOXyvrmUoKnr5vMc6B2Zdlc8HAm1vTjLczOjbJiDcHeeslJYkpYEXZpYEbEAsAeQ3QpfQ2tCdgcX3H2bnPyImMnkqr6T4wKFl2JyRDmsw20tTnIE6bju8iBVThsmAFGCeFn-2F1Pj1GQharcLQGzKB5SJVyamsari38RJV-2B9xbtrNWrYJv2Ijo-2BbKuWg-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;">integration</a> features. Schedule a time with us <a href="http://links.getpostman.com/wf/click?upn=adLV3GOr9ek3RxS7Vo9JB-2FrnvEmP-2Bg7WfLNtPMCHQXxCzci-2BHHyn167sphtTmO5N_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoS9tprEVLalqCOxTd0xnVjQ9t10og8NLCS-2BLlsG-2FtTZZOh2t4iy1Ii7w17uB0-2FcgyofcxQlsUt8SRle51ZUMVZanrBsF3l7lcG2hR1rxR-2BR5jR6IbU39d79lUYkwwLSf2ZvKzZMcTh7HZvHHqKeQ-2FISowvAZP-2BpQVtBGReOupNpj9q03lKnbjxhUZXpcFPugJmA-3D-3D" style="font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;">here</a>.</p>
+
+                      <p style="font-family: verdana, geneva, sans-serif;">
+                        Thanks so much,<br style="font-family: verdana, geneva, sans-serif;">
+                        The Postman Team
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr style="font-family: verdana, geneva, sans-serif;">
+    <td valign="top" id="templateFooter" style="font-family: verdana, geneva, sans-serif; line-height: 150%; padding-top: 30px; padding-left: 18px; padding-right: 18px; padding-bottom: 30px; text-align: left; border-bottom: 0; background-color: #ededed; color: #808080; font-size: 10px; border-top: 0;" align="left" bgcolor="#ededed">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: verdana, geneva, sans-serif;">
+        <tbody style="font-family: verdana, geneva, sans-serif;">
+          <tr style="font-family: verdana, geneva, sans-serif;">
+            <td valign="top" style="font-family: verdana, geneva, sans-serif;">
+              <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: verdana, geneva, sans-serif;">
+                <tbody style="font-family: verdana, geneva, sans-serif;">
+                  <tr style="font-family: verdana, geneva, sans-serif;">
+                    <td valign="top" class="textContent" style="font-family: verdana, geneva, sans-serif; word-break: break-word;">
+                      <div style="font-family: verdana, geneva, sans-serif;">
+                        <em style="font-family: verdana, geneva, sans-serif; font-style: italic;">Copyright &copy; 2016 Postdot Technologies Inc., All Rights Reserved.</em>
+                        <br style="font-family: verdana, geneva, sans-serif;">
+                        <br style="font-family: verdana, geneva, sans-serif;">
+                        <strong style="font-family: verdana, geneva, sans-serif;">Our mailing address is:</strong>
+                        <br style="font-family: verdana, geneva, sans-serif;">
+                        Postdot Technologies, 2200 Sand Hill Rd., #230, Menlo Park, CA 94025
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+</table>
+                  <!--[if gte mso 9]>
+                </td>
+              </tr>
+            </table>
+            <![endif]-->
+            <!-- // END TEMPLATE -->
+          </td>
+        </tr>
+      </table>
+    </center>
+  
+<img src="http://links.getpostman.com/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm4Tl0xO-2Bmyr5uh-2BDtd29dnQTBzY5-2B-2FFg4372LakhtgoSxkIeu-2Be4YZe7vIRNCg-2BPBvE-2BiMsKTGMj-2FhsgjJl-2BDRj6LbsffYhbby1tYXJCKMnO-2BOjnKshQ6XCgpv2Npdl3KI7POIh-2B3-2FFt-2FjQH0JjkEb-2B4Fav59xgWUWBtC-2FO47Z2TuumuudkY1UkO-2FzWAqjVYDAzNJvCKsy8fqPICzlPdX7yavYiUNs5Swt9EFb7WgJ6MQ-3D-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+

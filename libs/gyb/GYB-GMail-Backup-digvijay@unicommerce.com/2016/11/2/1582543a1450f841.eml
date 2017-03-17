@@ -1,0 +1,626 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp311646qge;
+        Wed, 2 Nov 2016 06:38:59 -0700 (PDT)
+X-Received: by 10.107.160.20 with SMTP id j20mr4196528ioe.27.1478093939028;
+        Wed, 02 Nov 2016 06:38:59 -0700 (PDT)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id a188si21374756itd.73.2016.11.02.06.38.58
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 02 Nov 2016 06:38:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uA2DcudS012867;
+	Wed, 2 Nov 2016 19:08:56 +0530
+Date: Wed, 2 Nov 2016 19:08:56 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, ashish@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, digvijay@unicommerce.com
+Message-ID: <1906640772.93.1478093936722.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareStgEnterprise1 #413
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Jenkins-Job: UniwareStgEnterprise1
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/413/chan=
+ges>
+
+Changes:
+
+[digvijay] minor bug
+
+[digvijay] Minor bug
+
+[digvijay] minor bug
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Refactoring FK REcon
+
+[akshay.agarwal.js] flipkart order status sync fix
+
+[digvijay] Bigdecimal Orderitemvalue
+
+[akshay.agarwal.js] amazon reconciliation invoice detail script change
+
+[akshay.agarwal.js] reconciliation fixes
+
+------------------------------------------
+[...truncated 86 lines...]
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Uniwa=
+reServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareSer=
+vices ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 603 source files to <http://jenkins.unicommerce.com:8080/j=
+ob/UniwareStgEnterprise1/ws/UniwareServices/target/classes>
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws=
+/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentSer=
+viceImpl.java>: Some input files use or override a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws=
+/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentSer=
+viceImpl.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws=
+/UniwareServices/src/main/java/com/uniware/services/channel/impl/ChannelInv=
+entorySyncServiceImpl.java>: Some input files use unchecked or unsafe opera=
+tions.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws=
+/UniwareServices/src/main/java/com/uniware/services/channel/impl/ChannelInv=
+entorySyncServiceImpl.java>: Recompile with -Xlint:unchecked for details.
+[INFO]=20
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ UniwareServices ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, f=
+ail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/a=
+spectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+=09<unknown source file>:<no line information>
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/src/main/java/com/unifier/services/aspect/AuditLogAspect.java>:52
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect ha=
+s not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAsp=
+ect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/org/sp=
+ringframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj=
+>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareServices=
+ ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding =
+files
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareServices ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareServices ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ UniwareService=
+s ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, f=
+ail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/a=
+spectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+=09<unknown source file>:<no line information>
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect ha=
+s not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAsp=
+ect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edStaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.LockingAspect has n=
+ot been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/LockingAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.TransactionRollback=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/TransactionRollbackAsp=
+ect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.ShippingPackageCrea=
+tedAspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/ShippingPackageCreated=
+Aspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.MarkDirtyAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/MarkDirtyAspect.class>=
+:0
+
+[WARNING] advice defined in com.unifier.services.aspect.LogActivityAspect h=
+as not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/LogActivityAspect.clas=
+s>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/Uniwar=
+eServices/target/classes!com/unifier/services/aspect/AuditLogAspect.class>:=
+0
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/org/sp=
+ringframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj=
+>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareServic=
+es ---
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareServices ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/UniwareStgEnt=
+erprise1/ws/UniwareServices/target/UniwareServices-1.0.jar>
+[INFO]                                                                     =
+   =20
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Building UniwareWeb 1.0
+[INFO] --------------------------------------------------------------------=
+----
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been rel=
+ocated to commons-io:commons-io:jar:1.3.2
+[INFO]=20
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareWeb ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterpri=
+se1/ws/UniwareWeb/target>
+[INFO]=20
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (def=
+ault) @ UniwareWeb ---
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Uniwa=
+reWeb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareWeb=
+ ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 140 source files to <http://jenkins.unicommerce.com:8080/j=
+ob/UniwareStgEnterprise1/ws/UniwareWeb/target/classes>
+[INFO]=20
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ UniwareWeb ---
+[INFO] Configured Artifact: unicommerce:UnifierCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UnifierScraper:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCommonServices:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareServices:1.0:jar
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierCore/1.=
+0/UnifierCore-1.0.jar to <http://jenkins.unicommerce.com:8080/job/UniwareSt=
+gEnterprise1/ws/UniwareWeb/target/classes> with includes "" and excludes "M=
+ETA-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierScraper=
+/1.0/UnifierScraper-1.0.jar to <http://jenkins.unicommerce.com:8080/job/Uni=
+wareStgEnterprise1/ws/UniwareWeb/target/classes> with includes "" and exclu=
+des "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UniwareCommonS=
+ervices/1.0/UniwareCommonServices-1.0.jar to <http://jenkins.unicommerce.co=
+m:8080/job/UniwareStgEnterprise1/ws/UniwareWeb/target/classes> with include=
+s "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterpr=
+ise1/ws/UniwareCore/target/UniwareCore-1.0.jar> to <http://jenkins.unicomme=
+rce.com:8080/job/UniwareStgEnterprise1/ws/UniwareWeb/target/classes> with i=
+ncludes "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterpr=
+ise1/ws/UniwareServices/target/UniwareServices-1.0.jar> to <http://jenkins.=
+unicommerce.com:8080/job/UniwareStgEnterprise1/ws/UniwareWeb/target/classes=
+> with includes "" and excludes "META-INF/**"
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareWeb ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareWeb ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareWeb --=
+-
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ UniwareWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [UniwareWeb] in [<http://jenkins.unicommerce.com:8=
+080/job/UniwareStgEnterprise1/ws/UniwareWeb/target/uniware-web]>
+[INFO] Processing war project
+[INFO] Copying webapp resources [<http://jenkins.unicommerce.com:8080/job/U=
+niwareStgEnterprise1/ws/UniwareWeb/src/main/webapp]>
+[INFO] Webapp assembled in [3115 msecs]
+[INFO] Building war: <http://jenkins.unicommerce.com:8080/job/UniwareStgEnt=
+erprise1/ws/UniwareWeb/target/uniware-web.war>
+[INFO]=20
+[INFO] --- yuicompressor-maven-plugin:1.2:compress (compress) @ UniwareWeb =
+---
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/js/jquery/jquery.=
+all.min.js>
+[INFO] jquery.all.min.js (630897b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/js/codemirror/cod=
+emirror.all.js>
+[INFO] codemirror.all.js (301732b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/js/codemirror/vel=
+ocity.all.js>
+[INFO] velocity.all.js (223830b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/js/unifier/unifie=
+r.all.js>
+[INFO] unifier.all.js (46277b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.ho=
+me.css>
+[INFO] ui.home.css (270417b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/css/codemirror/ui=
+.codemirror.all.css>
+[INFO] ui.codemirror.all.css (9467b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+areStgEnterprise1/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.lo=
+gin.css>
+[INFO] ui.login.css (177508b)
+[INFO] nb warnings: 0, nb errors: 0
+[INFO]=20
+[INFO] --- htmlcompressor-maven-plugin:1.3:html (htmlcompressor) @ UniwareW=
+eb ---
+[INFO] Compressing <http://jenkins.unicommerce.com:8080/job/UniwareStgEnter=
+prise1/ws/UniwareWeb/src/main/webapp/views>
+[INFO] HTML compression statistics:
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Category                    | Original                    | Compressed   =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Filesize                    | 13.0 kB                     | 12.8 kB      =
+               |=20
+| Empty Chars                 | 3045                        | 2895         =
+               |=20
+| Script Size                 | 10.9 kB                     | 10.9 kB      =
+               |=20
+| Style Size                  | 0 B                         | 0 B          =
+               |=20
+| Event Handler Size          | 0 B                         | 0 B          =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Time: 00:00:00, Preserved: 10.9 kB, Compression Ratio: 0.99, Savings: 1.1=
+6%             |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+
+[INFO] HTML compression completed.
+[INFO]=20
+[INFO] --- maven-antrun-plugin:1.7:run (run) @ UniwareWeb ---
+[INFO] Executing tasks
+
+main:
+     [echo] +---------------------------------------------------+
+     [echo]     copying war to tomcat server
+     [echo] +---------------------------------------------------+
+     [copy] Copying 7792 files to /var/lib/jenkins/release/UniwareStgEnterp=
+rise1/ROOT
+     [copy] Copied 609 empty directories to 1 empty directory under /var/li=
+b/jenkins/release/UniwareStgEnterprise1/ROOT
+[INFO] Executed tasks
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Reactor Summary:
+[INFO]=20
+[INFO] Uniware ............................................ SUCCESS [  0.18=
+2 s]
+[INFO] UniwareCore ........................................ SUCCESS [ 11.94=
+2 s]
+[INFO] UniwareServices .................................... SUCCESS [ 23.58=
+9 s]
+[INFO] UniwareWeb ......................................... SUCCESS [ 16.74=
+8 s]
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] BUILD SUCCESS
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Total time: 52.605 s
+[INFO] Finished at: 2016-11-02T19:08:51+05:30
+[INFO] Final Memory: 173M/599M
+[INFO] --------------------------------------------------------------------=
+----
+[UniwareStgEnterprise1] $ /bin/sh -xe /tmp/hudson7214342708117702147.sh
++ /var/lib/jenkins/scripts/SqlDeltaRemote StgEnterprise1 db.stgenterprise1.=
+test.unicommerce.infra UniwareStgEnterprise1
+Fetch Git tag
+fd1c868db995ba8d39201ee67a432a45329df67d
+Git diff
+Executing SQL Changes........................
+     1=09set autocommit=3D0;
+     2=09select "StartDeploying";
+     3=09-- insert ignore into access_pattern select null, id, '/data/recon=
+ciliation/orderReconciliationItems', now(), now() from access_resource wher=
+e name =3D 'CHANNEL_RECONCILIATION_VIEW';
+     4=09-- update user_datatable_view set config_json =3D '{\"resultsPerPa=
+ge\":25,\"columns\":[{\"name\":\"orderTransactionDate\"},{\"name\":\"reconc=
+iliationIdentifier\"},{\"name\":\"channelProductId\"},{\"name\":\"reconcili=
+ationIdentifier\"},{\"name\":\"channelCode\"},{\"name\":\"reconciliationSta=
+tus\"},{\"name\":\"orderAmount\"},{\"name\":\"settlementAmount\"},{\"name\"=
+:\"settlementPercentage\"}],\"filters\":[{\"id\":\"reconciliationStatusFilt=
+er\",\"selectedValues\":[\"AWAITING_PAYMENT\"]}],\"sortColumns\":[{\"column=
+\":\"orderTransactionDate\",\"descending\":true}]}\n'where datatable_type =
+=3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code in ('ALL_TRANSACTIO=
+NS','UNRECONCILED');
+     5=09-- update user_datatable_view set config_json =3D '{\"resultsPerPa=
+ge\":25,\"columns\":[{\"name\":\"orderTransactionDate\"},{\"name\":\"reconc=
+iliationIdentifier\"},{\"name\":\"channelProductId\"},{\"name\":\"reconcili=
+ationIdentifier\"},{\"name\":\"channelCode\"},{\"name\":\"reconciliationSta=
+tus\"},{\"name\":\"orderAmount\"},{\"name\":\"settlementAmount\"},{\"name\"=
+:\"settlementPercentage\"}],\"filters\":[{\"id\":\"reconciliationStatusFilt=
+er\",\"selectedValues\":[\"UNRECONCILED\"]}],\"sortColumns\":[{\"column\":\=
+"orderTransactionDate\",\"descending\":true}]}\n' where datatable_type =3D =
+'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'UNRECONCILED';
+     6=09-- update user_datatable_view set config_json =3D '{\"resultsPerPa=
+ge\":25,\"columns\":[{\"name\":\"orderTransactionDate\"},{\"name\":\"reconc=
+iliationIdentifier\"},{\"name\":\"channelProductId\"},{\"name\":\"reconcili=
+ationIdentifier\"},{\"name\":\"channelCode\"},{\"name\":\"reconciliationSta=
+tus\"},{\"name\":\"orderAmount\"},{\"name\":\"settlementAmount\"},{\"name\"=
+:\"settlementPercentage\"}],\"filters\":[],\"sortColumns\":[{\"column\":\"o=
+rderTransactionDate\",\"descending\":true}]}\n' where datatable_type =3D 'D=
+ATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSACTIONS';
+     7=09-- AkshayAg; fix multiple column entries in datatable
+     8=09update user_datatable_view set config_json =3D '{\"resultsPerPage\=
+":25,\"columns\":[{\"name\":\"orderTransactionDate\"},{\"name\":\"reconcili=
+ationIdentifier\"},{\"name\":\"channelProductId\"},{\"name\":\"channelCode\=
+"},{\"name\":\"reconciliationStatus\"},{\"name\":\"orderAmount\"},{\"name\"=
+:\"settlementAmount\"},{\"name\":\"settlementPercentage\"}],\"filters\":[{\=
+"id\":\"reconciliationStatusFilter\",\"selectedValues\":[\"UNRECONCILED\"]}=
+],\"sortColumns\":[{\"column\":\"orderTransactionDate\",\"descending\":true=
+}]}\n' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' =
+and code =3D 'UNRECONCILED';
+     9=09update user_datatable_view set config_json =3D '{\"resultsPerPage\=
+":25,\"columns\":[{\"name\":\"orderTransactionDate\"},{\"name\":\"reconcili=
+ationIdentifier\"},{\"name\":\"channelProductId\"},{\"name\":\"channelCode\=
+"},{\"name\":\"reconciliationStatus\"},{\"name\":\"orderAmount\"},{\"name\"=
+:\"settlementAmount\"},{\"name\":\"settlementPercentage\"}],\"filters\":[],=
+\"sortColumns\":[{\"column\":\"orderTransactionDate\",\"descending\":true}]=
+}\n' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' an=
+d code =3D 'ALL_TRANSACTIONS'
+    10=09-- done
+    11=09-- Akshay Ag; Update reconciledBy field in saleOrderReconciliation=
+ datatable
+    12=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"reconcili=
+ationIdentifier\" name=3D\"Order Item # (Order Id)\" value=3D\"#{#entity.re=
+conciliationIdentifier}\" width=3D\"130\" sortable=3D\"true\" align=3D\"lef=
+t\" calculated=3D\"true\" >\n            <clientTemplate><![CDATA[<a class=
+=3D\"link detailsPop\" href=3D\"/order/reconciliation\"><#=3Dobj.reconcilia=
+tionIdentifier#><br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<=
+#=3Dobj.channelSaleOrderCode#>)</span></a><input type=3D\"hidden\" class=3D=
+\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\"=
+ class=3D\"reconciliationIdentifier\" value=3D\"<#=3Dobj.reconciliationIden=
+tifier#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"=
+channelProductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductN=
+ame}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=
+=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sort=
+able=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n            <clien=
+tTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (ob=
+j.channelProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\=
+t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj=
+.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\=
+n        </column>\n        <column id=3D\"channelCode\" name=3D\"Channel\"=
+ value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" ali=
+gn=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliatio=
+nStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n     =
+   <column id=3D\"orderAmount\" name=3D\"Order Amount\" value=3D\"#{#entity=
+.items}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"  >\n            <clientTemplate><![CDATA[\n\t\t\t<div style=3D\=
+"float:left;padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text=
+-align:right\">\n\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t=
+\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;pa=
+dding:0 0 0 5px;\"><#\n\t\t\t\tvar itemsSize =3D obj.orderAmount.length;\n\=
+t\t\t \tvar amount =3D 0;\n\t\t\t \tvar shipping =3D 0;\n\t\t \t\tfor(var i=
+=3D0; i<itemsSize; i++) {\n\t\t\t\t\tamount =3D amount + obj.orderAmount[i]=
+.sellingPrice;\n\t\t\t\t\tshipping =3D shipping + obj.orderAmount[i].shippi=
+ngCharges;\n\t\t\t\t}\n\t\t\t\t#><#=3Damount#><br>\n\t\t\t\t<#=3Dshipping#>=
+\n\t\t\t</div>\n\t\t]]></clientTemplate>\n        </column>\n        <colum=
+n id=3D\"settlementAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entit=
+y.totalReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"lef=
+t\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[<a class=
+=3D\"link detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Do=
+bj.settlementAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" v=
+alue=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"channe=
+lSaleOrderItemCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode#>\"><input=
+ type=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.chan=
+nelSaleOrderCode#>\">]]></clientTemplate>\n        </column>\n        <colu=
+mn id=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entit=
+y.settlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"lef=
+t\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t=
+\tif (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float=
+:left;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:r=
+ight\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span=
+><#\n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPerc=
+entage >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-siz=
+e:11px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span=
+><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\=
+n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:b=
+old;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlement=
+Percentage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n=
+        </column>\n        <column id=3D\"reconciledBy\" name=3D\"Reconcile=
+d By\" value=3D\"#{#entity.reconciliedBy}\" width=3D\"120\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\n    <default=
+SortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate\", \"descend=
+ing\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n        <filter =
+id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=3D\"{\'criteri=
+a\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':\'#{#channelFil=
+ter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=
+=3D\"query:select c.code,c.name as name from channel c where c.tenant_id =
+=3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFilter\" name=
+=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'settlementPer=
+centage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlementPercentage=
+Filter}\'}}\" type=3D\"text\" attachToColumn=3D\"settlementPercentage\" />\=
+n        <filter id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconcili=
+ation Identifier Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconci=
+liationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIden=
+tifierFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdenti=
+fier\" />\n        <filter id=3D\"reconciliationStatusFilter\" name=3D\"Sta=
+tus\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'I=
+N\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multiselect\"=
+ values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, =
+DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE=
+\" attachToColumn=3D\"reconciliationStatus\" />\n        <filter id=3D\"cha=
+nnelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LI=
+KE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"text\" a=
+ttachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filter id=3D\"ord=
+erTransactionDateRange\" name=3D\"Order Transaction Date Range\" condition=
+=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operator\':\'BETWE=
+EN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"daterange\" a=
+ttachToColumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"channel=
+ProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'criteria\=
+':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#chan=
+nelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelProduct=
+Id\" />\n    </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANN=
+EL_PAYMENT_RECONCILIATION";
+    13=09-- done
+    14=09insert ignore into access_pattern select null, id, '/data/reconcil=
+iation/orderReconciliationItems', now(), now() from access_resource where n=
+ame =3D 'CHANNEL_RECONCILIATION_VIEW';
+    15=09update environment_property set value=3D'https://stgenterprise1.uc=
+dn.in' where name =3D'static.content.server.url';
+    16=09select "EndDeploying";
+    17=09commit;
+Importing sql queries....................
+*********** Checking SQL delta is executing on db.stgenterprise1.test.unico=
+mmerce.infra or not **************
+0
+ERROR 1064 (42000) at line 9: You have an error in your SQL syntax; check t=
+he manual that corresponds to your MySQL server version for the right synta=
+x to use near 'update export_job_type set export_job_config =3D '<?xml vers=
+ion=3D\"1.0\" encoding=3D\' at line 4
+Error Encountered on server Jenkins: SQL delta is not executed !!!
+Build step 'Execute shell' marked build as failure

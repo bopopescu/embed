@@ -1,0 +1,402 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Thu, 19 Jan 2017 03:39:57 -0800 (PST)
+Date: Thu, 19 Jan 2017 17:09:57 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soqep888x6NZdZkrUe1f9YiLSByfDRGpGuVHQ1-qnYBzHg@mail.gmail.com>
+Subject: Proposed structure for inventory
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1134e7e624aaf6054670fee8
+
+--001a1134e7e624aaf6054670fee8
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+PROPOSED STRUCTURE =E2=80=94>
+
+Lets make a common structure here.
+
+
+EXISTING UNIWARE ITEM TYPE INVENTORY =E2=80=94->
+
+quantity
+
+quantityBlocked
+
+quantityNotFound
+
+quantityDamaged
+
+quantityLost
+
+
+
+FLIPKART BREAKUP =E2=80=94>
+
+On Panel   :
+
+Available to Sell
+
+Unsellable
+
+Reserved
+
+In Processing
+
+
+API :
+
+{
+
+    "listingId": "LISTINGID",
+
+    "skuId": "SKUID",
+
+    "attributeValues": {
+
+        "listing_status": "ACTIVE",
+
+        "procurement_sla": 1,
+
+        "zonal_shipping_charge": 10,
+
+        "national_shipping_charge": 10,
+
+        "selling_price": 80,
+
+        "mrp": 100,
+
+        "stock_count": 1,
+
+        "local_shipping_charge": 10
+
+    }
+
+}
+
+
+
+SNAPDEAL BREAKUP =E2=80=94>
+
+
+On Panel  :
+
+*Current Warehouse Inventory*
+
+*Fulfillable Inventory*
+
+*Fulfillable Inventory*
+
+*QC Rejected Inventory*
+
+*Blocked Inventory*
+
+*Inbound Inventory*
+
+
+
+API  :
+
+{
+
+  "metadata": {
+
+    "requestId": "51dfe71d-78eb-4681-8a50-9616efe5cb8c",
+
+    "clientId": "partnerName",
+
+    "responseTime": 31,
+
+    "requestedURI": "GET /products/inventory/bulk"
+
+  },
+
+  "payload": [{
+
+    "supc": "SDL939142825",
+
+    "sellerSKU": "gens",
+
+    "availableInventory": 0,
+
+    "live": false,
+
+    "liveDisableMsg": "TEST ACCOUNT. Ticket #37232"
+
+}, {
+
+    "supc": "SDL939142826",
+
+    "sellerSKU": "gens",
+
+    "availableInventory": 0,
+
+    "live": false,
+
+    "liveDisableMsg": "TEST ACCOUNT. Ticket #37232"
+
+}]
+
+}
+
+
+
+AMAZON BREAKUP =E2=80=94>
+
+
+On Panel  :
+
+SKU
+
+Inbound Inventory
+
+Fulfillable Inventory
+
+Unfulfillable Inventory
+
+Reserved Inventory
+
+
+
+API   :
+
+<?xml version=3D"1.0"?>
+
+<ListInventorySupplyResponse xmlns=3D"
+http://mws.amazonaws.com/FulfillmentInventory/2010-10-01">
+
+    <ListInventorySupplyResult>
+
+        <InventorySupplyList>
+
+            <member>
+
+                <SellerSKU>SampleSKU1</SellerSKU>
+
+                <ASIN>B00000K3CQ</ASIN>
+
+                <TotalSupplyQuantity>20</TotalSupplyQuantity>
+
+                <FNSKU>X0000000FM</FNSKU>
+
+                <Condition>NewItem</Condition>
+
+                <SupplyDetail/>
+
+                <InStockSupplyQuantity>15</InStockSupplyQuantity>
+
+                <EarliestAvailability>
+
+                    <TimepointType>Immediately</TimepointType>
+
+                </EarliestAvailability>
+
+            </member>
+
+            <member>
+
+                <SellerSKU>SampleSKU2</SellerSKU>
+
+                <ASIN>B00004RWQR</ASIN>
+
+                <TotalSupplyQuantity>0</TotalSupplyQuantity>
+
+                <FNSKU>X00008FZR1</FNSKU>
+
+                <Condition>UsedLikeNew</Condition>
+
+                <SupplyDetail/>
+
+                <InStockSupplyQuantity>0</InStockSupplyQuantity>
+
+            </member>
+
+        </InventorySupplyList>
+
+    </ListInventorySupplyResult>
+
+    <ResponseMetadata>
+
+       <RequestId>e8698ffa-8e59-11df-9acb-230ae7a8b736</RequestId>
+
+    </ResponseMetadata>
+
+</ListInventorySupplyResponse>
+
+--001a1134e7e624aaf6054670fee8
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><font size=3D"6">PROPOSED STRUCTURE =E2=80=94&gt;</fo=
+nt></p>
+<p class=3D"gmail-p1">Lets make a common structure here.</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1"><font size=3D"6">EXISTING UNIWARE ITEM TYPE INVENTORY=
+ =E2=80=94-&gt;</font></p>
+<p class=3D"gmail-p1">quantity</p>
+<p class=3D"gmail-p1">quantityBlocked</p>
+<p class=3D"gmail-p1">quantityNotFound</p>
+<p class=3D"gmail-p1">quantityDamaged</p>
+<p class=3D"gmail-p1">quantityLost</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1"><font size=3D"6">FLIPKART BREAKUP =E2=80=94&gt;</font=
+></p><p class=3D"gmail-p1">On Panel =C2=A0 :</p>
+<p class=3D"gmail-p1">Available to Sell</p>
+<p class=3D"gmail-p1">Unsellable</p>
+<p class=3D"gmail-p1">Reserved</p>
+<p class=3D"gmail-p1">In Processing</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1">API :</p>
+<p class=3D"gmail-p1">{</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;listingId&quot;: &quot;LISTINGID&=
+quot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;skuId&quot;: &quot;SKUID&quot;,</=
+p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;attributeValues&quot;: {</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;listing_status&quot=
+;: &quot;ACTIVE&quot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;procurement_sla&quo=
+t;: 1,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;zonal_shipping_char=
+ge&quot;: 10,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;national_shipping_c=
+harge&quot;: 10,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;selling_price&quot;=
+: 80,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;mrp&quot;: 100,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;stock_count&quot;: =
+1,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;local_shipping_char=
+ge&quot;: 10</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 }</p>
+<p class=3D"gmail-p1">}</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1"><font size=3D"6">SNAPDEAL BREAKUP =E2=80=94&gt;</font=
+></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1">On Panel=C2=A0 :</p>
+<p class=3D"gmail-p1"><b>Current Warehouse Inventory</b></p>
+<p class=3D"gmail-p1"><b>Fulfillable Inventory</b></p>
+<p class=3D"gmail-p1"><b>Fulfillable Inventory</b></p>
+<p class=3D"gmail-p1"><b>QC Rejected Inventory</b></p>
+<p class=3D"gmail-p1"><b>Blocked Inventory</b></p>
+<p class=3D"gmail-p1"><b>Inbound Inventory</b></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1">API=C2=A0 :</p>
+<p class=3D"gmail-p1">{</p>
+<p class=3D"gmail-p1">=C2=A0 &quot;metadata&quot;: {</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;requestId&quot;: &quot;51dfe71d-7=
+8eb-4681-8a50-9616efe5cb8c&quot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;clientId&quot;: &quot;partnerName=
+&quot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;responseTime&quot;: 31,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;requestedURI&quot;: &quot;GET /pr=
+oducts/inventory/bulk&quot;</p>
+<p class=3D"gmail-p1">=C2=A0 },</p>
+<p class=3D"gmail-p1">=C2=A0 &quot;payload&quot;: [{</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;supc&quot;: &quot;SDL939142825&qu=
+ot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;sellerSKU&quot;: &quot;gens&quot;=
+,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;availableInventory&quot;: 0,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;live&quot;: false,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;liveDisableMsg&quot;: &quot;TEST =
+ACCOUNT. Ticket #37232&quot;</p>
+<p class=3D"gmail-p1">}, {</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;supc&quot;: &quot;SDL939142826&qu=
+ot;,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;sellerSKU&quot;: &quot;gens&quot;=
+,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;availableInventory&quot;: 0,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;live&quot;: false,</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &quot;liveDisableMsg&quot;: &quot;TEST =
+ACCOUNT. Ticket #37232&quot;</p>
+<p class=3D"gmail-p1">}]</p>
+<p class=3D"gmail-p1">}</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1"><font size=3D"6">AMAZON BREAKUP =E2=80=94&gt;</font><=
+/p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1">On Panel=C2=A0 :</p>
+<p class=3D"gmail-p1">SKU</p>
+<p class=3D"gmail-p1">Inbound Inventory</p>
+<p class=3D"gmail-p1">Fulfillable Inventory</p>
+<p class=3D"gmail-p1">Unfulfillable Inventory</p>
+<p class=3D"gmail-p1">Reserved Inventory</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p1">API =C2=A0 :</p>
+<p class=3D"gmail-p1">&lt;?xml version=3D&quot;1.0&quot;?&gt;</p>
+<p class=3D"gmail-p1">&lt;ListInventorySupplyResponse xmlns=3D&quot;<a href=
+=3D"http://mws.amazonaws.com/FulfillmentInventory/2010-10-01">http://mws.am=
+azonaws.com/FulfillmentInventory/2010-10-01</a>&quot;&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &lt;ListInventorySupplyResult&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;InventorySupplyList&g=
+t;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;member&=
+gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;SellerSKU&gt;SampleSKU1&lt;/SellerSKU&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;ASIN&gt;B00000K3CQ&lt;/ASIN&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;TotalSupplyQuantity&gt;20&lt;/TotalSupplyQuantity&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;FNSKU&gt;X0000000FM&lt;/FNSKU&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;Condition&gt;NewItem&lt;/Condition&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;SupplyDetail/&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;InStockSupplyQuantity&gt;15&lt;/InStockSupplyQuantity&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;EarliestAvailability&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &lt;TimepointType&gt;Immediately&lt;/TimepointType&gt;</p=
+>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;/EarliestAvailability&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/member=
+&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;member&=
+gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;SellerSKU&gt;SampleSKU2&lt;/SellerSKU&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;ASIN&gt;B00004RWQR&lt;/ASIN&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;TotalSupplyQuantity&gt;0&lt;/TotalSupplyQuantity&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;FNSKU&gt;X00008FZR1&lt;/FNSKU&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;Condition&gt;UsedLikeNew&lt;/Condition&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;SupplyDetail/&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &lt;InStockSupplyQuantity&gt;0&lt;/InStockSupplyQuantity&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/member=
+&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 =C2=A0 =C2=A0 &lt;/InventorySupplyList&=
+gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &lt;/ListInventorySupplyResult&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &lt;ResponseMetadata&gt;</p>
+<p class=3D"gmail-p1">=C2=A0=C2=A0 =C2=A0 =C2=A0 &lt;RequestId&gt;e8698ffa-=
+8e59-11df-9acb-230ae7a8b736&lt;/RequestId&gt;</p>
+<p class=3D"gmail-p1">=C2=A0 =C2=A0 &lt;/ResponseMetadata&gt;</p>
+<p class=3D"gmail-p1">&lt;/ListInventorySupplyResponse&gt;</p>
+<p class=3D"gmail-p2"><br></p>
+<p class=3D"gmail-p2"><br></p></div>
+
+--001a1134e7e624aaf6054670fee8--

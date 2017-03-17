@@ -1,0 +1,958 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp2742265qge;
+        Wed, 23 Nov 2016 03:50:06 -0800 (PST)
+X-Received: by 10.84.193.101 with SMTP id e92mr5861319pld.12.1479901806511;
+        Wed, 23 Nov 2016 03:50:06 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id g15si4838048pli.166.2016.11.23.03.50.05
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 23 Nov 2016 03:50:06 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uANBo4ot014721;
+	Wed, 23 Nov 2016 17:20:04 +0530
+Date: Wed, 23 Nov 2016 17:20:04 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, ashish@unicommerce.com,
+        piyush.arora.js@snapdeal.com, apple@apples-MacBook-Air-2.local,
+        akshay.agarwal.js@snapdeal.com, sunny@unicommerce.com,
+        bhuvneshwarkumar@Bhuvneshwars-MacBook-Air.local,
+        shipra.gupta.js@snapdeal.com, digvijay@unicommerce.com
+Message-ID: <1352800174.93.1479901804638.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareStgCloud1 #214
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareStgCloud1
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareStgCloud1/214/Changes:
+
+[sunny] fix log message and adding DisallowConcurrentExecution
+
+[sunny] make job queuing async
+
+[akshay.agarwal.js] imei not updated on flipkart bug fix while generating label
+
+[sunny] make config changes
+
+[sunny] remove unwanted logging
+
+[sunny] unprocessed order inventory on channel
+
+[sunny] unprocessed order inventory on channel - fix build
+
+[akshay.agarwal.js] seller sku fix in snapdeal catalog, Thread sleep of 1 sec in bulk price
+
+[sunny] Revert "unprocessed order inventory on channel - fix build"
+
+[sunny] Revert "unprocessed order inventory on channel"
+
+[sunny] unprocessed order inventory on channel via query
+
+[sunny] unprocessed order inventory on channel via query - bigdecimal to long
+
+[sunny] unprocessed order inventory on channel via query - biginteger to long
+
+[sunny] unprocessed order inventory on channel via query - populate in dto
+
+[akshay.agarwal.js] flipkart dispatch verification quantity fix
+
+[akshay.agarwal.js] flipkart dispatch verification quantity fix
+
+[sunny] get dashboards via replication
+
+[sunny] get dashboards via replication
+
+[sunny] get dashboards via replication - fix service
+
+[sunny] fix websocket NPE
+
+[sunny] catch cache dirty exception
+
+[sunny] set jms message id
+
+[sunny] revert dashboard
+
+[sunny] Revert "set jms message id"
+
+[sunny] Revert "catch cache dirty exception"
+
+[sunny] Revert "fix websocket NPE"
+
+[sunny] fixing errors
+
+[sunny] moving dashbaords to replica
+
+[sunny] Invoice number in shipment datatable
+
+[akshay.agarwal.js] Commit flipkart scripts which are live and moved to apis
+
+[akshay.agarwal.js] Commit flipkart scripts which are live and moved to apis
+
+[akshay.agarwal.js] flipkart order sync, order status sync moved to apis
+
+[sunny] TOL-109: added logging in export subscriber, removed polling from
+
+[sunny] TOL-109: set log routing key
+
+[sunny] TOL-109: added logging in export subscriber, removed polling from
+
+[sunny] TOL-109: set log routing key
+
+[sunny] TOL-109: fix failedOrderInventory
+
+[sunny] TOL-109: fix websocket error
+
+[sunny] TOL-109: fix websocket error
+
+[sunny] TOL-109: remove index
+
+[sunny] TOL-109: remove dashboard widget in user creation
+
+[sunny] TOL-109: setting up influxdb
+
+[sunny] TOL-109: setting up influxdb - adding tags
+
+[sunny] TOL-109: influx db reporter fix version
+
+[sunny] TOL-109: restore dashboards to main db
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendingOrdersOnly -
+
+[akshay.agarwal.js] Revert "Add log to check order status sync count for
+
+[sunny] TOL-109: add tags for influxdb
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendingOrdersOnly -
+
+[akshay.agarwal.js] Revert "Add log to check order status sync count for
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendingOrdersOnly -
+
+[sunny] TOL-109: restore dashboards to main db
+
+[sunny] TOL-109: add tags for influxdb
+
+[akshay.agarwal.js] Jabong SC sale order scripts commited after fixes
+
+[sunny] TOL-109: script fixes and restore picklist
+
+[akshay.agarwal.js] Top skus revenue in top channel dashboard, flipkart api scripts minor
+
+[akshay.agarwal.js] WORST_PERFORMING_PRODUCTS in dashboard
+
+[sunny] TOL-109: adding support to run for specific product types
+
+[sunny] Revert "TOL-109: adding support to run for specific product types"
+
+[sunny] TOL-109: adding support to run for specific product types - adding
+
+[sunny] TOL-109: adding support to run for specific product types - show job on
+
+[sunny] TOL-109: adding support to run for specific product types - fix if
+
+[digvijay] Snapdeal payment reconciliation scripts. Preprocessor, list, detail
+
+[digvijay] renamed snapdeal reconciliation detail script
+
+[digvijay] renamed snapdeal reconciliation detail script
+
+[akshay.agarwal.js] worst performing products scritp update
+
+[akshay.agarwal.js] flipkart order sync scrit update
+
+[sunny] TOL-109: fixing possible memory leak in ASyncScriptProcessor
+
+[sunny] TOL-109: fixing tenant specific jobs
+
+[sunny] TOL-109: fixing tenant specific jobs
+
+[akshay.agarwal.js] self shipping case handled in flipkart shipping provider allocation
+
+[sunny] TOL-109: dummy commit
+
+[digvijay] Flipkart Recon Scraping Refactored
+
+[digvijay] Flipkart Recon Scraping Refactored
+
+[digvijay] FlipkartReconciliationInvoiceListScriptCheck deleted
+
+[sunny] TOL-109: moving metrics dependency to unifier
+
+[digvijay] Final Reconciliation Scripts For Snapdeal And Flipkart
+
+[digvijay] Final Flipkart And Snapdeal Recon Scripts
+
+[akshay.agarwal.js] flipkart order sync script fixes
+
+[digvijay] Run Time For All Syncs Fixed
+
+[digvijay] Deleted duplicated log entry in channelorderstatussync
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[sagar] amazon reconcilation scripts
+
+[digvijay] FK and SD scripts
+
+[akshay.agarwal.js] Merge resolve
+
+[akshay.agarwal.js] Reconciliation Support
+
+[akshay.agarwal.js] moved to build_10.sql
+
+[akshay.agarwal.js] uncomment http tag in amazon invoice reconciliation script
+
+[akshay.agarwal.js] Reconciliation task fix
+
+[akshay.agarwal.js] create reconciliation invoice
+
+[sagar] amazon reconcilation scripts final changes
+
+[akshay.agarwal.js] lenght width in shipments datatable
+
+[akshay.agarwal.js] unreconcilied row scripts, minor refactoring
+
+[bhuvneshwar] snapdeal inventory script changes
+
+[akshay.agarwal.js] update last sync
+
+[akshay.agarwal.js] update last sync
+
+[akshay.agarwal.js] Flipkart order ID exponential convertion fix
+
+[akshay.agarwal.js] Merge conflicts
+
+[akshay.agarwal.js] Moving away from snapdeal open api for order status, Reconciliation
+
+[akshay.agarwal.js] orderItemId scientific format fix for flipkart
+
+[digvijay] Minor bugs in Status Sync Script
+
+[bhuvneshwar] snapdeal inventory script changes : pagination in feed result
+
+[akshay.agarwal.js] locking modified for reconciliation, noOfBoxes field added in datatable
+
+[akshay.agarwal.js] snapdeal reconciliation script updates
+
+[digvijay] Minor changes in recon list script
+
+[digvijay] reverting back
+
+[digvijay] reverting back 2
+
+[digvijay] Final bugs solved!
+
+[sagar] inventory sync formula at source
+
+[akshay.agarwal.js] amazon shippling lable script
+
+[akshay.agarwal.js] amazon shipping label fix, add channel error display fix
+
+[akshay.agarwal.js] amazon shippling lable script
+
+[akshay.agarwal.js] amazon shipping label fix, add channel error display fix
+
+[digvijay] DELETED THE SCRPAER-AWB FILE
+
+[akshay.agarwal.js] Resolve conflicts
+
+[akshay.agarwal.js] remove executor from reconciliation invoice sync, create unreconcilied
+
+[digvijay] Minor Bugs
+
+[sunny] TOL-109: adding pos.enabled property
+
+[sunny] TOL-109: servlet filter for http metrics
+
+[akshay.agarwal.js] sync status set as IDLE when connectors are broken
+
+[akshay.agarwal.js] update logs
+
+[akshay.agarwal.js] retry in down reconciliation file
+
+[akshay.agarwal.js] fixed
+
+[akshay.agarwal.js] testing async for reconciliation
+
+[akshay.agarwal.js] reconciliation fixes
+
+[akshay.agarwal.js] Snapdeal reconciliation fixes
+
+[sunny] TOL-109: use selling price as revenue
+
+[sunny] TOL-109: use default app identifier if not already present
+
+[sunny] TOL-109: add one more activemq connector bean
+
+[sunny] TOL-109: merge with prod
+
+[digvijay] Incorporated OrderId in Snapdeal Invoice
+
+[akshay.agarwal.js] additional info in reconciliation invoice item
+
+[akshay.agarwal.js] Edit package dimensions allowed for packed shipments
+
+[akshay.agarwal.js] Edit package dimensions allowed for packed shipments
+
+[digvijay] Refactored DB SnapdealRecoDetail Script
+
+[sunny] TOL-109: refactoring channel order sync & compute unprocessed order
+
+[akshay.agarwal.js] mark reconciliation disputed and reconcilied
+
+[akshay.agarwal.js] reconciliation changes
+
+[sagar] channel payment reconciliaton datatable
+
+[sunny] TOL-109: get bean via name
+
+[akshay.agarwal.js] query update
+
+[akshay.agarwal.js] reconciliation query
+
+[akshay.agarwal.js] reconciliation apis changes
+
+[akshay.agarwal.js] reconciliation indexes
+
+[akshay.agarwal.js] mark reconcilied api fix
+
+[akshay.agarwal.js] mark reconcilied api fix
+
+[akshay.agarwal.js] no of boxes greater than one error message
+
+[akshay.agarwal.js] no of boxes greater than one error message
+
+[akshay.agarwal.js] old apis return new object instead of null
+
+[akshay.agarwal.js] old apis return new object instead of null
+
+[akshay.agarwal.js] set context error in response message as wel
+
+[akshay.agarwal.js] set context error in response message as wel
+
+[sunny] TOL-109: minor refactoring
+
+[akshay.agarwal.js] reconciliation refactors
+
+[akshay.agarwal.js] awaiting payment in reconciliation
+
+[akshay.agarwal.js] npe fix
+
+[akshay.agarwal.js] npe fix
+
+[akshay.agarwal.js] reconciliation fix
+
+[sunny] TOL-109: minor refactoring, putting scripts in place
+
+[akshay.agarwal.js] reconciliation sync if structure scope corrected
+
+[akshay.agarwal.js] reconciliation fixes and datatable query added
+
+[akshay.agarwal.js] reconciliation pending true for new sale orders
+
+[akshay.agarwal.js] reconciliation pending true for new sale orders
+
+[akshay.agarwal.js] bug fix
+
+[sagar] default inventory update formula in SourceDetailDTO
+
+[akshay.agarwal.js] sync status reset method resets 3 more fields
+
+[akshay.agarwal.js] remove olp script
+
+[akshay.agarwal.js] reconciliation snapdeal invoice list script bug fix
+
+[akshay.agarwal.js] add loggin
+
+[digvijay] SD Recon Detail Script Changes
+
+[akshay.agarwal.js] create invoice if exists refactor
+
+[digvijay] Refactored SD List Script
+
+[akshay.agarwal.js] do not create unreconciled row for disabled channel
+
+[akshay.agarwal.js] snapdeal detail mongo query
+
+[akshay.agarwal.js] reconciliation fix
+
+[sunny] TOL-109: adding support for mr voonik
+
+[akshay.agarwal.js] queries update
+
+[akshay.agarwal.js] reconciliation datatables
+
+[sunny] TOL-109: null check for tenant profile
+
+[akshay.agarwal.js] amazon script update
+
+[sunny] TOL-109: null check for tenant profile
+
+[digvijay] Final SD Recon Scripts
+
+[digvijay] Final SD Recon Scripts
+
+[digvijay] commonMongo Minor Changes
+
+[akshay.agarwal.js] reconcilation pending false from new orders when reconciliation sync for
+
+[akshay.agarwal.js] remove login in paytm item type detail
+
+[akshay.agarwal.js] error logging in reconciliation
+
+[akshay.agarwal.js] npe fix
+
+[digvijay] FK RECON FINAL SCRIPTS
+
+[sunny] TOL-109: load all tenants in cache
+
+[sunny] TOL-109: submit async tasks to the executor
+
+[akshay.agarwal.js] log npe fix
+
+[akshay.agarwal.js] reconciliation access pattern query
+
+[akshay.agarwal.js] reconciliation access pattern query
+
+[sunny] TOL-109: fix class cast in unprocessed sale order count
+
+[sunny] TOL-109: NPE?
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] flipkart, snapdeal reconciliation script fixes
+
+[digvijay] Minor changes in Recon Scripts
+
+[digvijay] Recon DB Scripts Minor Changes
+
+[sunny] TOL-109: dont set irrocilable
+
+[sunny] Revert "TOL-109: submit async tasks to the executor"
+
+[akshay.agarwal.js] imporve mongo queries
+
+[sunny] TOL-109: set channel code instead of name, and shut down executor in
+
+[akshay.agarwal.js] DATATABLE_CHANNEL_PAYMENT_RECONCILIATION has reconciled percentage and
+
+[akshay.agarwal.js] DATATABLE_CHANNEL_PAYMENT_RECONCILIATION has reconciled percentage and
+
+[akshay.agarwal.js] shopify fetch cod order fix
+
+[sunny] TOL-109: voonik scripts and making lock service implementation thread
+
+[sunny] TOL-109: fix no-arg constructor error
+
+[sunny] TOL-109: fixing locking service bean error
+
+[sunny] TOL-109: fixing locking service bean error
+
+[akshay.agarwal.js] datatable shipments tab query
+
+[digvijay] FK RECON order date
+
+[akshay.agarwal.js] download url in reconciliation settlements
+
+[digvijay] FK RECON order date
+
+[digvijay] FK Recon Bug Fix
+
+[akshay.agarwal.js] reconciliation invoice datatables
+
+[digvijay] FK AND SD RECON FIXES
+
+[sunny] TOL-109: fix concurrent modification in influxdb and record http
+
+[digvijay] SD AND FK RECON Fixes
+
+[sunny] TOL-109: fix NPEs
+
+[sunny] TOL-109: add async supported
+
+[digvijay] Download URL Support for Recon
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] script and datatable update
+
+[akshay.agarwal.js] script and datatable update
+
+[akshay.agarwal.js] dashboard key duplicate error fix
+
+[akshay.agarwal.js] OAuthAccessToken Customizable removed
+
+[sunny] load eager caches while marking them dirty
+
+[digvijay] Minor bugs
+
+[digvijay] FINAL RECON FK AND SD
+
+[akshay.agarwal.js] datatable and views update, do not mark awaiting_payment if no new item
+
+[akshay.agarwal.js] recon datatable view order query
+
+[akshay.agarwal.js] recon datatable view order query
+
+[akshay.agarwal.js] mark unreconciled only if previously reconciled or disputed while create
+
+[akshay.agarwal.js] recon bug fix. dislay order code is not unique
+
+[akshay.agarwal.js] recon bug fix. dislay order code is not unique
+
+[akshay.agarwal.js] file download link in datatable channel payment reconciliation
+
+[digvijay] Pendency Bug Solved For mercntech
+
+[digvijay] RUN NOW happens immediately now
+
+[sunny] add customer name in api
+
+[akshay.agarwal.js] state regulatory forms
+
+[sunny] set appropriate formula code in channel inventory snapshot
+
+[akshay.agarwal.js] reconciliation changes
+
+[digvijay] Run Now With No Duplicated Code
+
+[digvijay] FK orderitemId level now!
+
+[akshay.agarwal.js] set data in reconciliation response api
+
+[akshay.agarwal.js] divide by zero fix
+
+[sunny] refactoring reconciliation to channel sale order item level
+
+[sunny] more refactoring to reconciliation
+
+[sunny] more refactoring to reconciliation
+
+[sunny] set reconciliation items
+
+[akshay.agarwal.js] minor npe handle
+
+[akshay.agarwal.js] reconciliation identifer is not hidden
+
+[akshay.agarwal.js] reconciliation refactorign
+
+[akshay.agarwal.js] datatable changes and fixes
+
+[akshay.agarwal.js] shipping method is string in reconciliation
+
+[akshay.agarwal.js] reconciliation changes
+
+[akshay.agarwal.js] datatable updates and queries
+
+[akshay.agarwal.js] amazon reconciliation invoice fix
+
+[akshay.agarwal.js] reconciliation refactoring
+
+[akshay.agarwal.js] datatable changes query
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] refactor get items api
+
+[akshay.agarwal.js] refactor get items api
+
+[akshay.agarwal.js] channel product name to id
+
+[akshay.agarwal.js] datatable query
+
+[akshay.agarwal.js] update amazon reconciliation script
+
+[akshay.agarwal.js] reconciliation dattatable update
+
+[akshay.agarwal.js] channelProduct name in unreconciled rows
+
+[akshay.agarwal.js] pagination fix while fetch reconciliation pending sale orders
+
+[akshay.agarwal.js] hide redundant columns in reconciliation datatable
+
+[akshay.agarwal.js] channel Product name added to unreconciled row datatable
+
+[akshay.agarwal.js] channel Product name added to unreconciled row datatable
+
+[sunny] allocateInventoryAndGenerateInvoice api
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - check for fulfillable
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - added more logging
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - fix typos
+
+[akshay.agarwal.js] moving to JDK 1.8
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] bcel moved to 6.1-SNAPSHOT
+
+[akshay.agarwal.js] binding info
+
+[akshay.agarwal.js] ant run plugin 1.7
+
+[akshay.agarwal.js] schemaBindingDirectory
+
+[sunny] running async script instruction for catalog sync in different thread
+
+[sunny] added logging for async inventory update
+
+[akshay.agarwal.js] datatable filters fixed
+
+[akshay.agarwal.js] datatable filters fixed
+
+[akshay.agarwal.js] Invoice item status is not nullable
+
+[sunny] null check for channel and source
+
+[akshay.agarwal.js] remove NotBlank from channelSaleOrderCode
+
+[akshay.agarwal.js] s=app2 in download url
+
+[sunny] moving unprocessed order inventory to channel product id from item type
+
+[akshay.agarwal.js] fix multiple order item  view
+
+[akshay.agarwal.js] unifier and common services moved to 2.0 for java 8
+
+[digvijay] MINOR BUGS
+
+[digvijay] MINOR BUGS
+
+[digvijay] Minor bug
+
+[akshay.agarwal.js] datatable update and send application context to reconciliation invoice
+
+[digvijay] Minor Bugs
+
+[digvijay] minor bug
+
+[digvijay] Minor bug
+
+[digvijay] minor bug
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Refactoring FK REcon
+
+[akshay.agarwal.js] flipkart order status sync fix
+
+[digvijay] Bigdecimal Orderitemvalue
+
+[akshay.agarwal.js] amazon reconciliation invoice detail script change
+
+[akshay.agarwal.js] reconciliation fixes
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] reconciled items widget fix
+
+[sunny] TOL-109: usernames should be in lower case
+
+[sunny] TOL-109: null check for state code
+
+[akshay.agarwal.js] reconciliation dashboard
+
+[digvijay] Integrating GoPigeon
+
+[digvijay] GoPigeon Mysql queries
+
+[digvijay] Mysql queries
+
+[sunny] TOL-109: restricted product types in recurrent job
+
+[akshay.agarwal.js] shopify sale order npe fix
+
+[akshay.agarwal.js] shopify order sync fix
+
+[digvijay] GoPigeon Integrated
+
+[digvijay] Queries refactoed
+
+[akshay.agarwal.js] query fix
+
+[akshay.agarwal.js] Merge queries from master
+
+[digvijay] Channel Recovery Breakup Fixed
+
+[akshay.agarwal.js] flipkart shipment id null check in fetch order list
+
+[akshay.agarwal.js] flipkart shipment id null check in fetch order list
+
+[akshay.agarwal.js] flipkart shipment id null check in fetch order list
+
+[digvijay] Zero values handled in sheet
+
+[digvijay] EMI Charges removed from Financial Breakup
+
+[akshay.agarwal.js] shipping package edit detail fixes
+
+[digvijay] hasNextPage Flag added
+
+[digvijay] Null Invoice status valuetag handled
+
+[digvijay] Recon Scripts Refactored
+
+[digvijay] CNBODY missing Exception handled
+
+[digvijay] FA Orders discarded
+
+[akshay.agarwal.js] Capture tin while add channel connector
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] fetch tan from channel fies
+
+[sagar] item type level tat
+
+[sagar] item master tat
+
+[akshay.agarwal.js] do not vaildate optional blank while validating billing party
+
+[piyush.arora.js] CustomFieldValue on merge twice in same transaction fix
+
+[akshay.agarwal.js] add logging, reconciliation minor changes
+
+[shipra.gupta.js] voonikItemTypeListScript: check item is not JsonNull
+
+[akshay.agarwal.js] Reconciliation changes. Big decimal changed to double
+
+[akshay.agarwal.js] Add logging
+
+[akshay.agarwal.js] party contact
+
+[akshay.agarwal.js] billing party attached to channel is not editable
+
+[akshay.agarwal.js] billing party attached to channel is not editable
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] party contact type fix
+
+[akshay.agarwal.js] add party editable field in DTO to show to UI
+
+[akshay.agarwal.js] set billing party to channel, bug fix
+
+[akshay.agarwal.js] Edit billing party in channel validations update
+
+[akshay.agarwal.js] npe fix
+
+[sunny] TOL-109: bundle_inventory_npe_fix
+
+[sagar] reconciliation scripts
+
+[sagar] tat fixes
+
+[akshay.agarwal.js] update aws sdk version
+
+[akshay.agarwal.js] aws sdk moved to 1.10.1
+
+[akshay.agarwal.js] aws sdk fixes
+
+[akshay.agarwal.js] fix aws sdk issue
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] fetch tin from channel support changes
+
+[akshay.agarwal.js] add apache plugin repo
+
+[akshay.agarwal.js] tin verified column in party.
+
+[akshay.agarwal.js] unifier and common services are 2.0 in dependency plugin
+
+[sunny] TOL-109: support for mongo entities in export
+
+[akshay.agarwal.js] verify and sync channel params binding fix
+
+[akshay.agarwal.js] verify and sync channel params binding fix
+
+[akshay.agarwal.js] Add log
+
+[akshay.agarwal.js] billing party is optional in binding
+
+[akshay.agarwal.js] flipkart user verification script fixes
+
+[akshay.agarwal.js] Verify Channel connector changes in other scripts to support new changes
+
+[akshay.agarwal.js] flipkart utils debugging hack removed
+
+[akshay.agarwal.js] reconciliation datatable updates
+
+[akshay.agarwal.js] reconciliation hide past download urls
+
+[akshay.agarwal.js] Do not create empty reconciliation invoice
+
+[akshay.agarwal.js] amazon reconciliation detail script big decimal bug fix
+
+[sunny] TOL-109: script changes and fix NPE in job service
+
+[bhuvneshwar] limeroad api verification script
+
+[akshay.agarwal.js] Bring items to top level in sale order reconciliation, datatable changes
+
+[akshay.agarwal.js] channel recovery amount fix in amazon reconciliation
+
+[akshay.agarwal.js] reconciliation datatable update
+
+[akshay.agarwal.js] TOL-109: support for mongo entities in export
+
+[akshay.agarwal.js] Merge commit 466a77933ede4a56274d9e73509c4e7b2c188861
+
+[akshay.agarwal.js] Merge commit c24348536db2ec435e3379fbeb9b6a95ea392e79
+
+[akshay.agarwal.js] item master tat
+
+[akshay.agarwal.js] data channel payment recon minor fix
+
+[sunny] TOL-109: support for printing regulatory forms in bulk
+
+[sunny] data channel payment recon minor fix
+
+[sunny] TOL-109: support for printing regulatory forms in bulk
+
+[akshay.agarwal.js] Merge multiple script versions to one
+
+[sunny] TOL-109: extract form code from formCodeAndName
+
+[akshay.agarwal.js] Edit shipping package for dimensions fixes
+
+[bhuvneshwar] edit picklist issue
+
+[akshay.agarwal.js] tat column and filter in datatable item type search
+
+[akshay.agarwal.js] settlement link pop up fix
+
+[sunny] TOL-109: adding is catalog sync configured prodperty
+
+[sunny] TOL-109: adding is catalog sync configured prodperty
+
+[sunny] TOL-109: payment instrument in sale order
+
+[sunny] TOL-109: optional params in channel connector parameter
+
+[akshay.agarwal.js] Validate tin while creating or editing billing party if necessary
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] drop column editable from party
+
+[bhuvneshwar] amazon shipping provider allocation script changes
+
+[akshay.agarwal.js] disable facility only if no associated channel found, billing party
+
+[akshay.agarwal.js] edit billing party fix. prevent running of tin validation api everytime
+
+[akshay.agarwal.js] restrict tin number update in facility and customer edi
+
+[akshay.agarwal.js] add luminati username and password in comments for future reference
+
+[akshay.agarwal.js] update tat from item type while amazon inventory update
+
+------------------------------------------
+Started by user digvijay
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareStgCloud1/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 5524b9aed27cf3cdae3498743f2fe60a7a78c0c5 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5524b9aed27cf3cdae3498743f2fe60a7a78c0c5
+ > git rev-list 722ada79ad163b87eb3d16fb9e9548b3f51dbc0d # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3982 completed. Result was SUCCESS
+Waiting for the completion of UniwareUICloud1
+UniwareUICloud1 #271 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareStgCloud1] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for unicommerce:UniwareCore:jar:1.0
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> duplicate declaration of version 4.8.1 @ line 102, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: io.dropwizard.metrics:metrics-core:jar -> duplicate declaration of version 3.1.2 @ line 152, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Uniware
+[INFO] UniwareCore
+[INFO] UniwareServices
+[INFO] UniwareWeb
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Uniware 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Uniware ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ Uniware ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareStgCloud1/ws/UniwareCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1934 source files to <http://jenkins.unicommerce.com:8080/job/UniwareStgCloud1/ws/UniwareCore/target/classes>
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Uniware ............................................ SUCCESS [  0.291 s]
+[INFO] UniwareCore ........................................ FAILURE [  2.684 s]
+[INFO] UniwareServices .................................... SKIPPED
+[INFO] UniwareWeb ......................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.134 s
+[INFO] Finished at: 2016-11-23T11:50:04+00:00
+[INFO] Final Memory: 18M/178M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniwareCore: Fatal error compiling: invalid target release: 1.8 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UniwareCore
+Build step 'Invoke top-level Maven targets' marked build as failure

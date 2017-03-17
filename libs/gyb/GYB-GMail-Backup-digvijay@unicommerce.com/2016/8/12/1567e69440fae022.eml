@@ -1,0 +1,188 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp128911oic;
+        Fri, 12 Aug 2016 04:00:43 -0700 (PDT)
+X-Received: by 10.129.41.138 with SMTP id p132mr9748508ywp.46.1470999643581;
+        Fri, 12 Aug 2016 04:00:43 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yb0-x22b.google.com (mail-yb0-x22b.google.com. [2607:f8b0:4002:c09::22b])
+        by mx.google.com with ESMTPS id p84si1529904ywc.54.2016.08.12.04.00.43
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 12 Aug 2016 04:00:43 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c09::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::22b is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yb0-x22b.google.com with SMTP id w8so6346151ybe.0
+        for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 04:00:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=R6S3vuKRMnw5MrBsJOpcTJFnmOJPWYtZHvI0Ga3c8NM=;
+        b=X1okMbcZOvLf5MfFq5C9p4N6jEylEZm1wtdRXhUatZf1dgpyhDKMvBHMNzNbx9WlSj
+         qUHGXR/V6ALJdgROhx8EeZ9GewSWt7wqe9gdBqz3LgVfIB92AuyjBs42YaRpiOLQqI2D
+         FU4enCCRTHe1uf+HfsDsltzBrtJ7lzln+0Vnk2dvbqJ1hE49fw0T3O5WKlP3Fz2CxIA1
+         bIBRz2KZb7/Lpq3UkQUUJRv5+MJGvFtUe7JkS+rIS0K1BJaBmhh3d72OeHHWIg2J5nFq
+         gNWiK0qiIEoc7yt1ef2bj99ZehwhI/8JSBNL67G4sK/Lz1cnOtxtKyqqgXJNhwc2soiV
+         CDNw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=R6S3vuKRMnw5MrBsJOpcTJFnmOJPWYtZHvI0Ga3c8NM=;
+        b=joiW5Quxr9fwecONNTDNBdY4ZvlvM8m4q8rYfTuQ8e3Mhxda+9CNppRZRDgc4eh09r
+         5+/FyfmOx7eAil/po/ZJn2/zNzcXDbIn+GrMDzJtwz2yeG4iPTRDTJJT3fLiLsbDzr5v
+         N6y/EttGd7cNVGVgeVaYyxrgEN65eamptzrkpTEIyxV6jjZoG1Eer2bnl+k+SXaeJ+x8
+         dt2ycqD179E8Wzy0qD6y57YWu8XbWTkwDB3TpVRkb6iaWe0kNDdQDIhoOuk53aUYPPFN
+         AsXftj95/r6hrOSHOCGFwCfG3XMA/qdpSRSYveZNC4Wbn4tb7tjsaiK3x56QXcWIrILe
+         qp6w==
+X-Gm-Message-State: AEkoouuPjna4QoLGuNAern/EKK68+tCbCRAghZNRUpHEyoz2I5yGUKYT3vwewUdHbJEBsrlPTjw4sXTyAggv4A==
+X-Received: by 10.37.198.210 with SMTP id k201mr7461310ybf.113.1470999643303;
+ Fri, 12 Aug 2016 04:00:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.204.78 with HTTP; Fri, 12 Aug 2016 04:00:42 -0700 (PDT)
+In-Reply-To: <CAEvR4bQk6mNH4b_Tfo9KjWHdQaCX3n3HU5Qu_R3TodY0dQEkOg@mail.gmail.com>
+References: <CA+zaFGhvqE5eYbTAVnP58p1_YwLeMr0BYpKnU3LWvz3JVUq-Yg@mail.gmail.com>
+ <CA+zaFGh-UB+37OhHkUgw+0_kKtim2Frb6ZDg=q+QrB4ui68pJQ@mail.gmail.com>
+ <CAOiuGhoaNb+M75=tX3urDat7BfvRvZ=qdhdMWX1Jk8YdEKTxGw@mail.gmail.com> <CAEvR4bQk6mNH4b_Tfo9KjWHdQaCX3n3HU5Qu_R3TodY0dQEkOg@mail.gmail.com>
+From: karan Garg <karangarg@unicommerce.com>
+Date: Fri, 12 Aug 2016 16:30:42 +0530
+Message-ID: <CAG=LqmPZO4L=JntWE5U=RTXS94W6A5Ws5+wDYNL21HkAz5HBoQ@mail.gmail.com>
+Subject: Fwd: Singing in your local uniware without single sign on
+To: Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c08ccba3461640539ddcb9e
+
+--94eb2c08ccba3461640539ddcb9e
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: Shipra Gupta <shipra@unicommerce.com>
+Date: Fri, Aug 12, 2016 at 4:07 PM
+Subject: Fwd: Singing in your local uniware without single sign on
+To: karan Garg <karangarg@unicommerce.com>
+
+
+
+---------- Forwarded message ----------
+From: Piyush Arora <piyush@unicommerce.com>
+Date: Wed, Oct 14, 2015 at 5:13 PM
+Subject: Fwd: Singing in your local uniware without single sign on
+To: Shipra Gupta <shipra@unicommerce.com>
+
+
+
+---------- Forwarded message ----------
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Fri, Aug 14, 2015 at 9:48 AM
+Subject: Re: Singing in your local uniware without single sign on
+To: Backend Team <backend@unicommerce.com>
+
+
+For logging in through UI from your local machines:
+
+1) Add this environment property:
+
+*auth.server.url  http://devauth.unicommerce.info
+<http://devauth.unicommerce.info>*
+
+2) From unidev, log on to DevAuth server
+
+a) Add a entry in *uniauth.user* table and *uniauth.user_account* table
+
+b) Add a entry in mongo/uniware on the this machine in *tenantProfile
+*collection
+and give it your access url.
+
+Get in touch with me in case of any doubts.
+
+- Sunny
+
+
+On Tue, Aug 11, 2015 at 12:51 PM, Sunny Agarwal <sunny@unicommerce.com>
+wrote:
+
+> Create a api user and set its uniware user it to the user which you used
+> for logging in.
+>
+> And then use this url to create a local session:
+>
+> <sunny>.unicommerce.com/auth_login_security_check?apiUsername=
+> <system>&apiPassword=<unicom>
+>
+> - Sunny
+>
+
+
+
+
+
+
+-- 
+Regards,
+Karan Garg
+
+--94eb2c08ccba3461640539ddcb9e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Shipra Gupta</b> <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:shipra@unicommerce.com">shipra@unicommerc=
+e.com</a>&gt;</span><br>Date: Fri, Aug 12, 2016 at 4:07 PM<br>Subject: Fwd:=
+ Singing in your local uniware without single sign on<br>To: karan Garg &lt=
+;<a href=3D"mailto:karangarg@unicommerce.com">karangarg@unicommerce.com</a>=
+&gt;<br><br><br><div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- =
+Forwarded message ----------<br>From: <b class=3D"gmail_sendername">Piyush =
+Arora</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:piyush@unicommerce.com" t=
+arget=3D"_blank">piyush@unicommerce.com</a>&gt;</span><br>Date: Wed, Oct 14=
+, 2015 at 5:13 PM<br>Subject: Fwd: Singing in your local uniware without si=
+ngle sign on<br>To: Shipra Gupta &lt;<a href=3D"mailto:shipra@unicommerce.c=
+om" target=3D"_blank">shipra@unicommerce.com</a>&gt;<br><br><br><div dir=3D=
+"ltr"><br><div class=3D"gmail_quote">---------- Forwarded message ---------=
+-<br>From: <b class=3D"gmail_sendername">Sunny Agarwal</b> <span dir=3D"ltr=
+">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=3D"_blank">sunny@unic=
+ommerce.com</a>&gt;</span><br>Date: Fri, Aug 14, 2015 at 9:48 AM<br>Subject=
+: Re: Singing in your local uniware without single sign on<br>To: Backend T=
+eam &lt;<a href=3D"mailto:backend@unicommerce.com" target=3D"_blank">backen=
+d@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr">For logging in throug=
+h UI from your local machines:<div><br></div><div>1) Add this environment p=
+roperty:</div><div>
+
+
+
+
+
+
+
+<p><b><span>auth.server.url =C2=A0</span><a href=3D"http://devauth.unicomme=
+rce.info" target=3D"_blank">http://devauth.unicommerce.in<wbr>fo</a></b></p=
+><p>2) From unidev, log on to DevAuth server</p></div><blockquote style=3D"=
+margin:0 0 0 40px;border:none;padding:0px"><p>a) Add a entry in <b>uniauth.=
+user</b> table and <b>uniauth.user_account</b> table</p></blockquote><block=
+quote style=3D"margin:0 0 0 40px;border:none;padding:0px"><p>b) Add a entry=
+ in mongo/uniware on the this machine in <b>tenantProfile </b>collection an=
+d give it your access url.</p></blockquote>Get in touch with me in case of =
+any doubts.<span><font color=3D"#888888"><div><br></div><div>- Sunny</div><=
+div><br></div></font></span></div><div><div><div class=3D"gmail_extra"><br>=
+<div class=3D"gmail_quote">On Tue, Aug 11, 2015 at 12:51 PM, Sunny Agarwal =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=3D"_b=
+lank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex"><div dir=3D"ltr"><div>Create a api user and set its uniware user i=
+t to the user which you used for logging in.</div><div><br></div><div>And t=
+hen use this url to create a local session:</div><div><br></div>&lt;sunny&g=
+t;.<a href=3D"http://unicommerce.com/auth_login_security_check?apiUsername=
+=3D" target=3D"_blank">unicommerce.com/auth_l<wbr>ogin_security_check?apiUs=
+ernam<wbr>e=3D</a>&lt;system&gt;&amp;apiPassword=3D&lt;<wbr>unicom&gt;<span=
+><font color=3D"#888888"><br><div><br></div><div>- Sunny</div></font></span=
+></div>
+</blockquote></div><br></div>
+</div></div></div><br></div>
+</div><br></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=
+=3D"color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:r=
+gb(102,102,102)">Karan Garg</span><br></div></div>
+</div>
+
+--94eb2c08ccba3461640539ddcb9e--

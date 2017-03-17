@@ -1,0 +1,275 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1062933qgd;
+        Mon, 19 Dec 2016 03:28:46 -0800 (PST)
+X-Received: by 10.84.215.139 with SMTP id l11mr8918998pli.101.1482146926261;
+        Mon, 19 Dec 2016 03:28:46 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id y3si18016883pgo.229.2016.12.19.03.28.45
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 19 Dec 2016 03:28:46 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uBJBSibZ027280;
+	Mon, 19 Dec 2016 16:58:44 +0530
+Date: Mon, 19 Dec 2016 16:58:44 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <557744104.117.1482146924404.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UnicommerceWormholeTest #56
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UnicommerceWormholeTest
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/56/Changes:
+
+[digvijay] Activate Tenant Service + One/All Reload Config + Enterprise rol=
+e
+
+------------------------------------------
+Started by user digvijay
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UnicommerceW=
+ormholeTest/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=3D10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@git.unicommerce.com:uniwaretroubleshoot=
+.git # timeout=3D10
+Fetching upstream changes from git@git.unicommerce.com:uniwaretroubleshoot.=
+git
+ > git --version # timeout=3D10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@git.unicommerce.com:uniwaretroubleshoot.=
+git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=3D10
+Checking out Revision b0eac95697fb16cfd7e8ea5b618945780118db05 (origin/mast=
+er)
+ > git config core.sparsecheckout # timeout=3D10
+ > git checkout -f b0eac95697fb16cfd7e8ea5b618945780118db05
+ > git rev-list d677460146aca0d69e4fd5339a85bab97b6a970a # timeout=3D10
+Waiting for the completion of UniwareCommon
+UniwareCommon #4006 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to =
+SUCCESS
+[UnicommerceWormholeTest] $ /var/lib/jenkins/tools/hudson.tasks.Maven_Maven=
+Installation/_usr_local_apache-maven/bin/mvn -f UniwareNotifications/pom.xm=
+l clean package
+[INFO] Scanning for projects...
+[INFO]                                                                     =
+   =20
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Building UniTroubleshoot 2.0
+[INFO] --------------------------------------------------------------------=
+----
+Downloading: http://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/=
+1.7.4/aspectjweaver-1.7.4.pom
+2/2 KB            Downloaded: http://repo.maven.apache.org/maven2/org/aspec=
+tj/aspectjweaver/1.7.4/aspectjweaver-1.7.4.pom (2 KB at 1.5 KB/sec)
+Downloading: http://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/=
+1.7.4/aspectjweaver-1.7.4.jar
+4/1808 KB   8/1808 KB   12/1808 KB   14/1808 KB   17/1808 KB   20/1808 KB  =
+ 22/1808 KB   25/1808 KB   29/1808 KB   30/1808 KB   32/1808 KB   35/1808 K=
+B   38/1808 KB   41/1808 KB   42/1808 KB   45/1808 KB   48/1808 KB   51/180=
+8 KB   54/1808 KB   56/1808 KB   59/1808 KB   62/1808 KB   65/1808 KB   68/=
+1808 KB   71/1808 KB   75/1808 KB   75/1808 KB   78/1808 KB   80/1808 KB   =
+83/1808 KB   86/1808 KB   89/1808 KB   92/1808 KB   95/1808 KB   97/1808 KB=
+   100/1808 KB   103/1808 KB   106/1808 KB   109/1808 KB   112/1808 KB   11=
+4/1808 KB   117/1808 KB   120/1808 KB   124/1808 KB   124/1808 KB   127/180=
+8 KB   130/1808 KB   133/1808 KB   136/1808 KB   138/1808 KB   141/1808 KB =
+  144/1808 KB   147/1808 KB   150/1808 KB   153/1808 KB   155/1808 KB   158=
+/1808 KB   161/1808 KB   164/1808 KB   167/1808 KB   170/1808 KB   172/1808=
+ KB   174/1808 KB   177/1808 KB   179/1808 KB   182/1808 KB   185/1808 KB  =
+ 188/1808 KB   191/1808 KB   194/1808 KB   196/1808 KB   199/1808 KB   202/=
+1808 KB   205/1808 KB   208/1808 KB   211/1808 KB   213/1808 KB   216/1808 =
+KB   219/1808 KB   222/1808 KB   225/1808 KB   229/1808 KB   229/1808 KB   =
+232/1808 KB   235/1808 KB   237/1808 KB   240/1808 KB   243/1808 KB   246/1=
+808 KB   249/1808 KB   252/1808 KB   254/1808 KB   257/1808 KB   260/1808 K=
+B   263/1808 KB   266/1808 KB   269/1808 KB   271/1808 KB   274/1808 KB   2=
+77/1808 KB   280/1808 KB   283/1808 KB   285/1808 KB   288/1808 KB   290/18=
+08 KB   293/1808 KB   295/1808 KB   298/1808 KB   301/1808 KB   304/1808 KB=
+   307/1808 KB   310/1808 KB   312/1808 KB   315/1808 KB   318/1808 KB   32=
+1/1808 KB   324/1808 KB   326/1808 KB   329/1808 KB   332/1808 KB   335/180=
+8 KB   338/1808 KB   341/1808 KB   343/1808 KB   346/1808 KB   349/1808 KB =
+  352/1808 KB   356/1808 KB   356/1808 KB   359/1808 KB   362/1808 KB   365=
+/1808 KB   367/1808 KB   370/1808 KB   373/1808 KB   376/1808 KB   379/1808=
+ KB   382/1808 KB   384/1808 KB   387/1808 KB   390/1808 KB   393/1808 KB  =
+ 396/1808 KB   399/1808 KB   401/1808 KB   404/1808 KB   407/1808 KB   410/=
+1808 KB   413/1808 KB   416/1808 KB   420/1808 KB   420/1808 KB   423/1808 =
+KB   425/1808 KB   428/1808 KB   431/1808 KB   434/1808 KB   437/1808 KB   =
+440/1808 KB   442/1808 KB   445/1808 KB   448/1808 KB   451/1808 KB   454/1=
+808 KB   457/1808 KB   459/1808 KB   462/1808 KB   465/1808 KB   468/1808 K=
+B   471/1808 KB   474/1808 KB   476/1808 KB   479/1808 KB   483/1808 KB   4=
+83/1808 KB   486/1808 KB   489/1808 KB   492/1808 KB   495/1808 KB   498/18=
+08 KB   500/1808 KB   503/1808 KB   506/1808 KB   509/1808 KB   512/1808 KB=
+   515/1808 KB   517/1808 KB   520/1808 KB   523/1808 KB   526/1808 KB   52=
+9/1808 KB   532/1808 KB   534/1808 KB   537/1808 KB   540/1808 KB   543/180=
+8 KB   544/1808 KB   547/1808 KB   550/1808 KB   553/1808 KB   556/1808 KB =
+  558/1808 KB   561/1808 KB   564/1808 KB   567/1808 KB   570/1808 KB   573=
+/1808 KB   575/1808 KB   578/1808 KB   581/1808 KB   584/1808 KB   587/1808=
+ KB   590/1808 KB   592/1808 KB   595/1808 KB   598/1808 KB   601/1808 KB  =
+ 604/1808 KB   606/1808 KB   608/1808 KB   611/1808 KB   614/1808 KB   616/=
+1808 KB   619/1808 KB   622/1808 KB   625/1808 KB   629/1808 KB   633/1808 =
+KB   637/1808 KB   639/1808 KB   642/1808 KB   645/1808 KB   647/1808 KB   =
+650/1808 KB   653/1808 KB   656/1808 KB   659/1808 KB   662/1808 KB   664/1=
+808 KB   667/1808 KB   670/1808 KB   672/1808 KB   674/1808 KB   677/1808 K=
+B   680/1808 KB   683/1808 KB   686/1808 KB   688/1808 KB   691/1808 KB   6=
+94/1808 KB   697/1808 KB   700/1808 KB   703/1808 KB   705/1808 KB   708/18=
+08 KB   711/1808 KB   714/1808 KB   717/1808 KB   720/1808 KB   722/1808 KB=
+   725/1808 KB   728/1808 KB   731/1808 KB   735/1808 KB   735/1808 KB   73=
+9/1808 KB   739/1808 KB   743/1808 KB   744/1808 KB   748/1808 KB   748/180=
+8 KB   752/1808 KB   752/1808 KB   756/1808 KB   756/1808 KB   760/1808 KB =
+  761/1808 KB   765/1808 KB   765/1808 KB   769/1808 KB   769/1808 KB   773=
+/1808 KB   773/1808 KB   777/1808 KB   778/1808 KB   782/1808 KB   782/1808=
+ KB   786/1808 KB   786/1808 KB   790/1808 KB   790/1808 KB   794/1808 KB  =
+ 795/1808 KB   799/1808 KB   799/1808 KB   803/1808 KB   803/1808 KB   807/=
+1808 KB   807/1808 KB   811/1808 KB   812/1808 KB   816/1808 KB   816/1808 =
+KB   820/1808 KB   820/1808 KB   824/1808 KB   824/1808 KB   828/1808 KB   =
+828/1808 KB   832/1808 KB   833/1808 KB   837/1808 KB   837/1808 KB   841/1=
+808 KB   841/1808 KB   845/1808 KB   845/1808 KB   849/1808 KB   850/1808 K=
+B   854/1808 KB   854/1808 KB   858/1808 KB   858/1808 KB   862/1808 KB   8=
+62/1808 KB   866/1808 KB   867/1808 KB   871/1808 KB   871/1808 KB   875/18=
+08 KB   875/1808 KB   879/1808 KB   879/1808 KB   883/1808 KB   884/1808 KB=
+   888/1808 KB   888/1808 KB   892/1808 KB   892/1808 KB   896/1808 KB   89=
+6/1808 KB   900/1808 KB   901/1808 KB   905/1808 KB   905/1808 KB   909/180=
+8 KB   909/1808 KB   913/1808 KB   913/1808 KB   917/1808 KB   918/1808 KB =
+  922/1808 KB   922/1808 KB   926/1808 KB   926/1808 KB   930/1808 KB   930=
+/1808 KB   934/1808 KB   935/1808 KB   939/1808 KB   939/1808 KB   943/1808=
+ KB   943/1808 KB   947/1808 KB   947/1808 KB   951/1808 KB   952/1808 KB  =
+ 956/1808 KB   956/1808 KB   960/1808 KB   960/1808 KB   964/1808 KB   964/=
+1808 KB   968/1808 KB   968/1808 KB   972/1808 KB   973/1808 KB   977/1808 =
+KB   978/1808 KB   982/1808 KB   984/1808 KB   988/1808 KB   990/1808 KB   =
+994/1808 KB   995/1808 KB   999/1808 KB   1001/1808 KB   1005/1808 KB   100=
+7/1808 KB   1011/1808 KB   1012/1808 KB   1016/1808 KB   1018/1808 KB   102=
+2/1808 KB   1024/1808 KB   1028/1808 KB   1029/1808 KB   1033/1808 KB   103=
+5/1808 KB   1039/1808 KB   1041/1808 KB   1045/1808 KB   1046/1808 KB   105=
+0/1808 KB   1052/1808 KB   1053/1808 KB   1057/1808 KB   1059/1808 KB   106=
+3/1808 KB   1065/1808 KB   1069/1808 KB   1070/1808 KB   1074/1808 KB   107=
+6/1808 KB   1080/1808 KB   1082/1808 KB   1086/1808 KB   1087/1808 KB   109=
+1/1808 KB   1093/1808 KB   1097/1808 KB   1099/1808 KB   1103/1808 KB   110=
+4/1808 KB   1108/1808 KB   1110/1808 KB   1114/1808 KB   1116/1808 KB   112=
+0/1808 KB   1123/1808 KB   1127/1808 KB   1128/1808 KB   1132/1808 KB   113=
+4/1808 KB   1138/1808 KB   1140/1808 KB   1144/1808 KB   1145/1808 KB   114=
+9/1808 KB   1151/1808 KB   1155/1808 KB   1157/1808 KB   1161/1808 KB   116=
+2/1808 KB   1166/1808 KB   1168/1808 KB   1172/1808 KB   1174/1808 KB   117=
+8/1808 KB   1179/1808 KB   1183/1808 KB   1186/1808 KB   1190/1808 KB   119=
+2/1808 KB   1196/1808 KB   1198/1808 KB   1202/1808 KB   1203/1808 KB   120=
+7/1808 KB   1209/1808 KB   1213/1808 KB   1215/1808 KB   1219/1808 KB   122=
+0/1808 KB   1224/1808 KB   1227/1808 KB   1231/1808 KB   1234/1808 KB   123=
+8/1808 KB   1241/1808 KB   1244/1808 KB   1248/1808 KB   1251/1808 KB   125=
+5/1808 KB   1258/1808 KB   1262/1808 KB   1264/1808 KB   1268/1808 KB   127=
+1/1808 KB   1272/1808 KB   1276/1808 KB   1278/1808 KB   1282/1808 KB   128=
+5/1808 KB   1289/1808 KB   1292/1808 KB   1296/1808 KB   1299/1808 KB   130=
+3/1808 KB   1306/1808 KB   1310/1808 KB   1314/1808 KB   1315/1808 KB   131=
+9/1808 KB   1322/1808 KB   1326/1808 KB   1329/1808 KB   1333/1808 KB   133=
+6/1808 KB   1340/1808 KB   1343/1808 KB   1347/1808 KB   1350/1808 KB   135=
+4/1808 KB   1357/1808 KB   1361/1808 KB   1364/1808 KB   1368/1808 KB   137=
+1/1808 KB   1375/1808 KB   1379/1808 KB   1383/1808 KB   1386/1808 KB   139=
+0/1808 KB   1393/1808 KB   1397/1808 KB   1400/1808 KB   1404/1808 KB   140=
+7/1808 KB   1411/1808 KB   1411/1808 KB   1414/1808 KB   1418/1808 KB   141=
+8/1808 KB   1422/1808 KB   1422/1808 KB   1426/1808 KB   1427/1808 KB   143=
+1/1808 KB   1431/1808 KB   1435/1808 KB   1435/1808 KB   1439/1808 KB   143=
+9/1808 KB   1443/1808 KB   1444/1808 KB   1448/1808 KB   1448/1808 KB   145=
+2/1808 KB   1452/1808 KB   1456/1808 KB   1456/1808 KB   1460/1808 KB   146=
+1/1808 KB   1465/1808 KB   1465/1808 KB   1469/1808 KB   1469/1808 KB   147=
+3/1808 KB   1473/1808 KB   1477/1808 KB   1478/1808 KB   1482/1808 KB   148=
+2/1808 KB   1486/1808 KB   1486/1808 KB   1490/1808 KB   1490/1808 KB   149=
+4/1808 KB   1495/1808 KB   1499/1808 KB   1499/1808 KB   1503/1808 KB   150=
+3/1808 KB   1507/1808 KB   1507/1808 KB   1511/1808 KB   1511/1808 KB   151=
+5/1808 KB   1516/1808 KB   1520/1808 KB   1520/1808 KB   1524/1808 KB   152=
+4/1808 KB   1528/1808 KB   1528/1808 KB   1532/1808 KB   1533/1808 KB   153=
+7/1808 KB   1537/1808 KB   1541/1808 KB   1541/1808 KB   1545/1808 KB   154=
+5/1808 KB   1549/1808 KB   1550/1808 KB   1554/1808 KB   1554/1808 KB   155=
+8/1808 KB   1558/1808 KB   1562/1808 KB   1562/1808 KB   1566/1808 KB   156=
+7/1808 KB   1571/1808 KB   1571/1808 KB   1575/1808 KB   1575/1808 KB   157=
+9/1808 KB   1579/1808 KB   1583/1808 KB   1584/1808 KB   1588/1808 KB   158=
+8/1808 KB   1592/1808 KB   1592/1808 KB   1596/1808 KB   1596/1808 KB   160=
+0/1808 KB   1601/1808 KB   1605/1808 KB   1605/1808 KB   1609/1808 KB   160=
+9/1808 KB   1613/1808 KB   1613/1808 KB   1617/1808 KB   1618/1808 KB   162=
+2/1808 KB   1622/1808 KB   1626/1808 KB   1626/1808 KB   1630/1808 KB   163=
+0/1808 KB   1634/1808 KB   1634/1808 KB   1638/1808 KB   1639/1808 KB   164=
+3/1808 KB   1643/1808 KB   1647/1808 KB   1647/1808 KB   1651/1808 KB   165=
+1/1808 KB   1655/1808 KB   1656/1808 KB   1660/1808 KB   1660/1808 KB   166=
+4/1808 KB   1664/1808 KB   1668/1808 KB   1668/1808 KB   1672/1808 KB   167=
+3/1808 KB   1677/1808 KB   1677/1808 KB   1681/1808 KB   1681/1808 KB   168=
+5/1808 KB   1685/1808 KB   1689/1808 KB   1690/1808 KB   1694/1808 KB   169=
+4/1808 KB   1698/1808 KB   1698/1808 KB   1702/1808 KB   1702/1808 KB   170=
+6/1808 KB   1707/1808 KB   1711/1808 KB   1711/1808 KB   1715/1808 KB   171=
+5/1808 KB   1719/1808 KB   1719/1808 KB   1723/1808 KB   1724/1808 KB   172=
+8/1808 KB   1728/1808 KB   1732/1808 KB   1732/1808 KB   1736/1808 KB   173=
+6/1808 KB   1740/1808 KB   1741/1808 KB   1745/1808 KB   1745/1808 KB   174=
+9/1808 KB   1749/1808 KB   1753/1808 KB   1753/1808 KB   1757/1808 KB   175=
+8/1808 KB   1762/1808 KB   1762/1808 KB   1766/1808 KB   1766/1808 KB   177=
+0/1808 KB   1770/1808 KB   1774/1808 KB   1774/1808 KB   1778/1808 KB   177=
+9/1808 KB   1783/1808 KB   1783/1808 KB   1787/1808 KB   1787/1808 KB   179=
+1/1808 KB   1791/1808 KB   1795/1808 KB   1796/1808 KB   1800/1808 KB   180=
+0/1808 KB   1804/1808 KB   1804/1808 KB   1808/1808 KB                  Dow=
+nloaded: http://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.7.=
+4/aspectjweaver-1.7.4.jar (1808 KB at 1138.6 KB/sec)
+[INFO]=20
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniTroubleshoot -=
+--
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UnicommerceWormhol=
+eTest/ws/UniwareNotifications/target>
+[INFO]=20
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (def=
+ault) @ UniTroubleshoot ---
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniTr=
+oubleshoot ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resourc=
+es, i.e. build is platform dependent!
+[INFO] Copying 11 resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniTrouble=
+shoot ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.=
+e. build is platform dependent!
+[INFO] Compiling 222 source files to <http://jenkins.unicommerce.com:8080/j=
+ob/UnicommerceWormholeTest/ws/UniwareNotifications/target/classes>
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :=20
+[INFO] -------------------------------------------------------------
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws=
+/UniwareNotifications/src/main/java/com/uniware/services/tenant/impl/Tenant=
+ServiceImpl.java>:[427,69] cannot find symbol
+  symbol:   method getTenantProfilesByCode(java.lang.String)
+  location: variable tenantProfileService of type com.unifier.services.tena=
+ntprofile.service.ITenantProfileService
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] BUILD FAILURE
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Total time: 8.664 s
+[INFO] Finished at: 2016-12-19T11:28:44+00:00
+[INFO] Final Memory: 30M/243M
+[INFO] --------------------------------------------------------------------=
+----
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plug=
+in:3.1:compile (default-compile) on project UniTroubleshoot: Compilation fa=
+ilure
+[ERROR] <http://jenkins.unicommerce.com:8080/job/UnicommerceWormholeTest/ws=
+/UniwareNotifications/src/main/java/com/uniware/services/tenant/impl/Tenant=
+ServiceImpl.java>:[427,69] cannot find symbol
+[ERROR] symbol:   method getTenantProfilesByCode(java.lang.String)
+[ERROR] location: variable tenantProfileService of type com.unifier.service=
+s.tenantprofile.service.ITenantProfileService
+[ERROR] -> [Help 1]
+[ERROR]=20
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e=
+ switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]=20
+[ERROR] For more information about the errors and possible solutions, pleas=
+e read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailu=
+reException
+Build step 'Invoke top-level Maven targets' marked build as failure

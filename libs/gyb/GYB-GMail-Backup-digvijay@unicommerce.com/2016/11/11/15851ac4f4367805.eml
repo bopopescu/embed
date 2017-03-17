@@ -1,0 +1,88 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1149742qge;
+        Thu, 10 Nov 2016 20:36:36 -0800 (PST)
+X-Received: by 10.31.167.77 with SMTP id q74mr679743vke.135.1478838996637;
+        Thu, 10 Nov 2016 20:36:36 -0800 (PST)
+Return-Path: <amit.dalal@unicommerce.com>
+Received: from mail-vk0-x236.google.com (mail-vk0-x236.google.com. [2607:f8b0:400c:c05::236])
+        by mx.google.com with ESMTPS id f43si2047998uaa.223.2016.11.10.20.36.36
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 10 Nov 2016 20:36:36 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of amit.dalal@unicommerce.com) client-ip=2607:f8b0:400c:c05::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of amit.dalal@unicommerce.com) smtp.mailfrom=amit.dalal@unicommerce.com
+Received: by mail-vk0-x236.google.com with SMTP id w194so4920432vkw.2
+        for <digvijay@unicommerce.com>; Thu, 10 Nov 2016 20:36:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=6FjFnATEM6MvsoDkcfhpXknXDP8vx5vmgmFmJvCrc9c=;
+        b=wN0kv6VNRqMI5VJyE+Fx3JJEeJSNDjILly5XuW7uwhGfzhbgNYiSOHXmWkQjkfPIwS
+         kBZPSMz1Ifk9nP/pvyKSOVH7FyDF1IlSuawc3K9Qfd3p64l0LelQubwKl0KWexXt19zW
+         cJCW6ePdAwg7mKLFDR1jaa9PZNXfPggOtld5L3gxqLzFAemRqvbheeEXVcnTA0lgPNQu
+         aXEOiDaR504K/5RjCXbsXewEkhb9FwKpU9+ohoY43W05U0WJBwvEsFJ9dk4OVPq/TNxL
+         ustaERwOYi7KMVRuu1WmQ6lBM5zkI0sJOA1QWlzcM+nvKCOeBSkJWsWVMq9vV+RZS/Qn
+         1Cfw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=6FjFnATEM6MvsoDkcfhpXknXDP8vx5vmgmFmJvCrc9c=;
+        b=H+nRIQ1Cf3uXpcOQT1ErnN77M/N6W/VuW44CEB1UolYyZtH8JwWFaZHDcs3NFltO2s
+         sFhRet7pNtKHgNsPw7fpIHqI+0mxTFWKuWW0KoIcQJF0i793rmvqkL5Q1fPQYmQ2gnif
+         ZQIzmo87dcp0obH40I3O8OFnpSXf1tz3vVHwexF2iGvbJHAxM+iY7/tJHCE4GgW3/+po
+         qzh1pSNnJ5KeINQCZyrkpTHk3LfeEUtNGO7gAkSb1/gfjExH5BI4UV8mx+r7HILnSsFS
+         F76rL1zKmJHk+kIj9f7KMyI47Fi2LGEjdgrtkoJfR+COc1+FMmyKC9f5496dpGOuFBTU
+         tndA==
+X-Gm-Message-State: ABUngvc92mRzW1UsLZbzq9NgtyDQ9kOeLk9iJZaU63xNPZscoMb+RBSH91JiTGM+TxamTcFfgsraA4IoN0NAhg==
+X-Received: by 10.31.206.195 with SMTP id e186mr717210vkg.168.1478838996151;
+ Thu, 10 Nov 2016 20:36:36 -0800 (PST)
+MIME-Version: 1.0
+From: Amit Dalal <amit.dalal@unicommerce.com>
+Date: Fri, 11 Nov 2016 04:36:25 +0000
+Message-ID: <CAMuJ5=oCOuqF4euC-m=oKJGHegKoArV6GS_w6MruecFqUGj7DQ@mail.gmail.com>
+Subject: yamini farewell contri
+To: Rachit Sachdeva <rachit@unicommerce.com>, Ankit Bansal <ankit.bansal@unicommerce.com>, 
+	Ankur pratik <ankur.pratik@unicommerce.com>, Promil Bhardwaj <promil@unicommerce.com>, 
+	ashish <ashish@unicommerce.com>, vikas goyal <vikas@unicommerce.com>, 
+	Sonu Goel <sonu@unicommerce.com>, Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, 
+	Piyush Arora <piyush@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Garima Arora <garima@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Sushant Majumdar <sushant@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	vani verma <vani@unicommerce.com>, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, puneet <puneet@unicommerce.com>, 
+	akshay kochhar <akshay@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Rishu Goyal <rishu@unicommerce.com>, 
+	Karan Gupta <karan@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114e30c00bbdff0540ff0935
+
+--001a114e30c00bbdff0540ff0935
+Content-Type: text/plain; charset=UTF-8
+
+19577/28 = 700
+
+bank transfer or paytm or freecharge.
+
+*Bank details:*
+HDFC A/C Num: 12031050027117
+Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,
+State: HARYANA
+District: GURGAON
+Branch: GLOBAL BUSINESS PARK
+IFSC Code: HDFC0001203
+MICR Code: 110240182
+
+--001a114e30c00bbdff0540ff0935
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">19577/28 =3D 700<br><br>bank transfer or paytm or freechar=
+ge.<br><br><b><u>Bank details:</u></b><br>HDFC A/C Num: 12031050027117 <br>=
+Address: TOWER A,GF-02,GLOBAL BUSINESS PARK M.G. ROAD,<br>State: HARYANA<br=
+>District: GURGAON <br>Branch: GLOBAL BUSINESS PARK<br>IFSC Code: HDFC00012=
+03 <br>MICR Code: 110240182<br></div>
+
+--001a114e30c00bbdff0540ff0935--

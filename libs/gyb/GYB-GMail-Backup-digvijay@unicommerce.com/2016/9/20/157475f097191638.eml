@@ -1,0 +1,115 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.190.130 with SMTP id i124csp943401itf;
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+X-Received: by 10.107.9.29 with SMTP id j29mr25791007ioi.153.1474371192883;
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+Return-Path: <tech+bncBDR6N2HGSICBB6F4QS7QKGQEAM6RXVA@unicommerce.com>
+Received: from mail-it0-x246.google.com (mail-it0-x246.google.com. [2607:f8b0:4001:c0b::246])
+        by mx.google.com with ESMTPS id h125si32485668ith.14.2016.09.20.04.33.12
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::246 is neither permitted nor denied by best guess record for domain of tech+bncbdr6n2hgsicbb6f4qs7qkgqeam6rxva@unicommerce.com) client-ip=2607:f8b0:4001:c0b::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::246 is neither permitted nor denied by best guess record for domain of tech+bncbdr6n2hgsicbb6f4qs7qkgqeam6rxva@unicommerce.com) smtp.mailfrom=tech+bncBDR6N2HGSICBB6F4QS7QKGQEAM6RXVA@unicommerce.com
+Received: by mail-it0-x246.google.com with SMTP id 188sf45767059iti.0
+        for <digvijay@unicommerce.com>; Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=qiHSBLXsUS/qftON4QYt+Fqv6W6B3E4eX9w3NqfwFs8=;
+        b=nAjx3q7qpXYg4V5cKE0RqVzjY+HeEiJcoaLBgegRiIvl9MDnQvJQw4vBvHy8AdCpIR
+         FCD/3adkuGEcV7ydZ1/yGY73meYEPQ7iMqC5laGZ5cdJlZwdE9S3eUBM+N9alrBzOAI8
+         DOoLID7q0pXPw0uG3hwmYVHhPj1rddsEd1caKaL4i20+6N34Sd4UxBCPVohKacgX9Pu2
+         zV/cLxbk9ML3C1kyp5Ka/5ZnYviVQKbL/J4gQmPo6/6CKLMSC7nmEuxRqxgeTY+/WABo
+         cXoG7gzOoX8cS/Re68JTK2LdqraT9jQ5PLlazaLmJ5zwEbANPUsGvvlDwrS/QknDEuux
+         fswg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=qiHSBLXsUS/qftON4QYt+Fqv6W6B3E4eX9w3NqfwFs8=;
+        b=DnT0KYtnWDaSz67+7UKr8rGWIMIiMDiulPbCxd1W0A5mTB68P1bI6z2HJslIsmiHCd
+         LGaGIPukEt8OwpkSojLyC0/W1Sm2+zHq8fL8mSqFMIm1q1+ph5OovmWcCqfgkUrWMZRI
+         dTWFS9wuuTncoiRStsSZRO4FkyfFDtlYSrs7QGxbFKvsCmyGl4lScCNMMo9OVIK44eQ3
+         EGMJKuXVhSkG8h5lmIlvnKDvqNZEzteeIKosLtbE9mK5+gFcJUHMVN6cLFHXEi75cJqs
+         Yzw+ERgbpAbfA0HL499eJBhugPIG8BsywYJc6mevTGZWJy56DvVibBO+xA2NM9GCj5mO
+         wTDg==
+X-Gm-Message-State: AE9vXwNnXzoi+0ZCEhZPZKG4oJcGEt853Dg3adSBxF1uHAemM2B2iQc2m6a9pdGByOtPMQ==
+X-Received: by 10.157.1.134 with SMTP id e6mr1130040ote.9.1474371192681;
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.36.227.70 with SMTP id d67ls3555675ith.3.canary; Tue, 20 Sep
+ 2016 04:33:12 -0700 (PDT)
+X-Received: by 10.107.189.132 with SMTP id n126mr45373333iof.74.1474371192494;
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+Received: from mail-io0-x231.google.com (mail-io0-x231.google.com. [2607:f8b0:4001:c06::231])
+        by mx.google.com with ESMTPS id f30si34406148iod.64.2016.09.20.04.33.12
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::231 is neither permitted nor denied by best guess record for domain of sushant@unicommerce.com) client-ip=2607:f8b0:4001:c06::231;
+Received: by mail-io0-x231.google.com with SMTP id m79so16320167ioo.3
+        for <tech@unicommerce.com>; Tue, 20 Sep 2016 04:33:12 -0700 (PDT)
+X-Received: by 10.107.3.29 with SMTP id 29mr39101612iod.48.1474371192171; Tue,
+ 20 Sep 2016 04:33:12 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.50.57.82 with HTTP; Tue, 20 Sep 2016 04:32:41 -0700 (PDT)
+From: Sushant Majumdar <sushant@unicommerce.com>
+Date: Tue, 20 Sep 2016 17:02:41 +0530
+Message-ID: <CAM5fqPWG9PLUYAZk1tLiF1eh5tJNsG3wrmLfRASYZN3ti2LNKg@mail.gmail.com>
+Subject: Do not build snapdeal-staging for next 1 hrs.
+To: Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113ed28a2d43cb053ceecb64
+X-Original-Sender: sushant@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4001:c06::231 is neither permitted nor denied by best
+ guess record for domain of sushant@unicommerce.com) smtp.mailfrom=sushant@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113ed28a2d43cb053ceecb64
+Content-Type: text/plain; charset=UTF-8
+
+Hi All,
+
+Please do not build the snapdeal-staging for next 1 hrs.
+we are validating the Ship together order flow.
+
+
+*Thanks & Regards,*
+Sushant Majumdar
+*Mobile*: +91 9540267871
+*Email*: sushant@unicommerce.com
+*Unicommerce eSolutions Pvt. Ltd. *
+201, 3rd Floor, Okhla Phase- III New Delhi- 110020
+
+--001a113ed28a2d43cb053ceecb64
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi All,<div><br></div><div>Please do not build the snapdea=
+l-staging for next 1 hrs.</div><div>we are validating the Ship together ord=
+er flow.=C2=A0</div><div>=C2=A0<br clear=3D"all"><div><div class=3D"gmail_s=
+ignature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><br><div><div><div sty=
+le=3D"font-size:small"><div><b>Thanks &amp; Regards,</b></div><div>Sushant =
+Majumdar</div><div><b>Mobile</b>: +91 9540267871</div><div><b>Email</b>:=C2=
+=A0<a href=3D"mailto:sushant@unicommerce.com" style=3D"color:rgb(17,85,204)=
+" target=3D"_blank">sushant@unicommerce.com</a></div></div><div style=3D"fo=
+nt-size:small"><b>Unicommerce eSolutions Pvt. Ltd.=C2=A0</b></div><div styl=
+e=3D"font-size:small">201, 3rd Floor, Okhla Phase- III New Delhi- 110020</d=
+iv></div></div></div></div></div></div></div></div></div></div></div>
+</div></div>
+
+--001a113ed28a2d43cb053ceecb64--

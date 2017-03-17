@@ -1,0 +1,3710 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp8578426qgd;
+        Thu, 5 Jan 2017 02:59:22 -0800 (PST)
+X-Received: by 10.84.210.130 with SMTP id a2mr155999182pli.106.1483613962203;
+        Thu, 05 Jan 2017 02:59:22 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id o4si75691919plb.25.2017.01.05.02.59.19
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 05 Jan 2017 02:59:22 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v05AxHMm028821;
+	Thu, 5 Jan 2017 16:29:17 +0530
+Date: Thu, 5 Jan 2017 16:29:17 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, shobhit@Shobhits-MacBook-Air.local,
+        garima@unicommerce.com, bhupi@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, amit.dalal.js@snapdeal.com,
+        sunny@unicommerce.com, harsh.pal.js@snapdeal.com,
+        akshay.kochhar.js@snapdeal.com, akshay.agarwal@unicommerce.com,
+        apple@apples-MacBook-Air-2.local,
+        bhuvneshwarkumar@Bhuvneshwars-MacBook-Air.local,
+        admin@Admins-MacBook-Air-4.local, harsh@unicommerce.com,
+        akshay@unicommerce.com, amit.dalal@unicommerce.com,
+        piyush.arora.js@snapdeal.com, garima.arora.js@snapdeal.com,
+        shipra@unicommerce.com, rachit@Rachits-MacBook-Air.local,
+        digvijay@unicommerce.com, Samdeesh@admins-MacBook-Air-4.local,
+        piyush@unicommerce.com, ankitbansal@Chinmays-MacBook-Air.local,
+        kunika@unicommerce.com, pradhika@unicommerce.com,
+        ankur@unicommerce.com
+Message-ID: <1068689146.145.1483613957939.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1261366848.125.1482819477434.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1261366848.125.1482819477434.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #1988
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/Uniware/1988/Changes:
+
+[kunika] UNT-2645: mobile number edit linked to uniauth
+
+[kunika] custom template for LITE - script changed, production query added =
+for
+
+[akshay] Pricing services update
+
+[akshay] Controller for pricing API
+
+[Shobhit] fix mongo queries
+
+[bhuvneshwarkumar] create tenant before queuing
+
+[bhuvneshwarkumar] MQ deque logging
+
+[bhuvneshwarkumar] MQ logging
+
+[bhuvneshwarkumar] MQ logging
+
+[sunny] added more logging
+
+[sunny] remove activemq
+
+[sunny] remove activemq
+
+[harsh] trim down picklist fetch and print calls
+
+[harsh] Rollback aspect to check only if annotation is present
+
+[pradhika] UnideskTokenRequest
+
+[sunny] pdf fix
+
+[pradhika] Unidesk Mobile Number and Product Type
+
+[kunika] Mobile verification corrected, sample print template loading modif=
+ied to
+
+[admin] UNT-2632: Inject metrics into uniware
+
+[akshay] Pricing push api for all prices of channel
+
+[sunny] fix queries
+
+[piyush] inventory sync fix for disabled channel
+
+[bhupi] Added pull controller for prices and cleanup up the service interfa=
+ces.
+
+[Shobhit] Price sync in Channel Catalog Sync and few script updates
+
+[Shobhit] binding issue resolved
+
+[devops] Dummy commit
+
+[bhuvneshwarkumar] Export job frequency by default ONETIME
+
+[admin] UNT-2632: Inject metrics into uniware
+
+[admin] UNT-2632: Inject metrics into uniware
+
+[akshay] Pricing service check channel transfer price
+
+[harsh] Dashboard widget cache to use mongo instead of in memory map
+
+[akshay] Check price API fix
+
+[akshay] Update Pricing service
+
+[garima] adding changes for fetching cancelled order wings
+
+[garima] fetching cancelled order fixes
+
+[garima]  adding binding
+
+[garima] binding
+
+[garima] binding fix
+
+[garima] wings
+
+[akshay.agarwal] Wings API updates
+
+[bhuvneshwarkumar] Rollback aspect changes
+
+[bhuvneshwarkumar] Rollback aspect changes
+
+[sunny] dont fetech disabled channel item types
+
+[pradhika] SOAP Request Cancellation Reason added
+
+[pradhika] SOAP Request Cancellation Reason added in 1.6 and 1.7 soap servi=
+ces
+
+[bhupi] Added price summary and sku summary columns in datatable for channe=
+l
+
+[Shobhit] code refactoring
+
+[harsh] Dont fetch pendency everytime for channels where it need not be com=
+mited
+
+[piyush] configure channel connector removed from facility import
+
+[bhupi] Updates to user_datatable_view & export_job_type tables in mysql fo=
+r
+
+[samdeesh] UNT-2654,UNT-2666 Mobile apis for order details and inventory ad=
+justment
+
+[Shobhit] code refactoring in edit
+
+[akshay.agarwal] adding changes for fetching cancelled order wings
+
+[akshay.agarwal] fetching cancelled order fixes
+
+[akshay.agarwal]  adding binding
+
+[akshay.agarwal] binding
+
+[akshay.agarwal] binding fix
+
+[akshay.agarwal] wings
+
+[akshay.agarwal] Wings API updates
+
+[bhupi] Refactoring pricing and bug fixes
+
+[akshay] Locking aspect reverted
+
+[harsh] Fetch pendency fix
+
+[akshay] Categories table updated
+
+[akshay] Search inventory view add not fpund column
+
+[akshay] Lite view update
+
+[harsh] Channel detail dto change hashmap to concurrent
+
+[shipra] UNT-2653: Mobile App - Orders Verification
+
+[akshay] Oscommerce removed from product source
+
+[akshay] Manifest status constructor to support previous version
+
+[pradhika] SOAP Request Cancellation Reason added
+
+[pradhika] SOAP Request Cancellation Reason added in 1.6 and 1.7 soap servi=
+ces
+
+[bhupi] Fix issues in snapdeal-item-type-detail-script.xml and
+
+[shipra] UNT-2632: Inject metrics into uniware
+
+[garima] adding number of hours window in cancelled order
+
+[bhupi] IPricingChannelPushService and IPricingChannelPullService services.
+
+[bhupi] Revert d9cb8a104 until fixed.
+
+[bhupi] Remove unncessary DTOs. Return price DTO in all responses.
+
+[bhuvneshwarkumar] subcription for export job
+
+[shipra] UNT-2363: Add weight column in sale order export
+
+[akshay.agarwal] Create Shipping Package while verifying orders when invent=
+oryManagement
+
+[garima]  adding message for failure
+
+[bhuvneshwarkumar] export migration script changes
+
+[bhuvneshwarkumar] subscription for export
+
+[bhupi] First cut pull apis. Added batch interfaces to pull & push services=
+ in
+
+[akshay.agarwal] Channel Connector fix
+
+[akshay.agarwal] Merge Prod
+
+[bhuvneshwarkumar] subscription for export
+
+[bhupi] Snapdeal pricing checking/updating/fetching updates.
+
+[bhuvneshwarkumar] subscription for export
+
+[bhuvneshwarkumar] subscription for export
+
+[piyush] FacilityStoreChannelImport fix
+
+[shipra] UNT-2632: Inject metrics into uniware
+
+[shipra] Revert "UNT-2632: Inject metrics into uniware"
+
+[piyush] transfer price for flipkart in saleOrderItem
+
+[garima]  Improving error description messages
+
+[harsh] fetch pendency response bug fix
+
+[garima] fix
+
+[harsh] Cancel sale order reassess package bug fix
+
+[piyush] alternat facility code in saleOrderItem API
+
+[samdeesh] image url in inventory datatable for mobile app
+
+[harsh] Cancel sale order reassess package bug fix query
+
+[shipra] UNT-2673: Add channel name column in manifest export
+
+[harsh] Cancel sale order reassess package bug fix query
+
+[Shobhit] missing sql entries
+
+[piyush] auto serviceability removed for Pick up
+
+[sunny] soap api time logging and script fixes
+
+[Shobhit] adding class in datatable view
+
+[sunny] trim new line
+
+[bhuvneshwarkumar] import job config
+
+[Shobhit] changes made in validatePrice to test checkPrice API
+
+[piyush] sys config fix
+
+[harsh] bug fix for package created for cancelled order
+
+[harsh] bug fix for package created for cancelled order
+
+[harsh] Log Activity aspect fix
+
+[harsh] Log Activity aspect fix
+
+[sunny] fetch enabled pincodes
+
+[sunny] add missing @Transactional
+
+[sunny] check for invalid credentials
+
+[sunny] check for invalid credentials
+
+[sunny] script fixes
+
+[Shobhit] checkPrice issues resolved
+
+[bhupi] Instroduced price pipes to pipe beween a source and sink service.
+
+[bhupi] f
+
+[bhuvneshwarkumar] export subscription migration changes
+
+[akshay] Prices columns in channel item type import and new prices import
+
+[akshay] Fix price import remove todo
+
+[akshay] Added request to script context
+
+[akshay] Price export
+
+[Shobhit] few UI changes
+
+[shipra] Move sql changes in build_9.sql for sprint 9
+
+[akshay] Price import job handler fi
+
+[bhupi] Implement async versions on pricing bridge (pull, push) apis. Imple=
+ment
+
+[akshay] Update price import
+
+[akshay] Price import fix
+
+[akshay] Price api logs update
+
+[akshay] Qualifier added
+
+[akshay] Pricing logging to check error
+
+[akshay] Fix for import channel item type price
+
+[akshay] Removing logs added for testing
+
+[akshay] Api fix for edit price
+
+[akshay] Add transactional to edit request
+
+[akshay] Price validation for Edit price API
+
+[samdeesh] UNT-2621 : Reactivation of terminated client
+
+[sunny] support fixes
+
+[akshay.agarwal] Wings Api Changes, Scripts Update
+
+[bhupi] Code cleanup.
+
+[akshay] Catalog fetch prices fix to add error to response
+
+[akshay] Prices export and sync longs
+
+[sunny] rest apis for lenskart
+
+[akshay] Update pice api fix
+
+[akshay] Create price item request fix
+
+[akshay] Binding fix
+
+[akshay] Remove logging added for testing
+
+[amit.dalal] distributed websockets
+
+[akshay.agarwal] Wings Api fix
+
+[akshay] Currency code in prices
+
+[akshay] Not nullable currency in API
+
+[akshay] Pricing import update
+
+[akshay] Pricing update
+
+[akshay] Import made transactional
+
+[akshay] Pricing import
+
+[bhupi] Added support for time series prices and repudiation.
+
+[akshay] Supported currencies in price sync
+
+[bhuvneshwarkumar] export subscription migration changes
+
+[akshay.agarwal] Wings API fix: createInvoice and Label
+
+[akshay] Price imports
+
+[bhuvneshwarkumar] UNT-1881 Welcome email modification
+
+[harsh] API access statistics record response time
+
+[bhupi] Fixes related to currency code.
+
+[sunny] dont sync pendency if connector is broken
+
+[samdeesh] UNT-2654,UNT-2666 Mobile apis for order details and inventory ad=
+justment
+
+[bhupi] Currency code fixes. Remove defaults of editable price fields. NPE =
+check
+
+[samdeesh] image url in inventory datatable for mobile app
+
+[samdeesh] UNT-2653: Mobile App - Orders Verification
+
+[akshay] Last channged to channel and price widget
+
+[akshay] Missed update file
+
+[bhupi] Currency check bug fix.
+
+[samdeesh] UNT-2431 : regulatory forms column on shipments page for lite
+
+[akshay] Rename columns to channel from last
+
+[akshay] Update price columns and widget
+
+[akshay.agarwal] Don't make shipping package for Unverified order
+
+[akshay] Price revamp queries
+
+[sunny] script fixes and increase core pool size for task executor
+
+[bhupi] A facade for use by the presentation layers (desktop, mobile, api
+
+[akshay] Minor changes to sync
+
+[akshay] Pricing fix for edit price
+
+[bhuvneshwarkumar] export migration script
+
+[bhuvneshwarkumar] export migration script
+
+[harsh] InventoryAdjustmentThroughFTPTask and Import API
+
+[sunny] revert number of threads to 100
+
+[sunny] one more api for lenskart
+
+[samdeesh] oauth interceptor fix
+
+[samdeesh] oauth interceptor update
+
+[akshay] Roles for pricing
+
+[bhuvneshwarkumar] script changes
+
+[akshay] Pricing access
+
+[akshay.agarwal] Wings Generate Lable Api fix
+
+[akshay] Access resources for mobile end point
+
+[bhupi] Ability to do local edit (without immediately pushing changes to
+
+[bhuvneshwarkumar] UNT-2721 Showing export/import of past 24 hours, for all=
+ facilities
+
+[bhuvneshwarkumar] UNT-2721 Showing export/import of past 24 hours, for all=
+ facilities
+
+[bhupi] Additional price checks.
+
+[akshay] Pricing added to listings view
+
+[akshay] Modify display columns
+
+[akshay] Pricing history view
+
+[piyush] GetFacilitiesSLA API fix
+
+[Shobhit] PushPrice on channel task
+
+[piyush] snapdeal OC+ scripts
+
+[piyush] Associated facility in channel entity
+
+[akshay] Prices column in listing table
+
+[harsh] Import API
+
+[harsh] Import API
+
+[amit.dalal] Queue based syncs
+
+[Shobhit] editing response in pushAllPricesOnChannel
+
+[akshay.agarwal] Wings Api Refactored
+
+[akshay] Pricing minor refactoring
+
+[akshay] Pricing history view updat
+
+[piyush] sale order to push to associated facility by default
+
+[akshay.agarwal] Wings Api changes, no shipping package for unverified orde=
+rs
+
+[bhupi] Pricing push and pull listeners. Historical prices impl (WIP).
+
+[piyush] serviceability check in getAvailableFacility
+
+[Shobhit] minor refactoring
+
+[bhupi] Trigger push job on import success.
+
+[amit.dalal] request timestamp check in catalog sync
+
+[amit.dalal] tenant code in meta
+
+[amit.dalal] queued status added
+
+[amit.dalal] set stauts to IDLE initially
+
+[amit.dalal] moved AsyncScriptProcessor to quartz
+
+[bhuvneshwarkumar] export subscription migration script for new clouds
+
+[bhupi] Little refactoring and safe assertions
+
+[piyush] Import limit added
+
+[amit.dalal] ws
+
+[piyush] logging for FA
+
+[amit.dalal] fixes
+
+[bhupi] Better docs and some cosmetic cleanup.
+
+[Shobhit] minor refactoring
+
+[Shobhit] minor refactoring
+
+[amit.dalal] revert
+
+[akshay] Pricing services to capture last updates
+
+[Shobhit] sql query for adding task for all tenants
+
+[akshay] Channel Pricing history table update
+
+[amit.dalal] reverting distributed ws
+
+[akshay] Pricing view
+
+[Shobhit] updated query to insert price push task for all tenants
+
+[bhupi] Request response data structure refactoring. Have *async versions o=
+f
+
+[bhupi] Major refactoring of the PricingBridge's pushAllPrices behaviour wi=
+th
+
+[bhupi] Simplified uniware pricing service by splitting merge prices from e=
+dit
+
+[bhupi] Fixed a bug to allow recreation of CIT prices.
+
+[akshay.agarwal] Fix user detail update
+
+[bhupi] Allow editing prices of only those channe litem types which are eli=
+gible
+
+[bhupi] Bug fixes and cleanup of pricing DAOs.
+
+[piyush] serviceability API changes
+
+[piyush] getAvailableFacilities API logic change
+
+[akshay] Pricing imports revamp
+
+[piyush] CreateShippingPackagePostCommitHandler changes
+
+[akshay] Bug Fix marking was dirty false on failure
+
+[akshay] Query update view edit of listings remove commision
+
+[Shobhit] added channel_currency_code in citp and renamed PushPriceOnChanne=
+lTask
+
+[akshay] Pricing history view update
+
+[akshay] Listing page column width updated
+
+[akshay] UniwareSKU and SellerSKU added to history
+
+[akshay] Dirty flag in price import for marking all prices dirty
+
+[Shobhit] Removed FILTER, Added APIs to get PriceSyncStatus and push
+
+[akshay] Pricing update for conditional update
+
+[akshay] Pricing update conditional update
+
+[akshay] Revamp conditional update in pushPriceTask
+
+[sunny] improved logging
+
+[bhupi] Conditional push of local price edits. Nothing but an optimistic wa=
+y to
+
+[bhupi] Ability to force mark the price of a channel item type as dirty. Th=
+is
+
+[bhupi] Remove the unused historical prices api impl.
+
+[bhupi] Cleanup the conditional update dao impl.
+
+[shipra] UNT-2671 :Remove 'Fetch Order details with Label' parameter from
+
+[akshay] Fix while adding channel set default pricing value
+
+[akshay] Listing view update
+
+[garima]  adding api to get channel connector status
+
+[akshay] Add who to pricing history view
+
+[akshay] Listing view update
+
+[Shobhit] get/push method for channel settings page
+
+[akshay] Update pricing status to OFF for SNAPDEAL
+
+[akshay] Update SNAPDEAL price status to OFF from NOT_AVAILABLE
+
+[akshay] Channel catalog task add check for price sync enabled
+
+[Shobhit] added errors and query to add helptooltip
+
+[amit.dalal] logging fix
+
+[bhupi] Fix log message.
+
+[harsh] All Facility Servicability Import
+
+[Shobhit] increasing the delay to 2 hrs for PushPriceOnChannelRecurrentTask
+
+[harsh] All Facility Servicability Import
+
+[akshay] Activity loggong fix for price sync while editing channel
+
+[akshay] Make prices signed
+
+[akshay] Validate price precicision in check price api
+
+[bhupi] Log improvements during price updates.
+
+[akshay] Pricing lock for sync individual prices
+
+[akshay.agarwal] Fix NPE
+
+[sunny] Courier and Customer Returns in Shipment Tab
+
+[pradhika] Cancellation Reason in soap Request wsdl 1.9
+
+[harsh] Shipping Provider Location import disable stale servicability
+
+[bhuvneshwarkumar] hidden columns for subscribed export
+
+[bhuvneshwarkumar] hidden columns for subscribed export
+
+[amit.dalal] remove unwanted transactional
+
+[pradhika] UNT-2585 : SkuCode beginning restricted
+
+[akshay] BUG while fetching catalog for UNLINKED sku
+
+[harsh] Shipping Provider Location import disable stale servicability
+
+[piyush] users import
+
+[akshay] Pricing BUG with unlinked SKU
+
+[akshay.agarwal] Activity log for failed orders
+
+[akshay] BUG fix to allow edit for UNLINKED in LITE
+
+[piyush] user import fixes
+
+[piyush] users import
+
+[piyush] user import fixes
+
+[bhupi] Publish couple of useful fail safe metrics to monitor price edit
+
+[harsh] All facility servicability import
+
+[harsh] include non required columns in sample CSV
+
+[akshay] BUG fix get dirty items for PRODUCt MANAGEMENT switched off
+
+[Shobhit] scripts updated, price limit checked, delay of task decreased
+
+[akshay.agarwal] Source Code check in broadacast message fix
+
+[bhuvneshwarkumar] subcription script changes
+
+[amit.dalal] distributed websockets
+
+[amit.dalal] removed stomp relay dependencies
+
+[akshay.agarwal] failed order activity log fix
+
+[samdeesh] UNT-2621 :reactivate tenant api
+
+[piyush] FA fix
+
+[amit.dalal] logging fix
+
+[sunny] refactoring channel order status sync
+
+[sunny] build fix
+
+[samdeesh] UNT-2621 : Allow cache dirty message processing for inactive ten=
+ants
+
+[akshay] Update listings view
+
+[piyush] busy management changes
+
+[piyush] flipkart FA source added
+
+[samdeesh] UNT-2621 : reactivate tenant api update
+
+[akshay] Update listing view
+
+[piyush] update support added in Automobile Store Import
+
+[sunny] some more refactoring in channel order status sync
+
+[harsh] dashboard widget add locking
+
+[amit.dalal] randomize cron
+
+[kunika] UNT-2577, UNT-2759 : mobile edit and user detail display fixed
+
+[kunika] build changes
+
+[amit.dalal] mark dirty locally before publishing to queue
+
+[Shobhit] removing task parameter action
+
+[akshay] Pricing quartz implementation
+
+[akshay] Pricing Quartz fix
+
+[akshay] Pricing Quartz fix
+
+[akshay] Price Quartz fix
+
+[Shobhit] added log to TaxTypeServiceImpl.java
+
+[amit.dalal] bugfix
+
+[amit.dalal] cache fix
+
+[akshay] Pricing Quartz fix
+
+[Shobhit] adding more logs to TaxTypeServiceImpl.java
+
+[harsh] Dont try to create order if failed order already exists
+
+[amit.dalal] percentage complete in polling result
+
+[akshay] Pricing Quartz fix
+
+[bhuvneshwarkumar] UNT-2684 Mobile App Api Inventory Sync API for Channel a=
+nd product level
+
+[akshay] Pricing quartz fix
+
+[garima] wings: adding connector status api
+
+[amit.dalal] datatable fix
+
+[piyush] create facility request change
+
+[akshay] Pricing Quatz fix
+
+[akshay] Price Quartz fic
+
+[amit.dalal] fix milestone
+
+[harsh] catalog sync percentage complete fix
+
+[samdeesh] reactivate tenant api access updated
+
+[amit.dalal] disable user datatable view
+
+[garima]  fixing build
+
+[amit.dalal] allow dot in alternate party code
+
+[Shobhit] competitive price is an optional field in pricing
+
+[sunny] added logging
+
+[samdeesh] UNT-2800 : fetchSummary mobile api fix
+
+[amit.dalal] bugfix
+
+[sunny] dont use cache while taking lock
+
+[sunny] lock item type inventory while creating putaway list
+
+[harsh] Reverse lat long order
+
+[bhuvneshwarkumar] setting up facility for recurrent export job
+
+[bhuvneshwarkumar] scheduled export facility default value
+
+[bhuvneshwarkumar] scheduled export facility default value
+
+[samdeesh] UNT-2316 : SystemHealthMonitor removed
+
+[sunny] restoring views
+
+[akshay] Recommendation services
+
+[Shobhit] flipkart channel integration : pricing
+
+[samdeesh] UNT-2801 : lookup itemType api
+
+[akshay] Recommendation subscriptions add and remove along with service fix=
+es
+
+[akshay] DTO fix
+
+[bhupi] Rename a couple of classes and some beautification of code
+
+[Shobhit] refactoring in flipkart channel integration for pricing
+
+[amit.dalal] read custom from source enum
+
+[Shobhit] refactoring in pricing
+
+[piyush] property moved to tenantSystemConfig
+
+[piyush] serviceablity cache changes
+
+[piyush] distance changed to km
+
+[sunny] code cleanup
+
+[Shobhit] updated validatePrices
+
+[amit.dalal] Price sync bug fix at saving snapshot to fetch item irrespecti=
+ve of type
+
+[akshay] Recommendation Services for crud lifecycle and subscription manage=
+ment
+
+[Shobhit] check of fractional price support for pricing
+
+[piyush] Facility Context changes
+
+[piyush] fixes
+
+[akshay] Endpoints for recommendations and api fixes
+
+[amit.dalal] locking bug fix
+
+[akshay] Expiry task and get price api updated
+
+[akshay.agarwal] failed order activity change
+
+[akshay] Recommendation apis
+
+[piyush] sla check added in InventoryAdjustment
+
+[akshay] Recommendation API update
+
+[pradhika] Datatable search inventory reverted
+
+[piyush] Store Update fixes
+
+[amit.dalal] bugfix
+
+[piyush] ChannelItemTypeImport fixes
+
+[akshay] Recommendation API updates and acc requested by in Create and Canc=
+el API
+
+[akshay] Recommendation get API added requested by in response
+
+[samdeesh] listings sku summary filter fix
+
+[akshay] unordered params in xml create request
+
+[akshay] Pricing add validate to interface
+
+[akshay] Pricing facade added local price validation
+
+[amit.dalal] increase number of task threads
+
+[amit.dalal] change number of threads
+
+[rachit] UNT-2364 : Remove disabled billing party from Channel settings & l=
+og
+
+[sunny] fix force dispatch for LITE non invoiced orders
+
+[piyush] Item Detailing in Create Invoice with details
+
+[piyush] create invoice with details changes added in version 1.8
+
+[piyush] Facility Profile edit : autoPickupServiceability
+
+[amit.dalal] increase number of task threads
+
+[amit.dalal] T: task fix
+
+[piyush] Channel item type mapping limit added
+
+[amit.dalal] task fix
+
+[amit.dalal] increased number of task thread
+
+[amit.dalal] fix create tenant
+
+[amit.dalal] fix: load task while create tenant
+
+[akshay] Recommendation Updates
+
+[piyush] Invoice queue logging added
+
+[harsh] Publish invoice in transaction
+
+[amit.dalal] tlk in activemq consumer
+
+[amit.dalal] refactor
+
+[harsh] Long Lat swap
+
+[sunny] paytm vendor self handling and script fixes
+
+[sunny] added missing getter setter
+
+[sunny] fix channel order status sync
+
+[akshay] Recommendation CRUD operation API syructure modified
+
+[akshay] Edit price api added to rest and soap
+
+[akshay] Fix get providers list
+
+[akshay] Binding fix
+
+[shipra] editPrice SOAP API
+
+[shipra] EditPrice SOAP API
+
+[shipra] EditPrice SOAP API
+
+[shipra] EditPrice SOAP API
+
+[akshay] Get Reco API updates
+
+[akshay] Listing API By Seller SKU update
+
+[akshay] Recommendation API update
+
+[akshay] update API get request
+
+[amit.dalal] destory context after processing message
+
+[akshay] Pricing fix get price apui
+
+[rachit] UNT-2829 : Flexible order created even if packet type is set to Fi=
+xed on
+
+[shipra] Bulk Edit Price Support
+
+[akshay] EditProviderLocation API fix to handle value not in bindings
+
+[samdeesh] enqueue recommendation message
+
+[kunika] User detail response check added
+
+[shipra] Bulk Edit Price Support
+
+[harsh] Log activity aspect bug fix
+
+[samdeesh] recommendationVO renamed
+
+[akshay] Revamp recommendation services and request
+
+[akshay] API update and message fix
+
+[akshay.agarwal] Paginate order fetch api for wings, remove fetch cancelled=
+ orders api
+
+[akshay] Mobile end pount list recommendation API
+
+[samdeesh] recommendation type specific mongo id
+
+[akshay] Recommendation API updates
+
+[samdeesh] refactored field name
+
+[akshay] recommendation task
+
+[harsh] bug fix multiple invoice messages published for single invoice
+
+[harsh] bug fix multiple invoice messages published for single invoice
+
+[harsh] Facility Context changes
+
+[harsh] fixes
+
+[sunny] refetch shipping package in transaction
+
+[sunny] added logging
+
+[samdeesh] traceability level mobile api
+
+[akshay.agarwal] Comment compound indexes
+
+[akshay] Recommendation access update
+
+[harsh] FacilityChannel import bad check fix
+
+[sunny] set facility id in context everytime
+
+[ankur] for myntra
+
+[piyush] property moved to tenantSystemConfig
+
+[akshay.agarwal] set exportable as false for channel in datatable channel i=
+tem type
+
+[akshay] Pricing validate price fix
+
+[garima] dummy
+
+[garima]  fixing issue null pointer
+
+[samdeesh] mobile apis
+
+[akshay.agarwal] Ebay versioned script
+
+[akshay] Product name in list api
+
+[akshay] Recommendation Management fix approval
+
+[garima] null pointer exception for status
+
+[piyush] system user fix in createCompleteOrder
+
+[piyush] system user fix in createCompleteOrder
+
+[amit.dalal] do not show password in activity logs
+
+[sunny] run order status sync for LIVE clients only
+
+[akshay.agarwal] HashMap to ConcurrentHashMap
+
+[akshay.agarwal] Skip account creation for WINGS tenant setup
+
+[akshay.agarwal] Skip account creation for WINGS
+
+[akshay.agarwal] Create Channel Item Type, if not present,  while fixing fa=
+iled order
+
+[amit.dalal] Do not wait in case of misfire
+
+[amit.dalal] Revert "Do not wait in case of misfire"
+
+[akshay.agarwal] Create Channel Item type if not present while fixing faile=
+d order
+
+[akshay.agarwal] Add last_reactivation_date column to tenant
+
+[piyush] tracking number fix
+
+[piyush] good time to syc changes
+
+[piyush] logging added
+
+[piyush] sku_code length change in item_type table
+
+[piyush] query added
+
+[amit.dalal] increase number of task threads
+
+[harsh.pal.js] Pricing import bug fix
+
+[piyush] Adding default allocation rule while adding FA channel
+
+[garima] fixing manifest milestone issue
+
+[garima]  build issue
+
+[garima] groupon Label Issue : adding shipped in status checks
+
+[Shobhit] Adding delay in trylock
+
+[akshay.agarwal] current facility fix in create sale order internal
+
+[garima] adding iswarehousebinmanagement false check..avoiding complete put=
+away
+
+[piyush] O2O aggregator tasks
+
+[akshay.agarwal.js] Wings product type changes
+
+[bhuvneshwarkumar] Tally New Exports
+
+[pradhika] Tolexo AddorEditShippingProviderLocation TK136520
+
+[piyush] Tenant Details API
+
+[piyush] Inventory change ledger fixes
+
+[akshay.kochhar.js] Skipping invoicing details for force dispatch
+
+[akshay.kochhar.js] Skip item detailing for force dispatch
+
+[piyush] Flipkart Fa fixes
+
+[sunny] adding optional facility code
+
+[kunika] UNT-2716 : Askmebazaar integration
+
+[pradhika] Vendor name in PurchaseOrderCodes
+
+[ankur] one more attachment in welcome mail
+
+[kunika] AMB url mapping
+
+[kunika] build fix
+
+[kunika] amb fix
+
+[ankur] new attchement in welcome mail
+
+[ankur] update in welcome mail body
+
+[kunika] Askmebazaar scripts
+
+[piyush] BillingParty event removed
+
+[bhuvneshwarkumar] Tally Report Changes
+
+[bhuvneshwarkumar] Tally Reports
+
+[harsh.pal.js] Get eligible shipping providers for manifest query change fo=
+r
+
+[kunika] UNT-2716 : Askmebazaar Integration code changes
+
+[akshay.agarwal.js] Edit Channel NPE fix
+
+[piyush] mark channel item type dirty fix
+
+[samdeesh] WM-12 Server routing parameter
+
+[kunika] Return sync for items not yet dispatched in Uniware
+
+[Shobhit] Adding pendency of CITs of the same channel to finalPendency
+
+[kunika] Return sync fix
+
+[piyush] logging added in return handler
+
+[piyush] handle return fix in saleOrderStatusSync
+
+[kunika] AskMeBazaar correct scripts check-in, status sync for delivered or=
+ders
+
+[ankur] sku count limt
+
+[amit.dalal] sku count refactoring
+
+[akshay.kochhar.js] Property too disable periodic sync for a source
+
+[ankur] sku creation allowed starting with 0
+
+[ankur] sku creation allowed starting with 0
+
+[rachit] Fixed Invoice Generation for Order Items with Bundled SKUs
+
+[rachit] [Error Fix]Fixed Invoice Generation for Order Items with Bundled S=
+KUs
+
+[amit.dalal] increased number of task threads
+
+[amit.dalal] increased number of threads
+
+[piyush] BundleItemType difference price ratio fix
+
+[piyush] getState method in AddressDetail
+
+[amit.dalal] reduced threads
+
+[akshay.agarwal.js] take lock on sale order while completing reverse pickup
+
+[amit.dalal] task threads to 1500
+
+[harsh.pal.js] On formula save set recalculate inventory
+
+[piyush] inventory sync disabled for FA facility
+
+[piyush] ChannelCatalogSyncTask fix
+
+[harsh.pal.js] Complete reverse pickup concurrency bug fix
+
+[harsh.pal.js] app identifier in email attachments
+
+[akshay.kochhar.js] Get current manifest API update
+
+[akshay.kochhar.js] Get manifest fix
+
+[akshay.kochhar.js] Get manifest fix
+
+[bhuvneshwar] Comcurrent Modification issue in Export Subscription
+
+[amit.dalal] failed count check for channel connectors
+
+[piyush] add to purchase cart fix
+
+[garima] get channel query performance improvement
+
+[garima] api for invoice details by code
+
+[garima] api for invoice details by code
+
+[garima] setting facility code
+
+[garima] review comments
+
+[garima] api for invoice details by code
+
+[garima] api for invoice details by code
+
+[garima] setting facility code
+
+[garima] review comments
+
+[ankur] cost price at item type and soi level
+
+[ankur] Disable order and inventory sync on -ve balance
+
+[ankur] stop order and inventory sync on -ve balance
+
+[piyush] InvoicePublisherServiceImpl facility code fix
+
+[akshay.kochhar.js] Export fixes
+
+[ankur] tax on total price configuration on Facility Level
+
+[ankur] sales tax on shipping charges
+
+[ankur] build_9.sql
+
+[ankur] item type full dto update
+
+[piyush.arora.js] http proxy added durind channel creation
+
+[harsh.pal.js] acknowledge pending snapshots NPE fix - no need to process d=
+isable
+
+[akshay.agarwal.js] correct misleading log message
+
+[sagar] minimum monthly billing in UsageHistory
+
+[sagar] UsageHistoryDTO type added
+
+[amit.dalal.js] delete task on deactivate tenant
+
+[piyush.arora.js] UsageHistoryDTO to have type
+
+[samdeesh] quartz tables truncation
+
+[ankur] reorder update
+
+[ankur] reorder update
+
+[ankur] country code in create vendor api
+
+[amit.dalal.js] create tenant fix
+
+[bhuvneshwar] support of async in  invenotry sync
+
+[bhuvneshwar] reverting some changes
+
+[bhuvneshwar] minor fix
+
+[ankur] new disputed status in channel payment reco
+
+[ankur] item detail status update for creating complete order
+
+[akshay.agarwal.js] WM-146: ROllBackOnFailure on parent method
+
+[ankur] mysql changes for payment reco update
+
+[akshay.agarwal.js] pendency npe fix
+
+[bhuvneshwar] async inventory update
+
+[piyush.arora.js] item detailing removed for sources where we fetch complet=
+e orders
+
+[bhuvneshwar] async inventory update
+
+[bhuvneshwar] inventory sync : minor changes
+
+[bhuvneshwar] reverting threads to 1500
+
+[bhuvneshwar] async inventory updates
+
+[akshay.kochhar.js] TOL-111: fetch limit exceeded item as unlinked
+
+[ankur] payment icon in left navigation
+
+[ankur] facilty table update
+
+[amit.dalal.js] debug logs
+
+[amit.dalal.js] Revert "debug logs"
+
+[amit.dalal.js] log exception
+
+[ankitbansal] Payments sidetab added in Dashboard icon on hover list
+
+[akshay.agarwal.js] Set go live date to null in common mongo, when tenant u=
+pgrades product
+
+[piyush.arora.js] Shipping provider case mismath fix
+
+[ankur] payment dashboard and payment reco tab
+
+[ankur] payment dashboard and payment reco
+
+[ankur] payment dashboard and payment reco update
+
+[ankur] disable payment reco access resource
+
+[piyush.arora.js] Status sync infinte batch processor fix
+
+[ankur] payment dashboard update
+
+[amit.dalal.js] bugfix
+
+[amit.dalal.js] support for prefetch
+
+[amit.dalal.js] status sync bugfix
+
+[sunny] tweaking quartz config
+
+[sunny] tweaking quartz config
+
+[piyush.arora.js] AddOrEditNonTraceableGatePassItemRequest in SOAP
+
+[amit.dalal.js] Revert "tweaking quartz config"
+
+[amit.dalal.js] Revert "tweaking quartz config"
+
+[amit.dalal.js] removed number of task threads
+
+[piyush.arora.js] sequence generator to take incrementby field
+
+[amit.dalal.js] set correct job code
+
+[amit.dalal.js] remove job before rescheduling
+
+[sunny] remove unused things
+
+[amit.dalal.js] Revert "remove unused things"
+
+[sunny] always use tenant_id to process notification
+
+[sunny] refactoring catalog service to reduce memory footprint
+
+[sunny] refactoring
+
+[sunny] added more logging and fix logger dependency
+
+[sunny] dont clear data on go live
+
+[sunny] making catalog sync backword compatible
+
+[sunny] unprocessed order inventory on channel item type
+
+[sunny] fix catalog preprocessor param order
+
+[sunny] added more logging
+
+[sunny] added more logging
+
+[akshay.agarwal.js] channel inventory exceptions handled
+
+[sunny] rename unknown error to internal error
+
+[sunny] decrease unprocessed order inventory while committing inventory
+
+[akshay.agarwal.js] Limeroad update inventory api script 1.3: Using bulk ap=
+i
+
+[piyush.arora.js] addOrEditNonTraceableGatePassItem fix
+
+[akshay.agarwal.js] Set shipping provider label format in shipping package =
+while fetching
+
+[sunny] remove unused import
+
+[sunny] merge with prod, fix conflicts
+
+[sunny] fix build
+
+[sunny] merge with prod, remove unused things
+
+[piyush.arora.js] AddNonTraceableItemsToGatepass API Added in soap
+
+[akshay.agarwal.js] Dashboard slow queries. Divide getPendingOrdersForSaleO=
+rderProcessor
+
+[sunny] notification changes
+
+[sunny] making sale order processor queue based
+
+[sunny] added more logging in sale order processor
+
+[akshay.kochhar.js] allocate inventory api
+
+[akshay.kochhar.js] Sale Order allocate inventory
+
+[akshay.kochhar.js] Sale Order allocate inventory
+
+[sunny] migrate unprocessed order inventory
+
+[sunny] add support for pushing metrics to graphite
+
+[sunny] fetch script from cache everytime
+
+[sunny] dont run tasks on all hosts
+
+[sunny] dont run channel syncs on all hosts
+
+[sunny] restore clear data
+
+[akshay.kochhar.js] Inventory sync status from mongo
+
+[akshay.kochhar.js] Inventory status from mongo update
+
+[akshay.kochhar.js] Inventory status fix
+
+[akshay.kochhar.js] Order deletion before 1 Aug not allowed
+
+[sunny] tuning quartz
+
+[akshay.kochhar.js] Catalog sync statuses removed from mongo
+
+[sunny] added logging in quartz
+
+[sunny] fix stack overflow
+
+[akshay.kochhar.js] Order sync status from mongo
+
+[sunny] make inventory snapshot processor task queue based
+
+[sunny] make inventory snapshot processor task queue based
+
+[sunny] added logging
+
+[akshay.kochhar.js] Order status sync fix
+
+[akshay.kochhar.js] Fixing sync for all new channels perisiting statuses fo=
+r the first time
+
+[sunny] making jobs global
+
+[akshay.kochhar.js] Pricing sync status removed from cache
+
+[sunny] added more logging
+
+[sunny] added more logging
+
+[sunny] truncate quartz tables and set listener count
+
+[sunny] change job collection name to recurrentJob
+
+[sunny] use job execution level to fetch job result
+
+[sunny] dont load caches eagerly on job tomcats
+
+[akshay.agarwal.js] Metadata support in order sync service. Primarily to su=
+pport pagination
+
+[akshay.kochhar.js] Status sync from channel and reconciliation sync status=
+ migration
+
+[sunny] fix log message and adding DisallowConcurrentExecution
+
+[sunny] make job queuing async
+
+[sunny] make config changes
+
+[sunny] unprocessed order inventory on channel
+
+[sunny] unprocessed order inventory on channel - fix build
+
+[sunny] Revert "unprocessed order inventory on channel - fix build"
+
+[sunny] Revert "unprocessed order inventory on channel"
+
+[sunny] unprocessed order inventory on channel via query
+
+[sunny] unprocessed order inventory on channel via query - bigdecimal to lo=
+ng
+
+[sunny] unprocessed order inventory on channel via query - biginteger to lo=
+ng
+
+[sunny] unprocessed order inventory on channel via query - populate in dto
+
+[sunny] get dashboards via replication
+
+[sunny] get dashboards via replication
+
+[sunny] get dashboards via replication - fix service
+
+[sunny] fix websocket NPE
+
+[sunny] catch cache dirty exception
+
+[sunny] set jms message id
+
+[sunny] revert dashboard
+
+[sunny] Revert "set jms message id"
+
+[sunny] Revert "catch cache dirty exception"
+
+[sunny] Revert "fix websocket NPE"
+
+[sunny] fixing errors
+
+[sunny] moving dashbaords to replica
+
+[sunny] Invoice number in shipment datatable
+
+[sunny] TOL-109: added logging in export subscriber, removed polling from
+
+[sunny] TOL-109: set log routing key
+
+[sunny] TOL-109: added logging in export subscriber, removed polling from
+
+[sunny] TOL-109: set log routing key
+
+[sunny] TOL-109: fix failedOrderInventory
+
+[sunny] TOL-109: fix websocket error
+
+[sunny] TOL-109: fix websocket error
+
+[sunny] TOL-109: remove index
+
+[sunny] TOL-109: remove dashboard widget in user creation
+
+[sunny] TOL-109: setting up influxdb
+
+[sunny] TOL-109: setting up influxdb - adding tags
+
+[sunny] TOL-109: influx db reporter fix version
+
+[sunny] TOL-109: restore dashboards to main db
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendin=
+gOrdersOnly -
+
+[akshay.agarwal.js] Revert "Add log to check order status sync count for
+
+[sunny] TOL-109: add tags for influxdb
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendin=
+gOrdersOnly -
+
+[akshay.agarwal.js] Revert "Add log to check order status sync count for
+
+[akshay.agarwal.js] Add log to check order status sync count for syncPendin=
+gOrdersOnly -
+
+[sunny] TOL-109: restore dashboards to main db
+
+[sunny] TOL-109: add tags for influxdb
+
+[sunny] TOL-109: script fixes and restore picklist
+
+[akshay.agarwal.js] Top skus revenue in top channel dashboard, flipkart api=
+ scripts minor
+
+[akshay.agarwal.js] WORST_PERFORMING_PRODUCTS in dashboard
+
+[sunny] TOL-109: adding support to run for specific product types
+
+[sunny] Revert "TOL-109: adding support to run for specific product types"
+
+[sunny] TOL-109: adding support to run for specific product types - adding
+
+[sunny] TOL-109: adding support to run for specific product types - show jo=
+b on
+
+[sunny] TOL-109: adding support to run for specific product types - fix if
+
+[sunny] TOL-109: fixing possible memory leak in ASyncScriptProcessor
+
+[sunny] TOL-109: fixing tenant specific jobs
+
+[sunny] TOL-109: fixing tenant specific jobs
+
+[sunny] TOL-109: dummy commit
+
+[sunny] TOL-109: moving metrics dependency to unifier
+
+[digvijay] Run Time For All Syncs Fixed
+
+[digvijay] Deleted duplicated log entry in channelorderstatussync
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[sunny] TOL-109: removing elastic search and uniware app data source
+
+[akshay.agarwal.js] Reconciliation Support
+
+[akshay.agarwal.js] moved to build_10.sql
+
+[akshay.agarwal.js] Reconciliation task fix
+
+[akshay.agarwal.js] create reconciliation invoice
+
+[akshay.agarwal.js] unreconcilied row scripts, minor refactoring
+
+[akshay.agarwal.js] update last sync
+
+[akshay.agarwal.js] update last sync
+
+[akshay.agarwal.js] Moving away from snapdeal open api for order status, Re=
+conciliation
+
+[akshay.agarwal.js] locking modified for reconciliation, noOfBoxes field ad=
+ded in datatable
+
+[sagar] inventory sync formula at source
+
+[akshay.agarwal.js] amazon shipping label fix, add channel error display fi=
+x
+
+[akshay.agarwal.js] amazon shipping label fix, add channel error display fi=
+x
+
+[akshay.agarwal.js] Resolve conflicts
+
+[akshay.agarwal.js] remove executor from reconciliation invoice sync, creat=
+e unreconcilied
+
+[sunny] TOL-109: adding pos.enabled property
+
+[sunny] TOL-109: servlet filter for http metrics
+
+[akshay.agarwal.js] sync status set as IDLE when connectors are broken
+
+[akshay.agarwal.js] update logs
+
+[akshay.agarwal.js] fixed
+
+[akshay.agarwal.js] testing async for reconciliation
+
+[akshay.agarwal.js] Snapdeal reconciliation fixes
+
+[sunny] TOL-109: use default app identifier if not already present
+
+[sunny] TOL-109: add one more activemq connector bean
+
+[sunny] TOL-109: merge with prod
+
+[akshay.agarwal.js] additional info in reconciliation invoice item
+
+[akshay.agarwal.js] Edit package dimensions allowed for packed shipments
+
+[akshay.agarwal.js] Edit package dimensions allowed for packed shipments
+
+[sunny] TOL-109: refactoring channel order sync & compute unprocessed order
+
+[akshay.agarwal.js] mark reconciliation disputed and reconcilied
+
+[akshay.agarwal.js] reconciliation changes
+
+[sunny] TOL-109: get bean via name
+
+[akshay.agarwal.js] reconciliation query
+
+[akshay.agarwal.js] reconciliation apis changes
+
+[akshay.agarwal.js] mark reconcilied api fix
+
+[akshay.agarwal.js] mark reconcilied api fix
+
+[akshay.agarwal.js] no of boxes greater than one error message
+
+[akshay.agarwal.js] no of boxes greater than one error message
+
+[akshay.agarwal.js] old apis return new object instead of null
+
+[akshay.agarwal.js] old apis return new object instead of null
+
+[akshay.agarwal.js] set context error in response message as wel
+
+[akshay.agarwal.js] set context error in response message as wel
+
+[sunny] TOL-109: minor refactoring
+
+[akshay.agarwal.js] reconciliation refactors
+
+[akshay.agarwal.js] awaiting payment in reconciliation
+
+[akshay.agarwal.js] npe fix
+
+[akshay.agarwal.js] npe fix
+
+[akshay.agarwal.js] reconciliation fix
+
+[sunny] TOL-109: minor refactoring, putting scripts in place
+
+[akshay.agarwal.js] reconciliation sync if structure scope corrected
+
+[akshay.agarwal.js] reconciliation fixes and datatable query added
+
+[akshay.agarwal.js] reconciliation pending true for new sale orders
+
+[akshay.agarwal.js] reconciliation pending true for new sale orders
+
+[akshay.agarwal.js] bug fix
+
+[sagar] default inventory update formula in SourceDetailDTO
+
+[akshay.agarwal.js] sync status reset method resets 3 more fields
+
+[akshay.agarwal.js] reconciliation snapdeal invoice list script bug fix
+
+[akshay.agarwal.js] add loggin
+
+[akshay.agarwal.js] create invoice if exists refactor
+
+[akshay.agarwal.js] do not create unreconciled row for disabled channel
+
+[akshay.agarwal.js] reconciliation fix
+
+[akshay.agarwal.js] queries update
+
+[akshay.agarwal.js] reconciliation datatables
+
+[sunny] TOL-109: null check for tenant profile
+
+[akshay.agarwal.js] amazon script update
+
+[sunny] TOL-109: null check for tenant profile
+
+[akshay.agarwal.js] reconcilation pending false from new orders when reconc=
+iliation sync for
+
+[akshay.agarwal.js] error logging in reconciliation
+
+[akshay.agarwal.js] npe fix
+
+[sunny] TOL-109: load all tenants in cache
+
+[sunny] TOL-109: submit async tasks to the executor
+
+[akshay.agarwal.js] log npe fix
+
+[akshay.agarwal.js] reconciliation access pattern query
+
+[akshay.agarwal.js] reconciliation access pattern query
+
+[sunny] TOL-109: fix class cast in unprocessed sale order count
+
+[sunny] TOL-109: NPE?
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] flipkart, snapdeal reconciliation script fixes
+
+[sunny] TOL-109: dont set irrocilable
+
+[sunny] Revert "TOL-109: submit async tasks to the executor"
+
+[sunny] TOL-109: set channel code instead of name, and shut down executor i=
+n
+
+[akshay.agarwal.js] DATATABLE_CHANNEL_PAYMENT_RECONCILIATION has reconciled=
+ percentage and
+
+[akshay.agarwal.js] DATATABLE_CHANNEL_PAYMENT_RECONCILIATION has reconciled=
+ percentage and
+
+[sunny] TOL-109: voonik scripts and making lock service implementation thre=
+ad
+
+[sunny] TOL-109: fix no-arg constructor error
+
+[sunny] TOL-109: fixing locking service bean error
+
+[sunny] TOL-109: fixing locking service bean error
+
+[akshay.agarwal.js] datatable shipments tab query
+
+[akshay.agarwal.js] download url in reconciliation settlements
+
+[sunny] TOL-109: fix concurrent modification in influxdb and record http
+
+[sunny] TOL-109: fix NPEs
+
+[sunny] TOL-109: add async supported
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] script and datatable update
+
+[akshay.agarwal.js] script and datatable update
+
+[akshay.agarwal.js] dashboard key duplicate error fix
+
+[akshay.agarwal.js] OAuthAccessToken Customizable removed
+
+[sunny] load eager caches while marking them dirty
+
+[akshay.agarwal.js] datatable and views update, do not mark awaiting_paymen=
+t if no new item
+
+[akshay.agarwal.js] recon datatable view order query
+
+[akshay.agarwal.js] recon datatable view order query
+
+[akshay.agarwal.js] mark unreconciled only if previously reconciled or disp=
+uted while create
+
+[akshay.agarwal.js] recon bug fix. dislay order code is not unique
+
+[akshay.agarwal.js] recon bug fix. dislay order code is not unique
+
+[akshay.agarwal.js] file download link in datatable channel payment reconci=
+liation
+
+[digvijay] Pendency Bug Solved For mercntech
+
+[digvijay] RUN NOW happens immediately now
+
+[sunny] add customer name in api
+
+[akshay.agarwal.js] state regulatory forms
+
+[sunny] set appropriate formula code in channel inventory snapshot
+
+[akshay.agarwal.js] reconciliation changes
+
+[digvijay] Run Now With No Duplicated Code
+
+[akshay.agarwal.js] set data in reconciliation response api
+
+[akshay.agarwal.js] divide by zero fix
+
+[sunny] refactoring reconciliation to channel sale order item level
+
+[sunny] more refactoring to reconciliation
+
+[sunny] more refactoring to reconciliation
+
+[sunny] set reconciliation items
+
+[akshay.agarwal.js] minor npe handle
+
+[akshay.agarwal.js] reconciliation refactorign
+
+[akshay.agarwal.js] datatable changes and fixes
+
+[akshay.agarwal.js] shipping method is string in reconciliation
+
+[akshay.agarwal.js] reconciliation changes
+
+[akshay.agarwal.js] datatable updates and queries
+
+[akshay.agarwal.js] reconciliation refactoring
+
+[akshay.agarwal.js] datatable changes query
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] refactor get items api
+
+[akshay.agarwal.js] refactor get items api
+
+[akshay.agarwal.js] channel product name to id
+
+[akshay.agarwal.js] datatable query
+
+[akshay.agarwal.js] reconciliation dattatable update
+
+[akshay.agarwal.js] channelProduct name in unreconciled rows
+
+[akshay.agarwal.js] pagination fix while fetch reconciliation pending sale =
+orders
+
+[akshay.agarwal.js] hide redundant columns in reconciliation datatable
+
+[akshay.agarwal.js] channel Product name added to unreconciled row datatabl=
+e
+
+[akshay.agarwal.js] channel Product name added to unreconciled row datatabl=
+e
+
+[sunny] allocateInventoryAndGenerateInvoice api
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - check for fulfillab=
+le
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - added more logging
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - fix typos
+
+[akshay.agarwal.js] moving to JDK 1.8
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] bcel moved to 6.1-SNAPSHOT
+
+[akshay.agarwal.js] binding info
+
+[akshay.agarwal.js] ant run plugin 1.7
+
+[akshay.agarwal.js] schemaBindingDirectory
+
+[sunny] running async script instruction for catalog sync in different thre=
+ad
+
+[sunny] added logging for async inventory update
+
+[akshay.agarwal.js] datatable filters fixed
+
+[akshay.agarwal.js] datatable filters fixed
+
+[akshay.agarwal.js] Invoice item status is not nullable
+
+[sunny] null check for channel and source
+
+[akshay.agarwal.js] remove NotBlank from channelSaleOrderCode
+
+[akshay.agarwal.js] s=3Dapp2 in download url
+
+[sunny] moving unprocessed order inventory to channel product id from item =
+type
+
+[akshay.agarwal.js] fix multiple order item  view
+
+[akshay.agarwal.js] unifier and common services moved to 2.0 for java 8
+
+[akshay.agarwal.js] datatable update and send application context to reconc=
+iliation invoice
+
+[akshay.agarwal.js] reconciliation fixes
+
+[akshay.agarwal.js] build fix
+
+[sunny] TOL-109: usernames should be in lower case
+
+[sunny] TOL-109: null check for state code
+
+[digvijay] Integrating GoPigeon
+
+[digvijay] GoPigeon Mysql queries
+
+[digvijay] Mysql queries
+
+[sunny] TOL-109: restricted product types in recurrent job
+
+[akshay.agarwal.js] shopify sale order npe fix
+
+[digvijay] GoPigeon Integrated
+
+[digvijay] Queries refactoed
+
+[akshay.agarwal.js] query fix
+
+[akshay.agarwal.js] Merge queries from master
+
+[akshay.agarwal.js] shipping package edit detail fixes
+
+[akshay.agarwal.js] Capture tin while add channel connector
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] fetch tan from channel fies
+
+[sagar] item type level tat
+
+[akshay.agarwal.js] do not vaildate optional blank while validating billing=
+ party
+
+[piyush.arora.js] CustomFieldValue on merge twice in same transaction fix
+
+[akshay.agarwal.js] add logging, reconciliation minor changes
+
+[akshay.agarwal.js] Reconciliation changes. Big decimal changed to double
+
+[akshay.agarwal.js] Add logging
+
+[akshay.agarwal.js] party contact
+
+[akshay.agarwal.js] billing party attached to channel is not editable
+
+[akshay.agarwal.js] billing party attached to channel is not editable
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] party contact type fix
+
+[akshay.agarwal.js] add party editable field in DTO to show to UI
+
+[akshay.agarwal.js] set billing party to channel, bug fix
+
+[akshay.agarwal.js] Edit billing party in channel validations update
+
+[akshay.agarwal.js] npe fix
+
+[sunny] TOL-109: bundle_inventory_npe_fix
+
+[sagar] tat fixes
+
+[akshay.agarwal.js] update aws sdk version
+
+[akshay.agarwal.js] aws sdk moved to 1.10.1
+
+[akshay.agarwal.js] aws sdk fixes
+
+[akshay.agarwal.js] fix aws sdk issue
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] fetch tin from channel support changes
+
+[akshay.agarwal.js] add apache plugin repo
+
+[akshay.agarwal.js] tin verified column in party.
+
+[akshay.agarwal.js] unifier and common services are 2.0 in dependency plugi=
+n
+
+[sunny] TOL-109: support for mongo entities in export
+
+[akshay.agarwal.js] verify and sync channel params binding fix
+
+[akshay.agarwal.js] verify and sync channel params binding fix
+
+[akshay.agarwal.js] Add log
+
+[akshay.agarwal.js] billing party is optional in binding
+
+[akshay.agarwal.js] flipkart user verification script fixes
+
+[akshay.agarwal.js] Verify Channel connector changes in other scripts to su=
+pport new changes
+
+[akshay.agarwal.js] reconciliation datatable updates
+
+[akshay.agarwal.js] reconciliation hide past download urls
+
+[akshay.agarwal.js] Do not create empty reconciliation invoice
+
+[sunny] TOL-109: script changes and fix NPE in job service
+
+[akshay.agarwal.js] Bring items to top level in sale order reconciliation, =
+datatable changes
+
+[akshay.agarwal.js] reconciliation datatable update
+
+[akshay.agarwal.js] TOL-109: support for mongo entities in export
+
+[akshay.agarwal.js] Merge commit 466a77933ede4a56274d9e73509c4e7b2c188861
+
+[akshay.agarwal.js] Merge commit c24348536db2ec435e3379fbeb9b6a95ea392e79
+
+[akshay.agarwal.js] data channel payment recon minor fix
+
+[sunny] TOL-109: support for printing regulatory forms in bulk
+
+[sunny] data channel payment recon minor fix
+
+[sunny] TOL-109: support for printing regulatory forms in bulk
+
+[sunny] TOL-109: extract form code from formCodeAndName
+
+[akshay.agarwal.js] Edit shipping package for dimensions fixes
+
+[bhuvneshwar] edit picklist issue
+
+[akshay.agarwal.js] tat column and filter in datatable item type search
+
+[akshay.agarwal.js] settlement link pop up fix
+
+[sunny] TOL-109: adding is catalog sync configured prodperty
+
+[sunny] TOL-109: adding is catalog sync configured prodperty
+
+[sunny] TOL-109: payment instrument in sale order
+
+[sunny] TOL-109: optional params in channel connector parameter
+
+[akshay.agarwal.js] Validate tin while creating or editing billing party if=
+ necessary
+
+[sunny] TOL-109: fix NPE
+
+[akshay.agarwal.js] drop column editable from party
+
+[akshay.agarwal.js] disable facility only if no associated channel found, b=
+illing party
+
+[akshay.agarwal.js] edit billing party fix. prevent running of tin validati=
+on api everytime
+
+[akshay.agarwal.js] restrict tin number update in facility and customer edi
+
+[akshay.agarwal.js] reconciliation changes, added field item cost price, ex=
+pected settlement
+
+[akshay.agarwal.js] reconciliation changes, added field item cost price, ex=
+pected settlement
+
+[akshay.agarwal.js] reconciliation changes, added field item cost price, ex=
+pected settlement
+
+[akshay.agarwal.js] datatable minor changes
+
+[akshay.agarwal.js] build fix
+
+[sunny] TOL-109: fix formula code in channel inventory snapshot
+
+[sunny] fix regulatory forms
+
+[sunny] fix regulatory forms
+
+[sunny] pos mark order dispatched
+
+[sunny] fix NPE
+
+[sunny] added more logging
+
+[sunny] pos changes and minor fixes
+
+[sunny] added more logging - fix conflict
+
+[digvijay] Activation API open for inactive tenants
+
+[garima.arora.js] TOL-486 : fixing fulfilment tat
+
+[sunny] Dashboard from replica
+
+[sunny] Dashboard from replica
+
+[sunny] Dashboard from Replication refactoring
+
+[sunny] added logging
+
+[sunny] append -D to tracking number if order gets deleted
+
+[sunny] fix export subscription
+
+[sunny] Add channel add activity fix
+
+------------------------------------------
+[...truncated 10.74 KB...]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/a=
+spectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+=09<unknown source file>:<no line information>
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/=
+main/java/com/unifier/services/aspect/AuditLogAspect.java>:52
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect ha=
+s not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAsp=
+ect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/=
+mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareServices=
+ ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding =
+files
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareServices ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareServices ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ UniwareService=
+s ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, f=
+ail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/a=
+spectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+=09<unknown source file>:<no line information>
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect ha=
+s not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAsp=
+ect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Meter=
+edStaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.LockingAspect has n=
+ot been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/LockingAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+Aspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.TransactionRollback=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/TransactionRollbackAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspec=
+t has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Timed=
+StaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.ShippingPackageCrea=
+tedAspect has not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/ShippingPackageCreatedAspect.class>:=
+0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+Aspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.MarkDirtyAspect has=
+ not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/MarkDirtyAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.LogActivityAspect h=
+as not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/LogActivityAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has =
+not been applied [Xlint:adviceDidNotMatch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/targ=
+et/classes!com/unifier/services/aspect/AuditLogAspect.class>:0
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationD=
+rivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMat=
+ch]
+=09<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/=
+mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMetered=
+StaticAspect has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Excep=
+tionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspe=
+ct has not been applied [Xlint:adviceDidNotMatch]
+=09/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-a=
+spectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/Metri=
+cStaticAspect.class:41
+
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareServic=
+es ---
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareServices ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Un=
+iwareServices/target/UniwareServices-1.0.jar>
+[INFO]                                                                     =
+   =20
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Building UniwareWeb 1.0
+[INFO] --------------------------------------------------------------------=
+----
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been rel=
+ocated to commons-io:commons-io:jar:1.3.2
+[INFO]=20
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareWeb ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniware=
+Web/target>
+[INFO]=20
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (def=
+ault) @ UniwareWeb ---
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Uniwa=
+reWeb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareWeb=
+ ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 140 source files to <http://jenkins.unicommerce.com:8080/j=
+ob/Uniware/ws/UniwareWeb/target/classes>
+[INFO]=20
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ UniwareWeb ---
+[INFO] Configured Artifact: unicommerce:UnifierCore:2.0:jar
+[INFO] Configured Artifact: unicommerce:UnifierScraper:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCommonServices:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareServices:1.0:jar
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierCore/2.=
+0/UnifierCore-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uniware/w=
+s/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierScraper=
+/2.0/UnifierScraper-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uni=
+ware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/=
+**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UniwareCommonS=
+ervices/2.0/UniwareCommonServices-2.0.jar to <http://jenkins.unicommerce.co=
+m:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and exclu=
+des "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniwar=
+eCore/target/UniwareCore-1.0.jar> to <http://jenkins.unicommerce.com:8080/j=
+ob/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "MET=
+A-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniwar=
+eServices/target/UniwareServices-1.0.jar> to <http://jenkins.unicommerce.co=
+m:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and exclu=
+des "META-INF/**"
+[INFO]=20
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)=
+ @ UniwareWeb ---
+[INFO] Not copying test resources
+[INFO]=20
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Un=
+iwareWeb ---
+[INFO] Not compiling test sources
+[INFO]=20
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareWeb --=
+-
+[INFO] Tests are skipped.
+[INFO]=20
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ UniwareWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [UniwareWeb] in [<http://jenkins.unicommerce.com:8=
+080/job/Uniware/ws/UniwareWeb/target/uniware-web]>
+[INFO] Processing war project
+[INFO] Copying webapp resources [<http://jenkins.unicommerce.com:8080/job/U=
+niware/ws/UniwareWeb/src/main/webapp]>
+[INFO] Webapp assembled in [2729 msecs]
+[INFO] Building war: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Un=
+iwareWeb/target/uniware-web.war>
+[INFO]=20
+[INFO] --- yuicompressor-maven-plugin:1.2:compress (compress) @ UniwareWeb =
+---
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/jquery/jquery.all.min.js>
+[INFO] jquery.all.min.js (630897b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/codemirror/codemirror.all.js=
+>
+[INFO] codemirror.all.js (301732b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/codemirror/velocity.all.js>
+[INFO] velocity.all.js (223830b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/js/unifier/unifier.all.js>
+[INFO] unifier.all.js (46277b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.home.css>
+[INFO] ui.home.css (270417b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/codemirror/ui.codemirror.al=
+l.css>
+[INFO] ui.codemirror.all.css (9467b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniw=
+are/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.login.css>
+[INFO] ui.login.css (177508b)
+[INFO] nb warnings: 0, nb errors: 0
+[INFO]=20
+[INFO] --- htmlcompressor-maven-plugin:1.3:html (htmlcompressor) @ UniwareW=
+eb ---
+[INFO] Compressing <http://jenkins.unicommerce.com:8080/job/Uniware/ws/Uniw=
+areWeb/src/main/webapp/views>
+[INFO] HTML compression statistics:
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Category                    | Original                    | Compressed   =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Filesize                    | 13.0 kB                     | 12.8 kB      =
+               |=20
+| Empty Chars                 | 3045                        | 2895         =
+               |=20
+| Script Size                 | 10.9 kB                     | 10.9 kB      =
+               |=20
+| Style Size                  | 0 B                         | 0 B          =
+               |=20
+| Event Handler Size          | 0 B                         | 0 B          =
+               |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+| Time: 00:00:00, Preserved: 10.9 kB, Compression Ratio: 0.99, Savings: 1.1=
+6%             |=20
++-----------------------------+-----------------------------+--------------=
+---------------+
+
+[INFO] HTML compression completed.
+[INFO]=20
+[INFO] --- maven-antrun-plugin:1.7:run (run) @ UniwareWeb ---
+[INFO] Executing tasks
+
+main:
+     [echo] +---------------------------------------------------+
+     [echo]     copying war to tomcat server
+     [echo] +---------------------------------------------------+
+     [copy] Copying 7809 files to /usr/local/apache-tomcat/webapps/ROOT
+[INFO] Executed tasks
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Reactor Summary:
+[INFO]=20
+[INFO] Uniware ............................................ SUCCESS [  0.24=
+0 s]
+[INFO] UniwareCore ........................................ SUCCESS [ 12.47=
+5 s]
+[INFO] UniwareServices .................................... SUCCESS [ 25.24=
+3 s]
+[INFO] UniwareWeb ......................................... SUCCESS [ 35.81=
+6 s]
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] BUILD SUCCESS
+[INFO] --------------------------------------------------------------------=
+----
+[INFO] Total time: 01:13 min
+[INFO] Finished at: 2017-01-05T16:29:02+05:30
+[INFO] Final Memory: 169M/580M
+[INFO] --------------------------------------------------------------------=
+----
+[Uniware] $ /bin/sh -xe /tmp/hudson4541310876836037246.sh
++ /var/lib/jenkins/scripts/runBuildSqlDelta Jenkins
+297b1a2f545793b1dd7a47ced1c5d96e0007fb88
+Executing SQL Changes........................
+     1=09select "StartDeploying";
+     2=09-- alter table party add column editable tinyint(1) not null defau=
+lt 1 after st_number;
+     3=09alter table party add column tin_verified tinyint(1) not null defa=
+ult 0 after st_number;
+     4=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}],"filters":[{"id":"reconciliationStatusFilter","=
+selectedValues":["UNRECONCILED"]}],"sortColumns":[{"column":"orderTransacti=
+onDate","descending":true}]}' where datatable_type =3D 'DATATABLE_CHANNEL_P=
+AYMENT_RECONCILIATION' and code =3D 'UNRECONCILED';
+     5=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}],"filters":[],"sortColumns":[{"column":"orderTra=
+nsactionDate","descending":true}]}' where datatable_type =3D 'DATATABLE_CHA=
+NNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSACTIONS';
+     6=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"reconcili=
+ationIdentifier\" name=3D\"Order Item # (Order Id)\" value=3D\"#{#entity.re=
+conciliationIdentifier}\" width=3D\"170\" sortable=3D\"true\" align=3D\"lef=
+t\" calculated=3D\"true\" >\n            <clientTemplate><![CDATA[<a class=
+=3D\"link detailsPop\" href=3D\"/order/reconciliation\"><#=3Dobj.reconcilia=
+tionIdentifier#></a><br><span style=3D\"font-style: italic;color: #8F8F8F;\=
+">(<#=3Dobj.channelSaleOrderCode#>)</span><input type=3D\"hidden\" class=3D=
+\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\"=
+ class=3D\"reconciliationIdentifier\" value=3D\"<#=3Dobj.reconciliationIden=
+tifier#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"=
+channelProductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductN=
+ame}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=
+=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sort=
+able=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n            <clien=
+tTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (ob=
+j.channelProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\=
+t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj=
+.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\=
+n        </column>\n        <column id=3D\"channelCode\" name=3D\"Channel\"=
+ value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" ali=
+gn=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliatio=
+nStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n     =
+   <column id=3D\"orderAmount\" name=3D\"Order Amount\" value=3D\"#{#entity=
+.items}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"  >\n            <clientTemplate><![CDATA[\n\t\t\t<div style=3D\=
+"float:left;padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text=
+-align:right\">\n\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t=
+\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;pa=
+dding:0 0 0 5px;\"><#\n\t\t\t\tvar itemsSize =3D obj.orderAmount.length;\n\=
+t\t\t \tvar amount =3D 0;\n\t\t\t \tvar shipping =3D 0;\n\t\t \t\tfor(var i=
+=3D0; i<itemsSize; i++) {\n\t\t\t\t\tamount =3D amount + obj.orderAmount[i]=
+.sellingPrice;\n\t\t\t\t\tshipping =3D shipping + obj.orderAmount[i].shippi=
+ngCharges;\n\t\t\t\t}\n\t\t\t\t#><#=3Damount#><br>\n\t\t\t\t<#=3Dshipping#>=
+\n\t\t\t</div>\n\t\t]]></clientTemplate>\n        </column>\n        <colum=
+n id=3D\"totalReconcileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#e=
+ntity.totalReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\=
+"left\" calculated=3D\"true\">\n            <!--<clientTemplate><![CDATA[<a=
+ class=3D\"link detailsPop\" href=3D\"/order/reconciliation/invoiceItems\">=
+<#=3Dobj.totalReconcileAmount#></a><input type=3D\"hidden\" class=3D\"chann=
+elCode\" value=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=
+=3D\"channelSaleOrderItemCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode=
+#>\"><input type=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=
+=3Dobj.channelSaleOrderCode#>\">]]></clientTemplate>-->\n        </column>\=
+n        <column id=3D\"settlementPercentage\" name=3D\"Settlement %\" valu=
+e=3D\"#{#entity.settlementPercentage}\" width=3D\"100\" sortable=3D\"true\"=
+ align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><![CD=
+ATA[<#\n\t\t\t\tif (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div s=
+tyle=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color: #00800=
+0;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixe=
+d(2)#> %</span><#\n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.=
+settlementPercentage >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padd=
+ing:0;font-size:11px;font-weight:bold;color: #0000FF;text-align:right\">\n\=
+t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\=
+t\t} else {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px=
+;font-weight:bold;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3D=
+obj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></cli=
+entTemplate>\n        </column>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciliedBy}\" width=3D\"120\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>=
+\n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDat=
+e\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n  =
+      <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <!--<filter id=3D\"settlementPercenta=
+geFilter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':=
+\'settlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settl=
+ementPercentageFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"settlementP=
+ercentage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Am=
+ount less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmou=
+nt\',\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\=
+" type=3D\"text\" attachToColumn=3D\"totalReconcileAmount\" />-->\n        =
+<filter id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Ide=
+ntifier Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationId=
+entifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFil=
+ter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />=
+\n        <filter id=3D\"reconciliationStatusFilter\" name=3D\"Status\" con=
+dition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'val=
+ue\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multiselect\" values=
+=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTE=
+D|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" atta=
+chToColumn=3D\"reconciliationStatus\" />\n        <filter id=3D\"channelSal=
+eOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" condition=3D\"{\=
+'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'=
+value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachTo=
+Column=3D\"channelSaleOrderItemCode\" />\n        <filter id=3D\"orderTrans=
+actionDateRange\" name=3D\"Order Transaction Date Range\" condition=3D\"{\'=
+criteria\':{\'name\':\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'v=
+alue\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"daterange\" attachToC=
+olumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"channelProductI=
+dFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'criteria\':{\'nam=
+e\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#channelProdu=
+ctIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelProductId\" />\=
+n    </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYME=
+NT_RECONCILIATION";
+     7=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_RE=
+CONCILIATION_INVOICE\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.uniware.core.vo.ChannelReconciliationInvoice\",\"crit=
+eria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context=
+.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column i=
+d=3D\"created\" name=3D\"Settlement Date\" value=3D\"#{#entity.created}\" w=
+idth=3D\"130\" align=3D\"left\" sortable=3D\"false\" calculated=3D\"true\" =
+type=3D\"date\"/>\n        <column id=3D\"channelCode\" name=3D\"Channel\" =
+value=3D\"#{#entity.channelCode}\" width=3D\"140\" sortable=3D\"true\" alig=
+n=3D\"left\" calculated=3D\"true\" />\n        <column id=3D\"settlementInv=
+oiceNumber\" name=3D\"Settlement Invoice Number\" value=3D\"#{#entity.invoi=
+ceCode}\" width=3D\"250\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"link\" href=
+=3D\"/reconciliation/invoices?invoiceCode=3D<#=3Dobj.settlementInvoiceNumbe=
+r#>&channelCode=3D<#=3Dobj.channelCode#>\"><#=3Dobj.settlementInvoiceNumber=
+#></a>]]></clientTemplate>\n        </column>\n        <column id=3D\"total=
+SettlementValue\" name=3D\"Total Settlement Value\" value=3D\"#{#entity.tot=
+alSettlementValue}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" c=
+alculated=3D\"true\" />\n        <column id=3D\"downloadUrl\" name=3D\"Down=
+load Url\" value=3D\"#{#entity.downloadUrl}\" width=3D\"80\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\" />\n        <column id=3D\"downl=
+oadLink\" name=3D\"Download Link\" value=3D\"-\" width=3D\"100\" align=3D\"=
+left\" calculated=3D\"true\" >\n            <clientTemplate><![CDATA[<#\n  =
+              if(obj.downloadUrl !=3D null && obj.downloadUrl.includes(\"re=
+conciliationInvoices\")) {#>\n                    <a target=3D\"_blank\" cl=
+ass=3D\"uni-btn-link pleaseOpenInNewTab\" href=3D\"/files/<#=3Dobj.download=
+Url#>?s=3Dapp2\">Click Here</a><#\n                } else {#>\n            =
+        --<#\n                }#>\n          ]]></clientTemplate>\n        =
+</column>\n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"column\=
+" : \"created\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <=
+filters>\n        <filter id=3D\"channelFilter\" name=3D\"Channel Contains\=
+" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\'=
+,\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\" values=3D\"quer=
+y:select c.code,c.name as name from channel c where c.tenant_id =3D :tenant=
+Id\" attachToColumn=3D\"channelCode\" />\n        <filter id=3D\"invoiceNum=
+berFilter\" name=3D\"Invoice Number Contains\" condition=3D\"{\'criteria\':=
+{\'name\':\'invoiceCode\',\'operator\':\'LIKE\',\'value\':\'#{#invoiceNumbe=
+rFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"settlementInvoiceNumber\"=
+ />\n        <filter id=3D\"statusFilter\" name=3D\"Status\" condition=3D\"=
+{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#s=
+tatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:SUCCESS|SUCCESS, =
+FAILED|FAILED\" attachToColumn=3D\"statusCode\" />\n    </filters>\n</table=
+-config>\n' where name =3D "DATATABLE_CHANNEL_RECONCILIATION_INVOICE";
+     8=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"170\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.reconciliationId=
+entifier#><br>\n\t\t\t\t<span style=3D\"font-style: italic;color: #8F8F8F;\=
+"><#=3Dobj.channelSaleOrderCode#>)</span><br><#\n\t\t\t\tif(obj.saleOrderCo=
+de !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t<a class=3D\"li=
+nk detailsPop\" href=3D\"order/orderitems?orderCode=3D<#=3Dobj.saleOrderCod=
+e#>\">Order: <#=3Dobj.saleOrderCode#></a>\n\t\t\t\t<#}#>\n\t\t\t]]></client=
+Template>\n        </column>\n        <column id=3D\"channelProductName\" n=
+ame=3D\"Product\" value=3D\"#{#entity.channelProductName}\" width=3D\"150\"=
+ sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D\"true=
+\"/>\n        <column id=3D\"channelProductId\" name=3D\"Product\" value=3D=
+\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[\n=
+\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channelProductName =
+!=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t<br><span st=
+yle=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelProductName#>=
+)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        </column>\n =
+       <column id=3D\"channelCode\" name=3D\"Channel\" value=3D\"#{#entity.=
+channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\" name=3D\"St=
+atus Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"ord=
+erAmount\" name=3D\"Order Amount\" value=3D\"#{#entity.items}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\"><#\n=
+\t\t\t\tvar itemsSize =3D obj.orderAmount.length;\n\t\t\t \tvar amount =3D =
+0;\n\t\t\t \tvar shipping =3D 0;\n\t\t \t\tfor(var i=3D0; i<itemsSize; i++)=
+ {\n\t\t\t\t\tamount =3D amount + obj.orderAmount[i].sellingPrice;\n\t\t\t\=
+t\tshipping =3D shipping + obj.orderAmount[i].shippingCharges;\n\t\t\t\t}\n=
+\t\t\t\t#><#=3Damount#><br>\n\t\t\t\t<#=3Dshipping#>\n\t\t\t</div>\n\t\t]]>=
+</clientTemplate>\n        </column>\n        <column id=3D\"totalReconcile=
+Amount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmo=
+unt}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\">\n            <!--<clientTemplate><![CDATA[<a class=3D\"link details=
+Pop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcile=
+Amount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=
+=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"channelSaleOrderI=
+temCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode#>\"><input type=3D\"h=
+idden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrde=
+rCode#>\">]]></clientTemplate>-->\n        </column>\n        <column id=3D=
+\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.settle=
+mentPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (ob=
+j.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;pa=
+dding:0;font-size:11px;font-weight:bold;color: #008000;text-align:right\">\=
+n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\=
+t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercentage >=
+=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;f=
+ont-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dob=
+j.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\=
+t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;colo=
+r: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercenta=
+ge.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"reconciledBy\" name=3D\"Reconciled By\" v=
+alue=3D\"#{#entity.reconciledBy}\" width=3D\"120\" sortable=3D\"true\" alig=
+n=3D\"left\" calculated=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n=
+        <![CDATA[{\"column\" : \"orderTransactionDate\", \"descending\" : \=
+"true\"}]]>\n    </defaultSortBy>\n    <filters>\n        <filter id=3D\"ch=
+annelFilter\" name=3D\"Channel Contains\" condition=3D\"{\'criteria\':{\'na=
+me\':\'channelCode\',\'operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\=
+" type=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=3D\"query:=
+select c.code,c.name as name from channel c where c.tenant_id =3D :tenantId=
+\"/>\n        <filter id=3D\"settlementPercentageFilter\" name=3D\"% greate=
+r than\" condition=3D\"{\'criteria\':{\'name\':\'settlementPercentage\',\'o=
+perator\':\'GREATER_THAN\',\'value\':\'#{#settlementPercentageFilter}\'}}\"=
+ type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementPerc=
+entageFilter)}\" attachToColumn=3D\"settlementPercentage\" />\n        <fil=
+ter id=3D\"settlementAmountFilter\" name=3D\"Amount less than\" condition=
+=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\',\'operator\':\'LESS_T=
+HAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"text\" valueExp=
+ression=3D\"#{new java.lang.Double(#settlementAmountFilter)}\" attachToColu=
+mn=3D\"totalReconcileAmount\" />\n        <filter id=3D\"reconciliationIden=
+tifierFilter\" name=3D\"Reconciliation Identifier Contains\" condition=3D\"=
+{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',=
+\'value\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\"text\" attach=
+ToColumn=3D\"reconciliationIdentifier\" />\n        <filter id=3D\"reconcil=
+iationStatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\=
+':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFil=
+ter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AW=
+AITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCIL=
+ED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatus=
+\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Ord=
+er Item Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliat=
+ionIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCo=
+deFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode=
+\" />\n        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order Tr=
+ansaction Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransac=
+tionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRan=
+ge}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" />=
+\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Conta=
+ins\" condition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operato=
+r\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" a=
+ttachToColumn=3D\"channelProductId\" />\n    </filters>\n</table-config>\n'=
+ where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+     9=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"quantity"}],"filters":[{"id"=
+:"reconciliationStatusFilter","selectedValues":["AWAITING_PAYMENT"]}],"sort=
+Columns":[{"column":"orderTransactionDate","descending":true}]}' where data=
+table_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'PEN=
+DING_TRANSACTIONS';
+    10=09update user_datatable_view set config_json=3D '{"resultsPerPage":2=
+5,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdentif=
+ier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcili=
+ationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"name=
+":"settlementPercentage"},{"name":"quantity"}],"filters":[{"id":"reconcilia=
+tionStatusFilter","selectedValues":["UNRECONCILED"]}],"sortColumns":[{"colu=
+mn":"orderTransactionDate","descending":true}]}' where datatable_type =3D '=
+DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'UNRECONCILED';
+    11=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"orderAmount"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}, {"name":"quantity"}],"filters":[],"sortColumns"=
+:[{"column":"orderTransactionDate","descending":true}]}' where datatable_ty=
+pe =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and code =3D 'ALL_TRANSAC=
+TIONS';
+    12=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"250\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left=
+;padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:righ=
+t\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\=
+t<span>Channel Order Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t<span>Order C=
+ode: </span>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\"float:left;padding:0 0=
+ 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br>\n\t\t\t\t\t<#=
+=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D nu=
+ll && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleas=
+eOpenInNewTab\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCo=
+de#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\=
+t]]></clientTemplate>\n        </column>\n        <column id=3D\"channelPro=
+ductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\" wid=
+th=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hid=
+den=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"Produc=
+t\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate><=
+![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channelPr=
+oductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t<b=
+r><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelPro=
+ductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        </=
+column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" value=3D\"=
+#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\" n=
+ame=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" sor=
+table=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column =
+id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity.sellingP=
+rice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\=
+"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharges\" name=
+=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" width=3D\"15=
+0\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D\"t=
+rue\"/>\n        <column id=3D\"orderAmount\" name=3D\"Total Order Amount\"=
+ value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" al=
+ign=3D\"left\" calculated=3D\"true\"  >\n            <clientTemplate><![CDA=
+TA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-style: i=
+talic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Price: </sp=
+an>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\t<di=
+v style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sellingPrice=
+#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTemplate>\n =
+       </column>\n        <column id=3D\"totalReconcileAmount\" name=3D\"Se=
+ttlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" width=3D\"120=
+\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n           =
+ <!--<clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"/orde=
+r/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><input t=
+ype=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"=
+><input type=3D\"hidden\" class=3D\"channelSaleOrderItemCode\" value=3D\"<#=
+=3Dobj.channelSaleOrderItemCode#>\"><input type=3D\"hidden\" class=3D\"chan=
+nelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]></clientT=
+emplate>-->\n        </column>\n        <column id=3D\"settlementPercentage=
+\" name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\" widt=
+h=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n  =
+          <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPercentage=
+ >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px=
+;font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span><#=3D=
+obj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (obj.se=
+ttlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\t\t\t\=
+t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color:=
+ #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage=
+.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D\"floa=
+t:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-align:=
+right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</spa=
+n><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n        <co=
+lumn id=3D\"quantity\" name=3D\"Quantity\" value=3D\"#{#entity.quantity}\" =
+width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/=
+>\n        <column id=3D\"reconciledBy\" name=3D\"Reconciled By\" value=3D\=
+"#{#entity.reconciledBy}\" width=3D\"120\" sortable=3D\"true\" align=3D\"le=
+ft\" calculated=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n        =
+<![CDATA[{\"column\" : \"orderTransactionDate\", \"descending\" : \"true\"}=
+]]>\n    </defaultSortBy>\n    <filters>\n        <filter id=3D\"channelFil=
+ter\" name=3D\"Channel Contains\" condition=3D\"{\'criteria\':{\'name\':\'c=
+hannelCode\',\'operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\" type=
+=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=3D\"query:select=
+ c.code,c.name as name from channel c where c.tenant_id =3D :tenantId\"/>\n=
+        <filter id=3D\"settlementPercentageFilter\" name=3D\"% greater than=
+\" condition=3D\"{\'criteria\':{\'name\':\'settlementPercentage\',\'operato=
+r\':\'GREATER_THAN\',\'value\':\'#{#settlementPercentageFilter}\'}}\" type=
+=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementPercentag=
+eFilter)}\" attachToColumn=3D\"settlementPercentage\" />\n        <filter i=
+d=3D\"settlementAmountFilter\" name=3D\"Amount less than\" condition=3D\"{\=
+'criteria\':{\'name\':\'totalReconcileAmount\',\'operator\':\'LESS_THAN\',\=
+'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"text\" valueExpression=
+=3D\"#{new java.lang.Double(#settlementAmountFilter)}\" attachToColumn=3D\"=
+totalReconcileAmount\" />\n        <filter id=3D\"reconciliationIdentifierF=
+ilter\" name=3D\"Reconciliation Identifier Contains\" condition=3D\"{\'crit=
+eria\':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value=
+\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\"text\" attachToColum=
+n=3D\"reconciliationIdentifier\" />\n        <filter id=3D\"reconciliationS=
+tatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'sta=
+tusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}=
+}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_=
+PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNR=
+ECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n=
+        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item=
+ Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIden=
+tifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilte=
+r}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n=
+        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order Transacti=
+on Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransactionDat=
+e\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}=
+\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" />\n     =
+   <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Contains\" c=
+ondition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operator\':\'L=
+IKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachTo=
+Column=3D\"channelProductId\" />\n    </filters>\n</table-config>\n' where =
+name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    13=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"270\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right=
+\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t=
+<span>Channel Order Code: </span>\n\t\t\t\t\t<br><#\n\t\t\t\t\tif(obj.saleO=
+rderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<span>O=
+rder Code: </span>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\=
+"float:left;padding:0 0 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentif=
+ier#><br>\n\t\t\t\t\t<#=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(ob=
+j.saleOrderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t=
+<a class=3D\"link pleaseOpenInNewTab\" href=3D\"/order/orderitems?orderCode=
+=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>=
+\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n        <c=
+olumn id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#entity.ch=
+annelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProd=
+uctId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n      =
+      <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\=
+t\t<# if (obj.channelProductName !=3D null && obj.channelProductName !=3D \=
+"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;=
+\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clie=
+ntTemplate>\n        </column>\n        <column id=3D\"channelCode\" name=
+=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D=
+\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusC=
+ode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price\" va=
+lue=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=
+=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.ship=
+pingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"orderAmount\" na=
+me=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t=
+\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n=
+\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"totalRe=
+concileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalRecon=
+cileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculat=
+ed=3D\"true\">\n            <!--<clientTemplate><![CDATA[<a class=3D\"link =
+detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalRe=
+concileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=
+=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"channelSal=
+eOrderItemCode\" value=3D\"<#=3Dobj.channelSaleOrderItemCode#>\"><input typ=
+e=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelS=
+aleOrderCode#>\">]]></clientTemplate>-->\n        </column>\n        <colum=
+n id=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity=
+.settlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\=
+tif (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:=
+left;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:ri=
+ght\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span>=
+<#\n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPerce=
+ntage >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size=
+:11px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span>=
+<#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n=
+\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bo=
+ld;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementP=
+ercentage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n =
+       </column>\n        <column id=3D\"quantity\" name=3D\"Quantity\" val=
+ue=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\"=
+left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" so=
+rtable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\=
+n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate=
+\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n   =
+     <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFi=
+lter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'se=
+ttlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlemen=
+tPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPerce=
+ntage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount=
+ less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\'=
+,\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" ty=
+pe=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountF=
+ilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=
+=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Co=
+ntains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\'=
+,\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\"=
+ type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        =
+<filter id=3D\"reconciliationStatusFilter\" name=3D\"Status\" condition=3D\=
+"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#=
+reconciliationStatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RE=
+CONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, =
+UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=
+=3D\"reconciliationStatus\" />\n        <filter id=3D\"channelSaleOrderItem=
+CodeFilter\" name=3D\"Order Item Code Contains\" condition=3D\"{\'criteria\=
+':{\'name\':\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'=
+#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\=
+"channelSaleOrderItemCode\" />\n        <filter id=3D\"orderTransactionDate=
+Range\" name=3D\"Order Transaction Date Range\" condition=3D\"{\'criteria\'=
+:{\'name\':\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'value\':\'#=
+{#orderTransactionDateRange}\'}}\" type=3D\"daterange\" attachToColumn=3D\"=
+orderTransactionDate\" />\n        <filter id=3D\"channelProductIdFilter\" =
+name=3D\"Product Id Contains\" condition=3D\"{\'criteria\':{\'name\':\'chan=
+nelProductId\', \'operator\':\'LIKE\',\'value\':\'#{#channelProductIdFilter=
+}\'}}\" type=3D\"text\" attachToColumn=3D\"channelProductId\" />\n    </fil=
+ters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCI=
+LIATION";
+    14=09-- Akshay Ag; | Add tat column and filter in item type datatable |=
+ 22 Nov 2016
+    15=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE SEARCH ITE=
+M TYPE\" height=3D\"1400\">\n    <queryString>\n        <![CDATA[from item_=
+type it join category c on it.category_id =3D c.id left join tax_type t on =
+it.tax_type_id =3D t.id where it.tenant_id =3D :tenantId and it.sku_code !=
+=3D \'unknown-sku\']]>\n    </queryString>\n    <columns>\n        <column =
+id=3D\"itemType\" name=3D\"Item Name\" value=3D\"it.name\" width=3D\"215\" =
+sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"productCode=
+\" name=3D\"Sku Code\" value=3D\"it.sku_code\" width=3D\"240\" sortable=3D\=
+"true\" align=3D\"left\">\n            <clientTemplate><![CDATA[<# var skuC=
+ode =3D encodeURI(obj.productCode).replace(\"#\", \"%23\"); #><div class=3D=
+\"lfloat10\"><a class=3D\"link\" href=3D\"/products/edit?sku=3D<#=3DskuCode=
+#>\"><#=3Dobj.productCode#></a><div data-skucode=3D\"<#=3DproductCode#>\" c=
+lass=3D\"productInfoIcon link glyphicon glyphicon-info-sign\"></div></div>]=
+]></clientTemplate>\n        </column>\n        <column id=3D\"category\" n=
+ame=3D\"Category\" value=3D\"c.name\" width=3D\"150\" sortable=3D\"true\" a=
+lign=3D\"left\" />\n        <column id=3D\"color\" name=3D\"Color\" value=
+=3D\"it.color\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" />\n  =
+      <column id=3D\"brand\" name=3D\"Brand\" value=3D\"it.brand\" width=3D=
+\"210\" sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"tat=
+\" name=3D\"Tat\" value=3D\"it.tat\" width=3D\"120\" sortable=3D\"true\" al=
+ign=3D\"left\" />\n        <column id=3D\"size\" name=3D\"Size\" value=3D\"=
+it.size\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        =
+<column id=3D\"weight\" name=3D\"Weight\" value=3D\"it.weight\" width=3D\"1=
+00\" sortable=3D\"true\" align=3D\"left\" />\n        <column id=3D\"mrp\" =
+name=3D\"MRP\" value=3D\"it.max_retail_price\" width=3D\"100\" sortable=3D\=
+"true\" align=3D\"left\" />\n        <column id=3D\"ean\" name=3D\"EAN\" va=
+lue=3D\"it.ean\" width=3D\"100\" align=3D\"left\" />\n        <column id=3D=
+\"dimensions\" name=3D\"Dimensions\" value=3D\"Concat(it.length, \'x\' ,it.=
+width, \'x\' ,it.height)\" width=3D\"100\" sortable=3D\"true\" align=3D\"le=
+ft\" />\n        <column id=3D\"taxType\" name=3D\"Tax Type\" value=3D\"t.c=
+ode\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        <col=
+umn id=3D\"enabled\" name=3D\"Enabled\" value=3D\"if(it.enabled,\'Yes\',\'N=
+o\')\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" />\n        <co=
+lumn id=3D\"type\" name=3D\"Type\" value=3D\"it.type\" width=3D\"100\" sort=
+able=3D\"true\" align=3D\"left\" />\n        <column id=3D\"imageUrl\" name=
+=3D\"Image\" value=3D\"it.image_url\" width=3D\"100\" sortable=3D\"true\" a=
+lign=3D\"left\" hidden=3D\"true\" />\n        <column id=3D\"pageUrl\" name=
+=3D\"Page URL\" value=3D\"it.product_page_url\" width=3D\"100\" sortable=3D=
+\"true\" align=3D\"left\" hidden=3D\"true\" />\n    </columns>\n    <filter=
+s>\n        <filter id=3D\"enabledFilter\" name=3D\"Is Enabled\" condition=
+=3D\"it.enabled =3D :enabledFilter\" type=3D\"boolean\" attachToColumn=3D\"=
+enabled\" />\n        <filter id=3D\"brandFilter\" name=3D\"Brand Contains\=
+" condition=3D\"it.brand like :brandFilter\" type=3D\"text\" valueExpressio=
+n=3D\"#{\'%\' + #brandFilter + \'%\'}\" attachToColumn=3D\"brand\" />\n    =
+    <filter id=3D\"tatFilter\" name=3D\"Tat less than\" condition=3D\"it.ta=
+t &lt; :tatFilter\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Int=
+eger(#tatFilter)}\" attachToColumn=3D\"tat\" />\n        <filter id=3D\"ite=
+mTypeFilter\" name=3D\"Item Name Contains\" condition=3D\"it.name like :ite=
+mTypeFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #itemTypeFilter=
+ + \'%\'}\" attachToColumn=3D\"itemType\" />\n        <filter id=3D\"produc=
+tCodeFilter\" name=3D\"Sku Code Contains\" condition=3D\"it.sku_code like :=
+productCodeFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #productC=
+odeFilter + \'%\'}\" attachToColumn=3D\"productCode\" />\n        <filter i=
+d=3D\"colorFilter\" name=3D\"Color Contains\" condition=3D\"it.color like :=
+colorFilter\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #colorFilter + =
+\'%\'}\" attachToColumn=3D\"color\" />\n        <filter id=3D\"categoryFilt=
+er\" name=3D\"Category Contains\" condition=3D\"c.name like :categoryFilter=
+\" type=3D\"text\" valueExpression=3D\"#{\'%\' + #categoryFilter + \'%\'}\"=
+ attachToColumn=3D\"category\" />\n        <filter id=3D\"typeFilter\" name=
+=3D\"Type In\" condition=3D\"it.type in :typeFilter\" type=3D\"multiselect\=
+" valueExpression=3D\"#{#typeFilter}\" values=3D\"enum:SIMPLE|SIMPLE,BUNDLE=
+|BUNDLE\" attachToColumn=3D\"type\" />\n    </filters>\n</table-config>\n' =
+where name =3D "DATATABLE SEARCH ITEM TYPE";
+    16=09-- done
+    17=09-- Akshay Ag;| Settlement Amount pop up fix in reconciliation data=
+table | 22 Nov 2016
+    18=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"270\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right=
+\">\n\t\t\t\t\t<span>Channel Item Code: </span>\n\t\t\t\t\t<br>\n\t\t\t\t\t=
+<span>Channel Order Code: </span>\n\t\t\t\t\t<br><#\n\t\t\t\t\tif(obj.saleO=
+rderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<span>O=
+rder Code: </span>\n\t\t\t\t\t<#}#>\n\t\t\t\t</div>\n\t\t\t\t<div style=3D\=
+"float:left;padding:0 0 0 5px;\">\n\t\t\t\t\t<#=3Dobj.reconciliationIdentif=
+ier#><br>\n\t\t\t\t\t<#=3Dobj.channelSaleOrderCode#><br><#\n\t\t\t\t\tif(ob=
+j.saleOrderCode !=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t=
+<a class=3D\"link pleaseOpenInNewTab\" href=3D\"/order/orderitems?orderCode=
+=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.saleOrderCode#></a>\n\t\t\t\t\t<#}#>=
+\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n        <c=
+olumn id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#entity.ch=
+annelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"channelProd=
+uctId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" width=3D=
+\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n      =
+      <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\=
+t\t<# if (obj.channelProductName !=3D null && obj.channelProductName !=3D \=
+"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;=
+\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clie=
+ntTemplate>\n        </column>\n        <column id=3D\"channelCode\" name=
+=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D=
+\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusC=
+ode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"=
+true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price\" va=
+lue=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=
+=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.ship=
+pingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcula=
+ted=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"orderAmount\" na=
+me=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"1=
+50\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n       =
+     <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;f=
+ont-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t=
+\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </spa=
+n>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t=
+\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n=
+\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"totalRe=
+concileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.totalRecon=
+cileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculat=
+ed=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"link deta=
+ilsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconc=
+ileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<=
+#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconciliationId=
+entifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"=
+hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrd=
+erCode#>\">]]></clientTemplate>\n        </column>\n        <column id=3D\"=
+settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.settleme=
+ntPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcul=
+ated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.=
+settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padd=
+ing:0;font-size:11px;font-weight:bold;color: #008000;text-align:right\">\n\=
+t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\=
+t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercentage >=
+=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;f=
+ont-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dob=
+j.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\=
+t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;colo=
+r: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercenta=
+ge.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"quantity\" name=3D\"Quantity\" value=3D\"=
+#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=3D\"Rec=
+onciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\n    <=
+defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate\", \"=
+descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n        <=
+filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=3D\"{\'=
+criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':\'#{#cha=
+nnelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channelCode\" v=
+alues=3D\"query:select c.code,c.name as name from channel c where c.tenant_=
+id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFilter\" n=
+ame=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'settlement=
+Percentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlementPercent=
+ageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double=
+(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPercentage\" =
+/>\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount less th=
+an\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\',\'opera=
+tor\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" type=3D\"t=
+ext\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountFilter)}\=
+" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=3D\"reco=
+nciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Contains\" =
+condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operat=
+or\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\" type=3D\=
+"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        <filter i=
+d=3D\"reconciliationStatusFilter\" name=3D\"Status\" condition=3D\"{\'crite=
+ria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconcili=
+ationStatusFilter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|=
+RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCI=
+LED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconc=
+iliationStatus\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\=
+" name=3D\"Order Item Code Contains\" condition=3D\"{\'criteria\':{\'name\'=
+:\'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelS=
+aleOrderItemCodeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSal=
+eOrderItemCode\" />\n        <filter id=3D\"orderTransactionDateRange\" nam=
+e=3D\"Order Transaction Date Range\" condition=3D\"{\'criteria\':{\'name\':=
+\'orderTransactionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTran=
+sactionDateRange}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransa=
+ctionDate\" />\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Pr=
+oduct Id Contains\" condition=3D\"{\'criteria\':{\'name\':\'channelProductI=
+d\', \'operator\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" typ=
+e=3D\"text\" attachToColumn=3D\"channelProductId\" />\n    </filters>\n</ta=
+ble-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    19=09-- done
+    20=09-- Akshay Ag;| drop editable from party, use tin_verified column i=
+nstead | 22th Nov 2016
+    21=09-- alter table party drop column editable;
+    22=09-- done
+    23=09--  Akshayag; | order amount filter, item costprice in data channe=
+l payment reconciliation and datatable views | 23rd Nov 2016
+    24=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.sa=
+leOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleaseOpenInNewTa=
+b\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3D=
+obj.reconciliationIdentifier#><br/>(<#=3Dobj.channelSaleOrderCode#>)</a>\n\=
+t\t\t\t\t<#} else {#>\n\t\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br/>=
+(<#=3Dobj.channelSaleOrderCode#>)<br><#\n\t\t\t\t\t}#>\n\t\t\t\t</div>\n\t\=
+t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"channelP=
+roductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" h=
+idden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"Prod=
+uct\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\">\n            <clientTemplate=
+><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.channel=
+ProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\t\t\t=
+<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.channelP=
+roductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n        =
+</column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" value=3D=
+\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=3D\"le=
+ft\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationStatus\"=
+ name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"150\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <colum=
+n id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity.sellin=
+gPrice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharges\" n=
+ame=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" width=3D\=
+"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidden=3D=
+\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Total Order Amou=
+nt\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\=
+" align=3D\"left\" calculated=3D\"true\"  >\n            <clientTemplate><!=
+[CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-styl=
+e: italic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Price: =
+</span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n\t\t\=
+t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sellingP=
+rice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTemplate=
+>\n        </column>\n        <column id=3D\"totalReconcileAmount\" name=3D=
+\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" width=3D\=
+"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n       =
+     <clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"/orde=
+r/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><input t=
+ype=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\"=
+><input type=3D\"hidden\" class=3D\"reconciliationIdentifier\" value=3D\"<#=
+=3Dobj.reconciliationIdentifier#>\"><input type=3D\"hidden\" class=3D\"chan=
+nelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]></clientT=
+emplate>\n        </column>\n        <column id=3D\"settlementPercentage\" =
+name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\" width=
+=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n   =
+         <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPercentage =
+>=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;=
+font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span><#=3Do=
+bj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (obj.set=
+tlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\t\t\t\t=
+<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color: =
+#0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D\"float=
+:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-align:r=
+ight\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span=
+><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n        <col=
+umn id=3D\"itemCostPrice\" name=3D\"Item Cost Price\" value=3D\"#{#entity.i=
+temCostPrice}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calcul=
+ated=3D\"true\"/>\n        <column id=3D\"quantity\" name=3D\"Quantity\" va=
+lue=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" align=3D\=
+"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy\" name=
+=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" so=
+rtable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </columns>\=
+n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransactionDate=
+\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filters>\n   =
+     <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" condition=
+=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'value\':=
+\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"channel=
+Code\" values=3D\"query:select c.code,c.name as name from channel c where c=
+.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercentageFi=
+lter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\':\'se=
+ttlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#settlemen=
+tPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlementPerce=
+ntage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"Amount=
+ less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\'=
+,\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\" ty=
+pe=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAmountF=
+ilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filter id=
+=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifier Co=
+ntains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\'=
+,\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\"=
+ type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n        =
+<filter id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\" co=
+ndition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GREATER=
+_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" type=3D\"text\" valueExpres=
+sion=3D\"#{new java.lang.Double(#orderAmountFilter)}\" attachToColumn=3D\"s=
+ellingPrice\" />\n        <filter id=3D\"reconciliationStatusFilter\" name=
+=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operat=
+or\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"multi=
+select\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_P=
+AYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECO=
+NCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n        <filter id=
+=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contains\" c=
+ondition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operato=
+r\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=3D\"=
+text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filter id=
+=3D\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range\" co=
+ndition=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operator\':=
+\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"datera=
+nge\" attachToColumn=3D\"orderTransactionDate\" />\n        <filter id=3D\"=
+channelProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"{\'cr=
+iteria\':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value\':\'=
+#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channel=
+ProductId\" />\n        <filter id=3D\"itemCostPriceFilter\" name=3D\"Cost =
+Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'itemCostPrice\=
+',\'operator\':\'GREATER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}}\" t=
+ype=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#itemCostPriceFil=
+ter)}\" attachToColumn=3D\"itemCostPrice\" />\n    </filters>\n</table-conf=
+ig>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    25=09-- update export_job_type set export_job_config =3D '<?xml version=
+=3D\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL=
+_PAYMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <!=
+[CDATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"cr=
+iteria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#conte=
+xt.tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column=
+ id=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"=
+#{#entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=
+=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\=
+"channelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity=
+.channelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left=
+\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOr=
+derCode\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\=
+"Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" =
+width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" =
+>\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left=
+;padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.s=
+aleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"link pleaseOpenInNewT=
+ab\" href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=
+=3Dobj.reconciliationIdentifier#><br/>(<#=3Dobj.channelSaleOrderCode#>)</a>=
+\n\t\t\t\t\t<#} else {#>\n\t\t\t\t\t\t<#=3Dobj.reconciliationIdentifier#><b=
+r/>(<#=3Dobj.channelSaleOrderCode#>)<br><#\n\t\t\t\t\t}#>\n\t\t\t\t</div>\n=
+\t\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"chann=
+elProductName\" name=3D\"Product\" value=3D\"#{#entity.channelProductName}\=
+" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\=
+" hidden=3D\"true\"/>\n        <column id=3D\"channelProductId\" name=3D\"P=
+roduct\" value=3D\"#{#entity.channelProductId}\" width=3D\"150\" sortable=
+=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n            <clientTem=
+plate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#>\n\t\t\t\t<# if (obj.ch=
+annelProductName !=3D null && obj.channelProductName !=3D \"\") { #>\n\t\t\=
+t\t\t<br><span style=3D\"font-style: italic;color: #8F8F8F;\">(<#=3Dobj.cha=
+nnelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]]></clientTemplate>\n   =
+     </column>\n        <column id=3D\"channelCode\" name=3D\"Channel\" val=
+ue=3D\"#{#entity.channelCode}\" width=3D\"100\" sortable=3D\"true\" align=
+=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciliationS=
+tatus\" name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"=
+150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n       =
+ <column id=3D\"sellingPrice\" name=3D\"Selling Price\" value=3D\"#{#entity=
+.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calcu=
+lated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"shippingCharge=
+s\" name=3D\"Shipping Charges\" value=3D\"#{#entity.shippingCharges}\" widt=
+h=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidd=
+en=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Total Order=
+ Amount\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"=
+true\" align=3D\"left\" calculated=3D\"true\"  >\n            <clientTempla=
+te><![CDATA[\n\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font=
+-style: italic;color: #8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Pr=
+ice: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping: </span>\n\t\t\t</div>\n=
+\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\">\n\t\t\t\t<#=3Dobj.sel=
+lingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</div>\n\t\t]]></clientTem=
+plate>\n        </column>\n        <column id=3D\"totalReconcileAmount\" na=
+me=3D\"Settlement Amount\" value=3D\"#{#entity.totalReconcileAmount}\" widt=
+h=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">\n  =
+          <clientTemplate><![CDATA[<a class=3D\"link detailsPop\" href=3D\"=
+/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount#></a><in=
+put type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCod=
+e#>\"><input type=3D\"hidden\" class=3D\"reconciliationIdentifier\" value=
+=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"hidden\" class=
+=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]>=
+</clientTemplate>\n        </column>\n        <column id=3D\"settlementPerc=
+entage\" name=3D\"Settlement %\" value=3D\"#{#entity.settlementPercentage}\=
+" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\=
+">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif (obj.settlementPerc=
+entage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-siz=
+e:11px;font-weight:bold;color: #008000;text-align:right\">\n\t\t\t\t\t<span=
+><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else if (=
+obj.settlementPercentage < 80 && obj.settlementPercentage >=3D 40) {#>\n\t\=
+t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;=
+color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPerc=
+entage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div style=3D=
+\"float:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;text-=
+align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> =
+%</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n        </column>\n     =
+   <column id=3D\"itemCostPrice\" name=3D\"Item Cost Price\" value=3D\"#{#e=
+ntity.itemCostPrice}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\"=
+ calculated=3D\"true\"/>\n        <column id=3D\"quantity\" name=3D\"Quanti=
+ty\" value=3D\"#{#entity.quantity}\" width=3D\"120\" sortable=3D\"true\" al=
+ign=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"reconciledBy=
+\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"1=
+20\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n    </co=
+lumns>\n    <defaultSortBy>\n        <![CDATA[{\"column\" : \"orderTransact=
+ionDate\", \"descending\" : \"true\"}]]>\n    </defaultSortBy>\n    <filter=
+s>\n        <filter id=3D\"channelFilter\" name=3D\"Channel Contains\" cond=
+ition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\'val=
+ue\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\" attachToColumn=3D\"ch=
+annelCode\" values=3D\"query:select c.code,c.name as name from channel c wh=
+ere c.tenant_id =3D :tenantId\"/>\n        <filter id=3D\"settlementPercent=
+ageFilter\" name=3D\"% greater than\" condition=3D\"{\'criteria\':{\'name\'=
+:\'settlementPercentage\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#sett=
+lementPercentageFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new jav=
+a.lang.Double(#settlementPercentageFilter)}\" attachToColumn=3D\"settlement=
+Percentage\" />\n        <filter id=3D\"settlementAmountFilter\" name=3D\"A=
+mount less than\" condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmo=
+unt\',\'operator\':\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}=
+\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#settlementAm=
+ountFilter)}\" attachToColumn=3D\"totalReconcileAmount\" />\n        <filte=
+r id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifie=
+r Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifi=
+er\',\'operator\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'=
+}}\" type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n    =
+    <filter id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\=
+" condition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GRE=
+ATER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" type=3D\"text\" valueEx=
+pression=3D\"#{new java.lang.Double(#orderAmountFilter)}\" attachToColumn=
+=3D\"sellingPrice\" />\n        <filter id=3D\"reconciliationStatusFilter\"=
+ name=3D\"Status\" condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'o=
+perator\':\'IN\',\'value\':\'#{#reconciliationStatusFilter}\'}}\" type=3D\"=
+multiselect\" values=3D\"enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAIT=
+ING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|U=
+NRECONCILABLE\" attachToColumn=3D\"reconciliationStatus\" />\n        <filt=
+er id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contain=
+s\" condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'op=
+erator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\" type=
+=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n        <filt=
+er id=3D\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range=
+\" condition=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\', \'operat=
+or\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\" type=3D\"d=
+aterange\" attachToColumn=3D\"orderTransactionDate\" />\n        <filter id=
+=3D\"channelProductIdFilter\" name=3D\"Product Id Contains\" condition=3D\"=
+{\'criteria\':{\'name\':\'channelProductId\', \'operator\':\'LIKE\',\'value=
+\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"ch=
+annelProductId\" />\n        <filter id=3D\"itemCostPriceFilter\" name=3D\"=
+Cost Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'itemCostP=
+rice\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}=
+}\" type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#itemCostPri=
+ceFilter)}\" attachToColumn=3D\"itemCostPrice\" />\n    </filters>\n</table=
+-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+    26=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"sellingPrice"}, {"name":"itemCostPrice"}, {"name":"=
+quantity"}],"filters":[{"id":"reconciliationStatusFilter","selectedValues":=
+["AWAITING_PAYMENT"]}],"sortColumns":[{"column":"orderTransactionDate","des=
+cending":true}]}' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECON=
+CILIATION' and code =3D 'PENDING_TRANSACTIONS';
+    27=09update user_datatable_view set config_json=3D '{"resultsPerPage":2=
+5,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdentif=
+ier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcili=
+ationStatus"},{"name":"sellingPrice"},{"name":"totalReconcileAmount"},{"nam=
+e":"settlementPercentage"}, {"name":"itemCostPrice"},{"name":"quantity"}],"=
+filters":[{"id":"reconciliationStatusFilter","selectedValues":["UNRECONCILE=
+D"]}],"sortColumns":[{"column":"orderTransactionDate","descending":true}]}'=
+ where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION' and co=
+de =3D 'UNRECONCILED';
+    28=09update user_datatable_view set config_json =3D '{"resultsPerPage":=
+25,"columns":[{"name":"orderTransactionDate"},{"name":"reconciliationIdenti=
+fier"},{"name":"channelProductId"},{"name":"channelCode"},{"name":"reconcil=
+iationStatus"},{"name":"sellingPrice"},{"name":"totalReconcileAmount"},{"na=
+me":"settlementPercentage"}, {"name":"itemCostPrice"},{"name":"quantity"}],=
+"filters":[],"sortColumns":[{"column":"orderTransactionDate","descending":t=
+rue}]}' where datatable_type =3D 'DATATABLE_CHANNEL_PAYMENT_RECONCILIATION'=
+ and code =3D 'ALL_TRANSACTIONS';
+    29=09update export_job_type set export_job_config =3D '<?xml version=3D=
+\"1.0\" encoding=3D\"UTF-8\"?>\n<table-config name=3D\"DATATABLE_CHANNEL_PA=
+YMENT_RECONCILIATION\" height=3D\"1400\">\n    <queryString>\n        <![CD=
+ATA[{\"entity\":\"com.unifier.core.entity.SaleOrderReconciliation\",\"crite=
+ria\":[{\"name\":\"tenantCode\",\"operator\":\"IS\",\"value\":\"#{#context.=
+tenant.code}\"}]}]]>\n    </queryString>\n    <columns>\n        <column id=
+=3D\"orderTransactionDate\" name=3D\"Order Transaction Date\" value=3D\"#{#=
+entity.orderTransactionDate}\" width=3D\"150\" sortable=3D\"true\" align=3D=
+\"left\" type=3D\"date\" calculated=3D\"true\"/>\n        <column id=3D\"ch=
+annelSaleOrderCode\" name=3D\"Channel Sale Order #\" value=3D\"#{#entity.ch=
+annelSaleOrderCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"saleOrder=
+Code\" name=3D\"Sale Order #\" value=3D\"#{#entity.saleOrderCode}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" hidde=
+n=3D\"true\"/>\n        <column id=3D\"reconciliationIdentifier\" name=3D\"=
+Order Item # (Order Id)\" value=3D\"#{#entity.reconciliationIdentifier}\" w=
+idth=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" >=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<div style=3D\"float:left;=
+padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null && obj.sa=
+leOrderCode !=3D \"\") {#>\n<a class=3D\"link pleaseOpenInNewTab\" href=3D\=
+"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.reconcil=
+iationIdentifier#></a><br/><span style=3D\"font-style: italic;color: #8F8F8=
+F;\">(<#=3Dobj.channelSaleOrderCode#>)</span>\n\t\t\t\t\t<#} else {#>\n\t\t=
+\t\t\t\t<#=3Dobj.reconciliationIdentifier#><br/><span style=3D\"font-style:=
+ italic;color: #8F8F8F;\">(<#=3Dobj.channelSaleOrderCode#>)</span><#\n\t\t\=
+t\t\t}#>\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n        </column>\n  =
+      <column id=3D\"channelProductName\" name=3D\"Product\" value=3D\"#{#e=
+ntity.channelProductName}\" width=3D\"150\" sortable=3D\"true\" align=3D\"l=
+eft\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"cha=
+nnelProductId\" name=3D\"Product\" value=3D\"#{#entity.channelProductId}\" =
+width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\">=
+\n            <clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.channelProductId#=
+>\n\t\t\t\t<# if (obj.channelProductName !=3D null && obj.channelProductNam=
+e !=3D \"\") { #>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color: =
+#8F8F8F;\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# } #>\n\t\t\t]=
+]></clientTemplate>\n        </column>\n        <column id=3D\"channelCode\=
+" name=3D\"Channel\" value=3D\"#{#entity.channelCode}\" width=3D\"100\" sor=
+table=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <column =
+id=3D\"reconciliationStatus\" name=3D\"Status Code\" value=3D\"#{#entity.st=
+atusCode}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n        <column id=3D\"sellingPrice\" name=3D\"Selling Price=
+\" value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\" =
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n        <column=
+ id=3D\"shippingCharges\" name=3D\"Shipping Charges\" value=3D\"#{#entity.s=
+hippingCharges}\" width=3D\"150\" sortable=3D\"true\" align=3D\"left\" calc=
+ulated=3D\"true\" hidden=3D\"true\"/>\n        <column id=3D\"sellingPrice\=
+" name=3D\"Total Order Amount\" value=3D\"#{#entity.sellingPrice}\" width=
+=3D\"150\" sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"  >\n =
+           <clientTemplate><![CDATA[\n\t\t\t<div style=3D\"float:left;paddi=
+ng:0;font-size:11px;font-style: italic;color: #8F8F8F;text-align:right\">\n=
+\t\t\t\t<span>Selling Price: </span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping:=
+ </span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0 5px;\=
+">\n\t\t\t\t<#=3Dobj.sellingPrice#><br><#=3Dobj.shippingCharges#>\n\t\t\t</=
+div>\n\t\t]]></clientTemplate>\n        </column>\n        <column id=3D\"t=
+otalReconcileAmount\" name=3D\"Settlement Amount\" value=3D\"#{#entity.tota=
+lReconcileAmount}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" ca=
+lculated=3D\"true\">\n            <clientTemplate><![CDATA[<a class=3D\"lin=
+k detailsPop\" href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.total=
+ReconcileAmount#></a><input type=3D\"hidden\" class=3D\"channelCode\" value=
+=3D\"<#=3Dobj.channelCode#>\"><input type=3D\"hidden\" class=3D\"reconcilia=
+tionIdentifier\" value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input typ=
+e=3D\"hidden\" class=3D\"channelSaleOrderCode\" value=3D\"<#=3Dobj.channelS=
+aleOrderCode#>\">]]></clientTemplate>\n        </column>\n        <column i=
+d=3D\"settlementPercentage\" name=3D\"Settlement %\" value=3D\"#{#entity.se=
+ttlementPercentage}\" width=3D\"100\" sortable=3D\"true\" align=3D\"left\" =
+calculated=3D\"true\">\n            <clientTemplate><![CDATA[<#\n\t\t\t\tif=
+ (obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div style=3D\"float:lef=
+t;padding:0;font-size:11px;font-weight:bold;color: #008000;text-align:right=
+\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\=
+n\t\t\t\t} else if (obj.settlementPercentage < 80 && obj.settlementPercenta=
+ge >=3D 40) {#>\n\t\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11=
+px;font-weight:bold;color: #0000FF;text-align:right\">\n\t\t\t\t\t<span><#=
+=3Dobj.settlementPercentage.toFixed(2)#> %</span><#\n\t\t\t\t} else {#>\n\t=
+\t\t\t\t<div style=3D\"float:left;padding:0;font-size:11px;font-weight:bold=
+;color: #FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPer=
+centage.toFixed(2)#> %</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n   =
+     </column>\n        <column id=3D\"itemCostPrice\" name=3D\"Item Cost P=
+rice\" value=3D\"#{#entity.itemCostPrice}\" width=3D\"100\" sortable=3D\"tr=
+ue\" align=3D\"left\" calculated=3D\"true\"/>\n        <column id=3D\"quant=
+ity\" name=3D\"Quantity\" value=3D\"#{#entity.quantity}\" width=3D\"120\" s=
+ortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n        <colum=
+n id=3D\"reconciledBy\" name=3D\"Reconciled By\" value=3D\"#{#entity.reconc=
+iledBy}\" width=3D\"120\" sortable=3D\"true\" align=3D\"left\" calculated=
+=3D\"true\"/>\n    </columns>\n    <defaultSortBy>\n        <![CDATA[{\"col=
+umn\" : \"orderTransactionDate\", \"descending\" : \"true\"}]]>\n    </defa=
+ultSortBy>\n    <filters>\n        <filter id=3D\"channelFilter\" name=3D\"=
+Channel Contains\" condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'=
+operator\':\'IN\',\'value\':\'#{#channelFilter}\'}}\" type=3D\"multiselect\=
+" attachToColumn=3D\"channelCode\" values=3D\"query:select c.code,c.name as=
+ name from channel c where c.tenant_id =3D :tenantId\"/>\n        <filter i=
+d=3D\"settlementPercentageFilter\" name=3D\"% greater than\" condition=3D\"=
+{\'criteria\':{\'name\':\'settlementPercentage\',\'operator\':\'GREATER_THA=
+N\',\'value\':\'#{#settlementPercentageFilter}\'}}\" type=3D\"text\" valueE=
+xpression=3D\"#{new java.lang.Double(#settlementPercentageFilter)}\" attach=
+ToColumn=3D\"settlementPercentage\" />\n        <filter id=3D\"settlementAm=
+ountFilter\" name=3D\"Amount less than\" condition=3D\"{\'criteria\':{\'nam=
+e\':\'totalReconcileAmount\',\'operator\':\'LESS_THAN\',\'value\':\'#{#sett=
+lementAmountFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.la=
+ng.Double(#settlementAmountFilter)}\" attachToColumn=3D\"totalReconcileAmou=
+nt\" />\n        <filter id=3D\"reconciliationIdentifierFilter\" name=3D\"R=
+econciliation Identifier Contains\" condition=3D\"{\'criteria\':{\'name\':\=
+'reconciliationIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#reconcilia=
+tionIdentifierFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"reconciliati=
+onIdentifier\" />\n        <filter id=3D\"orderAmountFilter\" name=3D\"Sell=
+ing Price Greater Than\" condition=3D\"{\'criteria\':{\'name\':\'sellingPri=
+ce\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\" =
+type=3D\"text\" valueExpression=3D\"#{new java.lang.Double(#orderAmountFilt=
+er)}\" attachToColumn=3D\"sellingPrice\" />\n        <filter id=3D\"reconci=
+liationStatusFilter\" name=3D\"Status\" condition=3D\"{\'criteria\':{\'name=
+\':\'statusCode\',\'operator\':\'IN\',\'value\':\'#{#reconciliationStatusFi=
+lter}\'}}\" type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED, A=
+WAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED, UNRECONCILED|UNRECONCI=
+LED, UNRECONCILABLE|UNRECONCILABLE\" attachToColumn=3D\"reconciliationStatu=
+s\" />\n        <filter id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Or=
+der Item Code Contains\" condition=3D\"{\'criteria\':{\'name\':\'reconcilia=
+tionIdentifier\',\'operator\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemC=
+odeFilter}\'}}\" type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCod=
+e\" />\n        <filter id=3D\"orderTransactionDateRange\" name=3D\"Order T=
+ransaction Date Range\" condition=3D\"{\'criteria\':{\'name\':\'orderTransa=
+ctionDate\', \'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRa=
+nge}\'}}\" type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" /=
+>\n        <filter id=3D\"channelProductIdFilter\" name=3D\"Product Id Cont=
+ains\" condition=3D\"{\'criteria\':{\'name\':\'channelProductId\', \'operat=
+or\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\" type=3D\"text\" =
+attachToColumn=3D\"channelProductId\" />\n        <filter id=3D\"itemCostPr=
+iceFilter\" name=3D\"Cost Price Greater Than\" condition=3D\"{\'criteria\':=
+{\'name\':\'itemCostPrice\',\'operator\':\'GREATER_THAN\',\'value\':\'#{#it=
+emCostPriceFilter}\'}}\" type=3D\"text\" valueExpression=3D\"#{new java.lan=
+g.Double(#itemCostPriceFilter)}\" attachToColumn=3D\"itemCostPrice\" />\n  =
+  </filters>\n</table-config>\n' where name =3D "DATATABLE_CHANNEL_PAYMENT_=
+RECONCILIATION";
+    30=09update environment_property set value=3D'https://jenkins.ucdn.in' =
+where name =3D'static.content.server.url';
+    31=09select "EndDeploying";
+Importing sql queries....................
+*********** Checking SQL delta is executing on Jenkins or not *************=
+*
+ERROR 1060 (42S21) at line 3: Duplicate column name 'tin_verified'
+0
+Error Encountered on server Jenkins: SQL delta is not executed !!!
+Build step 'Execute shell' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws=
+/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #1955

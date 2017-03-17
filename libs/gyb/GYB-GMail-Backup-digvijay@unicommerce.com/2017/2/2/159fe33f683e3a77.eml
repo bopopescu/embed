@@ -1,0 +1,126 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp14133qgu;
+        Thu, 2 Feb 2017 01:42:15 -0800 (PST)
+X-Received: by 10.202.172.195 with SMTP id v186mr3199707oie.8.1486028535718;
+        Thu, 02 Feb 2017 01:42:15 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x234.google.com (mail-oi0-x234.google.com. [2607:f8b0:4003:c06::234])
+        by mx.google.com with ESMTPS id q6si9250436otq.141.2017.02.02.01.42.15
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 02 Feb 2017 01:42:15 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::234 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::234 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x234.google.com with SMTP id j15so6074839oih.2
+        for <digvijay@unicommerce.com>; Thu, 02 Feb 2017 01:42:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=xfNsVWtUsidD5xFJ0Eh9UFZOQg4qdiiV/mySW7TOlyk=;
+        b=Dj91KPff4ad5K28uyqwl+jHAyo6GXQR5IgEHgUxBrPSdkmgIkb8eBWYJf2ew4IymyU
+         x+QD8XS7LuKHxbxMHFAyTA1NaxRqkcdTYZ5itRCBZvaDjfpwzaFP90eclWSydFYo2lpT
+         7CvWYCpg2B7IByMaotTgNsFsD+WFEuHicuu6ieJeA8maA4ZFxEZL9sVSUrN0HSasTZ2q
+         Pkq6BEeQxGGXEXa6oceiP4zRyPMLzPvQ97hxiWAq1wmTWu1ZX90RDoIdS1+Bg2KUua26
+         ajzDgoTceH2bNJEplzzOPWEsnbS+7IFeDZ/wwabcHvsneee3yxxpR8qZRptLSdeLb/Zl
+         SXcw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=xfNsVWtUsidD5xFJ0Eh9UFZOQg4qdiiV/mySW7TOlyk=;
+        b=ujsPSSsHNjWY4oQM4Fn1Ce5aO8hXvyC5omYQkqPHG7k8GrQvtE1S3xv9huZJQfz4f3
+         XxKh4M7IuZnwwrvqFmSeMSWElpd3VGZCCD9eev1gWWupok9TLowiSGvpDWXoVYPQZZXs
+         Bhf/Evwj6qKTa9bUFbuJrEKvJI6h3NHPbBeGwcbDfcwgZ8lzRV43gd+Ot//YWclHNaYJ
+         Vx4RbRqSGbzNBpGC5Zs6h4MgE4+YHRaR0suQPhJIzVhPSzexMUO73B9FQakrA3N/ma0s
+         fn6Aj4e0M1JkKQb97iHAFTcTQLhej9qOHeg98ZjlVmb/H9u+m46bQZfD+x3viRDbrCmo
+         PULA==
+X-Gm-Message-State: AIkVDXJwwT4POxc6foP+rft1ZfN/pvJp9niiPfaPnckJ9gnsyZlAGGAe0kGdL5YOElXlDmstAGsosC5D6cn1iQ==
+X-Received: by 10.202.239.132 with SMTP id n126mr3267589oih.186.1486028535146;
+ Thu, 02 Feb 2017 01:42:15 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Thu, 2 Feb 2017 01:42:14 -0800 (PST)
+In-Reply-To: <CA+zaFGiPHFG-ew3j50e=YP5j0kTUb99yfGEcaOXBVkhjruWdhQ@mail.gmail.com>
+References: <CAGttGOLnNv1iwJD_=Rq0KQTH9uOht54hS4VapgL+2wFUmw+h5Q@mail.gmail.com>
+ <CA+zaFGiPHFG-ew3j50e=YP5j0kTUb99yfGEcaOXBVkhjruWdhQ@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 2 Feb 2017 15:12:14 +0530
+Message-ID: <CA+zaFGi1uy_ZPv3ys1_QN0caCXexNVyBNLVc0ofhd0xQkJD2RQ@mail.gmail.com>
+Subject: Re: Developer key for wormhole .
+To: Sagar Sahni <sagar@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c092f6cf6c21d054788fa16
+
+--94eb2c092f6cf6c21d054788fa16
+Content-Type: text/plain; charset=UTF-8
+
+app1.stgenterprise1.test.unicommerce.infra
+
+mongo1.test.unicommerce.infra
+
+
+
+On Thu, Feb 2, 2017 at 1:33 PM, Sunny Agarwal <sunny@unicommerce.com> wrote:
+
+> Use this key to access wormhole and Staging.
+>
+> ---------- Forwarded message ----------
+> From: Puneet Sharma <puneet@unicommerce.com>
+> Date: Thu, Feb 2, 2017 at 1:32 PM
+> Subject: Developer key for wormhole .
+> To: Sunny Agarwal <sunny@unicommerce.com>
+>
+>
+>
+> Thanks,
+> Puneet Sharma
+> Unicommerce Esolutions Pvt. Ltd
+> +91-7666182895
+>
+>
+
+--94eb2c092f6cf6c21d054788fa16
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+
+
+
+
+
+
+
+<p class=3D"gmail-p1"><span class=3D"gmail-s1">app1.stgenterprise1.test.uni=
+commerce.infra</span></p><p class=3D"gmail-p1"><span class=3D"gmail-s1">
+
+
+
+
+
+
+
+</span></p><p class=3D"gmail-p1"><span class=3D"gmail-s1">mongo1.test.unico=
+mmerce.infra</span></p><p class=3D"gmail-p1"><span class=3D"gmail-s1"><br><=
+/span></p></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">O=
+n Thu, Feb 2, 2017 at 1:33 PM, Sunny Agarwal <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:sunny@unicommerce.com" target=3D"_blank">sunny@unicommerce.com</=
+a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0=
+ 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><di=
+v>Use this key to access wormhole and Staging.</div><div><div class=3D"h5">=
+<br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>F=
+rom: <b class=3D"gmail_sendername">Puneet Sharma</b> <span dir=3D"ltr">&lt;=
+<a href=3D"mailto:puneet@unicommerce.com" target=3D"_blank">puneet@unicomme=
+rce.com</a>&gt;</span><br>Date: Thu, Feb 2, 2017 at 1:32 PM<br>Subject: Dev=
+eloper key for wormhole .<br>To: Sunny Agarwal &lt;<a href=3D"mailto:sunny@=
+unicommerce.com" target=3D"_blank">sunny@unicommerce.com</a>&gt;<br><br><br=
+><div dir=3D"ltr"><br clear=3D"all"><div><div class=3D"m_-50996493320494196=
+35m_-8839928192158025284gmail_signature" data-smartmail=3D"gmail_signature"=
+><div dir=3D"ltr"><div><div dir=3D"ltr">Thanks,<div>Puneet Sharma</div><div=
+>Unicommerce Esolutions Pvt. Ltd</div><div>+91-7666182895</div></div></div>=
+</div></div></div>
+</div>
+</div><br></div></div></div>
+</blockquote></div><br></div>
+
+--94eb2c092f6cf6c21d054788fa16--

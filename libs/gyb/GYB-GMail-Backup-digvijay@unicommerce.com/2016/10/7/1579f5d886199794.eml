@@ -1,0 +1,152 @@
+MIME-Version: 1.0
+Received: by 10.36.41.130 with HTTP; Fri, 7 Oct 2016 06:38:09 -0700 (PDT)
+Date: Fri, 7 Oct 2016 19:08:09 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sooiuv7rqwdHh=g4eoN_kapumEeopoJ7=p=g44ZJ1YLDCw@mail.gmail.com>
+Subject: BASH_SCRIPT
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a113f8304609a7a053e4685bd
+
+--001a113f8304609a7a053e4685bd
+Content-Type: multipart/alternative; boundary=001a113f8304609a6e053e4685bb
+
+--001a113f8304609a6e053e4685bb
+Content-Type: text/plain; charset=UTF-8
+
+STEPS:
+
+
+1. Put all these files on /usr/local/ of our MongoDB Server.
+2. Decide if you want to create new version or update existing version.
+3. Accordingly, change the create_input.txt or update_input.txt files by
+       replacing all the default values in the file.
+4. Open the Terminal.
+5. Run the main.sh Bash Script on the terminal.
+6. Check the MongoDB For the changes in Content and ReleaseUpdate
+Collections.
+
+--001a113f8304609a6e053e4685bb
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">STEPS:<div><br></div><div><br></div><div>1. Put all these =
+files on /usr/local/ of our MongoDB Server.</div><div>2. Decide if you want=
+ to create new version or update existing version.</div><div>3. Accordingly=
+, change the create_input.txt or update_input.txt files by =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0replacing all the default values in the file.</div><div=
+>4. Open the Terminal.</div><div>5. Run the main.sh Bash Script on the term=
+inal.</div><div>6. Check the MongoDB For the changes in Content and Release=
+Update Collections.</div></div>
+
+--001a113f8304609a6e053e4685bb--
+--001a113f8304609a7a053e4685bd
+Content-Type: text/plain; charset=UTF-8; name="create_input.txt"
+Content-Disposition: attachment; filename="create_input.txt"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth83n2
+
+OQpSRUxFQVNFX1Y5X1RJVExFClJFTEVBU0VfVjlfQ09OVEVOVApodHRwOi8vc3VwcG9ydC51bmlj
+b21tZXJjZS5jb20vY3VzdG9tZXIvcG9ydGFsL2FydGljbGVzLzE5MjkyNjItcmVsZWFzZS11cGRh
+dGUtLS0yNy1tYXJjaC0yMDE1CklTT0RhdGUoIjIwMTUtMDQtMjBUMDA6MDA6MDBaIikKUGlja2xp
+c3QgcGFnZSBoYXMgYSBuZXcgbG9vayEKRU5HCjxoMz5XaGF04oCZcyBOZXc8L2gzPjxwPllvdSBj
+YW4gbm93IGFjY2VwdCByZXR1cm5zIG9mIHRoZSBzaGlwbWVudCBkaXNwYXRjaGVkIDwvbGk+Cg==
+--001a113f8304609a7a053e4685bd
+Content-Type: application/x-javascript; name="create_bash.js"
+Content-Disposition: attachment; filename="create_bash.js"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth82o0
+
+Ly9UaGlzIGlzIGEgdGVtcCBGaWxlLiBJdCB3aWxsIGJlIHJlcGxhY2VkIGF1dG9tYXRpY2FsbHkK
+--001a113f8304609a7a053e4685bd
+Content-Type: application/x-sh; name="create_bash.sh"
+Content-Disposition: attachment; filename="create_bash.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth83f1
+
+CgojIS9iaW4vYmFzaAojQ1JFQVRFIEFORCBJTlNFUlQgUkVMRUFTRSBVUERBVEVTCiNUZWxsIHRo
+ZSB1cGRhdGUgaW5mbwoKbGluZUluZGV4PTEKcmVsZWFzZVVwZGF0ZUNsYXNzPSJjb20udW5pd2Fy
+ZS5jb3JlLnZvLnJlbGVhc2VVcGRhdGVWTyIKY29udGVudENsYXNzPSJjb20udW5pd2FyZS5jb3Jl
+LnZvLmNvbnRlbnRWTyIKCndoaWxlIElGUz0nJyByZWFkIC1yIGxpbmUgfHwgW1sgLW4gJGxpbmUg
+XV0KZG8KICAgIGlmIFsgJGxpbmVJbmRleCAtZXEgMSBdOyB0aGVuCiAgICB2ZXJzaW9uSWQ9JGxp
+bmUKCiAgZWxpZiBbICRsaW5lSW5kZXggLWVxIDIgXTsgdGhlbgogICAgdGl0bGVLZXk9JGxpbmUK
+IwogIGVsaWYgWyAkbGluZUluZGV4IC1lcSAzIF07IHRoZW4KICAgIGNvbnRlbnRLZXk9JGxpbmUK
+CiAgZWxpZiBbICRsaW5lSW5kZXggLWVxIDQgXTsgdGhlbgogICAgdXJsPSRsaW5lCgogIGVsaWYg
+WyAkbGluZUluZGV4IC1lcSA1IF07IHRoZW4KICAgIHJlbGVhc2VEYXRlPSRsaW5lCgogIGVsaWYg
+WyAkbGluZUluZGV4IC1lcSA2IF07IHRoZW4KICAgIHRDb250ZW50PSRsaW5lCgogIGVsaWYgWyAk
+bGluZUluZGV4IC1lcSA3IF07IHRoZW4KICAgIGxhbmd1YWdlQ29kZT0kbGluZQoKICAgIGVsc2UK
+ICAgIGNDb250ZW50PSRsaW5lCiAgICBmaQoKIGxpbmVJbmRleD0kKCggJGxpbmVJbmRleCArIDEg
+KSkKZG9uZSA8ICQxCgpjcmVhdGVfYmFzaF9maWxlbmFtZT0iY3JlYXRlX2Jhc2guanMiCgpDTUQ9
+ImRiLnJlbGVhc2VVcGRhdGUuaW5zZXJ0KHsKICBfY2xhc3MgOiBcIiRyZWxlYXNlVXBkYXRlQ2xh
+c3NcIiwKCXZlcnNpb25JZCA6ICR2ZXJzaW9uSWQsCgl0aXRsZUtleSA6IFwiJHRpdGxlS2V5XCIs
+Cgljb250ZW50S2V5IDogXCIkY29udGVudEtleVwiLAoJdXJsIDogXCIkdXJsXCIsCglyZWxlYXNl
+RGF0ZSA6ICRyZWxlYXNlRGF0ZSwKCWNyZWF0ZWQgOiAkcmVsZWFzZURhdGUsCgl1cGRhdGVkIDog
+JHJlbGVhc2VEYXRlLAp9KSIKCmVjaG8gJENNRCA+JGNyZWF0ZV9iYXNoX2ZpbGVuYW1lCm1vbmdv
+IHVuaXdhcmUgY3JlYXRlX2Jhc2guanMKCkNNRD0iZGIuY29udGVudC5pbnNlcnQoewpfY2xhc3Mg
+OiBcIiRjb250ZW50Q2xhc3NcIiwKbnNJZGVudGlmaWVyIDogXCJyZWxlYXNlVXBkYXRlXCIsCmtl
+eSA6IFwiJHRpdGxlS2V5XCIsCmxhbmd1YWdlQ29kZSA6IFwiJGxhbmd1YWdlQ29kZVwiLApjb250
+ZW50IDogXCIkdENvbnRlbnRcIgp9KSIKCmVjaG8gJENNRCA+JGNyZWF0ZV9iYXNoX2ZpbGVuYW1l
+Cm1vbmdvIHVuaXdhcmUgY3JlYXRlX2Jhc2guanMKCkNNRD0iZGIuY29udGVudC5pbnNlcnQoewpf
+Y2xhc3MgOiBcIiRjb250ZW50Q2xhc3NcIiwKbnNJZGVudGlmaWVyIDogXCJyZWxlYXNlVXBkYXRl
+XCIsCmtleSA6IFwiJGNvbnRlbnRLZXlcIiwKbGFuZ3VhZ2VDb2RlIDogXCIkbGFuZ3VhZ2VDb2Rl
+XCIsCmNvbnRlbnQgOiBcIiRjQ29udGVudFwiCn0pIgoKZWNobyAkQ01EID4kY3JlYXRlX2Jhc2hf
+ZmlsZW5hbWUKbW9uZ28gdW5pd2FyZSBjcmVhdGVfYmFzaC5qcwo=
+--001a113f8304609a7a053e4685bd
+Content-Type: application/x-sh; name="main.sh"
+Content-Disposition: attachment; filename="main.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth83t3
+
+CgojVG8gVXNlIFRoaXMsIFB1dCBjcmVhdGVfYmFzaC5zaCwgY3JlYXRlX2lucHV0LnR4dCBpbiAv
+dXNyL2xvY2FsLwpjZCAvdXNyL2xvY2FsLwpjaG1vZCAreCBjcmVhdGVfYmFzaC5zaAouL2NyZWF0
+ZV9iYXNoLnNoIC4vY3JlYXRlX2lucHV0LnR4dAoKCiNUbyBVc2UgVGhpcywgUHV0IHVwZGF0ZV9i
+YXNoLnNoLCB1cGRhdGVfaW5wdXQudHh0IGluIC91c3IvbG9jYWwvCmNkIC91c3IvbG9jYWwKY2ht
+b2QgK3ggdXBkYXRlX2Jhc2guc2gKLi91cGRhdGVfYmFzaC5zaCAuL3VwZGF0ZV9pbnB1dC50eHQK
+--001a113f8304609a7a053e4685bd
+Content-Type: application/x-javascript; name="update_bash.js"
+Content-Disposition: attachment; filename="update_bash.js"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth83y4
+
+Ly9UaGlzIGlzIGEgdGVtcCBGaWxlLiBJdCB3aWxsIGJlIHJlcGxhY2VkIGF1dG9tYXRpY2FsbHkK
+--001a113f8304609a7a053e4685bd
+Content-Type: application/x-sh; name="update_bash.sh"
+Content-Disposition: attachment; filename="update_bash.sh"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth8465
+
+CiMhL2Jpbi9iYXNoCiNVUERBVEUgUkVMRUFTRSBVUERBVEVTCiNUZWxsIHdoaWNoIHRpdGxlIEtl
+eSB0byB1cGRhdGUgYW5kIGdpdmUgdGhlIHVwZGF0ZSBpbmZvIHRvbyEKCmxpbmVJbmRleD0xCnJl
+bGVhc2VVcGRhdGVDbGFzcz0iY29tLnVuaXdhcmUuY29yZS52by5yZWxlYXNlVXBkYXRlVk8iCmNv
+bnRlbnRDbGFzcz0iY29tLnVuaXdhcmUuY29yZS52by5jb250ZW50Vk8iCgp3aGlsZSBJRlM9Jycg
+cmVhZCAtciBsaW5lIHx8IFtbIC1uICRsaW5lIF1dCmRvCiAgICBpZiBbICRsaW5lSW5kZXggLWVx
+IDEgXTsgdGhlbgogICAgdGl0bGVLZXk9JGxpbmUKCiAgZWxpZiBbICRsaW5lSW5kZXggLWVxIDIg
+XTsgdGhlbgogICAgaW1hZ2VVcmw9JGxpbmUKCiAgZWxpZiBbICRsaW5lSW5kZXggLWVxIDMgXTsg
+dGhlbgogICAgdXJsPSRsaW5lCgogIGVsaWYgWyAkbGluZUluZGV4IC1lcSA0IF07IHRoZW4KICAg
+IGNvbnRlbnRLZXk9JGxpbmUKCiAgZWxpZiBbICRsaW5lSW5kZXggLWVxIDUgXTsgdGhlbgogICAg
+bGFuZ3VhZ2VDb2RlPSRsaW5lCgogIGVsaWYgWyAkbGluZUluZGV4IC1lcSA2IF07IHRoZW4KICAg
+IHRDb250ZW50PSRsaW5lCgogICAgZWxzZQogICAgY0NvbnRlbnQ9JGxpbmUKICAgIGZpCgogbGlu
+ZUluZGV4PSQoKCAkbGluZUluZGV4ICsgMSApKQpkb25lIDwgJDEKCnVwZGF0ZV9iYXNoX2ZpbGVu
+YW1lPSJ1cGRhdGVfYmFzaC5qcyIKCkNNRD0iZGIucmVsZWFzZVVwZGF0ZS51cGRhdGUoe3RpdGxl
+S2V5OlwiJHRpdGxlS2V5XCJ9LHtcJHNldCA6IHsKdXBkYXRlcyA6WwogIHsKICAgIHRpdGxlS2V5
+IDogXCIkdGl0bGVLZXlcIiwKICAgIGltYWdlVXJsIDogXCIkaW1hZ2VVcmxcIiwKICAgIHVybCA6
+IFwiJHVybFwiLAogICAgY29udGVudEtleSA6IFwiJGNvbnRlbnRLZXlcIgogIH0KXQp9fSkiCgpl
+Y2hvICRDTUQgPiR1cGRhdGVfYmFzaF9maWxlbmFtZQptb25nbyB1bml3YXJlIHVwZGF0ZV9iYXNo
+LmpzCgpDTUQ9ImRiLmNvbnRlbnQuaW5zZXJ0KHsKX2NsYXNzIDogXCIkY29udGVudENsYXNzXCIs
+Cm5zSWRlbnRpZmllciA6IFwicmVsZWFzZVVwZGF0ZVwiLAprZXkgOiBcIiR0aXRsZUtleVwiLAps
+YW5ndWFnZUNvZGUgOiBcIiRsYW5ndWFnZUNvZGVcIiwKY29udGVudCA6IFwiJHRDb250ZW50XCIK
+fSkiCgplY2hvICRDTUQgPiR1cGRhdGVfYmFzaF9maWxlbmFtZQptb25nbyB1bml3YXJlIHVwZGF0
+ZV9iYXNoLmpzCgpDTUQ9ImRiLmNvbnRlbnQuaW5zZXJ0KHsKX2NsYXNzIDogXCIkY29udGVudENs
+YXNzXCIsCm5zSWRlbnRpZmllciA6IFwicmVsZWFzZVVwZGF0ZVwiLAprZXkgOiBcIiRjb250ZW50
+S2V5XCIsCmxhbmd1YWdlQ29kZSA6IFwiJGxhbmd1YWdlQ29kZVwiLApjb250ZW50IDogXCIkY0Nv
+bnRlbnRcIgp9KSIKCmVjaG8gJENNRCA+JHVwZGF0ZV9iYXNoX2ZpbGVuYW1lCm1vbmdvIHVuaXdh
+cmUgdXBkYXRlX2Jhc2guanMK
+--001a113f8304609a7a053e4685bd
+Content-Type: text/plain; charset=US-ASCII; name="update_input.txt"
+Content-Disposition: attachment; filename="update_input.txt"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itzth84e6
+
+UkVMRUFTRV9WOV9USVRMRQppbWFnZVVybAp1cmwKUkVMRUFTRV9WOV9DT05URU5UCkVORwpUSVRM
+RV9ERVNDUklQVElPTgpDT05URU5UX0RFU0NSSVBUSU9OCg==
+--001a113f8304609a7a053e4685bd--

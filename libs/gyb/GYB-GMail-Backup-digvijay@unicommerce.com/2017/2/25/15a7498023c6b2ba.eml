@@ -1,0 +1,163 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp130772qgu;
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+X-Received: by 10.37.173.218 with SMTP id d26mr4316877ybe.189.1488014803632;
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+Return-Path: <tech+bncBCC3B56BTUFBBU43YXCQKGQEETG3AGY@unicommerce.com>
+Received: from mail-yw0-x248.google.com (mail-yw0-x248.google.com. [2607:f8b0:4002:c05::248])
+        by mx.google.com with ESMTPS id y68si2812923yby.289.2017.02.25.01.26.43
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::248 is neither permitted nor denied by best guess record for domain of tech+bncbcc3b56btufbbu43yxcqkgqeetg3agy@unicommerce.com) client-ip=2607:f8b0:4002:c05::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::248 is neither permitted nor denied by best guess record for domain of tech+bncbcc3b56btufbbu43yxcqkgqeetg3agy@unicommerce.com) smtp.mailfrom=tech+bncBCC3B56BTUFBBU43YXCQKGQEETG3AGY@unicommerce.com
+Received: by mail-yw0-x248.google.com with SMTP id 203sf60872250ywz.2
+        for <digvijay@unicommerce.com>; Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=gFbM/gH+xlc3RfRBodtUJ4o1v1KO88WsdZYz2NSTjL4=;
+        b=DyL1oWyLDP/O5x1U5v2DIyGFt5d7wzGlwg5V2zOsUXgtHvuwjViXZecBMZHWhPvCq1
+         OGdAeNVBVk9ZSknI6li3ShuhmCPIsPs93q5XLVTLHowrqzhnZ6/NP7hqdNOCx3tfZWwI
+         AyhcRjZNIkm9HbQUNGx4N+DpAUYrzRv+3nTWZIPPq743dH35A1qNay+f/pAHAuFz9ycI
+         EPu6XAorupR+ZzUpuSWiy9yw+0NiO82Dw7XKArv01/4aTFR0CdHTytNnn1qGsGOwG+k6
+         18Vm39Uc1Sh5yME0cmyYguH5Xj1LN8c6cJvSlpQA5mUr++mNhk06+AUnDW9ZCT57cQA9
+         xkgg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=gFbM/gH+xlc3RfRBodtUJ4o1v1KO88WsdZYz2NSTjL4=;
+        b=uk3NErRUTDQoZtTb07OoqjnQolLUbFgzoxo7crTpBMZxt4XPMksKuEXVnzm/4RqU+2
+         RrxYeEZO/wXFENNrydDcWA30RWa18TGYCRIC3n68tZ6IHB2p6lnRDsw3XBtqYj/XMDyf
+         6mArwMI9pLoeqIZ4Kx+RH5P3xusVzg0Jdl6y8pboc0TUgyoNyThHa00HjzKUoIX/59xE
+         1a/KT76YrDxF8sUhsjRvegBTUleCmSH0FjMvzRQDziyObGF2Ahn+0tuqv1EOLdeEO6EX
+         oxTrGAsnb40HU3jHqd62qVVRdoxmrMuvhbXPOznvgRgUhFd7034KmmQBUoVwlgzREeM2
+         YgHA==
+X-Gm-Message-State: AMke39mItKpEbxQ3SvF6FwvU0MOceUVJ8Bj3E1Oa+RfY5eygpvaBvKOMRmil5nDC4jv/yA==
+X-Received: by 10.129.121.199 with SMTP id u190mr2614741ywc.170.1488014803241;
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.1.212 with SMTP id e78ls4234110ote.9.gmail; Sat, 25 Feb
+ 2017 01:26:43 -0800 (PST)
+X-Received: by 10.55.207.129 with SMTP id v1mr7751036qkl.63.1488014803067;
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+Received: from mail-qk0-x232.google.com (mail-qk0-x232.google.com. [2607:f8b0:400d:c09::232])
+        by mx.google.com with ESMTPS id w29si7612721qtc.171.2017.02.25.01.26.43
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::232 is neither permitted nor denied by best guess record for domain of garima@unicommerce.com) client-ip=2607:f8b0:400d:c09::232;
+Received: by mail-qk0-x232.google.com with SMTP id u188so38299410qkc.2
+        for <tech@unicommerce.com>; Sat, 25 Feb 2017 01:26:43 -0800 (PST)
+X-Received: by 10.237.56.68 with SMTP id j62mr7309467qte.185.1488014802825;
+ Sat, 25 Feb 2017 01:26:42 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.150.118 with HTTP; Sat, 25 Feb 2017 01:26:42 -0800 (PST)
+In-Reply-To: <001a113f32defe992105492f8731@google.com>
+References: <001a113f32defe992105492f8731@google.com>
+From: Garima Arora <garima@unicommerce.com>
+Date: Sat, 25 Feb 2017 14:56:42 +0530
+Message-ID: <CAPyw11bpwZOupFvEdE=ad9jm+o0LNHOZhOqwV8136ZM4+fGD9w@mail.gmail.com>
+Subject: Re: Farewell Party (Please respond asap,we need to get the booking
+ done )
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	DevOps Team <devops@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, Vani Verma <vani@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1137ac14be95f105495771fd
+X-Original-Sender: garima@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c09::232 is neither permitted nor denied by best
+ guess record for domain of garima@unicommerce.com) smtp.mailfrom=garima@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a1137ac14be95f105495771fd
+Content-Type: text/plain; charset=UTF-8
+
+Hi
+
+We need to get the bookings done.Please respond as soon as possible.
+We have received only 17 responses so far.
+
+Thanks and Regards
+Garima Arora
+
+On Thu, Feb 23, 2017 at 3:19 PM, <shobhit@unicommerce.com> wrote:
+
+> [image: Google Forms]
+> I've invited you to fill out a form:
+> PARTAAAAAAYYYYYYYYYY!!!!!!!!! :)
+> <https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=0&w=1&usp=mail_form_link>
+> Farewell party !!! (Expected Damage : 1.2K per person)
+>
+> PS -: A yes today is a promise to pay tomorrow. :D :P :D
+> FILL OUT FORM
+> <https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=0&w=1&usp=mail_form_link>
+> Create your own Google Form
+> <https://docs.google.com/forms?usp=mail_form_link>
+>
+
+--001a1137ac14be95f105495771fd
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi<div><br></div><div>We need to get the bookings done.Ple=
+ase respond as soon as possible.</div><div>We have received only 17 respons=
+es so far.</div><div><br></div><div>Thanks and Regards</div><div>Garima Aro=
+ra</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On =
+Thu, Feb 23, 2017 at 3:19 PM,  <span dir=3D"ltr">&lt;<a href=3D"mailto:shob=
+hit@unicommerce.com" target=3D"_blank">shobhit@unicommerce.com</a>&gt;</spa=
+n> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;b=
+order-left:1px #ccc solid;padding-left:1ex"><div style=3D"font-family:Robot=
+o,Helvetica,Arial,sans-serif;margin:0;padding:0;height:100%;width:100%"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(103,58,183)" width=3D"100%"><tbody><tr height=3D"64px"><td style=3D=
+"padding-left:24px"><img alt=3D"Google Forms" height=3D"26px" style=3D"disp=
+lay:inline-block;margin:0;vertical-align:middle" width=3D"143px" src=3D"htt=
+ps://www.gstatic.com/docs/forms/google_forms_logo_lockup_white_2x.png"></td=
+></tr></tbody></table><div style=3D"padding:24px;background-color:rgb(237,2=
+31,246)"><div align=3D"center" style=3D"background-color:#fff;border-bottom=
+:1px solid #e0e0e0;margin:0 auto;max-width:624px;min-width:154px;padding:0 =
+24px"><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+background-color:#fff" width=3D"100%"><tbody><tr height=3D"24px"><td></td><=
+/tr><tr><td><div style=3D"font-size:13px;line-height:18px;color:#424242;fon=
+t-weight:700">I&#39;ve invited you to fill out a form:</div></td></tr><tr h=
+eight=3D"20px"><td></td></tr><tr style=3D"font-size:20px;line-height:24px">=
+<td><span style=3D"display:table-cell"><a href=3D"https://docs.google.com/f=
+orms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?=
+c=3D0&amp;w=3D1&amp;usp=3Dmail_form_link" style=3D"color:rgb(103,58,183);te=
+xt-decoration:none;vertical-align:middle;font-weight:500" target=3D"_blank"=
+>PARTAAAAAAYYYYYYYYYY!!!!!!!!! :)</a><div></div></span></td></tr><tr height=
+=3D"16px"></tr><tr><td><span style=3D"display:table-cell;vertical-align:top=
+;font-size:13px;line-height:18px;color:#424242">Farewell party !!! (Expecte=
+d Damage : 1.2K per person)<br><br>PS -: A yes today is a promise to pay to=
+morrow. :D :P :D</span></td></tr><tr height=3D"24px"></tr><tr><td><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><t=
+d><a href=3D"https://docs.google.com/forms/d/e/1FAIpQLScN4mfdZLAfi6Lr5dMIF_=
+lGsSw0vm3GSO8yyvAjKkmvRAQ99w/viewform?c=3D0&amp;w=3D1&amp;usp=3Dmail_form_l=
+ink" style=3D"border-radius:3px;box-sizing:border-box;display:inline-block;=
+font-size:13px;font-weight:700;height:40px;line-height:40px;padding:0 24px;=
+text-align:center;text-decoration:none;text-transform:uppercase;vertical-al=
+ign:middle;color:#fff;background-color:rgb(103,58,183)" target=3D"_blank">F=
+ILL OUT FORM</a></td></tr></tbody></table></td></tr><tr height=3D"24px"></t=
+r></tbody></table></div><table align=3D"center" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"max-width:672px;min-width:154px" width=3D"100%"><tbody><t=
+r height=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs.google.com/=
+forms?usp=3Dmail_form_link" style=3D"color:#616161;font-size:13px" target=
+=3D"_blank">Create your own Google Form</a></td></tr></tbody></table></div>=
+</div></blockquote></div><br></div>
+
+--001a1137ac14be95f105495771fd--

@@ -1,0 +1,39 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -S -sa
+dpkg-buildpackage: source package lirc
+dpkg-buildpackage: source version 0.9.4c-0.4
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Alec Leamas <leamas.alec@gmail.com>
+ dpkg-source --before-build lirc-0.9.4c
+dpkg-source: info: applying 0001-lirc.org-Remove-non-free-advertising.patch
+dpkg-source: info: applying 0002-lib-curl_poll.h-Ensure-build-on-unconfiguredclients.patch
+dpkg-source: info: applying 0003-plugin-girs-Fix-default-device-typo.patch
+dpkg-source: info: applying 0005-lirc.pc-Fix-bad-library-specification-236.patch
+dpkg-source: info: applying 0006-Build-Use-HAVE_UINPUT-1-to-force-building-uinput-cod.patch
+dpkg-source: info: applying 0007-tools-remove-configs-symlink.patch
+dpkg-source: info: applying 0008-systemd-Fix-wrong-path-to-irexec-239.patch
+dpkg-source: info: applying 0010-lib-Only-use-local-headers-in-lirc_private.h-237.patch
+dpkg-source: info: applying Add-hotplug-start-udev-from.0.9.0.patch
+ fakeroot debian/rules clean
+dh clean --with autoreconf,python3,systemd --parallel
+   dh_testdir -O--parallel
+   dh_auto_clean -O--parallel
+   dh_autoreconf_clean -O--parallel
+   dh_clean -O--parallel
+ dpkg-source -b lirc-0.9.4c
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building lirc using existing ./lirc_0.9.4c.orig.tar.gz
+dpkg-source: info: building lirc in lirc_0.9.4c-0.4.debian.tar.xz
+dpkg-source: info: building lirc in lirc_0.9.4c-0.4.dsc
+ dpkg-genchanges -S -sa >../lirc_0.9.4c-0.4_source.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build lirc-0.9.4c
+dpkg-source: info: unapplying Add-hotplug-start-udev-from.0.9.0.patch
+dpkg-source: info: unapplying 0010-lib-Only-use-local-headers-in-lirc_private.h-237.patch
+dpkg-source: info: unapplying 0008-systemd-Fix-wrong-path-to-irexec-239.patch
+dpkg-source: info: unapplying 0007-tools-remove-configs-symlink.patch
+dpkg-source: info: unapplying 0006-Build-Use-HAVE_UINPUT-1-to-force-building-uinput-cod.patch
+dpkg-source: info: unapplying 0005-lirc.pc-Fix-bad-library-specification-236.patch
+dpkg-source: info: unapplying 0003-plugin-girs-Fix-default-device-typo.patch
+dpkg-source: info: unapplying 0002-lib-curl_poll.h-Ensure-build-on-unconfiguredclients.patch
+dpkg-source: info: unapplying 0001-lirc.org-Remove-non-free-advertising.patch
+dpkg-buildpackage: full upload (original source is included)

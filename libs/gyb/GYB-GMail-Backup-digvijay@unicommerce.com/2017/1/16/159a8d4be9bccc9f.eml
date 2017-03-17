@@ -1,0 +1,125 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp153382qgd;
+        Mon, 16 Jan 2017 11:50:32 -0800 (PST)
+X-Received: by 10.200.43.115 with SMTP id 48mr17088925qtv.157.1484596231973;
+        Mon, 16 Jan 2017 11:50:31 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-qt0-x22f.google.com (mail-qt0-x22f.google.com. [2607:f8b0:400d:c0d::22f])
+        by mx.google.com with ESMTPS id r39si14926501qtb.2.2017.01.16.11.50.31
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 16 Jan 2017 11:50:31 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::22f is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:400d:c0d::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::22f is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-qt0-x22f.google.com with SMTP id k15so118734240qtg.3
+        for <digvijay@unicommerce.com>; Mon, 16 Jan 2017 11:50:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=wzkrKo+kO0RMj8lvtqsX+j6qJAJAm/UBpesAqbLwTGQ=;
+        b=eSboVt4qJgXurs8qjdu6GJLLNHSD9NpwKHVNXGU0OdxzwusvqxwQchR6NYI56CpUmO
+         uPkt8MpfQP7pNfXUcu/SYYtUi4515ntmG583mFTvj9KCgr7+tS9xjy2H/jdzJSkJdt7c
+         jPZ0t6bpm2KIKJP9cR/SqOWY5QCpcY4RnPGs1QZc0D+GJbI7CImwgufCw5SPRRV87w5/
+         qNZ10Ezd6BMwc40rjxgtnW+W73MQ7BVyyknoJSoWfFJyGOS7NfP3C6fa/wzoqVDMgEa9
+         TKaPdJ/P8Z5VW7zgqgQGQaLz4UCfC+JOIqjQlqY1nOzhDlP6sNfoXnUcqhRISH/eLWIh
+         ABpg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=wzkrKo+kO0RMj8lvtqsX+j6qJAJAm/UBpesAqbLwTGQ=;
+        b=nrsq215jiaNObPgtjzQGlv4a9i1Sk+iKGf4yGQChOJbQvoMLKlmgz2hp+p8BE/ADVu
+         LCDydqv+vW7G9agpQ0m+FSh43ors1qsUYx8d2uVBcmI7LjEXMLn6N0gKfIM39BD/mQwP
+         kEX8zlVsjX0qnL+QG8nsxAPJ/41nDESRbNykXt1aK8XG9rtVQN3SPoBlpekw3WSusWns
+         DgKlbq2gY07lSmUX4WWrhsNkwDtyVoDwbQ13CvDLQFQQZLCgj944ot/BblZ0OFs+LipI
+         K7N7sDUA+NezLrdCr2K3bSaYKNd0mhqPE6ozh8/HKtZ/VCqO4YVBJccC3XvQ56/QS7jJ
+         UgrQ==
+X-Gm-Message-State: AIkVDXJ+Kg13EKnlM+V0aBkq5mCEcgNkBFU6DTm2QpFEglWkKI/1MB9dmMPKhFfAIWW7Md6dghn+wZ40LxSvng==
+X-Received: by 10.200.42.227 with SMTP id c32mr15174209qta.70.1484596231460;
+ Mon, 16 Jan 2017 11:50:31 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.237.50.199 with HTTP; Mon, 16 Jan 2017 11:50:31 -0800 (PST)
+In-Reply-To: <CAJF3soragq3OxLxRVCNT=+J-4p8Lf4+pVoYh_d7breaGgQ8G9g@mail.gmail.com>
+References: <CAJF3soqi8i1cJQzg0d+KUjfV3S6+PtHdq_S9QMTV+MQDWk5o1Q@mail.gmail.com>
+ <CAJF3soragq3OxLxRVCNT=+J-4p8Lf4+pVoYh_d7breaGgQ8G9g@mail.gmail.com>
+From: Puneet Sharma <puneet@unicommerce.com>
+Date: Tue, 17 Jan 2017 01:20:31 +0530
+Message-ID: <CAGttGOJ+SS81v==Hwu0DLxgNCUAGA+s9Yf4GxBfJvE9efJ1paA@mail.gmail.com>
+Subject: Re: Prod Build
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: DevOps Team <devops@unicommerce.com>, Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11404b3a0316f405463b7f37
+
+--001a11404b3a0316f405463b7f37
+Content-Type: text/plain; charset=UTF-8
+
+Will discuss once with you tomm and proceed for this .
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+On Mon, Jan 16, 2017 at 4:33 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+>
+> ---------- Forwarded message ----------
+> From: Digvijay Sharma <digvijay@unicommerce.com>
+> Date: Fri, Jan 13, 2017 at 3:21 PM
+> Subject: Prod Build
+> To: Sunny Agarwal <sunny@unicommerce.com>
+>
+>
+> Please help with the following changes for Wormhole and Uniware Production
+>  :
+>
+> 1. Moving tomcat to 8.0.15 alongwith corresponding changes in catalina.sh
+> and server.xml
+> 2. Moving Java to java 8
+> 3. Changing build script to fetch from bitbucket for Unifier,
+> UniwareCommon, Uniware                  ,Wormhole.
+> 4. Changing build configuration for wormhole to use Unifier, Uniwarecommon
+> instead of the        Unifier7 , UniwareCommon7 versions.
+> 5. Running the Mysql and Mongo queries mentioned in the single attached
+> file.
+> 6. Building Wormhole Production.
+>
+>
+
+--001a11404b3a0316f405463b7f37
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Will discuss once with you tomm and proceed for this .=C2=
+=A0<div class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_si=
+gnature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr">Thanks,<div>Puneet Sharma</div><div>Unicommerce Esolutions Pvt. Lt=
+d</div><div>+91-7666182895</div></div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Mon, Jan 16, 2017 at 4:33 PM, Digvijay Sh=
+arma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" targ=
+et=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr"><br><div class=3D"gmail_quote">-------=
+--- Forwarded message ----------<br>From: <b class=3D"gmail_sendername">Dig=
+vijay Sharma</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommer=
+ce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span><br>Date: =
+Fri, Jan 13, 2017 at 3:21 PM<br>Subject: Prod Build<br>To: Sunny Agarwal &l=
+t;<a href=3D"mailto:sunny@unicommerce.com" target=3D"_blank">sunny@unicomme=
+rce.com</a>&gt;<br><br><br><div dir=3D"ltr">Please help with the following =
+changes for Wormhole and Uniware Production =C2=A0:<div><br></div><div>1. M=
+oving tomcat to 8.0.15 alongwith corresponding changes in catalina.sh and s=
+erver.xml</div><div>2. Moving Java to java 8=C2=A0</div><div>3. Changing bu=
+ild script to fetch from bitbucket for Unifier, UniwareCommon, Uniware =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0,Wormhole.</div>=
+<div>4. Changing build configuration for wormhole to use Unifier, Uniwareco=
+mmon instead of the =C2=A0 =C2=A0 =C2=A0 =C2=A0Unifier7 , UniwareCommon7 ve=
+rsions.</div><div>5. Running the Mysql and Mongo queries mentioned in the s=
+ingle attached file.</div><div>6. Building Wormhole Production.</div></div>
+</div><br></div>
+</blockquote></div><br></div></div>
+
+--001a11404b3a0316f405463b7f37--

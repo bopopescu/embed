@@ -1,0 +1,113 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp2260759itg;
+        Tue, 27 Sep 2016 05:34:14 -0700 (PDT)
+X-Received: by 10.55.3.19 with SMTP id 19mr25512437qkd.99.1474979654823;
+        Tue, 27 Sep 2016 05:34:14 -0700 (PDT)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-yw0-x230.google.com (mail-yw0-x230.google.com. [2607:f8b0:4002:c05::230])
+        by mx.google.com with ESMTPS id 19si1450026qkz.112.2016.09.27.05.34.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Sep 2016 05:34:14 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:4002:c05::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-yw0-x230.google.com with SMTP id i129so7101802ywb.0
+        for <digvijay@unicommerce.com>; Tue, 27 Sep 2016 05:34:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=re94xzuHCyzEwcOQICiSJbAzdQoYHZIqOk02JZVKSJw=;
+        b=ly7VP7kZ1b1PANOsAll4lA/Dl0bMTWlukYah2S/Aur9ZrK5N28TXbdSldc1V5oXIwn
+         EZFwebWsRIEolLuSjQy5OEmV86PlfDuPdF2VJT0Ik03zDuccccy4IDpqCSWJpCS7okrP
+         RGuJym85FCTQJIRaYkp2it9gkhIS451/yO9+5LxW5qH//IJj/7A53/4q/FhGb6ASgFsm
+         AAkm9K49Jn6SDzwQvCAUTIn3EZpPFNBQPlBspRsMhiOWDNl5GeCzLgrewaF2heo6vtiW
+         /A5Y0WOR1vuWmjF5NnbjZw5JwIfujtYBy7mpKy8n31G4aM+S+X3KjaPNSmfS2JF3VSQ1
+         8VZw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=re94xzuHCyzEwcOQICiSJbAzdQoYHZIqOk02JZVKSJw=;
+        b=ECGHR8dHAj06BASqhWnV/YuTpgqj8ggG+dqmW9OrDGZ9OXosHfff3RiovQELVaeO9s
+         ghiI7Vzp82adzw1Oy5lrzP3LERPLlD9eGYhl9qIRJYwpkz3XJBxXFRMvMXEs3JGmyTEo
+         4QFy4OM2I7pWCtFheg2wo7vIheGpHTfgQKWRR5QQ1xpuxfHMmqmzWpDBmr6N7gHymDZ3
+         8sAo2REBO6Io35aACp4doiw/Yclyy8XxtIK1jo6H8aCfDjap/T4laIgpDM6LMwLmrNw/
+         XTxMHChVCp8MkBVShCW7ziFVYPrAnfsEyJ4Dy7TKfdgIOMiRh6jFhmUniLXu29QEqvwe
+         L7ew==
+X-Gm-Message-State: AE9vXwM+0azjqcmQ77a5VJ81ULJoa3FWLcmA1OftxlJXEWD7zWgnX9qCuxoT2qbAv1ZTmF4b/lLrV6q7OhV7QQ==
+X-Received: by 10.129.78.18 with SMTP id c18mr20940899ywb.160.1474979654365;
+ Tue, 27 Sep 2016 05:34:14 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.77.134 with HTTP; Tue, 27 Sep 2016 05:34:13 -0700 (PDT)
+From: Puneet Sharma <puneet@unicommerce.com>
+Date: Tue, 27 Sep 2016 18:04:13 +0530
+Message-ID: <CAGttGO+om2c5UmMEfD1MZF4XdjukCL4Q3gyXU5HWVC7Zm3foGQ@mail.gmail.com>
+Subject: Grafana URLS
+To: Vikas Goyal <vikas@unicommerce.com>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114db734599fea053d7c76e1
+
+--001a114db734599fea053d7c76e1
+Content-Type: text/plain; charset=UTF-8
+
+Hi Vikas,
+Please give these details -
+
+uniware ka
+1. Staging InfluxDB URL
+2. Staging Grafana URL
+3. Staging ActiveMq Web Console URL
+
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+--001a114db734599fea053d7c76e1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div id=3D"gmail-:159.ma" class=3D"gmail-Mu gmail-SP"=
+ style=3D"font-family:roboto,arial,sans-serif;font-size:13px;line-height:16=
+px;margin-bottom:6px;margin-left:9px;margin-right:9px;opacity:1;word-wrap:b=
+reak-word;word-break:break-word;color:rgb(38,50,56)"><span class=3D"gmail-t=
+L8wMe gmail-EMoHub" dir=3D"ltr">Hi Vikas,=C2=A0</span></div><div id=3D"gmai=
+l-:159.ma" class=3D"gmail-Mu gmail-SP" style=3D"font-family:roboto,arial,sa=
+ns-serif;font-size:13px;line-height:16px;margin-bottom:6px;margin-left:9px;=
+margin-right:9px;opacity:1;word-wrap:break-word;word-break:break-word;color=
+:rgb(38,50,56)">Please give these details -=C2=A0</div><div id=3D"gmail-:15=
+9.ma" class=3D"gmail-Mu gmail-SP" style=3D"font-family:roboto,arial,sans-se=
+rif;font-size:13px;line-height:16px;margin-bottom:6px;margin-left:9px;margi=
+n-right:9px;opacity:1;word-wrap:break-word;word-break:break-word;color:rgb(=
+38,50,56)"><br></div><div id=3D"gmail-:159.ma" class=3D"gmail-Mu gmail-SP" =
+style=3D"font-family:roboto,arial,sans-serif;font-size:13px;line-height:16p=
+x;margin-bottom:6px;margin-left:9px;margin-right:9px;opacity:1;word-wrap:br=
+eak-word;word-break:break-word;color:rgb(38,50,56)"><span id=3D"gmail-:159.=
+co" class=3D"gmail-tL8wMe gmail-EMoHub" dir=3D"ltr">uniware ka</span></div>=
+<div id=3D"gmail-:15a.ma" class=3D"gmail-Mu gmail-SP" style=3D"font-family:=
+roboto,arial,sans-serif;font-size:13px;line-height:16px;margin-bottom:6px;m=
+argin-left:9px;margin-right:9px;opacity:1;word-wrap:break-word;word-break:b=
+reak-word;color:rgb(38,50,56)"><div id=3D"gmail-:15a.at" class=3D"gmail-xH"=
+ style=3D"text-align:center"></div><span id=3D"gmail-:15a.co" class=3D"gmai=
+l-tL8wMe gmail-EMoHub" dir=3D"ltr">1. Staging InfluxDB URL</span></div><div=
+ id=3D"gmail-:15b.ma" class=3D"gmail-Mu gmail-SP" style=3D"font-family:robo=
+to,arial,sans-serif;font-size:13px;line-height:16px;margin-bottom:6px;margi=
+n-left:9px;margin-right:9px;opacity:1;word-wrap:break-word;word-break:break=
+-word;color:rgb(38,50,56)"><div id=3D"gmail-:15b.at" class=3D"gmail-xH" sty=
+le=3D"text-align:center"></div><span id=3D"gmail-:15b.co" class=3D"gmail-tL=
+8wMe gmail-EMoHub" dir=3D"ltr">2. Staging Grafana URL</span></div><div id=
+=3D"gmail-:15c.ma" class=3D"gmail-Mu gmail-SP" style=3D"font-family:roboto,=
+arial,sans-serif;font-size:13px;line-height:16px;margin-bottom:6px;margin-l=
+eft:9px;margin-right:9px;opacity:1;word-wrap:break-word;word-break:break-wo=
+rd;color:rgb(38,50,56)"><div id=3D"gmail-:15c.at" class=3D"gmail-xH" style=
+=3D"text-align:center"></div><span id=3D"gmail-:15c.co" class=3D"gmail-tL8w=
+Me gmail-EMoHub" dir=3D"ltr">3. Staging ActiveMq Web Console URL=C2=A0</spa=
+n></div></div><div><br></div><br clear=3D"all"><div><div class=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr">Thanks,<div>Puneet Sharma</d=
+iv><div>Unicommerce Esolutions Pvt. Ltd</div><div>+91-7666182895</div></div=
+></div></div></div></div>
+</div>
+
+--001a114db734599fea053d7c76e1--

@@ -1,0 +1,121 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp737513qgu;
+        Sun, 26 Feb 2017 22:16:30 -0800 (PST)
+X-Received: by 10.99.225.5 with SMTP id z5mr18779117pgh.145.1488176189789;
+        Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+Return-Path: <tech+bncBDPYF4VC54CRBPMIZ7CQKGQE3GYQFDQ@unicommerce.com>
+Received: from mail-pg0-x245.google.com (mail-pg0-x245.google.com. [2607:f8b0:400e:c05::245])
+        by mx.google.com with ESMTPS id u21si14255153pgi.398.2017.02.26.22.16.29
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbdpyf4vc54crbpmiz7cqkgqe3gyqfdq@unicommerce.com) client-ip=2607:f8b0:400e:c05::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c05::245 is neither permitted nor denied by best guess record for domain of tech+bncbdpyf4vc54crbpmiz7cqkgqe3gyqfdq@unicommerce.com) smtp.mailfrom=tech+bncBDPYF4VC54CRBPMIZ7CQKGQE3GYQFDQ@unicommerce.com
+Received: by mail-pg0-x245.google.com with SMTP id 1sf162811628pgz.5
+        for <digvijay@unicommerce.com>; Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=+ro3PmiNSNZ56LaPMBO0Zgo2CrCH6gBs8RW1b/euQWQ=;
+        b=O81gfKsY3g7HcIzXff/FQQ0zushqwser0gQmk67oztdMEkZ+7uH9xsokouBIiOSQvd
+         KLVA5Jd59VNDDSBguVyrEAhl1vhkbeR5moB6saJYltCe/cKP+BRwt0keh6CqJ8Hx7oHM
+         2aB8fZEsRf70vNaVz4RDYf5DfWLWBXq8rCSgXPptQkcWSRK75Vw9NPdejaTfFl+TL4hx
+         Be40D4mn45ofKBWS9fNiLAFNcF7bk7zNTpasxS+LqwOPosmdXbh3pPUu5zc0XMT/tAni
+         l8680yFKpEdn+Prh2NzOHa/XnbhfMDpcgDg/O53R1N58JiShVs9KWG3AoOJsRsklz4Xn
+         ebEg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=+ro3PmiNSNZ56LaPMBO0Zgo2CrCH6gBs8RW1b/euQWQ=;
+        b=f6CC/s6ZhQOxy7tmmE51eyK1DeTm36CX8g4cQ3NHk29s5899E+0b3RoWjsovcLtRMR
+         xUMPchQs1RbBNupqve3AkyrEHjDV/gDejdOf16+/lP6OwYwClmUShJdt4RzqE6G1qlAG
+         J5/sEKO0e82ZqAEucW5p5JO2BFoB+ZgGRWi02XUtBkThTOzsT3Twv17xKoTfsPAfaaTx
+         ws7n9N5VCJICl70Sb6yWuLHRKRHSCXsu8Ang+Q4OgRN8KQbzcpZRADo8iXm7feNsaQVa
+         yvozGhjT3KZ+/B7vRMpkgoqy4EN/YbwbhiIMUajgc/kpaWVYXWZ2aTY2pYAZTJWvIHq1
+         841Q==
+X-Gm-Message-State: AMke39mO6qTVFUsatSXfnXaeLpruaMPoqLg1jpzcugk1CfiBDzWT2zvv0ghCB1wJlXqIzg==
+X-Received: by 10.99.154.9 with SMTP id o9mr5914332pge.6.1488176189520;
+        Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.41.33 with SMTP id d30ls12575698otb.17.gmail; Sun, 26 Feb
+ 2017 22:16:29 -0800 (PST)
+X-Received: by 10.31.11.134 with SMTP id 128mr6753627vkl.132.1488176189349;
+        Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+Received: from mail-ua0-x233.google.com (mail-ua0-x233.google.com. [2607:f8b0:400c:c08::233])
+        by mx.google.com with ESMTPS id s4si4904060uae.224.2017.02.26.22.16.29
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::233 is neither permitted nor denied by best guess record for domain of shobhit@unicommerce.com) client-ip=2607:f8b0:400c:c08::233;
+Received: by mail-ua0-x233.google.com with SMTP id f54so15484629uaa.1
+        for <tech@unicommerce.com>; Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+X-Received: by 10.159.41.231 with SMTP id s94mr6780471uas.179.1488176189154;
+ Sun, 26 Feb 2017 22:16:29 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.31.81.131 with HTTP; Sun, 26 Feb 2017 22:16:28 -0800 (PST)
+From: Shobhit Gupta <shobhit@unicommerce.com>
+Date: Mon, 27 Feb 2017 11:46:28 +0530
+Message-ID: <CAD3ntkykpCCSeVJTNMuj7JbkDUJORdhYRz0nfUgc7KZ3OOgcxw@mail.gmail.com>
+Subject: Petha at my desk <eom>
+To: Product Team <product@unicommerce.com>, Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114eed001e3b3605497d0516
+X-Original-Sender: shobhit@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400c:c08::233 is neither permitted nor denied by best
+ guess record for domain of shobhit@unicommerce.com) smtp.mailfrom=shobhit@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114eed001e3b3605497d0516
+Content-Type: text/plain; charset=UTF-8
+
+-- 
+[image: photo]
+*Regards,*
+*Shobhit Gupta*
+Software Engineer, Unicommerce eSolutions Pvt. Ltd
+m: 8171116285 | e: shobhit@unicommerce.com | w: http://www.unicommerce.com
+
+--001a114eed001e3b3605497d0516
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmai=
+l_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><table bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"470" style=3D"font-s=
+ize:12.8px;width:470px"><tbody><tr valign=3D"top"><td style=3D"border-right=
+-width:1px;border-right-style:solid;border-right-color:rgb(69,102,142);padd=
+ing-right:10px;width:10px"><img src=3D"https://s3.amazonaws.com/webapp.wise=
+stamp.com/ffxL1of0QSaDBUTQNAZG_unicommerce%20new%20logo%20black%20(2).png" =
+alt=3D"photo" style=3D"border-radius:4px;width:65px;max-width:120px"><font =
+color=3D"#888888"></font></td><td style=3D"font-stretch:normal;color:rgb(10=
+0,100,100);padding-left:10px"><div><b><font face=3D"arial, helvetica, sans-=
+serif" size=3D"2">Regards,</font></b></div><div><font face=3D"arial, helvet=
+ica, sans-serif" size=3D"2"><b>Shobhit Gupta</b><br><span style=3D"color:rg=
+b(136,136,136)">Software Engineer</span>,=C2=A0Unicommerce eSolutions Pvt. =
+Ltd</font></div><div style=3D"color:rgb(141,141,141);padding:5px 0px"><font=
+ face=3D"arial, helvetica, sans-serif" size=3D"2"><span style=3D"display:in=
+line-block"><span style=3D"color:rgb(69,102,142)">m: 8171116285</span></spa=
+n>=C2=A0| e<span style=3D"display:inline-block"><span style=3D"color:rgb(69=
+,102,142)">:=C2=A0</span><a href=3D"mailto:shobhit@unicommerce.com" style=
+=3D"color:rgb(141,141,141);text-decoration:none" target=3D"_blank"><span>sh=
+obhit</span>@unicommerce.com</a>=C2=A0</span>|=C2=A0<span style=3D"white-sp=
+ace:nowrap;display:inline-block"><span style=3D"color:rgb(69,102,142)">w:=
+=C2=A0</span><a href=3D"http://www.unicommerce.com/" style=3D"color:rgb(17,=
+85,204)" target=3D"_blank">http://www.unicommerce.com</a></span></font></di=
+v></td></tr></tbody></table></div></div>
+</div>
+
+--001a114eed001e3b3605497d0516--

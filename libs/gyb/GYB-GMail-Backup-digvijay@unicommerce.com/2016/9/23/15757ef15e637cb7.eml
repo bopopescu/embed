@@ -1,0 +1,472 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp559008itg;
+        Fri, 23 Sep 2016 09:44:29 -0700 (PDT)
+X-Received: by 10.202.105.65 with SMTP id e62mr6965018oic.102.1474649069055;
+        Fri, 23 Sep 2016 09:44:29 -0700 (PDT)
+Return-Path: <bounces+3130939-342d-digvijay=unicommerce.com@mail.getpostman.com>
+Received: from o2.mail.getpostman.com (o2.mail.getpostman.com. [167.89.76.231])
+        by mx.google.com with ESMTPS id t96si6960406ota.34.2016.09.23.09.44.28
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 23 Sep 2016 09:44:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+3130939-342d-digvijay=unicommerce.com@mail.getpostman.com designates 167.89.76.231 as permitted sender) client-ip=167.89.76.231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@getpostman.com;
+       spf=pass (google.com: domain of bounces+3130939-342d-digvijay=unicommerce.com@mail.getpostman.com designates 167.89.76.231 as permitted sender) smtp.mailfrom=bounces+3130939-342d-digvijay=unicommerce.com@mail.getpostman.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=getpostman.com; 
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe; 
+	s=s1; bh=W2J4B4e/IQJsjXdYV2AaQ6AtSSQ=; b=Hve311Pr8rvCFl+WK5Nh2Sz
+	ra/CVLiW9FqfLkh/IcwsCVPvJSkNlRG/4ejyDs5VTBDtw8cfJfvS0NqjseZaP5Ki
+	RItCknjLW7H/PWkkCKc9HFNLL1FFSlktKAcFE0iaerWeQWwYXcwpvNudel2YfivW
+	TMdbspKqTFaG+gAtVfjY=
+Received: by filter0986p1mdw1.sendgrid.net with SMTP id filter0986p1mdw1.24053.57E5508A5E
+        2016-09-23 15:55:54.664886325 +0000 UTC
+Received: from MzEzMDkzOQ (o16789125x238.outbound-mail.sendgrid.net [167.89.125.238])
+	by ismtpd0003p1iad1.sendgrid.net (SG) with HTTP id JcSDylAnQkCRW8QTCVcDKg
+	for <abhinav.asthana@getpostman.com>; Fri, 23 Sep 2016 15:55:54.669 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=da0fb0efbaa77e02f82c06054543b3740900178d431290c07bc75c0612b2
+Date: Fri, 23 Sep 2016 15:55:54 +0000
+From: "Abhinav from Postman" <abhinav.asthana@getpostman.com>
+Mime-Version: 1.0
+Reply-To: abhinav.asthana@getpostman.com
+Subject: Updates from Postman
+To: digvijay@unicommerce.com
+Message-ID: <JcSDylAnQkCRW8QTCVcDKg@ismtpd0003p1iad1.sendgrid.net>
+List-Unsubscribe: <http://links.getpostman.com/asm/unsubscribe/?user_id=3130939&data=DSxFGk6APM0ioLaiyNsOhpHLsieSQW2KuyywWU3gJatupydGqRce7fgyqjKXc39ad89H7QroXFUyOoFA8Td1UFkIfNMGUoQ5m_J9CwZ_lGe4AZ68m6BhLEBPqTk8GvcLGoiHy37RTbZF0_4M7jw12HrC9IVr7DxB6bvG4rfLgnpGEy7e1pdYmG5SQkB5QyOLyeECBclvjh7G78ksbC6xKTR_svjJ5kOvj3qVlhd6djH9Epn7ElGR2oaqmTGuTK1DUejPwQyjqcBBLBPNlmMSj1bJQ7cF4WNocU3kyGz34OiPxsEAsF5wDsrGXADQvlx_hmpwrMToYSmV-qr0E1R1M-LgpHDi1rm5S_K60Lj8bKDJyU3VnwXKP0zwZYgxbTGjOqgk4dxFwgXTG3RspExt-Iz9OPmkMZrZcbvCOefc0-mMC7Gptkg_ORBVQ5SpDZnL0szmB9gIiAhQDHJe1Ea73nKmIiu3O9RStD1fpy-00AIDeXsNKM6ElpXU5wVirsOvd09tuPH5X350aFWmTl9sJQfVhpvS91fdDFrClaMSSSNbDGDhg9lM-olCr766s8BR4SLyRwilQa5ygG7Qc28Dsw==>, <mailto:unsubscribe@mail.getpostman.com?subject=http://links.getpostman.com/asm/unsubscribe/*q*user_id=3130939&data=DSxFGk6APM0ioLaiyNsOhpHLsieSQW2KuyywWU3gJatupydGqRce7fgyqjKXc39ad89H7QroXFUyOoFA8Td1UFkIfNMGUoQ5m_J9CwZ_lGe4AZ68m6BhLEBPqTk8GvcLGoiHy37RTbZF0_4M7jw12HrC9IVr7DxB6bvG4rfLgnpGEy7e1pdYmG5SQkB5QyOLyeECBclvjh7G78ksbC6xKTR_svjJ5kOvj3qVlhd6djH9Epn7ElGR2oaqmTGuTK1DUejPwQyjqcBBLBPNlmMSj1bJQ7cF4WNocU3kyGz34OiPxsEAsF5wDsrGXADQvlx_hmpwrMToYSmV-qr0E1R1M-LgpHDi1rm5S_K60Lj8bKDJyU3VnwXKP0zwZYgxbTGjOqgk4dxFwgXTG3RspExt-Iz9OPmkMZrZcbvCOefc0-mMC7Gptkg_ORBVQ5SpDZnL0szmB9gIiAhQDHJe1Ea73nKmIiu3O9RStD1fpy-00AIDeXsNKM6ElpXU5wVirsOvd09tuPH5X350aFWmTl9sJQfVhpvS91fdDFrClaMSSSNbDGDhg9lM-olCr766s8BR4SLyRwilQa5ygG7Qc28Dsw==>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/vF+hHASuXeSxWRDCa+v9T6LzAhXIl6ZJnetH
+ 7gkeB7BexcHGLm+AQE9QU7RgBsVd0MAUrhHAH9bJp9vvm99m2DZitDLBjCMATwxDrsKarpNJJpALFf
+ D+64xf3jN/wuT/E1dsysiERRsRpQlC1rC9qNQr4ijqQRoA1IMNDfCSLpKLSnPaHzYX0dBpMNrLU+FJ
+ 9v3sZc7wmh2MthsH7pTsfP
+X-SG-ID: Z2FxZazunBjVeNuNdzHDqrF8mxuCpi0krmont6YQrP1ZGkTnUhqVxm7SmzrAzh85tArU3Z4UXrNdrj
+ yTXereIWyZIzqIE4xunn2edE5HYOM99LxbPBF12OkZSAK/kME+ZMr8YozV6IGGn4arYxIpJ+PTQesp
+ xNNJ6c+UJ208RRgRe8wLGYdU6Ew5NKf94smAc/tV1KpBctg0cOgjmRgLjr2s4HIWa6QoFnz27NJFyk
+ k=
+
+--da0fb0efbaa77e02f82c06054543b3740900178d431290c07bc75c0612b2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+New Features, Blogs, and Announcements ....
+
+Google Ending Support for Chrome Apps
+
+Last month, Google announced plans to sunset Chrome apps over the next 18 m=
+onths. Never fear, if you use the Postman Chrome app, there's plenty of tim=
+e to transition to our Mac or Windows app. Read Postman's take on the annou=
+ncement here. http://blog.getpostman.com/2016/08/23/using-the-postman-chrom=
+e-app-implications-from-the-recent-google-announcement/
+
+Voucherify Rediscovers Postman
+
+Think you know Postman? Voucherify recently brushed up on Postman Cloud's e=
+xpanded features, supporting their entire API workflow:
+
+=E2=80=9C$5 per month for all these features?
+
+That's what we call super cost to benefit ratio.=E2=80=9D
+
+Try out the super benefit to cost ratio with a free trial of Postman Cloud.=
+ https://www.getpostman.com/pricing#cloud-free-trial-30 Or, read Voucherify=
+'s super blog post http://www.voucherify.io/blog/2016/8/31/postman-really-s=
+upercharges-your-api, covering testing, collaboration, variables, and more.
+
+Need to Learn (not Rediscover) Postman?
+
+David Creedy wrote a terrific series of detailed articles on Streamlining A=
+PI Testing with Postman. He covers everything from history to collections t=
+o headers to creating tests. Get started with Part 1 https://blog.matrix42.=
+com/2016/08/08/api-testing-postman-part-1/ of the 3-part series.
+
+Intuit Rolls out Postman for QuickBooks Online APIs
+
+Intuit has provided a Postman collection for QuickBooks! Jarred Keneally, f=
+rom the Intuit developer group, wrote a detailed blog post https://develope=
+r.intuit.com/hub/blog/2016/09/19/introducing-postman-quickbooks-online-api =
+outlining how to get started with the Quickbooks Online Postman collection,=
+ or dig straight into the documentation here. https://developer.intuit.com/=
+docs/0100_quickbooks_online/0100_essentials/0085_develop_quickbooks_apps/00=
+01_your_first_request/first_request_with_postman
+
+CheerioJS in the Postman Sandbox
+
+Postman substituted CheerioJS for JQuery in the scripting sandbox with the =
+latest release of the Mac app and Newman.
+
+=E2=80=9CWith all these additions, Postman users now have consistent, blazi=
+ng fast, scripting sandbox inside Postman that works cross-platform and is =
+unaffected by browser quirks or versioning differences.=E2=80=9D
+
+Read all the details in the blog post. http://blog.getpostman.com/2016/08/3=
+0/jquery-replaced-by-cheeriojs-in-postman-sandbox/
+
+The Postman Console
+
+The latest Postman for Mac app includes the Postman Console, a new feature =
+much-loved around the Postman office. Postman Console is analogous to a bro=
+wser's version of developer console, except it is tuned for API development=
+. Details =E2=80=94 where else? =E2=80=94 in a blog post. http://blog.getpo=
+stman.com/2016/08/26/the-postman-console/
+
+IBM Deploys the Run in Postman Button
+
+The Run in Postman Button allows API publishers to share documentation, ill=
+ustrate use cases, and onboard developers quickly - and now you can use it =
+with IBM's MobileFirst Platform in IBM Cloud. Learn different methods to te=
+st and debug adapters in this overview https://mobilefirstplatform.ibmcloud=
+.com/tutorials/en/foundation/8.0/adapters/testing-and-debugging-adapters/ f=
+rom IBM.
+
+Question? Contribution?
+
+Drop us an email mailto:help@getpostman.com?Subject=3DPostman%20Community!
+
+Copyright =C2=A9 2016 Postdot Technologies Inc., All Rights Reserved.
+
+Our mailing address is:
+
+Postdot Technologies, 415 Jackson St., San Francisco, CA 94111
+
+Click Here to Unsubscribe http://links.getpostman.com/asm/unsubscribe/?user=
+_id=3D3130939&data=3DDSxFGk6APM0ioLaiyNsOhpHLsieSQW2KuyywWU3gJatupydGqRce7f=
+gyqjKXc39ad89H7QroXFUyOoFA8Td1UFkIfNMGUoQ5m_J9CwZ_lGe4AZ68m6BhLEBPqTk8GvcLG=
+oiHy37RTbZF0_4M7jw12HrC9IVr7DxB6bvG4rfLgnpGEy7e1pdYmG5SQkB5QyOLyeECBclvjh7G=
+78ksbC6xKTR_svjJ5kOvj3qVlhd6djH9Epn7ElGR2oaqmTGuTK1DUejPwQyjqcBBLBPNlmMSj1b=
+JQ7cF4WNocU3kyGz34OiPxsEAsF5wDsrGXADQvlx_hmpwrMToYSmV-qr0E1R1M-LgpHDi1rm5S_=
+K60Lj8bKDJyU3VnwXKP0zwZYgxbTGjOqgk4dxFwgXTG3RspExt-Iz9OPmkMZrZcbvCOefc0-mMC=
+7Gptkg_ORBVQ5SpDZnL0szmB9gIiAhQDHJe1Ea73nKmIiu3O9RStD1fpy-00AIDeXsNKM6ElpXU=
+5wVirsOvd09tuPH5X350aFWmTl9sJQfVhpvS91fdDFrClaMSSSNbDGDhg9lM-olCr766s8BR4SL=
+yRwilQa5ygG7Qc28Dsw=3D=3D=
+
+--da0fb0efbaa77e02f82c06054543b3740900178d431290c07bc75c0612b2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<!doctype html>
+<html style=3D"font-family: verdana, geneva, sans-serif;" xmlns=3D"http://w=
+ww.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" x=
+mlns:v=3D"urn:schemas-microsoft-com:vml">
+<head><!-- NAME: 1 COLUMN --><!--[if gte mso 15]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]--><meta charset=3D"UTF-8"><meta http-equiv=3D"X-UA-Compatible=
+" content=3D"IE=3Dedge"><meta name=3D"viewport" content=3D"width=3Ddevice-w=
+idth, initial-scale=3D1">
+	<title></title>
+</head>
+<body style=3D"font-family: verdana, geneva, sans-serif; margin: 0; padding=
+: 0; width: 100%; height: 100%;">
+<center style=3D"font-family: verdana, geneva, sans-serif;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" he=
+ight=3D"100%" id=3D"bodyTable" style=3D"font-family: verdana, geneva, sans-=
+serif; margin: 0; padding: 0; width: 100%; height: 100%;" width=3D"100%">
+	<tbody>
+		<tr style=3D"font-family: verdana, geneva, sans-serif;">
+			<td align=3D"center" height=3D"100%" id=3D"bodyCell" style=3D"font-famil=
+y: verdana, geneva, sans-serif; margin: 0; padding: 10px; width: 100%; heig=
+ht: 100%; border-top: 0;" valign=3D"top" width=3D"100%"><!-- BEGIN TEMPLATE=
+ // --><!--[if gte mso 9]>
+            <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"600" style=3D"width:600px !important;">
+              <tr>
+                <td align=3D"center" valign=3D"top" width=3D"600" style=3D"=
+width:600px;">
+                  <![endif]-->
+			<table bgcolor=3D"#fbfbfb" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"templateContainer" style=3D"font-family: verdana, geneva, sans=
+-serif; color: #5b5b5b; line-height: 150%; background-color: #fbfbfb; max-w=
+idth: 600px !important;" width=3D"100%">
+				<tbody>
+					<tr style=3D"font-family: verdana, geneva, sans-serif;">
+						<td align=3D"center" id=3D"templateHeader" style=3D"font-family: verd=
+ana, geneva, sans-serif; text-align: center; padding-bottom: 20px;" valign=
+=3D"top">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font=
+-family: verdana, geneva, sans-serif;" width=3D"100%">
+							<tbody style=3D"font-family: verdana, geneva, sans-serif;">
+								<tr style=3D"font-family: verdana, geneva, sans-serif;">
+									<td style=3D"font-family: verdana, geneva, sans-serif;" valign=3D"=
+top">
+									<div class=3D"pm-mail-header pm-mail-header-3" style=3D"font-famil=
+y: verdana, geneva, sans-serif; width: 100%; height: 100px; padding-top: 35=
+px; background-repeat: no-repeat; background-position: center top; backgrou=
+nd-image: url('https://marketing-image-production.s3.amazonaws.com/uploads/=
+ad2e766e0adafd01772508a6b6a7ed3d5716e99cd9115e4dadb0f89e0666d32ebc67a8e554c=
+bced81f4cf2a35de252cfb9a0ca76eb6cad05c83499065dc171e4.png');">&nbsp;</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr style=3D"font-family: verdana, geneva, sans-serif;">
+						<td align=3D"left" id=3D"templateBody" style=3D"font-family: verdana,=
+ geneva, sans-serif; text-align: left; padding-top: 9px; padding-left: 18px=
+; padding-right: 18px; padding-bottom: 64px;" valign=3D"top">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font=
+-family: verdana, geneva, sans-serif;" width=3D"100%">
+							<tbody style=3D"font-family: verdana, geneva, sans-serif;">
+								<tr style=3D"font-family: verdana, geneva, sans-serif;">
+									<td style=3D"font-family: verdana, geneva, sans-serif;" valign=3D"=
+top">
+									<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-family: verdana, geneva, sans-serif;" width=3D"100%">
+										<tbody style=3D"font-family: verdana, geneva, sans-serif;">
+											<tr style=3D"font-family: verdana, geneva, sans-serif;">
+												<td class=3D"textContent" style=3D"font-family: verdana, geneva=
+, sans-serif; word-break: break-word;" valign=3D"top">
+												<p style=3D"font-family: verdana, geneva, sans-serif;">New Feat=
+ures, Blogs, and Announcements ....</p>
+												<strong><span style=3D"font-size:14px;">Google Ending Support f=
+or Chrome Apps</span></strong><br />
+												Last month, Google announced plans to sunset Chrome apps over t=
+he next 18 months. Never fear, if you use the Postman Chrome app, there&#39=
+;s plenty of time to transition to our Mac or Windows app. Read Postman&#39=
+;s take on the announcement <a href=3D"http://links.getpostman.com/wf/click=
+?upn=3DHg2EP48FBtl2Z6Adsu6CXKQDWIUHfv7IbKMTQnvuMoRo55UUxD4ADCJ1WhLuweWulXjz=
+-2FRAyJduUsvR4kHppLewg7RH6-2BBckQNkhCxucISJSo34-2FLF8mhmIOdriZwuB5To-2F6Km2=
+yrSD-2BKVuK4X3IVp3F5X0X60CKTqbtNL83gTE-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUH=
+fUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXA=
+PxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1cD1bb8P-2F33=
+n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ7E9F7-2Fmb7X=
+1GHU6eAI-2FOr6Nj-2B3XbgLIF5S7878NSM0nv-2F488-2BIj-2BcAuJMiN1RabvxrQYxn1bN3n=
+rysc01COHWKjtf4R9ytPCIjm5egOuF-2B-2B2H8jUOFzqdanntS-2BVvpGfxQx-2BwZLke3Z80l=
+dSlPFnA4WCG1v9-2BhLwHWqVvM3DQ7nGmKU5s8UadnNKTosZaw6gRPp-2BGVinXTV4G5qXHj33y=
+S-2F1IDZvXuef2HlEwCKQz74E5w-3D-3D" style=3D"font-family: verdana, geneva, s=
+ans-serif; color: #ef5b25; text-decoration: underline;">here.</a><br />
+												<br />
+												<strong><span style=3D"font-size:14px;">Voucherify Rediscovers =
+Postman</span></strong><br />
+												Think you know Postman? Voucherify recently brushed up on Postm=
+an Cloud&#39;s expanded features, supporting their entire API workflow:
+												<p style=3D"font-size:14px; font-weight: bold; text-align:cente=
+r;">&ldquo;$5 per month for all these features?<br />
+												That&#39;s what we call super cost to benefit ratio.&rdquo;</p>
+												Try out the super benefit to cost ratio with a <a href=3D"http:=
+//links.getpostman.com/wf/click?upn=3D8eteK7YuScqyqOqyNiQ5UuIaQwfVSDR9PERCW=
+LLEYIsKMXQwcB5blJTu-2BJ-2Bs3Ti05FIND5hYtw1VW-2BUFsmAEAw-3D-3D_9Pbo-2BQtn9sw=
+9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C5=
+39b-2FoA-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXs=
+if7-2Bd1cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISU=
+OrEv4bxZ7E-2F173jY8yQPRrVNakFYbjOuneX5NcbYsU4hdZPf8KSmmmoU-2BNah9zsO89J6p1W=
+ECAYd3wyNMAflM9wujqDeJNm7FT3O6p-2FLXNy7jAqdAC1VfaNYAwY1RQE-2FM3B-2BeDYQsp3S=
+bX-2BjTJucGXT5jzw17-2FPh7-2FBCo0MKFNo5aIkKteXqh98XQIR-2BjzS7of-2F2EeHWMk63s=
+rVs-2Fi9I6NPvsddekB8TUlMvkeT9f3LgHHed2ssXBw-3D-3D" style=3D"font-family: ve=
+rdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;">fre=
+e trial of Postman Cloud.</a> Or, read Voucherify&#39;s super <a href=3D"ht=
+tp://links.getpostman.com/wf/click?upn=3DVputfVednRgUraZqUg3GThSgzrpFEUce-2=
+FbCHKi3z-2F8kEqP4IhNeo-2BfvbebeL6C1IU2Vt5KBs3r85344fWtB09DuNuP-2BZdGp4F7fhB=
+6uxIV0JlZRkxYQQ-2FWnYXIiIK-2Baj_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dt=
+m7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXAPxWhpKhrgu=
+NTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1cD1bb8P-2F33n1taCgJlG2=
+vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ7E-2Bu0NKKRgSOqwZNH3IF=
+RP4PBc-2BoHalmJck9NSD0ATPhUwpDulTviZv8kcuim51-2Bkv18vWTXvxHgC6F2WoKBYolblC3=
+x5b-2Br23HFA87c8JYHB52kKEQ9g21pbfvd-2Bb-2BT9tfAYyXr03S3gYhFSuKv-2FHc78DFUp7=
+BlXswiQDDEbjn11x8rDsrr0p-2FSpkkAyagw6irCQJCp2ZR-2B51PELF3cTF-2BV6Ys-2BP5azZ=
+knwDt7XVxqt0g-3D-3D" style=3D"font-family: verdana, geneva, sans-serif; col=
+or: #ef5b25; text-decoration: underline;">blog post</a>, covering testing, =
+collaboration, variables, and more.<br />
+												<br />
+												<strong><span style=3D"font-size:14px;">Need to Learn (not Redi=
+scover) Postman?</span></strong><br />
+												David Creedy wrote a terrific series of detailed articles on St=
+reamlining API Testing with Postman. He covers everything from history to c=
+ollections to headers to creating tests. Get started with <a href=3D"http:/=
+/links.getpostman.com/wf/click?upn=3D8eteK7YuScqyqOqyNiQ5Ut4gorVDUl-2BaQhFe=
+Wps9d6kkE0xq68OjeS7NBX6HP3CO3k25D8yFZbBD1o8tcArQnY6paERKGcBU0lnmDbim7qM-3D_=
+9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSy=
+qcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQS=
+deOlP2VEaspXsif7-2Bd1cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJz=
+yvNXQDD5Y8ISUOrEv4bxZ7E-2BibZZhc-2FhQopGLJz-2Bh4zVgVTiA-2BfcHEamptFQfYrO2Em=
+-2BtiTFdjd7yap244GaRccxfsDRj5nlXdzmpGXLiM-2FLwZtlSdRbiUX260YdLUab6XqRUpKn05=
+-2BbyD449EfzQUCsDa2AyaG0B3dBlaOlaO1CI4GdWZ0UpDB3zlz5vaXz4VRW5kpY6C8aeWAUBXy=
+1W4B5OAOOfAmcQwcvUapLWfn0lxuIi6WCUT0tOauo9CHraBg-3D-3D" style=3D"font-famil=
+y: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;=
+">Part 1</a> of the 3-part series.<br />
+												<br />
+												<strong><span style=3D"font-size:14px;">Intuit Rolls out Postma=
+n for QuickBooks Online APIs</span></strong><br />
+												Intuit has provided a Postman collection for QuickBooks! Jarred=
+ Keneally, from the Intuit developer group, wrote a detailed <a href=3D"htt=
+p://links.getpostman.com/wf/click?upn=3D8eteK7YuScqyqOqyNiQ5UlcBXqYdp3QnL20=
+9fXPcRhboHvgg9iNpg-2BnCIpgbfCxW9HSQ7jbPOtRQOG8MCuxZBuXlFbnoGq0TdPQxecD47Ihi=
+mehWBE7sR5z4XUSMZgKvBzxTzSq-2Brx0NQ9BMfpsBwg-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWP=
+oOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA-2B=
+ZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1cD1=
+bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ7E-=
+2FRmCPR4UkQ5He8dWgRYLCwm7L37eLUmADtaAgnRwC9-2B1pCuHhZYXxdlljgTF-2FVN0q2amiX=
+vfasweyuppFOEYBb2WvDVCeGqJyekSjxl9FVeMh5IUTCgtoRbaTg3Q0x9Th4NLgPKF9js1ZnJou=
+mZXbt-2BvsYFcggN6Kbo63L1sf969otXb7xZr7yd8IItB1CYrDsrjaihNlTD-2BXoan9IAQDoeP=
+fS-2FY1i0e1xpKk2kIGjAA-3D-3D" style=3D"font-family: verdana, geneva, sans-s=
+erif; color: #ef5b25; text-decoration: underline;">blog post</a> outlining =
+how to get started with the Quickbooks Online Postman collection, or dig st=
+raight into the documentation <a href=3D"http://links.getpostman.com/wf/cli=
+ck?upn=3D8eteK7YuScqyqOqyNiQ5UlcBXqYdp3QnL209fXPcRhaYMaR1xwPJS85g-2FG3s-2BP=
+Ag8QznFxaMLN8RB-2FtKomG7zJFJdYDe1oj-2F7OCHuGpeT3jtO3IGnKxOGPwpoJ9Ls0zKUFTPs=
+OOZq0nP-2BwvD57Dr-2FEtckk7B9do6lbT7SJcOf-2FlSx5r63cpVjkAL5M68Gz-2F6JOHr8UfK=
+hpLt-2Fss-2Fzc-2F3Zw-3D-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm7n4i=
+cGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXAPxWhpKhrguNTJEc=
+6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1cD1bb8P-2F33n1taCgJlG2vF-2B=
+LXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ7E-2FrxOoAEaAuUesgMiDh9qpN1=
+X2Ul2yKdxClRGID262bLSR1YLIh-2BNGgX-2BealAGu6VSyUDxm3h-2BT-2BRvowukhFjj1i4VJ=
+YBeJQagg1S-2BDkdyladvVcMhS2Oc-2FGbSTCz8y-2FLrNwwPaGG-2F2RuwX9bYzWKyxrt7q8oL=
+IB5vM9uslde8nsHQwDg4qwSXYUqAnmcIs8R-2BGQIAmJ8sgVR07uLZUOivf4qxQUlpX40As9klJ=
+Sa9DwQ-3D-3D" style=3D"font-family: verdana, geneva, sans-serif; color: #ef=
+5b25; text-decoration: underline;">here.</a><br />
+												<br />
+												<strong><span style=3D"font-size:14px;">CheerioJS in the Postma=
+n Sandbox</span></strong><br />
+												Postman substituted CheerioJS for JQuery in the scripting sandb=
+ox with the latest release of the Mac app and Newman.<br />
+												<br />
+												&ldquo;With all these additions, Postman users now have consist=
+ent, blazing fast, scripting sandbox inside Postman that works cross-platfo=
+rm and is unaffected by browser quirks or versioning differences.&rdquo;<br=
+ />
+												<br />
+												Read all the details in the <a href=3D"http://links.getpostman.=
+com/wf/click?upn=3DHg2EP48FBtl2Z6Adsu6CXKQDWIUHfv7IbKMTQnvuMoToaZxc3OvX-2Bz=
+5O9JjSTV80MkpJI4BpahN5W5tp0axKf9ZK9vJVDHib0v8-2FoWy2794rcTGuxkFtjMED3C9VL1D=
+b_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZ=
+SyqcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43q=
+QSdeOlP2VEaspXsif7-2Bd1cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sU=
+JzyvNXQDD5Y8ISUOrEv4bxZ7E84MoBvKsnWX0HxrM1WD4kZ-2FiqD6ADUaxFRDj19QjZ2hcqWAp=
+0Knjx8CGh68M-2BVJOMLpXdpeKAfAq226LN1wc5QC7hZMicbB8WZO85d-2Fd5Ly5ID2Dap88GWx=
+wg81sQCjIcGGQwlJKxg-2B44cifGMMOwOF1Q5NehGLovv4kvmR-2B8KoY-2FYg75pDrPmeZslPa=
+Gzv2YTDBJlL8e1mrhggdbSjnerintG9yiP6hxi4P1EYENglA-3D-3D" style=3D"font-famil=
+y: verdana, geneva, sans-serif; color: #ef5b25; text-decoration: underline;=
+">blog post.</a><br />
+												<br />
+												<strong><span style=3D"font-size:14px;">The Postman Console</sp=
+an></strong><br />
+												The latest Postman for Mac app includes the Postman Console, a =
+new feature much-loved around the Postman office. Postman Console is analog=
+ous to a browser&#39;s version of developer console, except it is tuned for=
+ API development. Details &mdash; where else? &mdash; in a <a href=3D"http:=
+//links.getpostman.com/wf/click?upn=3DHg2EP48FBtl2Z6Adsu6CXKQDWIUHfv7IbKMTQ=
+nvuMoRGTv3nJW7-2FuIXou-2Bm9lhVTQtjvLjNPMYVbQl6Hgpw91-2BCBXnL1a17S7Ogk2Bca-2=
+Fow-3D_9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3=
+ucqFZSyqcI8uoSU1d1C539b-2FoA-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3L=
+qd43qQSdeOlP2VEaspXsif7-2Bd1cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBh=
+U60sUJzyvNXQDD5Y8ISUOrEv4bxZ7E-2Bm7pyl8gRFM3riOa3qeNC8n49OF1AG19QexRU4vE4V9=
+CRU-2FarHrgsh0oHxTPabsWrw3cq6XZSRQXSFLCOl8ZbRM77Vub6OQMvrWWWyOc-2F-2F-2FG87=
+I5YFYYd3770fQeEcotTUfxvrGS-2BkKeRsI7uJ6ttbM3RtMGwK-2FooVAxMbcbyMW7luoxW5Wr2=
+kgAqrDP3I8mzSKVZ34-2BEtBCelJg4-2BycX8BbCzdop0nCPiMDjenpw8IQ-3D-3D" style=3D=
+"font-family: verdana, geneva, sans-serif; color: #ef5b25; text-decoration:=
+ underline;">blog post.</a><br />
+												<br />
+												<strong><span style=3D"font-size:14px;">IBM Deploys the Run in =
+Postman Button</span></strong><br />
+												The Run in Postman Button allows API publishers to share docume=
+ntation, illustrate use cases, and onboard developers quickly - and now you=
+ can use it with IBM&#39;s MobileFirst Platform in IBM Cloud. Learn differe=
+nt methods to test and debug adapters <a href=3D"http://links.getpostman.co=
+m/wf/click?upn=3D8eteK7YuScqyqOqyNiQ5UhK6OigpvG6zqxp6GLMSSGbLSI0BIlEcr-2BzR=
+K6wsUnIimi-2BNM-2B2zrcqIA6iTUYLhDKpx-2BwULi0zlBpyBSOtCdAS-2BzEtBiPwsXCJIv48=
+1QJtHx6ujLQbQX8q-2F8tUxiRuwLPg5dsfJ5je2zqw29xou1Ag-3D_9Pbo-2BQtn9sw9Z4UL8nT=
+EWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA=
+-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1=
+cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ=
+7E-2B-2BSe3AK-2BTb8tvoCEzsxDJsizLXaTmDb8DOv-2FmQeWuNbZmL4lSY3vYAdqiHva4PNzs=
+oBea22zykXZOmfA-2FWQwz99FbicwI2amUKIeLy90DBRRalZ6YJ-2BZCLV12hFYL6hSh1JeZ9xb=
+fyvPaqLp09uAwILsrA1aMxwXkokw64z03kD6HprtM8ft4f3v9G2Vd9-2FkcNFldx3-2Flqsa1V4=
+1PLoKPqjB7sGeO4PqHqbSSKAyr-2Baw-3D-3D" style=3D"font-family: verdana, genev=
+a, sans-serif; color: #ef5b25; text-decoration: underline;">in this overvie=
+w</a> from IBM.<br />
+												<br />
+												<strong><span style=3D"font-size:14px;">Question? Contribution?=
+</span></strong><br />
+												Drop us an <a href=3D"mailto:help@getpostman.com?Subject=3DPost=
+man%20Community" style=3D"font-family: verdana, geneva, sans-serif; color: =
+#ef5b25; text-decoration: underline;" target=3D"_top">email</a>!
+
+												<p>&nbsp;</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr style=3D"font-family: verdana, geneva, sans-serif;">
+						<td align=3D"left" bgcolor=3D"#ededed" id=3D"templateFooter" style=3D=
+"font-family: verdana, geneva, sans-serif; line-height: 150%; padding-top: =
+30px; padding-left: 18px; padding-right: 18px; padding-bottom: 30px; text-a=
+lign: left; border-bottom: 0; background-color: #ededed; color: #808080; fo=
+nt-size: 10px; border-top: 0;" valign=3D"top">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font=
+-family: verdana, geneva, sans-serif;" width=3D"100%">
+							<tbody style=3D"font-family: verdana, geneva, sans-serif;">
+								<tr style=3D"font-family: verdana, geneva, sans-serif;">
+									<td style=3D"font-family: verdana, geneva, sans-serif;" valign=3D"=
+top">
+									<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-family: verdana, geneva, sans-serif;" width=3D"100%">
+										<tbody style=3D"font-family: verdana, geneva, sans-serif;">
+											<tr style=3D"font-family: verdana, geneva, sans-serif;">
+												<td class=3D"textContent" style=3D"font-family: verdana, geneva=
+, sans-serif; word-break: break-word;" valign=3D"top">
+												<div style=3D"font-family: verdana, geneva, sans-serif;"><em st=
+yle=3D"font-family: verdana, geneva, sans-serif; font-style: italic;">Copyr=
+ight &copy; 2016 Postdot Technologies Inc., All Rights Reserved.</em><br st=
+yle=3D"font-family: verdana, geneva, sans-serif;" />
+												<br style=3D"font-family: verdana, geneva, sans-serif;" />
+												<strong style=3D"font-family: verdana, geneva, sans-serif;">Our=
+ mailing address is:</strong><br style=3D"font-family: verdana, geneva, san=
+s-serif;" />
+												Postdot Technologies, 415 Jackson St., San Francisco, CA 94111<=
+br />
+												<br />
+												<a href=3D"http://links.getpostman.com/asm/unsubscribe/?user_id=
+=3D3130939&data=3DDSxFGk6APM0ioLaiyNsOhpHLsieSQW2KuyywWU3gJatupydGqRce7fgyq=
+jKXc39ad89H7QroXFUyOoFA8Td1UFkIfNMGUoQ5m_J9CwZ_lGe4AZ68m6BhLEBPqTk8GvcLGoiH=
+y37RTbZF0_4M7jw12HrC9IVr7DxB6bvG4rfLgnpGEy7e1pdYmG5SQkB5QyOLyeECBclvjh7G78k=
+sbC6xKTR_svjJ5kOvj3qVlhd6djH9Epn7ElGR2oaqmTGuTK1DUejPwQyjqcBBLBPNlmMSj1bJQ7=
+cF4WNocU3kyGz34OiPxsEAsF5wDsrGXADQvlx_hmpwrMToYSmV-qr0E1R1M-LgpHDi1rm5S_K60=
+Lj8bKDJyU3VnwXKP0zwZYgxbTGjOqgk4dxFwgXTG3RspExt-Iz9OPmkMZrZcbvCOefc0-mMC7Gp=
+tkg_ORBVQ5SpDZnL0szmB9gIiAhQDHJe1Ea73nKmIiu3O9RStD1fpy-00AIDeXsNKM6ElpXU5wV=
+irsOvd09tuPH5X350aFWmTl9sJQfVhpvS91fdDFrClaMSSSNbDGDhg9lM-olCr766s8BR4SLyRw=
+ilQa5ygG7Qc28Dsw=3D=3D">Click Here to Unsubscribe</a></div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</center>
+
+<img src=3D"http://links.getpostman.com/wf/open?upn=3D9Pbo-2BQtn9sw9Z4UL8nT=
+EWPoOoyKOsUHfUmRF9p2Dtm7n4icGfsMyAw8IU7JkoV39Q3ucqFZSyqcI8uoSU1d1C539b-2FoA=
+-2BZHJ8LYdXAPxWhpKhrguNTJEc6nVa1qw8zWnHvVE-2F3Lqd43qQSdeOlP2VEaspXsif7-2Bd1=
+cD1bb8P-2F33n1taCgJlG2vF-2BLXKCs2sSyRR00AlcRqBhU60sUJzyvNXQDD5Y8ISUOrEv4bxZ=
+7E8nV9IumvUnwOpd6LMf4rou1oW2M3zK7mpzTOwOxh-2B-2BJ8MVJXm4Tt2Op2tt1Xvnzu-2Fgp=
+TckGT4RFT772ag0YPmjtMOLZidyn0D9EGgzC2a5ieI87gczWcvoYzJPbrZi4MRHkrfgvnjr5Ibv=
+XQA6N0K4XIEp2JzuygibVGoGMH0FzHavdDvwYCZcLbn-2Bi6bemXFVZzio0UXlbLRFdXPRznJkf=
+kHLZ2qt7X25K5lWcdNhEQ-3D-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0"=
+ style=3D"height:1px !important;width:1px !important;border-width:0 !import=
+ant;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !impo=
+rtant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !i=
+mportant;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--da0fb0efbaa77e02f82c06054543b3740900178d431290c07bc75c0612b2--

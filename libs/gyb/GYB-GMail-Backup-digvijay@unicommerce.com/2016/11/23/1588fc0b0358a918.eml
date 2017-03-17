@@ -1,0 +1,93 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp2624233qge;
+        Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+X-Received: by 10.55.179.195 with SMTP id c186mr1055939qkf.137.1479880519866;
+        Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+Return-Path: <vikas@unicommerce.com>
+Received: from mail-qt0-x231.google.com (mail-qt0-x231.google.com. [2607:f8b0:400d:c0d::231])
+        by mx.google.com with ESMTPS id a19si11179105qta.67.2016.11.22.21.55.19
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c0d::231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Received: by mail-qt0-x231.google.com with SMTP id p16so2733577qta.0
+        for <digvijay@unicommerce.com>; Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=Lp20rl3j6xuUeT6y3kEA659WU98wccoVNicrOyb/bLg=;
+        b=0YVffQn6LceLEk2DSpBboef4CaU460zFpGqJtIvTarGeiuxt/L8kJXSxhoBllymEdV
+         Im3/ZTmsJNdcrCPnmo9QP99H2x3FHNjL6MNbklA/kq7mbzTAYTGMEZz1SUXRWhGW/Hx/
+         SjrcndeSO1ECRKq6wFFaPrMzsGQOTnt8D3pVIC9H83Chd/R9UmFtgOjiYC2PN3D2s93f
+         xgJ975k1qioj52NmG1WeoqhmdD7rPS7G2Me+X3mFoNtv7wF5RZZwavN5RsU7t6QQEYD4
+         mtdGd3ybEo8Yfb68WS7YfLicuJPcOtjmoaxYA7VPJ+X4pzPM5gjfediXNOe+IjXHouGN
+         FFlQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=Lp20rl3j6xuUeT6y3kEA659WU98wccoVNicrOyb/bLg=;
+        b=S+X75kET4OK3M3kV375e/11Rc3nbU0TBSDkUtIFaSEE9pCF+pX6GYI0PbGTW2+WB+c
+         k+GXNfifcARo0YqVdUFRurwDfq4W/takQnrU3xgg7HCyXsh1+cqiJa44sLh2wyzqVZ6P
+         RbTexKCG43R0M+FFloGJbPdcf21xlFIREirs5M92JB/IN7a7z/vi1Zbw5EjywUj2PVco
+         3h1QbVDPWh2+ZJXA0FMDFc5+z3AE8R4YKOO6JM1bi1xnqbNQxJvJ9XkDVyC1HwfyPIYD
+         UQYuljt66gc6q5x2Y+56duLgAWp+upb+dOFqUOoItBUh76so5AuksrNnPNLqOH72kbTF
+         Ol+Q==
+X-Gm-Message-State: AKaTC02s/Elr1XDSeJBAiVGaTr1kWq0LoUeXLpmn8Vhg7mwe1ISGShzkKi4FKakXxo/n4zQBNezKuoq7ROjhnQ==
+X-Received: by 10.237.33.156 with SMTP id l28mr1273232qtc.111.1479880519509;
+ Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.10.147 with HTTP; Tue, 22 Nov 2016 21:55:19 -0800 (PST)
+In-Reply-To: <CAEixeD-NuPtC8=fAn0_AcEVuikRRNPRCi_jY=0BoF8vGP1rYog@mail.gmail.com>
+References: <CAJF3sop_L1B5Buuu6ALeOY4fWA1sNWsaGbzMEG7Wkj8o5bLD1g@mail.gmail.com>
+ <CAEixeD-NuPtC8=fAn0_AcEVuikRRNPRCi_jY=0BoF8vGP1rYog@mail.gmail.com>
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Wed, 23 Nov 2016 11:25:19 +0530
+Message-ID: <CAEixeD8tpZMn0MQwNjrk5pQRwFyk-uC4W1Jkxf9+J-JhW6Yg8A@mail.gmail.com>
+Subject: Re: HealthKart_2 Access
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11397c54acfc790541f188e1
+
+--001a11397c54acfc790541f188e1
+Content-Type: text/plain; charset=UTF-8
+
+fixed.
+
+On Wed, Nov 23, 2016 at 11:24 AM, Vikas Goyal <vikas@unicommerce.com> wrote:
+
+> aja meri seat pe
+>
+>
+> On Wed, Nov 23, 2016 at 11:22 AM, Digvijay Sharma <
+> digvijay@unicommerce.com> wrote:
+>
+>> Vikas, HealthKart_2 server pr access denied aa rha h. Support mein ek
+>> issue k liye logs dekhne h. Uspe access dedo mujhe.
+>>
+>
+>
+
+--001a11397c54acfc790541f188e1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">fixed.</div><div class=3D"gmail_extra"><br><div class=3D"g=
+mail_quote">On Wed, Nov 23, 2016 at 11:24 AM, Vikas Goyal <span dir=3D"ltr"=
+>&lt;<a href=3D"mailto:vikas@unicommerce.com" target=3D"_blank">vikas@unico=
+mmerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr">aja meri seat pe<div><br></div></div><div class=3D"HOEnZb"><div cl=
+ass=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Wed=
+, Nov 23, 2016 at 11:22 AM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce=
+.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r">Vikas, HealthKart_2 server pr access denied aa rha h. Support mein ek is=
+sue k liye logs dekhne h. Uspe access dedo mujhe.</div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a11397c54acfc790541f188e1--

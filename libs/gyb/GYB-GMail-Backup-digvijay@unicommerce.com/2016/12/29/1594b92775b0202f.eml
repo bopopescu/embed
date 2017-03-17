@@ -1,0 +1,69 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Thu, 29 Dec 2016 09:13:27 -0800 (PST)
+In-Reply-To: <CA+zaFGig10ZEZPi_s=raPNxOK3k9vAvwaMJj=Z3zqdYVs8mhcQ@mail.gmail.com>
+References: <CAJF3sor34AU+2ONPWaXiD2reZhggQ5nR8w=FjzTzaxrBwAprPw@mail.gmail.com>
+	<CA+zaFGig10ZEZPi_s=raPNxOK3k9vAvwaMJj=Z3zqdYVs8mhcQ@mail.gmail.com>
+Date: Thu, 29 Dec 2016 22:43:27 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soq+=ne3JVCcqFiT2d2uqW8ST7rhXdXaO_VB8jeWfxMzew@mail.gmail.com>
+Subject: Re: Permission for wormhole changes to go to prod
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c0a4fe2359340544cf349e
+
+--001a11c0a4fe2359340544cf349e
+Content-Type: text/plain; charset=UTF-8
+
+Okay. But I dont have prod build access or anything. So could u build
+uniware first to include that openForInactiveTenants change?
+And wormhole afterwards. I will also write a mail to puneet sir for the DB
+Queries for activate tenant and editable flags and for setting java 8 and
+tomcat 8.0.15 on wormhole.
+
+On Thu, Dec 29, 2016 at 10:14 PM, Sunny Agarwal <sunny@unicommerce.com>
+wrote:
+
+> Yes, please do
+>
+> On Thu, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <digvijay@unicommerce.com
+> > wrote:
+>
+>> Sir the changes i made, i have tested them all on staging. So should i
+>> move these changes to prod?
+>> The changes were :
+>> 1. reload config one/all
+>> 2. script edit enterprise scripts editable flag
+>> 3. Activate Tenant Service
+>> 4. wormhole to java 8
+>>
+>
+>
+
+--001a11c0a4fe2359340544cf349e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Okay. But I dont have prod build access or anything. So co=
+uld u build uniware first to include that openForInactiveTenants change?<di=
+v>And wormhole afterwards. I will also write a mail to puneet sir for the D=
+B Queries for activate tenant and editable flags and for setting java 8 and=
+ tomcat 8.0.15 on wormhole.=C2=A0</div></div><div class=3D"gmail_extra"><br=
+><div class=3D"gmail_quote">On Thu, Dec 29, 2016 at 10:14 PM, Sunny Agarwal=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=3D"_=
+blank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div dir=3D"ltr">Yes, please do</div><div class=3D"HOEnZb"><div c=
+lass=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Th=
+u, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce=
+.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"lt=
+r">Sir the changes i made, i have tested them all on staging. So should i m=
+ove these changes to prod?=C2=A0<div>The changes were :</div><div>1. reload=
+ config one/all</div><div>2. script edit enterprise scripts editable flag</=
+div><div>3. Activate Tenant Service</div><div>4. wormhole to java 8</div></=
+div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a11c0a4fe2359340544cf349e--

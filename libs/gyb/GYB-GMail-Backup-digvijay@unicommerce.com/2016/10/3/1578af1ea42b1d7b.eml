@@ -1,0 +1,117 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp1519815itg;
+        Mon, 3 Oct 2016 07:28:12 -0700 (PDT)
+X-Received: by 10.194.103.229 with SMTP id fz5mr17424904wjb.0.1475504892761;
+        Mon, 03 Oct 2016 07:28:12 -0700 (PDT)
+Return-Path: <aditya@unicommerce.com>
+Received: from mail-wm0-x233.google.com (mail-wm0-x233.google.com. [2a00:1450:400c:c09::233])
+        by mx.google.com with ESMTPS id d15si19060373wmh.81.2016.10.03.07.28.12
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 03 Oct 2016 07:28:12 -0700 (PDT)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::233 is neither permitted nor denied by best guess record for domain of aditya@unicommerce.com) client-ip=2a00:1450:400c:c09::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::233 is neither permitted nor denied by best guess record for domain of aditya@unicommerce.com) smtp.mailfrom=aditya@unicommerce.com
+Received: by mail-wm0-x233.google.com with SMTP id b201so84904831wmb.0
+        for <digvijay@unicommerce.com>; Mon, 03 Oct 2016 07:28:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=GIrAQo2OoF/4xt9mijtmlzc+45Me5h+7AkbTQI6f3SY=;
+        b=r3tGGBumqOZyUZ9oHpN9ZfGHMe+7KInkwSVqLIrme+nXtevjRH0qOsl1xs3rgo6Epb
+         KiornbSL8p0pyH9jnsTOfKiavIbBQyu+bK4mMRDCoEtPqJeyJqc/NfgoCz2tFZTxz+VK
+         iP9y7ydmIn4fJbTXbkcEC3GCJjHiezpjuZ2r75bX8UpGIUf1jwsf7O/xUxXKc9aVfDZ6
+         8PoXsO+opFE5lLsIky8GqglSKsDCK5RaPsd6XQCBQpOQ9D/mQ0q6662pr0pMObKA001h
+         5ZDhySsRh5ehphIySlbAiqjUlrAGBoSCIhjphviHUgW2SghGU+N+nQD0zsaASfcvCBuW
+         VFAA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=GIrAQo2OoF/4xt9mijtmlzc+45Me5h+7AkbTQI6f3SY=;
+        b=hZ6YgzKpOGi+zbcQc08Bmt+go3Y5AdhVUUEqN7R/E/AcSC2FonQV1K9JCEEj8ZwAX+
+         3zvxLEllStnN2iyvPyD05ikw3Vls61pgKNFRnE9GhrkT+ZkGxCI8kv7rzUkOqUL894KX
+         ABc4LwGoGpalcR9MZfpNoi7R+oQwcRqZBIePCy6Su4tugtIv4L8f3hrGYGKIs99nLMQD
+         Dp6EfQyOsELkVp/LyrIk4ElpuHescWpdcKtQwPcysgYSB04XoZFgE8aiX2k/4TSq7fOS
+         Hft+zrViz0wZoAOPhCpFvM7NvAzfH+iOTD3heRreiRlmTkGD57BpFskY++nFT09t2GFg
+         bDqA==
+X-Gm-Message-State: AA6/9RmWs+GuitYlCe2Hqv4ymRq0T2qMy5m3ZEx7V+dEjde0dTg8l/W655LtCGNGQkRHKiFPTHiFj8x9wF5osA==
+X-Received: by 10.28.132.82 with SMTP id g79mr9529316wmd.3.1475504892152; Mon,
+ 03 Oct 2016 07:28:12 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.28.197.77 with HTTP; Mon, 3 Oct 2016 07:28:11 -0700 (PDT)
+From: Aditya Harit <aditya@unicommerce.com>
+Date: Mon, 3 Oct 2016 19:58:11 +0530
+Message-ID: <CAFEa6waW0D2xhR80iGeQPTTkthnT-8g4oBBaUre1qr+UcvT5UQ@mail.gmail.com>
+Subject: Root.xml
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a11443ad2f65deb053df6c02f
+
+--001a11443ad2f65deb053df6c02f
+Content-Type: multipart/alternative; boundary=001a11443ad2f65de4053df6c02d
+
+--001a11443ad2f65de4053df6c02d
+Content-Type: text/plain; charset=UTF-8
+
+
+
+--001a11443ad2f65de4053df6c02d
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div>
+
+--001a11443ad2f65de4053df6c02d--
+--001a11443ad2f65deb053df6c02f
+Content-Type: text/xml; charset=US-ASCII; name="ROOT.xml"
+Content-Disposition: attachment; filename="ROOT.xml"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_itu5ii900
+
+PENvbnRleHQgcGF0aD0iLyI+Cgo8UmVzb3VyY2VzIGFsbG93TGlua2luZz0idHJ1ZSIvPgo8UmVz
+b3VyY2UgbmFtZT0iamRiYy9DdXN0b21lckNlbnRyYWxEUyIgYXV0aD0iQ29udGFpbmVyIiB0eXBl
+PSJqYXZheC5zcWwuRGF0YVNvdXJjZSIgbWF4VG90YWw9IjEwMCIgbWF4SWRsZT0iMjAiIG1heFdh
+aXRNaWxsaXNNaWxsaXM9IjE1MDAwIiB1c2VybmFtZT0icm9vdCIgcGFzc3dvcmQ9InVuaXdhcmUi
+IGRyaXZlckNsYXNzTmFtZT0iY29tLm15c3FsLmpkYmMuRHJpdmVyIiByZW1vdmVBYmFuZG9uZWQ9
+InRydWUiIHJlbW92ZUFiYW5kb25lZFRpbWVvdXQ9IjMwIiB1cmw9ImpkYmM6bXlzcWw6Ly9sb2Nh
+bGhvc3Q6MzMwNi9jdXN0b21lcmNlbnRyYWw/YXV0b1JlY29ubmVjdD10cnVlIi8+Cgo8UmVzb3Vy
+Y2UgbmFtZT0iamRiYy9Vbml3YXJlRFMiIGF1dGg9IkNvbnRhaW5lciIgdHlwZT0iamF2YXguc3Fs
+LkRhdGFTb3VyY2UiIG1heEFjdGl2ZT0iMTAwIiBtYXhJZGxlPSIyMCIgbWF4V2FpdD0iMTUwMDAi
+IHVzZXJuYW1lPSJyb290IiBwYXNzd29yZD0idW5pd2FyZSIgZHJpdmVyQ2xhc3NOYW1lPSJjb20u
+bXlzcWwuamRiYy5Ecml2ZXIiIHJlbW92ZUFiYW5kb25lZD0idHJ1ZSIgcmVtb3ZlQWJhbmRvbmVk
+VGltZW91dD0iMzAiIHVybD0iamRiYzpteXNxbDovL2xvY2FsaG9zdDozMzA2L3VuaXdhcmU/YXV0
+b1JlY29ubmVjdD10cnVlIi8+PFJlc291cmNlIG5hbWU9ImpkYmMvVW5pd2FyZUNsaWVudE1hbmFn
+ZXJEUyIgYXV0aD0iQ29udGFpbmVyIiB0eXBlPSJqYXZheC5zcWwuRGF0YVNvdXJjZSIgbWF4QWN0
+aXZlPSIxMDAiIG1heElkbGU9IjIwIiBtYXhXYWl0PSIxNTAwMCIgdXNlcm5hbWU9InJvb3QiIHBh
+c3N3b3JkPSJ1bml3YXJlIiBkcml2ZXJDbGFzc05hbWU9ImNvbS5teXNxbC5qZGJjLkRyaXZlciIg
+cmVtb3ZlQWJhbmRvbmVkPSJ0cnVlIiByZW1vdmVBYmFuZG9uZWRUaW1lb3V0PSIzMCIgdXJsPSJq
+ZGJjOm15c3FsOi8vMTI3LjAuMC4xOjMzMDYvY2xpZW50TWFuYWdlcj9hdXRvUmVjb25uZWN0PXRy
+dWUiLz4KCjxSZXNvdXJjZSBuYW1lPSJqZGJjL1VuaXdhcmVSZXBsaWNhdGlvbkRTIiBhdXRoPSJD
+b250YWluZXIiIHR5cGU9ImphdmF4LnNxbC5EYXRhU291cmNlIiBtYXhBY3RpdmU9IjEwMCIgbWF4
+SWRsZT0iMjAiIG1heFdhaXQ9IjE1MDAwIiB1c2VybmFtZT0icm9vdCIgcGFzc3dvcmQ9InVuaXdh
+cmUiIGRyaXZlckNsYXNzTmFtZT0iY29tLm15c3FsLmpkYmMuRHJpdmVyIiByZW1vdmVBYmFuZG9u
+ZWQ9InRydWUiIHJlbW92ZUFiYW5kb25lZFRpbWVvdXQ9IjMwIiB1cmw9ImpkYmM6bXlzcWw6Ly9s
+b2NhbGhvc3Q6MzMwNi91bml3YXJlP2F1dG9SZWNvbm5lY3Q9dHJ1ZSIvPjxSZXNvdXJjZSBuYW1l
+PSJqZGJjL1VuaXdhcmVDbGllbnRNYW5hZ2VyRFMiIGF1dGg9IkNvbnRhaW5lciIgdHlwZT0iamF2
+YXguc3FsLkRhdGFTb3VyY2UiIG1heEFjdGl2ZT0iMTAwIiBtYXhJZGxlPSIyMCIgbWF4V2FpdD0i
+MTUwMDAiIHVzZXJuYW1lPSJyb290IiBwYXNzd29yZD0idW5pd2FyZSIgZHJpdmVyQ2xhc3NOYW1l
+PSJjb20ubXlzcWwuamRiYy5Ecml2ZXIiIHJlbW92ZUFiYW5kb25lZD0idHJ1ZSIgcmVtb3ZlQWJh
+bmRvbmVkVGltZW91dD0iMzAiIHVybD0iamRiYzpteXNxbDovLzEyNy4wLjAuMTozMzA2L2NsaWVu
+dE1hbmFnZXI/YXV0b1JlY29ubmVjdD10cnVlIi8+Cgo8UmVzb3VyY2UgbmFtZT0iamRiYy9TRFVu
+aXdhcmVEUyIgYXV0aD0iQ29udGFpbmVyIiB0eXBlPSJqYXZheC5zcWwuRGF0YVNvdXJjZSIgbWF4
+QWN0aXZlPSIxMDAiIG1heElkbGU9IjIwIiBtYXhXYWl0PSIxNTAwMCIgdXNlcm5hbWU9InJvb3Qi
+IHBhc3N3b3JkPSJ1bml3YXJlIiBkcml2ZXJDbGFzc05hbWU9ImNvbS5teXNxbC5qZGJjLkRyaXZl
+ciIgcmVtb3ZlQWJhbmRvbmVkPSJ0cnVlIiByZW1vdmVBYmFuZG9uZWRUaW1lb3V0PSIzMCIgdXJs
+PSJqZGJjOm15c3FsOi8vbG9jYWxob3N0OjMzMDYvdW5pd2FyZT9hdXRvUmVjb25uZWN0PXRydWUi
+Lz4KCgoKPFJlc291cmNlIG5hbWU9ImpkYmMvU0RVbml3YXJlUmVwbGljYXRpb25EUyIgYXV0aD0i
+Q29udGFpbmVyIiB0eXBlPSJqYXZheC5zcWwuRGF0YVNvdXJjZSIgbWF4QWN0aXZlPSIxMDAiIG1h
+eElkbGU9IjIwIiBtYXhXYWl0PSIxNTAwMCIgdXNlcm5hbWU9InJvb3QiIHBhc3N3b3JkPSJ1bml3
+YXJlIiBkcml2ZXJDbGFzc05hbWU9ImNvbS5teXNxbC5qZGJjLkRyaXZlciIgcmVtb3ZlQWJhbmRv
+bmVkPSJ0cnVlIiByZW1vdmVBYmFuZG9uZWRUaW1lb3V0PSIzMCIgdXJsPSJqZGJjOm15c3FsOi8v
+bG9jYWxob3N0OjMzMDYvdW5pd2FyZT9hdXRvUmVjb25uZWN0PXRydWUiLz4KCjxSZXNvdXJjZSBu
+YW1lPSJqZGJjL1VuaWNvbW1lcmNlRFMiIGF1dGg9IkNvbnRhaW5lciIgdHlwZT0iamF2YXguc3Fs
+LkRhdGFTb3VyY2UiIG1heEFjdGl2ZT0iMTAwIiBtYXhJZGxlPSIyMCIgbWF4V2FpdD0iMTUwMDAi
+IHVzZXJuYW1lPSJyb290IiBwYXNzd29yZD0idW5pd2FyZSIgZHJpdmVyQ2xhc3NOYW1lPSJjb20u
+bXlzcWwuamRiYy5Ecml2ZXIiIHJlbW92ZUFiYW5kb25lZD0idHJ1ZSIgcmVtb3ZlQWJhbmRvbmVk
+VGltZW91dD0iMzAiIHVybD0iamRiYzpteXNxbDovL2xvY2FsaG9zdDozMzA2L3VuaWNvbW1lcmNl
+P2F1dG9SZWNvbm5lY3Q9dHJ1ZSIvPgoKPC9Db250ZXh0PgoK
+--001a11443ad2f65deb053df6c02f--

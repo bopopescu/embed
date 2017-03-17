@@ -1,0 +1,53 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2454661qgu;
+        Tue, 7 Feb 2017 21:35:10 -0800 (PST)
+X-Received: by 10.84.209.172 with SMTP id y41mr30945889plh.96.1486532110440;
+        Tue, 07 Feb 2017 21:35:10 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id g72si6191975pfk.29.2017.02.07.21.35.09
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 07 Feb 2017 21:35:10 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v185Z829023296;
+	Wed, 8 Feb 2017 11:05:08 +0530
+Date: Wed, 8 Feb 2017 11:05:08 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, ashish@unicommerce.com,
+        admin@Admins-MacBook-Air-4.local, digvijay@unicommerce.com,
+        sunny@unicommerce.com, akshay.agarwal.js@snapdeal.com
+Message-ID: <1925517426.9.1486532108318.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1872120535.7.1486461896860.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1872120535.7.1486461896860.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareStgEnterprise1 #492
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareStgEnterprise1
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/492/------------------------------------------
+Started by user developer
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareStgEnterprise1/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision 48d4ac5a43039c1169fa33e7382fe7345e85b933 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 48d4ac5a43039c1169fa33e7382fe7345e85b933
+ > git rev-list 48d4ac5a43039c1169fa33e7382fe7345e85b933 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #4098 completed. Result was SUCCESS
+Waiting for the completion of UniwareUIEnterprise1
+UniwareUIEnterprise1 #705 completed. Result was FAILURE
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+Build step 'Trigger/call builds on other projects' marked build as failure

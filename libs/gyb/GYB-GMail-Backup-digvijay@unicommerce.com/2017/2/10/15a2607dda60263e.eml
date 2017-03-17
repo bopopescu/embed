@@ -1,0 +1,79 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp290757qgu;
+        Thu, 9 Feb 2017 19:18:54 -0800 (PST)
+X-Received: by 10.202.73.135 with SMTP id w129mr3172061oia.158.1486696733969;
+        Thu, 09 Feb 2017 19:18:53 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-ot0-x233.google.com (mail-ot0-x233.google.com. [2607:f8b0:4003:c0f::233])
+        by mx.google.com with ESMTPS id q2si150027oif.163.2017.02.09.19.18.53
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 09 Feb 2017 19:18:53 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::233 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::233 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-ot0-x233.google.com with SMTP id f9so19003637otd.1
+        for <digvijay@unicommerce.com>; Thu, 09 Feb 2017 19:18:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=qjFpKkjeCDC/HBur+JmZNTUUrW8XXgHV0ZSOXwRuuHk=;
+        b=GRDpopyws4xrRse88Ce/u6uAhf6aL9ysD7l7wnBOCCI2g1BUbcExDasOIL/cQZHLRl
+         41D1pz8dAoOanbPX/ALkX06M54ARICh3BaI2j2KrJQMg3uRwc+MBcS8oOc31o9bXU0C7
+         /A6YB/InAWARR12kVCR1i1aB8ROXtYbVn1gkpI43s5aOPldo8P+vFNWDsMzB2nXXHmCA
+         p4W02Oi2FihCw3dZY24kR03qhu4X43cYoJfDomvfQ+YcaiDS33Gae9siEuePR7MSqUt+
+         l1P3miDSkvyS3U3jQQmTXmgzh4OIlflCsOQWoHN6xD/hKwH+kGjjMF9N0VikI7paqMLe
+         m+/g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=qjFpKkjeCDC/HBur+JmZNTUUrW8XXgHV0ZSOXwRuuHk=;
+        b=GPHhqYdL1H9Mtq/UxuUZIf88uZ1z1TVLN6SIJvvomwcW8xcye2gxdfLHLSFcfPcJOp
+         R+bWTgiNGRUQBNx2Feg+Va149s4Q1EOsIKFXZ8ifgHfiPQdCwUxkV2BsKglr5FITkelV
+         mlohWasu79QhzEhsaxA31ZSpH8UuSWtpIXfCYQ6lnCvOKSNc3rbqZen9qZl0e0RI09fK
+         AAb/cSBQp0ePEw1iNhxLxIQ5Ke0bBsJwrqS8NdgHWn5oSXIVQRHu4mAVPwh3aU4Q2g2e
+         VXUTJjCVPYalM4oXK/4rBN0/qE1Ho9aQawzFELk6d92s+6DEpC8dRf+w1GcPt1DSuSdv
+         m4yQ==
+X-Gm-Message-State: AMke39l9SNCtpKsaCq7oHfpp1Y5dGWDygCZRkzdO8FmF81LoF9+kGUXL02pa/fgmuLMji4zOKVWSkChDNtpX7Q==
+X-Received: by 10.157.6.7 with SMTP id 7mr3940814otn.254.1486696733293; Thu,
+ 09 Feb 2017 19:18:53 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.50.225 with HTTP; Thu, 9 Feb 2017 19:18:52 -0800 (PST)
+In-Reply-To: <CAJF3sor5Ef9ihCN78Oq4_0Xv8tEngqQhc89iTk6rMX_WE6=a_w@mail.gmail.com>
+References: <CAJF3sor5Ef9ihCN78Oq4_0Xv8tEngqQhc89iTk6rMX_WE6=a_w@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Fri, 10 Feb 2017 08:48:52 +0530
+Message-ID: <CA+zaFGimCYp5xrS6VVYWZwpDrtVXnK330U4qjH3qn+u+1rajzw@mail.gmail.com>
+Subject: Re: WOOCOMMERCE PLACEHOLDER QUERY
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c095f7aad53550548248e43
+
+--94eb2c095f7aad53550548248e43
+Content-Type: text/plain; charset=UTF-8
+
+Give an actual example in this.
+
+2017-02-09 16:57 GMT+05:30 Digvijay Sharma <digvijay@unicommerce.com>:
+
+> db.source.update({"code":"WOOCOMMERCE"},{$set:{"sourceConnectors.0.
+> sourceConnectorParameters.1.displayPlaceHolder":"https://example.com"}})
+>
+
+--94eb2c095f7aad53550548248e43
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Give an actual example in this.</div><div class=3D"gmail_e=
+xtra"><br><div class=3D"gmail_quote">2017-02-09 16:57 GMT+05:30 Digvijay Sh=
+arma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" targ=
+et=3D"_blank">digvijay@unicommerce.com</a>&gt;</span>:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr">db.source.update({&quot;code&quot;:&quot;<wb=
+r>WOOCOMMERCE&quot;},{$set:{&quot;<wbr>sourceConnectors.0.<wbr>sourceConnec=
+torParameters.1.<wbr>displayPlaceHolder&quot;:&quot;<a href=3D"https://exam=
+ple.com" target=3D"_blank">https://<wbr>example.com</a>&quot;}})<br></div>
+</blockquote></div><br></div>
+
+--94eb2c095f7aad53550548248e43--

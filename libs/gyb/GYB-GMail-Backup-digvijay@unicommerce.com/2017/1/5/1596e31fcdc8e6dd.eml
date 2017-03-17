@@ -1,0 +1,134 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp8566478qgd;
+        Thu, 5 Jan 2017 02:34:47 -0800 (PST)
+X-Received: by 10.55.147.69 with SMTP id v66mr64859016qkd.172.1483612487159;
+        Thu, 05 Jan 2017 02:34:47 -0800 (PST)
+Return-Path: <rahul.kandpal@unicommerce.com>
+Received: from mail-qk0-x22b.google.com (mail-qk0-x22b.google.com. [2607:f8b0:400d:c09::22b])
+        by mx.google.com with ESMTPS id r86si28865310qkr.189.2017.01.05.02.34.47
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 05 Jan 2017 02:34:47 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22b is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) client-ip=2607:f8b0:400d:c09::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22b is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) smtp.mailfrom=rahul.kandpal@unicommerce.com
+Received: by mail-qk0-x22b.google.com with SMTP id a20so39164502qkc.1
+        for <digvijay@unicommerce.com>; Thu, 05 Jan 2017 02:34:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=qySV7hsUkqFj4TmviPu+XzFSOvkC1LrmwAMWFJR9kRU=;
+        b=BfvMbFHkLEhzC4S4F8pArnMgBXo/Ug5L1TEl0GxOevNG4q48CSlpvqi1LsQcejJ0o5
+         UCqlwPSnR2LJC6wn942F1jAJ3KApU3TI0o9rrGM6GRVayV0+gSSuSFSlF5ui/FUtgEhv
+         UGALWn7bBDhe5zPABdZ9Wve+IjBmbkYmwFsjUrm6rD1BnXnQBPhYT8Lk0t2YG0nANzgI
+         TD0pgA3R8LhnOnrd3+ey+kNPpGg4WVd7S9kqXUFL9WrMnj9n3VTugBvi9dx9pDi1lvla
+         ULMpiBLtmwxbodAIPWNQKeZxD4UuOuGoO5F6x9USbs1rCq5fhVr1JTQupX8Z04KbbhpD
+         089Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=qySV7hsUkqFj4TmviPu+XzFSOvkC1LrmwAMWFJR9kRU=;
+        b=eGToMvP6qe81UM/lg1rFDoudoyOo5YDnG11DZI9qP+Xos6Miqrb+HrxdxWwlQvj3KQ
+         HmonEtfX3zJqhXovINvNZFaAIgiIUVjmcTY2Mq3OaxsixvYSdmnAvZ2PD59A3T6FIH0f
+         SavMJiPhi91nqET/ZY2jTzfRnyOYcDNZvc8WL5YB6FowUArTXGivJmJvmyQQiAxs8TRQ
+         RW1ztcuza62FggbUQxx7MuhWC52gDtVRYprUbmjQl8ZpYxyDxCFjKtXZ6Uu05KOLC9UF
+         ldajwJxir5AVM6HEx8m+3J6wiXeDjXZMg/Z1ttaDX1PXWmQuRHUjigGS+BPNa1X3rdCX
+         0qcA==
+X-Gm-Message-State: AIkVDXJbsGtJwzokpPakuBBCqLHmBXI4S9ijKcXmcaEgWuXjXXxWGUi9XIpJfr4GuqjVRA6TppphtiJvZo2fig==
+X-Received: by 10.55.190.6 with SMTP id o6mr54178604qkf.124.1483612486818;
+ Thu, 05 Jan 2017 02:34:46 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.136.251 with HTTP; Thu, 5 Jan 2017 02:34:46 -0800 (PST)
+In-Reply-To: <CAJF3soqCnFHgcEWzXp5iD97u6ko_M6cmr3_itCvL6MNu_TqHNw@mail.gmail.com>
+References: <CAJQg1Ju8SCyJPB76xwQU2-gYHZ-iGt1wEVZ=SwqBz0hj+F3NNA@mail.gmail.com>
+ <CAJF3soqCnFHgcEWzXp5iD97u6ko_M6cmr3_itCvL6MNu_TqHNw@mail.gmail.com>
+From: Rahul Kandpal <rahul.kandpal@unicommerce.com>
+Date: Thu, 5 Jan 2017 16:04:46 +0530
+Message-ID: <CAJQg1JuWmJ9GJT-YhyUbvaVrky_OW1eNU+Up_4FGKtpw8-p2qw@mail.gmail.com>
+Subject: Re: Trendybharat Integration
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c0431c642ed7a05455673a6
+
+--94eb2c0431c642ed7a05455673a6
+Content-Type: text/plain; charset=UTF-8
+
+Thanks, have just kept it in mail so that everyone is informed regarding
+the process and issues.
+
+On Thu, Jan 5, 2017 at 4:01 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Okay. TrendyBharat is available as a channel but its scripts are showing
+> empty despite the queries. Seems to be a bug i saw earlier. Hopefully will
+> be gone once wormhole is built for which i have informed Sunny sir so
+> waiting for the build.
+>
+> On Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <
+> rahul.kandpal@unicommerce.com> wrote:
+>
+>> Hi Digvijay
+>>
+>> Please update on this mail thread once trendybharat.unicommerce.com is
+>> ready for testing.
+>>
+>> Have created a vendor panel(trtester.unicommerce.com) where orders will
+>> be pulled from trendybharat.
+>>
+>> --
+>>
+>> Thanks
+>> Rahul Kandpal
+>> 08826793081
+>>
+>
+>
+
+
+-- 
+
+Thanks
+Rahul Kandpal
+08826793081
+
+--94eb2c0431c642ed7a05455673a6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Thanks, have just kept it in mail so that everyone is info=
+rmed regarding the process and issues.</div><div class=3D"gmail_extra"><br>=
+<div class=3D"gmail_quote">On Thu, Jan 5, 2017 at 4:01 PM, Digvijay Sharma =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D=
+"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><div dir=3D"ltr">Okay. TrendyBharat is available as a channe=
+l but its scripts are showing empty despite the queries. Seems to be a bug =
+i saw earlier. Hopefully will be gone once wormhole is built for which i ha=
+ve informed Sunny sir so waiting for the build.=C2=A0</div><div class=3D"HO=
+EnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_=
+quote">On Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <span dir=3D"ltr">&lt;=
+<a href=3D"mailto:rahul.kandpal@unicommerce.com" target=3D"_blank">rahul.ka=
+ndpal@unicommerce.com</a><wbr>&gt;</span> wrote:<br><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div dir=3D"ltr">Hi Digvijay<div><br></div><div>Please update on th=
+is mail thread once <a href=3D"http://trendybharat.unicommerce.com" target=
+=3D"_blank">trendybharat.unicommerce.com</a> is ready for testing.</div><di=
+v><br></div><div>Have created a vendor panel(<span style=3D"background-colo=
+r:rgb(226,228,255);color:rgb(51,51,51);font-family:&quot;helvetica neue&quo=
+t;,helvetica,arial,sans-serif;font-size:13px"><a href=3D"http://trtester.un=
+icommerce.com" target=3D"_blank">trtester.unicommerce.com</a><wbr>)</span>=
+=C2=A0where orders will be pulled from trendybharat.</div><span class=3D"m_=
+3354698189240833089HOEnZb"><font color=3D"#888888"><div><div><br></div>-- <=
+br><div class=3D"m_3354698189240833089m_8106289747345591529gmail_signature"=
+><div dir=3D"ltr"><br><div>Thanks</div><div>Rahul Kandpal</div><div>0882679=
+3081</div></div></div>
+</div></font></span></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
+=3D"ltr"><br><div>Thanks</div><div>Rahul Kandpal</div><div>08826793081</div=
+></div></div>
+</div>
+
+--94eb2c0431c642ed7a05455673a6--

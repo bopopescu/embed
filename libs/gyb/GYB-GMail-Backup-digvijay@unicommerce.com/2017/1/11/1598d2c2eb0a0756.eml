@@ -1,0 +1,826 @@
+MIME-Version: 1.0
+Received: by 10.140.19.140 with HTTP; Wed, 11 Jan 2017 02:56:40 -0800 (PST)
+Date: Wed, 11 Jan 2017 16:26:40 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopT4p06U3eQr+TR+oG+0piZj+aSz5=Q2a-CF3pD2JtwBQ@mail.gmail.com>
+Subject: Queru
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c126da983d9a0545cf74ea
+
+--001a11c126da983d9a0545cf74ea
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+update export_job_type set export_job_config =3D '<?xml version=3D\"1.0\"
+encoding=3D\"UTF-8\"?>\n<table-config
+name=3D\"DATATABLE_CHANNEL_PAYMENT_RECONCILIATION\"
+height=3D\"1400\">\n\t<queryString>\n\t\t<![CDATA[{\"entity\":\"com.unifier=
+.core.entity.SaleOrderReconciliation\",\"criteria\":[{\"name\":\"tenantCode=
+\",\"operator\":\"IS\",\"value\":\"#{#context.tenant.code}\"}]}]]>\n\t</que=
+ryString>\n\t<columns>\n\t\t<column
+id=3D\"orderTransactionDate\" name=3D\"Date\"
+value=3D\"#{#entity.orderTransactionDate}\" width=3D\"80\" sortable=3D\"tru=
+e\"
+align=3D\"left\" type=3D\"date\" calculated=3D\"true\"/>\n\t\t<column
+id=3D\"saleOrderCode\" name=3D\"Sale Order #\"
+value=3D\"#{#entity.saleOrderCode}\" width=3D\"130\" sortable=3D\"true\"
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n\t\t<column
+id=3D\"reconciliationIdentifier\" name=3D\"Order Item #\"
+value=3D\"#{#entity.reconciliationIdentifier}\" width=3D\"100\"
+sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\" />\n\t\t<column
+id=3D\"channelSaleOrderCode\" name=3D\"Order #\"
+value=3D\"#{#entity.channelSaleOrderCode}\" width=3D\"130\" sortable=3D\"tr=
+ue\"
+align=3D\"left\" calculated=3D\"true\"
+>\n\t\t\t<clientTemplate><![CDATA[\n\t\t\t\t<div
+style=3D\"float:left;padding:0 0 0 5px;\"><#\n\t\t\t\t\tif(obj.saleOrderCod=
+e
+!=3D null && obj.saleOrderCode !=3D \"\") {#>\n\t\t\t\t\t\t<a class=3D\"lin=
+k
+pleaseOpenInNewTab\"
+href=3D\"/order/orderitems?orderCode=3D<#=3Dobj.saleOrderCode#>\"><#=3Dobj.=
+channelSaleOrderCode#></a>\n\t\t\t\t\t<#}
+else
+{#>\n\t\t\t\t\t\t<span><#=3Dobj.channelSaleOrderCode#></span><#\n\t\t\t\t\t=
+}#>\n\t\t\t\t</div>\n\t\t\t]]></clientTemplate>\n\t\t</column>\n\t\t<column
+id=3D\"channelProductName\" name=3D\"Product\"
+value=3D\"#{#entity.channelProductName}\" width=3D\"120\" sortable=3D\"true=
+\"
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n\t\t<column
+id=3D\"channelProductId\" name=3D\"Product\"
+value=3D\"#{#entity.channelProductId}\" width=3D\"100\" sortable=3D\"true\"
+align=3D\"left\"
+calculated=3D\"true\">\n\t\t\t<clientTemplate><![CDATA[\n\t\t\t\t<#=3Dobj.c=
+hannelProductId#>\n\t\t\t\t<#
+if (obj.channelProductName !=3D null && obj.channelProductName !=3D \"\") {
+#>\n\t\t\t\t\t<br><span style=3D\"font-style: italic;color:
+#8F8F8F;\">(<#=3Dobj.channelProductName#>)</span>\n\t\t\t\t<# }
+#>\n\t\t\t]]></clientTemplate>\n\t\t</column>\n\t\t<column
+id=3D\"channelCode\" name=3D\"Channel\" value=3D\"#{#entity.channelCode}\"
+width=3D\"80\" sortable=3D\"true\" align=3D\"left\"
+calculated=3D\"true\"/>\n\t\t<column id=3D\"reconciliationStatus\"
+name=3D\"Status Code\" value=3D\"#{#entity.statusCode}\" width=3D\"100\"
+sortable=3D\"true\" align=3D\"left\" calculated=3D\"true\"/>\n\t\t<column
+id=3D\"rawSellingPrice\" name=3D\"Selling Price\"
+value=3D\"#{#entity.sellingPrice}\" width=3D\"150\" sortable=3D\"true\"
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n\t\t<column
+id=3D\"shippingCharges\" name=3D\"Shipping Charges\"
+value=3D\"#{#entity.shippingCharges}\" width=3D\"150\" sortable=3D\"true\"
+align=3D\"left\" calculated=3D\"true\" hidden=3D\"true\"/>\n\t\t<column
+id=3D\"sellingPrice\" name=3D\"Total Amt\" value=3D\"#{#entity.sellingPrice=
+ +
+#entity.shippingCharges}\" width=3D\"105\" sortable=3D\"true\" align=3D\"le=
+ft\"
+calculated=3D\"true\"  >\n\t\t\t<clientTemplate><![CDATA[\n\t\t\t<div
+style=3D\"float:left;padding:0;font-size:11px;font-style: italic;color:
+#8F8F8F;text-align:right\">\n\t\t\t\t<span>Selling Price:
+</span>\n\t\t\t\t<br>\n\t\t\t\t<span>Shipping:
+</span>\n\t\t\t</div>\n\t\t\t<div style=3D\"float:left;padding:0 0 0
+5px;\">\n\t\t\t\t<#=3Dobj.rawSellingPrice#><br><#=3Dobj.shippingCharges#>\n=
+\t\t\t</div>\n\t\t]]></clientTemplate>\n\t\t</column>\n\t\t<column
+id=3D\"totalReconcileAmount\" name=3D\"Settled Amt\"
+value=3D\"#{#entity.totalReconcileAmount}\" width=3D\"80\" sortable=3D\"tru=
+e\"
+align=3D\"left\" calculated=3D\"true\">\n\t\t\t<clientTemplate><![CDATA[<a
+class=3D\"link detailsPop\"
+href=3D\"/order/reconciliation/invoiceItems\"><#=3Dobj.totalReconcileAmount=
+#></a><input
+type=3D\"hidden\" class=3D\"channelCode\" value=3D\"<#=3Dobj.channelCode#>\=
+"><input
+type=3D\"hidden\" class=3D\"reconciliationIdentifier\"
+value=3D\"<#=3Dobj.reconciliationIdentifier#>\"><input type=3D\"hidden\"
+class=3D\"channelSaleOrderCode\"
+value=3D\"<#=3Dobj.channelSaleOrderCode#>\">]]></clientTemplate>\n\t\t</col=
+umn>\n\t\t<column
+id=3D\"settlementPercentage\" name=3D\"Settled %\"
+value=3D\"#{#entity.settlementPercentage}\" width=3D\"80\" sortable=3D\"tru=
+e\"
+align=3D\"left\"
+calculated=3D\"true\">\n\t\t\t<clientTemplate><![CDATA[<#\n\t\t\t\tif
+(obj.settlementPercentage >=3D 80) {#>\n\t\t\t\t\t<div
+style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color:
+#008000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#>
+%</span><#\n\t\t\t\t} else if (obj.settlementPercentage < 80 &&
+obj.settlementPercentage >=3D 40) {#>\n\t\t\t\t\t<div
+style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color:
+#0000FF;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#>
+%</span><#\n\t\t\t\t} else {#>\n\t\t\t\t\t<div
+style=3D\"float:left;padding:0;font-size:11px;font-weight:bold;color:
+#FF0000;text-align:right\">\n\t\t\t\t\t<span><#=3Dobj.settlementPercentage.=
+toFixed(2)#>
+%</span><#\n\t\t\t\t}#>\n\t\t]]></clientTemplate>\n\t\t</column>\n\t\t<colu=
+mn
+id=3D\"itemCostPrice\" name=3D\"Cost Price\" value=3D\"#{#entity.itemCostPr=
+ice}\"
+width=3D\"80\" sortable=3D\"true\" align=3D\"left\"
+calculated=3D\"true\"/>\n\t\t<column id=3D\"quantity\" name=3D\"Quantity\"
+value=3D\"#{#entity.quantity}\" width=3D\"60\" sortable=3D\"true\" align=3D=
+\"left\"
+calculated=3D\"true\"/>\n\t\t<column id=3D\"comments\" name=3D\"Comments\"
+value=3D\"#{#entity.comments}\" width=3D\"120\"  align=3D\"left\"
+calculated=3D\"true\"/>\n\t\t<column id=3D\"reconciledBy\" name=3D\"Reconci=
+led
+By\" value=3D\"#{#entity.reconciledBy}\" width=3D\"120\" sortable=3D\"true\=
+"
+align=3D\"left\"
+calculated=3D\"true\"/>\n\t</columns>\n\t<defaultSortBy>\n\t\t<![CDATA[{\"c=
+olumn\"
+: \"orderTransactionDate\", \"descending\" :
+\"true\"}]]>\n\t</defaultSortBy>\n\t<filters>\n\t\t<filter
+id=3D\"channelFilter\" name=3D\"Channel Contains\"
+condition=3D\"{\'criteria\':{\'name\':\'channelCode\',\'operator\':\'IN\',\=
+'value\':\'#{#channelFilter}\'}}\"
+type=3D\"multiselect\" attachToColumn=3D\"channelCode\" values=3D\"query:se=
+lect
+c.code,c.name as name from channel c where c.tenant_id =3D
+:tenantId\"/>\n\t\t<filter id=3D\"settlementPercentageFilter\" name=3D\"%
+greater than\"
+condition=3D\"{\'criteria\':{\'name\':\'settlementPercentage\',\'operator\'=
+:\'GREATER_THAN\',\'value\':\'#{#settlementPercentageFilter}\'}}\"
+type=3D\"text\" valueExpression=3D\"#{new
+java.lang.Double(#settlementPercentageFilter)}\"
+attachToColumn=3D\"settlementPercentage\" />\n\t\t<filter
+id=3D\"settlementAmountFilter\" name=3D\"Amount less than\"
+condition=3D\"{\'criteria\':{\'name\':\'totalReconcileAmount\',\'operator\'=
+:\'LESS_THAN\',\'value\':\'#{#settlementAmountFilter}\'}}\"
+type=3D\"text\" valueExpression=3D\"#{new
+java.lang.Double(#settlementAmountFilter)}\"
+attachToColumn=3D\"totalReconcileAmount\" />\n\t\t<filter
+id=3D\"reconciliationIdentifierFilter\" name=3D\"Reconciliation Identifier
+Contains\"
+condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operat=
+or\':\'LIKE\',\'value\':\'#{#reconciliationIdentifierFilter}\'}}\"
+type=3D\"text\" attachToColumn=3D\"reconciliationIdentifier\" />\n\t\t<filt=
+er
+id=3D\"channelSaleOrderCodeFilter\" name=3D\"Channel Sale Order Code -\"
+condition=3D\"{\'criteria\':{\'name\':\'channelSaleOrderCode\',\'operator\'=
+:\'LIKE\',\'value\':\'#{#channelSaleOrderCodeFilter}\'}}\"
+type=3D\"text\" attachToColumn=3D\"channelSaleOrderCode\" />\n\t\t<filter
+id=3D\"orderAmountFilter\" name=3D\"Selling Price Greater Than\"
+condition=3D\"{\'criteria\':{\'name\':\'sellingPrice\',\'operator\':\'GREAT=
+ER_THAN\',\'value\':\'#{#orderAmountFilter}\'}}\"
+type=3D\"text\" valueExpression=3D\"#{new
+java.lang.Double(#orderAmountFilter)}\" attachToColumn=3D\"sellingPrice\"
+/>\n\t\t<filter id=3D\"reconciliationStatusFilter\" name=3D\"Status\"
+condition=3D\"{\'criteria\':{\'name\':\'statusCode\',\'operator\':\'IN\',\'=
+value\':\'#{#reconciliationStatusFilter}\'}}\"
+type=3D\"multiselect\" values=3D\"enum:RECONCILED|RECONCILED,
+AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED|DISPUTED,
+UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\"
+attachToColumn=3D\"reconciliationStatus\" />\n\t\t<filter
+id=3D\"channelSaleOrderItemCodeFilter\" name=3D\"Order Item Code Contains\"
+condition=3D\"{\'criteria\':{\'name\':\'reconciliationIdentifier\',\'operat=
+or\':\'LIKE\',\'value\':\'#{#channelSaleOrderItemCodeFilter}\'}}\"
+type=3D\"text\" attachToColumn=3D\"channelSaleOrderItemCode\" />\n\t\t<filt=
+er
+id=3D\"orderTransactionDateRange\" name=3D\"Order Transaction Date Range\"
+condition=3D\"{\'criteria\':{\'name\':\'orderTransactionDate\',
+\'operator\':\'BETWEEN\',\'value\':\'#{#orderTransactionDateRange}\'}}\"
+type=3D\"daterange\" attachToColumn=3D\"orderTransactionDate\" />\n\t\t<fil=
+ter
+id=3D\"channelProductIdFilter\" name=3D\"Product Id Contains\"
+condition=3D\"{\'criteria\':{\'name\':\'channelProductId\',
+\'operator\':\'LIKE\',\'value\':\'#{#channelProductIdFilter}\'}}\"
+type=3D\"text\" attachToColumn=3D\"channelProductId\" />\n\t\t<filter
+id=3D\"itemCostPriceFilter\" name=3D\"Cost Price Greater Than\"
+condition=3D\"{\'criteria\':{\'name\':\'itemCostPrice\',\'operator\':\'GREA=
+TER_THAN\',\'value\':\'#{#itemCostPriceFilter}\'}}\"
+type=3D\"text\" valueExpression=3D\"#{new
+java.lang.Double(#itemCostPriceFilter)}\" attachToColumn=3D\"itemCostPrice\=
+"
+/>\n\t</filters>\n</table-config>\n' where name =3D
+"DATATABLE_CHANNEL_PAYMENT_RECONCILIATION";
+var decoded_temp =3D db.eval('decodeHex
+(\"3c3f786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d3822=
+3f3e0a3c7461626c652d636f6e666967206e616d653d22444154415441424c455f4348414e4=
+e454c5f5041594d454e545f5245434f4e43494c494154494f4e22206865696768743d223134=
+3030223e0a093c7175657279537472696e673e0a09093c215b43444154415b7b22656e74697=
+479223a22636f6d2e756e69666965722e636f72652e656e746974792e53616c654f72646572=
+5265636f6e63696c696174696f6e222c226372697465726961223a5b7b226e616d65223a227=
+4656e616e74436f6465222c226f70657261746f72223a224953222c2276616c7565223a2223=
+7b23636f6e746578742e74656e616e742e636f64657d227d5d7d5d5d3e0a093c2f717565727=
+9537472696e673e0a093c636f6c756d6e733e0a09093c636f6c756d6e2069643d226f726465=
+725472616e73616374696f6e4461746522206e616d653d2244617465222076616c75653d222=
+37b23656e746974792e6f726465725472616e73616374696f6e446174657d22207769647468=
+3d2238302220736f727461626c653d22747275652220616c69676e3d226c656674222074797=
+0653d2264617465222063616c63756c617465643d2274727565222f3e0a09093c636f6c756d=
+6e2069643d2273616c654f72646572436f646522206e616d653d2253616c65204f726465722=
+023222076616c75653d22237b23656e746974792e73616c654f72646572436f64657d222077=
+696474683d223133302220736f727461626c653d22747275652220616c69676e3d226c65667=
+4222063616c63756c617465643d2274727565222068696464656e3d2274727565222f3e0a09=
+093c636f6c756d6e2069643d227265636f6e63696c696174696f6e4964656e7469666965722=
+2206e616d653d224f72646572204974656d2023222076616c75653d22237b23656e74697479=
+2e7265636f6e63696c696174696f6e4964656e7469666965727d222077696474683d2231303=
+02220736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c=
+617465643d227472756522202f3e0a09093c636f6c756d6e2069643d226368616e6e656c536=
+16c654f72646572436f646522206e616d653d224f726465722023222076616c75653d22237b=
+23656e746974792e6368616e6e656c53616c654f72646572436f64657d222077696474683d2=
+23133302220736f727461626c653d22747275652220616c69676e3d226c656674222063616c=
+63756c617465643d227472756522203e0a0909093c636c69656e7454656d706c6174653e3c2=
+15b43444154415b0a090909093c646976207374796c653d22666c6f61743a6c6566743b7061=
+6464696e673a3020302030203570783b223e3c230a09090909096966286f626a2e73616c654=
+f72646572436f646520213d206e756c6c202626206f626a2e73616c654f72646572436f6465=
+20213d20222229207b233e0a0909090909093c6120636c6173733d226c696e6b20706c65617=
+3654f70656e496e4e65775461622220687265663d222f6f726465722f6f726465726974656d=
+733f6f72646572436f64653d3c233d6f626a2e73616c654f72646572436f6465233e223e3c2=
+33d6f626a2e6368616e6e656c53616c654f72646572436f6465233e3c2f613e0a0909090909=
+3c237d20656c7365207b233e0a0909090909093c7370616e3e3c233d6f626a2e6368616e6e6=
+56c53616c654f72646572436f6465233e3c2f7370616e3e3c230a09090909097d233e0a0909=
+09093c2f6469763e0a0909095d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f6=
+36f6c756d6e3e0a09093c636f6c756d6e2069643d226368616e6e656c50726f647563744e61=
+6d6522206e616d653d2250726f64756374222076616c75653d22237b23656e746974792e636=
+8616e6e656c50726f647563744e616d657d222077696474683d223132302220736f72746162=
+6c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d2274727=
+565222068696464656e3d2274727565222f3e0a09093c636f6c756d6e2069643d226368616e=
+6e656c50726f64756374496422206e616d653d2250726f64756374222076616c75653d22237=
+b23656e746974792e6368616e6e656c50726f6475637449647d222077696474683d22313030=
+2220736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c6=
+17465643d2274727565223e0a0909093c636c69656e7454656d706c6174653e3c215b434441=
+54415b0a090909093c233d6f626a2e6368616e6e656c50726f647563744964233e0a0909090=
+93c2320696620286f626a2e6368616e6e656c50726f647563744e616d6520213d206e756c6c=
+202626206f626a2e6368616e6e656c50726f647563744e616d6520213d20222229207b20233=
+e0a09090909093c62723e3c7370616e207374796c653d22666f6e742d7374796c653a206974=
+616c69633b636f6c6f723a20233846384638463b223e283c233d6f626a2e6368616e6e656c5=
+0726f647563744e616d65233e293c2f7370616e3e0a090909093c23207d20233e0a0909095d=
+5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f636f6c756d6e3e0a09093c636f6=
+c756d6e2069643d226368616e6e656c436f646522206e616d653d224368616e6e656c222076=
+616c75653d22237b23656e746974792e6368616e6e656c436f64657d222077696474683d223=
+8302220736f727461626c653d22747275652220616c69676e3d226c656674222063616c6375=
+6c617465643d2274727565222f3e0a09093c636f6c756d6e2069643d227265636f6e63696c6=
+96174696f6e53746174757322206e616d653d2253746174757320436f6465222076616c7565=
+3d22237b23656e746974792e737461747573436f64657d222077696474683d2231303022207=
+36f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c617465=
+643d2274727565222f3e0a09093c636f6c756d6e2069643d2272617753656c6c696e6750726=
+9636522206e616d653d2253656c6c696e67205072696365222076616c75653d22237b23656e=
+746974792e73656c6c696e6750726963657d222077696474683d223135302220736f7274616=
+26c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d227472=
+7565222068696464656e3d2274727565222f3e0a09093c636f6c756d6e2069643d227368697=
+070696e674368617267657322206e616d653d225368697070696e6720436861726765732220=
+76616c75653d22237b23656e746974792e7368697070696e67436861726765737d222077696=
+474683d223135302220736f727461626c653d22747275652220616c69676e3d226c65667422=
+2063616c63756c617465643d2274727565222068696464656e3d2274727565222f3e0a09093=
+c636f6c756d6e2069643d2273656c6c696e67507269636522206e616d653d22546f74616c20=
+416d74222076616c75653d22237b23656e746974792e73656c6c696e675072696365202b202=
+3656e746974792e7368697070696e67436861726765737d222077696474683d223130352220=
+736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c61746=
+5643d22747275652220203e0a0909093c636c69656e7454656d706c6174653e3c215b434441=
+54415b0a0909093c646976207374796c653d22666c6f61743a6c6566743b70616464696e673=
+a303b666f6e742d73697a653a313170783b666f6e742d7374796c653a206974616c69633b63=
+6f6c6f723a20233846384638463b746578742d616c69676e3a7269676874223e0a090909093=
+c7370616e3e53656c6c696e672050726963653a203c2f7370616e3e0a090909093c62723e0a=
+090909093c7370616e3e5368697070696e673a203c2f7370616e3e0a0909093c2f6469763e0=
+a0909093c646976207374796c653d22666c6f61743a6c6566743b70616464696e673a302030=
+2030203570783b223e0a090909093c233d6f626a2e72617753656c6c696e675072696365233=
+e3c62723e3c233d6f626a2e7368697070696e6743686172676573233e0a0909093c2f646976=
+3e0a09095d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f636f6c756d6e3e0a0=
+9093c636f6c756d6e2069643d22746f74616c5265636f6e63696c65416d6f756e7422206e61=
+6d653d22536574746c656420416d74222076616c75653d22237b23656e746974792e746f746=
+16c5265636f6e63696c65416d6f756e747d222077696474683d2238302220736f727461626c=
+653d22747275652220616c69676e3d226c656674222063616c63756c617465643d227472756=
+5223e0a0909093c636c69656e7454656d706c6174653e3c215b43444154415b3c6120636c61=
+73733d226c696e6b2064657461696c73506f702220687265663d222f6f726465722f7265636=
+f6e63696c696174696f6e2f696e766f6963654974656d73223e3c233d6f626a2e746f74616c=
+5265636f6e63696c65416d6f756e74233e3c2f613e3c696e70757420747970653d226869646=
+4656e2220636c6173733d226368616e6e656c436f6465222076616c75653d223c233d6f626a=
+2e6368616e6e656c436f6465233e223e3c696e70757420747970653d2268696464656e22206=
+36c6173733d227265636f6e63696c696174696f6e4964656e746966696572222076616c7565=
+3d223c233d6f626a2e7265636f6e63696c696174696f6e4964656e746966696572233e223e3=
+c696e70757420747970653d2268696464656e2220636c6173733d226368616e6e656c53616c=
+654f72646572436f6465222076616c75653d223c233d6f626a2e6368616e6e656c53616c654=
+f72646572436f6465233e223e5d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f=
+636f6c756d6e3e0a09093c636f6c756d6e2069643d22736574746c656d656e7450657263656=
+e7461676522206e616d653d22536574746c65642025222076616c75653d22237b23656e7469=
+74792e736574746c656d656e7450657263656e746167657d222077696474683d22383022207=
+36f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c617465=
+643d2274727565223e0a0909093c636c69656e7454656d706c6174653e3c215b43444154415=
+b3c230a09090909696620286f626a2e736574746c656d656e7450657263656e74616765203e=
+3d20383029207b233e0a09090909093c646976207374796c653d22666c6f61743a6c6566743=
+b70616464696e673a303b666f6e742d73697a653a313170783b666f6e742d7765696768743a=
+626f6c643b636f6c6f723a20233030383030303b746578742d616c69676e3a7269676874223=
+e0a09090909093c7370616e3e3c233d6f626a2e736574746c656d656e7450657263656e7461=
+67652e746f4669786564283229233e20253c2f7370616e3e3c230a090909097d20656c73652=
+0696620286f626a2e736574746c656d656e7450657263656e74616765203c20383020262620=
+6f626a2e736574746c656d656e7450657263656e74616765203e3d20343029207b233e0a090=
+90909093c646976207374796c653d22666c6f61743a6c6566743b70616464696e673a303b66=
+6f6e742d73697a653a313170783b666f6e742d7765696768743a626f6c643b636f6c6f723a2=
+0233030303046463b746578742d616c69676e3a7269676874223e0a09090909093c7370616e=
+3e3c233d6f626a2e736574746c656d656e7450657263656e746167652e746f4669786564283=
+229233e20253c2f7370616e3e3c230a090909097d20656c7365207b233e0a09090909093c64=
+6976207374796c653d22666c6f61743a6c6566743b70616464696e673a303b666f6e742d736=
+97a653a313170783b666f6e742d7765696768743a626f6c643b636f6c6f723a202346463030=
+30303b746578742d616c69676e3a7269676874223e0a09090909093c7370616e3e3c233d6f6=
+26a2e736574746c656d656e7450657263656e746167652e746f4669786564283229233e2025=
+3c2f7370616e3e3c230a090909097d233e0a09095d5d3e3c2f636c69656e7454656d706c617=
+4653e0a09093c2f636f6c756d6e3e0a09093c636f6c756d6e2069643d226974656d436f7374=
+507269636522206e616d653d22436f7374205072696365222076616c75653d22237b23656e7=
+46974792e6974656d436f737450726963657d222077696474683d2238302220736f72746162=
+6c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d2274727=
+565222f3e0a09093c636f6c756d6e2069643d227175616e7469747922206e616d653d225175=
+616e74697479222076616c75653d22237b23656e746974792e7175616e746974797d2220776=
+96474683d2236302220736f727461626c653d22747275652220616c69676e3d226c65667422=
+2063616c63756c617465643d2274727565222f3e0a09093c636f6c756d6e2069643d22636f6=
+d6d656e747322206e616d653d22436f6d6d656e7473222076616c75653d22237b23656e7469=
+74792e636f6d6d656e74737d222077696474683d22313230222020616c69676e3d226c65667=
+4222063616c63756c617465643d2274727565222f3e0a09093c636f6c756d6e2069643d2272=
+65636f6e63696c6564427922206e616d653d225265636f6e63696c6564204279222076616c7=
+5653d22237b23656e746974792e7265636f6e63696c656442797d222077696474683d223132=
+302220736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756=
+c617465643d2274727565222f3e0a093c2f636f6c756d6e733e0a093c64656661756c74536f=
+727442793e0a09093c215b43444154415b7b22636f6c756d6e22203a20226f7264657254726=
+16e73616374696f6e44617465222c202264657363656e64696e6722203a202274727565227d=
+5d5d3e0a093c2f64656661756c74536f727442793e0a093c66696c746572733e0a09093c666=
+96c7465722069643d226368616e6e656c46696c74657222206e616d653d224368616e6e656c=
+20436f6e7461696e732220636f6e646974696f6e3d227b276372697465726961273a7b276e6=
+16d65273a276368616e6e656c436f6465272c276f70657261746f72273a27494e272c277661=
+6c7565273a27237b236368616e6e656c46696c7465727d277d7d2220747970653d226d756c7=
+46973656c6563742220617474616368546f436f6c756d6e3d226368616e6e656c436f646522=
+2076616c7565733d2271756572793a73656c65637420632e636f64652c632e6e616d6520617=
+3206e616d652066726f6d206368616e6e656c206320776865726520632e74656e616e745f69=
+64203d203a74656e616e744964222f3e0a09093c66696c7465722069643d22736574746c656=
+d656e7450657263656e7461676546696c74657222206e616d653d2225206772656174657220=
+7468616e2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a2=
+7736574746c656d656e7450657263656e74616765272c276f70657261746f72273a27475245=
+415445525f5448414e272c2776616c7565273a27237b23736574746c656d656e74506572636=
+56e7461676546696c7465727d277d7d2220747970653d2274657874222076616c7565457870=
+72657373696f6e3d22237b6e6577206a6176612e6c616e672e446f75626c652823736574746=
+c656d656e7450657263656e7461676546696c746572297d2220617474616368546f436f6c75=
+6d6e3d22736574746c656d656e7450657263656e7461676522202f3e0a09093c66696c74657=
+22069643d22736574746c656d656e74416d6f756e7446696c74657222206e616d653d22416d=
+6f756e74206c657373207468616e2220636f6e646974696f6e3d227b2763726974657269612=
+73a7b276e616d65273a27746f74616c5265636f6e63696c65416d6f756e74272c276f706572=
+61746f72273a274c4553535f5448414e272c2776616c7565273a27237b23736574746c656d6=
+56e74416d6f756e7446696c7465727d277d7d2220747970653d2274657874222076616c7565=
+45787072657373696f6e3d22237b6e6577206a6176612e6c616e672e446f75626c652823736=
+574746c656d656e74416d6f756e7446696c746572297d2220617474616368546f436f6c756d=
+6e3d22746f74616c5265636f6e63696c65416d6f756e7422202f3e0a09093c66696c7465722=
+069643d227265636f6e63696c696174696f6e4964656e74696669657246696c74657222206e=
+616d653d225265636f6e63696c696174696f6e204964656e74696669657220436f6e7461696=
+e732220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a277265=
+636f6e63696c696174696f6e4964656e746966696572272c276f70657261746f72273a274c4=
+94b45272c2776616c7565273a27237b237265636f6e63696c696174696f6e4964656e746966=
+69657246696c7465727d277d7d2220747970653d22746578742220617474616368546f436f6=
+c756d6e3d227265636f6e63696c696174696f6e4964656e74696669657222202f3e0a09093c=
+66696c7465722069643d226368616e6e656c53616c654f72646572436f646546696c7465722=
+2206e616d653d224368616e6e656c2053616c65204f7264657220436f6465202d2220636f6e=
+646974696f6e3d227b276372697465726961273a7b276e616d65273a276368616e6e656c536=
+16c654f72646572436f6465272c276f70657261746f72273a274c494b45272c2776616c7565=
+273a27237b236368616e6e656c53616c654f72646572436f646546696c7465727d277d7d222=
+0747970653d22746578742220617474616368546f436f6c756d6e3d226368616e6e656c5361=
+6c654f72646572436f646522202f3e0a09093c66696c7465722069643d226f72646572416d6=
+f756e7446696c74657222206e616d653d2253656c6c696e6720507269636520477265617465=
+72205468616e2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d652=
+73a2773656c6c696e675072696365272c276f70657261746f72273a27475245415445525f54=
+48414e272c2776616c7565273a27237b236f72646572416d6f756e7446696c7465727d277d7=
+d2220747970653d2274657874222076616c756545787072657373696f6e3d22237b6e657720=
+6a6176612e6c616e672e446f75626c6528236f72646572416d6f756e7446696c746572297d2=
+220617474616368546f436f6c756d6e3d2273656c6c696e67507269636522202f3e0a09093c=
+66696c7465722069643d227265636f6e63696c696174696f6e53746174757346696c7465722=
+2206e616d653d225374617475732220636f6e646974696f6e3d227b27637269746572696127=
+3a7b276e616d65273a27737461747573436f6465272c276f70657261746f72273a27494e272=
+c2776616c7565273a27237b237265636f6e63696c696174696f6e53746174757346696c7465=
+727d277d7d2220747970653d226d756c746973656c656374222076616c7565733d22656e756=
+d3a5245434f4e43494c45447c5245434f4e43494c45442c204157414954494e475f5041594d=
+454e547c4157414954494e475f5041594d454e542c2044495350555445447c4449535055544=
+5442c20554e5245434f4e43494c45447c554e5245434f4e43494c45442c20554e5245434f4e=
+43494c41424c457c554e5245434f4e43494c41424c452220617474616368546f436f6c756d6=
+e3d227265636f6e63696c696174696f6e53746174757322202f3e0a09093c66696c74657220=
+69643d226368616e6e656c53616c654f726465724974656d436f646546696c74657222206e6=
+16d653d224f72646572204974656d20436f646520436f6e7461696e732220636f6e64697469=
+6f6e3d227b276372697465726961273a7b276e616d65273a277265636f6e63696c696174696=
+f6e4964656e746966696572272c276f70657261746f72273a274c494b45272c2776616c7565=
+273a27237b236368616e6e656c53616c654f726465724974656d436f646546696c7465727d2=
+77d7d2220747970653d22746578742220617474616368546f436f6c756d6e3d226368616e6e=
+656c53616c654f726465724974656d436f646522202f3e0a09093c66696c7465722069643d2=
+26f726465725472616e73616374696f6e4461746552616e676522206e616d653d224f726465=
+72205472616e73616374696f6e20446174652052616e67652220636f6e646974696f6e3d227=
+b276372697465726961273a7b276e616d65273a276f726465725472616e73616374696f6e44=
+617465272c20276f70657261746f72273a274245545745454e272c2776616c7565273a27237=
+b236f726465725472616e73616374696f6e4461746552616e67657d277d7d2220747970653d=
+226461746572616e67652220617474616368546f436f6c756d6e3d226f726465725472616e7=
+3616374696f6e4461746522202f3e0a09093c66696c7465722069643d226368616e6e656c50=
+726f64756374496446696c74657222206e616d653d2250726f6475637420496420436f6e746=
+1696e732220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a27=
+6368616e6e656c50726f647563744964272c20276f70657261746f72273a274c494b45272c2=
+776616c7565273a27237b236368616e6e656c50726f64756374496446696c7465727d277d7d=
+2220747970653d22746578742220617474616368546f436f6c756d6e3d226368616e6e656c5=
+0726f64756374496422202f3e0a09093c66696c7465722069643d226974656d436f73745072=
+69636546696c74657222206e616d653d22436f7374205072696365204772656174657220546=
+8616e2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a2769=
+74656d436f73745072696365272c276f70657261746f72273a27475245415445525f5448414=
+e272c2776616c7565273a27237b236974656d436f7374507269636546696c7465727d277d7d=
+2220747970653d2274657874222076616c756545787072657373696f6e3d22237b6e6577206=
+a6176612e6c616e672e446f75626c6528236974656d436f7374507269636546696c74657229=
+7d2220617474616368546f436f6c756d6e3d226974656d436f7374507269636522202f3e0a0=
+93c2f66696c746572733e0a3c2f7461626c652d636f6e6669673e0a\")');
+
+--001a11c126da983d9a0545cf74ea
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>update export_job_type set export_job_config =3D &#39=
+;&lt;?xml version=3D\&quot;1.0\&quot; encoding=3D\&quot;UTF-8\&quot;?&gt;\n=
+&lt;table-config name=3D\&quot;DATATABLE_CHANNEL_PAYMENT_RECONCILIATION\&qu=
+ot; height=3D\&quot;1400\&quot;&gt;\n\t&lt;queryString&gt;\n\t\t&lt;![CDATA=
+[{\&quot;entity\&quot;:\&quot;com.unifier.core.entity.SaleOrderReconciliati=
+on\&quot;,\&quot;criteria\&quot;:[{\&quot;name\&quot;:\&quot;tenantCode\&qu=
+ot;,\&quot;operator\&quot;:\&quot;IS\&quot;,\&quot;value\&quot;:\&quot;#{#c=
+ontext.tenant.code}\&quot;}]}]]&gt;\n\t&lt;/queryString&gt;\n\t&lt;columns&=
+gt;\n\t\t&lt;column id=3D\&quot;orderTransactionDate\&quot; name=3D\&quot;D=
+ate\&quot; value=3D\&quot;#{#entity.orderTransactionDate}\&quot; width=3D\&=
+quot;80\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quot; typ=
+e=3D\&quot;date\&quot; calculated=3D\&quot;true\&quot;/&gt;\n\t\t&lt;column=
+ id=3D\&quot;saleOrderCode\&quot; name=3D\&quot;Sale Order #\&quot; value=
+=3D\&quot;#{#entity.saleOrderCode}\&quot; width=3D\&quot;130\&quot; sortabl=
+e=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\=
+&quot; hidden=3D\&quot;true\&quot;/&gt;\n\t\t&lt;column id=3D\&quot;reconci=
+liationIdentifier\&quot; name=3D\&quot;Order Item #\&quot; value=3D\&quot;#=
+{#entity.reconciliationIdentifier}\&quot; width=3D\&quot;100\&quot; sortabl=
+e=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\=
+&quot; /&gt;\n\t\t&lt;column id=3D\&quot;channelSaleOrderCode\&quot; name=
+=3D\&quot;Order #\&quot; value=3D\&quot;#{#entity.channelSaleOrderCode}\&qu=
+ot; width=3D\&quot;130\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;=
+left\&quot; calculated=3D\&quot;true\&quot; &gt;\n\t\t\t&lt;clientTemplate&=
+gt;&lt;![CDATA[\n\t\t\t\t&lt;div style=3D\&quot;float:left;padding:0 0 0 5p=
+x;\&quot;&gt;&lt;#\n\t\t\t\t\tif(obj.saleOrderCode !=3D null &amp;&amp; obj=
+.saleOrderCode !=3D \&quot;\&quot;) {#&gt;\n\t\t\t\t\t\t&lt;a class=3D\&quo=
+t;link pleaseOpenInNewTab\&quot; href=3D\&quot;/order/orderitems?orderCode=
+=3D&lt;#=3Dobj.saleOrderCode#&gt;\&quot;&gt;&lt;#=3Dobj.channelSaleOrderCod=
+e#&gt;&lt;/a&gt;\n\t\t\t\t\t&lt;#} else {#&gt;\n\t\t\t\t\t\t&lt;span&gt;&lt=
+;#=3Dobj.channelSaleOrderCode#&gt;&lt;/span&gt;&lt;#\n\t\t\t\t\t}#&gt;\n\t\=
+t\t\t&lt;/div&gt;\n\t\t\t]]&gt;&lt;/clientTemplate&gt;\n\t\t&lt;/column&gt;=
+\n\t\t&lt;column id=3D\&quot;channelProductName\&quot; name=3D\&quot;Produc=
+t\&quot; value=3D\&quot;#{#entity.channelProductName}\&quot; width=3D\&quot=
+;120\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calcul=
+ated=3D\&quot;true\&quot; hidden=3D\&quot;true\&quot;/&gt;\n\t\t&lt;column =
+id=3D\&quot;channelProductId\&quot; name=3D\&quot;Product\&quot; value=3D\&=
+quot;#{#entity.channelProductId}\&quot; width=3D\&quot;100\&quot; sortable=
+=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\&=
+quot;&gt;\n\t\t\t&lt;clientTemplate&gt;&lt;![CDATA[\n\t\t\t\t&lt;#=3Dobj.ch=
+annelProductId#&gt;\n\t\t\t\t&lt;# if (obj.channelProductName !=3D null &am=
+p;&amp; obj.channelProductName !=3D \&quot;\&quot;) { #&gt;\n\t\t\t\t\t&lt;=
+br&gt;&lt;span style=3D\&quot;font-style: italic;color: #8F8F8F;\&quot;&gt;=
+(&lt;#=3Dobj.channelProductName#&gt;)&lt;/span&gt;\n\t\t\t\t&lt;# } #&gt;\n=
+\t\t\t]]&gt;&lt;/clientTemplate&gt;\n\t\t&lt;/column&gt;\n\t\t&lt;column id=
+=3D\&quot;channelCode\&quot; name=3D\&quot;Channel\&quot; value=3D\&quot;#{=
+#entity.channelCode}\&quot; width=3D\&quot;80\&quot; sortable=3D\&quot;true=
+\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\&quot;/&gt;\n\t=
+\t&lt;column id=3D\&quot;reconciliationStatus\&quot; name=3D\&quot;Status C=
+ode\&quot; value=3D\&quot;#{#entity.statusCode}\&quot; width=3D\&quot;100\&=
+quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=
+=3D\&quot;true\&quot;/&gt;\n\t\t&lt;column id=3D\&quot;rawSellingPrice\&quo=
+t; name=3D\&quot;Selling Price\&quot; value=3D\&quot;#{#entity.sellingPrice=
+}\&quot; width=3D\&quot;150\&quot; sortable=3D\&quot;true\&quot; align=3D\&=
+quot;left\&quot; calculated=3D\&quot;true\&quot; hidden=3D\&quot;true\&quot=
+;/&gt;\n\t\t&lt;column id=3D\&quot;shippingCharges\&quot; name=3D\&quot;Shi=
+pping Charges\&quot; value=3D\&quot;#{#entity.shippingCharges}\&quot; width=
+=3D\&quot;150\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quo=
+t; calculated=3D\&quot;true\&quot; hidden=3D\&quot;true\&quot;/&gt;\n\t\t&l=
+t;column id=3D\&quot;sellingPrice\&quot; name=3D\&quot;Total Amt\&quot; val=
+ue=3D\&quot;#{#entity.sellingPrice + #entity.shippingCharges}\&quot; width=
+=3D\&quot;105\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quo=
+t; calculated=3D\&quot;true\&quot; =C2=A0&gt;\n\t\t\t&lt;clientTemplate&gt;=
+&lt;![CDATA[\n\t\t\t&lt;div style=3D\&quot;float:left;padding:0;font-size:1=
+1px;font-style: italic;color: #8F8F8F;text-align:right\&quot;&gt;\n\t\t\t\t=
+&lt;span&gt;Selling Price: &lt;/span&gt;\n\t\t\t\t&lt;br&gt;\n\t\t\t\t&lt;s=
+pan&gt;Shipping: &lt;/span&gt;\n\t\t\t&lt;/div&gt;\n\t\t\t&lt;div style=3D\=
+&quot;float:left;padding:0 0 0 5px;\&quot;&gt;\n\t\t\t\t&lt;#=3Dobj.rawSell=
+ingPrice#&gt;&lt;br&gt;&lt;#=3Dobj.shippingCharges#&gt;\n\t\t\t&lt;/div&gt;=
+\n\t\t]]&gt;&lt;/clientTemplate&gt;\n\t\t&lt;/column&gt;\n\t\t&lt;column id=
+=3D\&quot;totalReconcileAmount\&quot; name=3D\&quot;Settled Amt\&quot; valu=
+e=3D\&quot;#{#entity.totalReconcileAmount}\&quot; width=3D\&quot;80\&quot; =
+sortable=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=3D\&quo=
+t;true\&quot;&gt;\n\t\t\t&lt;clientTemplate&gt;&lt;![CDATA[&lt;a class=3D\&=
+quot;link detailsPop\&quot; href=3D\&quot;/order/reconciliation/invoiceItem=
+s\&quot;&gt;&lt;#=3Dobj.totalReconcileAmount#&gt;&lt;/a&gt;&lt;input type=
+=3D\&quot;hidden\&quot; class=3D\&quot;channelCode\&quot; value=3D\&quot;&l=
+t;#=3Dobj.channelCode#&gt;\&quot;&gt;&lt;input type=3D\&quot;hidden\&quot; =
+class=3D\&quot;reconciliationIdentifier\&quot; value=3D\&quot;&lt;#=3Dobj.r=
+econciliationIdentifier#&gt;\&quot;&gt;&lt;input type=3D\&quot;hidden\&quot=
+; class=3D\&quot;channelSaleOrderCode\&quot; value=3D\&quot;&lt;#=3Dobj.cha=
+nnelSaleOrderCode#&gt;\&quot;&gt;]]&gt;&lt;/clientTemplate&gt;\n\t\t&lt;/co=
+lumn&gt;\n\t\t&lt;column id=3D\&quot;settlementPercentage\&quot; name=3D\&q=
+uot;Settled %\&quot; value=3D\&quot;#{#entity.settlementPercentage}\&quot; =
+width=3D\&quot;80\&quot; sortable=3D\&quot;true\&quot; align=3D\&quot;left\=
+&quot; calculated=3D\&quot;true\&quot;&gt;\n\t\t\t&lt;clientTemplate&gt;&lt=
+;![CDATA[&lt;#\n\t\t\t\tif (obj.settlementPercentage &gt;=3D 80) {#&gt;\n\t=
+\t\t\t\t&lt;div style=3D\&quot;float:left;padding:0;font-size:11px;font-wei=
+ght:bold;color: #008000;text-align:right\&quot;&gt;\n\t\t\t\t\t&lt;span&gt;=
+&lt;#=3Dobj.settlementPercentage.toFixed(2)#&gt; %&lt;/span&gt;&lt;#\n\t\t\=
+t\t} else if (obj.settlementPercentage &lt; 80 &amp;&amp; obj.settlementPer=
+centage &gt;=3D 40) {#&gt;\n\t\t\t\t\t&lt;div style=3D\&quot;float:left;pad=
+ding:0;font-size:11px;font-weight:bold;color: #0000FF;text-align:right\&quo=
+t;&gt;\n\t\t\t\t\t&lt;span&gt;&lt;#=3Dobj.settlementPercentage.toFixed(2)#&=
+gt; %&lt;/span&gt;&lt;#\n\t\t\t\t} else {#&gt;\n\t\t\t\t\t&lt;div style=3D\=
+&quot;float:left;padding:0;font-size:11px;font-weight:bold;color: #FF0000;t=
+ext-align:right\&quot;&gt;\n\t\t\t\t\t&lt;span&gt;&lt;#=3Dobj.settlementPer=
+centage.toFixed(2)#&gt; %&lt;/span&gt;&lt;#\n\t\t\t\t}#&gt;\n\t\t]]&gt;&lt;=
+/clientTemplate&gt;\n\t\t&lt;/column&gt;\n\t\t&lt;column id=3D\&quot;itemCo=
+stPrice\&quot; name=3D\&quot;Cost Price\&quot; value=3D\&quot;#{#entity.ite=
+mCostPrice}\&quot; width=3D\&quot;80\&quot; sortable=3D\&quot;true\&quot; a=
+lign=3D\&quot;left\&quot; calculated=3D\&quot;true\&quot;/&gt;\n\t\t&lt;col=
+umn id=3D\&quot;quantity\&quot; name=3D\&quot;Quantity\&quot; value=3D\&quo=
+t;#{#entity.quantity}\&quot; width=3D\&quot;60\&quot; sortable=3D\&quot;tru=
+e\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\&quot;/&gt;\n\=
+t\t&lt;column id=3D\&quot;comments\&quot; name=3D\&quot;Comments\&quot; val=
+ue=3D\&quot;#{#entity.comments}\&quot; width=3D\&quot;120\&quot; =C2=A0alig=
+n=3D\&quot;left\&quot; calculated=3D\&quot;true\&quot;/&gt;\n\t\t&lt;column=
+ id=3D\&quot;reconciledBy\&quot; name=3D\&quot;Reconciled By\&quot; value=
+=3D\&quot;#{#entity.reconciledBy}\&quot; width=3D\&quot;120\&quot; sortable=
+=3D\&quot;true\&quot; align=3D\&quot;left\&quot; calculated=3D\&quot;true\&=
+quot;/&gt;\n\t&lt;/columns&gt;\n\t&lt;defaultSortBy&gt;\n\t\t&lt;![CDATA[{\=
+&quot;column\&quot; : \&quot;orderTransactionDate\&quot;, \&quot;descending=
+\&quot; : \&quot;true\&quot;}]]&gt;\n\t&lt;/defaultSortBy&gt;\n\t&lt;filter=
+s&gt;\n\t\t&lt;filter id=3D\&quot;channelFilter\&quot; name=3D\&quot;Channe=
+l Contains\&quot; condition=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39=
+;:\&#39;channelCode\&#39;,\&#39;operator\&#39;:\&#39;IN\&#39;,\&#39;value\&=
+#39;:\&#39;#{#channelFilter}\&#39;}}\&quot; type=3D\&quot;multiselect\&quot=
+; attachToColumn=3D\&quot;channelCode\&quot; values=3D\&quot;query:select c=
+.code,<a href=3D"http://c.name">c.name</a> as name from channel c where c.t=
+enant_id =3D :tenantId\&quot;/&gt;\n\t\t&lt;filter id=3D\&quot;settlementPe=
+rcentageFilter\&quot; name=3D\&quot;% greater than\&quot; condition=3D\&quo=
+t;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;settlementPercentage\&#39;,=
+\&#39;operator\&#39;:\&#39;GREATER_THAN\&#39;,\&#39;value\&#39;:\&#39;#{#se=
+ttlementPercentageFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot; valueExp=
+ression=3D\&quot;#{new java.lang.Double(#settlementPercentageFilter)}\&quot=
+; attachToColumn=3D\&quot;settlementPercentage\&quot; /&gt;\n\t\t&lt;filter=
+ id=3D\&quot;settlementAmountFilter\&quot; name=3D\&quot;Amount less than\&=
+quot; condition=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;tota=
+lReconcileAmount\&#39;,\&#39;operator\&#39;:\&#39;LESS_THAN\&#39;,\&#39;val=
+ue\&#39;:\&#39;#{#settlementAmountFilter}\&#39;}}\&quot; type=3D\&quot;text=
+\&quot; valueExpression=3D\&quot;#{new java.lang.Double(#settlementAmountFi=
+lter)}\&quot; attachToColumn=3D\&quot;totalReconcileAmount\&quot; /&gt;\n\t=
+\t&lt;filter id=3D\&quot;reconciliationIdentifierFilter\&quot; name=3D\&quo=
+t;Reconciliation Identifier Contains\&quot; condition=3D\&quot;{\&#39;crite=
+ria\&#39;:{\&#39;name\&#39;:\&#39;reconciliationIdentifier\&#39;,\&#39;oper=
+ator\&#39;:\&#39;LIKE\&#39;,\&#39;value\&#39;:\&#39;#{#reconciliationIdenti=
+fierFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot; attachToColumn=3D\&quo=
+t;reconciliationIdentifier\&quot; /&gt;\n\t\t&lt;filter id=3D\&quot;channel=
+SaleOrderCodeFilter\&quot; name=3D\&quot;Channel Sale Order Code -\&quot; c=
+ondition=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;channelSale=
+OrderCode\&#39;,\&#39;operator\&#39;:\&#39;LIKE\&#39;,\&#39;value\&#39;:\&#=
+39;#{#channelSaleOrderCodeFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot; =
+attachToColumn=3D\&quot;channelSaleOrderCode\&quot; /&gt;\n\t\t&lt;filter i=
+d=3D\&quot;orderAmountFilter\&quot; name=3D\&quot;Selling Price Greater Tha=
+n\&quot; condition=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;s=
+ellingPrice\&#39;,\&#39;operator\&#39;:\&#39;GREATER_THAN\&#39;,\&#39;value=
+\&#39;:\&#39;#{#orderAmountFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot;=
+ valueExpression=3D\&quot;#{new java.lang.Double(#orderAmountFilter)}\&quot=
+; attachToColumn=3D\&quot;sellingPrice\&quot; /&gt;\n\t\t&lt;filter id=3D\&=
+quot;reconciliationStatusFilter\&quot; name=3D\&quot;Status\&quot; conditio=
+n=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;statusCode\&#39;,\=
+&#39;operator\&#39;:\&#39;IN\&#39;,\&#39;value\&#39;:\&#39;#{#reconciliatio=
+nStatusFilter}\&#39;}}\&quot; type=3D\&quot;multiselect\&quot; values=3D\&q=
+uot;enum:RECONCILED|RECONCILED, AWAITING_PAYMENT|AWAITING_PAYMENT, DISPUTED=
+|DISPUTED, UNRECONCILED|UNRECONCILED, UNRECONCILABLE|UNRECONCILABLE\&quot; =
+attachToColumn=3D\&quot;reconciliationStatus\&quot; /&gt;\n\t\t&lt;filter i=
+d=3D\&quot;channelSaleOrderItemCodeFilter\&quot; name=3D\&quot;Order Item C=
+ode Contains\&quot; condition=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#=
+39;:\&#39;reconciliationIdentifier\&#39;,\&#39;operator\&#39;:\&#39;LIKE\&#=
+39;,\&#39;value\&#39;:\&#39;#{#channelSaleOrderItemCodeFilter}\&#39;}}\&quo=
+t; type=3D\&quot;text\&quot; attachToColumn=3D\&quot;channelSaleOrderItemCo=
+de\&quot; /&gt;\n\t\t&lt;filter id=3D\&quot;orderTransactionDateRange\&quot=
+; name=3D\&quot;Order Transaction Date Range\&quot; condition=3D\&quot;{\&#=
+39;criteria\&#39;:{\&#39;name\&#39;:\&#39;orderTransactionDate\&#39;, \&#39=
+;operator\&#39;:\&#39;BETWEEN\&#39;,\&#39;value\&#39;:\&#39;#{#orderTransac=
+tionDateRange}\&#39;}}\&quot; type=3D\&quot;daterange\&quot; attachToColumn=
+=3D\&quot;orderTransactionDate\&quot; /&gt;\n\t\t&lt;filter id=3D\&quot;cha=
+nnelProductIdFilter\&quot; name=3D\&quot;Product Id Contains\&quot; conditi=
+on=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;channelProductId\=
+&#39;, \&#39;operator\&#39;:\&#39;LIKE\&#39;,\&#39;value\&#39;:\&#39;#{#cha=
+nnelProductIdFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot; attachToColum=
+n=3D\&quot;channelProductId\&quot; /&gt;\n\t\t&lt;filter id=3D\&quot;itemCo=
+stPriceFilter\&quot; name=3D\&quot;Cost Price Greater Than\&quot; condition=
+=3D\&quot;{\&#39;criteria\&#39;:{\&#39;name\&#39;:\&#39;itemCostPrice\&#39;=
+,\&#39;operator\&#39;:\&#39;GREATER_THAN\&#39;,\&#39;value\&#39;:\&#39;#{#i=
+temCostPriceFilter}\&#39;}}\&quot; type=3D\&quot;text\&quot; valueExpressio=
+n=3D\&quot;#{new java.lang.Double(#itemCostPriceFilter)}\&quot; attachToCol=
+umn=3D\&quot;itemCostPrice\&quot; /&gt;\n\t&lt;/filters&gt;\n&lt;/table-con=
+fig&gt;\n&#39; where name =3D &quot;DATATABLE_CHANNEL_PAYMENT_RECONCILIATIO=
+N&quot;;</div><div>var decoded_temp =3D db.eval(&#39;decodeHex (\&quot;3c3f=
+786d6c2076657273696f6e3d22312e302220656e636f64696e673d225554462d38223f3e0a3=
+c7461626c652d636f6e666967206e616d653d22444154415441424c455f4348414e4e454c5f=
+5041594d454e545f5245434f4e43494c494154494f4e22206865696768743d2231343030223=
+e0a093c7175657279537472696e673e0a09093c215b43444154415b7b22656e74697479223a=
+22636f6d2e756e69666965722e636f72652e656e746974792e53616c654f726465725265636=
+f6e63696c696174696f6e222c226372697465726961223a5b7b226e616d65223a2274656e61=
+6e74436f6465222c226f70657261746f72223a224953222c2276616c7565223a22237b23636=
+f6e746578742e74656e616e742e636f64657d227d5d7d5d5d3e0a093c2f7175657279537472=
+696e673e0a093c636f6c756d6e733e0a09093c636f6c756d6e2069643d226f7264657254726=
+16e73616374696f6e4461746522206e616d653d2244617465222076616c75653d22237b2365=
+6e746974792e6f726465725472616e73616374696f6e446174657d222077696474683d22383=
+02220736f727461626c653d22747275652220616c69676e3d226c6566742220747970653d22=
+64617465222063616c63756c617465643d2274727565222f3e0a09093c636f6c756d6e20696=
+43d2273616c654f72646572436f646522206e616d653d2253616c65204f7264657220232220=
+76616c75653d22237b23656e746974792e73616c654f72646572436f64657d2220776964746=
+83d223133302220736f727461626c653d22747275652220616c69676e3d226c656674222063=
+616c63756c617465643d2274727565222068696464656e3d2274727565222f3e0a09093c636=
+f6c756d6e2069643d227265636f6e63696c696174696f6e4964656e74696669657222206e61=
+6d653d224f72646572204974656d2023222076616c75653d22237b23656e746974792e72656=
+36f6e63696c696174696f6e4964656e7469666965727d222077696474683d22313030222073=
+6f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c6174656=
+43d227472756522202f3e0a09093c636f6c756d6e2069643d226368616e6e656c53616c654f=
+72646572436f646522206e616d653d224f726465722023222076616c75653d22237b23656e7=
+46974792e6368616e6e656c53616c654f72646572436f64657d222077696474683d22313330=
+2220736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c6=
+17465643d227472756522203e0a0909093c636c69656e7454656d706c6174653e3c215b4344=
+4154415b0a090909093c646976207374796c653d22666c6f61743a6c6566743b70616464696=
+e673a3020302030203570783b223e3c230a09090909096966286f626a2e73616c654f726465=
+72436f646520213d206e756c6c202626206f626a2e73616c654f72646572436f646520213d2=
+0222229207b233e0a0909090909093c6120636c6173733d226c696e6b20706c656173654f70=
+656e496e4e65775461622220687265663d222f6f726465722f6f726465726974656d733f6f7=
+2646572436f64653d3c233d6f626a2e73616c654f72646572436f6465233e223e3c233d6f62=
+6a2e6368616e6e656c53616c654f72646572436f6465233e3c2f613e0a09090909093c237d2=
+0656c7365207b233e0a0909090909093c7370616e3e3c233d6f626a2e6368616e6e656c5361=
+6c654f72646572436f6465233e3c2f7370616e3e3c230a09090909097d233e0a090909093c2=
+f6469763e0a0909095d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f636f6c75=
+6d6e3e0a09093c636f6c756d6e2069643d226368616e6e656c50726f647563744e616d65222=
+06e616d653d2250726f64756374222076616c75653d22237b23656e746974792e6368616e6e=
+656c50726f647563744e616d657d222077696474683d223132302220736f727461626c653d2=
+2747275652220616c69676e3d226c656674222063616c63756c617465643d22747275652220=
+68696464656e3d2274727565222f3e0a09093c636f6c756d6e2069643d226368616e6e656c5=
+0726f64756374496422206e616d653d2250726f64756374222076616c75653d22237b23656e=
+746974792e6368616e6e656c50726f6475637449647d222077696474683d223130302220736=
+f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c61746564=
+3d2274727565223e0a0909093c636c69656e7454656d706c6174653e3c215b43444154415b0=
+a090909093c233d6f626a2e6368616e6e656c50726f647563744964233e0a090909093c2320=
+696620286f626a2e6368616e6e656c50726f647563744e616d6520213d206e756c6c2026262=
+06f626a2e6368616e6e656c50726f647563744e616d6520213d20222229207b20233e0a0909=
+0909093c62723e3c7370616e207374796c653d22666f6e742d7374796c653a206974616c696=
+33b636f6c6f723a20233846384638463b223e283c233d6f626a2e6368616e6e656c50726f64=
+7563744e616d65233e293c2f7370616e3e0a090909093c23207d20233e0a0909095d5d3e3c2=
+f636c69656e7454656d706c6174653e0a09093c2f636f6c756d6e3e0a09093c636f6c756d6e=
+2069643d226368616e6e656c436f646522206e616d653d224368616e6e656c222076616c756=
+53d22237b23656e746974792e6368616e6e656c436f64657d222077696474683d2238302220=
+736f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c61746=
+5643d2274727565222f3e0a09093c636f6c756d6e2069643d227265636f6e63696c69617469=
+6f6e53746174757322206e616d653d2253746174757320436f6465222076616c75653d22237=
+b23656e746974792e737461747573436f64657d222077696474683d223130302220736f7274=
+61626c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d227=
+4727565222f3e0a09093c636f6c756d6e2069643d2272617753656c6c696e67507269636522=
+206e616d653d2253656c6c696e67205072696365222076616c75653d22237b23656e7469747=
+92e73656c6c696e6750726963657d222077696474683d223135302220736f727461626c653d=
+22747275652220616c69676e3d226c656674222063616c63756c617465643d2274727565222=
+068696464656e3d2274727565222f3e0a09093c636f6c756d6e2069643d227368697070696e=
+674368617267657322206e616d653d225368697070696e672043686172676573222076616c7=
+5653d22237b23656e746974792e7368697070696e67436861726765737d222077696474683d=
+223135302220736f727461626c653d22747275652220616c69676e3d226c656674222063616=
+c63756c617465643d2274727565222068696464656e3d2274727565222f3e0a09093c636f6c=
+756d6e2069643d2273656c6c696e67507269636522206e616d653d22546f74616c20416d742=
+22076616c75653d22237b23656e746974792e73656c6c696e675072696365202b2023656e74=
+6974792e7368697070696e67436861726765737d222077696474683d223130352220736f727=
+461626c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d22=
+747275652220203e0a0909093c636c69656e7454656d706c6174653e3c215b43444154415b0=
+a0909093c646976207374796c653d22666c6f61743a6c6566743b70616464696e673a303b66=
+6f6e742d73697a653a313170783b666f6e742d7374796c653a206974616c69633b636f6c6f7=
+23a20233846384638463b746578742d616c69676e3a7269676874223e0a090909093c737061=
+6e3e53656c6c696e672050726963653a203c2f7370616e3e0a090909093c62723e0a0909090=
+93c7370616e3e5368697070696e673a203c2f7370616e3e0a0909093c2f6469763e0a090909=
+3c646976207374796c653d22666c6f61743a6c6566743b70616464696e673a3020302030203=
+570783b223e0a090909093c233d6f626a2e72617753656c6c696e675072696365233e3c6272=
+3e3c233d6f626a2e7368697070696e6743686172676573233e0a0909093c2f6469763e0a090=
+95d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f636f6c756d6e3e0a09093c63=
+6f6c756d6e2069643d22746f74616c5265636f6e63696c65416d6f756e7422206e616d653d2=
+2536574746c656420416d74222076616c75653d22237b23656e746974792e746f74616c5265=
+636f6e63696c65416d6f756e747d222077696474683d2238302220736f727461626c653d227=
+47275652220616c69676e3d226c656674222063616c63756c617465643d2274727565223e0a=
+0909093c636c69656e7454656d706c6174653e3c215b43444154415b3c6120636c6173733d2=
+26c696e6b2064657461696c73506f702220687265663d222f6f726465722f7265636f6e6369=
+6c696174696f6e2f696e766f6963654974656d73223e3c233d6f626a2e746f74616c5265636=
+f6e63696c65416d6f756e74233e3c2f613e3c696e70757420747970653d2268696464656e22=
+20636c6173733d226368616e6e656c436f6465222076616c75653d223c233d6f626a2e63686=
+16e6e656c436f6465233e223e3c696e70757420747970653d2268696464656e2220636c6173=
+733d227265636f6e63696c696174696f6e4964656e746966696572222076616c75653d223c2=
+33d6f626a2e7265636f6e63696c696174696f6e4964656e746966696572233e223e3c696e70=
+757420747970653d2268696464656e2220636c6173733d226368616e6e656c53616c654f726=
+46572436f6465222076616c75653d223c233d6f626a2e6368616e6e656c53616c654f726465=
+72436f6465233e223e5d5d3e3c2f636c69656e7454656d706c6174653e0a09093c2f636f6c7=
+56d6e3e0a09093c636f6c756d6e2069643d22736574746c656d656e7450657263656e746167=
+6522206e616d653d22536574746c65642025222076616c75653d22237b23656e746974792e7=
+36574746c656d656e7450657263656e746167657d222077696474683d2238302220736f7274=
+61626c653d22747275652220616c69676e3d226c656674222063616c63756c617465643d227=
+4727565223e0a0909093c636c69656e7454656d706c6174653e3c215b43444154415b3c230a=
+09090909696620286f626a2e736574746c656d656e7450657263656e74616765203e3d20383=
+029207b233e0a09090909093c646976207374796c653d22666c6f61743a6c6566743b706164=
+64696e673a303b666f6e742d73697a653a313170783b666f6e742d7765696768743a626f6c6=
+43b636f6c6f723a20233030383030303b746578742d616c69676e3a7269676874223e0a0909=
+0909093c7370616e3e3c233d6f626a2e736574746c656d656e7450657263656e746167652e7=
+46f4669786564283229233e20253c2f7370616e3e3c230a090909097d20656c736520696620=
+286f626a2e736574746c656d656e7450657263656e74616765203c203830202626206f626a2=
+e736574746c656d656e7450657263656e74616765203e3d20343029207b233e0a0909090909=
+3c646976207374796c653d22666c6f61743a6c6566743b70616464696e673a303b666f6e742=
+d73697a653a313170783b666f6e742d7765696768743a626f6c643b636f6c6f723a20233030=
+303046463b746578742d616c69676e3a7269676874223e0a09090909093c7370616e3e3c233=
+d6f626a2e736574746c656d656e7450657263656e746167652e746f4669786564283229233e=
+20253c2f7370616e3e3c230a090909097d20656c7365207b233e0a09090909093c646976207=
+374796c653d22666c6f61743a6c6566743b70616464696e673a303b666f6e742d73697a653a=
+313170783b666f6e742d7765696768743a626f6c643b636f6c6f723a20234646303030303b7=
+46578742d616c69676e3a7269676874223e0a09090909093c7370616e3e3c233d6f626a2e73=
+6574746c656d656e7450657263656e746167652e746f4669786564283229233e20253c2f737=
+0616e3e3c230a090909097d233e0a09095d5d3e3c2f636c69656e7454656d706c6174653e0a=
+09093c2f636f6c756d6e3e0a09093c636f6c756d6e2069643d226974656d436f73745072696=
+36522206e616d653d22436f7374205072696365222076616c75653d22237b23656e74697479=
+2e6974656d436f737450726963657d222077696474683d2238302220736f727461626c653d2=
+2747275652220616c69676e3d226c656674222063616c63756c617465643d2274727565222f=
+3e0a09093c636f6c756d6e2069643d227175616e7469747922206e616d653d225175616e746=
+97479222076616c75653d22237b23656e746974792e7175616e746974797d22207769647468=
+3d2236302220736f727461626c653d22747275652220616c69676e3d226c656674222063616=
+c63756c617465643d2274727565222f3e0a09093c636f6c756d6e2069643d22636f6d6d656e=
+747322206e616d653d22436f6d6d656e7473222076616c75653d22237b23656e746974792e6=
+36f6d6d656e74737d222077696474683d22313230222020616c69676e3d226c656674222063=
+616c63756c617465643d2274727565222f3e0a09093c636f6c756d6e2069643d227265636f6=
+e63696c6564427922206e616d653d225265636f6e63696c6564204279222076616c75653d22=
+237b23656e746974792e7265636f6e63696c656442797d222077696474683d2231323022207=
+36f727461626c653d22747275652220616c69676e3d226c656674222063616c63756c617465=
+643d2274727565222f3e0a093c2f636f6c756d6e733e0a093c64656661756c74536f7274427=
+93e0a09093c215b43444154415b7b22636f6c756d6e22203a20226f726465725472616e7361=
+6374696f6e44617465222c202264657363656e64696e6722203a202274727565227d5d5d3e0=
+a093c2f64656661756c74536f727442793e0a093c66696c746572733e0a09093c66696c7465=
+722069643d226368616e6e656c46696c74657222206e616d653d224368616e6e656c20436f6=
+e7461696e732220636f6e646974696f6e3d227b276372697465726961273a7b276e616d6527=
+3a276368616e6e656c436f6465272c276f70657261746f72273a27494e272c2776616c75652=
+73a27237b236368616e6e656c46696c7465727d277d7d2220747970653d226d756c74697365=
+6c6563742220617474616368546f436f6c756d6e3d226368616e6e656c436f6465222076616=
+c7565733d2271756572793a73656c65637420632e636f64652c632e6e616d65206173206e61=
+6d652066726f6d206368616e6e656c206320776865726520632e74656e616e745f6964203d2=
+03a74656e616e744964222f3e0a09093c66696c7465722069643d22736574746c656d656e74=
+50657263656e7461676546696c74657222206e616d653d22252067726561746572207468616=
+e2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a27736574=
+746c656d656e7450657263656e74616765272c276f70657261746f72273a274752454154455=
+25f5448414e272c2776616c7565273a27237b23736574746c656d656e7450657263656e7461=
+676546696c7465727d277d7d2220747970653d2274657874222076616c75654578707265737=
+3696f6e3d22237b6e6577206a6176612e6c616e672e446f75626c652823736574746c656d65=
+6e7450657263656e7461676546696c746572297d2220617474616368546f436f6c756d6e3d2=
+2736574746c656d656e7450657263656e7461676522202f3e0a09093c66696c746572206964=
+3d22736574746c656d656e74416d6f756e7446696c74657222206e616d653d22416d6f756e7=
+4206c657373207468616e2220636f6e646974696f6e3d227b276372697465726961273a7b27=
+6e616d65273a27746f74616c5265636f6e63696c65416d6f756e74272c276f70657261746f7=
+2273a274c4553535f5448414e272c2776616c7565273a27237b23736574746c656d656e7441=
+6d6f756e7446696c7465727d277d7d2220747970653d2274657874222076616c75654578707=
+2657373696f6e3d22237b6e6577206a6176612e6c616e672e446f75626c652823736574746c=
+656d656e74416d6f756e7446696c746572297d2220617474616368546f436f6c756d6e3d227=
+46f74616c5265636f6e63696c65416d6f756e7422202f3e0a09093c66696c7465722069643d=
+227265636f6e63696c696174696f6e4964656e74696669657246696c74657222206e616d653=
+d225265636f6e63696c696174696f6e204964656e74696669657220436f6e7461696e732220=
+636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a277265636f6e6=
+3696c696174696f6e4964656e746966696572272c276f70657261746f72273a274c494b4527=
+2c2776616c7565273a27237b237265636f6e63696c696174696f6e4964656e7469666965724=
+6696c7465727d277d7d2220747970653d22746578742220617474616368546f436f6c756d6e=
+3d227265636f6e63696c696174696f6e4964656e74696669657222202f3e0a09093c66696c7=
+465722069643d226368616e6e656c53616c654f72646572436f646546696c74657222206e61=
+6d653d224368616e6e656c2053616c65204f7264657220436f6465202d2220636f6e6469746=
+96f6e3d227b276372697465726961273a7b276e616d65273a276368616e6e656c53616c654f=
+72646572436f6465272c276f70657261746f72273a274c494b45272c2776616c7565273a272=
+37b236368616e6e656c53616c654f72646572436f646546696c7465727d277d7d2220747970=
+653d22746578742220617474616368546f436f6c756d6e3d226368616e6e656c53616c654f7=
+2646572436f646522202f3e0a09093c66696c7465722069643d226f72646572416d6f756e74=
+46696c74657222206e616d653d2253656c6c696e67205072696365204772656174657220546=
+8616e2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a2773=
+656c6c696e675072696365272c276f70657261746f72273a27475245415445525f5448414e2=
+72c2776616c7565273a27237b236f72646572416d6f756e7446696c7465727d277d7d222074=
+7970653d2274657874222076616c756545787072657373696f6e3d22237b6e6577206a61766=
+12e6c616e672e446f75626c6528236f72646572416d6f756e7446696c746572297d22206174=
+74616368546f436f6c756d6e3d2273656c6c696e67507269636522202f3e0a09093c66696c7=
+465722069643d227265636f6e63696c696174696f6e53746174757346696c74657222206e61=
+6d653d225374617475732220636f6e646974696f6e3d227b276372697465726961273a7b276=
+e616d65273a27737461747573436f6465272c276f70657261746f72273a27494e272c277661=
+6c7565273a27237b237265636f6e63696c696174696f6e53746174757346696c7465727d277=
+d7d2220747970653d226d756c746973656c656374222076616c7565733d22656e756d3a5245=
+434f4e43494c45447c5245434f4e43494c45442c204157414954494e475f5041594d454e547=
+c4157414954494e475f5041594d454e542c2044495350555445447c44495350555445442c20=
+554e5245434f4e43494c45447c554e5245434f4e43494c45442c20554e5245434f4e43494c4=
+1424c457c554e5245434f4e43494c41424c452220617474616368546f436f6c756d6e3d2272=
+65636f6e63696c696174696f6e53746174757322202f3e0a09093c66696c7465722069643d2=
+26368616e6e656c53616c654f726465724974656d436f646546696c74657222206e616d653d=
+224f72646572204974656d20436f646520436f6e7461696e732220636f6e646974696f6e3d2=
+27b276372697465726961273a7b276e616d65273a277265636f6e63696c696174696f6e4964=
+656e746966696572272c276f70657261746f72273a274c494b45272c2776616c7565273a272=
+37b236368616e6e656c53616c654f726465724974656d436f646546696c7465727d277d7d22=
+20747970653d22746578742220617474616368546f436f6c756d6e3d226368616e6e656c536=
+16c654f726465724974656d436f646522202f3e0a09093c66696c7465722069643d226f7264=
+65725472616e73616374696f6e4461746552616e676522206e616d653d224f7264657220547=
+2616e73616374696f6e20446174652052616e67652220636f6e646974696f6e3d227b276372=
+697465726961273a7b276e616d65273a276f726465725472616e73616374696f6e446174652=
+72c20276f70657261746f72273a274245545745454e272c2776616c7565273a27237b236f72=
+6465725472616e73616374696f6e4461746552616e67657d277d7d2220747970653d2264617=
+46572616e67652220617474616368546f436f6c756d6e3d226f726465725472616e73616374=
+696f6e4461746522202f3e0a09093c66696c7465722069643d226368616e6e656c50726f647=
+56374496446696c74657222206e616d653d2250726f6475637420496420436f6e7461696e73=
+2220636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a276368616=
+e6e656c50726f647563744964272c20276f70657261746f72273a274c494b45272c2776616c=
+7565273a27237b236368616e6e656c50726f64756374496446696c7465727d277d7d2220747=
+970653d22746578742220617474616368546f436f6c756d6e3d226368616e6e656c50726f64=
+756374496422202f3e0a09093c66696c7465722069643d226974656d436f737450726963654=
+6696c74657222206e616d653d22436f73742050726963652047726561746572205468616e22=
+20636f6e646974696f6e3d227b276372697465726961273a7b276e616d65273a276974656d4=
+36f73745072696365272c276f70657261746f72273a27475245415445525f5448414e272c27=
+76616c7565273a27237b236974656d436f7374507269636546696c7465727d277d7d2220747=
+970653d2274657874222076616c756545787072657373696f6e3d22237b6e6577206a617661=
+2e6c616e672e446f75626c6528236974656d436f7374507269636546696c746572297d22206=
+17474616368546f436f6c756d6e3d226974656d436f7374507269636522202f3e0a093c2f66=
+696c746572733e0a3c2f7461626c652d636f6e6669673e0a\&quot;)&#39;);=C2=A0</div>=
+<div><br></div></div>
+
+--001a11c126da983d9a0545cf74ea--

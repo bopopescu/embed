@@ -1,0 +1,1075 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Fri, 3 Feb 2017 01:26:06 -0800 (PST)
+Date: Fri, 3 Feb 2017 14:56:06 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorqsQwB4imN9Mn2a4TOiF8iE9-oXmsNLmkOcYMBS1HP7g@mail.gmail.com>
+Subject: 
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1134e7e618b4f905479cdf7d
+
+--001a1134e7e618b4f905479cdf7d
+Content-Type: text/plain; charset=UTF-8
+
+<scraper name="amazonIndiaReconciliationInvoiceDetailScript" xmlns:xsi="
+http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="
+http://www.unicommerce.com/schema/scraper-1.0.xsd">
+
+<var name="amazonURL" value="https://mws.amazonservices.in" />
+<var name="amazonBaseUrl" value="mws.amazonservices.in" />
+<var name="reportId" value="#{#channelReconciliationElement.text()}" />
+<startTag name="CreateChannelReconciliationInvoiceRequest">
+<attribute name="xmlns" value="http://uniware.unicommerce.com/services/" />
+</startTag>
+
+<var name="requestParams" value="#{new java.util.LinkedHashMap()}" />
+<var value="#{#requestParams.put('AWSAccessKeyId', #awsAccessKeyId)}" />
+<var value="#{#requestParams.put('Action', 'GetReport')}" />
+<var value="#{#requestParams.put('MWSAuthToken', #marketplaceId)}" />
+<var value="#{#requestParams.put('SignatureVersion', '2')}" />
+<var value="#{#requestParams.put('SignatureMethod', 'HmacSHA256')}" />
+<var value="#{#requestParams.put('Merchant', #sellerId)}" />
+<var value="#{#requestParams.put('Version', '2009-01-01')}" />
+<var value="#{#requestParams.put('ReportId', #reportId)}" />
+<var value="#{#requestParams.put('Timestamp',
+T(com.unifier.core.utils.AWSUtils).getFormattedTimestamp(T(com.unifier.core.utils.DateUtils).getCurrentTime()))}"
+/>
+<var value="#{#requestParams.put('Signature',
+T(com.unifier.core.utils.AWSUtils).addSignatureToRequest(#amazonBaseUrl,
+'/', #secretKey, #requestParams))}" />
+
+<var name="path"
+value="/reconciliationInvoices/#{T(com.unifier.core.utils.EncryptionUtils).md5Encode(T(com.unifier.core.utils.DateUtils).getCurrentTime().getTime()+
+'_' + T(com.uniware.core.utils.UserContext).current().tenant.code + '_' +
+'_amazonReconciliation')}.csv" />
+<var name="filePath"
+value="#{T(com.unifier.core.cache.CacheManager).getInstance().getCache('environmentCache').exportDirectoryPath}#{#path}"
+/>
+<log level="info" value="filePath: #{#filePath}"/>
+<http method="post"
+url="#{T(com.unifier.core.transport.http.HttpSender).createURL(#amazonURL,#requestParams)}"
+var="settlementReportResponse" downloadToFile="#{#filePath}">
+<header name="Content-Type" value="text/plain" />
+<header name="User-Agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X
+10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116
+Safari/537.36" />
+<params map="#{#requestParams}" />
+</http>
+
+<log level="info" value="#{#filePath}"/>
+<var name="rowIterator" value="#{new
+com.unifier.core.fileparser.DelimitedFileParser(#filePath,
+T(com.unifier.core.fileparser.DelimitedFileParser).TAB_DELIMITER).parse()}"
+/>
+<var name="row" value="#{#rowIterator.next()}" />
+<var name="invoiceCode" value="#{#row.getColumnValue('settlement-id')}" />
+<startTag name="ChannelReconciliationInvoice" />
+
+<valueTag name="InvoiceCode"
+value="#{#row.getColumnValue('settlement-id')}" />
+<valueTag name="ChannelCode" value="#{#channel.code}" />
+<valueTag name="SettlementDate"
+value="#{#row.getColumnValue('deposit-date')}" />
+<valueTag name="DepositDate"
+value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).stringToDate(#row.getColumnValue('deposit-date'),'dd.MM.yyyy'),'dd/MM/yyyy')}"/>
+<valueTag name="TotalSettlementValue"
+value="#{#row.getColumnValue('total-amount')}" />
+
+<var name="orderIdOrderItemMap" value="#{new java.util.HashMap()}" />
+<var name="otherTransactionOrderIdToValueMap" value="#{new
+java.util.HashMap()}" />
+
+<log level="info" value="SettlementId,DepositDate,TotalAmount :
+#{#row.getColumnValue('settlement-id') + '-' +
+#row.getColumnValue('deposit-date') + '-' +
+#row.getColumnValue('total-amount')}" />
+
+<while condition="#{#rowIterator.hasNext()}">
+<var name="row" value="#{#rowIterator.next()}" />
+<var name="description"
+value="#{#row.getColumnValue('amount-description')}" />
+<var name="value" value="#{#row.getColumnValue('amount')}" />
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('order-item-code'))}"
+>
+
+<if condition="#{#row.getColumnValue('transaction-type').equals('Refund')}"
+>
+<var name="newOrderId" value="#{#row.getColumnValue('order-item-code') +
+'-1' }" />
+<else>
+<var name="newOrderId" value="#{#row.getColumnValue('order-item-code') }" />
+</else>
+</if>
+
+<var name="orderMap" value="#{#orderIdOrderItemMap.get(#newOrderId)}" />
+<if condition="#{#orderMap== null}">
+<var name="orderItemMap" value="#{new java.util.HashMap()}" />
+<var value="#{#orderItemMap.put(#description,#value)}"/>
+<var
+value="#{#orderItemMap.put('order-id',#row.getColumnValue('order-id'))}"/>
+<var
+value="#{#orderItemMap.put('order-item-code',#row.getColumnValue('order-item-code'))}"/>
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('transaction-type'))}"
+>
+<var
+value="#{#orderItemMap.put('transaction-type',#row.getColumnValue('transaction-type'))}"/>
+</if>
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('posted-date'))}"
+>
+<var
+value="#{#orderItemMap.put('posted-date',#row.getColumnValue('posted-date'))}"/>
+</if>
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('quantity-purchased'))}"
+>
+<var
+value="#{#orderItemMap.put('quantity-purchased',#row.getColumnValue('quantity-purchased'))}"/>
+</if>
+<var value="#{#orderIdOrderItemMap.put(#newOrderId,#orderItemMap)}"/>
+<else>
+<var value="#{#orderMap.put(#description,#value)}" />
+<var value="#{#orderIdOrderItemMap.put(#newOrderId,#orderMap)}"/>
+</else>
+</if>
+<else>
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('order-id'))}"
+>
+<var name="otherOrderId" value="#{#row.getColumnValue('order-id')}" />
+<if condition="#{#otherTransactionOrderIdToValueMap.get(#otherOrderId) ==
+null}">
+<var name="otherTransactionMap" value="#{new java.util.HashMap()}" />
+<var
+value="#{#otherTransactionMap.put('order-id',#row.getColumnValue('order-id'))}"
+/>
+<var
+value="#{#otherTransactionMap.put('posted-date',#row.getColumnValue('posted-date'))}"
+/>
+<if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue('transaction-type'))}"
+>
+<var
+value="#{#orderItemMap.put('transaction-type',#row.getColumnValue('transaction-type'))}"/>
+</if>
+<var value="#{#otherTransactionMap.put(#description,#value)}" />
+<var
+value="#{#otherTransactionOrderIdToValueMap.put(#otherOrderId,#otherTransactionMap)}"
+/>
+<else>
+<var name="otherMap"
+value="#{#otherTransactionOrderIdToValueMap.get(#otherOrderId)}" />
+<if condition="#{#otherMap.get(#description) == null}" >
+<var value="#{#otherMap.put(#description,#value)}" />
+<else>
+<var name="oldValue" value="#{#otherMap.get(#description)}" />
+<var name="finalValue" value="#{new java.math.BigDecimal(#value).add(new
+java.math.BigDecimal(#oldValue)) }" />
+<var value="#{#otherMap.put(#description,#finalValue.toString())}" />
+</else>
+</if>
+<var
+value="#{#otherTransactionOrderIdToValueMap.put(#otherOrderId,#otherMap)}"
+/>
+</else>
+</if>
+</if>
+</else>
+</if>
+</while>
+
+<startTag name="InvoiceItems" />
+<var name="orderItems"
+value="#{#orderIdOrderItemMap.entrySet().iterator()}" />
+<while condition="#{#orderItems.hasNext()}">
+<var name="orderItem" value="#{#orderItems.next()}" />
+<var name="orderKey" value="#{#orderItem.getKey()}" />
+<var name="orderFees"
+value="#{#orderItem.getValue().entrySet().iterator()}" />
+<var name="orderItemValue" value="#{new java.math.BigDecimal(0)}" />
+<var name="totalShippingFee" value="#{new java.math.BigDecimal(0)}" />
+<var name="totalFixedFee" value="#{new java.math.BigDecimal(0)}" />
+<var name="totalShippingCharge" value="#{new java.math.BigDecimal(0)}" />
+<var name="commission" value="#{new java.math.BigDecimal(0)}" />
+<var name="totalTax" value="#{new java.math.BigDecimal(0)}" />
+<var name="discount" value="#{new java.math.BigDecimal(0)}" />
+<var name="postedDate" value="" />
+<var name="orderItemCode" value="" />
+<var name="transactionType" value="" />
+<var name="quantity" value="#{0}" />
+<log level="info" value="Inovice_Code #{#orderItem.toString()}" />
+<while condition="#{#orderFees.hasNext()}">
+<var name="orderFee" value="#{#orderFees.next()}" />
+
+<var name="amountDescription" value="#{#orderFee.getKey()}" />
+<var name="amountValue" value="#{#orderFee.getValue()}" />
+
+<if condition="#{#amountDescription.equals('Principal') or
+#amountDescription.equals('Product Tax') }" >
+<var name="orderItemValue" value="#{#orderItemValue.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('Shipping') or
+#amountDescription.equals('Shipping tax') }">
+<var name="totalShippingCharge" value="#{#totalShippingCharge.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('Commission') or
+#amountDescription.equals('Refund commission') or
+#amountDescription.equals('Shipping commission') or
+#amountDescription.equals('Order Cancellation Charge')}" >
+<var name="commission" value="#{#commission.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('Fixed closing fee')}">
+<var name="totalFixedFee" value="#{new java.math.BigDecimal(#amountValue)}"
+/>
+</if>
+<if condition="#{#amountDescription.equals('FBA Delivery Services Fee') or
+#amountDescription.equals('FBA Pick &amp; Pack Fee') or
+#amountDescription.equals('FBA Weight Handling Fee') or
+#amountDescription.equals('Amazon Easy Ship Charges') or
+#amountDescription.equals('Shipping Chargeback')}">
+<var name="totalShippingFee" value="#{#totalShippingFee.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('Delivery Service Fee Tax') or
+#amountDescription.equals('FBA per unit fulfillment fee Tax') or
+#amountDescription.equals('FBA weight based fee Tax') or
+#amountDescription.equals('Commission Tax') or
+#amountDescription.equals('Refund commission Tax') or
+#amountDescription.equals('Fixed closing fee Tax') or
+#amountDescription.equals('Amazon Easy Ship Charges Tax') or
+#amountDescription.equals('Shipping commission Tax') or
+#amountDescription.equals('Shipping chargeback Tax')}">
+<var name="totalTax" value="#{#totalTax.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('Shipping discount') or
+#amountDescription.equals('Promo rebates') or
+#amountDescription.equals('Shipping tax discount')}">
+<var name="discount" value="#{#discount.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('posted-date')}">
+<var name="postedDate" value="#{#amountValue}" />
+</if>
+<if condition="#{#amountDescription.equals('transaction-type')}">
+<var name="transactionType" value="#{#amountValue}" />
+</if>
+<if condition="#{#amountDescription.equals('quantity-purchased')}">
+<var name="quantity" value="#{#amountValue}" />
+</if>
+<if condition="#{#amountDescription.equals('order-id')}">
+<var name="orderId" value="#{#amountValue}" />
+</if>
+<if condition="#{#amountDescription.equals('order-item-code')}">
+<var name="orderItemCode" value="#{#amountValue}" />
+</if>
+</while>
+<var name="settledValue"
+value="#{#orderItemValue.add(#totalShippingFee.add(#commission.add(#totalFixedFee.add(#totalShippingCharge.add(#totalTax.add(#discount))))))
+  }" />
+<startTag name="InvoiceItem" />
+<valueTag name="ReconciliationIdentifier" value="#{#orderItemCode}" />
+<valueTag name="ChannelSaleOrderCode" value="#{#orderId}" />
+<valueTag name="OrderDate"
+value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).stringToDate(#postedDate,'dd.MM.yyyy'),'dd/MM/yyyy')}"/>
+<valueTag name="InvoiceItemOrderStatus" value="#{#transactionType}" />
+<valueTag name="OrderItemValue" value="#{#orderItemValue}" />
+<valueTag name="TotalDiscounts" value="#{#discount}" />
+<valueTag name="TotalRewards" value="#{new java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalOtherIncentive" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalSellerEarning" value="#{#settledValue}" />
+<valueTag name="SettledValue" value="#{#settledValue}" />
+<valueTag name="IsProcessed" value="#{false}" />
+<valueTag name="Quantity" value="#{#quantity}" />
+<valueTag name="TotalCommission" value="#{#commission}" />
+<valueTag name="TotalFixedFee" value="#{#totalFixedFee}" />
+<valueTag name="TotalShippingFee" value="#{#totalShippingFee}" />
+<valueTag name="TotalShippingCharge" value="#{#totalShippingCharge}" />
+<valueTag name="TotalReverseShippingFee" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalAdditionalFee" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalTax" value="#{#totalTax}" />
+<valueTag name="TotalChannelRecovery"
+value="#{#orderItemValue.add(#totalShippingCharge).subtract(#settledValue)}"
+/>
+<valueTag name="AdditionalFeeDescription" value="" />
+<endTag name="InvoiceItem" />
+</while>
+
+<var name="saleOrderService"
+value="#{#applicationContext.getBean('saleOrderService')}"/>
+
+<var name="orderIds"
+value="#{#otherTransactionOrderIdToValueMap.entrySet().iterator()}" />
+<while condition="#{#orderIds.hasNext()}">
+<var name="orderIdMap" value="#{#orderIds.next()}" />
+<log level="info" value="orderIdMap : #{#orderIdMap.toString()}"/>
+<var name="orderId" value="#{#orderIdMap.getKey()}" />
+<var name="orders" value="#{#orderIdMap.getValue().entrySet().iterator()}"
+/>
+<log level="info" value="orderId2 : #{#orderId}"/>
+<var name="saleOrdersList"
+value="#{#saleOrderService.getSaleOrderByDisplayOrderCode(#orderId, #
+channel.id)}"/>
+<var name="channelSaleOrderItemsMap" value="#{new java.util.HashMap()}" />
+<foreach collection="#{#saleOrdersList}" var="saleOrder">
+<foreach collection="#{#saleOrder.saleOrderItems}" var="saleOrderItem">
+<if
+condition="#{#channelSaleOrderItemsMap.get(#saleOrderItem.channelSaleOrderItemCode)
+== null}">
+<var
+value="#{#channelSaleOrderItemsMap.put(#saleOrderItem.channelSaleOrderItemCode,#saleOrderItem.sellingPrice)}"
+/>
+<else>
+<var
+value="#{#channelSaleOrderItemsMap.put(#saleOrderItem.channelSaleOrderItemCode,#channelSaleOrderItemsMap.get(#saleOrderItem.channelSaleOrderItemCode).add(#saleOrderItem.sellingPrice))}"
+/>
+</else>
+</if>
+</foreach>
+</foreach>
+<if condition="#{#channelSaleOrderItemsMap.size() &gt; 0}">
+<var name="totalItems" value="#{#channelSaleOrderItemsMap.size()}" />
+<var name="totalItems" value="#{#totalItems.toString()}" />
+<log level="info" value="totalItems - #{#totalItems}"/>
+<var name="commission" value="#{new java.math.BigDecimal(0)}" />
+<var name="totalTax" value="#{new java.math.BigDecimal(0)}" />
+<var name="postedDate" value="" />
+<var name="orderId" value="" />
+<var name="orderType" value="" />
+<log level="info" value="Inovice_Code2 #{#orderIdMap.toString()}" />
+<while condition="#{#orders.hasNext()}">
+<var name="order" value="#{#orders.next()}" />
+<var name="amountDescription" value="#{#order.getKey()}" />
+<var name="amountValue" value="#{#order.getValue()}" />
+<if condition="#{ #amountDescription.equals('Amazon Easy Ship Charges') or
+#amountDescription.equals('Order Cancellation Charge') or
+#amountDescription.equals('RemovalComplete') }">
+<var name="commission" value="#{#commission.add(new
+java.math.BigDecimal(#amountValue))}" />
+<var name="orderType" value="#{#amountDescription}" />
+</if>
+<if condition="#{#amountDescription.equals('Amazon Easy Ship Charges Tax')
+or #amountDescription.equals('RemovalCompleteTax') }">
+<var name="totalTax" value="#{#totalTax.add(new
+java.math.BigDecimal(#amountValue))}" />
+</if>
+<if condition="#{#amountDescription.equals('posted-date')}">
+<var name="postedDate" value="#{#amountValue}" />
+</if>
+<if condition="#{#amountDescription.equals('order-id')}">
+<var name="orderId" value="#{#amountValue}" />
+</if>
+</while>
+<var name="sellerEarning" value="#{#commission.add(#totalTax)}" />
+<log level="info" value="sellerEarning - #{#sellerEarning}"/>
+<log level="info" value="totalItems2 - #{#totalItems}"/>
+<var name="earningPerItem" value="#{#sellerEarning.divide(new
+java.math.BigDecimal(#totalItems), 2, 2)}" />
+<log level="info" value="earningPerItem - #{#earningPerItem}"/>
+<var name="orderType" value="#{#orderType.replaceAll('\\s+','')}" />
+<log level="info" value="orderType : #{#orderType}" />
+
+<foreach collection="#{#channelSaleOrderItemsMap.entrySet()}"
+var="saleOrderItemSet" >
+<startTag name="InvoiceItem" />
+<valueTag name="ReconciliationIdentifier"
+value="#{#saleOrderItemSet.getKey()}" />
+<valueTag name="ChannelSaleOrderCode" value="#{#orderId}" />
+<valueTag name="OrderDate"
+value="#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).stringToDate(#postedDate,'dd.MM.yyyy'),'dd/MM/yyyy')}"/>
+<valueTag name="InvoiceItemOrderStatus" value="#{#orderType}" />
+<valueTag name="OrderItemValue" value="#{#saleOrderItemSet.getValue()}" />
+<valueTag name="TotalDiscounts" value="#{new java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalRewards" value="#{new java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalOtherIncentive" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalSellerEarning" value="#{#earningPerItem}" />
+<valueTag name="SettledValue" value="#{#earningPerItem}" />
+<valueTag name="IsProcessed" value="#{false}" />
+<valueTag name="Quantity" value="#{1}" />
+<valueTag name="TotalCommission" value="#{#commission}" />
+<valueTag name="TotalFixedFee" value="#{new java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalShippingFee" value="#{new java.math.BigDecimal(0.00)}"
+/>
+<valueTag name="TotalShippingCharge" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalReverseShippingFee" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalAdditionalFee" value="#{new
+java.math.BigDecimal(0.00)}" />
+<valueTag name="TotalTax" value="#{#totalTax}" />
+<valueTag name="TotalChannelRecovery" value="#{new
+java.math.BigDecimal(0.00).subtract(#earningPerItem)}" />
+<valueTag name="AdditionalFeeDescription" value="" />
+<endTag name="InvoiceItem" />
+</foreach>
+<else>
+<log level="info" value="skipping invoice item for orderid - #{#orderId}" />
+</else>
+</if>
+</while>
+<endTag name="InvoiceItems" />
+<valueTag name="DownloadUrl" value="#{#path}"/>
+<endTag name="ChannelReconciliationInvoice" />
+<endTag name="CreateChannelReconciliationInvoiceRequest" />
+</scraper>
+
+--001a1134e7e618b4f905479cdf7d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>&lt;scraper name=3D&quot;amazonIndiaReconciliationInv=
+oiceDetailScript&quot; xmlns:xsi=3D&quot;<a href=3D"http://www.w3.org/2001/=
+XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>&quot; xsi=
+:noNamespaceSchemaLocation=3D&quot;<a href=3D"http://www.unicommerce.com/sc=
+hema/scraper-1.0.xsd">http://www.unicommerce.com/schema/scraper-1.0.xsd</a>=
+&quot;&gt;</div><div><br></div><div><span class=3D"gmail-Apple-tab-span" st=
+yle=3D"white-space:pre">	</span>&lt;var name=3D&quot;amazonURL&quot; value=
+=3D&quot;<a href=3D"https://mws.amazonservices.in">https://mws.amazonservic=
+es.in</a>&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">	</span>&lt;var name=3D&quot;amazonBaseUrl&quot; value=
+=3D&quot;<a href=3D"http://mws.amazonservices.in">mws.amazonservices.in</a>=
+&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">	</span>&lt;var name=3D&quot;reportId&quot; value=3D&quot;#{#cha=
+nnelReconciliationElement.text()}&quot; /&gt;</div><div><span class=3D"gmai=
+l-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;startTag name=3D&qu=
+ot;CreateChannelReconciliationInvoiceRequest&quot;&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;attribute=
+ name=3D&quot;xmlns&quot; value=3D&quot;<a href=3D"http://uniware.unicommer=
+ce.com/services/">http://uniware.unicommerce.com/services/</a>&quot; /&gt;<=
+/div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	<=
+/span>&lt;/startTag&gt;</div><div><br></div><div><span class=3D"gmail-Apple=
+-tab-span" style=3D"white-space:pre">	</span>&lt;var name=3D&quot;requestPa=
+rams&quot; value=3D&quot;#{new java.util.LinkedHashMap()}&quot; /&gt;</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span=
+>&lt;var value=3D&quot;#{#requestParams.put(&#39;AWSAccessKeyId&#39;, #awsA=
+ccessKeyId)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">	</span>&lt;var value=3D&quot;#{#requestParams.put(&=
+#39;Action&#39;, &#39;GetReport&#39;)}&quot; /&gt;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;var value=3D&q=
+uot;#{#requestParams.put(&#39;MWSAuthToken&#39;, #marketplaceId)}&quot; /&g=
+t;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre"=
+>	</span>&lt;var value=3D&quot;#{#requestParams.put(&#39;SignatureVersion&#=
+39;, &#39;2&#39;)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-spa=
+n" style=3D"white-space:pre">	</span>&lt;var value=3D&quot;#{#requestParams=
+.put(&#39;SignatureMethod&#39;, &#39;HmacSHA256&#39;)}&quot; /&gt;</div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&l=
+t;var value=3D&quot;#{#requestParams.put(&#39;Merchant&#39;, #sellerId)}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">	</span>&lt;var value=3D&quot;#{#requestParams.put(&#39;Version&#39=
+;, &#39;2009-01-01&#39;)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-=
+tab-span" style=3D"white-space:pre">	</span>&lt;var value=3D&quot;#{#reques=
+tParams.put(&#39;ReportId&#39;, #reportId)}&quot; /&gt;</div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;var value=
+=3D&quot;#{#requestParams.put(&#39;Timestamp&#39;, T(com.unifier.core.utils=
+.AWSUtils).getFormattedTimestamp(T(com.unifier.core.utils.DateUtils).getCur=
+rentTime()))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" st=
+yle=3D"white-space:pre">	</span>&lt;var value=3D&quot;#{#requestParams.put(=
+&#39;Signature&#39;, T(com.unifier.core.utils.AWSUtils).addSignatureToReque=
+st(#amazonBaseUrl, &#39;/&#39;, #secretKey, #requestParams))}&quot; /&gt;</=
+div><div><br></div><div><span class=3D"gmail-Apple-tab-span" style=3D"white=
+-space:pre">	</span>&lt;var name=3D&quot;path&quot; value=3D&quot;/reconcil=
+iationInvoices/#{T(com.unifier.core.utils.EncryptionUtils).md5Encode(T(com.=
+unifier.core.utils.DateUtils).getCurrentTime().getTime()+ &#39;_&#39; + T(c=
+om.uniware.core.utils.UserContext).current().tenant.code + &#39;_&#39; + &#=
+39;_amazonReconciliation&#39;)}.csv&quot; /&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;var name=3D&quot;=
+filePath&quot; value=3D&quot;#{T(com.unifier.core.cache.CacheManager).getIn=
+stance().getCache(&#39;environmentCache&#39;).exportDirectoryPath}#{#path}&=
+quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">	</span>&lt;log level=3D&quot;info&quot; value=3D&quot;filePath: =
+#{#filePath}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">	</span>&lt;http method=3D&quot;post&quot; url=3D&quo=
+t;#{T(com.unifier.core.transport.http.HttpSender).createURL(#amazonURL,#req=
+uestParams)}&quot; var=3D&quot;settlementReportResponse&quot; downloadToFil=
+e=3D&quot;#{#filePath}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-s=
+pan" style=3D"white-space:pre">		</span>&lt;header name=3D&quot;Content-Typ=
+e&quot; value=3D&quot;text/plain&quot; /&gt;</div><div><span class=3D"gmail=
+-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;header name=3D&quot=
+;User-Agent&quot; value=3D&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_1=
+0_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537=
+.36&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whi=
+te-space:pre">		</span>&lt;params map=3D&quot;#{#requestParams}&quot; /&gt;=
+</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	=
+</span>&lt;/http&gt;</div><div><br></div><div><span class=3D"gmail-Apple-ta=
+b-span" style=3D"white-space:pre">	</span>&lt;log level=3D&quot;info&quot; =
+value=3D&quot;#{#filePath}&quot;/&gt;</div><div><span class=3D"gmail-Apple-=
+tab-span" style=3D"white-space:pre">	</span>&lt;var name=3D&quot;rowIterato=
+r&quot; value=3D&quot;#{new com.unifier.core.fileparser.DelimitedFileParser=
+(#filePath, T(com.unifier.core.fileparser.DelimitedFileParser).TAB_DELIMITE=
+R).parse()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">	</span>&lt;var name=3D&quot;row&quot; value=3D&quot;=
+#{#rowIterator.next()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab=
+-span" style=3D"white-space:pre">	</span>&lt;var name=3D&quot;invoiceCode&q=
+uot; value=3D&quot;#{#row.getColumnValue(&#39;settlement-id&#39;)}&quot; /&=
+gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">	</span>&lt;startTag name=3D&quot;ChannelReconciliationInvoice&quot; /&gt=
+;</div><div><br></div><div><span class=3D"gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre">	</span>&lt;valueTag name=3D&quot;InvoiceCode&quot; value=3D=
+&quot;#{#row.getColumnValue(&#39;settlement-id&#39;)}&quot; /&gt;</div><div=
+><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt=
+;valueTag name=3D&quot;ChannelCode&quot; value=3D&quot;#{#channel.code}&quo=
+t; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spac=
+e:pre">	</span>&lt;valueTag name=3D&quot;SettlementDate&quot; value=3D&quot=
+;#{#row.getColumnValue(&#39;deposit-date&#39;)}&quot; /&gt;</div><div><span=
+ class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;value=
+Tag name=3D&quot;DepositDate&quot; value=3D&quot;#{T(com.unifier.core.utils=
+.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).stringToDate(#=
+row.getColumnValue(&#39;deposit-date&#39;),&#39;dd.MM.yyyy&#39;),&#39;dd/MM=
+/yyyy&#39;)}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">	</span>&lt;valueTag name=3D&quot;TotalSettlementValu=
+e&quot; value=3D&quot;#{#row.getColumnValue(&#39;total-amount&#39;)}&quot; =
+/&gt;</div><div><br></div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">	</span>&lt;var name=3D&quot;orderIdOrderItemMap&quot;=
+ value=3D&quot;#{new java.util.HashMap()}&quot; /&gt;</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;var name=3D=
+&quot;otherTransactionOrderIdToValueMap&quot; value=3D&quot;#{new java.util=
+.HashMap()}&quot; /&gt;</div><div><br></div><div><span class=3D"gmail-Apple=
+-tab-span" style=3D"white-space:pre">	</span>&lt;log level=3D&quot;info&quo=
+t; value=3D&quot;SettlementId,DepositDate,TotalAmount : #{#row.getColumnVal=
+ue(&#39;settlement-id&#39;) + &#39;-&#39; + #row.getColumnValue(&#39;deposi=
+t-date&#39;) + &#39;-&#39; + #row.getColumnValue(&#39;total-amount&#39;)}&q=
+uot; /&gt;</div><div><br></div><div><span class=3D"gmail-Apple-tab-span" st=
+yle=3D"white-space:pre">	</span>&lt;while condition=3D&quot;#{#rowIterator.=
+hasNext()}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">		</span>&lt;var name=3D&quot;row&quot; value=3D&quot;=
+#{#rowIterator.next()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab=
+-span" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;description&=
+quot; value=3D&quot;#{#row.getColumnValue(&#39;amount-description&#39;)}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">		</span>&lt;var name=3D&quot;value&quot; value=3D&quot;#{#row.getC=
+olumnValue(&#39;amount&#39;)}&quot; /&gt;</div><div><span class=3D"gmail-Ap=
+ple-tab-span" style=3D"white-space:pre">		</span>&lt;if condition=3D&quot;#=
+{T(com.unifier.core.utils.StringUtils).isNotBlank(#row.getColumnValue(&#39;=
+order-item-code&#39;))}&quot; &gt;</div><div><br></div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if condition=
+=3D&quot;#{#row.getColumnValue(&#39;transaction-type&#39;).equals(&#39;Refu=
+nd&#39;)}&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">				</span>&lt;var name=3D&quot;newOrderId&quot; value=
+=3D&quot;#{#row.getColumnValue(&#39;order-item-code&#39;) + &#39;-1&#39; }&=
+quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">				</span>&lt;else&gt;</div><div><span class=3D"gmail-Apple-tab-=
+span" style=3D"white-space:pre">					</span>&lt;var name=3D&quot;newOrderId=
+&quot; value=3D&quot;#{#row.getColumnValue(&#39;order-item-code&#39;) }&quo=
+t; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spac=
+e:pre">				</span>&lt;/else&gt;</div><div><span class=3D"gmail-Apple-tab-sp=
+an" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div><br></div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>=
+&lt;var name=3D&quot;orderMap&quot; value=3D&quot;#{#orderIdOrderItemMap.ge=
+t(#newOrderId)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">			</span>&lt;if condition=3D&quot;#{#orderMap=3D=
+=3D null}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D=
+"white-space:pre">				</span>&lt;var name=3D&quot;orderItemMap&quot; value=
+=3D&quot;#{new java.util.HashMap()}&quot; /&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var value=3D&q=
+uot;#{#orderItemMap.put(#description,#value)}&quot;/&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var v=
+alue=3D&quot;#{#orderItemMap.put(&#39;order-id&#39;,#row.getColumnValue(&#3=
+9;order-id&#39;))}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span=
+" style=3D"white-space:pre">				</span>&lt;var value=3D&quot;#{#orderItemMa=
+p.put(&#39;order-item-code&#39;,#row.getColumnValue(&#39;order-item-code&#3=
+9;))}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre">				</span>&lt;if condition=3D&quot;#{T(com.unifier.core.uti=
+ls.StringUtils).isNotBlank(#row.getColumnValue(&#39;transaction-type&#39;))=
+}&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">					</span>&lt;var value=3D&quot;#{#orderItemMap.put(&#39;trans=
+action-type&#39;,#row.getColumnValue(&#39;transaction-type&#39;))}&quot;/&g=
+t;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre"=
+>				</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">				</span>&lt;if condition=3D&quot;#{T(com.unifier.c=
+ore.utils.StringUtils).isNotBlank(#row.getColumnValue(&#39;posted-date&#39;=
+))}&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whit=
+e-space:pre">					</span>&lt;var value=3D&quot;#{#orderItemMap.put(&#39;pos=
+ted-date&#39;,#row.getColumnValue(&#39;posted-date&#39;))}&quot;/&gt;</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</s=
+pan>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whi=
+te-space:pre">				</span>&lt;if condition=3D&quot;#{T(com.unifier.core.util=
+s.StringUtils).isNotBlank(#row.getColumnValue(&#39;quantity-purchased&#39;)=
+)}&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white=
+-space:pre">					</span>&lt;var value=3D&quot;#{#orderItemMap.put(&#39;quan=
+tity-purchased&#39;,#row.getColumnValue(&#39;quantity-purchased&#39;))}&quo=
+t;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space=
+:pre">				</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span"=
+ style=3D"white-space:pre">				</span>&lt;var value=3D&quot;#{#orderIdOrder=
+ItemMap.put(#newOrderId,#orderItemMap)}&quot;/&gt;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;else&gt;</d=
+iv><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				=
+	</span>&lt;var value=3D&quot;#{#orderMap.put(#description,#value)}&quot; /=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">					</span>&lt;var value=3D&quot;#{#orderIdOrderItemMap.put(#newOrderId=
+,#orderMap)}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">				</span>&lt;/else&gt;</div><div><span class=3D"gma=
+il-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>=
+&lt;else&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">				</span>&lt;if condition=3D&quot;#{T(com.unifier.core.utils.S=
+tringUtils).isNotBlank(#row.getColumnValue(&#39;order-id&#39;))}&quot; &gt;=
+</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	=
+				</span>&lt;var name=3D&quot;otherOrderId&quot; value=3D&quot;#{#row.get=
+ColumnValue(&#39;order-id&#39;)}&quot; /&gt;</div><div><span class=3D"gmail=
+-Apple-tab-span" style=3D"white-space:pre">					</span>&lt;if condition=3D&=
+quot;#{#otherTransactionOrderIdToValueMap.get(#otherOrderId) =3D=3D null}&q=
+uot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spac=
+e:pre">						</span>&lt;var name=3D&quot;otherTransactionMap&quot; value=3D=
+&quot;#{new java.util.HashMap()}&quot; /&gt;</div><div><span class=3D"gmail=
+-Apple-tab-span" style=3D"white-space:pre">						</span>&lt;var value=3D&qu=
+ot;#{#otherTransactionMap.put(&#39;order-id&#39;,#row.getColumnValue(&#39;o=
+rder-id&#39;))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">						</span>&lt;var value=3D&quot;#{#otherTransa=
+ctionMap.put(&#39;posted-date&#39;,#row.getColumnValue(&#39;posted-date&#39=
+;))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre">						</span>&lt;if condition=3D&quot;#{T(com.unifier.core.u=
+tils.StringUtils).isNotBlank(#row.getColumnValue(&#39;transaction-type&#39;=
+))}&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whit=
+e-space:pre">							</span>&lt;var value=3D&quot;#{#orderItemMap.put(&#39;t=
+ransaction-type&#39;,#row.getColumnValue(&#39;transaction-type&#39;))}&quot=
+;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:=
+pre">						</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span=
+" style=3D"white-space:pre">						</span>&lt;var value=3D&quot;#{#otherTran=
+sactionMap.put(#description,#value)}&quot; /&gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">						</span>&lt;var value=
+=3D&quot;#{#otherTransactionOrderIdToValueMap.put(#otherOrderId,#otherTrans=
+actionMap)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">						</span>&lt;else&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">							</span>&lt;var name=3D=
+&quot;otherMap&quot; value=3D&quot;#{#otherTransactionOrderIdToValueMap.get=
+(#otherOrderId)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span"=
+ style=3D"white-space:pre">							</span>&lt;if condition=3D&quot;#{#otherM=
+ap.get(#description) =3D=3D null}&quot; &gt;</div><div><span class=3D"gmail=
+-Apple-tab-span" style=3D"white-space:pre">								</span>&lt;var value=3D&=
+quot;#{#otherMap.put(#description,#value)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">								</span>&lt;els=
+e&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">									</span>&lt;var name=3D&quot;oldValue&quot; value=3D&quot;#{#ot=
+herMap.get(#description)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-=
+tab-span" style=3D"white-space:pre">									</span>&lt;var name=3D&quot;fi=
+nalValue&quot; value=3D&quot;#{new java.math.BigDecimal(#value).add(new jav=
+a.math.BigDecimal(#oldValue)) }&quot; /&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">									</span>&lt;var value=3D&=
+quot;#{#otherMap.put(#description,#finalValue.toString())}&quot; /&gt;</div=
+><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">						=
+		</span>&lt;/else&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">							</span>&lt;/if&gt;</div><div><span class=3D"gma=
+il-Apple-tab-span" style=3D"white-space:pre">							</span>&lt;var value=3D=
+&quot;#{#otherTransactionOrderIdToValueMap.put(#otherOrderId,#otherMap)}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">						</span>&lt;/else&gt;</div><div><span class=3D"gmail-Apple-tab=
+-span" style=3D"white-space:pre">					</span>&lt;/if&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;/if&g=
+t;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre"=
+>			</span>&lt;/else&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">		</span>&lt;/if&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">	</span>&lt;/while&gt;</div><div>=
+<br></div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">	</span>&lt;startTag name=3D&quot;InvoiceItems&quot; /&gt;</div><div><sp=
+an class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;var=
+ name=3D&quot;orderItems&quot; value=3D&quot;#{#orderIdOrderItemMap.entrySe=
+t().iterator()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">	</span>&lt;while condition=3D&quot;#{#orderItems=
+.hasNext()}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">		</span>&lt;var name=3D&quot;orderItem&quot; value=3D=
+&quot;#{#orderItems.next()}&quot; /&gt;</div><div><span class=3D"gmail-Appl=
+e-tab-span" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;orderKe=
+y&quot; value=3D&quot;#{#orderItem.getKey()}&quot; /&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;var nam=
+e=3D&quot;orderFees&quot; value=3D&quot;#{#orderItem.getValue().entrySet().=
+iterator()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">		</span>&lt;var name=3D&quot;orderItemValue&quot; va=
+lue=3D&quot;#{new java.math.BigDecimal(0)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;var name=
+=3D&quot;totalShippingFee&quot; value=3D&quot;#{new java.math.BigDecimal(0)=
+}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white=
+-space:pre">		</span>&lt;var name=3D&quot;totalFixedFee&quot; value=3D&quot=
+;#{new java.math.BigDecimal(0)}&quot; /&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;tot=
+alShippingCharge&quot; value=3D&quot;#{new java.math.BigDecimal(0)}&quot; /=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">		</span>&lt;var name=3D&quot;commission&quot; value=3D&quot;#{new java.=
+math.BigDecimal(0)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-sp=
+an" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;totalTax&quot; =
+value=3D&quot;#{new java.math.BigDecimal(0)}&quot; /&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;var nam=
+e=3D&quot;discount&quot; value=3D&quot;#{new java.math.BigDecimal(0)}&quot;=
+ /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:=
+pre">		</span>&lt;var name=3D&quot;postedDate&quot; value=3D&quot;&quot; /&=
+gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">		</span>&lt;var name=3D&quot;orderItemCode&quot; value=3D&quot;&quot; /&=
+gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">		</span>&lt;var name=3D&quot;transactionType&quot; value=3D&quot;&quot; =
+/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">		</span>&lt;var name=3D&quot;quantity&quot; value=3D&quot;#{0}&quot; /=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">		</span>&lt;log level=3D&quot;info&quot; value=3D&quot;Inovice_Code #{#=
+orderItem.toString()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-=
+span" style=3D"white-space:pre">		</span>&lt;while condition=3D&quot;#{#ord=
+erFees.hasNext()}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">			</span>&lt;var name=3D&quot;orderFee&quot; val=
+ue=3D&quot;#{#orderFees.next()}&quot; /&gt;</div><div><br></div><div><span =
+class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;var =
+name=3D&quot;amountDescription&quot; value=3D&quot;#{#orderFee.getKey()}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">			</span>&lt;var name=3D&quot;amountValue&quot; value=3D&quot;#{#o=
+rderFee.getValue()}&quot; /&gt;</div><div><br></div><div><span class=3D"gma=
+il-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if condition=3D&=
+quot;#{#amountDescription.equals(&#39;Principal&#39;) or #amountDescription=
+.equals(&#39;Product Tax&#39;) }&quot; &gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var name=3D&quot;o=
+rderItemValue&quot; value=3D&quot;#{#orderItemValue.add(new java.math.BigDe=
+cimal(#amountValue))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-=
+span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if condit=
+ion=3D&quot;#{#amountDescription.equals(&#39;Shipping&#39;) or #amountDescr=
+iption.equals(&#39;Shipping tax&#39;) }&quot;&gt;</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var name=3D&=
+quot;totalShippingCharge&quot; value=3D&quot;#{#totalShippingCharge.add(new=
+ java.math.BigDecimal(#amountValue))}&quot; /&gt;</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</sp=
+an>&lt;if condition=3D&quot;#{#amountDescription.equals(&#39;Commission&#39=
+;) or #amountDescription.equals(&#39;Refund commission&#39;) or #amountDesc=
+ription.equals(&#39;Shipping commission&#39;) or #amountDescription.equals(=
+&#39;Order Cancellation Charge&#39;)}&quot; &gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var name=3D&q=
+uot;commission&quot; value=3D&quot;#{#commission.add(new java.math.BigDecim=
+al(#amountValue))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-spa=
+n" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if condition=
+=3D&quot;#{#amountDescription.equals(&#39;Fixed closing fee&#39;)}&quot;&gt=
+;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">=
+				</span>&lt;var name=3D&quot;totalFixedFee&quot; value=3D&quot;#{new jav=
+a.math.BigDecimal(#amountValue)}&quot; /&gt;</div><div><span class=3D"gmail=
+-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&l=
+t;if condition=3D&quot;#{#amountDescription.equals(&#39;FBA Delivery Servic=
+es Fee&#39;) or #amountDescription.equals(&#39;FBA Pick &amp;amp; Pack Fee&=
+#39;) or #amountDescription.equals(&#39;FBA Weight Handling Fee&#39;) or #a=
+mountDescription.equals(&#39;Amazon Easy Ship Charges&#39;) or #amountDescr=
+iption.equals(&#39;Shipping Chargeback&#39;)}&quot;&gt;</div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var na=
+me=3D&quot;totalShippingFee&quot; value=3D&quot;#{#totalShippingFee.add(new=
+ java.math.BigDecimal(#amountValue))}&quot; /&gt;</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</sp=
+an>&lt;if condition=3D&quot;#{#amountDescription.equals(&#39;Delivery Servi=
+ce Fee Tax&#39;) or #amountDescription.equals(&#39;FBA per unit fulfillment=
+ fee Tax&#39;) or #amountDescription.equals(&#39;FBA weight based fee Tax&#=
+39;) or #amountDescription.equals(&#39;Commission Tax&#39;) or #amountDescr=
+iption.equals(&#39;Refund commission Tax&#39;) or #amountDescription.equals=
+(&#39;Fixed closing fee Tax&#39;) or #amountDescription.equals(&#39;Amazon =
+Easy Ship Charges Tax&#39;) or #amountDescription.equals(&#39;Shipping comm=
+ission Tax&#39;) or #amountDescription.equals(&#39;Shipping chargeback Tax&=
+#39;)}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre">				</span>&lt;var name=3D&quot;totalTax&quot; value=3D&quot=
+;#{#totalTax.add(new java.math.BigDecimal(#amountValue))}&quot; /&gt;</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</sp=
+an>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whit=
+e-space:pre">			</span>&lt;if condition=3D&quot;#{#amountDescription.equals=
+(&#39;Shipping discount&#39;) or #amountDescription.equals(&#39;Promo rebat=
+es&#39;) or #amountDescription.equals(&#39;Shipping tax discount&#39;)}&quo=
+t;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:=
+pre">				</span>&lt;var name=3D&quot;discount&quot; value=3D&quot;#{#discou=
+nt.add(new java.math.BigDecimal(#amountValue))}&quot; /&gt;</div><div><span=
+ class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">			</span>&lt;if condition=3D&quot;#{#amountDescription.equals(&#39;post=
+ed-date&#39;)}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">				</span>&lt;var name=3D&quot;postedDate&quot; val=
+ue=3D&quot;#{#amountValue}&quot; /&gt;</div><div><span class=3D"gmail-Apple=
+-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div><span =
+class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if c=
+ondition=3D&quot;#{#amountDescription.equals(&#39;transaction-type&#39;)}&q=
+uot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spac=
+e:pre">				</span>&lt;var name=3D&quot;transactionType&quot; value=3D&quot;=
+#{#amountValue}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;if condition=3D=
+&quot;#{#amountDescription.equals(&#39;quantity-purchased&#39;)}&quot;&gt;<=
+/div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		=
+		</span>&lt;var name=3D&quot;quantity&quot; value=3D&quot;#{#amountValue}&=
+quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">			</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-sp=
+an" style=3D"white-space:pre">			</span>&lt;if condition=3D&quot;#{#amountD=
+escription.equals(&#39;order-id&#39;)}&quot;&gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;var name=3D&q=
+uot;orderId&quot; value=3D&quot;#{#amountValue}&quot; /&gt;</div><div><span=
+ class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">			</span>&lt;if condition=3D&quot;#{#amountDescription.equals(&#39;orde=
+r-item-code&#39;)}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span"=
+ style=3D"white-space:pre">				</span>&lt;var name=3D&quot;orderItemCode&qu=
+ot; value=3D&quot;#{#amountValue}&quot; /&gt;</div><div><span class=3D"gmai=
+l-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;/if&gt;</div><div=
+><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&l=
+t;/while&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">		</span>&lt;var name=3D&quot;settledValue&quot; value=3D&quot;#=
+{#orderItemValue.add(#totalShippingFee.add(#commission.add(#totalFixedFee.a=
+dd(#totalShippingCharge.add(#totalTax.add(#discount)))))) =C2=A0 }&quot; /&=
+gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">		</span>&lt;startTag name=3D&quot;InvoiceItem&quot; /&gt;</div><div><spa=
+n class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;val=
+ueTag name=3D&quot;ReconciliationIdentifier&quot; value=3D&quot;#{#orderIte=
+mCode}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"=
+white-space:pre">		</span>&lt;valueTag name=3D&quot;ChannelSaleOrderCode&qu=
+ot; value=3D&quot;#{#orderId}&quot; /&gt;</div><div><span class=3D"gmail-Ap=
+ple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;=
+OrderDate&quot; value=3D&quot;#{T(com.unifier.core.utils.DateUtils).dateToS=
+tring(T(com.unifier.core.utils.DateUtils).stringToDate(#postedDate,&#39;dd.=
+MM.yyyy&#39;),&#39;dd/MM/yyyy&#39;)}&quot;/&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D=
+&quot;InvoiceItemOrderStatus&quot; value=3D&quot;#{#transactionType}&quot; =
+/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">		</span>&lt;valueTag name=3D&quot;OrderItemValue&quot; value=3D&quot;#=
+{#orderItemValue}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span=
+" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;TotalDiscoun=
+ts&quot; value=3D&quot;#{#discount}&quot; /&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D=
+&quot;TotalRewards&quot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">		</span>&lt;valueTag name=3D&quot;TotalOtherIncentive&quot; value=
+=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag =
+name=3D&quot;TotalSellerEarning&quot; value=3D&quot;#{#settledValue}&quot; =
+/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">		</span>&lt;valueTag name=3D&quot;SettledValue&quot; value=3D&quot;#{#=
+settledValue}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" st=
+yle=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;IsProcessed&quot=
+; value=3D&quot;#{false}&quot; /&gt;</div><div><span class=3D"gmail-Apple-t=
+ab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;Quant=
+ity&quot; value=3D&quot;#{#quantity}&quot; /&gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=
+=3D&quot;TotalCommission&quot; value=3D&quot;#{#commission}&quot; /&gt;</di=
+v><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</s=
+pan>&lt;valueTag name=3D&quot;TotalFixedFee&quot; value=3D&quot;#{#totalFix=
+edFee}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"=
+white-space:pre">		</span>&lt;valueTag name=3D&quot;TotalShippingFee&quot; =
+value=3D&quot;#{#totalShippingFee}&quot; /&gt;</div><div><span class=3D"gma=
+il-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&=
+quot;TotalShippingCharge&quot; value=3D&quot;#{#totalShippingCharge}&quot; =
+/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">		</span>&lt;valueTag name=3D&quot;TotalReverseShippingFee&quot; value=
+=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag =
+name=3D&quot;TotalAdditionalFee&quot; value=3D&quot;#{new java.math.BigDeci=
+mal(0.00)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;TotalTax&quot; valu=
+e=3D&quot;#{#totalTax}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab=
+-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;TotalCh=
+annelRecovery&quot; value=3D&quot;#{#orderItemValue.add(#totalShippingCharg=
+e).subtract(#settledValue)}&quot; /&gt;</div><div><span class=3D"gmail-Appl=
+e-tab-span" style=3D"white-space:pre">		</span>&lt;valueTag name=3D&quot;Ad=
+ditionalFeeDescription&quot; value=3D&quot;&quot; /&gt;</div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;endTag n=
+ame=3D&quot;InvoiceItem&quot; /&gt;</div><div><span class=3D"gmail-Apple-ta=
+b-span" style=3D"white-space:pre">	</span>&lt;/while&gt;</div><div><br></di=
+v><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</sp=
+an>&lt;var name=3D&quot;saleOrderService&quot; value=3D&quot;#{#application=
+Context.getBean(&#39;saleOrderService&#39;)}&quot;/&gt;</div><div><br></div=
+><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	</spa=
+n>&lt;var name=3D&quot;orderIds&quot; value=3D&quot;#{#otherTransactionOrde=
+rIdToValueMap.entrySet().iterator()}&quot; /&gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">	</span>&lt;while condition=
+=3D&quot;#{#orderIds.hasNext()}&quot;&gt;</div><div><span class=3D"gmail-Ap=
+ple-tab-span" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;order=
+IdMap&quot; value=3D&quot;#{#orderIds.next()}&quot; /&gt;</div><div><span c=
+lass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;log le=
+vel=3D&quot;info&quot; value=3D&quot;orderIdMap : #{#orderIdMap.toString()}=
+&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">		</span>&lt;var name=3D&quot;orderId&quot; value=3D&quot;#{#orde=
+rIdMap.getKey()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span"=
+ style=3D"white-space:pre">		</span>&lt;var name=3D&quot;orders&quot; value=
+=3D&quot;#{#orderIdMap.getValue().entrySet().iterator()}&quot; /&gt;</div><=
+div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span=
+>&lt;log level=3D&quot;info&quot; value=3D&quot;orderId2 : #{#orderId}&quot=
+;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:=
+pre">		</span>&lt;var name=3D&quot;saleOrdersList&quot; value=3D&quot;#{#sa=
+leOrderService.getSaleOrderByDisplayOrderCode(#orderId, #<a href=3D"http://=
+channel.id">channel.id</a>)}&quot;/&gt;</div><div><span class=3D"gmail-Appl=
+e-tab-span" style=3D"white-space:pre">		</span>&lt;var name=3D&quot;channel=
+SaleOrderItemsMap&quot; value=3D&quot;#{new java.util.HashMap()}&quot; /&gt=
+;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">=
+		</span>&lt;foreach collection=3D&quot;#{#saleOrdersList}&quot; var=3D&quo=
+t;saleOrder&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">			</span>&lt;foreach collection=3D&quot;#{#saleOrder.=
+saleOrderItems}&quot; var=3D&quot;saleOrderItem&quot;&gt;</div><div><span c=
+lass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;if c=
+ondition=3D&quot;#{#channelSaleOrderItemsMap.get(#saleOrderItem.channelSale=
+OrderItemCode) =3D=3D null}&quot;&gt;</div><div><span class=3D"gmail-Apple-=
+tab-span" style=3D"white-space:pre">					</span>&lt;var value=3D&quot;#{#ch=
+annelSaleOrderItemsMap.put(#saleOrderItem.channelSaleOrderItemCode,#saleOrd=
+erItem.sellingPrice)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-=
+span" style=3D"white-space:pre">					</span>&lt;else&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">						</span>&lt;var=
+ value=3D&quot;#{#channelSaleOrderItemsMap.put(#saleOrderItem.channelSaleOr=
+derItemCode,#channelSaleOrderItemsMap.get(#saleOrderItem.channelSaleOrderIt=
+emCode).add(#saleOrderItem.sellingPrice))}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">					</span>&lt;/else&=
+gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">				</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">			</span>&lt;/foreach&gt;</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;/foreach&gt;</=
+div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		<=
+/span>&lt;if condition=3D&quot;#{#channelSaleOrderItemsMap.size() &amp;gt; =
+0}&quot;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">			</span>&lt;var name=3D&quot;totalItems&quot; value=3D&quot;#{=
+#channelSaleOrderItemsMap.size()}&quot; /&gt;</div><div><span class=3D"gmai=
+l-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;var name=3D&quot;=
+totalItems&quot; value=3D&quot;#{#totalItems.toString()}&quot; /&gt;</div><=
+div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</spa=
+n>&lt;log level=3D&quot;info&quot; value=3D&quot;totalItems - #{#totalItems=
+}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">			</span>&lt;var name=3D&quot;commission&quot; value=3D&quot;#{=
+new java.math.BigDecimal(0)}&quot; /&gt;</div><div><span class=3D"gmail-App=
+le-tab-span" style=3D"white-space:pre">			</span>&lt;var name=3D&quot;total=
+Tax&quot; value=3D&quot;#{new java.math.BigDecimal(0)}&quot; /&gt;</div><di=
+v><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>=
+&lt;var name=3D&quot;postedDate&quot; value=3D&quot;&quot; /&gt;</div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&l=
+t;var name=3D&quot;orderId&quot; value=3D&quot;&quot; /&gt;</div><div><span=
+ class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;var=
+ name=3D&quot;orderType&quot; value=3D&quot;&quot; /&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;log le=
+vel=3D&quot;info&quot; value=3D&quot;Inovice_Code2 #{#orderIdMap.toString()=
+}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white=
+-space:pre">			</span>&lt;while condition=3D&quot;#{#orders.hasNext()}&quot=
+;&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:p=
+re">				</span>&lt;var name=3D&quot;order&quot; value=3D&quot;#{#orders.nex=
+t()}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"wh=
+ite-space:pre">				</span>&lt;var name=3D&quot;amountDescription&quot; valu=
+e=3D&quot;#{#order.getKey()}&quot; /&gt;</div><div><span class=3D"gmail-App=
+le-tab-span" style=3D"white-space:pre">				</span>&lt;var name=3D&quot;amou=
+ntValue&quot; value=3D&quot;#{#order.getValue()}&quot; /&gt;</div><div><spa=
+n class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;i=
+f condition=3D&quot;#{ #amountDescription.equals(&#39;Amazon Easy Ship Char=
+ges&#39;) or #amountDescription.equals(&#39;Order Cancellation Charge&#39;)=
+ or #amountDescription.equals(&#39;RemovalComplete&#39;) }&quot;&gt;</div><=
+div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">					</s=
+pan>&lt;var name=3D&quot;commission&quot; value=3D&quot;#{#commission.add(n=
+ew java.math.BigDecimal(#amountValue))}&quot; /&gt;</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">					</span>&lt;var nam=
+e=3D&quot;orderType&quot; value=3D&quot;#{#amountDescription}&quot; /&gt;</=
+div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			=
+	</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D=
+"white-space:pre">				</span>&lt;if condition=3D&quot;#{#amountDescription.=
+equals(&#39;Amazon Easy Ship Charges Tax&#39;) or #amountDescription.equals=
+(&#39;RemovalCompleteTax&#39;) }&quot;&gt;</div><div><span class=3D"gmail-A=
+pple-tab-span" style=3D"white-space:pre">					</span>&lt;var name=3D&quot;t=
+otalTax&quot; value=3D&quot;#{#totalTax.add(new java.math.BigDecimal(#amoun=
+tValue))}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">				</span>&lt;/if&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">				</span>&lt;if condition=3D&qu=
+ot;#{#amountDescription.equals(&#39;posted-date&#39;)}&quot;&gt;</div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">					</span>=
+&lt;var name=3D&quot;postedDate&quot; value=3D&quot;#{#amountValue}&quot; /=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">				</span>&lt;/if&gt;</div><div><span class=3D"gmail-Apple-tab-span" st=
+yle=3D"white-space:pre">				</span>&lt;if condition=3D&quot;#{#amountDescri=
+ption.equals(&#39;order-id&#39;)}&quot;&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">					</span>&lt;var name=3D&quot;=
+orderId&quot; value=3D&quot;#{#amountValue}&quot; /&gt;</div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;/if&gt=
+;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">=
+			</span>&lt;/while&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">			</span>&lt;var name=3D&quot;sellerEarning&quot; v=
+alue=3D&quot;#{#commission.add(#totalTax)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;log leve=
+l=3D&quot;info&quot; value=3D&quot;sellerEarning - #{#sellerEarning}&quot;/=
+&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">			</span>&lt;log level=3D&quot;info&quot; value=3D&quot;totalItems2 - #=
+{#totalItems}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" sty=
+le=3D"white-space:pre">			</span>&lt;var name=3D&quot;earningPerItem&quot; =
+value=3D&quot;#{#sellerEarning.divide(new java.math.BigDecimal(#totalItems)=
+, 2, 2)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">			</span>&lt;log level=3D&quot;info&quot; value=3D&qu=
+ot;earningPerItem - #{#earningPerItem}&quot;/&gt;</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;var name=3D&q=
+uot;orderType&quot; value=3D&quot;#{#orderType.replaceAll(&#39;\\s+&#39;,&#=
+39;&#39;)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">			</span>&lt;log level=3D&quot;info&quot; value=3D&qu=
+ot;orderType : #{#orderType}&quot; /&gt;</div><div><br></div><div><span cla=
+ss=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;foreach=
+ collection=3D&quot;#{#channelSaleOrderItemsMap.entrySet()}&quot; var=3D&qu=
+ot;saleOrderItemSet&quot; &gt;</div><div><span class=3D"gmail-Apple-tab-spa=
+n" style=3D"white-space:pre">				</span>&lt;startTag name=3D&quot;InvoiceIt=
+em&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"whit=
+e-space:pre">				</span>&lt;valueTag name=3D&quot;ReconciliationIdentifier&=
+quot; value=3D&quot;#{#saleOrderItemSet.getKey()}&quot; /&gt;</div><div><sp=
+an class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;=
+valueTag name=3D&quot;ChannelSaleOrderCode&quot; value=3D&quot;#{#orderId}&=
+quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">				</span>&lt;valueTag name=3D&quot;OrderDate&quot; value=3D&quo=
+t;#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.uti=
+ls.DateUtils).stringToDate(#postedDate,&#39;dd.MM.yyyy&#39;),&#39;dd/MM/yyy=
+y&#39;)}&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D=
+"white-space:pre">				</span>&lt;valueTag name=3D&quot;InvoiceItemOrderStat=
+us&quot; value=3D&quot;#{#orderType}&quot; /&gt;</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;valueTag name=
+=3D&quot;OrderItemValue&quot; value=3D&quot;#{#saleOrderItemSet.getValue()}=
+&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-=
+space:pre">				</span>&lt;valueTag name=3D&quot;TotalDiscounts&quot; value=
+=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div><span clas=
+s=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;valueTa=
+g name=3D&quot;TotalRewards&quot; value=3D&quot;#{new java.math.BigDecimal(=
+0.00)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"=
+white-space:pre">				</span>&lt;valueTag name=3D&quot;TotalOtherIncentive&q=
+uot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&=
+lt;valueTag name=3D&quot;TotalSellerEarning&quot; value=3D&quot;#{#earningP=
+erItem}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D=
+"white-space:pre">				</span>&lt;valueTag name=3D&quot;SettledValue&quot; v=
+alue=3D&quot;#{#earningPerItem}&quot; /&gt;</div><div><span class=3D"gmail-=
+Apple-tab-span" style=3D"white-space:pre">				</span>&lt;valueTag name=3D&q=
+uot;IsProcessed&quot; value=3D&quot;#{false}&quot; /&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;value=
+Tag name=3D&quot;Quantity&quot; value=3D&quot;#{1}&quot; /&gt;</div><div><s=
+pan class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt=
+;valueTag name=3D&quot;TotalCommission&quot; value=3D&quot;#{#commission}&q=
+uot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-sp=
+ace:pre">				</span>&lt;valueTag name=3D&quot;TotalFixedFee&quot; value=3D&=
+quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&lt;valueTag na=
+me=3D&quot;TotalShippingFee&quot; value=3D&quot;#{new java.math.BigDecimal(=
+0.00)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"=
+white-space:pre">				</span>&lt;valueTag name=3D&quot;TotalShippingCharge&q=
+uot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&quot; /&gt;</div><div>=
+<span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>&=
+lt;valueTag name=3D&quot;TotalReverseShippingFee&quot; value=3D&quot;#{new =
+java.math.BigDecimal(0.00)}&quot; /&gt;</div><div><span class=3D"gmail-Appl=
+e-tab-span" style=3D"white-space:pre">				</span>&lt;valueTag name=3D&quot;=
+TotalAdditionalFee&quot; value=3D&quot;#{new java.math.BigDecimal(0.00)}&qu=
+ot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-spa=
+ce:pre">				</span>&lt;valueTag name=3D&quot;TotalTax&quot; value=3D&quot;#=
+{#totalTax}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" styl=
+e=3D"white-space:pre">				</span>&lt;valueTag name=3D&quot;TotalChannelReco=
+very&quot; value=3D&quot;#{new java.math.BigDecimal(0.00).subtract(#earning=
+PerItem)}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">				</span>&lt;valueTag name=3D&quot;AdditionalFeeDesc=
+ription&quot; value=3D&quot;&quot; /&gt;</div><div><span class=3D"gmail-App=
+le-tab-span" style=3D"white-space:pre">				</span>&lt;endTag name=3D&quot;I=
+nvoiceItem&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">			</span>&lt;/foreach&gt;</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">			</span>&lt;else&gt;</div><=
+div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</sp=
+an>&lt;log level=3D&quot;info&quot; value=3D&quot;skipping invoice item for=
+ orderid - #{#orderId}&quot; /&gt;</div><div><span class=3D"gmail-Apple-tab=
+-span" style=3D"white-space:pre">			</span>&lt;/else&gt;</div><div><span cl=
+ass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>&lt;/if&gt;=
+</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">	=
+</span>&lt;/while&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=
+=3D"white-space:pre">	</span>&lt;endTag name=3D&quot;InvoiceItems&quot; /&g=
+t;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre"=
+>	</span>&lt;valueTag name=3D&quot;DownloadUrl&quot; value=3D&quot;#{#path}=
+&quot;/&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">	</span>&lt;endTag name=3D&quot;ChannelReconciliationInvoice&quot=
+; /&gt;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space=
+:pre">	</span>&lt;endTag name=3D&quot;CreateChannelReconciliationInvoiceReq=
+uest&quot; /&gt;</div><div>&lt;/scraper&gt;</div></div>
+
+--001a1134e7e618b4f905479cdf7d--

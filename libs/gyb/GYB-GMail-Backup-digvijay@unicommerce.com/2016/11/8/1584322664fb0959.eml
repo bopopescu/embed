@@ -1,0 +1,32 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1477959qge;
+        Tue, 8 Nov 2016 00:51:18 -0800 (PST)
+X-Received: by 10.98.194.86 with SMTP id l83mr9622171pfg.64.1478595078151;
+        Tue, 08 Nov 2016 00:51:18 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id bf7si26376341pab.78.2016.11.08.00.51.17
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 00:51:18 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uA88pGua004228;
+	Tue, 8 Nov 2016 14:21:16 +0530
+Date: Tue, 8 Nov 2016 08:51:16 +0000 (UTC)
+From: build@unicommerce.com
+To: devops@unicommerce.com, sunny@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, digvijay@unicommerce.com
+Message-ID: <796247966.37.1478595076661.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1657519240.33.1478590593027.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1657519240.33.1478590593027.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Jenkins build is back to normal : Uniware #1927
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: SUCCESS
+
+See <http://jenkins.unicommerce.com:8080/job/Uniware/1927/>
+

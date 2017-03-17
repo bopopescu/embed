@@ -1,0 +1,83 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1246251qgd;
+        Thu, 15 Dec 2016 23:42:28 -0800 (PST)
+X-Received: by 10.13.232.200 with SMTP id r191mr1191088ywe.13.1481874148590;
+        Thu, 15 Dec 2016 23:42:28 -0800 (PST)
+Return-Path: <rachit@unicommerce.com>
+Received: from mail-yw0-x232.google.com (mail-yw0-x232.google.com. [2607:f8b0:4002:c05::232])
+        by mx.google.com with ESMTPS id l78si1740884ywc.295.2016.12.15.23.42.28
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 15 Dec 2016 23:42:28 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best guess record for domain of rachit@unicommerce.com) client-ip=2607:f8b0:4002:c05::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::232 is neither permitted nor denied by best guess record for domain of rachit@unicommerce.com) smtp.mailfrom=rachit@unicommerce.com
+Received: by mail-yw0-x232.google.com with SMTP id t125so27273892ywc.1
+        for <digvijay@unicommerce.com>; Thu, 15 Dec 2016 23:42:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=YXyxrk/axSh1TUUHs4brr7HxdgHrao15dnu3nY8F4n0=;
+        b=o1t/VdTxHuBHYLQNs2vWrucrvJWDsWKKo6BlKqwG7VCan+TQaD12Fzvsa5N163xfTX
+         GfkbtIjC4xTV6x3JDdhRfQ4yL6/s6SsnfgEehp0pVuaSorJ5ut/4DxOKUhjQolNMDnRo
+         lLX408w34UHLvKGy9+jVkYMUX0CE3qofBsBHE22D6gY88KakkFn8vsj2biYXI687o8SM
+         +S7VZAEh9+JzJc/n10CoygpRJMcEzgmgq3kMb/N/RYKqg7ce2dxDkSmmJPtDWK+0Hn19
+         VbSCbbuStEJCmIraU117MwwwDJus61oR3V82sT6TzrqI1vwlR9eRaX5rImlGvZwIE1DV
+         OW0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=YXyxrk/axSh1TUUHs4brr7HxdgHrao15dnu3nY8F4n0=;
+        b=VMv0oLEG2ybpqWcOrK/TA8HdarpM8ud/KmHaypa4t9lYtLW4hbTOjj17ubJ0q4eiDs
+         PdFzJNFBPLnskTN+pwXkq8k/K8TjnyMkIRYVQTeGMNouMs9fbjqaFucZ+UeKrYPLJcm+
+         fBZ8RLN7zPFDF8kw03rq9wnniFZ8DFtrZkNipT1lDSz2rtNaoa84LDCKpYi8hZypspEP
+         akS6lUR/YbJAc3H1fozS0RMmPE0A09++YN/5B6rgAl+/wTYgkqar0GO02y0+tFQl5cI2
+         2HGj0Fq4/HBc538lxE8o0CWS70FQ0SFCJKucfcYOUtOnj4uNfNk9hdowBbdapD5FZoZq
+         Pjyw==
+X-Gm-Message-State: AIkVDXLcrJmKkd22SW3IFn8sNj04qfXIdlAkIqGQqWhO6LSV6J7xiQy5w6/D/jc2OAt2NjKYWTptGtJb4wNG4w==
+X-Received: by 10.129.98.136 with SMTP id w130mr1277418ywb.38.1481874148228;
+ Thu, 15 Dec 2016 23:42:28 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.37.178.1 with HTTP; Thu, 15 Dec 2016 23:42:07 -0800 (PST)
+From: Rachit Sachdeva <rachit@unicommerce.com>
+Date: Fri, 16 Dec 2016 13:12:07 +0530
+Message-ID: <CAGz2fOf8MEYve9MCy+5Vk4oDBYZsnbU+QrFucqSBWg-LKV-2eQ@mail.gmail.com>
+Subject: Prankster
+To: Vani Verma <vani@unicommerce.com>, Garima Arora <garima@unicommerce.com>, 
+	Shipra Gupta <shipra@unicommerce.com>, Akshay Kochhar <akshay@unicommerce.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, 
+	Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Guhapriya Velu <guhapriya@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11471d1e355f300543c1b6d6
+
+--001a11471d1e355f300543c1b6d6
+Content-Type: text/plain; charset=UTF-8
+
+Total Bill: 6877
+Total People: 11
+Per Person: 626
+
+Payment Link: https://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp
+
+Card Number: 3744 339168 41001
+
+Regards,
+Rachit Sachdeva
+
+--001a11471d1e355f300543c1b6d6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Total Bill: 6877</div><div>Total People: 11</div><div=
+>Per Person: 626</div><div><br></div><div>Payment Link:=C2=A0<a href=3D"htt=
+ps://www.billdesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp">https://www.bil=
+ldesk.com/pgidsk/pgmerc/amexcard/amex_card.jsp</a></div><div><br></div><div=
+>Card Number: 3744 339168 41001</div><br clear=3D"all"><div><div class=3D"g=
+mail_signature"><div dir=3D"ltr"><div>Regards,</div><div>Rachit Sachdeva</d=
+iv><img src=3D"https://d3kjp0zrek7zit.cloudfront.net/uploads/product/image/=
+4364/large_detail_1409053661.png" width=3D"96" height=3D"54"><br></div></di=
+v></div>
+</div>
+
+--001a11471d1e355f300543c1b6d6--

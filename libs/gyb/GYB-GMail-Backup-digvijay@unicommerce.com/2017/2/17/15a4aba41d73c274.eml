@@ -1,0 +1,64 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp24280qgu;
+        Thu, 16 Feb 2017 22:20:04 -0800 (PST)
+X-Received: by 10.28.212.82 with SMTP id l79mr1271150wmg.101.1487312404504;
+        Thu, 16 Feb 2017 22:20:04 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x236.google.com (mail-wm0-x236.google.com. [2a00:1450:400c:c09::236])
+        by mx.google.com with ESMTPS id j136si441692wmf.102.2017.02.16.22.20.04
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 16 Feb 2017 22:20:04 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x236.google.com with SMTP id r141so3134445wmg.1
+        for <digvijay@unicommerce.com>; Thu, 16 Feb 2017 22:20:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=j3nbYxZInsuQWzU1p7yHh2Zb3SiMqfTfHI7PaHPdZTE=;
+        b=l3yATiFfQCsKVdugodbtnKGzVdebtkjO+s2wtfDJRVs+cObR9JoZ4zbCevhbPHjwX6
+         WBlXFjuUCbdkaLk7BLLW+J9K4YuRGYaGZgKock0Ov4lHDLvsqhbLzn4tKp7w075fuXEU
+         XnhSmwhHNJpaGp4yD+An1toj9Ct6ACiT5OhLJQifNkq35voia/e6IX1paI7/rseu/7CI
+         isZInEQqYfYfm4CH+u/IhxKvax3avG5jhumKW//Rc4P93jO+LN1erxNCzpzBHrzIiXye
+         BieDdWtaBsKQjYuauepVzOgSWkGXaSb1MMAErdgHX84qW7F9RN+lcUds5uSmEom1ycAX
+         IHfQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=j3nbYxZInsuQWzU1p7yHh2Zb3SiMqfTfHI7PaHPdZTE=;
+        b=B7EfWw8ca/knz2yyEozpSG3azBc89+dQXOSiIGqEYsHsmdvYgoVWArbnJcVnr11CUy
+         JOSFkNBgGZNTFDYcwSsO9FGdTk+cjtxGgXodnfzMztVDa1lUmdWjv5CXJub2mksUYcHB
+         Al6y6vGkNCR+oiwIvwSygbucE/VtXZrIUGvcuOEBZV7SgvFyctQuPg7Eo5/iTZw9cgAr
+         Krm+hK+LEWRv+SETJRxcxpNtx8YqNV8C/d9RDLgFOHMAvEr/QiCaaVU+Q4X1iX6LBIIl
+         kknxCQT4oEmG+jHPhRtFP1rZV5nBQS/GdinKueNLAa5hIWIM7Yk6W22hwK/2URZX2c/p
+         Hb1A==
+X-Gm-Message-State: AMke39lTwrqfrv0zLTVFDddQistpTZq60JMn4tzImC7a9jmKxKCF73x9T7Dm+MfXiR3VOVy45x3Co5DjIU6bmw==
+X-Received: by 10.28.178.16 with SMTP id b16mr1418068wmf.83.1487312403978;
+ Thu, 16 Feb 2017 22:20:03 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Fri, 17 Feb 2017 06:19:52 +0000
+Message-ID: <CAPe2SZRoLAPZrdMLM7n60RHZugU8AURYeE228w6KsLkcXh+pLg@mail.gmail.com>
+Subject: working from home today
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharam <digvijay@unicommerce.com>, Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11443b848272220548b3e78c
+
+--001a11443b848272220548b3e78c
+Content-Type: text/plain; charset=UTF-8
+
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a11443b848272220548b3e78c
+Content-Type: text/html; charset=UTF-8
+
+<div dir="ltr"><br></div><div dir="ltr">-- <br></div><div data-smartmail="gmail_signature"><div dir="ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a11443b848272220548b3e78c--

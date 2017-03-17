@@ -1,0 +1,191 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Tue, 21 Feb 2017 23:19:05 -0800 (PST)
+Date: Wed, 22 Feb 2017 12:49:05 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sorGfg84o-hTqVT5ayOO+z0QfPAvEbY3KN1Fy5+a1B2LFQ@mail.gmail.com>
+Subject: SWQ Queries
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c164b2caba540549194f21
+
+--001a11c164b2caba540549194f21
+Content-Type: text/plain; charset=UTF-8
+
+db.shippingSource.insert({
+    "code": "AMAZON_SWA",
+    "name": "AMAZON_SWA",
+    "enabled": true,
+    "created": new Date(),
+    "updated": new Date(),
+    "shippingSourceProperties": [{
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "handler.class",
+        "value": "com.uniware.services.shipping.impl.ScrapedShipmentHandler"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "max.tracking.number.per.request",
+        "value": "50"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "shipping.payment.method",
+        "value": "Standard-COD,Standard-Prepaid"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "available.serviceabilities",
+        "value":
+"GLOBAL_SERVICEABLITY,LOCATION_AGNOSTIC,LIMITED_SERVICEABILITY"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "reserved.keywords.for.short.name",
+        "value": "DEMO,PRODUCTION,LTD,PVT"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "scraper.script",
+        "value": "SCRAPER_SCRIPT_SWA"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "tracking.number.allocation.script",
+        "value": "TRACKING_NUMBER_ALLOCATION_SWA"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "tracking.link",
+        "value": "AMAZON_SWA.in/track/"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "tracking.enabled",
+        "value": "1"
+    }, {
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "post.manifest.script",
+        "value": ""
+    }],
+    "shippingSourceConnectors": [{
+        "shippingSourceCode": "AMAZON_SWA",
+        "name": "AMAZON_SWA_TRACKING_API",
+        "displayName": "AMAZON_SWA API",
+        "helpText": null,
+        "priority": "1",
+        "requiredInAwbFetch": true,
+        "requiredInTracking": true,
+        "verificationScriptName": "TRACKING_ALLOCATION_VERIFICATION_SWA",
+        "shippingSourceConnectorParameters": [{
+            "shippingSourceConnectorName": "AMAZON_SWA_TRACKING_API",
+            "name": "client_id",
+            "displayName": "Client Id",
+            "displayPlaceHolder":
+"amzn1.iba-client.3136dc95e53f40b08969c4dae231dd93",
+            "type": "TEXT",
+            "priority": "1"
+        },{
+            "shippingSourceConnectorName": "AMAZON_SWA_TRACKING_API",
+            "name": "client_secret",
+            "displayName": "Client Secret",
+            "displayPlaceHolder":
+"16690142bf4a8c8a8c4276c818108f0779090069a127eb53e1f6ec65cb68615f",
+            "type": "TEXT",
+            "priority": "1"
+        },{
+            "shippingSourceConnectorName": "AMAZON_SWA_TRACKING_API",
+            "name": "subaccount_id",
+            "displayName": "Sub-Account Id",
+            "displayPlaceHolder": "",
+            "type": "TEXT",
+            "priority": "1"
+        }]
+    }]
+})
+
+--001a11c164b2caba540549194f21
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>db.shippingSource.insert({</div><div>=C2=A0 =C2=A0 &q=
+uot;code&quot;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 &quot;name&=
+quot;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 &quot;enabled&quot;:=
+ true,</div><div>=C2=A0 =C2=A0 &quot;created&quot;: new Date(),</div><div>=
+=C2=A0 =C2=A0 &quot;updated&quot;: new Date(),</div><div>=C2=A0 =C2=A0 &quo=
+t;shippingSourceProperties&quot;: [{</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+&quot;shippingSourceCode&quot;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;handler.class&quot;,</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: &quot;com.uniware.services.=
+shipping.impl.ScrapedShipmentHandler&quot;</div><div>=C2=A0 =C2=A0 }, {</di=
+v><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AM=
+AZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &qu=
+ot;max.tracking.number.per.request&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &quot;value&quot;: &quot;50&quot;</div><div>=C2=A0 =C2=A0 }, {</div>=
+<div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AMAZ=
+ON_SWA&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot=
+;shipping.payment.method&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot=
+;value&quot;: &quot;Standard-COD,Standard-Prepaid&quot;</div><div>=C2=A0 =
+=C2=A0 }, {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&=
+quot;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;=
+name&quot;: &quot;available.serviceabilities&quot;,</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 &quot;value&quot;: &quot;GLOBAL_SERVICEABLITY,LOCATION_AGNOS=
+TIC,LIMITED_SERVICEABILITY&quot;</div><div>=C2=A0 =C2=A0 }, {</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AMAZON_SWA&q=
+uot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;<a href=
+=3D"http://reserved.keywords.for.short.name">reserved.keywords.for.short.na=
+me</a>&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: &quo=
+t;DEMO,PRODUCTION,LTD,PVT&quot;</div><div>=C2=A0 =C2=A0 }, {</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AMAZON_SWA&q=
+uot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;scraper=
+.script&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: &qu=
+ot;SCRAPER_SCRIPT_SWA&quot;</div><div>=C2=A0 =C2=A0 }, {</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AMAZON_SWA&quot;=
+,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;tracking.nu=
+mber.allocation.script&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;v=
+alue&quot;: &quot;TRACKING_NUMBER_ALLOCATION_SWA&quot;</div><div>=C2=A0 =C2=
+=A0 }, {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quo=
+t;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;nam=
+e&quot;: &quot;tracking.link&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &=
+quot;value&quot;: &quot;AMAZON_SWA.in/track/&quot;</div><div>=C2=A0 =C2=A0 =
+}, {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: =
+&quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&qu=
+ot;: &quot;tracking.enabled&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &q=
+uot;value&quot;: &quot;1&quot;</div><div>=C2=A0 =C2=A0 }, {</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceCode&quot;: &quot;AMAZON_SWA&q=
+uot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;post.ma=
+nifest.script&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot=
+;: &quot;&quot;</div><div>=C2=A0 =C2=A0 }],</div><div>=C2=A0 =C2=A0 &quot;s=
+hippingSourceConnectors&quot;: [{</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &qu=
+ot;shippingSourceCode&quot;: &quot;AMAZON_SWA&quot;,</div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;AMAZON_SWA_TRACKING_API&quot;,</d=
+iv><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;displayName&quot;: &quot;AMAZON_S=
+WA API&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;helpText&quot;: n=
+ull,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;priority&quot;: &quot;1&qu=
+ot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;requiredInAwbFetch&quot;: =
+true,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;requiredInTracking&quot;:=
+ true,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;verificationScriptName&q=
+uot;: &quot;TRACKING_ALLOCATION_VERIFICATION_SWA&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceConnectorParameters&quot;: [{</div=
+><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceConnect=
+orName&quot;: &quot;AMAZON_SWA_TRACKING_API&quot;,</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;client_id&quot;,</div><=
+div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;displayName&quot;: &quo=
+t;Client Id&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quo=
+t;displayPlaceHolder&quot;: &quot;amzn1.iba-client.3136dc95e53f40b08969c4da=
+e231dd93&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;t=
+ype&quot;: &quot;TEXT&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &quot;priority&quot;: &quot;1&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 },{</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippi=
+ngSourceConnectorName&quot;: &quot;AMAZON_SWA_TRACKING_API&quot;,</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;name&quot;: &quot;client_s=
+ecret&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;disp=
+layName&quot;: &quot;Client Secret&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;displayPlaceHolder&quot;: &quot;16690142bf4a8c8a=
+8c4276c818108f0779090069a127eb53e1f6ec65cb68615f&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;type&quot;: &quot;TEXT&quot;,</div=
+><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;priority&quot;: &quot=
+;1&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 },{</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shippingSourceConnectorName&quot;: &quot;=
+AMAZON_SWA_TRACKING_API&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &quot;name&quot;: &quot;subaccount_id&quot;,</div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;displayName&quot;: &quot;Sub-Account =
+Id&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;display=
+PlaceHolder&quot;: &quot;&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;type&quot;: &quot;TEXT&quot;,</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;priority&quot;: &quot;1&quot;</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 }]</div><div>=C2=A0 =C2=A0 }]</div><div>})</div></=
+div>
+
+--001a11c164b2caba540549194f21--

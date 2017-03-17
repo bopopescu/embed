@@ -1,0 +1,130 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.51.147 with SMTP id k141csp363175itk;
+        Fri, 16 Sep 2016 03:15:14 -0700 (PDT)
+X-Received: by 10.107.58.7 with SMTP id h7mr14290189ioa.141.1474020914500;
+        Fri, 16 Sep 2016 03:15:14 -0700 (PDT)
+Return-Path: <tech+bncBCY6PLPHVEHBBMUM567AKGQED6XTDLI@unicommerce.com>
+Received: from mail-pa0-x245.google.com (mail-pa0-x245.google.com. [2607:f8b0:400e:c03::245])
+        by mx.google.com with ESMTPS id y144si9996067itc.21.2016.09.16.03.15.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Sep 2016 03:15:14 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c03::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbmum567akgqed6xtdli@unicommerce.com) client-ip=2607:f8b0:400e:c03::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c03::245 is neither permitted nor denied by best guess record for domain of tech+bncbcy6plphvehbbmum567akgqed6xtdli@unicommerce.com) smtp.mailfrom=tech+bncBCY6PLPHVEHBBMUM567AKGQED6XTDLI@unicommerce.com
+Received: by mail-pa0-x245.google.com with SMTP id wk8sf143054852pab.3
+        for <digvijay@unicommerce.com>; Fri, 16 Sep 2016 03:15:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=W2t4uF3dYiNdwc8fD2yjw3xRBT7QWpByl+D5EaAXrFQ=;
+        b=PuM9UTwFSslmV/4y0StF8oSO53KPVafoemNduZSuFqmG0sCCjm9ssLXsq5+eFI8G7b
+         /rFf+ffbeYjMRCkRtFM3v/sMIY1lsSuh9f/18ROuh3ghIiXk55yJ9Yz53FUogWXKa8Bw
+         9FPY4TgA2tfWZ5F3/a3oj4YMyRCc/aBRDvDWEp0+Qn9Mlvy2OjiflbQ4FzPoVOGDCALY
+         t+6ZwVM8kI8FIDklqU1mF7bXofAXObHOpxpoieIZtr4cG0M/B/01tSk4z8pkFDGaJgz8
+         jP0O1JqUIvnshOTU0hAD+JJ7PXSIQO2od6r94TxuOll80/9ENcKoIKjQVC5UExhHDyxl
+         sEBg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=W2t4uF3dYiNdwc8fD2yjw3xRBT7QWpByl+D5EaAXrFQ=;
+        b=EjfB0VIEkSH3ZeNM3km9oPqJMQNPnOFUbTurdf05eBCfwb5jjuQeRMZVU76TKLfk0O
+         5CYLye8TZG50TS6GYPNED5UqNl5z1942U8Y3tPF8y+75W6UzbPQEmGiVflH2zz2xrcp+
+         mfTXKotBDN+cWVg9HxJVc4DDr9a4CoMcbU1/zNyn3LBHzmDXcyR0EonyT8l+DcVLfV5M
+         YsiqJS6PQlH18fToaZ3T9+NKI4JtJI+c0P7K0z7/28rCpyaQG/thvUo2kE22kH4OWvxr
+         uvTtp1x9DZmvZ90jtTPq23yPfr1UUoN32HoAoGD/vWKq7fPbQPiT8oejgUIMd7O2BNcx
+         ByMg==
+X-Gm-Message-State: AE9vXwON4PieVcAowjLe0P9TVO3Bpzu/xOtICyNUcgixFj5yCPmWoJVqa7nCykW0hgDTig==
+X-Received: by 10.98.25.66 with SMTP id 63mr10081807pfz.2.1474020914138;
+        Fri, 16 Sep 2016 03:15:14 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.40.231 with SMTP id s94ls5365906ota.17.gmail; Fri, 16 Sep
+ 2016 03:15:14 -0700 (PDT)
+X-Received: by 10.37.161.228 with SMTP id a91mr5114905ybi.186.1474020913988;
+        Fri, 16 Sep 2016 03:15:13 -0700 (PDT)
+Received: from mail-yw0-x22f.google.com (mail-yw0-x22f.google.com. [2607:f8b0:4002:c05::22f])
+        by mx.google.com with ESMTPS id z21si4723863ywz.275.2016.09.16.03.15.13
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 Sep 2016 03:15:13 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best guess record for domain of rachit@unicommerce.com) client-ip=2607:f8b0:4002:c05::22f;
+Received: by mail-yw0-x22f.google.com with SMTP id g192so85430254ywh.1
+        for <tech@unicommerce.com>; Fri, 16 Sep 2016 03:15:13 -0700 (PDT)
+X-Received: by 10.129.108.15 with SMTP id h15mr5254078ywc.341.1474020913599;
+ Fri, 16 Sep 2016 03:15:13 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.37.99.213 with HTTP; Fri, 16 Sep 2016 03:14:53 -0700 (PDT)
+In-Reply-To: <CAGz2fOddKa2UBxL+d5vykRy=HAp3cNq1a3zM0hcvXEPGZ9i6wQ@mail.gmail.com>
+References: <CAGz2fOddKa2UBxL+d5vykRy=HAp3cNq1a3zM0hcvXEPGZ9i6wQ@mail.gmail.com>
+From: Rachit Sachdeva <rachit@unicommerce.com>
+Date: Fri, 16 Sep 2016 15:44:53 +0530
+Message-ID: <CAGz2fOcSmYA1H_NE75di1+wbBpHkRrKfJ8XeL0Kmu3F5Gpsoiw@mail.gmail.com>
+Subject: Re: Pictures Abhi Baaki Hain
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	UI Team <ui@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Kapil Makhija <kapil@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>
+Content-Type: multipart/alternative; boundary=001a114da312f29ce5053c9d3c52
+X-Original-Sender: rachit@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c05::22f is neither permitted nor denied by best
+ guess record for domain of rachit@unicommerce.com) smtp.mailfrom=rachit@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114da312f29ce5053c9d3c52
+Content-Type: text/plain; charset=UTF-8
+
+Use the Switch Accounts option to view using your unicommerce account.
+
+Regards,
+Rachit Sachdeva
+
+
+On Fri, Sep 16, 2016 at 3:35 PM, Rachit Sachdeva <rachit@unicommerce.com>
+wrote:
+
+> https://drive.google.com/open?id=0B4oQ9F7-5AO0ZmZlSmpwSG5lcEk
+>
+> Regards,
+> Rachit Sachdeva
+>
+>
+
+--001a114da312f29ce5053c9d3c52
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Use the Switch Accounts option to view using your unicomme=
+rce account.</div><div class=3D"gmail_extra"><br clear=3D"all"><div><div cl=
+ass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"=
+><div>Regards,</div><div>Rachit Sachdeva</div><img src=3D"https://d3kjp0zre=
+k7zit.cloudfront.net/uploads/product/image/4364/large_detail_1409053661.png=
+" width=3D"96" height=3D"54"><br></div></div></div>
+<br><div class=3D"gmail_quote">On Fri, Sep 16, 2016 at 3:35 PM, Rachit Sach=
+deva <span dir=3D"ltr">&lt;<a href=3D"mailto:rachit@unicommerce.com" target=
+=3D"_blank">rachit@unicommerce.com</a>&gt;</span> wrote:<br><blockquote cla=
+ss=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pa=
+dding-left:1ex"><div dir=3D"ltr"><div><a href=3D"https://drive.google.com/o=
+pen?id=3D0B4oQ9F7-5AO0ZmZlSmpwSG5lcEk" target=3D"_blank">https://drive.goog=
+le.com/open?<wbr>id=3D0B4oQ9F7-<wbr>5AO0ZmZlSmpwSG5lcEk</a><br></div><br cl=
+ear=3D"all"><div><div><div dir=3D"ltr"><div>Regards,</div><div>Rachit Sachd=
+eva</div><img src=3D"https://d3kjp0zrek7zit.cloudfront.net/uploads/product/=
+image/4364/large_detail_1409053661.png" width=3D"96" height=3D"54"><br></di=
+v></div></div>
+</div>
+</blockquote></div><br></div>
+
+--001a114da312f29ce5053c9d3c52--

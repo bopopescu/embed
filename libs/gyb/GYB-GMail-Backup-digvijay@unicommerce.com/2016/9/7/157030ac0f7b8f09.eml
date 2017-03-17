@@ -1,0 +1,1085 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.214.18 with SMTP id o18csp121932itg;
+        Tue, 6 Sep 2016 22:06:59 -0700 (PDT)
+X-Received: by 10.159.36.73 with SMTP id 67mr9595556uaq.129.1473224818935;
+        Tue, 06 Sep 2016 22:06:58 -0700 (PDT)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-vk0-x236.google.com (mail-vk0-x236.google.com. [2607:f8b0:400c:c05::236])
+        by mx.google.com with ESMTPS id j199si11328782vkf.4.2016.09.06.22.06.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 06 Sep 2016 22:06:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c05::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-vk0-x236.google.com with SMTP id f76so3960288vke.0
+        for <digvijay@unicommerce.com>; Tue, 06 Sep 2016 22:06:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=3q1zUpoRn3owBeARH9CgSdf1M368Wrupp1g9vP95lco=;
+        b=OSo3UllSYzL8eYms771UQDexHfrAKXjz0qkl2mvGXAoKIvlA6uQz23u1Xumjm/3qc7
+         Gs//wRB0Ttl0M7pWVGg5Q5bWQ8QZfiJgdsNGpEj7bdF3+s1asPLt3ATIaaNjyLdKykek
+         1ht4gnRnf4JNPsWpfhhNdy3S598bmtOfKFvXEm0BjrnBEi8vbqk5zUOwOMVFoEMeyFrg
+         NbKRBLeHoycdIbGnaz/eTJQr9Pmdyx3UHcwJfuJIRbXwvTChad3CxVqlD55NiWhcKMAA
+         FeBeF963f6UUgta2jjHFZUyvuTrBUdN7opjzpMnwRCJkyW6lQUN9AbMvru4rRxA0lb3h
+         oYPw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=3q1zUpoRn3owBeARH9CgSdf1M368Wrupp1g9vP95lco=;
+        b=Zodl9s5L5uu7Q0LYEsLjFSeJX8QWNzYTJQjv01XvUc3Uywm4r5lVdgp9RTmnluw94H
+         cVEnbrjP8C31oAGw4sSM/Z3+3NGULyTs3bONsEQJa97FQAJOGrMHQblv7pOlnwbVQHMo
+         DbYd0Wrl7Tz+94dpOMlguVr6tayKKfxDTCpiXvhm3bHqvZJ7fabuC5iEULOwjVrttYxn
+         ssLU1rfFQVtuSi1ErCE6KJh30+VP6Dy0lyTFfU+shgUBx/Jyu+SdwyfUSo3ioO4qU2l5
+         1LdfJP5yyESFEluPdTK+W2oc9Jd3RFxAFvEQ5kFjcpnn7F2Qsd7nas7MWQwMpeGKoIGL
+         ygEw==
+X-Gm-Message-State: AE9vXwPSOc6xnAtg5AskuMFyXQ1dAXNG8gtt5E8WgdxKq3ZFThhWUTacWQrhKScG4qGPaZTlevoExsrkyYANRQ==
+X-Received: by 10.31.161.9 with SMTP id k9mr5041742vke.119.1473224818327; Tue,
+ 06 Sep 2016 22:06:58 -0700 (PDT)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Wed, 07 Sep 2016 05:06:47 +0000
+Message-ID: <CAPe2SZS-PxDew-i-Ni=-sKjOQdUoVN9T5iaZM_OPJ4mAtTJNjA@mail.gmail.com>
+Subject: return test
+To: Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1143f146f8930a053be3e1a6
+
+--001a1143f146f8930a053be3e1a6
+Content-Type: text/plain; charset=UTF-8
+
+<scraper name="flipkartSaleOrderStatusSyncScript"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.unicommerce.com/schema/scraper-1.0.xsd"
+cachehttpclient="true" httpClientName="#{#channel.name}-seller-panel">
+
+
+    <var name="apiServerName" value="https://api.flipkart.net"/>
+    <http url="#{#apiServerName}/oauth-service/oauth/token?grant_type=client_credentials"
+method="get"
+          var="authTokenResponse" timeout="80"
+          basicAuthUsername="#{#applicationId}"
+basicAuthPassword="#{#applicationSecret}">
+    </http>
+    <try>
+        <var name="authTokenResponseJson"
+             value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#authTokenResponse)}"/>
+        <var name="authToken"
+value="#{#authTokenResponseJson.get('access_token').getAsString()}"/>
+        <var name="authToken" value="Bearer #{#authToken}"/>
+        <log level="info" value="Auth Token:#{#authToken}"/>
+        <catch>
+            <scriptError message="Flipkart failed to provide
+AUTH_TOKEN. Message: #{#authTokenResponse}"/>
+        </catch>
+    </try>
+
+    <http url="#{#apiServerName}/sellers/v2/returns" method="get"
+var="getOrdersResponse"
+          timeout="80">
+        <header name="Content-Type" value="application/json"/>
+        <header name="Authorization" value="#{#authToken}"/>
+        <param name="source" value="customer_return"/>
+    </http>
+
+
+    <method name="getFirstPageOrders">
+        <retry count="3" delayInMillis="2000">
+            <log level="info" value="Fetching page #{#currPage}"/>
+            <http url="#{#url}" method="post" var="getOrdersResponse"
+                  timeout="80">
+                <header name="Content-Type" value="application/json"/>
+                <header name="Authorization" value="#{#authToken}"/>
+                <body>#{#requestBody}</body>
+            </http>
+            <log level="info" value="getFirstPageOrdersResponse:
+#{#getOrdersResponse}"/>
+            <if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#getOrdersResponse)
+and !#getOrdersResponse.contains('INTERNAL SERVER ERROR')}">
+                <var name="getOrdersResponseJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#getOrdersResponse)}"/>
+                <try>
+                    <var value="#{#getOrdersResponseJson.get('orderItems')}"/>
+                    <catch>
+                        <scriptError message="Error parsing flipkart's
+getOrders response. Response- #{#getOrdersResponse}"/>
+                    </catch>
+                </try>
+                <var name="currPage" value="#{#currPage+1}"/>
+                <else>
+                    <scriptError message="Flipkart failed to respond.
+Message- #{#getOrdersResponse}"/>
+                </else>
+            </if>
+        </retry>
+    </method>
+
+    <method name="getNextPageOrders">
+        <retry count="3" delayInMillis="2000">
+            <log level="info" value="Fetching page #{#currPage}"/>
+            <http url="#{#url}" method="get" var="getOrdersResponse"
+                  timeout="80">
+                <header name="Content-Type" value="application/json"/>
+                <header name="Authorization" value="#{#authToken}"/>
+            </http>
+            <log level="info" value="getNextPageOrdersResponse:
+#{#getOrdersResponse}"/>
+            <if
+condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#getOrdersResponse)
+and !#getOrdersResponse.contains('SERVER ERROR')}">
+                <var name="getOrdersResponseJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#getOrdersResponse)}"/>
+                <try>
+                    <var value="#{#getOrdersResponseJson.get('orderItems')}"/>
+                    <catch>
+                        <scriptError message="Error in parsing
+flipkart's getOrders response. Response- #{#getOrdersResponse}"/>
+                    </catch>
+                </try>
+                <var name="currPage" value="#{#currPage+1}"/>
+                <else>
+                    <scriptError message="Flipkart has failed to
+respond for next page. Message- #{#getOrdersResponse}"/>
+                </else>
+            </if>
+        </retry>
+    </method>
+
+    <var name="currPage" value="#{1}"/>
+    <var name="partialOrderDetailMap" value="#{new java.util.HashMap()}"/>
+    <var name="requestBody"><![CDATA[#{#x}{
+         "filter": {
+         "dispatchAfterDate": {
+             "fromDate":
+"#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).addToDate(T(com.unifier.core.utils.DateUtils).getCurrentTime(),
+T(java.util.Calendar).DATE, -30), "yyyy-MM-dd'T'HH:mm:ss+05:30")}",
+            "toDate":
+"#{T(com.unifier.core.utils.DateUtils).dateToString(T(com.unifier.core.utils.DateUtils).getCurrentTime(),
+"yyyy-MM-dd'T'HH:mm:ss+05:30")}"
+            },
+         "states" : ["APPROVED"]
+         }
+         }]]>
+    </var>
+    <log level="info" value="#{#requestBody}"/>
+    <var name="url" value="#{#apiServerName}/sellers/v2/orders/search"/>
+    <invoke method="getFirstPageOrders"/>
+    <var name="ordersItr"
+value="#{#getOrdersResponseJson.get('orderItems').iterator()}"/>
+    <while condition="#{#ordersItr.hasNext()}">
+        <var name="ordersItrElement" value="#{#ordersItr.next()}"/>
+        <if condition="#{#ordersItrElement.get('status').getAsString().equals('RETURN_REQUESTED')
+and #ordersItrElement.get('quantitiy').getAsInt() &gt; 1}">
+            <log level="info" value="ordersElement :
+#{#ordersItrElement.toString()}"/>
+        </if>
+    </while>
+
+    <var name="hasMore"
+value="#{#getOrdersResponseJson.get('hasMore').getAsBoolean()}"/>
+    <while condition="#{#hasMore}">
+        <var name="url"
+value="#{#apiServerName}/sellers#{#getOrdersResponseJson.get('nextPageUrl').getAsString()}"/>
+        <invoke method="getNextPageOrders"/>
+        <var name="ordersItr"
+value="#{#getOrdersResponseJson.get('orderItems').iterator()}"/>
+        <while condition="#{#ordersItr.hasNext()}">
+            <var name="ordersItrElement" value="#{#ordersItr.next()}"/>
+            <if
+condition="#{#ordersItrElement.get('status').getAsString().equals('RETURN_REQUESTED')
+and #ordersItrElement.get('quantitiy').getAsInt() &gt; 1}">
+                <log level="info" value="ordersElement :
+#{#ordersItrElement.toString()}"/>
+            </if>
+        </while>
+        <var name="hasMore"
+value="#{#getOrdersResponseJson.get('hasMore').getAsBoolean()}"/>
+    </while>
+
+
+    <http url="#{#apiServerName}/sellers/v2/returns" method="get"
+var="returnResponse"
+          timeout="80">
+        <header name="Content-Type" value="application/json"/>
+        <header name="Authorization" value="#{#authToken}"/>
+        <param name="source" value="customer_return"/>
+    </http>
+
+    <log level="info" value="returnResponse: #{#returnResponse}"/>
+    <if condition="#{T(com.unifier.core.utils.StringUtils).isNotBlank(#returnResponse)
+and !#returnResponse.contains('SERVER ERROR')}">
+        <var name="returnResponseJson"
+value="#{T(com.unifier.core.utils.JsonUtils).stringToJson(#returnResponse)}"/>
+        <try>
+            <var value="#{#returnResponseJson.get('returnItems')}"/>
+            <catch>
+                <scriptError message="Error in parsing flipkart's
+getOrders response. Response- #{#getOrdersResponse}"/>
+            </catch>
+        </try>
+        <else>
+            <scriptError message="Flipkart has failed to respond for
+next page. Message- #{#getOrdersResponse}"/>
+        </else>
+    </if>
+    <var name="returnItr"
+value="#{#returnResponseJson.get('returnItems').iterator()}"/>
+    <while condition="#{#returnItr.hasNext()}">
+        <var name="returnItrElement" value="#{#returnItr.next()}"/>
+        <if condition="#{#returnItrElement.get('quantitiy').getAsInt() &gt; 1}">
+            <log level="info" value="returnElement :
+#{#returnItrElement.toString()}"/>
+        </if>
+    </while>
+</scraper>
+
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a1143f146f8930a053be3e1a6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"font-family:menlo;font-size:12pt"><span styl=
+e=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">scraper </spa=
+n><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(2=
+39,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;=
+background-color:rgb(239,239,239)">=3D&quot;flipkartSaleOrderStatusSyncScri=
+pt&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgrou=
+nd-color:rgb(239,239,239)">xmlns:</span><span style=3D"color:rgb(102,14,122=
+);font-weight:bold;background-color:rgb(239,239,239)">xsi</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=
+=3D&quot;<a href=3D"http://www.w3.org/2001/XMLSchema-instance">http://www.w=
+3.org/2001/XMLSchema-instance</a>&quot;<br></span><span style=3D"color:rgb(=
+0,128,0);font-weight:bold;background-color:rgb(239,239,239)">         </spa=
+n><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(2=
+39,239,239)">xsi:noNamespaceSchemaLocation</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;<a hre=
+f=3D"http://www.unicommerce.com/schema/scraper-1.0.xsd">http://www.unicomme=
+rce.com/schema/scraper-1.0.xsd</a>&quot; </span><span style=3D"color:rgb(0,=
+0,255);font-weight:bold;background-color:rgb(239,239,239)">cachehttpclient<=
+/span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:r=
+gb(239,239,239)">=3D&quot;true&quot; </span><span style=3D"color:rgb(0,0,25=
+5);font-weight:bold;background-color:rgb(239,239,239)">httpClientName</span=
+><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(23=
+9,239,239)">=3D&quot;#{#<a href=3D"http://channel.name">channel.name</a>}-s=
+eller-panel&quot;</span><span style=3D"background-color:rgb(239,239,239)">&=
+gt;</span><br><br><br>    <span style=3D"background-color:rgb(239,239,239)"=
+>&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-c=
+olor:rgb(239,239,239)">var </span><span style=3D"color:rgb(0,0,255);font-we=
+ight:bold;background-color:rgb(239,239,239)">name</span><span style=3D"colo=
+r:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot=
+;apiServerName&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:b=
+old;background-color:rgb(239,239,239)">value</span><span style=3D"color:rgb=
+(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;<a h=
+ref=3D"https://api.flipkart.net">https://api.flipkart.net</a>&quot;</span><=
+span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span =
+style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color=
+:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">http </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">url</span><span style=3D"color:rgb(0,128,0);font-weight:bold;=
+background-color:rgb(239,239,239)">=3D&quot;#{#apiServerName}/oauth-service=
+/oauth/token?grant_type=3Dclient_credentials&quot; </span><span style=3D"co=
+lor:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">method=
+</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:=
+rgb(239,239,239)">=3D&quot;get&quot;<br></span><span style=3D"color:rgb(0,1=
+28,0);font-weight:bold;background-color:rgb(239,239,239)">          </span>=
+<span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239=
+,239,239)">var</span><span style=3D"color:rgb(0,128,0);font-weight:bold;bac=
+kground-color:rgb(239,239,239)">=3D&quot;authTokenResponse&quot; </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">timeout</span><span style=3D"color:rgb(0,128,0);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">=3D&quot;80&quot;<br></span><span style=3D=
+"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">   =
+       </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background=
+-color:rgb(239,239,239)">basicAuthUsername</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#app=
+licationId}&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold=
+;background-color:rgb(239,239,239)">basicAuthPassword</span><span style=3D"=
+color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&=
+quot;#{#applicationSecret}&quot;</span><span style=3D"background-color:rgb(=
+239,239,239)">&gt;</span><br>    <span style=3D"background-color:rgb(239,23=
+9,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;back=
+ground-color:rgb(239,239,239)">http</span><span style=3D"background-color:r=
+gb(239,239,239)">&gt;</span><br>    <span style=3D"background-color:rgb(239=
+,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">try</span><span style=3D"background-color:=
+rgb(239,239,239)">&gt;</span><br>        <span style=3D"background-color:rg=
+b(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld;background-color:rgb(239,239,239)">var </span><span style=3D"color:rgb(0=
+,0,255);font-weight:bold;background-color:rgb(239,239,239)">name</span><spa=
+n style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239=
+,239)">=3D&quot;authTokenResponseJson&quot;<br></span><span style=3D"color:=
+rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">          =
+   </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-col=
+or:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold;background-color:rgb(239,239,239)">=3D&quot;#{T(com.unifier.core.u=
+tils.JsonUtils).stringToJson(#authTokenResponse)}&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;authToken&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;#{#authTokenResponseJson.get(&#39;access_to=
+ken&#39;).getAsString()}&quot;</span><span style=3D"background-color:rgb(23=
+9,239,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(239=
+,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">var </span><span style=3D"color:rgb(0,0,25=
+5);font-weight:bold;background-color:rgb(239,239,239)">name</span><span sty=
+le=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)=
+">=3D&quot;authToken&quot; </span><span style=3D"color:rgb(0,0,255);font-we=
+ight:bold;background-color:rgb(239,239,239)">value</span><span style=3D"col=
+or:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quo=
+t;Bearer #{#authToken}&quot;</span><span style=3D"background-color:rgb(239,=
+239,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(239,2=
+39,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;back=
+ground-color:rgb(239,239,239)">log </span><span style=3D"color:rgb(0,0,255)=
+;font-weight:bold;background-color:rgb(239,239,239)">level</span><span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)"=
+>=3D&quot;info&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:b=
+old;background-color:rgb(239,239,239)">value</span><span style=3D"color:rgb=
+(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;Auth=
+ Token:#{#authToken}&quot;</span><span style=3D"background-color:rgb(239,23=
+9,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(239,239=
+,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backgr=
+ound-color:rgb(239,239,239)">catch</span><span style=3D"background-color:rg=
+b(239,239,239)">&gt;</span><br>            <span style=3D"background-color:=
+rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold;background-color:rgb(239,239,239)">scriptError </span><span style=3D"c=
+olor:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">messa=
+ge</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-colo=
+r:rgb(239,239,239)">=3D&quot;Flipkart failed to provide AUTH_TOKEN. Message=
+: #{#authTokenResponse}&quot;</span><span style=3D"background-color:rgb(239=
+,239,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(239,=
+239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">catch</span><span style=3D"background-colo=
+r:rgb(239,239,239)">&gt;</span><br>    <span style=3D"background-color:rgb(=
+239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d;background-color:rgb(239,239,239)">try</span><span style=3D"background-co=
+lor:rgb(239,239,239)">&gt;</span><br><br>    <span style=3D"background-colo=
+r:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold;background-color:rgb(239,239,239)">http </span><span style=3D"color:=
+rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">url</span>=
+<span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239=
+,239,239)">=3D&quot;#{#apiServerName}/sellers/v2/returns&quot; </span><span=
+ style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,=
+239)">method</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;get&quot; </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">var</spa=
+n><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(2=
+39,239,239)">=3D&quot;getOrdersResponse&quot;<br></span><span style=3D"colo=
+r:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">        =
+  </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-colo=
+r:rgb(239,239,239)">timeout</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold;background-color:rgb(239,239,239)">=3D&quot;80&quot;</span><span =
+style=3D"background-color:rgb(239,239,239)">&gt;</span><br>        <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">header </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold=
+;background-color:rgb(239,239,239)">=3D&quot;Content-Type&quot; </span><spa=
+n style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239=
+,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;application/json&quot;</span><span s=
+tyle=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">header </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold=
+;background-color:rgb(239,239,239)">=3D&quot;Authorization&quot; </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;back=
+ground-color:rgb(239,239,239)">=3D&quot;#{#authToken}&quot;</span><span sty=
+le=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span styl=
+e=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">param </span>=
+<span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239=
+,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">=3D&quot;source&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;customer_return&quot;</span><span style=3D"=
+background-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"backg=
+round-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128)=
+;font-weight:bold;background-color:rgb(239,239,239)">http</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br><br><br>    <span sty=
+le=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rg=
+b(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">method </spa=
+n><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(2=
+39,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;=
+background-color:rgb(239,239,239)">=3D&quot;getFirstPageOrders&quot;</span>=
+<span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>        <s=
+pan style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">retry=
+ </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color=
+:rgb(239,239,239)">count</span><span style=3D"color:rgb(0,128,0);font-weigh=
+t:bold;background-color:rgb(239,239,239)">=3D&quot;3&quot; </span><span sty=
+le=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)=
+">delayInMillis</span><span style=3D"color:rgb(0,128,0);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">=3D&quot;2000&quot;</span><span style=3D"b=
+ackground-color:rgb(239,239,239)">&gt;</span><br>            <span style=3D=
+"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0=
+,128);font-weight:bold;background-color:rgb(239,239,239)">log </span><span =
+style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,2=
+39)">level</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backgro=
+und-color:rgb(239,239,239)">=3D&quot;info&quot; </span><span style=3D"color=
+:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</sp=
+an><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(=
+239,239,239)">=3D&quot;Fetching page #{#currPage}&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">/&gt;</span><br>            <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">http </span=
+><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(23=
+9,239,239)">url</span><span style=3D"color:rgb(0,128,0);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">=3D&quot;#{#url}&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+method</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-=
+color:rgb(239,239,239)">=3D&quot;post&quot; </span><span style=3D"color:rgb=
+(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">var</span><sp=
+an style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,23=
+9,239)">=3D&quot;getOrdersResponse&quot;<br></span><span style=3D"color:rgb=
+(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">             =
+     </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-c=
+olor:rgb(239,239,239)">timeout</span><span style=3D"color:rgb(0,128,0);font=
+-weight:bold;background-color:rgb(239,239,239)">=3D&quot;80&quot;</span><sp=
+an style=3D"background-color:rgb(239,239,239)">&gt;</span><br>             =
+   <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">=
+header </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background=
+-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-=
+weight:bold;background-color:rgb(239,239,239)">=3D&quot;Content-Type&quot; =
+</span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:=
+rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight=
+:bold;background-color:rgb(239,239,239)">=3D&quot;application/json&quot;</s=
+pan><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>     =
+           <span style=3D"background-color:rgb(239,239,239)">&lt;</span><sp=
+an style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,23=
+9,239)">header </span><span style=3D"color:rgb(0,0,255);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,=
+0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;Authorizati=
+on&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgrou=
+nd-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);fo=
+nt-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#authToken}&qu=
+ot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br=
+>                <span style=3D"background-color:rgb(239,239,239)">&lt;</sp=
+an><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(=
+239,239,239)">body</span><span style=3D"background-color:rgb(239,239,239)">=
+&gt;</span>#{#requestBody}<span style=3D"background-color:rgb(239,239,239)"=
+>&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-=
+color:rgb(239,239,239)">body</span><span style=3D"background-color:rgb(239,=
+239,239)">&gt;</span><br>            <span style=3D"background-color:rgb(23=
+9,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;=
+background-color:rgb(239,239,239)">http</span><span style=3D"background-col=
+or:rgb(239,239,239)">&gt;</span><br>            <span style=3D"background-c=
+olor:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold;background-color:rgb(239,239,239)">log </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">level</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb=
+(239,239,239)">=3D&quot;info&quot; </span><span style=3D"color:rgb(0,0,255)=
+;font-weight:bold;background-color:rgb(239,239,239)">value</span><span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)"=
+>=3D&quot;getFirstPageOrdersResponse: #{#getOrdersResponse}&quot;</span><sp=
+an style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>            =
+<span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D=
+"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">if =
+</span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:=
+rgb(239,239,239)">condition</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold;background-color:rgb(239,239,239)">=3D&quot;#{T(com.unifier.core.=
+utils.StringUtils).isNotBlank(#getOrdersResponse) and !#getOrdersResponse.c=
+ontains(&#39;INTERNAL SERVER ERROR&#39;)}&quot;</span><span style=3D"backgr=
+ound-color:rgb(239,239,239)">&gt;</span><br>                <span style=3D"=
+background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,=
+128);font-weight:bold;background-color:rgb(239,239,239)">var </span><span s=
+tyle=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,23=
+9)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">=3D&quot;getOrdersResponseJson&quot;  </span><spa=
+n style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239=
+,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;#{T(com.unifier.core.utils.JsonUtils=
+).stringToJson(#getOrdersResponse)}&quot;</span><span style=3D"background-c=
+olor:rgb(239,239,239)">/&gt;</span><br>                <span style=3D"backg=
+round-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);=
+font-weight:bold;background-color:rgb(239,239,239)">try</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br>                    <=
+span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"=
+color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var =
+</span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:=
+rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight=
+:bold;background-color:rgb(239,239,239)">=3D&quot;#{#getOrdersResponseJson.=
+get(&#39;orderItems&#39;)}&quot;</span><span style=3D"background-color:rgb(=
+239,239,239)">/&gt;</span><br>                    <span style=3D"background=
+-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-=
+weight:bold;background-color:rgb(239,239,239)">catch</span><span style=3D"b=
+ackground-color:rgb(239,239,239)">&gt;</span><br>                        <s=
+pan style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">scrip=
+tError </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background=
+-color:rgb(239,239,239)">message</span><span style=3D"color:rgb(0,128,0);fo=
+nt-weight:bold;background-color:rgb(239,239,239)">=3D&quot;Error parsing fl=
+ipkart&#39;s getOrders response. Response- #{#getOrdersResponse}&quot;</spa=
+n><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>       =
+             <span style=3D"background-color:rgb(239,239,239)">&lt;/</span>=
+<span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239=
+,239,239)">catch</span><span style=3D"background-color:rgb(239,239,239)">&g=
+t;</span><br>                <span style=3D"background-color:rgb(239,239,23=
+9)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backgrou=
+nd-color:rgb(239,239,239)">try</span><span style=3D"background-color:rgb(23=
+9,239,239)">&gt;</span><br>                <span style=3D"background-color:=
+rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold;background-color:rgb(239,239,239)">var </span><span style=3D"color:rgb=
+(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">name</span><s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,2=
+39,239)">=3D&quot;currPage&quot; </span><span style=3D"color:rgb(0,0,255);f=
+ont-weight:bold;background-color:rgb(239,239,239)">value</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=
+=3D&quot;#{#currPage+1}&quot;</span><span style=3D"background-color:rgb(239=
+,239,239)">/&gt;</span><br>                <span style=3D"background-color:=
+rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold;background-color:rgb(239,239,239)">else</span><span style=3D"backgroun=
+d-color:rgb(239,239,239)">&gt;</span><br>                    <span style=3D=
+"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0=
+,128);font-weight:bold;background-color:rgb(239,239,239)">scriptError </spa=
+n><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(2=
+39,239,239)">message</span><span style=3D"color:rgb(0,128,0);font-weight:bo=
+ld;background-color:rgb(239,239,239)">=3D&quot;Flipkart failed to respond. =
+Message- #{#getOrdersResponse}&quot;</span><span style=3D"background-color:=
+rgb(239,239,239)">/&gt;</span><br>                <span style=3D"background=
+-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold;background-color:rgb(239,239,239)">else</span><span style=3D"b=
+ackground-color:rgb(239,239,239)">&gt;</span><br>            <span style=3D=
+"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,=
+0,128);font-weight:bold;background-color:rgb(239,239,239)">if</span><span s=
+tyle=3D"background-color:rgb(239,239,239)">&gt;</span><br>        <span sty=
+le=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:r=
+gb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">retry</span=
+><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span=
+ style=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"col=
+or:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">method<=
+/span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br><br>=
+    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)"=
+>method </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font=
+-weight:bold;background-color:rgb(239,239,239)">=3D&quot;getNextPageOrders&=
+quot;</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><b=
+r>        <span style=3D"background-color:rgb(239,239,239)">&lt;</span><spa=
+n style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239=
+,239)">retry </span><span style=3D"color:rgb(0,0,255);font-weight:bold;back=
+ground-color:rgb(239,239,239)">count</span><span style=3D"color:rgb(0,128,0=
+);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;3&quot; </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">delayInMillis</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold;background-color:rgb(239,239,239)">=3D&quot;2000&quot;</span><spa=
+n style=3D"background-color:rgb(239,239,239)">&gt;</span><br>            <s=
+pan style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">log <=
+/span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:r=
+gb(239,239,239)">level</span><span style=3D"color:rgb(0,128,0);font-weight:=
+bold;background-color:rgb(239,239,239)">=3D&quot;info&quot; </span><span st=
+yle=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239=
+)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">=3D&quot;Fetching page #{#currPage}&quot;</span><=
+span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>          =
+  <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">=
+http </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-c=
+olor:rgb(239,239,239)">url</span><span style=3D"color:rgb(0,128,0);font-wei=
+ght:bold;background-color:rgb(239,239,239)">=3D&quot;#{#url}&quot; </span><=
+span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,=
+239,239)">method</span><span style=3D"color:rgb(0,128,0);font-weight:bold;b=
+ackground-color:rgb(239,239,239)">=3D&quot;get&quot; </span><span style=3D"=
+color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">var<=
+/span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:r=
+gb(239,239,239)">=3D&quot;getOrdersResponse&quot;<br></span><span style=3D"=
+color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">    =
+              </span><span style=3D"color:rgb(0,0,255);font-weight:bold;bac=
+kground-color:rgb(239,239,239)">timeout</span><span style=3D"color:rgb(0,12=
+8,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;80&quot;<=
+/span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    =
+            <span style=3D"background-color:rgb(239,239,239)">&lt;</span><s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,2=
+39,239)">header </span><span style=3D"color:rgb(0,0,255);font-weight:bold;b=
+ackground-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128=
+,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;Content-Ty=
+pe&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgrou=
+nd-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);fo=
+nt-weight:bold;background-color:rgb(239,239,239)">=3D&quot;application/json=
+&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span>=
+<br>                <span style=3D"background-color:rgb(239,239,239)">&lt;<=
+/span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:r=
+gb(239,239,239)">header </span><span style=3D"color:rgb(0,0,255);font-weigh=
+t:bold;background-color:rgb(239,239,239)">name</span><span style=3D"color:r=
+gb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;Au=
+thorization&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold=
+;background-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,=
+128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#auth=
+Token}&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;<=
+/span><br>            <span style=3D"background-color:rgb(239,239,239)">&lt=
+;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-colo=
+r:rgb(239,239,239)">http</span><span style=3D"background-color:rgb(239,239,=
+239)">&gt;</span><br>            <span style=3D"background-color:rgb(239,23=
+9,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backg=
+round-color:rgb(239,239,239)">log </span><span style=3D"color:rgb(0,0,255);=
+font-weight:bold;background-color:rgb(239,239,239)">level</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=
+=3D&quot;info&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bo=
+ld;background-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(=
+0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;getNe=
+xtPageOrdersResponse: #{#getOrdersResponse}&quot;</span><span style=3D"back=
+ground-color:rgb(239,239,239)">/&gt;</span><br>            <span style=3D"b=
+ackground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,1=
+28);font-weight:bold;background-color:rgb(239,239,239)">if </span><span sty=
+le=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)=
+">condition</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backgr=
+ound-color:rgb(239,239,239)">=3D&quot;#{T(com.unifier.core.utils.StringUtil=
+s).isNotBlank(#getOrdersResponse) and !#getOrdersResponse.contains(&#39;SER=
+VER ERROR&#39;)}&quot;</span><span style=3D"background-color:rgb(239,239,23=
+9)">&gt;</span><br>                <span style=3D"background-color:rgb(239,=
+239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;bac=
+kground-color:rgb(239,239,239)">var </span><span style=3D"color:rgb(0,0,255=
+);font-weight:bold;background-color:rgb(239,239,239)">name</span><span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)"=
+>=3D&quot;getOrdersResponseJson&quot; </span><span style=3D"color:rgb(0,0,2=
+55);font-weight:bold;background-color:rgb(239,239,239)">value</span><span s=
+tyle=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,23=
+9)">=3D&quot;#{T(com.unifier.core.utils.JsonUtils).stringToJson(#getOrdersR=
+esponse)}&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&g=
+t;</span><br>                <span style=3D"background-color:rgb(239,239,23=
+9)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">try</span><span style=3D"background-color:rgb(239=
+,239,239)">&gt;</span><br>                    <span style=3D"background-col=
+or:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weig=
+ht:bold;background-color:rgb(239,239,239)">var </span><span style=3D"color:=
+rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</spa=
+n><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(2=
+39,239,239)">=3D&quot;#{#getOrdersResponseJson.get(&#39;orderItems&#39;)}&q=
+uot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><b=
+r>                    <span style=3D"background-color:rgb(239,239,239)">&lt=
+;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color=
+:rgb(239,239,239)">catch</span><span style=3D"background-color:rgb(239,239,=
+239)">&gt;</span><br>                        <span style=3D"background-colo=
+r:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weigh=
+t:bold;background-color:rgb(239,239,239)">scriptError </span><span style=3D=
+"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">mes=
+sage</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-co=
+lor:rgb(239,239,239)">=3D&quot;Error in parsing flipkart&#39;s getOrders re=
+sponse. Response- #{#getOrdersResponse}&quot;</span><span style=3D"backgrou=
+nd-color:rgb(239,239,239)">/&gt;</span><br>                    <span style=
+=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">catch</span><=
+span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>           =
+     <span style=3D"background-color:rgb(239,239,239)">&lt;/</span><span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239=
+)">try</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><=
+br>                <span style=3D"background-color:rgb(239,239,239)">&lt;</=
+span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rg=
+b(239,239,239)">var </span><span style=3D"color:rgb(0,0,255);font-weight:bo=
+ld;background-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;currPa=
+ge&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgrou=
+nd-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);fo=
+nt-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#currPage+1}&q=
+uot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><b=
+r>                <span style=3D"background-color:rgb(239,239,239)">&lt;</s=
+pan><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb=
+(239,239,239)">else</span><span style=3D"background-color:rgb(239,239,239)"=
+>&gt;</span><br>                    <span style=3D"background-color:rgb(239=
+,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">scriptError </span><span style=3D"color:rg=
+b(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">message</spa=
+n><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(2=
+39,239,239)">=3D&quot;Flipkart has failed to respond for next page. Message=
+- #{#getOrdersResponse}&quot;</span><span style=3D"background-color:rgb(239=
+,239,239)">/&gt;</span><br>                <span style=3D"background-color:=
+rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight=
+:bold;background-color:rgb(239,239,239)">else</span><span style=3D"backgrou=
+nd-color:rgb(239,239,239)">&gt;</span><br>            <span style=3D"backgr=
+ound-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);=
+font-weight:bold;background-color:rgb(239,239,239)">if</span><span style=3D=
+"background-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"b=
+ackground-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,=
+128);font-weight:bold;background-color:rgb(239,239,239)">retry</span><span =
+style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=
+=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">method</span>=
+<span style=3D"background-color:rgb(239,239,239)">&gt;</span><br><br>    <s=
+pan style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"c=
+olor:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var <=
+/span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:r=
+gb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:b=
+old;background-color:rgb(239,239,239)">=3D&quot;currPage&quot; </span><span=
+ style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,=
+239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backgr=
+ound-color:rgb(239,239,239)">=3D&quot;#{1}&quot;</span><span style=3D"backg=
+round-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"background=
+-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-=
+weight:bold;background-color:rgb(239,239,239)">var </span><span style=3D"co=
+lor:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">name</=
+span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rg=
+b(239,239,239)">=3D&quot;partialOrderDetailMap&quot; </span><span style=3D"=
+color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">valu=
+e</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color=
+:rgb(239,239,239)">=3D&quot;#{new java.util.HashMap()}&quot;</span><span st=
+yle=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;requestBody&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span>&lt;![CDATA[#{#x}{<br>   =
+      &quot;filter&quot;: {<br>         &quot;dispatchAfterDate&quot;: {<br=
+>             &quot;fromDate&quot;: &quot;#{T(com.unifier.core.utils.DateUt=
+ils).dateToString(T(com.unifier.core.utils.DateUtils).addToDate(T(com.unifi=
+er.core.utils.DateUtils).getCurrentTime(), T(java.util.Calendar).DATE, -30)=
+, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss+05:30&quot;)}&quot;,<br>            &=
+quot;toDate&quot;: &quot;#{T(com.unifier.core.utils.DateUtils).dateToString=
+(T(com.unifier.core.utils.DateUtils).getCurrentTime(), &quot;yyyy-MM-dd&#39=
+;T&#39;HH:mm:ss+05:30&quot;)}&quot;<br>            },<br>         &quot;sta=
+tes&quot; : [&quot;APPROVED&quot;]<br>         }<br>         }]]&gt;<br>   =
+ <span style=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=
+=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">=
+var</span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>=
+    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span styl=
+e=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)"=
+>log </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-c=
+olor:rgb(239,239,239)">level</span><span style=3D"color:rgb(0,128,0);font-w=
+eight:bold;background-color:rgb(239,239,239)">=3D&quot;info&quot; </span><s=
+pan style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,2=
+39,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;bac=
+kground-color:rgb(239,239,239)">=3D&quot;#{#requestBody}&quot;</span><span =
+style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;url&quot; </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb=
+(239,239,239)">=3D&quot;#{#apiServerName}/sellers/v2/orders/search&quot;</s=
+pan><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <=
+span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"=
+color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">invo=
+ke </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-col=
+or:rgb(239,239,239)">method</span><span style=3D"color:rgb(0,128,0);font-we=
+ight:bold;background-color:rgb(239,239,239)">=3D&quot;getFirstPageOrders&qu=
+ot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br=
+>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span sty=
+le=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)=
+">var </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-=
+color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-w=
+eight:bold;background-color:rgb(239,239,239)">=3D&quot;ordersItr&quot; </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">value</span><span style=3D"color:rgb(0,128,0);font-weight:bol=
+d;background-color:rgb(239,239,239)">=3D&quot;#{#getOrdersResponseJson.get(=
+&#39;orderItems&#39;).iterator()}&quot;</span><span style=3D"background-col=
+or:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"background-color:rg=
+b(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bo=
+ld;background-color:rgb(239,239,239)">while </span><span style=3D"color:rgb=
+(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">condition</sp=
+an><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(=
+239,239,239)">=3D&quot;#{#ordersItr.hasNext()}&quot;</span><span style=3D"b=
+ackground-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"bac=
+kground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128=
+);font-weight:bold;background-color:rgb(239,239,239)">var </span><span styl=
+e=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)"=
+>name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;ordersItrElement&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;#{#ordersItr.next()}&quot;</span><span styl=
+e=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">if </span><spa=
+n style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239=
+,239)">condition</span><span style=3D"color:rgb(0,128,0);font-weight:bold;b=
+ackground-color:rgb(239,239,239)">=3D&quot;#{#ordersItrElement.get(&#39;sta=
+tus&#39;).getAsString().equals(&#39;RETURN_REQUESTED&#39;) and #ordersItrEl=
+ement.get(&#39;quantitiy&#39;).getAsInt() &amp;gt; 1}&quot;</span><span sty=
+le=3D"background-color:rgb(239,239,239)">&gt;</span><br>            <span s=
+tyle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">log </span=
+><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(23=
+9,239,239)">level</span><span style=3D"color:rgb(0,128,0);font-weight:bold;=
+background-color:rgb(239,239,239)">=3D&quot;info&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;ordersElement : #{#ordersItrElement.toStrin=
+g()}&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</s=
+pan><br>        <span style=3D"background-color:rgb(239,239,239)">&lt;/</sp=
+an><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(=
+239,239,239)">if</span><span style=3D"background-color:rgb(239,239,239)">&g=
+t;</span><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;/</s=
+pan><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb=
+(239,239,239)">while</span><span style=3D"background-color:rgb(239,239,239)=
+">&gt;</span><br><br>    <span style=3D"background-color:rgb(239,239,239)">=
+&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-co=
+lor:rgb(239,239,239)">var </span><span style=3D"color:rgb(0,0,255);font-wei=
+ght:bold;background-color:rgb(239,239,239)">name</span><span style=3D"color=
+:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;=
+hasMore&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;bac=
+kground-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,=
+0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#getOrder=
+sResponseJson.get(&#39;hasMore&#39;).getAsBoolean()}&quot;</span><span styl=
+e=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"=
+background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,=
+128);font-weight:bold;background-color:rgb(239,239,239)">while </span><span=
+ style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,=
+239)">condition</span><span style=3D"color:rgb(0,128,0);font-weight:bold;ba=
+ckground-color:rgb(239,239,239)">=3D&quot;#{#hasMore}&quot;</span><span sty=
+le=3D"background-color:rgb(239,239,239)">&gt;</span><br>        <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;url&quot; </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb=
+(239,239,239)">=3D&quot;#{#apiServerName}/sellers#{#getOrdersResponseJson.g=
+et(&#39;nextPageUrl&#39;).getAsString()}&quot;</span><span style=3D"backgro=
+und-color:rgb(239,239,239)">/&gt;</span><br>        <span style=3D"backgrou=
+nd-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);fon=
+t-weight:bold;background-color:rgb(239,239,239)">invoke </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+method</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-=
+color:rgb(239,239,239)">=3D&quot;getNextPageOrders&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span><sp=
+an style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,23=
+9,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;ordersItr&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;#{#getOrdersResponseJson.get(&#39;orderItem=
+s&#39;).iterator()}&quot;</span><span style=3D"background-color:rgb(239,239=
+,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(239,239,=
+239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backgro=
+und-color:rgb(239,239,239)">while </span><span style=3D"color:rgb(0,0,255);=
+font-weight:bold;background-color:rgb(239,239,239)">condition</span><span s=
+tyle=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,23=
+9)">=3D&quot;#{#ordersItr.hasNext()}&quot;</span><span style=3D"background-=
+color:rgb(239,239,239)">&gt;</span><br>            <span style=3D"backgroun=
+d-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font=
+-weight:bold;background-color:rgb(239,239,239)">var </span><span style=3D"c=
+olor:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">name<=
+/span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:r=
+gb(239,239,239)">=3D&quot;ordersItrElement&quot; </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb=
+(239,239,239)">=3D&quot;#{#ordersItr.next()}&quot;</span><span style=3D"bac=
+kground-color:rgb(239,239,239)">/&gt;</span><br>            <span style=3D"=
+background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,=
+128);font-weight:bold;background-color:rgb(239,239,239)">if </span><span st=
+yle=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239=
+)">condition</span><span style=3D"color:rgb(0,128,0);font-weight:bold;backg=
+round-color:rgb(239,239,239)">=3D&quot;#{#ordersItrElement.get(&#39;status&=
+#39;).getAsString().equals(&#39;RETURN_REQUESTED&#39;) and #ordersItrElemen=
+t.get(&#39;quantitiy&#39;).getAsInt() &amp;gt; 1}&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br>                <span=
+ style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">log </sp=
+an><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(=
+239,239,239)">level</span><span style=3D"color:rgb(0,128,0);font-weight:bol=
+d;background-color:rgb(239,239,239)">=3D&quot;info&quot; </span><span style=
+=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">=
+value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-c=
+olor:rgb(239,239,239)">=3D&quot;ordersElement : #{#ordersItrElement.toStrin=
+g()}&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</s=
+pan><br>            <span style=3D"background-color:rgb(239,239,239)">&lt;/=
+</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:=
+rgb(239,239,239)">if</span><span style=3D"background-color:rgb(239,239,239)=
+">&gt;</span><br>        <span style=3D"background-color:rgb(239,239,239)">=
+&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-c=
+olor:rgb(239,239,239)">while</span><span style=3D"background-color:rgb(239,=
+239,239)">&gt;</span><br>        <span style=3D"background-color:rgb(239,23=
+9,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backg=
+round-color:rgb(239,239,239)">var </span><span style=3D"color:rgb(0,0,255);=
+font-weight:bold;background-color:rgb(239,239,239)">name</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=
+=3D&quot;hasMore&quot; </span><span style=3D"color:rgb(0,0,255);font-weight=
+:bold;background-color:rgb(239,239,239)">value</span><span style=3D"color:r=
+gb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{=
+#getOrdersResponseJson.get(&#39;hasMore&#39;).getAsBoolean()}&quot;</span><=
+span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span =
+style=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"colo=
+r:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">while</s=
+pan><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br><br><b=
+r>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span st=
+yle=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239=
+)">http </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">url</span><span style=3D"color:rgb(0,128,0);font-=
+weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{#apiServerName}/s=
+ellers/v2/returns&quot; </span><span style=3D"color:rgb(0,0,255);font-weigh=
+t:bold;background-color:rgb(239,239,239)">method</span><span style=3D"color=
+:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;=
+get&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;backgro=
+und-color:rgb(239,239,239)">var</span><span style=3D"color:rgb(0,128,0);fon=
+t-weight:bold;background-color:rgb(239,239,239)">=3D&quot;returnResponse&qu=
+ot;<br></span><span style=3D"color:rgb(0,128,0);font-weight:bold;background=
+-color:rgb(239,239,239)">          </span><span style=3D"color:rgb(0,0,255)=
+;font-weight:bold;background-color:rgb(239,239,239)">timeout</span><span st=
+yle=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239=
+)">=3D&quot;80&quot;</span><span style=3D"background-color:rgb(239,239,239)=
+">&gt;</span><br>        <span style=3D"background-color:rgb(239,239,239)">=
+&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-co=
+lor:rgb(239,239,239)">header </span><span style=3D"color:rgb(0,0,255);font-=
+weight:bold;background-color:rgb(239,239,239)">name</span><span style=3D"co=
+lor:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&qu=
+ot;Content-Type&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:=
+bold;background-color:rgb(239,239,239)">value</span><span style=3D"color:rg=
+b(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;app=
+lication/json&quot;</span><span style=3D"background-color:rgb(239,239,239)"=
+>/&gt;</span><br>        <span style=3D"background-color:rgb(239,239,239)">=
+&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-co=
+lor:rgb(239,239,239)">header </span><span style=3D"color:rgb(0,0,255);font-=
+weight:bold;background-color:rgb(239,239,239)">name</span><span style=3D"co=
+lor:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&qu=
+ot;Authorization&quot; </span><span style=3D"color:rgb(0,0,255);font-weight=
+:bold;background-color:rgb(239,239,239)">value</span><span style=3D"color:r=
+gb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;#{=
+#authToken}&quot;</span><span style=3D"background-color:rgb(239,239,239)">/=
+&gt;</span><br>        <span style=3D"background-color:rgb(239,239,239)">&l=
+t;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-colo=
+r:rgb(239,239,239)">param </span><span style=3D"color:rgb(0,0,255);font-wei=
+ght:bold;background-color:rgb(239,239,239)">name</span><span style=3D"color=
+:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;=
+source&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;back=
+ground-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0=
+);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;customer_ret=
+urn&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</sp=
+an><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;/</span><s=
+pan style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239,2=
+39,239)">http</span><span style=3D"background-color:rgb(239,239,239)">&gt;<=
+/span><br><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;</s=
+pan><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb=
+(239,239,239)">log </span><span style=3D"color:rgb(0,0,255);font-weight:bol=
+d;background-color:rgb(239,239,239)">level</span><span style=3D"color:rgb(0=
+,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;info&q=
+uot; </span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-c=
+olor:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);font-w=
+eight:bold;background-color:rgb(239,239,239)">=3D&quot;returnResponse: #{#r=
+eturnResponse}&quot;</span><span style=3D"background-color:rgb(239,239,239)=
+">/&gt;</span><br>    <span style=3D"background-color:rgb(239,239,239)">&lt=
+;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-color=
+:rgb(239,239,239)">if </span><span style=3D"color:rgb(0,0,255);font-weight:=
+bold;background-color:rgb(239,239,239)">condition</span><span style=3D"colo=
+r:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot=
+;#{T(com.unifier.core.utils.StringUtils).isNotBlank(#returnResponse) and !#=
+returnResponse.contains(&#39;SERVER ERROR&#39;)}&quot;</span><span style=3D=
+"background-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"b=
+ackground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,1=
+28);font-weight:bold;background-color:rgb(239,239,239)">var </span><span st=
+yle=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239=
+)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background=
+-color:rgb(239,239,239)">=3D&quot;returnResponseJson&quot; </span><span sty=
+le=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)=
+">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background=
+-color:rgb(239,239,239)">=3D&quot;#{T(com.unifier.core.utils.JsonUtils).str=
+ingToJson(#returnResponse)}&quot;</span><span style=3D"background-color:rgb=
+(239,239,239)">/&gt;</span><br>        <span style=3D"background-color:rgb(=
+239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold=
+;background-color:rgb(239,239,239)">try</span><span style=3D"background-col=
+or:rgb(239,239,239)">&gt;</span><br>            <span style=3D"background-c=
+olor:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold;background-color:rgb(239,239,239)">var </span><span style=3D"colo=
+r:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">value</s=
+pan><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb=
+(239,239,239)">=3D&quot;#{#returnResponseJson.get(&#39;returnItems&#39;)}&q=
+uot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><b=
+r>            <span style=3D"background-color:rgb(239,239,239)">&lt;</span>=
+<span style=3D"color:rgb(0,0,128);font-weight:bold;background-color:rgb(239=
+,239,239)">catch</span><span style=3D"background-color:rgb(239,239,239)">&g=
+t;</span><br>                <span style=3D"background-color:rgb(239,239,23=
+9)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;backgroun=
+d-color:rgb(239,239,239)">scriptError </span><span style=3D"color:rgb(0,0,2=
+55);font-weight:bold;background-color:rgb(239,239,239)">message</span><span=
+ style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,=
+239)">=3D&quot;Error in parsing flipkart&#39;s getOrders response. Response=
+- #{#getOrdersResponse}&quot;</span><span style=3D"background-color:rgb(239=
+,239,239)">/&gt;</span><br>            <span style=3D"background-color:rgb(=
+239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-weight:bol=
+d;background-color:rgb(239,239,239)">catch</span><span style=3D"background-=
+color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"background-co=
+lor:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold;background-color:rgb(239,239,239)">try</span><span style=3D"backg=
+round-color:rgb(239,239,239)">&gt;</span><br>        <span style=3D"backgro=
+und-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);fo=
+nt-weight:bold;background-color:rgb(239,239,239)">else</span><span style=3D=
+"background-color:rgb(239,239,239)">&gt;</span><br>            <span style=
+=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(=
+0,0,128);font-weight:bold;background-color:rgb(239,239,239)">scriptError </=
+span><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rg=
+b(239,239,239)">message</span><span style=3D"color:rgb(0,128,0);font-weight=
+:bold;background-color:rgb(239,239,239)">=3D&quot;Flipkart has failed to re=
+spond for next page. Message- #{#getOrdersResponse}&quot;</span><span style=
+=3D"background-color:rgb(239,239,239)">/&gt;</span><br>        <span style=
+=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb=
+(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">else</span><s=
+pan style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">if</span><=
+span style=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span s=
+tyle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:=
+rgb(0,0,128);font-weight:bold;background-color:rgb(239,239,239)">var </span=
+><span style=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(23=
+9,239,239)">name</span><span style=3D"color:rgb(0,128,0);font-weight:bold;b=
+ackground-color:rgb(239,239,239)">=3D&quot;returnItr&quot; </span><span sty=
+le=3D"color:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)=
+">value</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background=
+-color:rgb(239,239,239)">=3D&quot;#{#returnResponseJson.get(&#39;returnItem=
+s&#39;).iterator()}&quot;</span><span style=3D"background-color:rgb(239,239=
+,239)">/&gt;</span><br>    <span style=3D"background-color:rgb(239,239,239)=
+">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;background-=
+color:rgb(239,239,239)">while </span><span style=3D"color:rgb(0,0,255);font=
+-weight:bold;background-color:rgb(239,239,239)">condition</span><span style=
+=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=
+=3D&quot;#{#returnItr.hasNext()}&quot;</span><span style=3D"background-colo=
+r:rgb(239,239,239)">&gt;</span><br>        <span style=3D"background-color:=
+rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:=
+bold;background-color:rgb(239,239,239)">var </span><span style=3D"color:rgb=
+(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">name</span><s=
+pan style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,2=
+39,239)">=3D&quot;returnItrElement&quot; </span><span style=3D"color:rgb(0,=
+0,255);font-weight:bold;background-color:rgb(239,239,239)">value</span><spa=
+n style=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239=
+,239)">=3D&quot;#{#returnItr.next()}&quot;</span><span style=3D"background-=
+color:rgb(239,239,239)">/&gt;</span><br>        <span style=3D"background-c=
+olor:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-we=
+ight:bold;background-color:rgb(239,239,239)">if </span><span style=3D"color=
+:rgb(0,0,255);font-weight:bold;background-color:rgb(239,239,239)">condition=
+</span><span style=3D"color:rgb(0,128,0);font-weight:bold;background-color:=
+rgb(239,239,239)">=3D&quot;#{#returnItrElement.get(&#39;quantitiy&#39;).get=
+AsInt() &amp;gt; 1}&quot;</span><span style=3D"background-color:rgb(239,239=
+,239)">&gt;</span><br>            <span style=3D"background-color:rgb(239,2=
+39,239)">&lt;</span><span style=3D"color:rgb(0,0,128);font-weight:bold;back=
+ground-color:rgb(239,239,239)">log </span><span style=3D"color:rgb(0,0,255)=
+;font-weight:bold;background-color:rgb(239,239,239)">level</span><span styl=
+e=3D"color:rgb(0,128,0);font-weight:bold;background-color:rgb(239,239,239)"=
+>=3D&quot;info&quot; </span><span style=3D"color:rgb(0,0,255);font-weight:b=
+old;background-color:rgb(239,239,239)">value</span><span style=3D"color:rgb=
+(0,128,0);font-weight:bold;background-color:rgb(239,239,239)">=3D&quot;retu=
+rnElement : #{#returnItrElement.toString()}&quot;</span><span style=3D"back=
+ground-color:rgb(239,239,239)">/&gt;</span><br>        <span style=3D"backg=
+round-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128)=
+;font-weight:bold;background-color:rgb(239,239,239)">if</span><span style=
+=3D"background-color:rgb(239,239,239)">&gt;</span><br>    <span style=3D"ba=
+ckground-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,1=
+28);font-weight:bold;background-color:rgb(239,239,239)">while</span><span s=
+tyle=3D"background-color:rgb(239,239,239)">&gt;</span><br><span style=3D"ba=
+ckground-color:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,1=
+28);font-weight:bold;background-color:rgb(239,239,239)">scraper</span><span=
+ style=3D"background-color:rgb(239,239,239)">&gt;</span></pre></div><div di=
+r=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signature"><div dir=3D"=
+ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, Unicommerce</di=
+v><div>+91 9999-872-129</div></div></div>
+
+--001a1143f146f8930a053be3e1a6--

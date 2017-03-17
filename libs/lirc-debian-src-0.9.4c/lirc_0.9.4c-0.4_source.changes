@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 28 Oct 2016 15:46:34 +0200
+Source: lirc
+Binary: lirc lirc-doc liblirc0 liblircclient0 liblircclient-dev liblirc-dev liblirc-client0 lirc-x
+Architecture: source
+Version: 0.9.4c-0.4
+Distribution: unstable
+Urgency: low
+Maintainer: lirc Maintainer Team <pkg-lirc-maint@lists.alioth.debian.org>
+Changed-By: Alec Leamas <leamas.alec@gmail.com>
+Description:
+ liblirc-client0 - infra-red remote control support - client library
+ liblirc-dev - Infra-red remote control support - development files
+ liblirc0   - Infra-red remote control support - Run-time libraries
+ liblircclient-dev - Transitional placeholder for obsoleted liblircclient-dev
+ liblircclient0 - Transitional placeholder for obsoleted liblircclient0
+ lirc       - Infra-red remote control support - daemons and utils
+ lirc-doc   - Infra-red remote control support - website and manual docs
+ lirc-x     - infra-red remote control support - X utilities
+Changes:
+ lirc (0.9.4c-0.4) unstable; urgency=low
+ .
+   * Non-maintainer upload
+   * Resolves (new bugs) LP: #1636355, LP: #1636353
+   * Resolves (old bugs) LP: #1497266, LP: #1565070, LP: #1395570,
+     LP: #1393056, LP: #1310508, LP: #1203483, LP: #1438381,
+Checksums-Sha1:
+ dc35172b02e37df6006639afc987f49a82fb2eed 1777 lirc_0.9.4c-0.4.dsc
+ 86cd7e8b6536a4d1078144b3bb1a894bb006e8e5 2499425 lirc_0.9.4c.orig.tar.gz
+ 623aaccfb89b8646c31af7cd9d3e952df5744f1d 36368 lirc_0.9.4c-0.4.debian.tar.xz
+Checksums-Sha256:
+ 515bdc6febb27e383af7aba603c7645004ce0e65f456b915fde7b665dd1a44df 1777 lirc_0.9.4c-0.4.dsc
+ 00af1adca9f30ba55928f39520e28dd533892e548082ddc7a9e5e5019355a430 2499425 lirc_0.9.4c.orig.tar.gz
+ d1001799d18c38653a4d53f2d1ea3038b2cb681fe71ee5d68f7dc26a82298a22 36368 lirc_0.9.4c-0.4.debian.tar.xz
+Files:
+ 97f06ca6cec60a51a7ff1d3262bf8341 1777 utils extra lirc_0.9.4c-0.4.dsc
+ cb9ee752aa3a67a689e55aea7fdb6bae 2499425 utils extra lirc_0.9.4c.orig.tar.gz
+ 66389bfe79ef714e002b9ae5ce166574 36368 utils extra lirc_0.9.4c-0.4.debian.tar.xz

@@ -1,0 +1,906 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp303595qgu;
+        Mon, 20 Feb 2017 23:48:39 -0800 (PST)
+X-Received: by 10.237.34.38 with SMTP id n35mr22041419qtc.253.1487663319568;
+        Mon, 20 Feb 2017 23:48:39 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qk0-x22f.google.com (mail-qk0-x22f.google.com. [2607:f8b0:400d:c09::22f])
+        by mx.google.com with ESMTPS id g16si9781128qke.158.2017.02.20.23.48.39
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Feb 2017 23:48:39 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::22f is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c09::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::22f is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qk0-x22f.google.com with SMTP id s186so115095669qkb.1
+        for <digvijay@unicommerce.com>; Mon, 20 Feb 2017 23:48:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=fCFlt2qInxcMpwtYS4Sx03Fhz8GUAcX9C29O6RGPIGg=;
+        b=Gge/9xrqewqoF0tkDDycG0FcSks1LDu0V61lEfVbyjADXU0aGPKBF4eE+FboZO4Pa9
+         ZH4myCpdthjYsMpXqnziV3UCmSU8CeaB+S9HQQbjnE62F0fckmxVNoNvfkPkRYKuVkXE
+         jjV0bu5GPzrYNUSY/WyTeL3z8KhJsK7SQOoBZvEPq4cbjvrWicFc7C2o/aaBi0SL/pkW
+         n+nsWMzsVOLADNjACiIH73GxHIK/MIrT5jK721Yl48D29RpeF6QdnVwny4qwUU8+0Hfu
+         +I89jvmF9CoSjJPnq0Y8lVcnH/ZuaAQHtL+gBGYv0o/rGgRxAF9VZxE8eyivdkZxwZxL
+         w7pA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=fCFlt2qInxcMpwtYS4Sx03Fhz8GUAcX9C29O6RGPIGg=;
+        b=CfB9Jy9VMhKria2PnBS5ztg0wbn+29rzCV6C93mGYEYaY5Qb8vAElH+qorBFJelZOf
+         hIMLqDcr32zPD0qsT46wWB/zhMk2dFdhAFZBX6obYztYzcyjk0n58QTDu5dH1UklVeG5
+         OOs9HIsySdr0yoJP9KbU2Sx1vg94Dq7c5nmJI4zRyLQYRHW0NwPLvM1x8ed5csnXGPNj
+         GT2q3xYmjQDSzCV7EGWUCt3VtI5WhPwojrQkxP0sJ1MTIm4jW6R01G+dD/7/7QdA0/ZZ
+         5Cfc4viNES9PXJ/Kq/DU8RQMf+nzR1tXf4zTvWU8fisNsjTYh4wbDbCKuWQyf4Cia3YG
+         S6qA==
+X-Gm-Message-State: AMke39lto3aNhoKC0CTLoWv5REvrzloGiy9TQVyMhN55Idai72jutvTVfvTE78tP0+ZqijeyDXCCMgvT3MrXdQ==
+X-Received: by 10.55.23.135 with SMTP id 7mr25866829qkx.125.1487663319095;
+ Mon, 20 Feb 2017 23:48:39 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.158.31 with HTTP; Mon, 20 Feb 2017 23:48:38 -0800 (PST)
+In-Reply-To: <4F9A2F27-575D-4146-90A8-0C718B27F15D@amazon.com>
+References: <CAFD_XHFMDdbD0nLnMHCuz7g2HvPAfu4yUTsZP=BnvoOYhx-r+g@mail.gmail.com>
+ <cdbf499c10cd4769b51249bf3be07711@EX13D05EUC001.ant.amazon.com>
+ <5a2db9092a3640e3aefcd22df9718c01@EX13D01EUB002.ant.amazon.com>
+ <CAFD_XHFBrK97u6bqTtNFDZ2Qch2GQiBc9NO-YSwdCoUArJtvSw@mail.gmail.com>
+ <CAFD_XHEf7evCtaEkYVWw=Atv5QHtx4uB3fUWnt9Mh6zC5q0GiQ@mail.gmail.com>
+ <b9e00c5207eb44299cae937b7d2fbbdb@EX13D01EUB002.ant.amazon.com>
+ <CAFD_XHGkdS6vp3_tdH2P0aCMucbHDL-35fgNDkpzCJ62kuW9tw@mail.gmail.com> <4F9A2F27-575D-4146-90A8-0C718B27F15D@amazon.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Tue, 21 Feb 2017 13:18:38 +0530
+Message-ID: <CAFD_XHF2z7yMBWZkRvWZKQqiQ2uzjK5NPWJdYSqXjAG=jFrN5A@mail.gmail.com>
+Subject: Re: Error in generating access token
+To: "Dewan, Sanchay" <sanchay@amazon.com>
+Cc: "Mani, Rohit" <rohitman@amazon.com>, "Kaura, Anuj" <anujkaur@amazon.com>, 
+	"Rao, Sagar" <raosagar@amazon.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	"Talwar, Sumanyu" <sumanyut@amazon.com>, "Venkataraman, Rubavahini" <rubavahv@amazon.com>
+Content-Type: multipart/alternative; boundary=001a1147b576ae2faf0549059b37
+
+--001a1147b576ae2faf0549059b37
+Content-Type: text/plain; charset=UTF-8
+
+Rohit,
+
+Need your help in understanding error for below two api hits. And it seems,
+the corresponding API for GetShipmentStatusResponse is missing in document
+shared by you. Please check and let me know if any further details are
+required here.
+
+1. POST       https://ship.amazon.in/swaapi/v2/3415864174/shipments
+Request :
+{
+    "shipmentRequest": {
+        "destination": {
+            "address": {
+                "mailingAddress": {
+                    "countryCode": "IN",
+                    "postalCode": "560022",
+                    "city": "Bengalooru",
+                    "addressLine1": "WTC Rajaji Nagar",
+                    "attentionName": "Vikrama Simha",
+                    "stateOrRegion": "Delhi"
+                },
+                "emailAddresses": {
+                    "primaryEmail" : "xyz@gmail.com"
+                }
+            }
+        },
+        "containers": [
+            {
+                "value": {
+                    "value": 100,
+                    "unit": "INR"
+                },
+                "valueAddedServiceProperties": {
+                    "collectOnDeliveryProperties": {
+                        "containerCODAmount": {
+                            "unit": "INR",
+                            "value": 450
+                        },
+                        "itemLevelCODAmounts": [
+                            {
+                                "itemId": "ITEM-1",
+                                "amount": {
+                                    "unit": "INR",
+                                    "value": 2300
+                                }
+                            }
+                        ]
+                    }
+                },
+                "identifiers": {
+                    "clientRefId": "43f65667-921b-4822-a346-d4c8ac886789",
+                    "containerReferenceId":
+"7df1c643-be34-45b7-aac4-04faaad7dc3f"
+                },
+                "physicalAttributes": {
+                    "height": {
+                        "unit": "CM",
+                        "value": 10
+                    },
+                    "length": {
+                        "unit": "CM",
+                        "value": 10
+                    },
+                    "width": {
+                        "unit": "CM",
+                        "value": 5
+                    },
+                    "weight": {
+                        "unit": "G",
+                        "value": 50
+                    }
+                },
+                "itemInfo": [
+                    {
+                    "itemCategoryCode": "MISC_OTHER",
+                                    "itemIdentifier": "item_123",
+                                    "quantity": "1",
+                                    "unitWeight": {
+                                        "value": "67",
+                                        "unit": "g"
+                                    },
+                        "unitPrice": {
+                            "value": 100,
+                            "unit": "INR"
+                        }
+                    }
+                ]
+            }
+        ],
+        "expectedServiceOffering": {
+        "serviceOfferingTypes": [],
+            "expectedPromise": {
+                "receiveWindow": {
+                    "dateTimeRange": {
+                        "start": "2016-09-15T05:05:24.094Z"
+                    }
+                }
+            },
+            "isBestFitOfferinigRequired": false
+        },
+        "clientReferenceId": "a1a924a3-7cbe-44b1-9a91-f09c1879011fr",
+        "origin": {
+            "address": {
+                "mailingAddress": {
+                    "countryCode": "IN",
+                    "postalCode": "500032",
+                    "city": "Hyderabad",
+                    "addressLine1": "Q City Gacchibowli",
+                    "attentionName": "Create SO Shipments Tests",
+                    "stateOrRegion": "Delhi"
+                }
+            }
+        },
+        "shippingPurpose": "SAMPLE"
+    }
+}
+
+Response :
+{
+  "errors": [
+    {
+      "errorMessage": null,
+      "errorCode": "UNKNOWN_ERROR"
+    }
+  ]
+}
+
+2. GET /shipments/{shipment-id}/containers/{trackingid}/label
+
+Sample Response :
+{"shippingLabelDetails": {
+"labelStream": {
+"hb": [
+"ByteStream"
+],
+"offset": 0,
+"isReadOnly": false,
+"bigEndian": true,
+"nativeByteOrder": false,
+"mark": -1,
+"position": 0,
+"limit": 24008,
+"capacity": 24008,
+"address": 0
+},
+"labelSpecification": {
+"labelDimensions": {
+"length": {
+"dimensionUnit": "IN",
+"dimensionValue": 6
+},
+"width": {
+"dimensionUnit": "IN",
+"dimensionValue": 4
+}
+},
+"formatType": "PNG"
+}
+}
+}
+
+Regards
+
+On Fri, Feb 17, 2017 at 4:43 PM, Dewan, Sanchay <sanchay@amazon.com> wrote:
+
+> Hey Varad,
+>
+>
+>
+> Your SWA Account Id is :- 3415864174
+>
+> You need to pass this id as sub-account-id.
+>
+>
+>
+> Thanks,
+>
+> Sanchay.
+>
+>
+>
+> *From: *Varad Singhal <varad@unicommerce.com>
+> *Date: *Friday, February 17, 2017 at 2:38 PM
+> *To: *"Mani, Rohit" <rohitman@amazon.com>
+> *Cc: *"Kaura, Anuj" <anujkaur@amazon.com>, "Dewan, Sanchay" <
+> sanchay@amazon.com>, "Rao, Sagar" <raosagar@amazon.com>, Digvijay Sharma <
+> digvijay@unicommerce.com>, "Talwar, Sumanyu" <sumanyut@amazon.com>,
+> Rubavahini Venkataraman <rubavahv@amazon.com>
+>
+> *Subject: *Re: Error in generating access token
+>
+>
+>
+> I have these details only. Which one you are referring to?
+>
+>
+>
+> MCID: A70ZSOUJVPXXX
+>
+> MKID: ATVPDKIKXXXXX
+>
+> S: 28xxx2V7
+>
+> App ID: amzn1.application.64xxx224e86f4af990b825cdf96428cb
+>
+> CID: A3KXXXX080CE2Z
+>
+> Client Secret- f5743e8e8e965ee2c8795648c40cf9
+> e2702d39ee82fcabc17260c060130c9bc9
+>
+> Client id=amzn1.application-oa2-client.8e63e17892679810b1abc0550f867215
+>
+>
+>
+> p.s- As suggested, I have changed the key values.
+>
+>
+>
+> On Fri, Feb 17, 2017 at 1:59 PM, Mani, Rohit <rohitman@amazon.com> wrote:
+>
+> Varad,
+>
+> Please pass your SWA Account ID in sub-account id
+>
+>
+>
+> *From:* Varad Singhal [mailto:varad@unicommerce.com]
+> *Sent:* Friday, February 17, 2017 1:34 PM
+> *To:* Mani, Rohit <rohitman@amazon.com>
+> *Cc:* Kaura, Anuj <anujkaur@amazon.com>; Dewan, Sanchay <
+> sanchay@amazon.com>; Rao, Sagar <raosagar@amazon.com>; Digvijay Sharma <
+> digvijay@unicommerce.com>; Talwar, Sumanyu <sumanyut@amazon.com>;
+> Venkataraman, Rubavahini <rubavahv@amazon.com>
+> *Subject:* Re: Error in generating access token
+>
+>
+>
+> Rohit,
+>
+>
+>
+> There is a param as sub-account-id, where will we get that?
+>
+>
+>
+> On Thu, Feb 16, 2017 at 12:08 PM, Varad Singhal <varad@unicommerce.com>
+> wrote:
+>
+> Thanks Rohit, its working now.
+>
+>
+>
+> Will surely change keywords from next mails onward.
+>
+>
+>
+> On Thu, Feb 16, 2017 at 11:48 AM, Mani, Rohit <rohitman@amazon.com> wrote:
+>
+> + Sanchay
+>
+>
+>
+> Varad,
+>
+> ClientId should be of the type amzn1.application-oa2-client.4545. Looks
+> like you are passing the application ID in the field below. Also from now
+> on, please refrain from actually including the secrets and tokens in
+> emails, unless asked for.
+>
+>
+>
+> Cheers
+>
+> Rohit
+>
+>
+>
+> *From:* Kaura, Anuj
+> *Sent:* Wednesday, February 15, 2017 1:20 PM
+> *To:* Varad Singhal <varad@unicommerce.com>; Mani, Rohit <
+> rohitman@amazon.com>
+> *Cc:* Rao, Sagar <raosagar@amazon.com>; Digvijay Sharma <
+> digvijay@unicommerce.com>; Talwar, Sumanyu <sumanyut@amazon.com>;
+> Venkataraman, Rubavahini <rubavahv@amazon.com>
+> *Subject:* RE: Error in generating access token
+>
+>
+>
+> Hi Rohit:
+>
+>
+>
+> Can we look at the below clarification sought by Varad. Thx.
+>
+>
+>
+> -
+>
+> Regards, Anuj
+>
+>
+>
+>
+>
+> *From:* Varad Singhal [mailto:varad@unicommerce.com
+> <varad@unicommerce.com>]
+> *Sent:* Tuesday, February 14, 2017 12:02 PM
+> *To:* Mani, Rohit <rohitman@amazon.com>
+> *Cc:* Kaura, Anuj <anujkaur@amazon.com>; Rao, Sagar <raosagar@amazon.com>;
+> Digvijay Sharma <digvijay@unicommerce.com>
+> *Subject:* Error in generating access token
+>
+>
+>
+> Hi Rohit,
+>
+> During the development, we are trying to generate access token and we are
+> getting error as invalid_client.
+>
+> Please check and suggest, pasting curl below for ready ref.
+>
+> varad@wormhole [~] $ curl -k -X POST -H 'Content-Type: application/json'
+> -d '{"grant_type": "client_credentials", "client_secret": "
+> f5743e8e8e965ee2c3151854c40cf9e2702d39ee82fcabc17260c060130c9bc9", "client_id":
+> "amzn1.application.74edb224e86f4af990b825cdf96428cb", "scope":
+> "shipwithamazon::shipment::read"}' https://api.amazon.com/auth/O2/token
+>
+> {"error_description":"Client authentication failed","error":"invalid_
+> client"}
+>
+>
+>
+> Regards
+>
+> Varad Singhal
+>
+> 88266 32211
+>
+>
+>
+>
+>
+>
+>
+
+--001a1147b576ae2faf0549059b37
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Rohit,<div><br></div><div>Need your help in understanding =
+error for below two api hits. And it seems, the corresponding API for GetSh=
+ipmentStatusResponse is missing in document shared by you. Please check and=
+ let me know if any further details are required here.</div><div><br></div>=
+<div><div>1. POST =C2=A0 =C2=A0 =C2=A0 <a href=3D"https://ship.amazon.in/sw=
+aapi/v2/3415864174/shipments">https://ship.amazon.in/swaapi/v2/3415864174/s=
+hipments</a></div><div>Request :</div><div>{</div><div>=C2=A0 =C2=A0 &quot;=
+shipmentRequest&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;destin=
+ation&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;ad=
+dress&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &quot;mailingAddress&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;countryCode&quot;: &quot;IN=
+&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &quot;postalCode&quot;: &quot;560022&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;city&q=
+uot;: &quot;Bengalooru&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;addressLine1&quot;: &quot;WTC Raja=
+ji Nagar&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;attentionName&quot;: &quot;Vikrama Simha&quot;,<=
+/div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &quot;stateOrRegion&quot;: &quot;Delhi&quot;</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;emailAddresses&quot;: {</div><=
+div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &=
+quot;primaryEmail&quot; : &quot;<a href=3D"mailto:xyz@gmail.com">xyz@gmail.=
+com</a>&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;=
+containers&quot;: [</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 {</=
+div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;valu=
+e&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 &quot;value&quot;: 100,</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;IN=
+R&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }=
+,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;v=
+alueAddedServiceProperties&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;collectOnDeliveryProperties=
+&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;containerCODAmount&quot;: {</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;INR&quot;,</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: 450</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;itemLevelCODAmounts&quot;: [</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;itemId&quot;:=
+ &quot;ITEM-1&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot=
+;amount&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &quot;unit&quot;: &quot;INR&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: 2300</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 ]</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ &quot;identifiers&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;clientRefId&quot;: &quot;43f65667-=
+921b-4822-a346-d4c8ac886789&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;containerReferenceId&quot;:=
+ &quot;7df1c643-be34-45b7-aac4-04faaad7dc3f&quot;</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;physicalAttributes&quot;: {</div>=
+<div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+&quot;height&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;CM&quot;,=
+</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: 10</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;length&quot;=
+: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;CM&quot;,</div><div>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &quot;value&quot;: 10</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;width&quot;: {</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;unit&quot;: &quot;CM&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value=
+&quot;: 5</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;weight&quot;: {</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;un=
+it&quot;: &quot;G&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&quot;: 50</div><d=
+iv>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }<=
+/div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><=
+div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;itemInfo&=
+quot;: [</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 <span class=3D"gmail-Apple-tab-span" style=3D"white-sp=
+ace:pre">	</span>&quot;itemCategoryCode&quot;: &quot;MISC_OTHER&quot;,</div=
+><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;itemIdentifi=
+er&quot;: &quot;item_123&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;quantity&quot;: &quot;1&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unitWeight&quot;: {</di=
+v><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &=
+quot;value&quot;: &quot;67&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;g&quot;</div><di=
+v>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 &quot;unitPrice&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;value&=
+quot;: 100,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unit&quot;: &quot;INR&q=
+uot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 ]</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 ],</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;expectedServiceOffering&quot;: {</div><div>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 <span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre=
+">	</span>&quot;serviceOfferingTypes&quot;: [],</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;expectedPromise&quot;: {</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;receiveWindow&quot;:=
+ {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &quot;dateTimeRange&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;start&quot;: =
+&quot;2016-09-15T05:05:24.094Z&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;=
+isBestFitOfferinigRequired&quot;: false</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;clientReferenceId&quot;:=
+ &quot;a1a924a3-7cbe-44b1-9a91-f09c1879011fr&quot;,</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 &quot;origin&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 &quot;address&quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;mailingAddress&quot;: {</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;countr=
+yCode&quot;: &quot;IN&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;postalCode&quot;: &quot;500032&quo=
+t;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;city&quot;: &quot;Hyderabad&quot;,</div><div>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;addressLine1=
+&quot;: &quot;Q City Gacchibowli&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;attentionName&quot;: &q=
+uot;Create SO Shipments Tests&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;stateOrRegion&quot;: &quot;=
+Delhi&quot;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shi=
+ppingPurpose&quot;: &quot;SAMPLE&quot;</div><div>=C2=A0 =C2=A0 }</div><div>=
+}</div><div><br></div><div>Response :</div><div>{</div><div>=C2=A0 &quot;er=
+rors&quot;: [</div><div>=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 &quo=
+t;errorMessage&quot;: null,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;errorCode&=
+quot;: &quot;UNKNOWN_ERROR&quot;</div><div>=C2=A0 =C2=A0 }</div><div>=C2=A0=
+ ]</div><div>}</div></div><div><br></div><div>2. GET /shipments/{shipment-i=
+d}/containers/{trackingid}/label</div><div><br></div><div>Sample Response :=
+</div><div>{&quot;shippingLabelDetails&quot;: {</div><div>&quot;labelStream=
+&quot;: {</div><div>&quot;hb&quot;: [</div><div>&quot;ByteStream&quot;</div=
+><div>],</div><div>&quot;offset&quot;: 0,</div><div>&quot;isReadOnly&quot;:=
+ false,</div><div>&quot;bigEndian&quot;: true,</div><div>&quot;nativeByteOr=
+der&quot;: false,</div><div>&quot;mark&quot;: -1,</div><div>&quot;position&=
+quot;: 0,</div><div>&quot;limit&quot;: 24008,</div><div>&quot;capacity&quot=
+;: 24008,</div><div>&quot;address&quot;: 0</div><div>},</div><div>&quot;lab=
+elSpecification&quot;: {</div><div>&quot;labelDimensions&quot;: {</div><div=
+>&quot;length&quot;: {</div><div>&quot;dimensionUnit&quot;: &quot;IN&quot;,=
+</div><div>&quot;dimensionValue&quot;: 6</div><div>},</div><div>&quot;width=
+&quot;: {</div><div>&quot;dimensionUnit&quot;: &quot;IN&quot;,</div><div>&q=
+uot;dimensionValue&quot;: 4</div><div>}</div><div>},</div><div>&quot;format=
+Type&quot;: &quot;PNG&quot;</div><div>}</div><div>}</div><div>}</div><div><=
+br></div><div>Regards</div></div><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">On Fri, Feb 17, 2017 at 4:43 PM, Dewan, Sanchay <span dir=
+=3D"ltr">&lt;<a href=3D"mailto:sanchay@amazon.com" target=3D"_blank">sancha=
+y@amazon.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+
+
+
+
+
+<div bgcolor=3D"white" lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
+<div class=3D"m_2073252834030119763WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Hey Varad,<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Your SWA Account Id is :- 3415864174<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>You need to pass this id as sub-account-id.<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Thanks,<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Sanchay.<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+><u></u>=C2=A0<u></u></span></p>
+<div style=3D"border:none;border-top:solid #b5c4df 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-family:Calibri;color:black">F=
+rom: </span>
+</b><span style=3D"font-family:Calibri;color:black">Varad Singhal &lt;<a hr=
+ef=3D"mailto:varad@unicommerce.com" target=3D"_blank">varad@unicommerce.com=
+</a>&gt;<br>
+<b>Date: </b>Friday, February 17, 2017 at 2:38 PM<br>
+<b>To: </b>&quot;Mani, Rohit&quot; &lt;<a href=3D"mailto:rohitman@amazon.co=
+m" target=3D"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc: </b>&quot;Kaura, Anuj&quot; &lt;<a href=3D"mailto:anujkaur@amazon.co=
+m" target=3D"_blank">anujkaur@amazon.com</a>&gt;, &quot;Dewan, Sanchay&quot=
+; &lt;<a href=3D"mailto:sanchay@amazon.com" target=3D"_blank">sanchay@amazo=
+n.com</a>&gt;, &quot;Rao, Sagar&quot; &lt;<a href=3D"mailto:raosagar@amazon=
+.com" target=3D"_blank">raosagar@amazon.com</a>&gt;, Digvijay Sharma &lt;<a=
+ href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@unicom=
+merce.com</a>&gt;, &quot;Talwar, Sumanyu&quot; &lt;<a href=3D"mailto:sumany=
+ut@amazon.com" target=3D"_blank">sumanyut@amazon.com</a>&gt;, Rubavahini Ve=
+nkataraman &lt;<a href=3D"mailto:rubavahv@amazon.com" target=3D"_blank">rub=
+avahv@amazon.com</a>&gt;</span></p><div><div class=3D"h5"><br>
+<b>Subject: </b>Re: Error in generating access token<u></u><u></u></div></d=
+iv><p></p>
+</div><div><div class=3D"h5">
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">I have these details only. Which one you are referri=
+ng to? <u></u>
+<u></u></p>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal">MCID: A70ZSOUJVPXXX<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">MKID: ATVPDKIKXXXXX<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">S: 28xxx2V7<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">App ID: amzn1.application.<wbr>64xxx224e86f4af990b82=
+5cdf96428<wbr>cb<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">CID: A3KXXXX080CE2Z<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Client Secret- f5743e8e8e965ee2c8795648c40cf9<wbr>e2=
+702d39ee82fcabc17260c060130c<wbr>9bc9<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Client id=3Damzn1.application-oa2-<wbr>client.<wbr>8=
+e63e17892679810b1abc0550f8672<wbr>15<u></u><u></u></p>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">p.s- As suggested, I have changed the key values.<u>=
+</u><u></u></p>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<p class=3D"MsoNormal">On Fri, Feb 17, 2017 at 1:59 PM, Mani, Rohit &lt;<a =
+href=3D"mailto:rohitman@amazon.com" target=3D"_blank">rohitman@amazon.com</=
+a>&gt; wrote:<u></u><u></u></p>
+<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
+n 0in 0in 6.0pt;margin-left:4.8pt;margin-right:0in">
+<div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">Varad,</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">Please pass your SWA Account ID in sub-account id</span><u><=
+/u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:Calib=
+ri">From:</span></b><span style=3D"font-size:11.0pt;font-family:Calibri"> V=
+arad Singhal [mailto:<a href=3D"mailto:varad@unicommerce.com" target=3D"_bl=
+ank">varad@unicommerce.com</a>]
+<br>
+<b>Sent:</b> Friday, February 17, 2017 1:34 PM<br>
+<b>To:</b> Mani, Rohit &lt;<a href=3D"mailto:rohitman@amazon.com" target=3D=
+"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc:</b> Kaura, Anuj &lt;<a href=3D"mailto:anujkaur@amazon.com" target=3D=
+"_blank">anujkaur@amazon.com</a>&gt;; Dewan, Sanchay &lt;<a href=3D"mailto:=
+sanchay@amazon.com" target=3D"_blank">sanchay@amazon.com</a>&gt;; Rao, Saga=
+r &lt;<a href=3D"mailto:raosagar@amazon.com" target=3D"_blank">raosagar@ama=
+zon.com</a>&gt;;
+ Digvijay Sharma &lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"=
+_blank">digvijay@unicommerce.com</a>&gt;; Talwar, Sumanyu &lt;<a href=3D"ma=
+ilto:sumanyut@amazon.com" target=3D"_blank">sumanyut@amazon.com</a>&gt;; Ve=
+nkataraman, Rubavahini &lt;<a href=3D"mailto:rubavahv@amazon.com" target=3D=
+"_blank">rubavahv@amazon.com</a>&gt;<br>
+<b>Subject:</b> Re: Error in generating access token</span><u></u><u></u></=
+p>
+<div>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">Rohit,<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">There is a param as sub-account-id, where will we ge=
+t that?<u></u><u></u></p>
+</div>
+</div>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">On Thu, Feb 16, 2017 at 12:08 PM, Varad Singhal &lt;=
+<a href=3D"mailto:varad@unicommerce.com" target=3D"_blank">varad@unicommerc=
+e.com</a>&gt; wrote:<u></u><u></u></p>
+<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
+n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
+bottom:5.0pt">
+<div>
+<p class=3D"MsoNormal">Thanks Rohit, its working now.<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Will surely change keywords from next mails onward.<=
+u></u><u></u></p>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">On Thu, Feb 16, 2017 at 11:48 AM, Mani, Rohit &lt;<a=
+ href=3D"mailto:rohitman@amazon.com" target=3D"_blank">rohitman@amazon.com<=
+/a>&gt; wrote:<u></u><u></u></p>
+<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
+n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
+bottom:5.0pt">
+<div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">+ Sanchay</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">Varad,</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>ClientId should be of the type amzn1.application-oa2-client.<wbr>4545. Loo=
+ks like you are passing the application ID in the field
+<span style=3D"background:yellow">below</span>. Also from now on, please re=
+frain from actually including the secrets and tokens in emails, unless aske=
+d for.</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Cheers</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri"=
+>Rohit</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:Calibri;=
+color:#1f497d">=C2=A0</span><u></u><u></u></p>
+<div>
+<div style=3D"border:none;border-top:solid #e1e1e1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:Calib=
+ri">From:</span></b><span style=3D"font-size:11.0pt;font-family:Calibri"> K=
+aura, Anuj
+<br>
+<b>Sent:</b> Wednesday, February 15, 2017 1:20 PM<br>
+<b>To:</b> Varad Singhal &lt;<a href=3D"mailto:varad@unicommerce.com" targe=
+t=3D"_blank">varad@unicommerce.com</a>&gt;; Mani, Rohit &lt;<a href=3D"mail=
+to:rohitman@amazon.com" target=3D"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc:</b> Rao, Sagar &lt;<a href=3D"mailto:raosagar@amazon.com" target=3D"=
+_blank">raosagar@amazon.com</a>&gt;; Digvijay Sharma &lt;<a href=3D"mailto:=
+digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt=
+;; Talwar, Sumanyu &lt;<a href=3D"mailto:sumanyut@amazon.com" target=3D"_bl=
+ank">sumanyut@amazon.com</a>&gt;;
+ Venkataraman, Rubavahini &lt;<a href=3D"mailto:rubavahv@amazon.com" target=
+=3D"_blank">rubavahv@amazon.com</a>&gt;<br>
+<b>Subject:</b> RE: Error in generating access token</span><u></u><u></u></=
+p>
+</div>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">Hi Rohit:</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">Can we look at the below clarification sought by Varad. Thx.
+</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">-
+</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">Regards, Anuj</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:Arial;co=
+lor:#1f497d">=C2=A0</span><u></u><u></u></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:Calib=
+ri">From:</span></b><span style=3D"font-size:11.0pt;font-family:Calibri"> V=
+arad Singhal [<a href=3D"mailto:varad@unicommerce.com" target=3D"_blank">ma=
+ilto:varad@unicommerce.com</a>]
+<br>
+<b>Sent:</b> Tuesday, February 14, 2017 12:02 PM<br>
+<b>To:</b> Mani, Rohit &lt;<a href=3D"mailto:rohitman@amazon.com" target=3D=
+"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc:</b> Kaura, Anuj &lt;<a href=3D"mailto:anujkaur@amazon.com" target=3D=
+"_blank">anujkaur@amazon.com</a>&gt;; Rao, Sagar &lt;<a href=3D"mailto:raos=
+agar@amazon.com" target=3D"_blank">raosagar@amazon.com</a>&gt;; Digvijay Sh=
+arma &lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digv=
+ijay@unicommerce.com</a>&gt;<br>
+<b>Subject:</b> Error in generating access token</span><u></u><u></u></p>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">Hi Rohit,<br>
+<br>
+During the development, we are trying to generate access token and we are g=
+etting error as invalid_client.<br>
+<br>
+Please check and suggest, pasting curl below for ready ref.<br>
+<br>
+varad@wormhole [~] $ curl -k -X POST -H &#39;Content-Type: application/json=
+&#39; -d &#39;{&quot;grant_type&quot;: &quot;client_credentials&quot;, &quo=
+t;client_secret&quot;: &quot;<wbr>f5743e8e8e965ee2c3151854c40cf9<wbr>e2702d=
+39ee82fcabc17260c060130c<wbr>9bc9&quot;, &quot;<span style=3D"background:ye=
+llow">client_id&quot;: &quot;amzn1.application.<wbr>74edb224e86f4af990b825c=
+df96428<wbr>cb</span>&quot;,
+ &quot;scope&quot;: &quot;shipwithamazon::shipment::<wbr>read&quot;}&#39; <=
+a href=3D"https://api.amazon.com/auth/O2/token" target=3D"_blank">
+https://api.amazon.com/auth/<wbr>O2/token</a><br>
+<br>
+{&quot;error_description&quot;:&quot;Client authentication failed&quot;,&qu=
+ot;error&quot;:&quot;invalid_<wbr>client&quot;}<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Regards<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Varad Singhal<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">88266 32211<u></u><u></u></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<p class=3D"MsoNormal">=C2=A0<u></u><u></u></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+</div></div></div>
+</div>
+
+</blockquote></div><br></div>
+
+--001a1147b576ae2faf0549059b37--

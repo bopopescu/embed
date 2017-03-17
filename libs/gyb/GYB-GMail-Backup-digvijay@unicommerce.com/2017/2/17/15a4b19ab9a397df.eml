@@ -1,0 +1,302 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp51031qgu;
+        Fri, 17 Feb 2017 00:04:17 -0800 (PST)
+X-Received: by 10.200.56.76 with SMTP id r12mr5982431qtb.2.1487318657724;
+        Fri, 17 Feb 2017 00:04:17 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qt0-x231.google.com (mail-qt0-x231.google.com. [2607:f8b0:400d:c0d::231])
+        by mx.google.com with ESMTPS id w52si6983809qtb.175.2017.02.17.00.04.17
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 17 Feb 2017 00:04:17 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c0d::231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::231 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qt0-x231.google.com with SMTP id v23so34663640qtb.0
+        for <digvijay@unicommerce.com>; Fri, 17 Feb 2017 00:04:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=yAhvjV8gO8dzSsjRPIHLGfyPY/0azQSinGRWClHHWTI=;
+        b=tCOEU39VSdkGFoFs5vbVcoH9oG+Jg2Z95BnlZM+9eVcodW+n6wAJZxNqQT62icUtYt
+         mw3qGgnZCFfD0ti2MC1Mvqg3ZbYGx27EFWyeJYn61EDtTnlB7QNbXcFMngqOge9ssmmp
+         zzQipW4SuhWfBra0XC4A+XPwnRg1hyGXOSGxPQ+GtX0O2tfc4F6xDeAeB/bFJyqyB7Bt
+         HN/JZgtVoDbRa7zEJCeCDjKIFbyEYK6KGFRWOE7YWbqODhM+YjQzN0Z1boQhKl5KWU1K
+         5KrNSseOqwO5fmtzdKxo7VdG+/W59X7hRvNCN/S74x7jwERImJNppD/pRmy0WF6oebrk
+         IMAQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=yAhvjV8gO8dzSsjRPIHLGfyPY/0azQSinGRWClHHWTI=;
+        b=BdanQdDbsVePrLP6zXtkBNK65O2jgX8JhZtfFq+azGA6tFmEvyfkUWATsDhGuKHDgs
+         Rku/RoBDrVatvWpGRwHMGTIBqQrbIMDN0Afdt8jyks/aKi4N9NsCds5VSxpw0nWfe4IU
+         taZc4gf40t7gjfz0WjI7B65otFUzrnGSEUNOaSpaUAjsXNt38lVxmz4k0fJ+hlnOfSir
+         2h+AzpizaVRqlEFs4/W7doSj+jZQtHOCa6cuxQh6F49jgvEy+IQ37GahUtHLYW2GiW5A
+         Q4UNRthjy1uJPzIRvWCKiMiQI2liPiVMiZZYCFjRksTj2RtlpHtg83zMtY4InJKnkACZ
+         epgg==
+X-Gm-Message-State: AMke39lz+JmFNeTKx+3m1rCHfQslE9O9TMBrylGQTqV1d6Mrp4irpnTVpyCz9K8aRGLB2ihj0rqFrJksvCrG+w==
+X-Received: by 10.200.46.147 with SMTP id h19mr6031756qta.259.1487318657500;
+ Fri, 17 Feb 2017 00:04:17 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.158.31 with HTTP; Fri, 17 Feb 2017 00:04:16 -0800 (PST)
+In-Reply-To: <CAFD_XHFBrK97u6bqTtNFDZ2Qch2GQiBc9NO-YSwdCoUArJtvSw@mail.gmail.com>
+References: <CAFD_XHFMDdbD0nLnMHCuz7g2HvPAfu4yUTsZP=BnvoOYhx-r+g@mail.gmail.com>
+ <cdbf499c10cd4769b51249bf3be07711@EX13D05EUC001.ant.amazon.com>
+ <5a2db9092a3640e3aefcd22df9718c01@EX13D01EUB002.ant.amazon.com> <CAFD_XHFBrK97u6bqTtNFDZ2Qch2GQiBc9NO-YSwdCoUArJtvSw@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Fri, 17 Feb 2017 13:34:16 +0530
+Message-ID: <CAFD_XHEf7evCtaEkYVWw=Atv5QHtx4uB3fUWnt9Mh6zC5q0GiQ@mail.gmail.com>
+Subject: Re: Error in generating access token
+To: "Mani, Rohit" <rohitman@amazon.com>
+Cc: "Kaura, Anuj" <anujkaur@amazon.com>, "Dewan, Sanchay" <sanchay@amazon.com>, 
+	"Rao, Sagar" <raosagar@amazon.com>, Digvijay Sharma <digvijay@unicommerce.com>, 
+	"Talwar, Sumanyu" <sumanyut@amazon.com>, "Venkataraman, Rubavahini" <rubavahv@amazon.com>
+Content-Type: multipart/alternative; boundary=001a1143290a3f9c200548b55c76
+
+--001a1143290a3f9c200548b55c76
+Content-Type: text/plain; charset=UTF-8
+
+Rohit,
+
+There is a param as sub-account-id, where will we get that?
+
+On Thu, Feb 16, 2017 at 12:08 PM, Varad Singhal <varad@unicommerce.com>
+wrote:
+
+> Thanks Rohit, its working now.
+>
+> Will surely change keywords from next mails onward.
+>
+> On Thu, Feb 16, 2017 at 11:48 AM, Mani, Rohit <rohitman@amazon.com> wrote:
+>
+>> + Sanchay
+>>
+>>
+>>
+>> Varad,
+>>
+>> ClientId should be of the type amzn1.application-oa2-client.4545. Looks
+>> like you are passing the application ID in the field below. Also from
+>> now on, please refrain from actually including the secrets and tokens in
+>> emails, unless asked for.
+>>
+>>
+>>
+>> Cheers
+>>
+>> Rohit
+>>
+>>
+>>
+>> *From:* Kaura, Anuj
+>> *Sent:* Wednesday, February 15, 2017 1:20 PM
+>> *To:* Varad Singhal <varad@unicommerce.com>; Mani, Rohit <
+>> rohitman@amazon.com>
+>> *Cc:* Rao, Sagar <raosagar@amazon.com>; Digvijay Sharma <
+>> digvijay@unicommerce.com>; Talwar, Sumanyu <sumanyut@amazon.com>;
+>> Venkataraman, Rubavahini <rubavahv@amazon.com>
+>> *Subject:* RE: Error in generating access token
+>>
+>>
+>>
+>> Hi Rohit:
+>>
+>>
+>>
+>> Can we look at the below clarification sought by Varad. Thx.
+>>
+>>
+>>
+>> -
+>>
+>> Regards, Anuj
+>>
+>>
+>>
+>>
+>>
+>> *From:* Varad Singhal [mailto:varad@unicommerce.com
+>> <varad@unicommerce.com>]
+>> *Sent:* Tuesday, February 14, 2017 12:02 PM
+>> *To:* Mani, Rohit <rohitman@amazon.com>
+>> *Cc:* Kaura, Anuj <anujkaur@amazon.com>; Rao, Sagar <raosagar@amazon.com>;
+>> Digvijay Sharma <digvijay@unicommerce.com>
+>> *Subject:* Error in generating access token
+>>
+>>
+>>
+>> Hi Rohit,
+>>
+>> During the development, we are trying to generate access token and we are
+>> getting error as invalid_client.
+>>
+>> Please check and suggest, pasting curl below for ready ref.
+>>
+>> varad@wormhole [~] $ curl -k -X POST -H 'Content-Type: application/json'
+>> -d '{"grant_type": "client_credentials", "client_secret":
+>> "f5743e8e8e965ee2c3151854c40cf9e2702d39ee82fcabc17260c060130c9bc9", "client_id":
+>> "amzn1.application.74edb224e86f4af990b825cdf96428cb", "scope":
+>> "shipwithamazon::shipment::read"}' https://api.amazon.com/auth/O2/token
+>>
+>> {"error_description":"Client authentication failed","error":"invalid_clien
+>> t"}
+>>
+>>
+>>
+>> Regards
+>>
+>> Varad Singhal
+>>
+>> 88266 32211
+>>
+>
+>
+
+--001a1143290a3f9c200548b55c76
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Rohit,<div><br></div><div>There is a param as sub-account-=
+id, where will we get that?</div></div><div class=3D"gmail_extra"><br><div =
+class=3D"gmail_quote">On Thu, Feb 16, 2017 at 12:08 PM, Varad Singhal <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:varad@unicommerce.com" target=3D"_blank"=
+>varad@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_=
+quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1=
+ex"><div dir=3D"ltr">Thanks Rohit, its working now.<div><br></div><div>Will=
+ surely change keywords from next mails onward.</div></div><div class=3D"HO=
+EnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_=
+quote">On Thu, Feb 16, 2017 at 11:48 AM, Mani, Rohit <span dir=3D"ltr">&lt;=
+<a href=3D"mailto:rohitman@amazon.com" target=3D"_blank">rohitman@amazon.co=
+m</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margi=
+n:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+
+
+
+<div lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
+<div class=3D"m_2776631055444517149m_-5016222151408815104WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1f497d">+ Sanchay<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1f497d">Varad,<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">ClientId should be of the type amzn1.application-oa=
+2-client.4<wbr>545. Looks like you are passing the application ID in the fi=
+eld
+<span style=3D"background:yellow">below</span>. Also from now on, please re=
+frain from actually including the secrets and tokens in emails, unless aske=
+d for.<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">Cheers<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">Rohit</span><span style=3D"font-size:11.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#1f497d"><u></u><u></u></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #e1e1e1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif"> Kaura, Anuj
+<br>
+<b>Sent:</b> Wednesday, February 15, 2017 1:20 PM<br>
+<b>To:</b> Varad Singhal &lt;<a href=3D"mailto:varad@unicommerce.com" targe=
+t=3D"_blank">varad@unicommerce.com</a>&gt;; Mani, Rohit &lt;<a href=3D"mail=
+to:rohitman@amazon.com" target=3D"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc:</b> Rao, Sagar &lt;<a href=3D"mailto:raosagar@amazon.com" target=3D"=
+_blank">raosagar@amazon.com</a>&gt;; Digvijay Sharma &lt;<a href=3D"mailto:=
+digvijay@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt=
+;; Talwar, Sumanyu &lt;<a href=3D"mailto:sumanyut@amazon.com" target=3D"_bl=
+ank">sumanyut@amazon.com</a>&gt;; Venkataraman, Rubavahini &lt;<a href=3D"m=
+ailto:rubavahv@amazon.com" target=3D"_blank">rubavahv@amazon.com</a>&gt;<br=
+>
+<b>Subject:</b> RE: Error in generating access token<u></u><u></u></span></=
+p>
+</div>
+</div><div><div class=3D"m_2776631055444517149h5">
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d">Hi Rohit:<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d">Can we look at the below clarification =
+sought by Varad. Thx.
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d">-
+<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d">Regards, Anuj<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ar=
+ial&quot;,sans-serif;color:#1f497d"><u></u>=C2=A0<u></u></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif"> Varad Singhal [<a href=3D"mail=
+to:varad@unicommerce.com" target=3D"_blank">mailto:varad@unicommerce.com</a=
+>]
+<br>
+<b>Sent:</b> Tuesday, February 14, 2017 12:02 PM<br>
+<b>To:</b> Mani, Rohit &lt;<a href=3D"mailto:rohitman@amazon.com" target=3D=
+"_blank">rohitman@amazon.com</a>&gt;<br>
+<b>Cc:</b> Kaura, Anuj &lt;<a href=3D"mailto:anujkaur@amazon.com" target=3D=
+"_blank">anujkaur@amazon.com</a>&gt;; Rao, Sagar &lt;<a href=3D"mailto:raos=
+agar@amazon.com" target=3D"_blank">raosagar@amazon.com</a>&gt;; Digvijay Sh=
+arma &lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digv=
+ijay@unicommerce.com</a>&gt;<br>
+<b>Subject:</b> Error in generating access token<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<p class=3D"MsoNormal">Hi Rohit,<br>
+<br>
+During the development, we are trying to generate access token and we are g=
+etting error as invalid_client.<br>
+<br>
+Please check and suggest, pasting curl below for ready ref.<br>
+<br>
+varad@wormhole [~] $ curl -k -X POST -H &#39;Content-Type: application/json=
+&#39; -d &#39;{&quot;grant_type&quot;: &quot;client_credentials&quot;, &quo=
+t;client_secret&quot;: &quot;f5743e8e8e965ee2c3151854c40cf<wbr>9e2702d39ee8=
+2fcabc17260c060130<wbr>c9bc9&quot;, &quot;<span style=3D"background:yellow"=
+>client_id&quot;:
+ &quot;amzn1.application.74edb224e86<wbr>f4af990b825cdf96428cb</span>&quot;=
+, &quot;scope&quot;: &quot;shipwithamazon::shipment::rea<wbr>d&quot;}&#39;
+<a href=3D"https://api.amazon.com/auth/O2/token" target=3D"_blank">https://=
+api.amazon.com/auth/O2<wbr>/token</a><br>
+<br>
+{&quot;error_description&quot;:&quot;Client authentication failed&quot;,&qu=
+ot;error&quot;:&quot;invalid_clien<wbr>t&quot;}<u></u><u></u></p>
+<div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Regards<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">Varad Singhal<u></u><u></u></p>
+</div>
+<div>
+<p class=3D"MsoNormal">88266 32211<u></u><u></u></p>
+</div>
+</div>
+</div></div></div>
+</div>
+
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a1143290a3f9c200548b55c76--

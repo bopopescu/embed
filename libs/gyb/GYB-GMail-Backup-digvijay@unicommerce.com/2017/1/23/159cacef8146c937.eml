@@ -1,0 +1,135 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1120883qgu;
+        Mon, 23 Jan 2017 02:11:19 -0800 (PST)
+X-Received: by 10.157.6.7 with SMTP id 7mr14733824otn.254.1485166279154;
+        Mon, 23 Jan 2017 02:11:19 -0800 (PST)
+Return-Path: <tech+bncBDV2FVMW4EGRBRVNS7CAKGQE4GOI4DQ@unicommerce.com>
+Received: from mail-ot0-x248.google.com (mail-ot0-x248.google.com. [2607:f8b0:4003:c0f::248])
+        by mx.google.com with ESMTPS id t196si5816817oif.260.2017.01.23.02.11.19
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Jan 2017 02:11:19 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::248 is neither permitted nor denied by best guess record for domain of tech+bncbdv2fvmw4egrbrvns7cakgqe4goi4dq@unicommerce.com) client-ip=2607:f8b0:4003:c0f::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::248 is neither permitted nor denied by best guess record for domain of tech+bncbdv2fvmw4egrbrvns7cakgqe4goi4dq@unicommerce.com) smtp.mailfrom=tech+bncBDV2FVMW4EGRBRVNS7CAKGQE4GOI4DQ@unicommerce.com
+Received: by mail-ot0-x248.google.com with SMTP id w107sf99852831ota.6
+        for <digvijay@unicommerce.com>; Mon, 23 Jan 2017 02:11:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=5K7B1/5exzMEO1NGSKoiaszlbUTeqiYLZaRXk8z8+Mc=;
+        b=HNnkeMp3ypgUI+wlhjZHOK4VDqc3vorgYWxqCJT7/fNgRfn5FAWRNg+Q5JvBZWX3gU
+         dGZZqFBoBkX9HSz2dOtl/SNrl9RTifT/aavGeBaGmjgEAJXWOx9YsCL21hfjjIGcdH7j
+         aYQBEIMBsMwnv6WhH9oSWZ48gpHBz2zfLZYFx+SQQ2bE7tmP1A3rkX/Wi6bIALPQ/8zO
+         iK3cTpgb5KsSiI26LCD51qqkUKD9v+JcFQjIFk21UK6AnoCJWIHutOghGzZLab+YKgLy
+         4c8/d1vWZF+l6wqOzqqy1rDLO0cJ9pYJl6XNh9B5kGdbNHgvggCpvcEgXqJGMusYExnr
+         /osg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=5K7B1/5exzMEO1NGSKoiaszlbUTeqiYLZaRXk8z8+Mc=;
+        b=WY7LhrD68FTEopKGu5mN95lkDt/h32zihCEAghGqB9DwmRAmMh66rK92+zWB09Vra4
+         tCK8EM08QEx6mm35mAKl04YjUDXVlYv1ivmK8Coz/1sPYATQvmi5B5iBpF3/ZJUIORWP
+         61UcIK6Sx/Xy9ZsygBbTbMigfVbPOHai+bMpwoS14tb9I2XtZ7Ht09HF4TfGklizHMfm
+         8byxW7+w9sGwnHFejfVy08yD+cYnT9w2U3D+RfAcYnVt13djp5fCfM7q8fe4lxfzPgbk
+         T/57bkNcrTK4YAoBZ0OJdPfGFpNL5TaDP5Sg6Zck+sZDOb7xlC+0YtvZ6wNrj2Eb5jBK
+         gexA==
+X-Gm-Message-State: AIkVDXL8AgowTh2932QpeSy5X6cWAvsE042TNO1eqPcVwihRR0mAMRqYslmdLT6ZlRk/2w==
+X-Received: by 10.157.12.97 with SMTP id 88mr7637709otr.122.1485166278932;
+        Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.43.225 with SMTP id u88ls11608161ota.31.gmail; Mon, 23 Jan
+ 2017 02:11:18 -0800 (PST)
+X-Received: by 10.129.163.202 with SMTP id a193mr4622932ywh.285.1485166278767;
+        Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+Received: from mail-yb0-x234.google.com (mail-yb0-x234.google.com. [2607:f8b0:4002:c09::234])
+        by mx.google.com with ESMTPS id f187si762088ywa.399.2017.01.23.02.11.18
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::234 is neither permitted nor denied by best guess record for domain of sajan@unicommerce.com) client-ip=2607:f8b0:4002:c09::234;
+Received: by mail-yb0-x234.google.com with SMTP id w194so85784569ybe.0
+        for <tech@unicommerce.com>; Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+X-Received: by 10.37.228.197 with SMTP id b188mr19303659ybh.195.1485166278545;
+ Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.37.222.200 with HTTP; Mon, 23 Jan 2017 02:11:18 -0800 (PST)
+In-Reply-To: <CAHRzBq7aqTnP7bL-tNODeCNjhF40xbWJ+mPBCa4rdFU32wyjhw@mail.gmail.com>
+References: <CAHRzBq7aqTnP7bL-tNODeCNjhF40xbWJ+mPBCa4rdFU32wyjhw@mail.gmail.com>
+From: Sajan Kumar <sajan@unicommerce.com>
+Date: Mon, 23 Jan 2017 15:41:18 +0530
+Message-ID: <CAHRzBq5aGChwx_-Nsu6Hc1YUWxO_a3L4_Wq+m+OQYmZicS4mXg@mail.gmail.com>
+Subject: Re: Investment Proof Collection, FY 2016-17
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>
+Cc: Ankit Pruthi <ankit@unicommerce.com>, Vibhu Garg <vibhu@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114bba9677480c0546c03862
+X-Original-Sender: sajan@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4002:c09::234 is neither permitted nor denied by best
+ guess record for domain of sajan@unicommerce.com) smtp.mailfrom=sajan@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a114bba9677480c0546c03862
+Content-Type: text/plain; charset=UTF-8
+
+Hi Team,
+
+Sudesh (8527255683) is available at 3rd floor. Kindly handover the docs to
+him..
+
+On Fri, Jan 20, 2017 at 11:49 AM, Sajan Kumar <sajan@unicommerce.com> wrote:
+
+> Hi Team,
+>
+> Pls keep your investment proofs ready with you. We will get it collected
+> on Monday i.e. 23rd Jan, 2017 form SD office. Our person will reach around
+> 3 PM to collect the same..
+>
+> --
+> Thanks,
+> Sajan
+>
+
+
+
+-- 
+Thanks,
+Sajan
+
+--001a114bba9677480c0546c03862
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Team,<div><br></div><div>Sudesh (8527255683) is availab=
+le at 3rd floor. Kindly handover the docs to him..</div></div><div class=3D=
+"gmail_extra"><br><div class=3D"gmail_quote">On Fri, Jan 20, 2017 at 11:49 =
+AM, Sajan Kumar <span dir=3D"ltr">&lt;<a href=3D"mailto:sajan@unicommerce.c=
+om" target=3D"_blank">sajan@unicommerce.com</a>&gt;</span> wrote:<br><block=
+quote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc=
+ solid;padding-left:1ex"><div dir=3D"ltr">Hi Team,<div><br></div><div>Pls k=
+eep your investment proofs ready with you. We will get it collected on Mond=
+ay i.e. 23rd Jan, 2017 form SD office. Our person will reach around 3 PM to=
+ collect the same..<span class=3D"HOEnZb"><font color=3D"#888888"><br clear=
+=3D"all"><div><br></div>-- <br><div class=3D"m_-7303606513272541515gmail_si=
+gnature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Thanks,<div>Sa=
+jan</div></div></div>
+</font></span></div></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Th=
+anks,<div>Sajan</div></div></div>
+</div>
+
+--001a114bba9677480c0546c03862--

@@ -1,0 +1,68 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1056901qge;
+        Mon, 7 Nov 2016 06:21:59 -0800 (PST)
+X-Received: by 10.159.41.194 with SMTP id s60mr4024573uas.3.1478528519425;
+        Mon, 07 Nov 2016 06:21:59 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-vk0-x233.google.com (mail-vk0-x233.google.com. [2607:f8b0:400c:c05::233])
+        by mx.google.com with ESMTPS id f8si7384779uab.65.2016.11.07.06.21.59
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 06:21:59 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::233 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c05::233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::233 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-vk0-x233.google.com with SMTP id 137so74381609vkl.0
+        for <digvijay@unicommerce.com>; Mon, 07 Nov 2016 06:21:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=0xoY73m731I8QmArXR+F76EMS5hI3sEjrWAcLmE7ELg=;
+        b=vuD7AC5LhmCsT0oY1gTIY2DXooaiKL1zl/y1cmauhViIoJd3FYr/NDkVPxlE+4Cayb
+         hcORKTv0IgDHuwYLmrs8VZF3MWAqN2D6C8HUy0n8uKURd4HcOl5YeVwIgQviU/wQVSu8
+         KzTOsBri89iIf/fduVWEDoE0K2G8qhkvN+U0Ft/s8hubh0ZCUDfEvymfda7DY1TDIxK3
+         1vJ7jGQS+sBfWRRiJNIaA7RqpyB2JpHX8UTPR/fHHrJzpidZIeRLxOXMN7hElq2qm/kX
+         fQdhXldKjEG9sEjxuiwjpOGCBR59ed1wyKQwWhF77qnIl/6bKja8D2QjBl17v5WCFBd5
+         NxOg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=0xoY73m731I8QmArXR+F76EMS5hI3sEjrWAcLmE7ELg=;
+        b=iqRCgDItmPbCHWJbVXtcqNvqAyrQQ+U7C4Y+0IijI0DfVk82KEcxXDGR+97jU/cjIX
+         bL3UHiWQt+o/Y8eJ+nB5+CSJq37WNYZVTKf84Gg0K6FaY7pG3ae1X2ZDoXnNiZSRdcIE
+         zJijjfKpymLdx4hViTPNcTYNXIEm5WQ4ZuQ2pAPHQBgYe7DqWduuG29FtoiCcPwdhs4B
+         KWLDs0/HlKgz83pyTtyZbBAKt4gJ2HX/nZnftHEt/FKxRjn8s2czsPCs9tgE/7akXxUR
+         /sfmE9sHshXWklUzQ76a6nf2O8N2LEOAcn6gju9JOQCh3v/zlUA6M12xXpgoYhkcHZFU
+         GAMw==
+X-Gm-Message-State: ABUngvcaQQ/Igmy4BspGYGs1DE0nc0T53dGlEiB3WxOcFeWt9rAN2wpbsJM9BIklCnTDOeZPb6bVZr6R91Se6w==
+X-Received: by 10.31.13.20 with SMTP id 20mr3297725vkn.137.1478528519093; Mon,
+ 07 Nov 2016 06:21:59 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Mon, 07 Nov 2016 14:21:48 +0000
+Message-ID: <CAPe2SZSOjsWiBikYgbyK8=PQW2Hn+FNDWj_9LCmFh-cqUZakzQ@mail.gmail.com>
+Subject: Please test reco on StgEnterprise1.
+To: Digvijay Sharam <digvijay@unicommerce.com>, Ashish Bansal <ashish@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11411a1c2bd2620540b6bfb4
+
+--001a11411a1c2bd2620540b6bfb4
+Content-Type: text/plain; charset=UTF-8
+
+ Try syncing for snapdeal and flipkart once. as scripts are updated.
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a11411a1c2bd2620540b6bfb4
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">=C2=A0Try syncing for snapdeal and flipkart once. as scrip=
+ts are updated.<br></div><div dir=3D"ltr">-- <br></div><div data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>S=
+oftware Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a11411a1c2bd2620540b6bfb4--

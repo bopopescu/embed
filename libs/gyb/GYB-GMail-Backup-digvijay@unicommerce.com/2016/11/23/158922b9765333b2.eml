@@ -1,0 +1,99 @@
+MIME-Version: 1.0
+Received: by 10.140.99.110 with HTTP; Wed, 23 Nov 2016 09:11:19 -0800 (PST)
+Date: Wed, 23 Nov 2016 22:41:19 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sopf5jTY=iCsCNrh_BhWjpyrUMp3fqSJXxQc_bTLZ2zMwQ@mail.gmail.com>
+Subject: Issue Suggestion
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c12c1a426c930541fafa3a
+
+--001a11c12c1a426c930541fafa3a
+Content-Type: text/plain; charset=UTF-8
+
+bhuvi woh jo packet number wala issue tha na usme yeh kr sakte h
+
+<var name="shippingProviderTypeToPacketNumber" value="#{new
+java.util.HashMap()}"/>
+<var name="orderDetails" value="#{#saleOrderDetailElement}" />
+
+
+//Blah Blah Beech mein
+
+
+<if condition="#{#shippingProviderTypeToPacketNumber.get(#shippingProviderType)==null}">
+   <var name="packetCount" value="#{#packetCount+1}"/>
+   <var value="#{#shippingProviderTypeToPacketNumber.put(#shippingProviderType,#packetCount)}"/>
+</if>
+<valueTag name="PacketNumber"
+value="#{#shippingProviderTypeToPacketNumber.get(#shippingProviderType)}"
+/>
+
+--001a11c12c1a426c930541fafa3a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><font color=3D"#263238">bhuvi woh jo packet number wala is=
+sue tha na usme yeh kr sakte h</font><div><font color=3D"#263238"><br></fon=
+t></div><div><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size:9.8=
+pt"><span style=3D"background-color:rgb(239,239,239)">&lt;</span><span styl=
+e=3D"color:rgb(0,0,128)">var</span><span style=3D"color:rgb(0,0,128);backgr=
+ound-color:rgb(239,239,239)"> </span><span style=3D"color:rgb(0,0,255);back=
+ground-color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0)=
+;background-color:rgb(239,239,239)">=3D&quot;shippingProviderTypeToPacketNu=
+mber&quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(23=
+9,239,239)">value</span><span style=3D"color:rgb(0,128,0);background-color:=
+rgb(239,239,239)">=3D&quot;#{new java.util.HashMap()}&quot;</span><span sty=
+le=3D"background-color:rgb(239,239,239)">/&gt;</span><br><span style=3D"bac=
+kground-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128=
+)">var</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239=
+,239)"> </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,2=
+39,239)">name</span><span style=3D"color:rgb(0,128,0);background-color:rgb(=
+239,239,239)">=3D&quot;orderDetails&quot; </span><span style=3D"color:rgb(0=
+,0,255);background-color:rgb(239,239,239)">value</span><span style=3D"color=
+:rgb(0,128,0);background-color:rgb(239,239,239)">=3D&quot;#{#saleOrderDetai=
+lElement}&quot; </span><span style=3D"background-color:rgb(239,239,239)">/&=
+gt;</span></pre><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size:=
+9.8pt"><span style=3D"background-color:rgb(239,239,239)"><br></span></pre><=
+pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size:9.8pt"><span styl=
+e=3D"background-color:rgb(239,239,239)">//Blah Blah Beech mein</span></pre>=
+<pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size:9.8pt"><span sty=
+le=3D"background-color:rgb(239,239,239)"><br></span></pre><pre style=3D"col=
+or:rgb(0,0,0);font-family:menlo;font-size:9.8pt"><pre style=3D"font-family:=
+menlo;font-size:9.8pt"><pre style=3D"font-family:menlo;font-size:9.8pt"><sp=
+an style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"co=
+lor:rgb(0,0,128)">if</span><span style=3D"color:rgb(0,0,128);background-col=
+or:rgb(239,239,239)"> </span><span style=3D"color:rgb(0,0,255);background-c=
+olor:rgb(239,239,239)">condition</span><span style=3D"color:rgb(0,128,0);ba=
+ckground-color:rgb(239,239,239)">=3D&quot;#{#shippingProviderTypeToPacketNu=
+mber.get(#shippingProviderType)=3D=3Dnull}&quot;</span><span style=3D"backg=
+round-color:rgb(239,239,239)">&gt;</span><br>   <span style=3D"background-c=
+olor:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128)">var</s=
+pan><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239)"> <=
+/span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239)">=
+name</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,2=
+39)">=3D&quot;packetCount&quot; </span><span style=3D"color:rgb(0,0,255);ba=
+ckground-color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128=
+,0);background-color:rgb(239,239,239)">=3D&quot;#{#packetCount+1}&quot;</sp=
+an><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>   <sp=
+an style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"co=
+lor:rgb(0,0,128)">var</span><span style=3D"color:rgb(0,0,128);background-co=
+lor:rgb(239,239,239)"> </span><span style=3D"color:rgb(0,0,255);background-=
+color:rgb(239,239,239)">value</span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239)">=3D&quot;#{#shippingProviderTypeToPacketNumbe=
+r.put(#shippingProviderType,#packetCount)}&quot;</span><span style=3D"backg=
+round-color:rgb(239,239,239)">/&gt;</span><br><span style=3D"background-col=
+or:rgb(239,239,239)">&lt;/</span><span style=3D"color:rgb(0,0,128)">if</spa=
+n><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br><span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128)">valueTag</span><span style=3D"color:rgb(0,0,128);background-co=
+lor:rgb(239,239,239)"> </span><span style=3D"color:rgb(0,0,255);background-=
+color:rgb(239,239,239)">name</span><span style=3D"color:rgb(0,128,0);backgr=
+ound-color:rgb(239,239,239)">=3D&quot;PacketNumber&quot; </span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(239,239,239)">value</span><span=
+ style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239)">=3D&quot;#{=
+#shippingProviderTypeToPacketNumber.get(#shippingProviderType)}&quot; </spa=
+n><span style=3D"background-color:rgb(239,239,239)">/&gt;</span></pre></pre=
+></pre></div></div>
+
+--001a11c12c1a426c930541fafa3a--

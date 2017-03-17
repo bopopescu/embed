@@ -1,0 +1,285 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp246115qge;
+        Mon, 31 Oct 2016 10:07:48 -0700 (PDT)
+X-Received: by 10.129.164.198 with SMTP id b189mr4607598ywh.294.1477933668453;
+        Mon, 31 Oct 2016 10:07:48 -0700 (PDT)
+Return-Path: <tech+bncBC7YNDHQYICBBZHU3XAAKGQEMGAWSSY@unicommerce.com>
+Received: from mail-yb0-x245.google.com (mail-yb0-x245.google.com. [2607:f8b0:4002:c09::245])
+        by mx.google.com with ESMTPS id 203si10161987ywu.372.2016.10.31.10.07.48
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 31 Oct 2016 10:07:48 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::245 is neither permitted nor denied by best guess record for domain of tech+bncbc7yndhqyicbbzhu3xaakgqemgawssy@unicommerce.com) client-ip=2607:f8b0:4002:c09::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::245 is neither permitted nor denied by best guess record for domain of tech+bncbc7yndhqyicbbzhu3xaakgqemgawssy@unicommerce.com) smtp.mailfrom=tech+bncBC7YNDHQYICBBZHU3XAAKGQEMGAWSSY@unicommerce.com
+Received: by mail-yb0-x245.google.com with SMTP id l2sf33074727ybf.1
+        for <digvijay@unicommerce.com>; Mon, 31 Oct 2016 10:07:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=hPWPm7EVg9gj87VIOJcgbTG6GDKIOqpEao/MBJWnux0=;
+        b=fPYe0M5CL7W0U0WEhONXr+QW5yhbZv+FH1jF9whd3BkQdv7RTCPSmWvRFAqbP6cSLv
+         89qLg/Yfiq//h23fC61KiipRHXjfWRhvobQkaE7zhObB7aKfs7/zVgZ+z/kl4Sjmj0wu
+         WxqV1f7K0lN5YXudEJWB8VcnrVqZxRl77GGDyhbBmJFaQZOcI5Ki/6wHnDDfEgAOBdT+
+         q3uGrNnPEzqpusMrthq91lKcF6R28YoJmWSfzHqCJ6bw/L2PQ72dwqZOgIj2E9C7m1+F
+         WLMyvGGKRD9VH3C/PbhgrNZjTtJ1/jJPsQUq981tjcNFKJGI3bybTh4Wl1jcXLQF0Hrh
+         SIyw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=hPWPm7EVg9gj87VIOJcgbTG6GDKIOqpEao/MBJWnux0=;
+        b=G968Hqxiy+OdIpI6OZg7SVTASNVkcXT8oQYgoKuPy0cxS8nvNnnEiWcrlC7xWd47o/
+         wn5Qx5ziE+L/+d/C87S/LTSKU9+57teIeKdXLNyLnlMAuc/vNWSLdN5weVtsgkaU4kex
+         i300/S1njR9Crm6St8wbFFZzuwGI9vK7I3cfIvHa6nmIPv9F2zWfulhqwBuZU9CMk1xe
+         x6yJBpwETh6BN0AD/EPREjWX3k8KAUBWQ1ft7U+mxb9qdgZyeQxIcW3MmjV15UPRYJFz
+         pp8rZ1kJckc8QQBFQY3cR3J1EkKKHKvnEngmcHwVNHlQIL3kczOVrcswx94kaSQuwzIh
+         v/uQ==
+X-Gm-Message-State: ABUngvdOtQ+WYS6SqYV+9+4j9vHcjtZ9EJLLF0JjjGNzODaXzCqN4F9YhtMRCct1QBQeCQ==
+X-Received: by 10.36.224.206 with SMTP id c197mr5240331ith.8.1477933668195;
+        Mon, 31 Oct 2016 10:07:48 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.60.4 with SMTP id q4ls13328104otc.29.gmail; Mon, 31 Oct
+ 2016 10:07:48 -0700 (PDT)
+X-Received: by 10.202.89.136 with SMTP id n130mr13497883oib.29.1477933667997;
+        Mon, 31 Oct 2016 10:07:47 -0700 (PDT)
+Received: from mail-oi0-x22c.google.com (mail-oi0-x22c.google.com. [2607:f8b0:4003:c06::22c])
+        by mx.google.com with ESMTPS id f58si16905040otc.204.2016.10.31.10.07.47
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 31 Oct 2016 10:07:47 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::22c is neither permitted nor denied by best guess record for domain of anamika@unicommerce.com) client-ip=2607:f8b0:4003:c06::22c;
+Received: by mail-oi0-x22c.google.com with SMTP id 62so119251335oif.1
+        for <tech@unicommerce.com>; Mon, 31 Oct 2016 10:07:47 -0700 (PDT)
+X-Received: by 10.157.51.76 with SMTP id u12mr22481326otd.98.1477933667766;
+ Mon, 31 Oct 2016 10:07:47 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.202.96.66 with HTTP; Mon, 31 Oct 2016 10:07:47 -0700 (PDT)
+In-Reply-To: <CAMuJ5=pijKUBAhFi-mFefStf5xYYXoSRAT6aVxNQyPu+8owEHw@mail.gmail.com>
+References: <CANkeY=VRPXfbEEu6fobrGOXwSC81V0QxDya92Rk24MCFw97+sA@mail.gmail.com>
+ <CALNV474smo==G3rGXhba5s=Ffnh9mqLsToJnM9aOq_ktXjBimg@mail.gmail.com> <CAMuJ5=pijKUBAhFi-mFefStf5xYYXoSRAT6aVxNQyPu+8owEHw@mail.gmail.com>
+From: Anamika Singh <anamika@unicommerce.com>
+Date: Mon, 31 Oct 2016 22:37:47 +0530
+Message-ID: <CAOk_4bkOs-5Q0go_NW2TLUL-P9J4g2hsSP94Fa2h3Oq6Jr+kyg@mail.gmail.com>
+Subject: HR announcement | Holiday Declared - Gurgaon
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>, 
+	Ashish Garg <ashish.garg@unicommerce.com>, 
+	Mukesh Bhardwaj <mukesh.bhardwaj@unicommerce.com>, 
+	Vishal Jaiswal <vishal.jaiswal@unicommerce.com>, Umang Mishra <umang@unicommerce.com>, 
+	Munish Miglani <munish@unicommerce.com>, Rajeev Verma <rajeev@unicommerce.com>
+Cc: Ankit Pruthi <ankit@unicommerce.com>, Karun Singla <karun@unicommerce.com>, 
+	Vibhu Garg <vibhu@unicommerce.com>, Manish Gupta <manish@unicommerce.com>, 
+	Ankit Khandelwal <ankitk@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113e1d3644e9b805402c3f5a
+X-Original-Sender: anamika@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c06::22c is neither permitted nor denied by best
+ guess record for domain of anamika@unicommerce.com) smtp.mailfrom=anamika@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113e1d3644e9b805402c3f5a
+Content-Type: text/plain; charset=UTF-8
+
+Dear All,
+
+As Snapdeal has declared a Holiday for tomorrow (1st Nov'16) so whoever is
+working from Gurgaon (Snapdeal) office, tomorrow will be a holiday & 12th
+Nov'16 (Saturday) is working day for them.
+
+Kindly refer the mail below for further information.
+
+
+---------- Forwarded message ----------
+From: "HR Team" <hrteam@jasperindia.com>
+Date: 31 Oct 2016 7:58 p.m.
+Subject: HR announcement | Holiday Declared - Gurgaon
+To: <team@snapdeal.com>, <team@shopo.in>
+Cc:
+
+Dear Colleagues,
+
+
+
+In the event of the opening ceremony of Haryana Swarna Jayanti, *1st Nov
+2016 (tomorrow) will be observed as a Public Holiday*, for the Snapdeal
+office at the Gurgaon location.
+
+All Managers/Supervisors are to further percolate this notification to
+their teams promptly.
+
+
+
+In lieu of the Holiday declared for 1st Nov, *12th Nov 2016 (Saturday) will
+be operational as a regular working day* at Snapdeal Gurgaon.
+
+
+
+Wishing you all a very Happy Diwali once again!
+
+
+
+
+HR Team
+
+ASF Centre A,Ground Floor, Udyog Vihar Phase IV,
+Gurgaon, Haryana, India
+
+
+Disclaimer: This communication is for the sole use of the addressee and is
+confidential and privileged information. If you are not the intended
+recipient of this communication, you are prohibited from disclosing it and
+are required to delete it forthwith. Please note that the contents of this
+communication do not necessarily represent the views of Jasper Infotech
+Private Limited (b Companyb ). E-mail Transmission cannot be guaranteed to
+be secure or error-free as information could be intercepted, corrupted,
+lost, destroyed, arrive late or incomplete, or contain viruses. The
+company, therefore, does not accept liability for any loss caused due to
+this communication. Jasper Infotech Private Limited, Registered Office:
+238, First Floor, Okhla Industrial Estate, New Delhi 110020 | 011 4830600
+U72300DL2007PTC168097
+
+--001a113e1d3644e9b805402c3f5a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div class=3D"gmail_quote"><div=
+>Dear All,</div><div><br></div><div>As Snapdeal has declared a Holiday for =
+tomorrow (1st Nov&#39;16) so whoever is working from Gurgaon (Snapdeal) off=
+ice, tomorrow will be a holiday &amp; 12th Nov&#39;16 (Saturday) is working=
+ day for them.=C2=A0</div><div><br></div><div>Kindly refer the mail below f=
+or further information.</div><div><br></div><div><br></div><div class=3D"m_=
+-6693054175488474555m_7487659506837391484gmail_forwarded" id=3D"m_-66930541=
+75488474555m_7487659506837391484gmail_block_quote0"><div class=3D"gmail_quo=
+te m_-6693054175488474555m_7487659506837391484gmail_msg">---------- Forward=
+ed message ----------<br class=3D"m_-6693054175488474555m_74876595068373914=
+84gmail_msg">From: &quot;HR Team&quot; &lt;<a href=3D"mailto:hrteam@jasperi=
+ndia.com" class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg" ta=
+rget=3D"_blank">hrteam@jasperindia.com</a>&gt;<br class=3D"m_-6693054175488=
+474555m_7487659506837391484gmail_msg">Date: 31 Oct 2016 7:58 p.m.<br class=
+=3D"m_-6693054175488474555m_7487659506837391484gmail_msg">Subject: HR annou=
+ncement | Holiday Declared - Gurgaon<br class=3D"m_-6693054175488474555m_74=
+87659506837391484gmail_msg">To:  &lt;<a href=3D"mailto:team@snapdeal.com" c=
+lass=3D"m_-6693054175488474555m_7487659506837391484gmail_msg" target=3D"_bl=
+ank">team@snapdeal.com</a>&gt;,  &lt;<a href=3D"mailto:team@shopo.in" class=
+=3D"m_-6693054175488474555m_7487659506837391484gmail_msg" target=3D"_blank"=
+>team@shopo.in</a>&gt;<br class=3D"m_-6693054175488474555m_7487659506837391=
+484gmail_msg">Cc: <br class=3D"m_-6693054175488474555m_7487659506837391484g=
+mail_msg"><br type=3D"attribution" class=3D"m_-6693054175488474555m_7487659=
+506837391484gmail_msg"><div dir=3D"ltr" class=3D"m_-6693054175488474555m_74=
+87659506837391484gmail_msg"><div class=3D"m_-6693054175488474555m_748765950=
+6837391484gmail_msg"><p class=3D"MsoNormal m_-6693054175488474555m_74876595=
+06837391484gmail_msg">Dear Colleagues,<u class=3D"m_-6693054175488474555m_7=
+487659506837391484gmail_msg"></u><u class=3D"m_-6693054175488474555m_748765=
+9506837391484gmail_msg"></u></p><p class=3D"MsoNormal m_-669305417548847455=
+5m_7487659506837391484gmail_msg">=C2=A0<u class=3D"m_-6693054175488474555m_=
+7487659506837391484gmail_msg"></u><u class=3D"m_-6693054175488474555m_74876=
+59506837391484gmail_msg"></u></p><p class=3D"MsoNormal m_-66930541754884745=
+55m_7487659506837391484gmail_msg">In the event of the opening ceremony of H=
+aryana Swarna Jayanti,=C2=A0<u class=3D"m_-6693054175488474555m_74876595068=
+37391484gmail_msg">1<sup class=3D"m_-6693054175488474555m_74876595068373914=
+84gmail_msg">st</sup>=C2=A0Nov 2016 (tomorrow) will be observed as a Public=
+ Holiday</u>, for the Snapdeal office at the Gurgaon location.=C2=A0<u clas=
+s=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u><u class=3D"=
+m_-6693054175488474555m_7487659506837391484gmail_msg"></u></p><p class=3D"M=
+soNormal m_-6693054175488474555m_7487659506837391484gmail_msg">All Managers=
+/Supervisors are to further percolate this notification to their teams prom=
+ptly.<u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u>=
+<u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u></p><=
+p class=3D"MsoNormal m_-6693054175488474555m_7487659506837391484gmail_msg">=
+=C2=A0<u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u=
+><u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u></p>=
+<p class=3D"MsoNormal m_-6693054175488474555m_7487659506837391484gmail_msg"=
+>In lieu of the Holiday declared for 1<sup class=3D"m_-6693054175488474555m=
+_7487659506837391484gmail_msg">st</sup>=C2=A0Nov,=C2=A0<u class=3D"m_-66930=
+54175488474555m_7487659506837391484gmail_msg">12<sup class=3D"m_-6693054175=
+488474555m_7487659506837391484gmail_msg">th</sup>=C2=A0Nov 2016 (Saturday) =
+will be operational as a regular working day</u>=C2=A0at Snapdeal Gurgaon.<=
+u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u><u cla=
+ss=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u></p><p clas=
+s=3D"MsoNormal m_-6693054175488474555m_7487659506837391484gmail_msg">=C2=A0=
+<u class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u><u cl=
+ass=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></u></p><p cla=
+ss=3D"MsoNormal m_-6693054175488474555m_7487659506837391484gmail_msg">Wishi=
+ng you all a very Happy Diwali once again!<u class=3D"m_-669305417548847455=
+5m_7487659506837391484gmail_msg"></u><u class=3D"m_-6693054175488474555m_74=
+87659506837391484gmail_msg"></u></p><p class=3D"MsoNormal m_-66930541754884=
+74555m_7487659506837391484gmail_msg">=C2=A0<u class=3D"m_-66930541754884745=
+55m_7487659506837391484gmail_msg"></u><u class=3D"m_-6693054175488474555m_7=
+487659506837391484gmail_msg"></u></p><p class=3D"MsoNormal m_-6693054175488=
+474555m_7487659506837391484gmail_msg">=C2=A0</p></div><div class=3D"m_-6693=
+054175488474555m_7487659506837391484gmail_msg"><div class=3D"m_-66930541754=
+88474555m_7487659506837391484m_8152324739712700562m_98753136305456312gmail_=
+signature m_-6693054175488474555m_7487659506837391484gmail_msg"><div dir=3D=
+"ltr" class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"><table=
+ width=3D"602" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"co=
+lor:rgb(0,0,0);font-family:&quot;times new roman&quot;;font-size:medium;lin=
+e-height:0px" class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg=
+"><tbody class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"><tr=
+ class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"><td style=
+=3D"font-family:arial,calibri,sans-serif;font-size:19px;color:rgb(255,35,65=
+);font-weight:bold;line-height:22px" class=3D"m_-6693054175488474555m_74876=
+59506837391484gmail_msg">HR Team</td></tr><tr class=3D"m_-66930541754884745=
+55m_7487659506837391484gmail_msg"><td height=3D"5" class=3D"m_-669305417548=
+8474555m_7487659506837391484gmail_msg"></td></tr><tr class=3D"m_-6693054175=
+488474555m_7487659506837391484gmail_msg"><td style=3D"font-family:arial,cal=
+ibri,sans-serif;font-size:15px;color:rgb(102,102,102);line-height:18px" cla=
+ss=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"><br class=3D"m_=
+-6693054175488474555m_7487659506837391484gmail_msg"></td></tr><tr class=3D"=
+m_-6693054175488474555m_7487659506837391484gmail_msg"><td class=3D"m_-66930=
+54175488474555m_7487659506837391484gmail_msg"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" class=3D"m_-6693054175488474555m=
+_7487659506837391484gmail_msg"><tbody class=3D"m_-6693054175488474555m_7487=
+659506837391484gmail_msg"><tr class=3D"m_-6693054175488474555m_748765950683=
+7391484gmail_msg"><td width=3D"200" style=3D"border-right:1px solid rgb(0,0=
+,0)" class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"><img sr=
+c=3D"http://i1.sdlcdn.com/static/img/marketing-mailers/mailer/2016/UserGrow=
+th/har_12sept/logonew.png" width=3D"192" height=3D"75" alt=3D"" class=3D"m_=
+-6693054175488474555m_7487659506837391484gmail_msg"></td><td width=3D"30" c=
+lass=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></td><td widt=
+h=3D"300" style=3D"font-family:arial,calibri,sans-serif;font-size:14px;line=
+-height:18px" class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg=
+">ASF Centre A,Ground Floor, Udyog Vihar Phase IV,<br class=3D"m_-669305417=
+5488474555m_7487659506837391484gmail_msg">Gurgaon, Haryana, India</td></tr>=
+</tbody></table></td></tr><tr class=3D"m_-6693054175488474555m_748765950683=
+7391484gmail_msg"><td class=3D"m_-6693054175488474555m_7487659506837391484g=
+mail_msg">=C2=A0</td></tr></tbody></table><table width=3D"100%" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"color:rgb(0,0,0);font-family=
+:&quot;times new roman&quot;;font-size:medium" class=3D"m_-6693054175488474=
+555m_7487659506837391484gmail_msg"><tbody class=3D"m_-6693054175488474555m_=
+7487659506837391484gmail_msg"><tr class=3D"m_-6693054175488474555m_74876595=
+06837391484gmail_msg"><td class=3D"m_-6693054175488474555m_7487659506837391=
+484gmail_msg">=C2=A0</td></tr><tr class=3D"m_-6693054175488474555m_74876595=
+06837391484gmail_msg"><td style=3D"font-family:arial,calibri,sans-serif;fon=
+t-size:9px;color:rgb(131,129,129);line-height:15px" class=3D"m_-66930541754=
+88474555m_7487659506837391484gmail_msg">Disclaimer: This communication is f=
+or the sole use of the addressee and is confidential and privileged informa=
+tion. If you are not the intended recipient of this communication, you are =
+prohibited from disclosing it and are required to delete it forthwith. Plea=
+se note that the contents of this communication do not necessarily represen=
+t the views of Jasper Infotech Private Limited (b Companyb ). E-mail Transm=
+ission cannot be guaranteed to be secure or error-free as information could=
+ be intercepted, corrupted, lost, destroyed, arrive late or incomplete, or =
+contain viruses. The company, therefore, does not accept liability for any =
+loss caused due to this communication. Jasper Infotech Private Limited, Reg=
+istered Office: 238, First Floor, Okhla Industrial Estate, New Delhi 110020=
+ | 011 4830600 U72300DL2007PTC168097</td></tr></tbody></table></div></div><=
+/div>
+<br class=3D"m_-6693054175488474555m_7487659506837391484gmail_msg"></div>
+</div>
+</div></div>
+</div>
+</div>
+
+--001a113e1d3644e9b805402c3f5a--

@@ -1,0 +1,117 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.135 with SMTP id j7csp157662qgd;
+        Tue, 10 Jan 2017 00:35:12 -0800 (PST)
+X-Received: by 10.237.33.69 with SMTP id 63mr1543771qtc.182.1484037312033;
+        Tue, 10 Jan 2017 00:35:12 -0800 (PST)
+Return-Path: <rahul.kandpal@unicommerce.com>
+Received: from mail-qk0-x230.google.com (mail-qk0-x230.google.com. [2607:f8b0:400d:c09::230])
+        by mx.google.com with ESMTPS id l184si853184qkc.181.2017.01.10.00.35.11
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 10 Jan 2017 00:35:12 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) client-ip=2607:f8b0:400d:c09::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of rahul.kandpal@unicommerce.com) smtp.mailfrom=rahul.kandpal@unicommerce.com
+Received: by mail-qk0-x230.google.com with SMTP id 11so68609690qkl.3
+        for <digvijay@unicommerce.com>; Tue, 10 Jan 2017 00:35:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=NmoaGPRA3Z+8OlBFW7abF3yWgT/+8DnVrz5jcKsT9sE=;
+        b=B8srASdwmQA6FseuMMpUufKnc4ApycyKGXxOOaS/OwHuzWWNQdjuqkqVGFIVyO1NVo
+         FdoN4Gi8DpyGg1S1DJ1UBQw3RasskjejIv0cmjl9MVBn6TC6A/hruy8FWY5heQV/kcQo
+         zvXyPapn6nsDf3vrQ1PMXfXpXF/RiGnnziDH0JbncDNHXHyKH2cxge7a+E7F+kZ28wkJ
+         4gGGfMYI/+myf8ImJd5dWE/Q9IIeCc5NXJL/6zVaBnkgGkCSo4XWsd0WuIeulzywR4gl
+         5VKkXlU82gSXR7R9dxavuL+M23vR27J7NigX+bxgTF/Y2RTJYQN54CFAHuWMACyo5f0C
+         Gnsw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=NmoaGPRA3Z+8OlBFW7abF3yWgT/+8DnVrz5jcKsT9sE=;
+        b=Q0celw+7od71/uJ5ruF2FLSAK1Z9ovGhdzIuFXKPWR+4rNca5sLBAnfX62AmRhEltU
+         D0AkdEe3X4N1GQF4fvhVvVE6eHbcTByA/UGytFHEya6gtKQutr0CoT30QB2fmv6ozzQ0
+         IcXYrWHQQyBiwvC4ukSq/MwNxeoBL4Pv6NcmqIMAZuwIwU4hMM6YEikHJalJ/R54qoyn
+         EY7brEC8/x7zgoFBQY7KC8q5fFySQMPZ5tsKpYP8lsUxVoMTN7h7ZiOMEAx5lqro7K8R
+         WPUR3kzxFi9xLJoQ96Qi+teNGef706f5DujWrEl5DUSU0Fwa0otIynVuCn01lOo59f1C
+         eWPA==
+X-Gm-Message-State: AIkVDXLEpVZupLCUY988IID4t6ZRX5fJ9Agp17wQmQ6RinkYA2vZJ8bSl4rtVpccW9SYLGUNOm/AsrOPWp7Cfg==
+X-Received: by 10.55.190.6 with SMTP id o6mr1587106qkf.124.1484037311560; Tue,
+ 10 Jan 2017 00:35:11 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.136.251 with HTTP; Tue, 10 Jan 2017 00:35:11 -0800 (PST)
+In-Reply-To: <CAJQg1Ju8SCyJPB76xwQU2-gYHZ-iGt1wEVZ=SwqBz0hj+F3NNA@mail.gmail.com>
+References: <CAJQg1Ju8SCyJPB76xwQU2-gYHZ-iGt1wEVZ=SwqBz0hj+F3NNA@mail.gmail.com>
+From: Rahul Kandpal <rahul.kandpal@unicommerce.com>
+Date: Tue, 10 Jan 2017 14:05:11 +0530
+Message-ID: <CAJQg1JtVH0+8xhKnGXfaDFg=5NX7wZ4Q3sc0y67AvD-BGuGoGg@mail.gmail.com>
+Subject: Re: Trendybharat Integration
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: sunny agarwal <sunny@unicommerce.com>, Rohit Mishra <rohit@unicommerce.com>, 
+	Ravindra Kumar <ravindra@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c0431c6ca39270545b95cb8
+
+--94eb2c0431c6ca39270545b95cb8
+Content-Type: text/plain; charset=UTF-8
+
+Hi Digvijay
+
+Please update on the progress.
+
+On Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <rahul.kandpal@unicommerce.com
+> wrote:
+
+> Hi Digvijay
+>
+> Please update on this mail thread once trendybharat.unicommerce.com is
+> ready for testing.
+>
+> Have created a vendor panel(trtester.unicommerce.com) where orders will
+> be pulled from trendybharat.
+>
+> --
+>
+> Thanks
+> Rahul Kandpal
+> 08826793081
+>
+
+
+
+-- 
+
+Thanks
+Rahul Kandpal
+08826793081
+
+--94eb2c0431c6ca39270545b95cb8
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Digvijay<div><br></div><div>Please update on the progre=
+ss.</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On=
+ Thu, Jan 5, 2017 at 2:56 PM, Rahul Kandpal <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:rahul.kandpal@unicommerce.com" target=3D"_blank">rahul.kandpal@u=
+nicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" s=
+tyle=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div=
+ dir=3D"ltr">Hi Digvijay<div><br></div><div>Please update on this mail thre=
+ad once <a href=3D"http://trendybharat.unicommerce.com" target=3D"_blank">t=
+rendybharat.unicommerce.com</a> is ready for testing.</div><div><br></div><=
+div>Have created a vendor panel(<span style=3D"background-color:rgb(226,228=
+,255);color:rgb(51,51,51);font-family:&quot;helvetica neue&quot;,helvetica,=
+arial,sans-serif;font-size:13px"><a href=3D"http://trtester.unicommerce.com=
+" target=3D"_blank">trtester.unicommerce.com</a><wbr>)</span>=C2=A0where or=
+ders will be pulled from trendybharat.</div><span class=3D"HOEnZb"><font co=
+lor=3D"#888888"><div><div><br></div>-- <br><div class=3D"m_2525148820284015=
+360gmail_signature"><div dir=3D"ltr"><br><div>Thanks</div><div>Rahul Kandpa=
+l</div><div>08826793081</div></div></div>
+</div></font></span></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><b=
+r><div>Thanks</div><div>Rahul Kandpal</div><div>08826793081</div></div></di=
+v>
+</div>
+
+--94eb2c0431c6ca39270545b95cb8--

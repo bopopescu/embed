@@ -1,0 +1,109 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp457433itg;
+        Wed, 28 Sep 2016 10:46:53 -0700 (PDT)
+X-Received: by 10.107.3.207 with SMTP id e76mr34670652ioi.198.1475084813292;
+        Wed, 28 Sep 2016 10:46:53 -0700 (PDT)
+Return-Path: <guhapriya@unicommerce.com>
+Received: from mail-it0-x234.google.com (mail-it0-x234.google.com. [2607:f8b0:4001:c0b::234])
+        by mx.google.com with ESMTPS id p190si11364124iop.8.2016.09.28.10.46.53
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Sep 2016 10:46:53 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::234 is neither permitted nor denied by best guess record for domain of guhapriya@unicommerce.com) client-ip=2607:f8b0:4001:c0b::234;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::234 is neither permitted nor denied by best guess record for domain of guhapriya@unicommerce.com) smtp.mailfrom=guhapriya@unicommerce.com
+Received: by mail-it0-x234.google.com with SMTP id r192so127831989ita.0
+        for <digvijay@unicommerce.com>; Wed, 28 Sep 2016 10:46:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=eU9slnz93gl+YE7d091qPmyR6/IPZyjQIeBENTxhoFs=;
+        b=fvq1QLv1800e+cOg3cN0ZVoexy1qnrmnEkbyu0FvlBza7FqqC1EvJKhSksa8Pi4bdB
+         SnQLhSvsMC2BSuoV0tIGNWq7Kfb7sQfFy/BNqZmebUIeR2TVyYLN4tgLhgCO4N/Psjtb
+         nUoLd5HGWeVj2BGu5cExOsjor9/ax2g8p3HH7GixyLz+p2PRpEnEtIRRjJklgg569Byl
+         NM3VG5hW+yiyahWWZFytCj5yHr1hRmKaRl7Dn2ueaBzxqf1cT86A4L5Ez0POVRAUwNzD
+         QqpA+bZaPEB1YCzOlWbvQAID/O7JB1EWIH6jWIk++3zerJy9DkPMxZlnIfCQGeYSis3b
+         fbmg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=eU9slnz93gl+YE7d091qPmyR6/IPZyjQIeBENTxhoFs=;
+        b=GbXEWuCTv9Jdt/Ig6rxr+APAvKpqd2/uYes+wsEgjr+vNfr8M8ikI7JOcYLJu9kDky
+         Ei8kGBnjGnRqgD4CwS/a6/XJ7L+zue3T9SLtOXLM9uLmrcZr/oQsIU+OgSyYg0yrYSS1
+         VG3Ex8OMvbLdjBhWhHgYwxosSjGFnTMXKfXWB3E/rEpMupQ+AavSqUAMFStJrmLzpHeW
+         J8CD6CZvxzAia2jngTbIFCUDxsf7Ay9ZeSUHGfr7RzRIx0FEIY1GluIbepXURYye/zLF
+         qSQoKPYmBtnGMeORWliDHI7F0xD/G8bAh8zxtYvS6MLUi4OKBqzA8UtTo1aA79FuJgP3
+         muBg==
+X-Gm-Message-State: AA6/9RlE1YXL1Yhcjitjl/nr0+ukrZGlEipqZqbKgzbiZYPYoyL3ZulqQ2hSEKfCnuNa7IkZcnAORm6GabEugA==
+X-Received: by 10.36.81.143 with SMTP id s137mr3655843ita.76.1475084812528;
+ Wed, 28 Sep 2016 10:46:52 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.107.33.148 with HTTP; Wed, 28 Sep 2016 10:46:52 -0700 (PDT)
+From: Guhapriya Velu <guhapriya@unicommerce.com>
+Date: Wed, 28 Sep 2016 23:16:52 +0530
+Message-ID: <CAGjOsgSBA0ni4-cAHPM7NM_4VyPjRCgtaC-Zyd-oM8PVdxWvHw@mail.gmail.com>
+Subject: Lunch Contri
+To: Vani Verma <vani@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, 
+	Bhuvneshwar Kumar <bhuvneshwar@unicommerce.com>, Sushant Majumdar <sushant@unicommerce.com>, 
+	Ankur Pratik <ankur.pratik@unicommerce.com>, 
+	Gurpreet Singh Khanuja <gurpreet.khanuja@snapdeal.com>, Sonu Goel <sonu@unicommerce.com>, 
+	Shobhit Gupta <shobhit@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Garima Arora <garima@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>, 
+	Akshay Kochhar <akshay@unicommerce.com>, Akshay Agarwal <akshay.agarwal@unicommerce.com>, 
+	Kunal Garg <kunal.garg@unicommerce.com>, Girish Tarwatkar <girish@unicommerce.com>, 
+	Promil Bhardwaj <promil@unicommerce.com>, Bhawna Dhawan <bhawna@unicommerce.com>, 
+	Lalit Tanwar <lalit.tanwar@unicommerce.com>, Ayush Walia <ayush@unicommerce.com>, 
+	Amit Maddheshiya <amit.maddheshiya@unicommerce.com>, Kumar Animesh <animesh@unicommerce.com>, 
+	Samdeesh Singh <samdeesh@unicommerce.com>, Puneet Sharma <puneet@unicommerce.com>, 
+	Vikas Goyal <vikas@unicommerce.com>, Ankit Bansal <ankit.bansal@unicommerce.com>, 
+	Digvijay Sharma <digvijay@unicommerce.com>, Aditya Harit <aditya@unicommerce.com>, 
+	Piyush Arora <piyush@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Yamini Sukhija <yamini.sukhija@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113bd5e243d5b0053d94f291
+
+--001a113bd5e243d5b0053d94f291
+Content-Type: text/plain; charset=UTF-8
+
+Hi Guys
+
+
+For lunch last friday the total bill was 24,109 Rs. I'm contributing 8k to
+the lunch out. The rest is split amongst the 30 of us who were on lunch
+which comes to 537 Rs per person. Find below my account details for the
+transfer. Thanks in advance.
+
+*Account No:* 30031385491
+*IFSC Code:* SBIN0000965
+*MICR Code:* 600002031
+*Branch*: SBI MYLAPORE
+
+Regards
+Guha
+
+PS: Don't remember the ppl exactly hence mighth ave marked additional people
+
+--001a113bd5e243d5b0053d94f291
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Guys
+<div><br></div><div><br></div><div>For lunch last friday the total bill was=
+ 24,109 Rs. I&#39;m contributing 8k to the lunch out. The rest is split amo=
+ngst the 30 of us who were on lunch which comes to 537 Rs per person. Find =
+below my account details for the transfer. Thanks in advance.</div><div><br=
+></div><div><font face=3D"arial, helvetica, sans-serif" color=3D"#000000"><=
+b><u>Account No:</u></b>=C2=A030031385491</font></div><div><font face=3D"ar=
+ial, helvetica, sans-serif" color=3D"#000000"><b><u>IFSC Code:</u></b> SBIN=
+0000965</font></div><div><font face=3D"arial, helvetica, sans-serif" color=
+=3D"#000000"><font style=3D"background-color:rgb(255,255,255)"><b><u>MICR C=
+ode:</u></b>=C2=A0600002031</font><br></font></div><div><font face=3D"arial=
+, helvetica, sans-serif" color=3D"#000000"><b><u>Branch</u></b>:=C2=A0SBI=
+=C2=A0MYLAPORE</font><font face=3D"arial, helvetica, sans-serif" color=3D"#=
+000000" style=3D"background-color:rgb(255,255,255)"><br></font></div><div><=
+br></div><div>Regards</div><div>Guha</div><div><br></div><div>PS: Don&#39;t=
+ remember the ppl exactly hence mighth ave marked additional people</div></=
+div>
+
+--001a113bd5e243d5b0053d94f291--

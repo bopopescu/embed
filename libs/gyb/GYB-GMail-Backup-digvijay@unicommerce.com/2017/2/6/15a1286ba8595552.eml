@@ -1,0 +1,110 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp1552832qgu;
+        Mon, 6 Feb 2017 00:25:03 -0800 (PST)
+X-Received: by 10.31.189.208 with SMTP id n199mr3332855vkf.128.1486369503839;
+        Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+Return-Path: <tech+bncBC33VSELZUGRBX7F4DCAKGQEUUFP72Q@unicommerce.com>
+Received: from mail-vk0-x248.google.com (mail-vk0-x248.google.com. [2607:f8b0:400c:c05::248])
+        by mx.google.com with ESMTPS id x184si7053876vke.250.2017.02.06.00.25.03
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::248 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrbx7f4dcakgqeuufp72q@unicommerce.com) client-ip=2607:f8b0:400c:c05::248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::248 is neither permitted nor denied by best guess record for domain of tech+bncbc33vselzugrbx7f4dcakgqeuufp72q@unicommerce.com) smtp.mailfrom=tech+bncBC33VSELZUGRBX7F4DCAKGQEUUFP72Q@unicommerce.com
+Received: by mail-vk0-x248.google.com with SMTP id n19sf36046241vkd.4
+        for <digvijay@unicommerce.com>; Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=HzFMVgH2t6iXHSbYnpJOfPub6LLeuUBTr5t8Kqpbrnc=;
+        b=XOa1vN1JbbAy+6YfhHzNvkEQ27pjuC25Ff+npkb5oire8ofzcdyxA3PhiCJnIDI/yN
+         E+bPbJXBZQ7KIlcJN7S6UW5BaB0/kLBrnrogosj0psd15DstxyhsIu4RgR0fN4ZI41xw
+         np9NyGq5FCvbRCzqDjqgVMBc7+bKPmObOyAfZJz2u1x2soVQ9E2IsHrB/fxgTqsNd004
+         l41wcUPpx1Uy4t5srib0gXQUaQMXgZzuhOP/sw4zzhlc5ycja9h/JRb9Z2zTz7PDkfQZ
+         8fGIACfqjpIoWYbMlyMXNyQQ9XOQXyZuEthWWAX3RHwSh7LBu23DLkps7tZQHcXMgchG
+         u+OQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=HzFMVgH2t6iXHSbYnpJOfPub6LLeuUBTr5t8Kqpbrnc=;
+        b=kAviz9vSheM/GnEY0KbxEHdhYA7SxswLlxZm4JA213EAEsDTP6phpSKqolTcdJmar+
+         FjG1j5gW67gvCsEToInCqVU4XCDA7ykj9GRfbxN5/p47BumW9OOb3El/5Jn07KEQNL2y
+         /4J8C8aMb2BMtb7JfX9pqgt8N5ZwrJA1vpW4Nfk/jk2TxvSZQwz0tn+zXah3Npv5if+O
+         B2HNp+C+EATiJ0MQLiup2XwfkQks4v95huoNNhlJ3sw0sCGYZUy6zV6mvQPjpykMmFqI
+         M5l6wHyqqfO6oNyj6ImVkadkxtsoq7sCJ+Hn4B6T7A03JipqDyYSJWk4mhL0+6rG1eJy
+         bckA==
+X-Gm-Message-State: AMke39khWgLj4M0qKCAi1KPdeorxr9zaSfRVc5F5it0nPFSMD3348W9Gnb3aUVBSUro+Bw==
+X-Received: by 10.31.139.146 with SMTP id n140mr1225682vkd.8.1486369503554;
+        Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.31.6 with SMTP id x6ls12062278otd.46.gmail; Mon, 06 Feb
+ 2017 00:25:03 -0800 (PST)
+X-Received: by 10.176.17.18 with SMTP id e18mr3481563uab.112.1486369503338;
+        Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+Received: from mail-ua0-x22a.google.com (mail-ua0-x22a.google.com. [2607:f8b0:400c:c08::22a])
+        by mx.google.com with ESMTPS id 62si9564299uay.237.2017.02.06.00.25.03
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22a is neither permitted nor denied by best guess record for domain of bhupi@unicommerce.com) client-ip=2607:f8b0:400c:c08::22a;
+Received: by mail-ua0-x22a.google.com with SMTP id i68so55550742uad.0
+        for <tech@unicommerce.com>; Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+X-Received: by 10.176.23.81 with SMTP id k17mr4431686uaf.99.1486369503106;
+ Mon, 06 Feb 2017 00:25:03 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.176.81.175 with HTTP; Mon, 6 Feb 2017 00:25:02 -0800 (PST)
+From: Bhupinder Garg <bhupi@unicommerce.com>
+Date: Mon, 6 Feb 2017 13:55:02 +0530
+Message-ID: <CABtr59trn=bJAs8rCW+JpcRaRoKvZHmsJbkHBXHYsityx0t_3w@mail.gmail.com>
+Subject: Questions for Supply Chain Townhall
+To: Tech Team <tech@unicommerce.com>, Product Team <product@unicommerce.com>
+Content-Type: multipart/alternative; boundary=f40304361f323cee9c0547d85ed2
+X-Original-Sender: bhupi@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400c:c08::22a is neither permitted nor denied by best
+ guess record for domain of bhupi@unicommerce.com) smtp.mailfrom=bhupi@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--f40304361f323cee9c0547d85ed2
+Content-Type: text/plain; charset=UTF-8
+
+Guys,
+
+We have the next supply chain townhall in the coming week.
+If you have any questions you can ask them *anonymously *by adding to
+following sheet.
+
+Add you questions to https://goo.gl/forms/4UTjhYLySIaQbs9q1 in an
+*incognito* window (doesn't need google sign-in).
+
+Thanks,
+
+--f40304361f323cee9c0547d85ed2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><span class=3D"gmail-im" style=3D"font-size:12.8px"><div>G=
+uys,<br></div><div><br></div><div>We have the next supply chain townhall in=
+ the coming week.</div><div>If you have any questions you can ask them=C2=
+=A0<b>anonymously=C2=A0</b>by adding to following sheet.</div><div><br></di=
+v></span><div style=3D"font-size:12.8px">Add you questions to=C2=A0<font co=
+lor=3D"#1155cc"><a href=3D"https://goo.gl/forms/4UTjhYLySIaQbs9q1" target=
+=3D"_blank">https://goo.gl/forms/<wbr>4UTjhYLySIaQbs9q1</a></font>=C2=A0in =
+an=C2=A0<b>incognito</b>=C2=A0window (doesn&#39;t need google sign-in).</di=
+v><div style=3D"font-size:12.8px"><br></div><div style=3D"font-size:12.8px"=
+>Thanks,</div></div>
+
+--f40304361f323cee9c0547d85ed2--

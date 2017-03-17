@@ -1,0 +1,204 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2510952qgd;
+        Tue, 13 Dec 2016 20:31:26 -0800 (PST)
+X-Received: by 10.36.213.3 with SMTP id a3mr5612911itg.36.1481689886903;
+        Tue, 13 Dec 2016 20:31:26 -0800 (PST)
+Return-Path: <manorma@unicommerce.com>
+Received: from mail-io0-x22a.google.com (mail-io0-x22a.google.com. [2607:f8b0:4001:c06::22a])
+        by mx.google.com with ESMTPS id z64si36461274iod.147.2016.12.13.20.31.26
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Dec 2016 20:31:26 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::22a is neither permitted nor denied by best guess record for domain of manorma@unicommerce.com) client-ip=2607:f8b0:4001:c06::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c06::22a is neither permitted nor denied by best guess record for domain of manorma@unicommerce.com) smtp.mailfrom=manorma@unicommerce.com
+Received: by mail-io0-x22a.google.com with SMTP id h30so21123909iod.2
+        for <digvijay@unicommerce.com>; Tue, 13 Dec 2016 20:31:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=Vu+uOzOA9l7qS/zK25CyxFMYfjqwEXmgp0EVSEF+IZ8=;
+        b=NhsPd9UH3CAZUwpImgWIe4Htave+YzHe1kbUNgy2RntIlhOLbX/qwc5FpeAtJSSBxU
+         QyPoCM3MiFNzuxhA5TphY5qJxKs5sGwfdYkMcLaWtH2efPpbWQb2WQUcg/2bsxQNZfGT
+         ULN/ZH81N0Cj8OCmj/m33BLmpgPs57JSpOc+AhjKH88v72O0G497hub2Mm3t0u3/X37e
+         Mg2KgXlvumEqyH4WEg7ysxbiHOTDHTQCIuk1H1sx2QdqXWEOyYaQzK/H1SE7UuhYlfi8
+         bgWqwZ6FgZ3gCKeIopPRiVv8TI/N8/qNGpS8TXkxcL9l78+iW7cFF+DYFpiA1Ba/zxv0
+         Y81Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=Vu+uOzOA9l7qS/zK25CyxFMYfjqwEXmgp0EVSEF+IZ8=;
+        b=NK27VU3CHAnsg4lkDy2O8DyZZUHBdm41MdrvQj8D0A9ZLdHKGXEWmEBM15lu8FZFPA
+         s+Gt93RimXwwo4h79jIaplBD2NYnDOkg/br+K1nLX06/B78PmN5rpTiy2WTHj6CAjv1g
+         yFzPXHoFwU26Vs0K+oyzrIlytYfDcpFfymOOqLCsAHrP0AP6Es/9H8ZmhmneLOGl00rC
+         R80eyF+KK6HKIdlP/djJq8fmKHAz/tHMOS/UBr02KQfwJ85VJQ30xsaA8G0shaHzFiyr
+         ntu/X2DGkSoMFFMln7bkFdYNkJpfNIAuQ8aO0pqECsx84ibl4hHB9+bdky0NX3Ge2H30
+         98ag==
+X-Gm-Message-State: AKaTC02w16r3ddwTo0mgh0wq5eta7iqVuG7ycrqyTKkdSCfTEa7KHgVCv34B4HwNcH7V2SdKN7pf2EEfBq4ySg==
+X-Received: by 10.36.82.85 with SMTP id d82mr5870232itb.95.1481689886118; Tue,
+ 13 Dec 2016 20:31:26 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.79.56.17 with HTTP; Tue, 13 Dec 2016 20:30:45 -0800 (PST)
+In-Reply-To: <CAJF3sopRsPVaCWXBy9XapebNd0B94rgRz5dEsEMWUt-mB_W2Sg@mail.gmail.com>
+References: <CAJF3sor=msUL7OhsixgRQHEnCYi83PofR4QNnA66Ooh85kTxEg@mail.gmail.com>
+ <CAFD_XHF3VGJbRi_HLNgNCYQsueZy3LVdQPt2Mqz14_Eu1-je3g@mail.gmail.com>
+ <CAP6cLWNJqTn_NNbCyrE1jXDof6Cjxf+0+UTFU56M=Pz_ebat+Q@mail.gmail.com> <CAJF3sopRsPVaCWXBy9XapebNd0B94rgRz5dEsEMWUt-mB_W2Sg@mail.gmail.com>
+From: Manorma Rai <manorma@unicommerce.com>
+Date: Wed, 14 Dec 2016 10:00:45 +0530
+Message-ID: <CAP6cLWN28mW+U3Bu9SG2x1AUcZJTa7M+qfP-O00HoGHzKtyw1Q@mail.gmail.com>
+Subject: Re: SD Recon sheet
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1142f3765468a6054396cf18
+
+--001a1142f3765468a6054396cf18
+Content-Type: text/plain; charset=UTF-8
+
+Stock out charges is as per below standards:
+
+Cancel order in 24 hour so penalty will be 100% of merchant payout
+after 24 to 48 hour will be 200% of merchant payout
+after 48 hour it will be 250% of payout.
+
+
+
+
+Thanks and Regards
+Manorama Rai
+*Unicommerce** e-Solutions Pvt. Ltd.*
+
+
+
+
+On Tue, Dec 13, 2016 at 12:57 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Can u explain the breakup of the 'Net Payable' column in this sheet for
+> rows in which 'Stock out of commission' is shown? I need to include it for
+> the reconciliation of Snapdeal.
+>
+> On Tue, Dec 13, 2016 at 12:41 PM, Manorma Rai <manorma@unicommerce.com>
+> wrote:
+>
+>>
+>> That is cancellation charge,because client had marked that order out of
+>> stock so order get cancel and Snapdeal team charge out of commission.
+>>
+>>
+>>
+>> Thanks and Regards
+>> Manorama Rai
+>> *Unicommerce** e-Solutions Pvt. Ltd.*
+>>
+>>
+>>
+>>
+>> On Mon, Dec 12, 2016 at 5:03 PM, Varad Singhal <varad@unicommerce.com>
+>> wrote:
+>>
+>>
+>>> ---------- Forwarded message ----------
+>>> From: Digvijay Sharma <digvijay@unicommerce.com>
+>>> Date: Mon, Dec 12, 2016 at 4:04 PM
+>>> Subject: SD Recon sheet
+>>> To: Varad Singhal <varad@unicommerce.com>
+>>>
+>>>
+>>> Isme "stock out of commission" search kr dena
+>>>
+>>>
+>>>
+>>
+>>
+>>
+>>  Sent with Mailtrack
+>> <https://mailtrack.io/install?source=signature&lang=en&referral=manorma@unicommerce.com&idSignature=22>
+>>
+>
+>
+
+--001a1142f3765468a6054396cf18
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"font-size:12.8px">Stock out charges is as pe=
+r below standards:</div><div style=3D"font-size:12.8px"><br></div><div styl=
+e=3D"font-size:12.8px">Cancel order=C2=A0<span class=3D"gmail-aBn" tabindex=
+=3D"0"><span class=3D"gmail-aQJ">in 24 hour</span></span>=C2=A0so penalty w=
+ill be 100% of merchant payout</div><div style=3D"font-size:12.8px">after 2=
+4 to 48 hour will be 200% of merchant payout</div><div style=3D"font-size:1=
+2.8px">after 48 hour it will be 250% of payout.</div><br><br><br><img width=
+=3D"0" height=3D"0" class=3D"mailtrack-img" src=3D"https://mailtrack.io/tra=
+ce/mail/0f0f7a7b39a411c50c49ed358a290439b24dd598.png?u=3D1165148"></div><di=
+v class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_signatur=
+e" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr=
+"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><d=
+iv dir=3D"ltr"><span style=3D"font-family:&quot;comic sans ms&quot;,sans-se=
+rif;font-size:12.8px"><span style=3D"background-color:rgb(255,255,255)"><fo=
+nt color=3D"#000000">Thanks and Regards</font></span><br></span>Manorama Ra=
+i<br><span style=3D"font-size:12.8px;background-color:rgb(255,255,255)"><fo=
+nt color=3D"#38761d"><i><b>Unicommerce</b></i></font></span><span style=3D"=
+font-size:12.8px"><i><b><font style=3D"background-color:rgb(255,255,255)" c=
+olor=3D"#38761d">=C2=A0e-</font><font color=3D"#0000ff" style=3D"background=
+-color:rgb(255,255,255)">Solutions Pvt. Ltd.</font></b></i><br></span><br><=
+br><br></div></div></div></div></div></div></div></div></div></div></div></=
+div></div>
+<br><div class=3D"gmail_quote">On Tue, Dec 13, 2016 at 12:57 PM, Digvijay S=
+harma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" tar=
+get=3D"_blank">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc sol=
+id;padding-left:1ex"><div dir=3D"ltr">Can u explain the breakup of the &#39=
+;Net Payable&#39; column in this sheet for rows in which &#39;Stock out of =
+commission&#39; is shown? I need to include it for the reconciliation of Sn=
+apdeal.=C2=A0</div><div class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gm=
+ail_extra"><br><div class=3D"gmail_quote">On Tue, Dec 13, 2016 at 12:41 PM,=
+ Manorma Rai <span dir=3D"ltr">&lt;<a href=3D"mailto:manorma@unicommerce.co=
+m" target=3D"_blank">manorma@unicommerce.com</a>&gt;</span> wrote:<br><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #cc=
+c solid;padding-left:1ex"><div dir=3D"ltr"><br><span style=3D"font-size:12.=
+8px">That is cancellation charge,because client had marked that order out o=
+f stock so order get cancel and Snapdeal team charge out of commission.</sp=
+an><br><br><br><div class=3D"gmail_extra"><br clear=3D"all"><div><div class=
+=3D"m_-3475737441187929382m_-7128788312499419626m_4925597220225070668gmail_=
+signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div di=
+r=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><div><div dir=3D"ltr"><span style=3D"font-family:&quot;comic sans ms&quot;=
+,sans-serif;font-size:12.8px"><span style=3D"background-color:rgb(255,255,2=
+55)"><font color=3D"#000000">Thanks and Regards</font></span><br></span>Man=
+orama Rai<br><span style=3D"font-size:12.8px;background-color:rgb(255,255,2=
+55)"><font color=3D"#38761d"><i><b>Unicommerce</b></i></font></span><span s=
+tyle=3D"font-size:12.8px"><i><b><font style=3D"background-color:rgb(255,255=
+,255)" color=3D"#38761d">=C2=A0e-</font><font color=3D"#0000ff" style=3D"ba=
+ckground-color:rgb(255,255,255)">Solutions Pvt. Ltd.</font></b></i><br></sp=
+an><br><br><br></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div>
+<br><div class=3D"gmail_quote">On Mon, Dec 12, 2016 at 5:03 PM, Varad Singh=
+al <span dir=3D"ltr">&lt;<a href=3D"mailto:varad@unicommerce.com" target=3D=
+"_blank">varad@unicommerce.com</a>&gt;</span> wrote:<div><div class=3D"m_-3=
+475737441187929382h5"><br><blockquote class=3D"gmail_quote" style=3D"margin=
+:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><=
+br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>Fr=
+om: <b class=3D"gmail_sendername">Digvijay Sharma</b> <span dir=3D"ltr">&lt=
+;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank">digvijay@uni=
+commerce.com</a>&gt;</span><br>Date: Mon, Dec 12, 2016 at 4:04 PM<br>Subjec=
+t: SD Recon sheet<br>To: Varad Singhal &lt;<a href=3D"mailto:varad@unicomme=
+rce.com" target=3D"_blank">varad@unicommerce.com</a>&gt;<br><br><br><div di=
+r=3D"ltr">Isme &quot;stock out of commission&quot; search kr dena<div><br><=
+/div></div>
+</div><br></div>
+</blockquote></div></div></div><br></div><br><br><br><div class=3D"m_-34757=
+37441187929382m_-7128788312499419626mt-signature"><img src=3D"https://s3-eu=
+-west-1.amazonaws.com/mailtrack-crx/icon-signature.png" width=3D"16" height=
+=3D"14">=C2=A0<font color=3D"#999999" class=3D"m_-3475737441187929382m_-712=
+8788312499419626mt-signature-text">Sent with <a href=3D"https://mailtrack.i=
+o/install?source=3Dsignature&amp;lang=3Den&amp;referral=3Dmanorma@unicommer=
+ce.com&amp;idSignature=3D22" class=3D"m_-3475737441187929382m_-712878831249=
+9419626mt-install" target=3D"_blank">Mailtrack</a></font></div><img width=
+=3D"0" height=3D"0" class=3D"m_-3475737441187929382m_-7128788312499419626ma=
+iltrack-img" src=3D"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAA=
+AAALAAAAAABAAEAAAIBRAA7"></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--001a1142f3765468a6054396cf18--

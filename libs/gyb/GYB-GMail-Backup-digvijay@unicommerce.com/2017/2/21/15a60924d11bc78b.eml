@@ -1,0 +1,285 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp378119qgu;
+        Tue, 21 Feb 2017 04:08:05 -0800 (PST)
+X-Received: by 10.99.202.73 with SMTP id o9mr34600078pgi.173.1487678885042;
+        Tue, 21 Feb 2017 04:08:05 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id e8si21767962pgp.204.2017.02.21.04.08.04
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 21 Feb 2017 04:08:04 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id v1LC83X2009689;
+	Tue, 21 Feb 2017 17:38:03 +0530
+Date: Tue, 21 Feb 2017 17:38:03 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1621746983.8.1487678883156.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #2040
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/Uniware/2040/display/redirect?page=changes>
+
+Changes:
+
+[digvijay] Minor bug
+
+------------------------------------------
+[...truncated 7.37 KB...]
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareServices 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareServices ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareServices ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareServices ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareServices ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 611 source files to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes>
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentServiceImpl.java>: Some input files use or override a deprecated API.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/unifier/services/pdf/impl/PdfDocumentServiceImpl.java>: Recompile with -Xlint:deprecation for details.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/saleorder/impl/SaleOrderServiceImpl.java>: Some input files use unchecked or unsafe operations.
+[WARNING] <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/uniware/services/saleorder/impl/SaleOrderServiceImpl.java>: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:compile (default) @ UniwareServices ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/aspectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+	<unknown source file>:<no line information>
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/src/main/java/com/unifier/services/aspect/AuditLogAspect.java>:52
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MeteredAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MetricAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/TimedAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/TimedStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMeteredAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/ExceptionMeteredAspect.class:26
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMeteredStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/ExceptionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MetricStaticAspect.class:41
+
+[INFO] 
+[INFO] --- maven-jibx-plugin:1.2.5:bind (compile-binding) @ UniwareServices ---
+[INFO] Not running JiBX binding compiler (single-module mode) - no binding files
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareServices ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareServices ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- aspectj-maven-plugin:1.8:test-compile (default) @ UniwareServices ---
+[INFO] Showing AJC message detail for messages of types: [error, warning, fail]
+[WARNING] bad version number found in /var/lib/jenkins/.m2/repository/org/aspectj/aspectjrt/1.7.4/aspectjrt-1.7.4.jar expected 1.8.7 found 1.7.4
+	<unknown source file>:<no line information>
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MeteredAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MeteredStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MeteredStaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.LockingAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/LockingAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MetricAspect.class:45
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/TimedAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.TransactionRollbackAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/TransactionRollbackAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.TimedStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/TimedStaticAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.ShippingPackageCreatedAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/ShippingPackageCreatedAspect.class>:0
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMeteredAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/ExceptionMeteredAspect.class:26
+
+[WARNING] advice defined in com.unifier.services.aspect.MarkDirtyAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/MarkDirtyAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.LogActivityAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/LogActivityAspect.class>:0
+
+[WARNING] advice defined in com.unifier.services.aspect.AuditLogAspect has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/classes!com/unifier/services/aspect/AuditLogAspect.class>:0
+
+[WARNING] advice defined in org.springframework.mock.staticmock.AnnotationDrivenStaticEntityMockingControl has not been applied [Xlint:adviceDidNotMatch]
+	<http://jenkins.unicommerce.com:8080/job/Uniware/ws/org/springframework/mock/staticmock/AnnotationDrivenStaticEntityMockingControl.aj>:117
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.ExceptionMeteredStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/ExceptionMeteredStaticAspect.class:26
+
+[WARNING] advice defined in io.astefanutti.metrics.aspectj.MetricStaticAspect has not been applied [Xlint:adviceDidNotMatch]
+	/var/lib/jenkins/.m2/repository/io/astefanutti/metrics/aspectj/metrics-aspectj/1.0.0/metrics-aspectj-1.0.0.jar!io/astefanutti/metrics/aspectj/MetricStaticAspect.class:41
+
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareServices ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ UniwareServices ---
+[INFO] Building jar: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/UniwareServices-1.0.jar>
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareWeb 1.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareWeb ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareWeb ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareWeb ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareWeb ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 140 source files to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes>
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ UniwareWeb ---
+[INFO] Configured Artifact: unicommerce:UnifierCore:2.0:jar
+[INFO] Configured Artifact: unicommerce:UnifierScraper:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCommonServices:2.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareCore:1.0:jar
+[INFO] Configured Artifact: unicommerce:UniwareServices:1.0:jar
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierCore/2.0/UnifierCore-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UnifierScraper/2.0/UnifierScraper-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking /var/lib/jenkins/.m2/repository/unicommerce/UniwareCommonServices/2.0/UniwareCommonServices-2.0.jar to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareCore/target/UniwareCore-1.0.jar> to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] Unpacking <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareServices/target/UniwareServices-1.0.jar> to <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/classes> with includes "" and excludes "META-INF/**"
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ UniwareWeb ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ UniwareWeb ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ UniwareWeb ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ UniwareWeb ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [UniwareWeb] in [<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web]>
+[INFO] Processing war project
+[INFO] Copying webapp resources [<http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/src/main/webapp]>
+[INFO] Webapp assembled in [4088 msecs]
+[INFO] Building war: <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web.war>
+[INFO] 
+[INFO] --- yuicompressor-maven-plugin:1.2:compress (compress) @ UniwareWeb ---
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/js/jquery/jquery.all.min.js>
+[INFO] jquery.all.min.js (630897b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/js/codemirror/codemirror.all.js>
+[INFO] codemirror.all.js (301732b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/js/codemirror/velocity.all.js>
+[INFO] velocity.all.js (223830b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/js/unifier/unifier.all.js>
+[INFO] unifier.all.js (46277b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.home.css>
+[INFO] ui.home.css (270417b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/css/codemirror/ui.codemirror.all.css>
+[INFO] ui.codemirror.all.css (9467b)
+[INFO] generate aggregation : <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/target/uniware-web/static/css/unifier/ui.login.css>
+[INFO] ui.login.css (177508b)
+[INFO] nb warnings: 0, nb errors: 0
+[INFO] 
+[INFO] --- htmlcompressor-maven-plugin:1.3:html (htmlcompressor) @ UniwareWeb ---
+[INFO] Compressing <http://jenkins.unicommerce.com:8080/job/Uniware/ws/UniwareWeb/src/main/webapp/views>
+[INFO] HTML compression statistics:
++-----------------------------+-----------------------------+-----------------------------+
+| Category                    | Original                    | Compressed                  | 
++-----------------------------+-----------------------------+-----------------------------+
+| Filesize                    | 13.0 kB                     | 12.8 kB                     | 
+| Empty Chars                 | 3045                        | 2895                        | 
+| Script Size                 | 10.9 kB                     | 10.9 kB                     | 
+| Style Size                  | 0 B                         | 0 B                         | 
+| Event Handler Size          | 0 B                         | 0 B                         | 
++-----------------------------+-----------------------------+-----------------------------+
+| Time: 00:00:00, Preserved: 10.9 kB, Compression Ratio: 0.99, Savings: 1.16%             | 
++-----------------------------+-----------------------------+-----------------------------+
+
+[INFO] HTML compression completed.
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (run) @ UniwareWeb ---
+[INFO] Executing tasks
+
+main:
+     [echo] +---------------------------------------------------+
+     [echo]     copying war to tomcat server
+     [echo] +---------------------------------------------------+
+     [copy] Copying 7846 files to /usr/local/apache-tomcat/webapps/ROOT
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Uniware ............................................ SUCCESS [  0.240 s]
+[INFO] UniwareCore ........................................ SUCCESS [ 12.336 s]
+[INFO] UniwareServices .................................... SUCCESS [ 25.095 s]
+[INFO] UniwareWeb ......................................... SUCCESS [ 31.961 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:09 min
+[INFO] Finished at: 2017-02-21T17:37:55+05:30
+[INFO] Final Memory: 174M/531M
+[INFO] ------------------------------------------------------------------------
+[Uniware] $ /bin/sh -xe /tmp/hudson8893671487035449873.sh
++ /var/lib/jenkins/scripts/runBuildSqlDelta Jenkins
+From bitbucket.org:unicommercetechnology/uniware
+   0d071cf..ac17037  master     -> origin/master
+dc904cca0ce3173863cf8c679a41c27e6b80e60d
+Executing SQL Changes........................
+     1	select "StartDeploying";
+     2	</table-config>' where name = "DATATABLE_CHANNEL_WAREHOUSE_INVENTORY";
+     3	update environment_property set value='https://jenkins.ucdn.in' where name ='static.content.server.url';
+     4	select "EndDeploying";
+Importing sql queries....................
+*********** Checking SQL delta is executing on Jenkins or not **************
+ERROR 1064 (42000) at line 2: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '</table-config>' where name = "DATATABLE_CHANNEL_WAREHOUSE_INVENTORY";
+update en' at line 1
+0
+Error Encountered on server Jenkins: SQL delta is not executed !!!
+Build step 'Execute shell' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #2039

@@ -1,0 +1,206 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp575586qgj;
+        Thu, 27 Oct 2016 00:44:12 -0700 (PDT)
+X-Received: by 10.202.50.67 with SMTP id y64mr5627537oiy.50.1477554252755;
+        Thu, 27 Oct 2016 00:44:12 -0700 (PDT)
+Return-Path: <bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org>
+Received: from o3.em.bitbucket.org (o3.em.bitbucket.org. [167.89.90.3])
+        by mx.google.com with ESMTPS id i126si3918557oif.126.2016.10.27.00.44.12
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Oct 2016 00:44:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) client-ip=167.89.90.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bitbucket.org;
+       spf=pass (google.com: domain of bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org designates 167.89.90.3 as permitted sender) smtp.mailfrom=bounces+2418806-8d49-digvijay=unicommerce.com@em.bitbucket.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=bitbucket.org; 
+	h=content-type:mime-version:subject:from:to:references:in-reply-to; 
+	s=s1; bh=rU8ttF1QmGHNhixpLUafOFx0Y8I=; b=dlYROb1KAH7KZ2Vl+O2gSsM
+	9JT3gjfPxkilijPnPVPJzeZURM2gicG3cZ/1SZ9WdcSWSem6FwWmQakuOXbJgrrj
+	xhsv0xR44WnOktne1HzRGycHN+d8o2qYUueMx5g2HnhV/uii5Wgkb8S64F3FnamB
+	5hOhzIIqmWLv0/0TnrhI=
+Received: by filter0556p1mdw1.sendgrid.net with SMTP id filter0556p1mdw1-10365-5811B04B-31
+        2016-10-27 07:44:11.820740793 +0000 UTC
+Received: from celery-worker-106.ash1.bb-inf.net (mail-ash.bitbucket.org [104.192.143.195])
+	by ismtpd0006p1iad1.sendgrid.net (SG) with ESMTP id g8w_UATcSJi1wPujFfNZ2Q
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 07:44:11.954 +0000 (UTC)
+Received: from celery-worker-106.ash1.bb-inf.net (localhost.localdomain [127.0.0.1])
+	by celery-worker-106.ash1.bb-inf.net (Postfix) with ESMTP id DAB8B4A0781
+	for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 07:44:11 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="===============2226699834727594544=="
+MIME-Version: 1.0
+Subject: Re: [Bitbucket] Pull request #19: FK Pagination
+ (unicommercetechnology/uniware)
+From: "Akshay Agarwal" <pullrequests-reply@bitbucket.org>
+To: digvijay@unicommerce.com
+Date: Thu, 27 Oct 2016 07:44:11 -0000
+Auto-Submitted: auto-generated
+Message-ID: <pr-unicommercetechnology/uniware/19/merged/c8265489a076435e9a77bd71ac57c189@bitbucket.org>
+References: <pr-unicommercetechnology/uniware/19@bitbucket.org>
+Precedence: bulk
+In-Reply-To: <pr-unicommercetechnology/uniware/19@bitbucket.org>
+X-SG-EID: mBrpV4BtRJ4T6rsQHaeS6Qa2MEQzVSWWbCf8BbDxK/se6HRLFSkWayOkCc0ubRPzTQ1Ct0r3+e4Q8p
+ KQgpICFCP7yiG83Rw+RKlQQAf4qRps27N9EYIM4oNow66J4A/go734yKbHwXTVsGJ/JK/Osbe7mEPI
+ k9RpWkq/Spl8uFreWbQbsqWitieKKvf32phlkp6UQ822PO23bMfWNDAHEq8o755MygAvhKaaOLohGl
+ hVVsgmFhU3eYg9EOn9PuUI
+
+--===============2226699834727594544==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+--- you can reply above this line ---
+
+Pull request #19 has been accepted by Akshay Agarwal.
+
+Changes in digvijay095/uniwaredj have been pulled into unicommercetechnology/uniware.
+
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination
+
+--
+
+Unwatch this pull request to stop receiving email updates:
+https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/unwatch/digvijay095/39368813eaf28f4f8d552411f4633a43a94cdd93/
+
+--===============2226699834727594544==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  </head>
+  <body style="font: 14px/1.4285714 Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tbody>
+        <tr>
+          <td style="background: #f5f5f5; padding: 10px 10px 0; font: 14px/1.4285714 Arial, sans-serif;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                
+                
+                
+                
+                  
+                     <tr>
+  <td id="main" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; background-color: #ffffff; border-radius: 5px">
+    <div style="border: 1px solid #cccccc; border-radius: 5px; padding: 20px">
+      <table style="width: 100%; border-collapse: collapse">
+        <tbody>
+          <tr>
+            <td style="font: 14px/1.4285714 Arial, sans-serif; padding: 0">
+              <table style="width: 100%; border-collapse: collapse">
+                <tbody>
+                  <tr>
+                    <td id="avatar" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; width: 32px; vertical-align: top">
+                      
+                      <img width="32" height="32" alt="AkshayAgarwalJS" src="https://avatar-cdn.atlassian.com/32636c9f077866500ba1ae27b1b7f666?s=32&amp;ts=1477540461" style="border-radius: 3px">
+                      
+                    </td>
+                    <td id="content" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0 0 0 10px">
+                      
+<table style="width: 100%; border-collapse: collapse">
+  <tr>
+    <td class="user-action" style="font: 14px/1.4285714 Arial, sans-serif; padding: 0; line-height: 1">
+      <span>
+        
+          <strong>Akshay Agarwal</strong>
+          <span class="badge fulfilled" style="display: inline-block; font-size: 11px; font-weight: bold; border-radius: 3px; text-transform: uppercase; line-height: 1; color: #ffffff; padding: 2px 5px 1px; background-color: #14892c">merged</span>
+          pull request #19:
+        
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="title" style="font: 14px/1.4285714 Arial, sans-serif; padding: 5px 0 0; font-weight: bold; line-height: 1.2">
+      <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination" style="color: #3572b0; text-decoration: none">FK Pagination</a>
+    </td>
+  </tr>
+  <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+  <tr><td class="spacer" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0"></td></tr>
+</table>
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          
+  <tr>
+    <td class="actions" colspan="2" style="font: 14px/1.4285714 Arial, sans-serif; padding: 10px 0 0; border-top: 1px solid #cccccc; line-height: 1">
+      
+      
+        
+          <a href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/fk-pagination" style="color: #3572b0; text-decoration: none">View this pull request</a> or add a comment by replying to this email.
+        
+      
+    </td>
+  </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </td>
+</tr>
+
+                  
+                
+                <tr>
+                  
+
+<td style="padding: 20px 0; color: #707070;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td style="padding: 0">
+          
+            
+            
+              
+              
+                
+                  <a style="color: #3572b0; text-decoration: none;" href="https://bitbucket.org/unicommercetechnology/uniware/pull-requests/19/unwatch/digvijay095/39368813eaf28f4f8d552411f4633a43a94cdd93/">Unwatch this pull request</a> to stop receiving email updates.
+                
+              
+            
+          
+          
+        </td>
+        <td style="padding: 0">
+          
+            
+
+  <img width="1" height="1" src="https://bitbucket.org/account/notifications/mark-read/420873340/0f2e38f216c1eb4690c46047e12db463ef3524a9/">
+
+
+          
+        </td>
+        <td style="text-align: right; width: 100px; padding: 0">
+          <a href="https://bitbucket.org" style="color: #3572b0; text-decoration: none;">
+            <img width="100" height="18" src="https://d301sr5gafysq2.cloudfront.net/c2f011c629a2/img/email/logo.gif" alt="Bitbucket" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+<img src="http://link.bitbucket.org/wf/open?upn=9Pbo-2BQtn9sw9Z4UL8nTEWPoOoyKOsUHfUmRF9p2Dtm6cmfsMcvbWVoyEiSRbejs-2BDVp5PBDuXvzZ-2BPgg-2BcJiJQyOYqCE7GifHzpBS7yx277tA9N-2F3xrqKnWwPhjncizefHclSsiLE0DGrI9ezA7XmM8u-2FQ1pejx3SElSHgT53wlj3thMFoVh5QL5VkhQ0FXbZmM-2F-2FuaWYFTQE6uA-2Fa5D-2FDgIazCxNJrxN7gUnRqUJlg-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+
+--===============2226699834727594544==--

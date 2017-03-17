@@ -1,0 +1,98 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp706473qgj;
+        Thu, 27 Oct 2016 05:19:54 -0700 (PDT)
+X-Received: by 10.37.173.1 with SMTP id y1mr5427580ybi.88.1477570794683;
+        Thu, 27 Oct 2016 05:19:54 -0700 (PDT)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-yw0-x230.google.com (mail-yw0-x230.google.com. [2607:f8b0:4002:c05::230])
+        by mx.google.com with ESMTPS id u74si2629072ybi.66.2016.10.27.05.19.54
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 27 Oct 2016 05:19:54 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4002:c05::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::230 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-yw0-x230.google.com with SMTP id u124so44384885ywg.3
+        for <digvijay@unicommerce.com>; Thu, 27 Oct 2016 05:19:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=Qu9+nVRrUd6jF3STFRK62jJZT3SkXUWAEwS/gdHeuZw=;
+        b=XHAdx83xJXusWJhENj73V2quf8EX07aAljld3kCFdJmgMiCOSn74T+2JbzmtNtXZX6
+         msfNXVktlqAIPd8zssZW5HOxyTjIBp+XBJ8ZCoNEgE4Dd53dSgSxkZqjE9VJsNyqEYR6
+         hNgtUAtTxcrPEV2yKfFIOVqsttf4AISXXYEQKoUgSqiApCFoVePa5h5QDIute6YrRxhp
+         EShlyydCAAvv1kfhjgJruc7231nWkxCGU5e+ifPNuVWw5vJVisrlAzEVUTyKqaBg4D7J
+         Sjv2knoVTxGSq3nNN5MSWDHif8BTp2In/QLHDaLY8zieTOsJoZoQ9kZZV0JCTTSFDV9n
+         ScLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=Qu9+nVRrUd6jF3STFRK62jJZT3SkXUWAEwS/gdHeuZw=;
+        b=MUOg5KD+rmjVPWtSjMwR3vb47UkAj8gkT/BwPed+rhtg9iglMMDU5PwOJQZKRnNMrB
+         /n7Q/vcO3amxaQ18re7d1m+VUEW62dYG3fO/nKHtsKGAOVVvmazqwmXyaTFeeIIEFtrG
+         GUUGZtzasI5EsC/cnNzVQXsI3w9ihPHmtRW5K6dwB2Pyu0YTQkA0T4jESYCIjcc9bR8D
+         SVWcDBWjhFX4j/sHEtoClx88MoJb6rJxHLp2UA9FC9T2Re7GQxA3YfjmFM2Yo4Izknqh
+         P+DP3nS7fPH22i6RYlMbxgyrnI6uoY01AxwetRE2iId3XV75rzujt50UsY5hd/5bGu5B
+         Hqsg==
+X-Gm-Message-State: ABUngvdEu87vtdp7UtbJXzo7ODHc/l/fMFfvTUWrapKF46CyeW6XYV51QvDwzZpNhsrBNRcpl47xoOn32bkEbA==
+X-Received: by 10.13.253.71 with SMTP id n68mr7369769ywf.20.1477570794175;
+ Thu, 27 Oct 2016 05:19:54 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.129.84.85 with HTTP; Thu, 27 Oct 2016 05:19:53 -0700 (PDT)
+In-Reply-To: <CAJF3soqATqbSpbTr=-Or6zO812wkAnP6YUxQj6+GD1GFG7wd2Q@mail.gmail.com>
+References: <CAJF3soqATqbSpbTr=-Or6zO812wkAnP6YUxQj6+GD1GFG7wd2Q@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 27 Oct 2016 17:49:53 +0530
+Message-ID: <CA+zaFGgJk9Wg00pRwFTMdaMgL4en_ROjNUJdbohtCu7L3pG50g@mail.gmail.com>
+Subject: Re: Many Scripts For GoPigeon
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c06c19a517221053fd7c267
+
+--94eb2c06c19a517221053fd7c267
+Content-Type: text/plain; charset=UTF-8
+
+These 3 scripts need to be written.
+
+TRACKING_ALLOCATION_VERIFICATION_DELHIVERY
+TRACKING_NUMBER_ALLOCATION_DELHIVERY
+SCRAPER_SCRIPT_DELHIVERY
+
+On Thu, Oct 27, 2016 at 5:42 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> 1. POST_SHIPPING_PACKAGE_CREATE_SCRIPT
+> 2.REFRESH_SHIPPING_LABEL_SCRIPT_NAME
+> 3.FETCH_SHIPPING_LABEL_SCRIPT_NAME
+> 4.SHIPPING_PROVIDER_ALLOCATION_SCRIPT_NAME
+>
+
+--94eb2c06c19a517221053fd7c267
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>These 3 scripts need to be written.</div><div><br></d=
+iv>TRACKING_ALLOCATION_VERIFICATION_DELHIVERY<br><div>TRACKING_NUMBER_ALLOC=
+ATION_DELHIVERY<br></div><div>SCRAPER_SCRIPT_DELHIVERY<br></div></div><div =
+class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Oct 27, 2016 a=
+t 5:42 PM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay=
+@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span>=
+ wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bor=
+der-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">1.=C2=A0<span st=
+yle=3D"background-color:rgb(255,228,255);color:rgb(0,0,0);font-family:menlo=
+;font-size:9.8pt">POST_SHIPPING_PACKAGE_<wbr>CREATE_SCRIPT</span><div><span=
+ style=3D"background-color:rgb(255,228,255);color:rgb(0,0,0);font-family:me=
+nlo;font-size:9.8pt">2.</span><span style=3D"background-color:rgb(255,228,2=
+55);color:rgb(0,0,0);font-family:menlo;font-size:9.8pt">REFRESH_SHIPPING_LA=
+BEL_<wbr>SCRIPT_NAME</span></div><div><span style=3D"background-color:rgb(2=
+55,228,255);color:rgb(0,0,0);font-family:menlo;font-size:9.8pt">3.</span><s=
+pan style=3D"background-color:rgb(255,228,255);color:rgb(0,0,0);font-family=
+:menlo;font-size:9.8pt">FETCH_SHIPPING_LABEL_SCRIPT_<wbr>NAME</span></div><=
+div><span style=3D"background-color:rgb(255,228,255);color:rgb(0,0,0);font-=
+family:menlo;font-size:9.8pt">4.</span><span style=3D"background-color:rgb(=
+255,228,255);color:rgb(0,0,0);font-family:menlo;font-size:9.8pt">SHIPPING_P=
+ROVIDER_<wbr>ALLOCATION_SCRIPT_NAME</span></div></div>
+</blockquote></div><br></div>
+
+--94eb2c06c19a517221053fd7c267--

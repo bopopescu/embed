@@ -1,0 +1,568 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp84561qge;
+        Wed, 16 Nov 2016 02:44:40 -0800 (PST)
+X-Received: by 10.36.120.131 with SMTP id p125mr7120360itc.15.1479293080400;
+        Wed, 16 Nov 2016 02:44:40 -0800 (PST)
+Return-Path: <tech+bncBCVLBIPEY4MBBGHRWDAQKGQEABKGMXI@unicommerce.com>
+Received: from mail-it0-x247.google.com (mail-it0-x247.google.com. [2607:f8b0:4001:c0b::247])
+        by mx.google.com with ESMTPS id h9si4868709iti.58.2016.11.16.02.44.40
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 16 Nov 2016 02:44:40 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c0b::247 is neither permitted nor denied by best guess record for domain of tech+bncbcvlbipey4mbbghrwdaqkgqeabkgmxi@unicommerce.com) client-ip=2607:f8b0:4001:c0b::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c0b::247 is neither permitted nor denied by best guess record for domain of tech+bncbcvlbipey4mbbghrwdaqkgqeabkgmxi@unicommerce.com) smtp.mailfrom=tech+bncBCVLBIPEY4MBBGHRWDAQKGQEABKGMXI@unicommerce.com
+Received: by mail-it0-x247.google.com with SMTP id w132sf43372244ita.1
+        for <digvijay@unicommerce.com>; Wed, 16 Nov 2016 02:44:40 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=jIB9LP8Ss8g3uWbQRUG0Zak8C6CeVLIAtKTz/iOYZ2k=;
+        b=Ygl45PL75Mj+q3MUKZ2bj43Wg1Tz1gsZUEKhXaY0r3kzmo7A6um3MGLDykTxzhzW7E
+         Xa+XpPjxPtg8Bk3C9Kuz98uWztf22aKOQ4ifLo9GM++wYip87fJ//I1Dvwq45h7y8xXE
+         /c3P4iUkGxZwjimaGtgXZ3VGhSuF+kT3JmtVGGANd1LuZfhWwPEzp/LFZmp7vOAuh3Q0
+         C8VqItH5OuRrhjC48h8nowxQkbqtatVV23yLonoiY/R+fK2OFkOZAf2BDB8b3YOzvWTG
+         fmgEGfSNQ6a1b3QuKgrYxcoksAYeuyV1VkAe973UedRxOlVdBEcVRVg5j6msclocyrH1
+         Qekw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=jIB9LP8Ss8g3uWbQRUG0Zak8C6CeVLIAtKTz/iOYZ2k=;
+        b=UJO+7QhRCTuYdu9OzHWKhVGcL03AdNsfumtExJZuj3Adnbi9DyW84sGrqmrqjWvSdh
+         F/h/44aIs6ZLHm/n6pGXjaWksSekok2in6pIUJsptxWMWShd9ECdgdNFuJ/hCfcac/ib
+         K8yDi2AIo9bwOBCnlzRHOZmW6tSzw/jQ8bwZNT3XwiABC379h6DbRd+2MkiXFwtyjvNd
+         wTf6qEFnG/PAFJ7gwRJ+KOwoLXe6YjIO5ZRiVxMbSqVpSYNN8gbR6oSTuSLn6oxkRpyo
+         ykL7D9RMWUzaI09wtuMoqkujc+JeUMbN68od7UmUmYbfijpesRnUnaX0Vi5blDvB65ib
+         /2qA==
+X-Gm-Message-State: ABUngvffQUjg+veyPjEqzztsPQEx52YoIrrosKNan5n+XgiRIorrQuv9tdVNSad9Drg/9w==
+X-Received: by 10.36.39.196 with SMTP id g187mr1049960ita.14.1479293080048;
+        Wed, 16 Nov 2016 02:44:40 -0800 (PST)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.52.171 with SMTP id g40ls981285otc.47.gmail; Wed, 16 Nov
+ 2016 02:44:39 -0800 (PST)
+X-Received: by 10.157.46.101 with SMTP id c34mr1589264otd.35.1479293079816;
+        Wed, 16 Nov 2016 02:44:39 -0800 (PST)
+Received: from mail-oi0-x22a.google.com (mail-oi0-x22a.google.com. [2607:f8b0:4003:c06::22a])
+        by mx.google.com with ESMTPS id 9si12992883otb.185.2016.11.16.02.44.39
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 16 Nov 2016 02:44:39 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::22a is neither permitted nor denied by best guess record for domain of hrteam@unicommerce.com) client-ip=2607:f8b0:4003:c06::22a;
+Received: by mail-oi0-x22a.google.com with SMTP id z62so55965036oiz.1
+        for <tech@unicommerce.com>; Wed, 16 Nov 2016 02:44:39 -0800 (PST)
+X-Received: by 10.202.90.214 with SMTP id o205mr1702635oib.57.1479293078185;
+ Wed, 16 Nov 2016 02:44:38 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.237.97 with HTTP; Wed, 16 Nov 2016 02:43:57 -0800 (PST)
+From: Team HR <hrteam@unicommerce.com>
+Date: Wed, 16 Nov 2016 16:13:57 +0530
+Message-ID: <CALOi2gXbvqX3SfMhVZesz45B3=4XOud8=krpGpX1qQ2VOcggZA@mail.gmail.com>
+Subject: Nainital Outing!!!
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary=001a113d2dce71bbf8054168c22e
+Bcc: tech@unicommerce.com
+X-Original-Sender: hrteam@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c06::22a is neither permitted nor denied by best
+ guess record for domain of hrteam@unicommerce.com) smtp.mailfrom=hrteam@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113d2dce71bbf8054168c22e
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+*Hello Everyone,*
+
+*Hope you guys are excited for Nainital Trip, So Pack your Bags and Get
+Ready for some Fun!!*
+
+*So, Here is Party Schedule:*
+
+*18th Nov'16 - We will start from Okhla office @ 9:00 PM.*
+*@ 12:30 PM will do dinner at Tadka Dhaba, Gajraula.*
+
+*2 Days itinerary plan is here:*
+
+D*ay 1            (19th Nov'16)*
+
+*7:00 AM*
+
+*Reach at Mapple Hermitage Hotel, Bhimatal*
+
+*8:00 AM*
+
+*Breakfast*
+
+*11:00 AM*
+
+*Bus will start from Hotel to Nainital (Optional)*
+
+*5:00 PM*
+
+*Return form Nanital to Hotel*
+
+*5:30 to 6:30 PM*
+
+*Snacks (Hotel)*
+
+*7:30 to 10:30 PM*
+
+*DJ Party*
+
+*9:30 PM*
+
+*Dinner (Hotel)*
+
+*Day 2           (20th Nov'16)*
+
+*9:00 AM to 10:00 AM*
+
+*Breakfast (Hotel)*
+
+*10:00 AM*
+
+*Checkout*
+
+*2:00 PM*
+
+*Lunch in Meriton Hotel, Gajraula*
+
+Mapple Hotel Link: https://goo.gl/maps/PKaRJQqXbSo
+
+Meriton Hotel Link: https://goo.gl/maps/qH5NF48aQ1u
+
+
+=E2=80=8B
+ Tadka Dhaba.jpg
+<https://drive.google.com/a/unicommerce.com/file/d/0B3xUhmkQixhUNGpucE9pOGI=
+2cG8/view?usp=3Ddrive_web>
+=E2=80=8B=E2=80=8B
+ Meriton Hotel.jpg
+<https://drive.google.com/a/unicommerce.com/file/d/0B3xUhmkQixhUV05LVUo5YTF=
+0YVU/view?usp=3Ddrive_web>
+=E2=80=8B=E2=80=8B
+ Mapple.jpg
+<https://drive.google.com/a/unicommerce.com/file/d/0B3xUhmkQixhUeHd4X1BZdW4=
+taFE/view?usp=3Ddrive_web>
+=E2=80=8B=E2=80=8B
+ Mapple Hotel.jpg
+<https://drive.google.com/a/unicommerce.com/file/d/0B3xUhmkQixhUeExPRDV5d1Z=
+ZNzQ/view?usp=3Ddrive_web>
+=E2=80=8B
+
+
+
+[image: photo]
+*Regards,*
+HR Team
+Unicommerce eSolutions Pvt Ltd
+201,3rd Floor Okhla Phase-3 New Delhi110020
+M: 8826711822 | E:hrteam@unicommerce.com <vipul@unicommerce.com> |
+W: http://www.unicommerce.com/
+
+=E2=80=8B
+
+--001a113d2dce71bbf8054168c22e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><=
+div><font size=3D"4" color=3D"#ff0000"><b><font face=3D"comic sans ms, sans=
+-serif">Hello Everyone,</font><br></b></font></div><div><font face=3D"georg=
+ia, serif" size=3D"4" color=3D"#ff0000"><br></font></div><div><font size=3D=
+"4" face=3D"comic sans ms, sans-serif" color=3D"#ff0000"><b>Hope you guys a=
+re excited for Nainital Trip, So Pack your Bags and Get Ready for some Fun!=
+!</b></font></div><div><font size=3D"4" face=3D"comic sans ms, sans-serif" =
+color=3D"#ff0000"><b><br></b></font></div><div><font size=3D"4" face=3D"com=
+ic sans ms, sans-serif" color=3D"#ff0000"><b>So, Here is Party Schedule:</b=
+></font></div><div><font size=3D"4" face=3D"comic sans ms, sans-serif" colo=
+r=3D"#ff0000"><b><br></b></font></div><div><font size=3D"4" face=3D"comic s=
+ans ms, sans-serif" color=3D"#ff0000"><b>18th Nov&#39;16 - We will start fr=
+om Okhla office @ 9:00 PM.</b></font></div><div><font size=3D"4" face=3D"co=
+mic sans ms, sans-serif" color=3D"#ff0000"><b>@ 12:30 PM will do dinner at =
+Tadka Dhaba, Gajraula.</b></font></div><div><font size=3D"4" face=3D"comic =
+sans ms, sans-serif" color=3D"#ff0000"><b><br></b></font></div><div><font c=
+olor=3D"#ff0000" face=3D"comic sans ms, sans-serif" size=3D"4"><b>2 Days it=
+inerary plan is here:</b></font></div><div><br></div><div><table class=3D"m=
+_-5592443457557273164gmail-MsoNormalTable" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" width=3D"759" style=3D"width:569pt;border-collapse:collaps=
+e">
+ <tbody><tr style=3D"height:15pt">
+  <td width=3D"115" rowspan=3D"7" style=3D"width:86pt;border:1pt solid wind=
+owtext;background-image:initial;background-position:initial;background-size=
+:initial;background-repeat:initial;background-origin:initial;background-cli=
+p:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;height:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black">D<b>ay 1=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 (19th Nov&#39;16)<span></span></b></span></p=
+>
+  </td>
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:1pt solid windowtext;border-right:1pt solid windowtext;border-bottom:1pt =
+solid windowtext;border-left:none;background-image:initial;background-posit=
+ion:initial;background-size:initial;background-repeat:initial;background-or=
+igin:initial;background-clip:initial;background-color:rgb(255,217,102);padd=
+ing:0cm 5.4pt;height:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>7:00 AM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:1pt solid windowtext;border-right:1pt solid windowtext;border-bottom:1pt =
+solid windowtext;border-left:none;background-image:initial;background-posit=
+ion:initial;background-size:initial;background-repeat:initial;background-or=
+igin:initial;background-clip:initial;background-color:rgb(255,217,102);padd=
+ing:0cm 5.4pt;height:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Reach at Mapple Hermitage Hotel,
+  Bhimatal<span></span></b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>8:00 AM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Breakfast<span></span></b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>11:00 AM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Bus will start from Hotel to Nainital
+  (Optional)<span></span></b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>5:00 PM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Return form Nanital to Hotel<span></span>=
+</b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>5:30 to 6:30 PM<span></span></b></span></=
+p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Snacks (Hotel)<span></span></b></span></p=
+>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>7:30 to 10:30 PM<span></span></b></span><=
+/p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>DJ Party<span></span></b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>9:30 PM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(255,217,102);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Dinner (Hotel)<span></span></b></span></p=
+>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"115" rowspan=3D"3" style=3D"width:86pt;border-right:1pt soli=
+d windowtext;border-bottom:1pt solid windowtext;border-left:1pt solid windo=
+wtext;border-top:none;background-image:initial;background-position:initial;=
+background-size:initial;background-repeat:initial;background-origin:initial=
+;background-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4p=
+t;height:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Day 2 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+(20th Nov&#39;16)<span></span></b></span></p>
+  </td>
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>9:00 AM to 10:00 AM<span></span></b></spa=
+n></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Breakfast (Hotel)<span></span></b></span>=
+</p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>10:00 AM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Checkout<span></span></b></span></p>
+  </td>
+ </tr>
+ <tr style=3D"height:15pt">
+  <td width=3D"183" nowrap valign=3D"bottom" style=3D"width:137pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>2:00 PM<span></span></b></span></p>
+  </td>
+  <td width=3D"461" nowrap valign=3D"bottom" style=3D"width:346pt;border-to=
+p:none;border-left:none;border-bottom:1pt solid windowtext;border-right:1pt=
+ solid windowtext;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial;background-color:rgb(169,208,142);padding:0cm 5.4pt;he=
+ight:15pt">
+  <p class=3D"MsoNormal" align=3D"center" style=3D"margin-bottom:0.0001pt;t=
+ext-align:center;line-height:normal"><span style=3D"font-family:&quot;calis=
+to mt&quot;,serif;color:black"><b>Lunch in Meriton Hotel, Gajraula</b><span=
+></span></span></p>
+  </td>
+ </tr>
+</tbody></table></div><div><font face=3D"georgia, serif" size=3D"4"><br></f=
+ont></div><div><font face=3D"georgia, serif" size=3D"4">Mapple=C2=A0Hotel L=
+ink:=C2=A0<a href=3D"https://goo.gl/maps/PKaRJQqXbSo" target=3D"_blank">htt=
+ps://goo.gl/maps/PKaR<wbr>JQqXbSo</a><br></font></div><div><font face=3D"ge=
+orgia, serif" size=3D"4"><br></font></div><div><font face=3D"georgia, serif=
+" size=3D"4">Meriton Hotel Link: <a href=3D"https://goo.gl/maps/qH5NF48aQ1u=
+" target=3D"_blank">https://goo.gl/maps/qH5NF48aQ1<wbr>u</a><br></font></di=
+v><div><br></div><div><br></div><div>=E2=80=8B<div class=3D"gmail_chip gmai=
+l_drive_chip" style=3D"width:396px;height:18px;max-height:18px;background-c=
+olor:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-family:arial;fon=
+t-style:normal;font-weight:bold;font-size:13px;border:1px solid rgb(221,221=
+,221);line-height:1"><a href=3D"https://drive.google.com/a/unicommerce.com/=
+file/d/0B3xUhmkQixhUNGpucE9pOGI2cG8/view?usp=3Ddrive_web" style=3D"display:=
+inline-block;max-width:366px;overflow:hidden;text-overflow:ellipsis;white-s=
+pace:nowrap;text-decoration:none;padding:1px 0px;border:none" target=3D"_bl=
+ank"><img style=3D"vertical-align:bottom;border:none" src=3D"https://ssl.gs=
+tatic.com/docs/doclist/images/icon_11_image_list.png">=C2=A0<span dir=3D"lt=
+r" style=3D"color:rgb(17,85,204);text-decoration:none;vertical-align:bottom=
+">Tadka Dhaba.jpg</span></a></div>=E2=80=8B=E2=80=8B<div class=3D"gmail_chi=
+p gmail_drive_chip" style=3D"width:396px;height:18px;max-height:18px;backgr=
+ound-color:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-family:ari=
+al;font-style:normal;font-weight:bold;font-size:13px;border:1px solid rgb(2=
+21,221,221);line-height:1"><a href=3D"https://drive.google.com/a/unicommerc=
+e.com/file/d/0B3xUhmkQixhUV05LVUo5YTF0YVU/view?usp=3Ddrive_web" style=3D"di=
+splay:inline-block;max-width:366px;overflow:hidden;text-overflow:ellipsis;w=
+hite-space:nowrap;text-decoration:none;padding:1px 0px;border:none" target=
+=3D"_blank"><img style=3D"vertical-align:bottom;border:none" src=3D"https:/=
+/ssl.gstatic.com/docs/doclist/images/icon_11_image_list.png">=C2=A0<span di=
+r=3D"ltr" style=3D"color:rgb(17,85,204);text-decoration:none;vertical-align=
+:bottom">Meriton Hotel.jpg</span></a></div>=E2=80=8B=E2=80=8B<div class=3D"=
+gmail_chip gmail_drive_chip" style=3D"width:396px;height:18px;max-height:18=
+px;background-color:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-f=
+amily:arial;font-style:normal;font-weight:bold;font-size:13px;border:1px so=
+lid rgb(221,221,221);line-height:1"><a href=3D"https://drive.google.com/a/u=
+nicommerce.com/file/d/0B3xUhmkQixhUeHd4X1BZdW4taFE/view?usp=3Ddrive_web" st=
+yle=3D"display:inline-block;max-width:366px;overflow:hidden;text-overflow:e=
+llipsis;white-space:nowrap;text-decoration:none;padding:1px 0px;border:none=
+" target=3D"_blank"><img style=3D"vertical-align:bottom;border:none" src=3D=
+"https://ssl.gstatic.com/docs/doclist/images/icon_11_image_list.png">=C2=A0=
+<span dir=3D"ltr" style=3D"color:rgb(17,85,204);text-decoration:none;vertic=
+al-align:bottom">Mapple.jpg</span></a></div>=E2=80=8B=E2=80=8B<div class=3D=
+"gmail_chip gmail_drive_chip" style=3D"width:396px;height:18px;max-height:1=
+8px;background-color:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-=
+family:arial;font-style:normal;font-weight:bold;font-size:13px;border:1px s=
+olid rgb(221,221,221);line-height:1"><a href=3D"https://drive.google.com/a/=
+unicommerce.com/file/d/0B3xUhmkQixhUeExPRDV5d1ZZNzQ/view?usp=3Ddrive_web" s=
+tyle=3D"display:inline-block;max-width:366px;overflow:hidden;text-overflow:=
+ellipsis;white-space:nowrap;text-decoration:none;padding:1px 0px;border:non=
+e" target=3D"_blank"><img style=3D"vertical-align:bottom;border:none" src=
+=3D"https://ssl.gstatic.com/docs/doclist/images/icon_11_image_list.png">=C2=
+=A0<span dir=3D"ltr" style=3D"color:rgb(17,85,204);text-decoration:none;ver=
+tical-align:bottom">Mapple Hotel.jpg</span></a></div>=E2=80=8B<br></div><di=
+v><br></div><div><br></div><div><div class=3D"m_-5592443457557273164gmail-m=
+_-4727645460350884149m_4940436660958243277m_-8042294784152330789gmail_signa=
+ture"><div dir=3D"ltr"><br><table style=3D"font-size:12.8px;width:470px" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"470"><tbody><tr val=
+ign=3D"top"><td style=3D"font-family:arial,sans-serif;margin:0px;border-rig=
+ht:1px solid rgb(69,102,142);padding-right:10px;width:10px"><font color=3D"=
+#666666" face=3D"arial, helvetica, sans-serif"><img src=3D"https://s3.amazo=
+naws.com/webapp.wisestamp.com/ffxL1of0QSaDBUTQNAZG_unicommerce%20new%20logo=
+%20black%20(2).png" alt=3D"photo" style=3D"border-radius:4px;width:65px;max=
+-width:120px"></font></td><td style=3D"font-family:arial,sans-serif;margin:=
+0px;font-stretch:normal;padding-left:10px"><div style=3D"color:rgb(34,34,34=
+);font-family:arial,sans-serif;font-size:12.8px;font-style:normal;font-vari=
+ant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spa=
+cing:normal;line-height:normal;text-align:start;text-indent:0px;text-transf=
+orm:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,2=
+55)"><b><font color=3D"#666666" face=3D"arial, helvetica, sans-serif">Regar=
+ds,</font></b></div><div style=3D"color:rgb(34,34,34);font-family:arial,san=
+s-serif;font-size:12.8px;font-style:normal;font-variant-ligatures:normal;fo=
+nt-variant-caps:normal;font-weight:normal;letter-spacing:normal;line-height=
+:normal;text-align:start;text-indent:0px;text-transform:none;white-space:no=
+rmal;word-spacing:0px;background-color:rgb(255,255,255)"><font color=3D"#66=
+6666"><font face=3D"arial, helvetica, sans-serif">HR Team</font></font><fon=
+t color=3D"#666666"><font face=3D"arial, helvetica, sans-serif"><br></font>=
+</font></div><div style=3D"color:rgb(34,34,34);font-family:arial,sans-serif=
+;font-size:12.8px;font-style:normal;font-variant-ligatures:normal;font-vari=
+ant-caps:normal;font-weight:normal;letter-spacing:normal;line-height:normal=
+;text-align:start;text-indent:0px;text-transform:none;white-space:normal;wo=
+rd-spacing:0px;background-color:rgb(255,255,255)"><font color=3D"#666666" f=
+ace=3D"arial, helvetica, sans-serif">Unicommerce eSolutions Pvt Ltd</font><=
+/div><div style=3D"color:rgb(34,34,34);font-family:arial,sans-serif;font-si=
+ze:12.8px;font-style:normal;font-variant-ligatures:normal;font-variant-caps=
+:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-al=
+ign:start;text-indent:0px;text-transform:none;white-space:normal;word-spaci=
+ng:0px;background-color:rgb(255,255,255)"><div><font color=3D"#666666" face=
+=3D"arial, helvetica, sans-serif">201,3rd Floor=C2=A0</font><span style=3D"=
+color:rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-size:sma=
+ll">Okhla Phase-3 New Delhi110020</span></div><div><span style=3D"color:rgb=
+(102,102,102);font-family:arial,helvetica,sans-serif;font-size:small">M</sp=
+an><span style=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-s=
+erif;font-size:small;display:inline-block">:=C2=A0</span><span style=3D"col=
+or:rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-size:small"=
+>8826711822</span><span style=3D"color:rgb(102,102,102);font-family:arial,h=
+elvetica,sans-serif;font-size:small">=C2=A0| E</span><span style=3D"color:r=
+gb(102,102,102);font-family:arial,helvetica,sans-serif;font-size:small;disp=
+lay:inline-block">:</span><span style=3D"font-family:arial,helvetica,sans-s=
+erif;font-size:small;display:inline-block"></span><span style=3D"font-famil=
+y:arial,helvetica,sans-serif;font-size:small;display:inline-block"><font co=
+lor=3D"#0000ff"><a href=3D"mailto:vipul@unicommerce.com" style=3D"color:rgb=
+(17,85,204);text-decoration:none" target=3D"_blank">hrteam@unicommerce.com<=
+/a></font><font color=3D"#666666">=C2=A0</font></span><span style=3D"color:=
+rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-size:small">|<=
+/span></div><div><span style=3D"color:rgb(102,102,102);font-family:arial,he=
+lvetica,sans-serif;font-size:small">W</span><span style=3D"color:rgb(102,10=
+2,102);font-family:arial,helvetica,sans-serif;font-size:small;white-space:n=
+owrap;display:inline-block">:=C2=A0<a href=3D"http://www.unicommerce.com/" =
+style=3D"color:rgb(17,85,204)" target=3D"_blank">http://www.unicommerce.com=
+/</a></span></div></div><br></td></tr></tbody></table></div></div></div>
+</div>
+</div>=E2=80=8B<br></div>
+</div><br></div>
+</div><br></div>
+
+--001a113d2dce71bbf8054168c22e--

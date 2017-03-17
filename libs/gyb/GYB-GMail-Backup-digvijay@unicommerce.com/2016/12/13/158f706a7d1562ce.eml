@@ -1,0 +1,134 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2023475qgd;
+        Mon, 12 Dec 2016 23:12:38 -0800 (PST)
+X-Received: by 10.107.187.69 with SMTP id l66mr78575671iof.174.1481613158102;
+        Mon, 12 Dec 2016 23:12:38 -0800 (PST)
+Return-Path: <manorma@unicommerce.com>
+Received: from mail-io0-x235.google.com (mail-io0-x235.google.com. [2607:f8b0:4001:c06::235])
+        by mx.google.com with ESMTPS id h9si1027304iti.58.2016.12.12.23.12.37
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 12 Dec 2016 23:12:38 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4001:c06::235 is neither permitted nor denied by best guess record for domain of manorma@unicommerce.com) client-ip=2607:f8b0:4001:c06::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4001:c06::235 is neither permitted nor denied by best guess record for domain of manorma@unicommerce.com) smtp.mailfrom=manorma@unicommerce.com
+Received: by mail-io0-x235.google.com with SMTP id h30so213190306iod.2
+        for <digvijay@unicommerce.com>; Mon, 12 Dec 2016 23:12:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=d9vdsv5HALGHRd5SQ1/wTrNL5FKV0xUkYfhZSWPcKtU=;
+        b=vBdx9lZ5MUL/689BfYwA6KfAnvfRgDZWbsx01THFmsTzG+2+sAoTuC7gQ3bl/gbM/F
+         fGdiPxvy3pVbc/EDoH7dzGBEziStO3GgixUAJmkKl2EXWiQW++f+ODtLonWB+g6J03dD
+         iB2a3FYpz3snixl3bmmysOoHhpXwpKCKDUi5pq6XNn+V4QVwMT3cKSE/DjsFNiSvS5LJ
+         Ey0/0WwFxnFp4cm+Ug1f85fvheusqPkY4XjaPbHP8RiE/TRYl/oExeGUFhNE0iMAKTLc
+         e+B7Wz/Lo1hCYVp93W7eAKdMJpWsZrcLzE+Xs+49safoPDudyQVjAMtEVbGlERWxga0A
+         nAww==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=d9vdsv5HALGHRd5SQ1/wTrNL5FKV0xUkYfhZSWPcKtU=;
+        b=WQJVnSW9+a0Yx9TqEu9A3GqiFDdkFuetwO8DQTLJMJNDWARPFtwiPCZ586yo8ibLQe
+         a7Y+R7cbber22bANIPQfS6NFzUaiq5sIzbdnpvbBtvdFCuludU282NVUskzJuMHhyOxB
+         ARajOnLMcAQW89OM0YiT3UCQcP7Qk7D7BW5aBN5X/a2WZonzs0ZhEoXblPo2ykJl1Ehc
+         YVnaMfHiFuY0Wifg3fhtKjJHSyuZNFE7Rscd7jmzxnAGte1aktfyMLCZcf5nyNepJK9g
+         xDeQJ8s0GWH5X/AXkFvB0tW48h0VIJRcfDOh3s6kUl6FswxMjZydNERrCsvqSzm9vzTc
+         4Dbw==
+X-Gm-Message-State: AKaTC01qOu0Gif3Lw7apLMtG3IajNGCBt1Z7FOlN9bf6oY0mYVnLkbtQ7NNdb46EKdZhO0Nn2ctB1gtHMnSIGQ==
+X-Received: by 10.107.154.14 with SMTP id c14mr69069445ioe.0.1481613157756;
+ Mon, 12 Dec 2016 23:12:37 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.79.56.17 with HTTP; Mon, 12 Dec 2016 23:11:57 -0800 (PST)
+In-Reply-To: <CAFD_XHF3VGJbRi_HLNgNCYQsueZy3LVdQPt2Mqz14_Eu1-je3g@mail.gmail.com>
+References: <CAJF3sor=msUL7OhsixgRQHEnCYi83PofR4QNnA66Ooh85kTxEg@mail.gmail.com>
+ <CAFD_XHF3VGJbRi_HLNgNCYQsueZy3LVdQPt2Mqz14_Eu1-je3g@mail.gmail.com>
+From: Manorma Rai <manorma@unicommerce.com>
+Date: Tue, 13 Dec 2016 12:41:57 +0530
+Message-ID: <CAP6cLWNJqTn_NNbCyrE1jXDof6Cjxf+0+UTFU56M=Pz_ebat+Q@mail.gmail.com>
+Subject: Re: SD Recon sheet
+To: Varad Singhal <varad@unicommerce.com>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1140fc0cf6891b054384f10e
+
+--001a1140fc0cf6891b054384f10e
+Content-Type: text/plain; charset=UTF-8
+
+That is cancellation charge,because client had marked that order out of
+stock so order get cancel and Snapdeal team charge out of commission.
+
+
+
+Thanks and Regards
+Manorama Rai
+*Unicommerce** e-Solutions Pvt. Ltd.*
+
+
+
+
+On Mon, Dec 12, 2016 at 5:03 PM, Varad Singhal <varad@unicommerce.com>
+wrote:
+
+>
+> ---------- Forwarded message ----------
+> From: Digvijay Sharma <digvijay@unicommerce.com>
+> Date: Mon, Dec 12, 2016 at 4:04 PM
+> Subject: SD Recon sheet
+> To: Varad Singhal <varad@unicommerce.com>
+>
+>
+> Isme "stock out of commission" search kr dena
+>
+>
+>
+
+
+
+ Sent with Mailtrack
+<https://mailtrack.io/install?source=signature&lang=en&referral=manorma@unicommerce.com&idSignature=22>
+
+--001a1140fc0cf6891b054384f10e
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><span style=3D"font-size:12.8px">That is cancellation =
+charge,because client had marked that order out of stock so order get cance=
+l and Snapdeal team charge out of commission.</span><br><br><br><div class=
+=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"m_4925597220225070668=
+gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><span style=3D"font-family:&quot;comic sans =
+ms&quot;,sans-serif;font-size:12.8px"><span style=3D"background-color:rgb(2=
+55,255,255)"><font color=3D"#000000">Thanks and Regards</font></span><br></=
+span>Manorama Rai<br><span style=3D"font-size:12.8px;background-color:rgb(2=
+55,255,255)"><font color=3D"#38761d"><i><b>Unicommerce</b></i></font></span=
+><span style=3D"font-size:12.8px"><i><b><font style=3D"background-color:rgb=
+(255,255,255)" color=3D"#38761d">=C2=A0e-</font><font color=3D"#0000ff" sty=
+le=3D"background-color:rgb(255,255,255)">Solutions Pvt. Ltd.</font></b></i>=
+<br></span><br><br><br></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div>
+<br><div class=3D"gmail_quote">On Mon, Dec 12, 2016 at 5:03 PM, Varad Singh=
+al <span dir=3D"ltr">&lt;<a href=3D"mailto:varad@unicommerce.com" target=3D=
+"_blank">varad@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Fo=
+rwarded message ----------<br>From: <b class=3D"gmail_sendername">Digvijay =
+Sharma</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com=
+" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span><br>Date: Mon, D=
+ec 12, 2016 at 4:04 PM<br>Subject: SD Recon sheet<br>To: Varad Singhal &lt;=
+<a href=3D"mailto:varad@unicommerce.com" target=3D"_blank">varad@unicommerc=
+e.com</a>&gt;<br><br><br><div dir=3D"ltr">Isme &quot;stock out of commissio=
+n&quot; search kr dena<div><br></div></div>
+</div><br></div>
+</blockquote></div><br></div><br><br><br><div class=3D"mt-signature"><img s=
+rc=3D"https://s3-eu-west-1.amazonaws.com/mailtrack-crx/icon-signature.png" =
+width=3D"16" height=3D"14">=C2=A0<font color=3D"#999999" class=3D"mt-signat=
+ure-text">Sent with <a href=3D"https://mailtrack.io/install?source=3Dsignat=
+ure&amp;lang=3Den&amp;referral=3Dmanorma@unicommerce.com&amp;idSignature=3D=
+22" class=3D"mt-install">Mailtrack</a></font></div><img width=3D"0" height=
+=3D"0" class=3D"mailtrack-img" src=3D"https://mailtrack.io/trace/mail/dfd24=
+7b43356b8f83f2d6b48e7f1b346a8e6c4d1.png?u=3D1165148"></div>
+
+--001a1140fc0cf6891b054384f10e--

@@ -1,0 +1,173 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp3544394qgj;
+        Mon, 24 Oct 2016 20:12:30 -0700 (PDT)
+X-Received: by 10.55.45.193 with SMTP id t184mr15994604qkh.58.1477365150572;
+        Mon, 24 Oct 2016 20:12:30 -0700 (PDT)
+Return-Path: <3ns0OWAgTCDskl-obmivXZZlrkqp.dlldib.ZljafdsfgXvrkfZljjboZb.Zlj@gaia.bounces.google.com>
+Received: from mail-qt0-x245.google.com (mail-qt0-x245.google.com. [2607:f8b0:400d:c0d::245])
+        by mx.google.com with ESMTPS id i35si12185135qtb.75.2016.10.24.20.12.30
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 24 Oct 2016 20:12:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3ns0owagtcdskl-obmivxzzlrkqp.dlldib.zljafdsfgxvrkfzljjbozb.zlj@gaia.bounces.google.com designates 2607:f8b0:400d:c0d::245 as permitted sender) client-ip=2607:f8b0:400d:c0d::245;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@accounts.google.com;
+       spf=pass (google.com: domain of 3ns0owagtcdskl-obmivxzzlrkqp.dlldib.zljafdsfgxvrkfzljjbozb.zlj@gaia.bounces.google.com designates 2607:f8b0:400d:c0d::245 as permitted sender) smtp.mailfrom=3ns0OWAgTCDskl-obmivXZZlrkqp.dlldib.ZljafdsfgXvrkfZljjboZb.Zlj@gaia.bounces.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=accounts.google.com
+Received: by mail-qt0-x245.google.com with SMTP id p53so202023072qtp.1
+        for <digvijay@unicommerce.com>; Mon, 24 Oct 2016 20:12:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=accounts.google.com; s=20120806;
+        h=mime-version:date:feedback-id:message-id:subject:from:to;
+        bh=Hq24mQiVV/L7eVvYgEhKfXibABxN3++Jk+/gYDn1XGo=;
+        b=v8jD5uekLpe/POwquLLGWqba7BcmaUg6sSUtsX/9umQjEpD0qCbMnEBdlfcDehFSN4
+         coNtXTSSiMH3hSALIHLiGlVX3979XRuQP3Ay2h/J8g5lWqdRcStO79AdcyYnnTa/repq
+         8IEkuk3fCnuufXjAGeYMYOYJqmDedAFyCv7jVYXdC/xkrMlD9vYIxeUZR0U2qQumDlqI
+         mayGroJGFjREqqKYeYh6fGcoeLrZr962kFhqHfXcfLY2cBNlvo0et9ZM6Q6HsmRXQjiY
+         ryIDPHfOAiriv9N/fsk/YBcX0cr6RDZDSteT4rj+zxw0gJ4FdrINTFsWTHnKx+ZqiMYu
+         BCQA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:feedback-id:message-id:subject
+         :from:to;
+        bh=Hq24mQiVV/L7eVvYgEhKfXibABxN3++Jk+/gYDn1XGo=;
+        b=X0B72i8v4N//zoZzPPqzJR1YVj2K6XXFTnhxLxPfrISvYJTyI1ick7DZ7nvD2Vknjz
+         0BzODELioEcrswnJuSj8iHeV+QkcSy7EeB3OS/vouKXjXi/kjLDCvziWbHK8t9DKwHmM
+         w7ctsPru7teVOVDSKa6JX7vJo+sdmkEz/yUxAR/C/rBMuJKzqKUwxq6P/S1viKcFmDfx
+         qn7rHQfVqSGHN9sKsOW35hKGOxd3P6ksqzZWHny/+6nAFD58HwMKFydE8yc0xEjkpBnG
+         7Si7UJ33Vzgjn+KjFnVfXW2+XYu0eEQL2U2oz2phls4PSW7nxL3qMeZtCwywXNNNEVpk
+         4s+w==
+X-Gm-Message-State: ABUngvfJ+syNwA1YDhs4RqOLVsbni4QtBn84Y885W9N23H8HvjX22M06+1oKBjPk/ibYr47Pe4gTglI4mhqAKFAp
+MIME-Version: 1.0
+X-Received: by 10.237.61.141 with SMTP id i13mr151110qtf.50.1477365150293;
+ Mon, 24 Oct 2016 20:12:30 -0700 (PDT)
+Date: Tue, 25 Oct 2016 03:12:26 +0000 (UTC)
+X-Notifications: XEAAAAJvRCIB31SnDczL0Gu6bUtU
+X-Account-Notification-Type: 27-anexp:ire-control--lbe4-R2_C
+Feedback-ID: 27-anexp:ire-control--lbe4-R2_C:account-notifier
+Message-ID: <koCK-ekNklhuf1xSr6MOfQ@notifications.google.com>
+Subject: Review blocked sign-in attempt
+From: Google <no-reply@accounts.google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a1141a44efca0f0053fa7e069
+
+--001a1141a44efca0f0053fa7e069
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+UmV2aWV3IGJsb2NrZWQgc2lnbi1pbiBhdHRlbXB0DQoNCg0KDQpIaSBEaWd2aWpheSwNCkdvb2ds
+ZSBqdXN0IGJsb2NrZWQgc29tZW9uZSBmcm9tIHNpZ25pbmcgaW50byB5b3VyIEdvb2dsZSBBY2Nv
+dW50DQpkaWd2aWpheUB1bmljb21tZXJjZS5jb20gZnJvbSBhbiBhcHAgdGhhdCBtYXkgcHV0IHlv
+dXIgYWNjb3VudCBhdCByaXNrLg0KDQpMZXNzIHNlY3VyZSBhcHANClR1ZXNkYXksIE9jdG9iZXIg
+MjUsIDIwMTYgODo0MiBBTSAoSW5kaWEgU3RhbmRhcmQgVGltZSkNCkRlbGhpLCBJbmRpYSoqRG9u
+J3QgcmVjb2duaXplIHRoaXMgYWN0aXZpdHk/Kg0KSWYgeW91IGRpZG4ndCByZWNlbnRseSByZWNl
+aXZlIGFuIGVycm9yIHdoaWxlIHRyeWluZyB0byBhY2Nlc3MgYSBHb29nbGUNCnNlcnZpY2UsIGxp
+a2UgR21haWwsIGZyb20gYSBub24tR29vZ2xlIGFwcGxpY2F0aW9uLCBzb21lb25lIG1heSBoYXZl
+IHlvdXINCnBhc3N3b3JkLg0KDQpTRUNVUkUgWU9VUiBBQ0NPVU5UDQo8aHR0cHM6Ly9hY2NvdW50
+cy5nb29nbGUuY29tL0FjY291bnRDaG9vc2VyP0VtYWlsPWRpZ3ZpamF5QHVuaWNvbW1lcmNlLmNv
+bSZjb250aW51ZT1odHRwczovL3NlY3VyaXR5Lmdvb2dsZS5jb20vc2V0dGluZ3Mvc2VjdXJpdHkv
+c2VjdXJlYWNjb3VudD9mdCUzRDIlMjZyZm4lM0QyNyUyNnJmbmMlM0QxJTI2ZXQlM0QwJTI2YXNh
+ZSUzRDIlMjZhbmV4cCUzRGlyZS1jb250cm9sLS1sYmU0LVIyX0M+DQoNCipBcmUgeW91IHRoZSBv
+bmUgd2hvIHRyaWVkIHNpZ25pbmcgaW4/Kg0KR29vZ2xlIHdpbGwgY29udGludWUgdG8gYmxvY2sg
+c2lnbi1pbiBhdHRlbXB0cyBmcm9tIHRoZSBhcHAgeW91J3JlIHVzaW5nDQpiZWNhdXNlIGl0IGhh
+cyBrbm93biBzZWN1cml0eSBwcm9ibGVtcyBvciBpcyBvdXQgb2YgZGF0ZS4gWW91IGNhbiBjb250
+aW51ZQ0KdG8gdXNlIHRoaXMgYXBwIGJ5IGFsbG93aW5nIGFjY2VzcyB0byBsZXNzIHNlY3VyZSBh
+cHBzDQo8aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL0FjY291bnRDaG9vc2VyP0VtYWlsPWRp
+Z3ZpamF5QHVuaWNvbW1lcmNlLmNvbSZjb250aW51ZT1odHRwczovL3d3dy5nb29nbGUuY29tL3Nl
+dHRpbmdzL3NlY3VyaXR5L2xlc3NzZWN1cmVhcHBzP3JmbiUzRDI3JTI2cmZuYyUzRDElMjZldCUz
+RDAlMjZhc2FlJTNEMiUyNmFuZXhwJTNEaXJlLWNvbnRyb2wtLWxiZTQtUjJfQz4sDQpidXQgdGhp
+cyBtYXkgbGVhdmUgeW91ciBhY2NvdW50IHZ1bG5lcmFibGUuDQoNCg0KDQpCZXN0LA0KVGhlIEdv
+b2dsZSBBY2NvdW50cyB0ZWFtDQoNCg0KDQoqVGhlIGxvY2F0aW9uIGlzIGFwcHJveGltYXRlIGFu
+ZCBkZXRlcm1pbmVkIGJ5IHRoZSBJUCBhZGRyZXNzIGl0IHdhcyBjb21pbmcNCmZyb20uDQoNClRo
+aXMgZW1haWwgY2FuJ3QgcmVjZWl2ZSByZXBsaWVzLiBGb3IgbW9yZSBpbmZvcm1hdGlvbiwgdmlz
+aXQgdGhlIEdvb2dsZQ0KQWNjb3VudHMgSGVscCBDZW50ZXIgPGh0dHBzOi8vc3VwcG9ydC5nb29n
+bGUuY29tL2FjY291bnRzL2Fuc3dlci82MDEwMjU1Pi4NCg0KDQoNCllvdSByZWNlaXZlZCB0aGlz
+IG1hbmRhdG9yeSBlbWFpbCBzZXJ2aWNlIGFubm91bmNlbWVudCB0byB1cGRhdGUgeW91IGFib3V0
+DQppbXBvcnRhbnQgY2hhbmdlcyB0byB5b3VyIEdvb2dsZSBwcm9kdWN0IG9yIGFjY291bnQuDQrC
+qSAyMDE2IEdvb2dsZSBJbmMuLCAxNjAwIEFtcGhpdGhlYXRyZSBQYXJrd2F5LCBNb3VudGFpbiBW
+aWV3LCBDQSA5NDA0MywgVVNBDQo=
+--001a1141a44efca0f0053fa7e069
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"en"><head><meta name=3D"format-detection" content=3D"date=3Dn=
+o"><meta name=3D"format-detection" content=3D"email=3Dno"></head><body styl=
+e=3D"margin: 0; padding: 0;" bgcolor=3D"#FFFFFF"><table width=3D"100%" heig=
+ht=3D"100%" style=3D"min-width: 348px;" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0"><tr height=3D"32px"></tr><tr align=3D"center"><td width=3D"32=
+px"></td><td><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"max-width: 600px;"><tr><td><table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tr><td align=3D"left"><img width=3D"92" height=
+=3D"32" src=3D"https://www.gstatic.com/accountalerts/email/googlelogo_color=
+_188x64dp.png" style=3D"display: block; width: 92px; height: 32px;"></td><t=
+d align=3D"right"><img width=3D"32" height=3D"32" style=3D"display: block; =
+width: 32px; height: 32px;" src=3D"https://www.gstatic.com/accountalerts/em=
+ail/shield.png"></td></tr></table></td></tr><tr height=3D"16"></tr><tr><td>=
+<table bgcolor=3D"#D94235" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" style=3D"min-width: 332px; max-width: 600px; border: 1px so=
+lid #E0E0E0; border-bottom: 0; border-top-left-radius: 3px; border-top-righ=
+t-radius: 3px;"><tr><td height=3D"72px" colspan=3D"3"></td></tr><tr><td wid=
+th=3D"32px"></td><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,s=
+ans-serif; font-size: 24px; color: #FFFFFF; line-height: 1.25;">Review bloc=
+ked sign-in attempt</td><td width=3D"32px"></td></tr><tr><td height=3D"18px=
+" colspan=3D"3"></td></tr></table></td></tr><tr><td><table bgcolor=3D"#FAFA=
+FA" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"min-width: 332px; max-width: 600px; border: 1px solid #F0F0F0; border-b=
+ottom: 1px solid #C0C0C0; border-top: 0; border-bottom-left-radius: 3px; bo=
+rder-bottom-right-radius: 3px;"><tr height=3D"16px"><td width=3D"32px" rows=
+pan=3D"3"></td><td></td><td width=3D"32px" rowspan=3D"3"></td></tr><tr><td>=
+<table style=3D"min-width: 300px;" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-=
+serif; font-size: 13px; color: #202020; line-height: 1.5;">Hi Digvijay,</td=
+></tr><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-ser=
+if; font-size: 13px; color: #202020; line-height: 1.5;">Google just blocked=
+ someone from signing into your Google Account digvijay@unicommerce.com fro=
+m an app that may put your account at risk.<table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin-top: 16px; margin-bottom: 16px;"><=
+tr valign=3D"top"><td width=3D"16px" ></td><td style=3D"line-height: 1.2;">=
+<span style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-serif; font=
+-size: 16px; color: #202020;">Less secure app</span><br><span style=3D"font=
+-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 13px; color:=
+ #727272;">Tuesday, October 25, 2016 8:42 AM (India Standard Time)<br>Delhi=
+, India*</span></td></tr></table><b>Don&#39;t recognize this activity?</b><=
+br>If you didn't recently receive an error while trying to access a Google =
+service, like Gmail, from a non-Google application, someone may have your p=
+assword.<br><br><a href=3D"https://accounts.google.com/AccountChooser?Email=
+=3Ddigvijay@unicommerce.com&amp;continue=3Dhttps://security.google.com/sett=
+ings/security/secureaccount?ft%3D2%26rfn%3D27%26rfnc%3D1%26et%3D0%26asae%3D=
+2%26anexp%3Dire-control--lbe4-R2_C" target=3D"_blank" style=3D"font-family:=
+ Roboto-Regular,Helvetica,Arial,sans-serif; display:inline-block; text-alig=
+n: center; text-decoration: none; height: 36px; line-height: 36px; padding-=
+left: 8px; padding-right: 8px; min-width: 88px; font-size: 14px; font-weigh=
+t: 400; color: #ffffff; background-color: #4184F3; border-radius: 2px; bord=
+er-width: 0px; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4);">SECURE YOUR ACCOUN=
+T</a><br><br><b>Are you the one who tried signing in?</b><br>Google will co=
+ntinue to block sign-in attempts from the app you're using because it has k=
+nown security problems or is out of date. You can continue to use this app =
+by <a href=3D"https://accounts.google.com/AccountChooser?Email=3Ddigvijay@u=
+nicommerce.com&amp;continue=3Dhttps://www.google.com/settings/security/less=
+secureapps?rfn%3D27%26rfnc%3D1%26et%3D0%26asae%3D2%26anexp%3Dire-control--l=
+be4-R2_C" style=3D"text-decoration: none; color: #4285F4;" target=3D"_blank=
+">allowing access to less secure apps</a>, but this may leave your account =
+vulnerable.<br><br></td></tr><tr height=3D"32px"></tr><tr><td style=3D"font=
+-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 13px; color:=
+ #202020; line-height: 1.5;">Best,<br>The Google Accounts team</td></tr><tr=
+ height=3D"16px"></tr><tr><td><table style=3D"font-family: Roboto-Regular,H=
+elvetica,Arial,sans-serif; font-size: 12px; color: #B9B9B9; line-height: 1.=
+5;"><tr><td>*The location is approximate and determined by the IP address i=
+t was coming from.<br></td></tr><tr><td>This email can't receive replies. F=
+or more information, visit the <a href=3D"https://support.google.com/accoun=
+ts/answer/6010255" data-meta-key=3D"help" style=3D"text-decoration: none; c=
+olor: #4285F4;" target=3D"_blank">Google Accounts Help Center</a>.</td></tr=
+></table></td></tr></table></td></tr><tr height=3D"32px"></tr></table></td>=
+</tr><tr height=3D"16"></tr><tr><td style=3D"max-width: 600px; font-family:=
+ Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 10px; color: #BCBCBC=
+; line-height: 1.5;"><tr><td><table style=3D"font-family: Roboto-Regular,He=
+lvetica,Arial,sans-serif; font-size: 10px; color: #666666; line-height: 18p=
+x; padding-bottom: 10px"><tr><td>You received this mandatory email service =
+announcement to update you about important changes to your Google product o=
+r account.</td></tr><tr><td><div style=3D"direction: ltr; text-align: left"=
+>&copy; 2016 Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 9404=
+3, USA</div></td></tr></table></td></tr></td></tr></table></td><td width=3D=
+"32px"></td></tr><tr height=3D"32px"></tr></table></body></html>
+--001a1141a44efca0f0053fa7e069--

@@ -1,0 +1,17 @@
+sudo /usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port "{serial.port}" write_flash 0x00000 "{build.path}/{build.project_name}.bin"
+
+sudo /usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 write_flash 0x3fc000 /var/folders/2n/p9zr1vzn351d1b9xq05kkllr0000gn/T/arduino_build_845861/Blink_ESp12.ino.bin
+
+/usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 write_flash 0x00000 ~/embed/nodemcu-master-23-modules-2017-03-13-03-55-58-integer.bin
+/usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 write_flash 0x3fc000 ~/embed/esp_init_data_default.bin -fm=dio -fs=32m
+
+screen 
+
+
+
+/usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 erase_flash
+
+/usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 write_flash 0x00000 ~/embed/nodemcu-master-23-modules-2017-03-13-03-55-58-integer.bin 0x3fc000 ~/embed/Blink_ESp12.ino.bin -fm=dio -fs=32m
+
+/usr/local/lib/python2.7/site-packages/esptool.py --baud 115200 --port /dev/cu.usbmodem1411 write_flash 0x00000 ~/Downloads/nodemcu_float_0.9.6-dev_20150704.bin
+

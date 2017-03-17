@@ -1,0 +1,110 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2033354qgd;
+        Tue, 20 Dec 2016 23:07:44 -0800 (PST)
+X-Received: by 10.200.35.214 with SMTP id r22mr3254655qtr.30.1482304064571;
+        Tue, 20 Dec 2016 23:07:44 -0800 (PST)
+Return-Path: <vikas@unicommerce.com>
+Received: from mail-qk0-x230.google.com (mail-qk0-x230.google.com. [2607:f8b0:400d:c09::230])
+        by mx.google.com with ESMTPS id d41si4111136qkh.92.2016.12.20.23.07.44
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 20 Dec 2016 23:07:44 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c09::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c09::230 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Received: by mail-qk0-x230.google.com with SMTP id q68so73098836qki.1
+        for <digvijay@unicommerce.com>; Tue, 20 Dec 2016 23:07:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=suqSs2bvZefu5Ae6Pdg+MAduFf+Hpkn0tZ/zhY6oCbw=;
+        b=bdwz3A4UTENDppA+DUGeuT5U3NNkUcN0V2X8oTwjQlRTUInak8Vv+AAWa9qPh8Qwbu
+         WMKf382uea0u7URqlI3VKwsB5tV48NoAT2kfXZ9D6tjcBx4a7K2joZNOo5DSovuiAMJj
+         HHvEoVcJvYniM6oxA0ZLycgB1WPwicv1FajJIC1X8+wKPP/9Asq1qJP31AbAjmiK3fCM
+         yi23H/8LdcCyjD31Lw0i7P+Bo1t1eDLNy8rbmY4h8c2HiP3gitSTCewZ3LC51P43Jr+i
+         TdZeLh9yDJioRp3G9keoUpSL7njGbg9R2709z6Iv8qb3wsuowKgYFHjO6P58pqKJ4l05
+         pXoA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=suqSs2bvZefu5Ae6Pdg+MAduFf+Hpkn0tZ/zhY6oCbw=;
+        b=EnCZyhzj8m206CM2vyy6d9/I8WJwErw+U9jXurP2wii6PZy+iahTLkk8JN1QLXQ6Ya
+         NgZ3XMr+uAq8Sp/vmsyIvBrelce9cY4Ibj9nVTUhnMHxjwN/T2eGJHBiu9dm4jhAyqcH
+         phcsrk+NdMcfFx+S8wys50ZCx6amvDVCo0Xkkw2EqE9orl+Xfe4+dtGrONs0CdLJcoZK
+         GW9Se5/ex7KjdAaxNelq/rT1IZSzBYSYO4jvM79cwKbzOQQaep4rlXg2P0sktUo99K96
+         qiInESG3iDXwX44PABmoRNTTIo9VCWmr/K32iz9Fup83LjtPekVnkj1yjTkuzPQbemcc
+         /PkQ==
+X-Gm-Message-State: AIkVDXKgwmUmXX8p+nADlpkz7xDvuEHB8AkKxOtmXtit3sJVIFcP6c6mI4uw4QKnY0QLUT2+aMweConkBtjIEw==
+X-Received: by 10.55.135.69 with SMTP id j66mr3336275qkd.31.1482304064178;
+ Tue, 20 Dec 2016 23:07:44 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.55.0.82 with HTTP; Tue, 20 Dec 2016 23:07:43 -0800 (PST)
+In-Reply-To: <CAEixeD-FHLZy69VmcM5bsNVSPYRFD77K9GSj3nsNy451=RiTEg@mail.gmail.com>
+References: <CAJF3soqs2V-ZV+-Dfq8bVYi51T6=xSz=+n9RzzgcATmQr=3zfw@mail.gmail.com>
+ <CAJF3soqv5FprZ1vs05FXCMYd-tr7jBeVRyBqeEzTpNAcJ4KsXQ@mail.gmail.com> <CAEixeD-FHLZy69VmcM5bsNVSPYRFD77K9GSj3nsNy451=RiTEg@mail.gmail.com>
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Wed, 21 Dec 2016 12:37:43 +0530
+Message-ID: <CAEixeD-Lb3FCT4diZzYSm5m=1MdQX8VUJC44hS__tVjwLMJ5Ug@mail.gmail.com>
+Subject: Re: WormholeTest tomcat not working
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Cc: Nitin Yadav <nitin@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c075f4631de53054425cf7a
+
+--94eb2c075f4631de53054425cf7a
+Content-Type: text/plain; charset=UTF-8
+
+Done
+
+On Wed, Dec 21, 2016 at 12:10 PM, Vikas Goyal <vikas@unicommerce.com> wrote:
+
+> come to my bay
+>
+> On Wed, Dec 21, 2016 at 11:59 AM, Digvijay Sharma <
+> digvijay@unicommerce.com> wrote:
+>
+>> ROOT.xml is still not correct. There is no UnicommerceDS in it on
+>> WormholeTest Server. Please check and change.
+>>
+>> On Tue, Dec 20, 2016 at 5:49 PM, Digvijay Sharma <
+>> digvijay@unicommerce.com> wrote:
+>>
+>>> The catalina.sh and ROOT.xml file are both not correct for WormholeTest
+>>> server. Thats why tomcat is not booting up. Please check and replace.
+>>>
+>>
+>>
+>
+
+--94eb2c075f4631de53054425cf7a
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Done</div><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Wed, Dec 21, 2016 at 12:10 PM, Vikas Goyal <span dir=3D"ltr">&=
+lt;<a href=3D"mailto:vikas@unicommerce.com" target=3D"_blank">vikas@unicomm=
+erce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr">come to my bay</div><div class=3D"HOEnZb"><div class=3D"h5"><div c=
+lass=3D"gmail_extra"><br><div class=3D"gmail_quote">On Wed, Dec 21, 2016 at=
+ 11:59 AM, Digvijay Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:digvijay=
+@unicommerce.com" target=3D"_blank">digvijay@unicommerce.com</a>&gt;</span>=
+ wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bor=
+der-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">ROOT.xml is stil=
+l not correct. There is no UnicommerceDS in it on WormholeTest Server. Plea=
+se check and change.</div><div class=3D"m_-8405029767583362993HOEnZb"><div =
+class=3D"m_-8405029767583362993h5"><div class=3D"gmail_extra"><br><div clas=
+s=3D"gmail_quote">On Tue, Dec 20, 2016 at 5:49 PM, Digvijay Sharma <span di=
+r=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blank"=
+>digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gma=
+il_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-lef=
+t:1ex"><div dir=3D"ltr">The catalina.sh and ROOT.xml file are both not corr=
+ect for WormholeTest server. Thats why tomcat is not booting up. Please che=
+ck and replace.</div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--94eb2c075f4631de53054425cf7a--

@@ -1,0 +1,161 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Mon, 13 Feb 2017 05:24:32 -0800 (PST)
+Date: Mon, 13 Feb 2017 18:54:32 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soo3Q=qCMToLio3ok4XQjFJCFw3W+PfRd3Sq1vcAwq95hA@mail.gmail.com>
+Subject: 
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c1254a300dc00548695eb5
+
+--001a11c1254a300dc00548695eb5
+Content-Type: text/plain; charset=UTF-8
+
+<var name="paytmUrl" value="https://catalogadmin.paytm.com/v1"/>
+
+<http url="#{#paytmUrl}/merchant/#{#merchantId}/catalog.json"
+method="get" var="channelItemsResponse" timeout="80" >
+    <header name="Accept" value="application/json, text/plain, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate, sdch"/>
+    <header name="Accept-Language" value="en-US,en;q=0.8"/>
+    <header name="Connection" value="keep-alive"/>
+    <header name="Host" value="catalogadmin.paytm.com"/>
+    <header name="Origin" value="https://seller.paytm.com"/>
+    <header name="Referer" value="https://seller.paytm.com/"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Macintosh; Intel Mac
+OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/41.0.2272.89 Safari/537.36"/>
+    <param name="product_type" value="simple"/>
+    <param name="limit" value="10"/>
+</http>
+
+--001a11c1254a300dc00548695eb5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><pre style=3D"color:rgb(0,0,0);font-family:menlo;font-size=
+:9pt"><pre style=3D"font-family:menlo;font-size:9pt"><span style=3D"backgro=
+und-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);ba=
+ckground-color:rgb(239,239,239);font-weight:bold">var </span><span style=3D=
+"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">nam=
+e</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239)=
+;font-weight:bold">=3D&quot;paytmUrl&quot; </span><span style=3D"color:rgb(=
+0,0,255);background-color:rgb(239,239,239);font-weight:bold">value</span><s=
+pan style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weig=
+ht:bold">=3D&quot;<a href=3D"https://catalogadmin.paytm.com/v1">https://cat=
+alogadmin.paytm.com/v1</a>&quot;</span><span style=3D"background-color:rgb(=
+239,239,239)">/&gt;</span></pre></pre><pre style=3D"color:rgb(0,0,0);font-f=
+amily:menlo;font-size:9pt"><pre style=3D"font-family:menlo;font-size:9pt"><=
+span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"=
+color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">http=
+ </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239)=
+;font-weight:bold">url</span><span style=3D"color:rgb(0,128,0);background-c=
+olor:rgb(239,239,239);font-weight:bold">=3D&quot;#{#paytmUrl}/merchant/#{#m=
+erchantId}/catalog.json&quot; </span><span style=3D"color:rgb(0,0,255);back=
+ground-color:rgb(239,239,239);font-weight:bold">method</span><span style=3D=
+"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D=
+&quot;get&quot; </span><span style=3D"color:rgb(0,0,255);background-color:r=
+gb(239,239,239);font-weight:bold">var</span><span style=3D"color:rgb(0,128,=
+0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;channelItem=
+sResponse&quot; </span><span style=3D"color:rgb(0,0,255);background-color:r=
+gb(239,239,239);font-weight:bold">timeout</span><span style=3D"color:rgb(0,=
+128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;80&quot=
+; </span><span style=3D"background-color:rgb(239,239,239)">&gt;</span><br> =
+   <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">=
+header </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,23=
+9,239);font-weight:bold">name</span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">=3D&quot;Accept&quot; </span=
+><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-w=
+eight:bold">value</span><span style=3D"color:rgb(0,128,0);background-color:=
+rgb(239,239,239);font-weight:bold">=3D&quot;application/json, text/plain, *=
+/*&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</spa=
+n><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><spa=
+n style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight=
+:bold">header </span><span style=3D"color:rgb(0,0,255);background-color:rgb=
+(239,239,239);font-weight:bold">name</span><span style=3D"color:rgb(0,128,0=
+);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;Accept-Encod=
+ing&quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239=
+,239,239);font-weight:bold">value</span><span style=3D"color:rgb(0,128,0);b=
+ackground-color:rgb(239,239,239);font-weight:bold">=3D&quot;gzip, deflate, =
+sdch&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</s=
+pan><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><s=
+pan style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weig=
+ht:bold">header </span><span style=3D"color:rgb(0,0,255);background-color:r=
+gb(239,239,239);font-weight:bold">name</span><span style=3D"color:rgb(0,128=
+,0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;Accept-Lan=
+guage&quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(2=
+39,239,239);font-weight:bold">value</span><span style=3D"color:rgb(0,128,0)=
+;background-color:rgb(239,239,239);font-weight:bold">=3D&quot;en-US,en;q=3D=
+0.8&quot;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</sp=
+an><br>    <span style=3D"background-color:rgb(239,239,239)">&lt;</span><sp=
+an style=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weigh=
+t:bold">header </span><span style=3D"color:rgb(0,0,255);background-color:rg=
+b(239,239,239);font-weight:bold">name</span><span style=3D"color:rgb(0,128,=
+0);background-color:rgb(239,239,239);font-weight:bold">=3D&quot;Connection&=
+quot; </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239=
+,239);font-weight:bold">value</span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">=3D&quot;keep-alive&quot;</s=
+pan><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <=
+span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"=
+color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">head=
+er </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,23=
+9);font-weight:bold">name</span><span style=3D"color:rgb(0,128,0);backgroun=
+d-color:rgb(239,239,239);font-weight:bold">=3D&quot;Host&quot; </span><span=
+ style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:=
+bold">value</span><span style=3D"color:rgb(0,128,0);background-color:rgb(23=
+9,239,239);font-weight:bold">=3D&quot;<a href=3D"http://catalogadmin.paytm.=
+com">catalogadmin.paytm.com</a>&quot;</span><span style=3D"background-color=
+:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"background-color:rgb(=
+239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background-color=
+:rgb(239,239,239);font-weight:bold">header </span><span style=3D"color:rgb(=
+0,0,255);background-color:rgb(239,239,239);font-weight:bold">name</span><sp=
+an style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weigh=
+t:bold">=3D&quot;Origin&quot; </span><span style=3D"color:rgb(0,0,255);back=
+ground-color:rgb(239,239,239);font-weight:bold">value</span><span style=3D"=
+color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:bold">=3D&=
+quot;<a href=3D"https://seller.paytm.com">https://seller.paytm.com</a>&quot=
+;</span><span style=3D"background-color:rgb(239,239,239)">/&gt;</span><br> =
+   <span style=3D"background-color:rgb(239,239,239)">&lt;</span><span style=
+=3D"color:rgb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">=
+header </span><span style=3D"color:rgb(0,0,255);background-color:rgb(239,23=
+9,239);font-weight:bold">name</span><span style=3D"color:rgb(0,128,0);backg=
+round-color:rgb(239,239,239);font-weight:bold">=3D&quot;Referer&quot; </spa=
+n><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-=
+weight:bold">value</span><span style=3D"color:rgb(0,128,0);background-color=
+:rgb(239,239,239);font-weight:bold">=3D&quot;<a href=3D"https://seller.payt=
+m.com/">https://seller.paytm.com/</a>&quot;</span><span style=3D"background=
+-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"background-colo=
+r:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);background=
+-color:rgb(239,239,239);font-weight:bold">header </span><span style=3D"colo=
+r:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">name</sp=
+an><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font=
+-weight:bold">=3D&quot;User-Agent&quot; </span><span style=3D"color:rgb(0,0=
+,255);background-color:rgb(239,239,239);font-weight:bold">value</span><span=
+ style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weight:=
+bold">=3D&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/5=
+37.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36&quot;</span><sp=
+an style=3D"background-color:rgb(239,239,239)">/&gt;</span><br>    <span st=
+yle=3D"background-color:rgb(239,239,239)">&lt;</span><span style=3D"color:r=
+gb(0,0,128);background-color:rgb(239,239,239);font-weight:bold">param </spa=
+n><span style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-=
+weight:bold">name</span><span style=3D"color:rgb(0,128,0);background-color:=
+rgb(239,239,239);font-weight:bold">=3D&quot;product_type&quot; </span><span=
+ style=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:=
+bold">value</span><span style=3D"color:rgb(0,128,0);background-color:rgb(23=
+9,239,239);font-weight:bold">=3D&quot;simple&quot;</span><span style=3D"bac=
+kground-color:rgb(239,239,239)">/&gt;</span><br>    <span style=3D"backgrou=
+nd-color:rgb(239,239,239)">&lt;</span><span style=3D"color:rgb(0,0,128);bac=
+kground-color:rgb(239,239,239);font-weight:bold">param </span><span style=
+=3D"color:rgb(0,0,255);background-color:rgb(239,239,239);font-weight:bold">=
+name</span><span style=3D"color:rgb(0,128,0);background-color:rgb(239,239,2=
+39);font-weight:bold">=3D&quot;limit&quot; </span><span style=3D"color:rgb(=
+0,0,255);background-color:rgb(239,239,239);font-weight:bold">value</span><s=
+pan style=3D"color:rgb(0,128,0);background-color:rgb(239,239,239);font-weig=
+ht:bold">=3D&quot;10&quot;</span><span style=3D"background-color:rgb(239,23=
+9,239)">/&gt;</span><br><span style=3D"background-color:rgb(239,239,239)">&=
+lt;/</span><span style=3D"color:rgb(0,0,128);background-color:rgb(239,239,2=
+39);font-weight:bold">http</span><span style=3D"background-color:rgb(239,23=
+9,239)">&gt;</span></pre></pre></div>
+
+--001a11c1254a300dc00548695eb5--

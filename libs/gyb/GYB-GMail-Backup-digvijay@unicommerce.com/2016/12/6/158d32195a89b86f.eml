@@ -1,0 +1,98 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp1853239qgd;
+        Mon, 5 Dec 2016 23:55:43 -0800 (PST)
+X-Received: by 10.55.7.132 with SMTP id 126mr50889407qkh.224.1481010943068;
+        Mon, 05 Dec 2016 23:55:43 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qt0-x236.google.com (mail-qt0-x236.google.com. [2607:f8b0:400d:c0d::236])
+        by mx.google.com with ESMTPS id n12si11086028qtn.239.2016.12.05.23.55.42
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Dec 2016 23:55:43 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::236 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c0d::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::236 is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qt0-x236.google.com with SMTP id n6so339389301qtd.1
+        for <digvijay@unicommerce.com>; Mon, 05 Dec 2016 23:55:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=dtxDFXUfdxc/MErxA4su4BW7RjAohaMZB/xgCtwGMcs=;
+        b=jerdKO0uvD0/j4RBTgDuiamMLz65IdBbgNkYP+O8v5s+nI6ABeDOJeKy/sccpPFYPH
+         GjL3Bx0STnh2oxNeqOPUnfq/TGCcPtaxppBjhlR7g+GObbJlmi3TDohbQsniT6E8/vN2
+         VaRQiu5/RXWNMht03cFYrHDzFo5EbJUHLxxDt4Bj+QUhBRmo5fSlMKgnYR83i7XLWDDi
+         pufD7t3bQi7300TA1pKyy9/OnpEnhaKOH34zkqRlZ50KhphOSO7QD9pLv/OMuFVxJiUo
+         krRYUhgkUALmFDNnIvtTLjeDCFULAfG1f1/OGl5pNterqdExUrFdzgYn/0Yfndc8WmEI
+         Zi6Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=dtxDFXUfdxc/MErxA4su4BW7RjAohaMZB/xgCtwGMcs=;
+        b=Y1YZNLNBQSmdsOoFn+57e0hiA0dTupIx0SyqbBmdmPREVZDuKPI98OUHDSNN2B7Eys
+         LKlrM9rlTZSAC6ZdK1FB9H1ANeQ3FTeDmSZR3z2WGfWeUqRVo2gx7MunYTiAaB8HHPuX
+         Q96Dk0rR37B5DiO6x38/x6v3KY1MeyXId7i0Z+E5ZN2LRHFUNJtNBDia829vxHtBZNCw
+         1lKvyavBf3TwXuesNpZ9EIOjutmNQt7QNtYuEM49CK1K7nmW02rmMY0F3o+/k3hrbxai
+         Bd/CpTrWi05eQvtY13M2IG0O9bjQDaCBSy/CbrQyoyFYu3KgQF69r5vh+/irj2YrVmIh
+         yxJA==
+X-Gm-Message-State: AKaTC01ZYC6fxPz8mC3UYa9hYvFYwc/qjUPqttZaJH6HQjPUvUkoRupLhJJS7MHf2UukTHmgotRQrk3ocQAAuw==
+X-Received: by 10.200.52.87 with SMTP id v23mr60233305qtb.143.1481010942627;
+ Mon, 05 Dec 2016 23:55:42 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.137.114 with HTTP; Mon, 5 Dec 2016 23:55:41 -0800 (PST)
+In-Reply-To: <CAFD_XHEO3eHqMy342k7VneVkTUaoJhs_bjeF8WCeNMHEQGb67w@mail.gmail.com>
+References: <CAFD_XHEO3eHqMy342k7VneVkTUaoJhs_bjeF8WCeNMHEQGb67w@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Tue, 6 Dec 2016 13:25:41 +0530
+Message-ID: <CAFD_XHFMd9yYpMj9FTGx7Xwz-DnPHWXoXn=kfOFxx9VyRtRLqA@mail.gmail.com>
+Subject: Fwd: Difference in product details
+To: Digvijay Sharma <digvijay@unicommerce.com>, Piyush Arora <piyush@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1140b7aa24e4c20542f8bbee
+
+--001a1140b7aa24e4c20542f8bbee
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: Varad Singhal <varad@unicommerce.com>
+Date: Thu, Dec 1, 2016 at 6:09 PM
+Subject: Difference in product details
+To: Chirag Agrawal <chirag@limeroad.com>
+
+
+Hi Chirag,
+
+We are getting difference in product details for same product while
+consuming sku/list and list/orders.
+
+In list/sku product id is 1044811 -36eu-pink
+
+In list/order product id is 1044811 -36 (eu)-pink
+
+Is it possible to get symmetry between both responses in size details?
+
+Regards
+
+--001a1140b7aa24e4c20542f8bbee
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Varad Singhal</b> <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:varad@unicommerce.com">varad@unicommerce=
+.com</a>&gt;</span><br>Date: Thu, Dec 1, 2016 at 6:09 PM<br>Subject: Differ=
+ence in product details<br>To: Chirag Agrawal &lt;<a href=3D"mailto:chirag@=
+limeroad.com">chirag@limeroad.com</a>&gt;<br><br><br><div dir=3D"ltr">Hi Ch=
+irag,<div><br></div><div>We are getting difference in product details for s=
+ame product while consuming sku/list and list/orders.</div><div><br></div><=
+div><span style=3D"color:rgb(38,50,56);font-size:13px">In list/sku product =
+id is=C2=A01044811 -36eu-pink</span><br style=3D"color:rgb(38,50,56);font-s=
+ize:13px"><br style=3D"color:rgb(38,50,56);font-size:13px"><span style=3D"c=
+olor:rgb(38,50,56);font-size:13px">In list/order product id is 1044811 -36 =
+(eu)-pink</span><br></div><div><span style=3D"color:rgb(38,50,56);font-size=
+:13px"><br></span></div><div><font color=3D"#263238">Is it possible to get =
+symmetry=C2=A0between both responses in size details?<br><br></font></div><=
+div><font color=3D"#263238">Regards</font></div></div>
+</div><br></div>
+
+--001a1140b7aa24e4c20542f8bbee--

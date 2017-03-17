@@ -1,0 +1,70 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp748529qgu;
+        Sun, 26 Feb 2017 23:03:45 -0800 (PST)
+X-Received: by 10.157.11.28 with SMTP id a28mr2212260ota.121.1488179025481;
+        Sun, 26 Feb 2017 23:03:45 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-ot0-x236.google.com (mail-ot0-x236.google.com. [2607:f8b0:4003:c0f::236])
+        by mx.google.com with ESMTPS id b132si5960239oia.13.2017.02.26.23.03.45
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 26 Feb 2017 23:03:45 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::236 is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-ot0-x236.google.com with SMTP id w44so46228612otw.2
+        for <digvijay@unicommerce.com>; Sun, 26 Feb 2017 23:03:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=qoVcAdAcVPhzvwOW3Z6ZlNtExK2rO7ykdEg/72KfEJA=;
+        b=jwdhESCWkPI64g0sfNsxD/L9NO74MlBCF1XMSUitBVNncy8bnK2qj5xA8tCErq/J+u
+         yC3bmrDwTEDxEEtxnR4bF7FVYYsDaNvub9N+iE4txVFzlZW9fEG7BTd+06Z4ftqd52fr
+         NtMCsDxbGh80f2UPlL42xTMZWdjBqH3GsPMuOi+NL0zL3ykLZQrB1uiW2/sh9zBPqPK3
+         TUGh1l54dAL3jObhYuZwuiayjvyX+ZVb6QQKI6d81LHRxTi462Cx83vQBWJJyoI012qb
+         NKKpz07xsV5W9kbvznQaWKZTOCwyubKHEtbdw6co5i8NxTPdPX3r1WBGL2F+HljqZ/B9
+         +Hyw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=qoVcAdAcVPhzvwOW3Z6ZlNtExK2rO7ykdEg/72KfEJA=;
+        b=djfXcmp80TFlhbZL3Sd7fHX7AMotkcAz2xflVaCI1C+nT4Vj49XEmW06sfWhMAYW/v
+         42XQ4kvutaxltjegmlWmzix6CoxyY+Opc8pmT/PVDuogQVOWUER2rCcvbnz8U3d0t1Du
+         y5M6ifLPO0awONjoJy72eBotGfK64Ttg/u5EEb9sD13mXFPXE29cG8EUg/sjk6fTUZb4
+         IukmgMHt3Ap6E4QXFuCmNoZk+3odGaR8yEO6fK+aax/qfIgoCFSPdnl4q335PMkSIsAz
+         /LDsAowQ8mywbRCkF9EFgLhqJKoNyUpcWuGzwFIdYr9UWFAk/1CwmfUvcYBhh2H+BCso
+         86nw==
+X-Gm-Message-State: AMke39lzDu+pgxpl1vQmwf24a38whn9b+lOxXzL91L4meAg7Vqfh8HYLdSrYc7uwbTZeripqkSWAMQj59DVfeA==
+X-Received: by 10.157.60.123 with SMTP id j56mr7612723ote.235.1488179024805;
+ Sun, 26 Feb 2017 23:03:44 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.50.225 with HTTP; Sun, 26 Feb 2017 23:03:44 -0800 (PST)
+Received: by 10.182.50.225 with HTTP; Sun, 26 Feb 2017 23:03:44 -0800 (PST)
+In-Reply-To: <CA+zaFGjQGCUZVajcOZ_ke6uk-_nOdWeo1dOkcVZNwrsgxMX7xA@mail.gmail.com>
+References: <CA+zaFGjQGCUZVajcOZ_ke6uk-_nOdWeo1dOkcVZNwrsgxMX7xA@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Mon, 27 Feb 2017 12:33:44 +0530
+Message-ID: <CA+zaFGjFJgBc--ukqW5UeyN0WWPZLGxXoOmSQXekh5e9YGK2Dg@mail.gmail.com>
+Subject: On leave today
+To: Digvijay Sharma <digvijay@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>, Sagar Sahni <sagar@unicommerce.com>
+Cc: Kapil Makhija <kapil@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Karun Singla <karun@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c0b36222d17305497dae99
+
+--001a11c0b36222d17305497dae99
+Content-Type: text/plain; charset=UTF-8
+
+Down with fever and body ache :( Will try to be back tomorrow.
+
+-Sunny
+
+--001a11c0b36222d17305497dae99
+Content-Type: text/html; charset=UTF-8
+
+<div dir="auto">Down with fever and body ache :( Will try to be back tomorrow.<div dir="auto"><br></div><div dir="auto">-Sunny</div></div>
+
+--001a11c0b36222d17305497dae99--

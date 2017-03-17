@@ -1,0 +1,504 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2243122qgu;
+        Wed, 1 Feb 2017 01:23:07 -0800 (PST)
+X-Received: by 10.28.232.91 with SMTP id f88mr1864095wmh.27.1485940986946;
+        Wed, 01 Feb 2017 01:23:06 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x22f.google.com (mail-wm0-x22f.google.com. [2a00:1450:400c:c09::22f])
+        by mx.google.com with ESMTPS id m19si20537649wmg.107.2017.02.01.01.23.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Feb 2017 01:23:06 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::22f is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::22f is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x22f.google.com with SMTP id r141so29095465wmg.1
+        for <digvijay@unicommerce.com>; Wed, 01 Feb 2017 01:23:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=tprcSzlfRcu/zFjbVxvqVpE5EepAqLLbLWMDFcIy/OE=;
+        b=gHEbu+laLJ40hZYUIIiA/qTKmcAs/W2uZunVp6E6s9TvC98LCllLUsunEvdFy51j2w
+         7nygP5B+cjPFv7LILrf5rYW0Lj9GMO2l8PbffIB4zp1pZ6HOXPuW14NUjSRgwlu6dVOd
+         Fe9t4cTJ1wkO7FG47zlHiBpZNMOehAOF9GgvhSjw7K1qCYpDF2p+Bb6lbSsWUkQsbr5Z
+         WhMNnCqBEG9W+3BQ99sAr+frS0S40Ble48wMci4RRBHP17yzLU3Zmsg+WO2t+c/Gnky8
+         g/NtsAco6l097c3IF9pN/I8d8UAj/Az0+vRalZ4iIM2HVFJXxTvegCUWbirbpeBpBTWD
+         ClXg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=tprcSzlfRcu/zFjbVxvqVpE5EepAqLLbLWMDFcIy/OE=;
+        b=ZSCALb5keiqgkxDLZkOeFmL/sQWN3eTck9VSX+EWm4qI2Of72f+FhI38WC9l1pNezP
+         hgmERWo2RXg4OS26lD/KhnFFidW+7eh4vH0piIpRu3KmMNf1CrGbWEmluTwkw0OD2HvA
+         +vtWp0NW3OTrpvR9TZHidpcwKFui3n4s1QYiBCAAl3PYgikwb14SjzKcYuY3+JxLMdDD
+         UbMzcHZh4zmy/1BxAcLWJ2dP0SNGBsye988/dDXrBsnVUwg6nratI2Y2cUJotmzGCSOM
+         gT5Bj7+NTZ3BUjIBjz3qQ5B+td3K2px+UqjT3idXsZaxN8IJdYI1s04xWerT+ovK+hC6
+         QBuQ==
+X-Gm-Message-State: AIkVDXLnH3IjjUw65c0M0ToRED20Fol+YufUDiOHiXQ3O8eKCP3rTWpB/wGJpxSWxdUDdajOAjuiusBRByVvmA==
+X-Received: by 10.223.176.93 with SMTP id g29mr1630558wra.7.1485940986449;
+ Wed, 01 Feb 2017 01:23:06 -0800 (PST)
+MIME-Version: 1.0
+References: <CA+5inhBHYsr3CKtdhcrEa2Ci_or3y-9Pg6YdQuKH2Ug4FzXnqA@mail.gmail.com>
+ <CAPe2SZR0Hfee2iMyzHeUv-yuRq+R3sfaFSQHm5kGA1xdV3hFBw@mail.gmail.com> <CANcSpiNPoi-E3Q-jiAs9ps3L97yUyY=qDyCWN7V_8ty5HafjhQ@mail.gmail.com>
+In-Reply-To: <CANcSpiNPoi-E3Q-jiAs9ps3L97yUyY=qDyCWN7V_8ty5HafjhQ@mail.gmail.com>
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Wed, 01 Feb 2017 09:22:55 +0000
+Message-ID: <CAPe2SZT4ARp2dyLQaa=06QJ=5+kuEjDV72=px2zTXzhFQaqxGg@mail.gmail.com>
+Subject: Re: Simple dashboard requirements
+To: Ankit Bansal <ankit.bansal@unicommerce.com>, 
+	"digvijay@unicommerce.com" <digvijay@unicommerce.com>
+Cc: Ayush Walia <ayush@unicommerce.com>, Lalit Tanwar <lalit.tanwar@unicommerce.com>, 
+	Kunal Garg <kunal.garg@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113bef56a7a92405477498e6
+
+--001a113bef56a7a92405477498e6
+Content-Type: text/plain; charset=UTF-8
+
++Digvijay Sharam <digvijay@unicommerce.com>
+
+On Fri, Jan 27, 2017 at 3:08 PM Ankit Bansal <ankit.bansal@unicommerce.com>
+wrote:
+
+> Hello Kunal:
+>
+> First 4 points are done & available on master branch.
+> @Akshay: Please provide API for 5th point. Currently we are not getting
+> channel wise order payment data.
+>
+> On Tue, Jan 24, 2017 at 11:37 PM, Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+> Hi,
+>
+> *For 4th the api is (check in Triveni)*
+> *End Point -* https://triveni.unicommerce.com/data/admin/widget/get  POST
+> *Request Body*
+> {
+> "widgetCode":"TOP_SKU_IN_TOP_CHANNELS",
+> "timeRange":"TODAY"
+> }
+>
+> *For 3rd the api is (check in Triveni)*
+> *End Point -* https://triveni.unicommerce.com/data/admin/widget/get  POST
+> *Request Body*
+> {
+> "widgetCode":"WORST_PERFORMING_PRODUCTS",
+> "timeRange":"TODAY"
+> }
+>
+>
+>
+> On Tue, Jan 24, 2017 at 4:17 PM Ayush Walia <ayush@unicommerce.com> wrote:
+>
+> Please share queries required.
+>
+> Thanks & Regards,
+> Ayush Walia
+>
+> On Fri, Jan 20, 2017 at 4:43 PM, Lalit Tanwar <
+> lalit.tanwar@unicommerce.com> wrote:
+>
+>
+> [image: photo]
+> *Regards,*
+> Lalit Tanwar
+> UI Architect
+> Unicommerce eSolutions Pvt Ltd
+> 201,3rd Floor Okhla Phase-3 New Delhi110020
+> M: 9930104050 | E:lalit.tanwar@unicommerce.com
+> <lalit.tanwar@unicommerce.com> |
+> W: http://www.unicommerce.com/
+> https://in.linkedin.com/in/lalittanwar
+>
+> ---------- Forwarded message ----------
+> From: *Kunal Garg* <kunal.garg@unicommerce.com>
+> Date: Fri, Jan 20, 2017 at 10:58 AM
+> Subject: Fwd: Simple dashboard requirements
+> To: Lalit Tanwar <lalit.tanwar@unicommerce.com>
+>
+>
+> Some dashboard requirements for Uniware multichannel
+>
+> Kunal Garg
+> +91 9176471991 <+91%2091764%2071991>
+>
+> ---------- Forwarded message ----------
+> From: *Kapil Makhija* <kapil@unicommerce.com>
+> Date: Tue, Jan 17, 2017 at 8:53 PM
+> Subject: Simple dashboard requirements
+> To: Kunal Garg <kunal.garg@unicommerce.com>
+> Cc: Sunny Agarwal <sunny@unicommerce.com>, Varad Singhal <
+> varad@unicommerce.com>
+>
+>
+> Hi Kunal,
+>
+> As discussed, let's prioritize the following requirements, as either they
+> are very simple or the backend is already ready. Let's not hold these until
+> we do a comprehensive assessment of dashboard:
+>
+> 1. Sales dashboard - Next to the text "Daily Revenue stacked by channel",
+> we provide the total revenue figure (which depends on the date range
+> selected in the drop down)
+> 2. Sales dashboard - Next to the text "Daily Order items stacked by
+> channel", we provide the total order items figure (which depends on the
+> date range selected in the drop down)
+> 3. Show list of top 10 SKUs (sorted by inventory count) which have had 0
+> sale in the last 30 days (backend already ready as per trello)
+> 4. Show a table which shows top 10 SKUs by revenue in rows and top 6
+> channels by revenue in columns and show whether the SKU is linked to all
+> the top 6 channels or not (backend already ready as per trello)
+> 5. Payment dashboard which shows the following for a custom date range (At
+> an overall level and for all the channels):
+>
+>  - Total order amount
+>  - Settlement received
+>  - % Settlement
+>
+> We can scrap the current payment dashboard completely.
+>
+> Let me know if you need further details on the above.
+>
+> Regards,
+> Kapil Makhija
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888 <+91%2097184%2070888>
+>
+>
+>
+> --
+> Thanks
+> Akshay Agarwal
+> Software Engineer, Unicommerce
+> +91 9999-872-129 <+91%2099998%2072129>
+>
+>
+> --
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a113bef56a7a92405477498e6
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><a class=3D"GWVZpf gW" id=3D"IloFPc-0" href=3D"mailto:digv=
+ijay@unicommerce.com" tabindex=3D"-1">+Digvijay Sharam</a>=C2=A0<br></div><=
+br><div class=3D"gmail_quote"><div dir=3D"ltr">On Fri, Jan 27, 2017 at 3:08=
+ PM Ankit Bansal &lt;<a href=3D"mailto:ankit.bansal@unicommerce.com">ankit.=
+bansal@unicommerce.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_q=
+uote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1e=
+x"><div dir=3D"ltr" class=3D"gmail_msg">Hello Kunal:<div class=3D"gmail_msg=
+"><br class=3D"gmail_msg"><div class=3D"gmail_msg">First 4 points are done =
+&amp; available on master branch.</div><div class=3D"gmail_msg">@Akshay: Pl=
+ease provide API for 5th point. Currently we are not getting channel wise o=
+rder payment data.</div></div></div><div class=3D"gmail_extra gmail_msg"><b=
+r class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg">On Tue, Jan 24, =
+2017 at 11:37 PM, Akshay Agarwal <span dir=3D"ltr" class=3D"gmail_msg">&lt;=
+<a href=3D"mailto:akshay.agarwal@unicommerce.com" class=3D"gmail_msg" targe=
+t=3D"_blank">akshay.agarwal@unicommerce.com</a>&gt;</span> wrote:<br class=
+=3D"gmail_msg"><blockquote class=3D"gmail_quote gmail_msg" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" cl=
+ass=3D"gmail_msg">Hi,<div class=3D"gmail_msg"><b class=3D"gmail_msg"><br cl=
+ass=3D"gmail_msg"></b></div><div class=3D"gmail_msg"><b class=3D"gmail_msg"=
+>For 4th the api is (check in Triveni)</b></div><div class=3D"gmail_msg"><i=
+ class=3D"gmail_msg">End Point -</i>=C2=A0<a href=3D"https://triveni.unicom=
+merce.com/data/admin/widget/get" class=3D"gmail_msg" target=3D"_blank">http=
+s://triveni.unicommerce.com/data/admin/widget/get</a>=C2=A0 POST<br class=
+=3D"gmail_msg"></div><div class=3D"gmail_msg"><i class=3D"gmail_msg">Reques=
+t Body</i></div><div class=3D"gmail_msg"><div class=3D"gmail_msg">{</div><d=
+iv class=3D"gmail_msg"><span class=3D"m_1663638401420398124m_13523161314385=
+89764Apple-tab-span gmail_msg" style=3D"white-space:pre-wrap">	</span>&quot=
+;widgetCode&quot;:&quot;TOP_SKU_IN_TOP_CHANNELS&quot;,</div><div class=3D"g=
+mail_msg"><span class=3D"m_1663638401420398124m_1352316131438589764Apple-ta=
+b-span gmail_msg" style=3D"white-space:pre-wrap">	</span>&quot;timeRange&qu=
+ot;:&quot;TODAY&quot;</div><div class=3D"gmail_msg">}</div></div><div class=
+=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D"gmail_msg"><b cl=
+ass=3D"gmail_msg">For 3rd the api is (check in Triveni)</b><br class=3D"gma=
+il_msg"></div><div class=3D"gmail_msg"><i class=3D"gmail_msg">End Point -</=
+i>=C2=A0<a href=3D"https://triveni.unicommerce.com/data/admin/widget/get" c=
+lass=3D"gmail_msg" target=3D"_blank">https://triveni.unicommerce.com/data/a=
+dmin/widget/get</a>=C2=A0 POST<b class=3D"gmail_msg"><br class=3D"gmail_msg=
+"></b></div><div class=3D"gmail_msg"><i class=3D"gmail_msg">Request Body</i=
+><br class=3D"gmail_msg"></div><div class=3D"gmail_msg"><div class=3D"gmail=
+_msg">{</div><div class=3D"gmail_msg"><span class=3D"m_1663638401420398124m=
+_1352316131438589764Apple-tab-span gmail_msg" style=3D"white-space:pre-wrap=
+">	</span>&quot;widgetCode&quot;:&quot;WORST_PERFORMING_PRODUCTS&quot;,</di=
+v><div class=3D"gmail_msg"><span class=3D"m_1663638401420398124m_1352316131=
+438589764Apple-tab-span gmail_msg" style=3D"white-space:pre-wrap">	</span>&=
+quot;timeRange&quot;:&quot;TODAY&quot;</div><div class=3D"gmail_msg">}</div=
+></div><div class=3D"gmail_msg"><br class=3D"gmail_msg"></div><div class=3D=
+"gmail_msg"><br class=3D"gmail_msg"></div></div><div class=3D"m_16636384014=
+20398124HOEnZb gmail_msg"><div class=3D"m_1663638401420398124h5 gmail_msg">=
+<br class=3D"gmail_msg"><div class=3D"gmail_quote gmail_msg"><div dir=3D"lt=
+r" class=3D"gmail_msg">On Tue, Jan 24, 2017 at 4:17 PM Ayush Walia &lt;<a h=
+ref=3D"mailto:ayush@unicommerce.com" class=3D"gmail_msg" target=3D"_blank">=
+ayush@unicommerce.com</a>&gt; wrote:<br class=3D"gmail_msg"></div><blockquo=
+te class=3D"gmail_quote gmail_msg" style=3D"margin:0 0 0 .8ex;border-left:1=
+px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_166363840142039=
+8124m_1352316131438589764gmail_msg gmail_msg">Please share queries required=
+.<br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg=
+"><div class=3D"gmail_extra m_1663638401420398124m_1352316131438589764gmail=
+_msg gmail_msg"><br clear=3D"all" class=3D"m_1663638401420398124m_135231613=
+1438589764gmail_msg gmail_msg"><div class=3D"m_1663638401420398124m_1352316=
+131438589764gmail_msg gmail_msg"><div class=3D"m_1663638401420398124m_13523=
+16131438589764m_5401630650438001182gmail_signature m_1663638401420398124m_1=
+352316131438589764gmail_msg gmail_msg" data-smartmail=3D"gmail_signature"><=
+div dir=3D"ltr" class=3D"m_1663638401420398124m_1352316131438589764gmail_ms=
+g gmail_msg">Thanks &amp; Regards,<div class=3D"m_1663638401420398124m_1352=
+316131438589764gmail_msg gmail_msg">Ayush Walia</div></div></div></div>
+<br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"=
+><div class=3D"gmail_quote m_1663638401420398124m_1352316131438589764gmail_=
+msg gmail_msg">On Fri, Jan 20, 2017 at 4:43 PM, Lalit Tanwar <span dir=3D"l=
+tr" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"=
+>&lt;<a href=3D"mailto:lalit.tanwar@unicommerce.com" class=3D"m_16636384014=
+20398124m_1352316131438589764gmail_msg gmail_msg" target=3D"_blank">lalit.t=
+anwar@unicommerce.com</a>&gt;</span> wrote:<br class=3D"m_16636384014203981=
+24m_1352316131438589764gmail_msg gmail_msg"><blockquote class=3D"gmail_quot=
+e m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" style=3D"m=
+argin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"l=
+tr" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"=
+><br clear=3D"all" class=3D"m_1663638401420398124m_1352316131438589764gmail=
+_msg gmail_msg"><div class=3D"m_1663638401420398124m_1352316131438589764gma=
+il_msg gmail_msg"><div class=3D"m_1663638401420398124m_1352316131438589764m=
+_5401630650438001182m_6294944962940124438gmail_signature m_1663638401420398=
+124m_1352316131438589764gmail_msg gmail_msg" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr" class=3D"m_1663638401420398124m_1352316131438589764gm=
+ail_msg gmail_msg"><div class=3D"m_1663638401420398124m_1352316131438589764=
+gmail_msg gmail_msg"><div dir=3D"ltr" class=3D"m_1663638401420398124m_13523=
+16131438589764gmail_msg gmail_msg"><table border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" width=3D"470" style=3D"color:rgb(136,136,136);font-size:12.=
+8px;width:470px" class=3D"m_1663638401420398124m_1352316131438589764gmail_m=
+sg gmail_msg"><tbody class=3D"m_1663638401420398124m_1352316131438589764gma=
+il_msg gmail_msg"><tr valign=3D"top" class=3D"m_1663638401420398124m_135231=
+6131438589764gmail_msg gmail_msg"><td style=3D"border-right-width:1px;borde=
+r-right-style:solid;border-right-color:rgb(69,102,142);padding-right:10px;w=
+idth:10px" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gma=
+il_msg"><font face=3D"arial, helvetica, sans-serif" color=3D"#666666" class=
+=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><img src=
+=3D"https://s3.amazonaws.com/webapp.wisestamp.com/ffxL1of0QSaDBUTQNAZG_unic=
+ommerce%20new%20logo%20black%20(2).png" alt=3D"photo" style=3D"border-radiu=
+s:4px;width:65px;max-width:120px" class=3D"m_1663638401420398124m_135231613=
+1438589764gmail_msg gmail_msg"></font></td><td style=3D"font-stretch:normal=
+;padding-left:10px" class=3D"m_1663638401420398124m_1352316131438589764gmai=
+l_msg gmail_msg"><div class=3D"m_1663638401420398124m_1352316131438589764gm=
+ail_msg gmail_msg"><b class=3D"m_1663638401420398124m_1352316131438589764gm=
+ail_msg gmail_msg"><font face=3D"arial, helvetica, sans-serif" color=3D"#66=
+6666" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_ms=
+g">Regards,</font></b></div><div class=3D"m_1663638401420398124m_1352316131=
+438589764gmail_msg gmail_msg"><font color=3D"#666666" class=3D"m_1663638401=
+420398124m_1352316131438589764gmail_msg gmail_msg"><font face=3D"arial, hel=
+vetica, sans-serif" class=3D"m_1663638401420398124m_1352316131438589764gmai=
+l_msg gmail_msg">Lalit Tanwar<br class=3D"m_1663638401420398124m_1352316131=
+438589764gmail_msg gmail_msg"></font><font face=3D"arial, helvetica, sans-s=
+erif" size=3D"2" class=3D"m_1663638401420398124m_1352316131438589764gmail_m=
+sg gmail_msg">UI Architect</font></font></div><div class=3D"m_1663638401420=
+398124m_1352316131438589764gmail_msg gmail_msg"><font face=3D"arial, helvet=
+ica, sans-serif" color=3D"#666666" class=3D"m_1663638401420398124m_13523161=
+31438589764gmail_msg gmail_msg">Unicommerce eSolutions Pvt Ltd</font></div>=
+<div class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg=
+"><div class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_m=
+sg"><font face=3D"arial, helvetica, sans-serif" color=3D"#666666" class=3D"=
+m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">201,3rd Floo=
+r=C2=A0</font><span style=3D"color:rgb(102,102,102);font-family:arial,helve=
+tica,sans-serif;font-size:small" class=3D"m_1663638401420398124m_1352316131=
+438589764gmail_msg gmail_msg">Okhla Phase-3 New Delhi110020</span></div><di=
+v class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><=
+span style=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-serif=
+;font-size:small" class=3D"m_1663638401420398124m_1352316131438589764gmail_=
+msg gmail_msg">M</span><span style=3D"color:rgb(102,102,102);font-family:ar=
+ial,helvetica,sans-serif;font-size:small;display:inline-block" class=3D"m_1=
+663638401420398124m_1352316131438589764gmail_msg gmail_msg">: 9930104050</s=
+pan><span style=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-=
+serif;font-size:small" class=3D"m_1663638401420398124m_1352316131438589764g=
+mail_msg gmail_msg">=C2=A0| E</span><span style=3D"color:rgb(102,102,102);f=
+ont-family:arial,helvetica,sans-serif;font-size:small;display:inline-block"=
+ class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">:<=
+/span><span style=3D"font-family:arial,helvetica,sans-serif;font-size:small=
+;display:inline-block" class=3D"m_1663638401420398124m_1352316131438589764g=
+mail_msg gmail_msg"><font color=3D"#0000ff" class=3D"m_1663638401420398124m=
+_1352316131438589764gmail_msg gmail_msg"><a href=3D"http://lalit.tanwar" cl=
+ass=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" targe=
+t=3D"_blank">lalit.tanwar</a></font></span><span style=3D"font-family:arial=
+,helvetica,sans-serif;font-size:small;display:inline-block" class=3D"m_1663=
+638401420398124m_1352316131438589764gmail_msg gmail_msg"><font color=3D"#00=
+00ff" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_ms=
+g"><font color=3D"#1155cc" class=3D"m_1663638401420398124m_1352316131438589=
+764gmail_msg gmail_msg"><a href=3D"mailto:lalit.tanwar@unicommerce.com" cla=
+ss=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" target=
+=3D"_blank">@unicommerce.com</a></font></font><font color=3D"#666666" class=
+=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">=C2=A0</=
+font></span><span style=3D"color:rgb(102,102,102);font-family:arial,helveti=
+ca,sans-serif;font-size:small" class=3D"m_1663638401420398124m_135231613143=
+8589764gmail_msg gmail_msg">|</span></div><div class=3D"m_16636384014203981=
+24m_1352316131438589764gmail_msg gmail_msg"><span style=3D"color:rgb(102,10=
+2,102);font-family:arial,helvetica,sans-serif;font-size:small" class=3D"m_1=
+663638401420398124m_1352316131438589764gmail_msg gmail_msg">W</span><span s=
+tyle=3D"color:rgb(102,102,102);font-family:arial,helvetica,sans-serif;font-=
+size:small;white-space:nowrap;display:inline-block" class=3D"m_166363840142=
+0398124m_1352316131438589764gmail_msg gmail_msg">:=C2=A0<a href=3D"http://w=
+ww.unicommerce.com/" style=3D"color:rgb(17,85,204)" class=3D"m_166363840142=
+0398124m_1352316131438589764gmail_msg gmail_msg" target=3D"_blank">http://w=
+ww.unicommerce.com/</a></span></div><div class=3D"m_1663638401420398124m_13=
+52316131438589764gmail_msg gmail_msg"><span style=3D"color:rgb(51,51,51);fo=
+nt-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:17px;backgr=
+ound-color:rgb(246,246,246)" class=3D"m_1663638401420398124m_13523161314385=
+89764gmail_msg gmail_msg"><a href=3D"https://in.linkedin.com/in/lalittanwar=
+" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" t=
+arget=3D"_blank">https://in.linkedin.com/in/lalittanwar</a></span><br class=
+=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"></div></=
+div></td></tr></tbody></table></div></div></div></div></div>
+<br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"=
+><div class=3D"gmail_quote m_1663638401420398124m_1352316131438589764gmail_=
+msg gmail_msg">---------- Forwarded message ----------<br class=3D"m_166363=
+8401420398124m_1352316131438589764gmail_msg gmail_msg">From: <b class=3D"gm=
+ail_sendername m_1663638401420398124m_1352316131438589764gmail_msg gmail_ms=
+g">Kunal Garg</b> <span dir=3D"ltr" class=3D"m_1663638401420398124m_1352316=
+131438589764gmail_msg gmail_msg">&lt;<a href=3D"mailto:kunal.garg@unicommer=
+ce.com" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_=
+msg" target=3D"_blank">kunal.garg@unicommerce.com</a>&gt;</span><br class=
+=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">Date: Fr=
+i, Jan 20, 2017 at 10:58 AM<br class=3D"m_1663638401420398124m_135231613143=
+8589764gmail_msg gmail_msg">Subject: Fwd: Simple dashboard requirements<br =
+class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">To:=
+ Lalit Tanwar &lt;<a href=3D"mailto:lalit.tanwar@unicommerce.com" class=3D"=
+m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" target=3D"_b=
+lank">lalit.tanwar@unicommerce.com</a>&gt;<br class=3D"m_166363840142039812=
+4m_1352316131438589764gmail_msg gmail_msg"><br class=3D"m_16636384014203981=
+24m_1352316131438589764gmail_msg gmail_msg"><br class=3D"m_1663638401420398=
+124m_1352316131438589764gmail_msg gmail_msg"><div dir=3D"ltr" class=3D"m_16=
+63638401420398124m_1352316131438589764gmail_msg gmail_msg">Some dashboard r=
+equirements for Uniware multichannel<div class=3D"m_1663638401420398124m_13=
+52316131438589764gmail_msg gmail_msg"><br clear=3D"all" class=3D"m_16636384=
+01420398124m_1352316131438589764gmail_msg gmail_msg"><div class=3D"m_166363=
+8401420398124m_1352316131438589764gmail_msg gmail_msg"><div class=3D"m_1663=
+638401420398124m_1352316131438589764m_5401630650438001182m_6294944962940124=
+438m_6765006223894030791gmail_signature m_1663638401420398124m_135231613143=
+8589764gmail_msg gmail_msg" data-smartmail=3D"gmail_signature"><div dir=3D"=
+ltr" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg=
+">Kunal Garg<div class=3D"m_1663638401420398124m_1352316131438589764gmail_m=
+sg gmail_msg"><a href=3D"tel:+91%2091764%2071991" value=3D"+919176471991" c=
+lass=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg" targ=
+et=3D"_blank">+91 9176471991</a></div></div></div></div>
+<br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"=
+><div class=3D"gmail_quote m_1663638401420398124m_1352316131438589764gmail_=
+msg gmail_msg">---------- Forwarded message ----------<br class=3D"m_166363=
+8401420398124m_1352316131438589764gmail_msg gmail_msg">From: <b class=3D"gm=
+ail_sendername m_1663638401420398124m_1352316131438589764gmail_msg gmail_ms=
+g">Kapil Makhija</b> <span dir=3D"ltr" class=3D"m_1663638401420398124m_1352=
+316131438589764gmail_msg gmail_msg">&lt;<a href=3D"mailto:kapil@unicommerce=
+.com" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_ms=
+g" target=3D"_blank">kapil@unicommerce.com</a>&gt;</span><br class=3D"m_166=
+3638401420398124m_1352316131438589764gmail_msg gmail_msg">Date: Tue, Jan 17=
+, 2017 at 8:53 PM<br class=3D"m_1663638401420398124m_1352316131438589764gma=
+il_msg gmail_msg">Subject: Simple dashboard requirements<br class=3D"m_1663=
+638401420398124m_1352316131438589764gmail_msg gmail_msg">To: Kunal Garg &lt=
+;<a href=3D"mailto:kunal.garg@unicommerce.com" class=3D"m_16636384014203981=
+24m_1352316131438589764gmail_msg gmail_msg" target=3D"_blank">kunal.garg@un=
+icommerce.com</a>&gt;<br class=3D"m_1663638401420398124m_135231613143858976=
+4gmail_msg gmail_msg">Cc: Sunny Agarwal &lt;<a href=3D"mailto:sunny@unicomm=
+erce.com" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmai=
+l_msg" target=3D"_blank">sunny@unicommerce.com</a>&gt;, Varad Singhal &lt;<=
+a href=3D"mailto:varad@unicommerce.com" class=3D"m_1663638401420398124m_135=
+2316131438589764gmail_msg gmail_msg" target=3D"_blank">varad@unicommerce.co=
+m</a>&gt;<br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg g=
+mail_msg"><br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg =
+gmail_msg"><br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg=
+ gmail_msg"><div dir=3D"ltr" class=3D"m_1663638401420398124m_13523161314385=
+89764gmail_msg gmail_msg">Hi Kunal,<div class=3D"m_1663638401420398124m_135=
+2316131438589764gmail_msg gmail_msg"><br class=3D"m_1663638401420398124m_13=
+52316131438589764gmail_msg gmail_msg"></div><div class=3D"m_166363840142039=
+8124m_1352316131438589764gmail_msg gmail_msg">As discussed, let&#39;s prior=
+itize the following requirements, as either they are very simple or the bac=
+kend is already ready. Let&#39;s not hold these until we do a comprehensive=
+ assessment of dashboard:</div><div class=3D"m_1663638401420398124m_1352316=
+131438589764gmail_msg gmail_msg"><br class=3D"m_1663638401420398124m_135231=
+6131438589764gmail_msg gmail_msg"></div><div class=3D"m_1663638401420398124=
+m_1352316131438589764gmail_msg gmail_msg">1. Sales dashboard - Next to the =
+text &quot;Daily Revenue stacked by channel&quot;, we provide the total rev=
+enue figure (which depends on the date range selected in the drop down)</di=
+v><div class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_m=
+sg">2. Sales dashboard - Next to the text &quot;Daily Order items stacked b=
+y channel&quot;, we provide the total order items figure (which depends on =
+the date range selected in the drop down)</div><div class=3D"m_166363840142=
+0398124m_1352316131438589764gmail_msg gmail_msg">3.=C2=A0Show list of top 1=
+0 SKUs (sorted by inventory count) which have had 0 sale in the last 30 day=
+s (backend already ready as per trello)</div><div class=3D"m_16636384014203=
+98124m_1352316131438589764gmail_msg gmail_msg">4.=C2=A0Show a table which s=
+hows top 10 SKUs by revenue in rows and top 6 channels by revenue in column=
+s and show whether the SKU is linked to all the top 6 channels or not (back=
+end already ready as per trello)</div><div class=3D"m_1663638401420398124m_=
+1352316131438589764gmail_msg gmail_msg">5. Payment dashboard which shows th=
+e following for a custom date range (At an overall level and for all the ch=
+annels):</div><div class=3D"m_1663638401420398124m_1352316131438589764gmail=
+_msg gmail_msg"><br class=3D"m_1663638401420398124m_1352316131438589764gmai=
+l_msg gmail_msg"></div><div class=3D"m_1663638401420398124m_135231613143858=
+9764gmail_msg gmail_msg">=C2=A0- Total order amount</div><div class=3D"m_16=
+63638401420398124m_1352316131438589764gmail_msg gmail_msg">=C2=A0- Settleme=
+nt received</div><div class=3D"m_1663638401420398124m_1352316131438589764gm=
+ail_msg gmail_msg">=C2=A0- % Settlement</div><div class=3D"m_16636384014203=
+98124m_1352316131438589764gmail_msg gmail_msg"><br class=3D"m_1663638401420=
+398124m_1352316131438589764gmail_msg gmail_msg"></div><div class=3D"m_16636=
+38401420398124m_1352316131438589764gmail_msg gmail_msg">We can scrap the cu=
+rrent payment dashboard completely.</div><div class=3D"m_166363840142039812=
+4m_1352316131438589764gmail_msg gmail_msg"><br class=3D"m_16636384014203981=
+24m_1352316131438589764gmail_msg gmail_msg"></div><div class=3D"m_166363840=
+1420398124m_1352316131438589764gmail_msg gmail_msg">Let me know if you need=
+ further details on the above.</div><div class=3D"m_1663638401420398124m_13=
+52316131438589764gmail_msg gmail_msg"><br class=3D"m_1663638401420398124m_1=
+352316131438589764gmail_msg gmail_msg"></div><div class=3D"m_16636384014203=
+98124m_1352316131438589764gmail_msg gmail_msg">Regards,</div><div class=3D"=
+m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">Kapil Makhij=
+a<span class=3D"m_1663638401420398124m_1352316131438589764m_540163065043800=
+1182HOEnZb m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><=
+font color=3D"#888888" class=3D"m_1663638401420398124m_1352316131438589764g=
+mail_msg gmail_msg"><span class=3D"m_1663638401420398124m_13523161314385897=
+64m_5401630650438001182m_6294944962940124438HOEnZb m_1663638401420398124m_1=
+352316131438589764gmail_msg gmail_msg"><font color=3D"#888888" class=3D"m_1=
+663638401420398124m_1352316131438589764gmail_msg gmail_msg"><span class=3D"=
+m_1663638401420398124m_1352316131438589764m_5401630650438001182m_6294944962=
+940124438m_6765006223894030791HOEnZb m_1663638401420398124m_135231613143858=
+9764gmail_msg gmail_msg"><font color=3D"#888888" class=3D"m_166363840142039=
+8124m_1352316131438589764gmail_msg gmail_msg"><br clear=3D"all" class=3D"m_=
+1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><div class=3D"=
+m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><br class=3D=
+"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"></div>-- <b=
+r class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><=
+div class=3D"m_1663638401420398124m_1352316131438589764m_540163065043800118=
+2m_6294944962940124438m_6765006223894030791m_-4271825483897259750gmail_sign=
+ature m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg"><div d=
+ir=3D"ltr" class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gma=
+il_msg">Kapil Makhija<div class=3D"m_1663638401420398124m_13523161314385897=
+64gmail_msg gmail_msg">Director, Strategy - Unicommerce</div><div class=3D"=
+m_1663638401420398124m_1352316131438589764gmail_msg gmail_msg">M: <a href=
+=3D"tel:+91%2097184%2070888" value=3D"+919718470888" class=3D"m_16636384014=
+20398124m_1352316131438589764gmail_msg gmail_msg" target=3D"_blank">+91-971=
+8470888</a></div></div></div>
+</font></span></font></span></font></span></div></div>
+</div><br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmai=
+l_msg"></div></div>
+</div><br class=3D"m_1663638401420398124m_1352316131438589764gmail_msg gmai=
+l_msg"></div>
+</blockquote></div><br class=3D"m_1663638401420398124m_1352316131438589764g=
+mail_msg gmail_msg"></div></div>
+</blockquote></div></div></div><span class=3D"m_1663638401420398124HOEnZb g=
+mail_msg"><font color=3D"#888888" class=3D"gmail_msg"><div dir=3D"ltr" clas=
+s=3D"gmail_msg">-- <br class=3D"gmail_msg"></div><div data-smartmail=3D"gma=
+il_signature" class=3D"gmail_msg"><div dir=3D"ltr" class=3D"gmail_msg">Than=
+ks<div class=3D"gmail_msg">Akshay Agarwal</div><div class=3D"gmail_msg">Sof=
+tware Engineer, Unicommerce</div><div class=3D"gmail_msg"><a href=3D"tel:+9=
+1%2099998%2072129" value=3D"+919999872129" class=3D"gmail_msg" target=3D"_b=
+lank">+91 9999-872-129</a></div></div></div>
+</font></span></blockquote></div><br class=3D"gmail_msg"></div>
+</blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software=
+ Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a113bef56a7a92405477498e6--

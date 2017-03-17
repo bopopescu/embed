@@ -1,0 +1,2097 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp689614qgd;
+        Fri, 9 Dec 2016 23:10:34 -0800 (PST)
+X-Received: by 10.237.42.108 with SMTP id k41mr71091659qtf.21.1481353834731;
+        Fri, 09 Dec 2016 23:10:34 -0800 (PST)
+Return-Path: <varad@unicommerce.com>
+Received: from mail-qt0-x22b.google.com (mail-qt0-x22b.google.com. [2607:f8b0:400d:c0d::22b])
+        by mx.google.com with ESMTPS id h63si21872528qkc.102.2016.12.09.23.10.34
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 09 Dec 2016 23:10:34 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::22b is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) client-ip=2607:f8b0:400d:c0d::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400d:c0d::22b is neither permitted nor denied by best guess record for domain of varad@unicommerce.com) smtp.mailfrom=varad@unicommerce.com
+Received: by mail-qt0-x22b.google.com with SMTP id c47so35885691qtc.2
+        for <digvijay@unicommerce.com>; Fri, 09 Dec 2016 23:10:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=eB+unYhsMVJSd4NEjX+bw/jtPW1AeUswROEsh5sJlUg=;
+        b=JLJSNOCefSwI6B2VXsSxQ6fSh7cOYtaVXo7c1lZCGeRCYYx6nkSq3sETTW3zdSQ/VL
+         XVBqIbQko8HZpiK1aU4u+PcX+vBp+ZDRDbLcU29qbhuHkeEWZQCW/LWbLxnq7vcs/kqo
+         3+JjQPtLnl26jWuy0L7gqWetAMgbPueRvGJQ4G/ecDncRnrQtgDkELEuRTmPUjv07r7m
+         i9B2b/JSeT+YJTk5qhsJbeQfnHPa1Ep4bMw4QZZqLzm4rYc8h3AsKYZCDvvKLYFFYRaf
+         rbr0pmyqytqUCr+FD02WnUdRoFQ730nIBI5HSUKCvN+/4VJORfD0xx0u6Sc9DItirF0l
+         laiw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=eB+unYhsMVJSd4NEjX+bw/jtPW1AeUswROEsh5sJlUg=;
+        b=fu6SO3EHBwNgsRRivRm/JopONKpnfSXMuKr3QJFOzhgJ683Ce+xfc4GX8T1uIvKZu5
+         YMxzPKix6/tclGjEdls6Zy2DcmCtS1AoxX6WPhD3YLAffo0Houlmv7U8zgWCYVUCsExg
+         S30FmzDohEPmOgQCi/sdc8cFi63NHET3eKdZrYsgF46DBP4jOSvD6iVNknC//4PEI3RH
+         jnyvllOJOwRJ67SyKLklkkNTNArd4DL9e3rZJoxuX3f68BoYHHD6MHafZkfgYRYN1QPn
+         oqxtO8XrFwqi15lXyq8WiFqpm8lomRxHXaU+CrCQtRInqYoSxcVf3db+EVvrjF9LBrmV
+         2NQA==
+X-Gm-Message-State: AKaTC02iM9jFIkeLM5xJMXhLbBvwqZJ0PhI6klYRuGoGoId0LoP8iOcUd46N5usb96lkeHg55xX4tFlcYd7G0Q==
+X-Received: by 10.200.56.88 with SMTP id r24mr82470368qtb.39.1481353834118;
+ Fri, 09 Dec 2016 23:10:34 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.12.137.114 with HTTP; Fri, 9 Dec 2016 23:10:33 -0800 (PST)
+In-Reply-To: <CAEsYVfhn0e8=6s=T_WjFXDDYPMsLn2EJQ0iGjjrCCiJefJ809Q@mail.gmail.com>
+References: <CAAK2eDzmX+i18Zvw5T7VX5UsfgXvZbQ1R=8DELM+TTaFUn7bVw@mail.gmail.com>
+ <CABjqM8nPRhq8ce4XztSWA0QMT90=VCZHgai3cJByDBT99ycL3Q@mail.gmail.com>
+ <CABjqM8mTxRhLYLGyhhz3OScS-7m3a=ouiisJqyq_Hrij_xD+og@mail.gmail.com>
+ <CAB-px3SHzY-fLfg2-Zk=4Y-QrVeiF5=wkOg1miG+1M6wwBQ-vg@mail.gmail.com>
+ <CAFD_XHFdyiWxcT04SUZjSO+mKKO66-oM8GZp9AXbZ5OfzqwBHw@mail.gmail.com>
+ <CAB-px3Sy7qLUuCrZKjSk_KMzK6JhatXZOxthtNpw+8K4+yTyDA@mail.gmail.com>
+ <CAB-px3ROf1m=Rxw=bt1tNbQDmHjHnJ8TuTP=-dXzzU50aQ+TDA@mail.gmail.com>
+ <CAFD_XHH94mkxBe-Qh6fTXPXtqSViV8oj+s+r50DPCtMC9SBHnA@mail.gmail.com>
+ <CABjqM8kBS3GUms0eUtySAzEUSKOV12LkWbGicuNcMxhThTE_zw@mail.gmail.com>
+ <CAB-px3SSbiDrymZU=tCZzvUe3n_2O8cEbAVUT0LqbDJ=cySvQQ@mail.gmail.com>
+ <CAB-px3QFyPapptYcG9LqiFsaS3B_5H1ph+OhQfqxVWO_h92m_w@mail.gmail.com>
+ <CAFD_XHFERV9jUjwzNKLbeKZTD0mPzrN4xY8g8fKkzrpJP2n3Wg@mail.gmail.com>
+ <CABjqM8kqjTPvnYze-T+bCsKGn-nOfFmCknL5QPeSL1TOq-Q8ig@mail.gmail.com>
+ <CABjqM8mz5EQjeC8KcA1VwU7gTSpaP4gcNztXJx2w2JcA=fugug@mail.gmail.com>
+ <CAB-px3TzMQkf+mpJkw8VU_JFJmT3KpR7jCTqDqV=5RBhwAOcsA@mail.gmail.com>
+ <CAB-px3SmsO3Stq4dQKcJ2ArP0m6H4FbiYBsmvMpxNDJWwnFqwA@mail.gmail.com>
+ <CAB-px3QqbDKdZt2mjy3HKjRYjE=WcNoEp1LX0dD76uGsARHyTg@mail.gmail.com>
+ <CAHxJpsDaBi1p=_MhZFCef1AiSztu6QFyU0m50iTGzuZfYTYujA@mail.gmail.com>
+ <CAHxJpsD4vjjOkO8WGF18n2yLS8Tzyu-6R2oSCSdLTL6DL984Bg@mail.gmail.com>
+ <CAEsYVfh9X49EE0Zg4P=tOn4AfB6owekZpRZzRuHndUxW7d7USA@mail.gmail.com>
+ <CAEsYVfjYi-ifCsztm-vpk3MzmZtgN6+JcLb8xVgKe0qsKD0uBw@mail.gmail.com> <CAEsYVfhn0e8=6s=T_WjFXDDYPMsLn2EJQ0iGjjrCCiJefJ809Q@mail.gmail.com>
+From: Varad Singhal <varad@unicommerce.com>
+Date: Sat, 10 Dec 2016 12:40:33 +0530
+Message-ID: <CAFD_XHFXTbd=dhaKfLnFguesNz2zpdwvR3qy4AmOwuWKaJrqRg@mail.gmail.com>
+Subject: Re: Label Modification for GoPIgeon
+To: Rakshit Narayanan <rakshit@unicommerce.com>
+Cc: Shubham Sharma <shubham@pigen.in>, Harsh NJ NJ <harsh@pigen.in>, Rajat Deshpande <rajat@pigen.in>, 
+	Srijan Nagar <srijan@pigen.in>, shubhangi prasad <shubhangi@pigen.in>, Sourav Sarkar <sourav@pigen.in>, 
+	Digvijay Sharma <digvijay@unicommerce.com>, Shashank Srivastav <shashank@unicommerce.com>, 
+	Support Unicommerce <support@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a113ce47611f70b05434891c7
+
+--001a113ce47611f70b05434891c7
+Content-Type: multipart/alternative; boundary=001a113ce47611f70505434891c5
+
+--001a113ce47611f70505434891c5
+Content-Type: text/plain; charset=UTF-8
+
+PFA
+
+On Fri, Dec 9, 2016 at 4:49 PM, Rakshit Narayanan <rakshit@unicommerce.com>
+wrote:
+
+> Hi Guys,
+>
+> Digvijay is working on the task and update as soon as it is done.
+>
+> On Fri, Dec 9, 2016 at 3:56 PM, Rakshit Narayanan <rakshit@unicommerce.com
+> > wrote:
+>
+>> + Support
+>>
+>> Digvijay, can you please check if we the label changes are sorted.
+>>
+>> On Fri, Dec 9, 2016 at 3:51 PM, Rakshit Narayanan <
+>> rakshit@unicommerce.com> wrote:
+>>
+>>> Plus Shashank.
+>>>
+>>> Shashank, can you please help on this, we are unable to reach Varad.
+>>>
+>>> On Fri, Dec 9, 2016 at 3:44 PM, Shubham Sharma <shubham@pigen.in> wrote:
+>>>
+>>>> Hi Varad,
+>>>>
+>>>> Our team has been trying to get in touch with you but we are unable to.
+>>>> At least do intimate us if you have encountered some unexpected delays.
+>>>> Kindly commit the timelines around the label edits.
+>>>>
+>>>> Rakshit, need your intervention here.
+>>>>
+>>>> Thanks,
+>>>>
+>>>> On Thu, Dec 8, 2016 at 2:54 PM, Shubham Sharma <shubham@pigen.in>
+>>>> wrote:
+>>>>
+>>>>> Hi Varad,
+>>>>>
+>>>>> As per our discussion over call, the final label change has been
+>>>>> closed at your end. Kindly provide the updated label at the earliest.
+>>>>>
+>>>>> Also, Shubhangi/Harsh have we checked IP Label as well ?
+>>>>>
+>>>>> Shubhangi, kindly ensure this is closed by today. We are experiencing
+>>>>> huge ad-hoc costs and operational problems because of this delay.
+>>>>>
+>>>>> Thanks,
+>>>>>
+>>>>> On Dec 8, 2016 2:36 PM, "Harsh Joshi" <harsh@pigen.in> wrote:
+>>>>>
+>>>>>> Hi varad,
+>>>>>>
+>>>>>> Waiting for the label where gopigeon from delhivery comes.
+>>>>>>
+>>>>>> On Dec 8, 2016 1:03 PM, "shubhangi prasad" <shubhangi@pigen.in>
+>>>>>> wrote:
+>>>>>>
+>>>>>> Also please note that inSourav`s mail above he had asked you to
+>>>>>> include *label from address *in addition to existing from address.
+>>>>>> Duly note and make changes
+>>>>>>
+>>>>>> On Thu, Dec 8, 2016 at 12:55 PM, shubhangi prasad <shubhangi@pigen.in
+>>>>>> > wrote:
+>>>>>>
+>>>>>>> Hi Varad,
+>>>>>>>
+>>>>>>> Also please include Gopigeon name while displaying  the courier
+>>>>>>> partner.
+>>>>>>>
+>>>>>>> On Thu, Dec 8, 2016 at 12:49 PM, Varad Singhal <
+>>>>>>> varad@unicommerce.com> wrote:
+>>>>>>>
+>>>>>>>> Hi Harsh,
+>>>>>>>>
+>>>>>>>> Changes are incorporated as suggested by Shubhangi, attaching one
+>>>>>>>> test label for reference.
+>>>>>>>>
+>>>>>>>> Regards
+>>>>>>>>
+>>>>>>>> On Wed, Dec 7, 2016 at 7:51 PM, Harsh Joshi <harsh@pigen.in> wrote:
+>>>>>>>>
+>>>>>>>>> HI Varad,
+>>>>>>>>>
+>>>>>>>>> Please confirm if this is done.
+>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>>  Sent with Mailtrack
+>>>>>>>>> <https://mailtrack.io/install?source=signature&lang=en&referral=harsh@pigen.in&idSignature=22>
+>>>>>>>>>
+>>>>>>>>> Best,
+>>>>>>>>> Harsh Joshi
+>>>>>>>>>
+>>>>>>>>> [image: stylio theme]
+>>>>>>>>>
+>>>>>>>>> Disclaimer:
+>>>>>>>>> "The information contained herein (including any accompanying
+>>>>>>>>> documents) is confidential and is intended solely for the addressee(s). If
+>>>>>>>>> you have erroneously received this message, please immediately delete it
+>>>>>>>>> and notify the sender. Also, if you are not the intended recipient, you are
+>>>>>>>>> hereby notified that any disclosure, copying, distribution or taking any
+>>>>>>>>> action in reliance on the contents of this message or any accompanying
+>>>>>>>>> document is strictly prohibited and is unlawful. The organization is not
+>>>>>>>>> responsible for any damage caused by a virus or alteration of the e-mail by
+>>>>>>>>> a third party or otherwise.
+>>>>>>>>>
+>>>>>>>>> On Wed, Dec 7, 2016 at 4:42 PM, Harsh Joshi <harsh@pigen.in>
+>>>>>>>>> wrote:
+>>>>>>>>>
+>>>>>>>>>> Hi varad,
+>>>>>>>>>>
+>>>>>>>>>> Please confiem once done.
+>>>>>>>>>>
+>>>>>>>>>> On Dec 7, 2016 4:35 PM, "shubhangi prasad" <shubhangi@pigen.in>
+>>>>>>>>>> wrote:
+>>>>>>>>>>
+>>>>>>>>>>> Hi Varad,
+>>>>>>>>>>>
+>>>>>>>>>>> We can continue with the existing label format just include the
+>>>>>>>>>>> information miscellaneous parameters.
+>>>>>>>>>>> Also please note that shipping labels should display
+>>>>>>>>>>> <courier_partner> by gopiegeon for eg:.*Delhivery by*
+>>>>>>>>>>> *Gopiegeon*.
+>>>>>>>>>>>
+>>>>>>>>>>>
+>>>>>>>>>>> Regards,
+>>>>>>>>>>> Shubhangi
+>>>>>>>>>>>
+>>>>>>>>>>> On Wed, Dec 7, 2016 at 4:26 PM, Varad Singhal <
+>>>>>>>>>>> varad@unicommerce.com> wrote:
+>>>>>>>>>>>
+>>>>>>>>>>>> fyi
+>>>>>>>>>>>>
+>>>>>>>>>>>> On Tue, Dec 6, 2016 at 3:11 PM, Harsh Joshi <harsh@pigen.in>
+>>>>>>>>>>>> wrote:
+>>>>>>>>>>>>
+>>>>>>>>>>>>> Hi varad,
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> Please find attached label with necessary changes required.
+>>>>>>>>>>>>> The previous attachment was the label which current provogue generates
+>>>>>>>>>>>>> through unicommerce and the current attachment contains necessary additions
+>>>>>>>>>>>>> in the label.
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> You can compare both of it and get to know the changes
+>>>>>>>>>>>>> required. Please call in case of any query.
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> On Dec 6, 2016 3:05 PM, "Harsh Joshi" <harsh@pigen.in> wrote:
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>> +attachment.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> On Dec 6, 2016 2:01 PM, "Varad Singhal" <
+>>>>>>>>>>>>>> varad@unicommerce.com> wrote:
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>> + Digvijay,
+>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>> Please make necessary changes, or connect with Harsh in case
+>>>>>>>>>>>>>>> any further doubts 8208806959
+>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>> On Mon, Dec 5, 2016 at 4:56 PM, Harsh Joshi <harsh@pigen.in>
+>>>>>>>>>>>>>>> wrote:
+>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> Hi Varad,
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> I tried reaching you regarding this label changes, please
+>>>>>>>>>>>>>>>> call back once free.I am reachable at 8208806959.
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>  Sent with Mailtrack
+>>>>>>>>>>>>>>>> <https://mailtrack.io/install?source=signature&lang=en&referral=harsh@pigen.in&idSignature=22>
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> Best,
+>>>>>>>>>>>>>>>> Harsh Joshi
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> [image: stylio theme]
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> Disclaimer:
+>>>>>>>>>>>>>>>> "The information contained herein (including any
+>>>>>>>>>>>>>>>> accompanying documents) is confidential and is intended solely for the
+>>>>>>>>>>>>>>>> addressee(s). If you have erroneously received this message, please
+>>>>>>>>>>>>>>>> immediately delete it and notify the sender. Also, if you are not the
+>>>>>>>>>>>>>>>> intended recipient, you are hereby notified that any disclosure, copying,
+>>>>>>>>>>>>>>>> distribution or taking any action in reliance on the contents of this
+>>>>>>>>>>>>>>>> message or any accompanying document is strictly prohibited and is
+>>>>>>>>>>>>>>>> unlawful. The organization is not responsible for any damage caused by a
+>>>>>>>>>>>>>>>> virus or alteration of the e-mail by a third party or otherwise.
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>> On Mon, Dec 5, 2016 at 12:05 PM, shubhangi prasad <
+>>>>>>>>>>>>>>>> shubhangi@pigen.in> wrote:
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>> +1 Harsh Joshi
+>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>> On Mon, Dec 5, 2016 at 12:02 PM, shubhangi prasad <
+>>>>>>>>>>>>>>>>> shubhangi@pigen.in> wrote:
+>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>> Hey Varad,
+>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>> PFA final Provogue label which needs to be designed and
+>>>>>>>>>>>>>>>>>> its sample label which Provogue uses currently. Can you please update
+>>>>>>>>>>>>>>>>>> regarding the current status of work ?
+>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>> On Thu, Dec 1, 2016 at 2:23 AM, Sourav Sarkar <
+>>>>>>>>>>>>>>>>>> sourav@pigen.in> wrote:
+>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> Hi Varad,
+>>>>>>>>>>>>>>>>>>>       As discussed in the call, Here I am sending you
+>>>>>>>>>>>>>>>>>>> couple of place order responses and examples on how to print the misc
+>>>>>>>>>>>>>>>>>>> params in the shipping labels. Also can we connect today at 12:00 PM to
+>>>>>>>>>>>>>>>>>>> discuss this things to clarify any doubt ?
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> Here I am sharing you 4 sample accounts in gopigeon live
+>>>>>>>>>>>>>>>>>>> servers (these accounts are demo accounts which give live awb numbers so
+>>>>>>>>>>>>>>>>>>> please use with care to avoid awb wastage) -- "ekart_only",
+>>>>>>>>>>>>>>>>>>> "xpressbees_only", "indiapost_api_only" and "indiapost_multimodal"
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> In each of the case for the place order response you
+>>>>>>>>>>>>>>>>>>> need to check the keys *"is_multimodal"* ,
+>>>>>>>>>>>>>>>>>>> *"misc_param_list"* , *"printable_params", *
+>>>>>>>>>>>>>>>>>>> *label_from_address*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> *This label_from_address has to be printed on the
+>>>>>>>>>>>>>>>>>>> shipping label as an extra "from address" in addition to yours if you are
+>>>>>>>>>>>>>>>>>>> printing*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> *content of misc_param_list is dynamic (can be empty
+>>>>>>>>>>>>>>>>>>> also) depending on the partner, I have given example for a few partners,
+>>>>>>>>>>>>>>>>>>> but we add partners on a regular basis and custom requirements like such
+>>>>>>>>>>>>>>>>>>> codes come and put them inside misc_param_list, so if the code can be
+>>>>>>>>>>>>>>>>>>> written as a generic manner where you will iterate through the dictionary
+>>>>>>>>>>>>>>>>>>> (key value pair) and whatever comes their print on the shipping label then
+>>>>>>>>>>>>>>>>>>> all our logistic partner requirements will be fulfilled.*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> *use of is_multimodal is shown in the last example.*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> *Request URL in all the cases : *
+>>>>>>>>>>>>>>>>>>> http://gopigeon.biz/ecom-api/v3/place-order
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> *Example for Ekart : Nothing comes now in misc param
+>>>>>>>>>>>>>>>>>>> list*
+>>>>>>>>>>>>>>>>>>> *Request :*
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>   "password":"ekart_only",
+>>>>>>>>>>>>>>>>>>>   "shipment_details":[
+>>>>>>>>>>>>>>>>>>>   {
+>>>>>>>>>>>>>>>>>>>     "invoice":"0006017986S1",
+>>>>>>>>>>>>>>>>>>>     "weight":"4.0",
+>>>>>>>>>>>>>>>>>>>     "declaration":"I hereby declare that the above
+>>>>>>>>>>>>>>>>>>> mentioned information is true and correct and value declared(value) is for
+>>>>>>>>>>>>>>>>>>> transportation purpose and has no commercial value.Signature:",
+>>>>>>>>>>>>>>>>>>>     "length":"15.0",
+>>>>>>>>>>>>>>>>>>>     "breadth":"5.0",
+>>>>>>>>>>>>>>>>>>>     "height":"18.0",
+>>>>>>>>>>>>>>>>>>>     "unique_id":"INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>     "product_detail":"Black casual shoes,Black casual
+>>>>>>>>>>>>>>>>>>> shoes,Black casual shoes,Black casual shoes",
+>>>>>>>>>>>>>>>>>>>     "from_name":"J K Marketing","from_address":"shop no
+>>>>>>>>>>>>>>>>>>> 3,1st floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi",
+>>>>>>>>>>>>>>>>>>>     "from_city":"surat",
+>>>>>>>>>>>>>>>>>>>     "from_state":"KA",
+>>>>>>>>>>>>>>>>>>>     "from_mobile_number":"8010690938",
+>>>>>>>>>>>>>>>>>>>     "from_pin_code":"560051",
+>>>>>>>>>>>>>>>>>>>     "to_name":"MUKESH Kumar Gupta",
+>>>>>>>>>>>>>>>>>>>     "to_address":"Pipra toli KHUNTI ward 9 ",
+>>>>>>>>>>>>>>>>>>>     "to_city":"RANCHI",
+>>>>>>>>>>>>>>>>>>>     "to_state":"JH",
+>>>>>>>>>>>>>>>>>>>     "to_mobile_number":"9931778090",
+>>>>>>>>>>>>>>>>>>>     "to_pin_code":"560034",
+>>>>>>>>>>>>>>>>>>>     "payment_type":"cod",
+>>>>>>>>>>>>>>>>>>>     "cod_collection":"2233",
+>>>>>>>>>>>>>>>>>>>     "declared_value":"4231",
+>>>>>>>>>>>>>>>>>>>     "from_email":"abc@gmail.com"}],
+>>>>>>>>>>>>>>>>>>>   "market_name":"ekart_only",
+>>>>>>>>>>>>>>>>>>>   "vendor_name":"ekart_only"
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> *Response :*
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>   "orders_data": [
+>>>>>>>>>>>>>>>>>>>     {
+>>>>>>>>>>>>>>>>>>>       "success": true,
+>>>>>>>>>>>>>>>>>>>       "awb_detail": {
+>>>>>>>>>>>>>>>>>>>         "is_multimodal": "0",
+>>>>>>>>>>>>>>>>>>>         "printable_params": "",
+>>>>>>>>>>>>>>>>>>>         "success": true,
+>>>>>>>>>>>>>>>>>>>         "misc_param_list": {},
+>>>>>>>>>>>>>>>>>>>         "shipping_label": "https://s3-ap-southeast-1.ama
+>>>>>>>>>>>>>>>>>>> zonaws.com/pigen-shipping-labe
+>>>>>>>>>>>>>>>>>>> ls/ekart/2016/11/30/PGNC0000003478_ekart6911967.pdf",
+>>>>>>>>>>>>>>>>>>>         "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>         "label_from_address": "shop no 3,1st
+>>>>>>>>>>>>>>>>>>> floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi",
+>>>>>>>>>>>>>>>>>>>         "result_code": 1,
+>>>>>>>>>>>>>>>>>>>         "partner": "ekart",
+>>>>>>>>>>>>>>>>>>>         "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>         "awb": "PGNC0000003478",
+>>>>>>>>>>>>>>>>>>>         "unique_id": "INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>         "processed": true
+>>>>>>>>>>>>>>>>>>>       },
+>>>>>>>>>>>>>>>>>>>       "unique_id": "INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>       "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>       "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>       "result_code": 1,
+>>>>>>>>>>>>>>>>>>>       "polling_required": false
+>>>>>>>>>>>>>>>>>>>     }
+>>>>>>>>>>>>>>>>>>>   ]
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> In this ekart case nothing comes in the misc param list,
+>>>>>>>>>>>>>>>>>>> so nothing is needed.
+>>>>>>>>>>>>>>>>>>> =======================================================
+>>>>>>>>>>>>>>>>>>> *Example for XpressBees : origin code and routing code
+>>>>>>>>>>>>>>>>>>> come in misc_param_list*
+>>>>>>>>>>>>>>>>>>> *Request :*
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>   "password":"xpressbees_only",
+>>>>>>>>>>>>>>>>>>>   "shipment_details":[
+>>>>>>>>>>>>>>>>>>>   {
+>>>>>>>>>>>>>>>>>>>     "invoice":"0006017986S1",
+>>>>>>>>>>>>>>>>>>>     "weight":"4.0",
+>>>>>>>>>>>>>>>>>>>     "declaration":"I hereby declare that the above
+>>>>>>>>>>>>>>>>>>> mentioned information is true and correct and value declared(value) is for
+>>>>>>>>>>>>>>>>>>> transportation purpose and has no commercial value.Signature:",
+>>>>>>>>>>>>>>>>>>>     "length":"15.0",
+>>>>>>>>>>>>>>>>>>>     "breadth":"5.0",
+>>>>>>>>>>>>>>>>>>>     "height":"18.0",
+>>>>>>>>>>>>>>>>>>>     "unique_id":"INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>     "product_detail":"Black casual shoes,Black casual
+>>>>>>>>>>>>>>>>>>> shoes,Black casual shoes,Black casual shoes",
+>>>>>>>>>>>>>>>>>>>     "from_name":"J K Marketing","from_address":"shop no
+>>>>>>>>>>>>>>>>>>> 3,1st floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi",
+>>>>>>>>>>>>>>>>>>>     "from_city":"surat",
+>>>>>>>>>>>>>>>>>>>     "from_state":"KA",
+>>>>>>>>>>>>>>>>>>>     "from_mobile_number":"8010690938",
+>>>>>>>>>>>>>>>>>>>     "from_pin_code":"560051",
+>>>>>>>>>>>>>>>>>>>     "to_name":"MUKESH Kumar Gupta",
+>>>>>>>>>>>>>>>>>>>     "to_address":"Pipra toli KHUNTI ward 9 ",
+>>>>>>>>>>>>>>>>>>>     "to_city":"RANCHI",
+>>>>>>>>>>>>>>>>>>>     "to_state":"JH",
+>>>>>>>>>>>>>>>>>>>     "to_mobile_number":"9931778090",
+>>>>>>>>>>>>>>>>>>>     "to_pin_code":"560034",
+>>>>>>>>>>>>>>>>>>>     "payment_type":"prepaid",
+>>>>>>>>>>>>>>>>>>>     "cod_collection":"0",
+>>>>>>>>>>>>>>>>>>>     "declared_value":"4231",
+>>>>>>>>>>>>>>>>>>>     "from_email":"abc@gmail.com"}],
+>>>>>>>>>>>>>>>>>>>   "market_name":"xpressbees_only",
+>>>>>>>>>>>>>>>>>>>   "vendor_name":"xpressbees_only"
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> *Response :*
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>   "orders_data": [
+>>>>>>>>>>>>>>>>>>>     {
+>>>>>>>>>>>>>>>>>>>       "success": true,
+>>>>>>>>>>>>>>>>>>>       "awb_detail": {
+>>>>>>>>>>>>>>>>>>>  *       "is_multimodal": "0",*
+>>>>>>>>>>>>>>>>>>>     *    "printable_params": "origin_code:BLR/ULS -
+>>>>>>>>>>>>>>>>>>> L--routing_code:BLR/STH - C",*
+>>>>>>>>>>>>>>>>>>>         "success": true,
+>>>>>>>>>>>>>>>>>>> *        "misc_param_list": {*
+>>>>>>>>>>>>>>>>>>> *          "origin_code": "BLR/ULS - L",*
+>>>>>>>>>>>>>>>>>>> *          "routing_code": "BLR/STH - C"*
+>>>>>>>>>>>>>>>>>>> *        },*
+>>>>>>>>>>>>>>>>>>>         "shipping_label": "https://s3-ap-southeast-1.ama
+>>>>>>>>>>>>>>>>>>> zonaws.com/pigen-shipping-labe
+>>>>>>>>>>>>>>>>>>> ls/XpressBees/2016/11/30/12531
+>>>>>>>>>>>>>>>>>>> 6111835_XpressBees6911969.pdf",
+>>>>>>>>>>>>>>>>>>>         "validation_passed": true,
+>>>>>>>>>>>>>>>>>>> *        "label_from_address": "shop no 3,1st
+>>>>>>>>>>>>>>>>>>> floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi",*
+>>>>>>>>>>>>>>>>>>>         "result_code": 1,
+>>>>>>>>>>>>>>>>>>>         "partner": "xpressbees",
+>>>>>>>>>>>>>>>>>>>         "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>         "awb": "125316111835",
+>>>>>>>>>>>>>>>>>>>         "unique_id": "INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>         "processed": true
+>>>>>>>>>>>>>>>>>>>       },
+>>>>>>>>>>>>>>>>>>>       "unique_id": "INDIAPOST_API_TEST-878gfrrfg78",
+>>>>>>>>>>>>>>>>>>>       "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>       "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>       "result_code": 1,
+>>>>>>>>>>>>>>>>>>>       "polling_required": false
+>>>>>>>>>>>>>>>>>>>     }
+>>>>>>>>>>>>>>>>>>>   ]
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> Here we are giving routing code and origin code so they
+>>>>>>>>>>>>>>>>>>> must be printed on the shipping label
+>>>>>>>>>>>>>>>>>>> =======================================================
+>>>>>>>>>>>>>>>>>>> *Example for Indiapost Central :*
+>>>>>>>>>>>>>>>>>>> *Request :*
+>>>>>>>>>>>>>>>>>>> {"password":"indiapost_api_onl
+>>>>>>>>>>>>>>>>>>> y","shipment_details":[{"invoi
+>>>>>>>>>>>>>>>>>>> ce":"0006017986S1","weight":"4.0","declaration":"I
+>>>>>>>>>>>>>>>>>>> hereby declare that the above mentioned information is true and correct and
+>>>>>>>>>>>>>>>>>>> value declared(value) is for transportation purpose and has no commercial
+>>>>>>>>>>>>>>>>>>> value.Signature:","length":"15
+>>>>>>>>>>>>>>>>>>> .0","breadth":"5.0","height":"
+>>>>>>>>>>>>>>>>>>> 18.0","unique_id":"INDIAPOST_A
+>>>>>>>>>>>>>>>>>>> PI_TEST100","product_detail":"Black casual shoes,Black
+>>>>>>>>>>>>>>>>>>> casual shoes,Black casual shoes,Black casual shoes","from_name":"J K
+>>>>>>>>>>>>>>>>>>> Marketing","from_address":"shop no 3,1st
+>>>>>>>>>>>>>>>>>>> floor,rz-1,kharsa no 8, near hanuman mandir ,village-khayala,
+>>>>>>>>>>>>>>>>>>> delhi","from_city" : "surat", "from_state":"DL", "from_mobile_number":
+>>>>>>>>>>>>>>>>>>> "8010690938","from_pin_code":"560068","to_name":"MUKESH
+>>>>>>>>>>>>>>>>>>> Kumar Gupta","to_address":"Pipra toli KHUNTI ward 9 ", "to_city" :"RANCHI",
+>>>>>>>>>>>>>>>>>>> "to_state":"JH","to_mobile_number":"9931778090",
+>>>>>>>>>>>>>>>>>>> "to_pin_code": "560034","payment_type":"cod",
+>>>>>>>>>>>>>>>>>>> "cod_collection":"2233","decla
+>>>>>>>>>>>>>>>>>>> red_value":"4231","from_email":"abc@gmail.com
+>>>>>>>>>>>>>>>>>>> "}],"market_name":"indiapost_api","vendor_nam
+>>>>>>>>>>>>>>>>>>> e":"indiapost_api_only"}
+>>>>>>>>>>>>>>>>>>> *Response :*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>  "orders_data": [
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>    {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "success": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "awb_detail": {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "is_multimodal": "0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "printable_params": "ebiller_id:E-Biller ID
+>>>>>>>>>>>>>>>>>>> 6542--weight:4.0--booking_office:Kadugudi
+>>>>>>>>>>>>>>>>>>> S.O.--rto_address:RTO Address: Holisol Logistics Pvt Ltd,#41
+>>>>>>>>>>>>>>>>>>> groundfloor,opposite bimal showroom ,whitefeild road ,mahadevpura post
+>>>>>>>>>>>>>>>>>>> Bangalore 560048 8892918554--customer_code_number:SP
+>>>>>>>>>>>>>>>>>>> COD (BNPL): BDM/NAF/BALODIS/02--payment_office:Payment
+>>>>>>>>>>>>>>>>>>> Office: SAROJINI NAGAR HPO, NEW DELHI-110023--cod_amount_in_words:Rupees
+>>>>>>>>>>>>>>>>>>> Two Thousand, Two Hundred And Thirty-Three (In Words)",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "success": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "misc_param_list": {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "ebiller_id": "E-Biller ID 6542",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "weight": "4.0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "booking_office": "Kadugudi S.O.",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "rto_address": "RTO Address: Holisol Logistics
+>>>>>>>>>>>>>>>>>>> Pvt Ltd,#41 groundfloor,opposite bimal showroom ,whitefeild road
+>>>>>>>>>>>>>>>>>>> ,mahadevpura post Bangalore 560048 8892918554",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "customer_code_number": "SP COD (BNPL):
+>>>>>>>>>>>>>>>>>>> BDM/NAF/BALODIS/02",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "payment_office": "Payment Office: SAROJINI
+>>>>>>>>>>>>>>>>>>> NAGAR HPO, NEW DELHI-110023",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "cod_amount_in_words": "Rupees Two Thousand,
+>>>>>>>>>>>>>>>>>>> Two Hundred And Thirty-Three (In Words)"
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        },
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "shipping_label": "https://s3-ap-southeast-1.ama
+>>>>>>>>>>>>>>>>>>> zonaws.com/pigen-shipping-labe
+>>>>>>>>>>>>>>>>>>> ls/indiapost_api/2016/11/09/AS
+>>>>>>>>>>>>>>>>>>> 000000875IN_indiapost_api6875020.pdf",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "label_from_address": "Holisol Logistics Pvt
+>>>>>>>>>>>>>>>>>>> Ltd,#41 groundfloor,opposite bimal showroom ,whitefeild road ,mahadevpura
+>>>>>>>>>>>>>>>>>>> post Bangalore 560048 Karnataka 8892918554",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "result_code": 1,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "partner": "indiapost_api",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "awb": "AS000000875IN",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "unique_id": "INDIAPOST_API_TEST10xcds0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "processed": true
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      },
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "unique_id": "INDIAPOST_API_TEST10xcds0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "result_code": 1,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "polling_required": false
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>    }
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>  ]
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> We are giving a lot of *mandatory *parameters on the
+>>>>>>>>>>>>>>>>>>> misc_param_list, in addition whatever comes in label_from_address must be
+>>>>>>>>>>>>>>>>>>> printed as from address.
+>>>>>>>>>>>>>>>>>>> =======================================================
+>>>>>>>>>>>>>>>>>>> *Example for Indiapost Central Multimodal :*
+>>>>>>>>>>>>>>>>>>> *Request :*
+>>>>>>>>>>>>>>>>>>> {"password":"indiapost_multimo
+>>>>>>>>>>>>>>>>>>> dal","shipment_details":[{"inv
+>>>>>>>>>>>>>>>>>>> oice":"0006017986S1","weight":"4.0","declaration":"I
+>>>>>>>>>>>>>>>>>>> hereby declare that the above mentioned information is true and correct and
+>>>>>>>>>>>>>>>>>>> value declared(value) is for transportation purpose and has no commercial
+>>>>>>>>>>>>>>>>>>> value.Signature:","length":"15
+>>>>>>>>>>>>>>>>>>> .0","breadth":"5.0","height":"
+>>>>>>>>>>>>>>>>>>> 18.0","unique_id":"INDIAPOST_A
+>>>>>>>>>>>>>>>>>>> PI_TEST10zzz0","product_detail":"Black casual
+>>>>>>>>>>>>>>>>>>> shoes,Black casual shoes,Black casual shoes,Black casual
+>>>>>>>>>>>>>>>>>>> shoes","from_name":"J K Marketing","from_address":"shop
+>>>>>>>>>>>>>>>>>>> no 3,1st floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi",
+>>>>>>>>>>>>>>>>>>> "from_city":"surat","from_stat
+>>>>>>>>>>>>>>>>>>> e":"DL","from_mobile_number":"
+>>>>>>>>>>>>>>>>>>> 8010690938","from_pin_code":"560068","to_name":"MUKESH
+>>>>>>>>>>>>>>>>>>> Kumar Gupta","to_address":"Pipra toli KHUNTI ward 9
+>>>>>>>>>>>>>>>>>>> ","to_city":"RANCHI","to_state
+>>>>>>>>>>>>>>>>>>> ":"JH","to_mobile_number":"993
+>>>>>>>>>>>>>>>>>>> 1778090","to_pin_code":"395010
+>>>>>>>>>>>>>>>>>>> ","payment_type":"cod","cod_co
+>>>>>>>>>>>>>>>>>>> llection":"2233","declared_value":"4231","from_email":"
+>>>>>>>>>>>>>>>>>>> abc@gmail.com"}],"market_name":"ind
+>>>>>>>>>>>>>>>>>>> iapost_multimodal","vendor_name":"indiapost_multimodal"}
+>>>>>>>>>>>>>>>>>>> *Response :*
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>  "orders_data": [
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>    {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "success": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "awb_detail": {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "is_multimodal": "1",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "printable_params": "ebiller_id:E-Biller ID
+>>>>>>>>>>>>>>>>>>> 6542--weight:4.0--booking_office:S.J.
+>>>>>>>>>>>>>>>>>>> Sorting--forward_awb:101262844--rto_address:RTO
+>>>>>>>>>>>>>>>>>>> Address: shop no 3,1st floor,rz-1,kharsa no 8, near hanuman
+>>>>>>>>>>>>>>>>>>> mandir,village-khayala,delhi surat 560068 8010690938--customer_code_number:SP
+>>>>>>>>>>>>>>>>>>> COD (BNPL): BDM/NAF/BALODIS/02--payment_office:Payment
+>>>>>>>>>>>>>>>>>>> Office: SAROJINI NAGAR HPO, NEW DELHI-110023--cod_amount_in_words:Rupees
+>>>>>>>>>>>>>>>>>>> Two Thousand, Two Hundred And Thirty-Three (In
+>>>>>>>>>>>>>>>>>>> Words)--multimodal_header:bangalore to surat by
+>>>>>>>>>>>>>>>>>>> indiapost_api via holisol--forward_partner:holisol",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "success": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "misc_param_list": {
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "ebiller_id": "E-Biller ID 6542",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "weight": "4.0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "booking_office": "S.J. Sorting",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "forward_awb": "101262844",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "rto_address": "RTO Address: shop no 3,1st
+>>>>>>>>>>>>>>>>>>> floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi surat
+>>>>>>>>>>>>>>>>>>> 560068 8010690938",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "customer_code_number": "SP COD (BNPL):
+>>>>>>>>>>>>>>>>>>> BDM/NAF/BALODIS/02",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "payment_office": "Payment Office: SAROJINI
+>>>>>>>>>>>>>>>>>>> NAGAR HPO, NEW DELHI-110023",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "cod_amount_in_words": "Rupees Two Thousand,
+>>>>>>>>>>>>>>>>>>> Two Hundred And Thirty-Three (In Words)",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "multimodal_header": "bangalore to surat by
+>>>>>>>>>>>>>>>>>>> indiapost_api via holisol",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>          "forward_partner": "holisol"
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        },
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "shipping_label": "https://s3-ap-southeast-1.ama
+>>>>>>>>>>>>>>>>>>> zonaws.com/pigen-shipping-labe
+>>>>>>>>>>>>>>>>>>> ls/indiapost_api/2016/11/09/AS
+>>>>>>>>>>>>>>>>>>> 000000907IN_indiapost_api6875113.pdf",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "label_from_address": "shop no 3,1st
+>>>>>>>>>>>>>>>>>>> floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi 560068",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "result_code": 1,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "partner": "indiapost_api",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "awb": "AS000000907IN",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "unique_id": "INDIAPOST_API_TEST10zzz0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>        "processed": true
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      },
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "unique_id": "INDIAPOST_API_TEST10zzz0",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "message": "All is Well",
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "validation_passed": true,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "result_code": 1,
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>      "polling_required": false
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>    }
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>  ]
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> }
+>>>>>>>>>>>>>>>>>>> We are giving a lot of *mandatory *parameters on the
+>>>>>>>>>>>>>>>>>>> misc_param_list, in addition whatever comes in label_from_address must be
+>>>>>>>>>>>>>>>>>>> printed as from address. In addition in the response "is_multimodal" flag
+>>>>>>>>>>>>>>>>>>> is set as 1 (the key will always be in the reponse with value "0" or "1")
+>>>>>>>>>>>>>>>>>>> -- if it is 1 as in the current case, then in the misc_param_list there
+>>>>>>>>>>>>>>>>>>> will be two keys forward_partner and forward_awb, this awbs barcode also
+>>>>>>>>>>>>>>>>>>> has to be printed on the shipping label and it must be mentioned which
+>>>>>>>>>>>>>>>>>>> forward partners awb number is this (using the forward_partner) key.
+>>>>>>>>>>>>>>>>>>> =======================================================
+>>>>>>>>>>>>>>>>>>> --
+>>>>>>>>>>>>>>>>>>> Sourav Sarkar
+>>>>>>>>>>>>>>>>>>> Co-Founder & CTO
+>>>>>>>>>>>>>>>>>>> +91 8670500969
+>>>>>>>>>>>>>>>>>>> GoPigeon, J.K. Ashwath Lakshmi, 777, 2nd floor, 4-C
+>>>>>>>>>>>>>>>>>>> block, Koramangala, Bangalore
+>>>>>>>>>>>>>>>>>>> [image: stylio theme]
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>> Disclaimer:
+>>>>>>>>>>>>>>>>>>> "The information contained herein (including any
+>>>>>>>>>>>>>>>>>>> accompanying documents) is confidential and is intended solely for the
+>>>>>>>>>>>>>>>>>>> addressee(s). If you have erroneously received this message, please
+>>>>>>>>>>>>>>>>>>> immediately delete it and notify the sender. Also, if you are not the
+>>>>>>>>>>>>>>>>>>> intended recipient, you are hereby notified that any disclosure, copying,
+>>>>>>>>>>>>>>>>>>> distribution or taking any action in reliance on the contents of this
+>>>>>>>>>>>>>>>>>>> message or any accompanying document is strictly prohibited and is
+>>>>>>>>>>>>>>>>>>> unlawful. The organization is not responsible for any damage caused by a
+>>>>>>>>>>>>>>>>>>> virus or alteration of the e-mail by a third party or otherwise.
+>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>
+>>>>>>>>>>>>
+>>>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>
+>>>>>>>
+>>>>>>
+>>>>>>
+>>>>
+>>>>
+>>>> --
+>>>> Shubham Sharma
+>>>> AVP - Key Account Management
+>>>> +91 8050080509
+>>>> GoPigeon, J.K. Ashwath Lakshmi, 777, 2nd floor, 4-C block,
+>>>> Koramangala, Bangalore
+>>>> [image: stylio theme]
+>>>>
+>>>
+>>>
+>>>
+>>> --
+>>> Best Regards,
+>>> Rakshit Narayanan - Unicommerce <http://www.unicommerce.com>
+>>> Channel development | Enterprise Solution Expert
+>>> *+91-9711576893*
+>>> Skype: rakshit.narayanan1
+>>>
+>>
+>>
+>>
+>> --
+>> Best Regards,
+>> Rakshit Narayanan - Unicommerce <http://www.unicommerce.com>
+>> Channel development | Enterprise Solution Expert
+>> *+91-9711576893*
+>> Skype: rakshit.narayanan1
+>>
+>
+>
+>
+> --
+> Best Regards,
+> Rakshit Narayanan - Unicommerce <http://www.unicommerce.com>
+> Channel development | Enterprise Solution Expert
+> *+91-9711576893*
+> Skype: rakshit.narayanan1
+>
+
+--001a113ce47611f70505434891c5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">PFA</div><div class=3D"gmail_extra"><br><div class=3D"gmai=
+l_quote">On Fri, Dec 9, 2016 at 4:49 PM, Rakshit Narayanan <span dir=3D"ltr=
+">&lt;<a href=3D"mailto:rakshit@unicommerce.com" target=3D"_blank">rakshit@=
+unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" =
+style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><di=
+v dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:georgia,ser=
+if;font-size:small;color:#073763">Hi Guys,=C2=A0</div><div class=3D"gmail_d=
+efault" style=3D"font-family:georgia,serif;font-size:small;color:#073763"><=
+br></div><div class=3D"gmail_default" style=3D"font-family:georgia,serif;fo=
+nt-size:small;color:#073763">Digvijay is working on the task and update as =
+soon as it is done.</div></div><div class=3D"HOEnZb"><div class=3D"h5"><div=
+ class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Fri, Dec 9, 2016 a=
+t 3:56 PM, Rakshit Narayanan <span dir=3D"ltr">&lt;<a href=3D"mailto:rakshi=
+t@unicommerce.com" target=3D"_blank">rakshit@unicommerce.com</a>&gt;</span>=
+ wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bor=
+der-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div class=3D"gm=
+ail_default" style=3D"font-family:georgia,serif;font-size:small;color:#0737=
+63">+ Support<br><br></div><div class=3D"gmail_default" style=3D"font-famil=
+y:georgia,serif;font-size:small;color:#073763">Digvijay, can you please che=
+ck if we the label changes are sorted.</div></div><div class=3D"m_-14549001=
+3236030442HOEnZb"><div class=3D"m_-145490013236030442h5"><div class=3D"gmai=
+l_extra"><br><div class=3D"gmail_quote">On Fri, Dec 9, 2016 at 3:51 PM, Rak=
+shit Narayanan <span dir=3D"ltr">&lt;<a href=3D"mailto:rakshit@unicommerce.=
+com" target=3D"_blank">rakshit@unicommerce.com</a>&gt;</span> wrote:<br><bl=
+ockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #=
+ccc solid;padding-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_default" s=
+tyle=3D"font-family:georgia,serif;font-size:small;color:#073763">Plus Shash=
+ank.</div><div class=3D"gmail_default" style=3D"font-family:georgia,serif;f=
+ont-size:small;color:#073763"><br></div><div class=3D"gmail_default" style=
+=3D"font-family:georgia,serif;font-size:small;color:#073763">Shashank, can =
+you please help on this, we are unable to reach Varad.</div></div><div clas=
+s=3D"gmail_extra"><div><div class=3D"m_-145490013236030442m_675105597926004=
+3138h5"><br><div class=3D"gmail_quote">On Fri, Dec 9, 2016 at 3:44 PM, Shub=
+ham Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:shubham@pigen.in" target=
+=3D"_blank">shubham@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"=
+gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-=
+left:1ex"><div dir=3D"ltr">Hi Varad,<div><br></div><div>Our team has been t=
+rying to get in touch with you but we are unable to. At least do intimate u=
+s if you have encountered some unexpected delays. Kindly commit the timelin=
+es around the label edits.=C2=A0</div><div><br></div><div>Rakshit, need you=
+r intervention here.</div><div><br></div><div>Thanks,</div></div><div class=
+=3D"gmail_extra"><div><div class=3D"m_-145490013236030442m_6751055979260043=
+138m_-3253930701893537606h5"><br><div class=3D"gmail_quote">On Thu, Dec 8, =
+2016 at 2:54 PM, Shubham Sharma <span dir=3D"ltr">&lt;<a href=3D"mailto:shu=
+bham@pigen.in" target=3D"_blank">shubham@pigen.in</a>&gt;</span> wrote:<br>=
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"auto">Hi Varad,<div dir=3D"auto"=
+><br></div><div dir=3D"auto">As per our discussion over call, the final lab=
+el change has been closed at your end. Kindly provide the updated label at =
+the earliest.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Also, Shub=
+hangi/Harsh have we checked IP Label as well ?</div><div dir=3D"auto"><br><=
+/div><div dir=3D"auto">Shubhangi, kindly ensure this is closed by today. We=
+ are experiencing huge ad-hoc costs and operational problems because of thi=
+s delay.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Thanks,</div></=
+div><div class=3D"m_-145490013236030442m_6751055979260043138m_-325393070189=
+3537606m_7705884222026229467HOEnZb"><div class=3D"m_-145490013236030442m_67=
+51055979260043138m_-3253930701893537606m_7705884222026229467h5"><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Dec 8, 2016 2:36 PM, &qu=
+ot;Harsh Joshi&quot; &lt;<a href=3D"mailto:harsh@pigen.in" target=3D"_blank=
+">harsh@pigen.in</a>&gt; wrote:<br type=3D"attribution"><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"auto">Hi varad,=C2=A0<div dir=3D"auto"><br></div>=
+<div dir=3D"auto">Waiting for the label where gopigeon from delhivery comes=
+.=C2=A0</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote=
+">On Dec 8, 2016 1:03 PM, &quot;shubhangi prasad&quot; &lt;<a href=3D"mailt=
+o:shubhangi@pigen.in" target=3D"_blank">shubhangi@pigen.in</a>&gt; wrote:<b=
+r type=3D"attribution"><blockquote class=3D"m_-145490013236030442m_67510559=
+79260043138m_-3253930701893537606m_7705884222026229467m_5859721160262976807=
+m_-4010353973257781054quote" style=3D"margin:0 0 0 .8ex;border-left:1px #cc=
+c solid;padding-left:1ex"><div dir=3D"ltr">Also please note that inSourav`s=
+ mail above he had asked you to include <b>label from address </b>in additi=
+on to existing from address. Duly note and make changes</div><div class=3D"=
+m_-145490013236030442m_6751055979260043138m_-3253930701893537606m_770588422=
+2026229467m_5859721160262976807m_-4010353973257781054elided-text"><div clas=
+s=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, Dec 8, 2016 at 12:=
+55 PM, shubhangi prasad <span dir=3D"ltr">&lt;<a href=3D"mailto:shubhangi@p=
+igen.in" target=3D"_blank">shubhangi@pigen.in</a>&gt;</span> wrote:<br><blo=
+ckquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
+cc solid;padding-left:1ex"><div dir=3D"ltr">Hi Varad,<div><br></div><div>Al=
+so please include Gopigeon name while displaying =C2=A0the courier partner.=
+=C2=A0</div></div><div class=3D"m_-145490013236030442m_6751055979260043138m=
+_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-401035397=
+3257781054m_3775928040623032608HOEnZb"><div class=3D"m_-145490013236030442m=
+_6751055979260043138m_-3253930701893537606m_7705884222026229467m_5859721160=
+262976807m_-4010353973257781054m_3775928040623032608h5"><div class=3D"gmail=
+_extra"><br><div class=3D"gmail_quote">On Thu, Dec 8, 2016 at 12:49 PM, Var=
+ad Singhal <span dir=3D"ltr">&lt;<a href=3D"mailto:varad@unicommerce.com" t=
+arget=3D"_blank">varad@unicommerce.com</a>&gt;</span> wrote:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><div dir=3D"ltr">Hi Harsh,<div><br></div><div>Changes a=
+re incorporated as suggested by Shubhangi, attaching one test label for ref=
+erence.</div><div><br></div><div>Regards</div></div><div class=3D"m_-145490=
+013236030442m_6751055979260043138m_-3253930701893537606m_770588422202622946=
+7m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_69382367=
+68345258906HOEnZb"><div class=3D"m_-145490013236030442m_6751055979260043138=
+m_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103539=
+73257781054m_3775928040623032608m_6938236768345258906h5"><div class=3D"gmai=
+l_extra"><br><div class=3D"gmail_quote">On Wed, Dec 7, 2016 at 7:51 PM, Har=
+sh Joshi <span dir=3D"ltr">&lt;<a href=3D"mailto:harsh@pigen.in" target=3D"=
+_blank">harsh@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_=
+quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1=
+ex"><div dir=3D"ltr">HI Varad,<div><br></div><div>Please confirm if this is=
+ done.<br><br><br><br><div class=3D"m_-145490013236030442m_6751055979260043=
+138m_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103=
+53973257781054m_3775928040623032608m_6938236768345258906m_26428160990171540=
+81m_8103283530105975323mt-signature"><img src=3D"https://s3-eu-west-1.amazo=
+naws.com/mailtrack-crx/icon-signature.png" width=3D"16" height=3D"14">=C2=
+=A0<font color=3D"#999999" class=3D"m_-145490013236030442m_6751055979260043=
+138m_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103=
+53973257781054m_3775928040623032608m_6938236768345258906m_26428160990171540=
+81m_8103283530105975323mt-signature-text">Sent with <a href=3D"https://mail=
+track.io/install?source=3Dsignature&amp;lang=3Den&amp;referral=3Dharsh@pige=
+n.in&amp;idSignature=3D22" class=3D"m_-145490013236030442m_6751055979260043=
+138m_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103=
+53973257781054m_3775928040623032608m_6938236768345258906m_26428160990171540=
+81m_8103283530105975323mt-install" target=3D"_blank">Mailtrack</a></font></=
+div></div><img width=3D"0" height=3D"0" class=3D"m_-145490013236030442m_675=
+1055979260043138m_-3253930701893537606m_7705884222026229467m_58597211602629=
+76807m_-4010353973257781054m_3775928040623032608m_6938236768345258906m_2642=
+816099017154081m_8103283530105975323mailtrack-img" src=3D"https://mailtrack=
+.io/trace/mail/f8582d314964ee9277c0b794709885c1c51fa620.png?u=3D747180"></d=
+iv><div class=3D"gmail_extra"><span><br clear=3D"all"><div><div class=3D"m_=
+-145490013236030442m_6751055979260043138m_-3253930701893537606m_77058842220=
+26229467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_6=
+938236768345258906m_2642816099017154081m_8103283530105975323gmail_signature=
+" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><div style=3D"font-size:12.8px"><font face=3D"georgia, serif">Best,</font>=
+</div><div style=3D"font-size:12.8px"><font face=3D"georgia, serif">Harsh J=
+oshi</font></div><div style=3D"font-size:12.8px"><br></div><div style=3D"fo=
+nt-size:12.8px"><img src=3D"http://pigen.in/img/pigen-home-logo-final-4.png=
+" alt=3D"stylio theme" style=3D"border:0px;vertical-align:middle">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<br><span style=3D"font-=
+family:Arial;font-size:10px"><br></span></div><div style=3D"font-size:12.8p=
+x"><span style=3D"font-family:Arial;font-size:10px">Disclaimer:</span><br s=
+tyle=3D"font-family:Arial;font-size:10px"><span style=3D"font-family:Arial;=
+font-size:10px">&quot;The information contained herein (including any accom=
+panying documents) is confidential and is intended solely for the addressee=
+(s). If you have erroneously received this message, please immediately dele=
+te it and notify the sender. Also, if you are not the intended recipient, y=
+ou are hereby notified that any disclosure, copying, distribution or taking=
+ any action in reliance on the contents of this message or any accompanying=
+ document is strictly prohibited and is unlawful. The organization is not r=
+esponsible for any damage caused by a virus or alteration of the e-mail by =
+a third party or otherwise.</span></div></div></div></div></div></div>
+<br></span><div><div class=3D"m_-145490013236030442m_6751055979260043138m_-=
+3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103539732=
+57781054m_3775928040623032608m_6938236768345258906m_2642816099017154081h5">=
+<div class=3D"gmail_quote">On Wed, Dec 7, 2016 at 4:42 PM, Harsh Joshi <spa=
+n dir=3D"ltr">&lt;<a href=3D"mailto:harsh@pigen.in" target=3D"_blank">harsh=
+@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"auto">Hi varad,=C2=A0<div dir=3D"auto"><br></div><div dir=3D"auto">Plea=
+se confiem once done.=C2=A0</div></div><div class=3D"m_-145490013236030442m=
+_6751055979260043138m_-3253930701893537606m_7705884222026229467m_5859721160=
+262976807m_-4010353973257781054m_3775928040623032608m_6938236768345258906m_=
+2642816099017154081m_8103283530105975323HOEnZb"><div class=3D"m_-1454900132=
+36030442m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_5=
+859721160262976807m_-4010353973257781054m_3775928040623032608m_693823676834=
+5258906m_2642816099017154081m_8103283530105975323h5"><div class=3D"gmail_ex=
+tra"><br><div class=3D"gmail_quote">On Dec 7, 2016 4:35 PM, &quot;shubhangi=
+ prasad&quot; &lt;<a href=3D"mailto:shubhangi@pigen.in" target=3D"_blank">s=
+hubhangi@pigen.in</a>&gt; wrote:<br type=3D"attribution"><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr">Hi Varad,<div><br></div><div>We can continue=
+ with the existing label format just include the information miscellaneous =
+parameters.=C2=A0</div><div>Also please note that shipping labels should di=
+splay &lt;courier_partner&gt; by gopiegeon for eg:.<b>Delhivery by</b> <b>G=
+opiegeon</b>.</div><div><br></div><div><br></div><div>Regards,</div><div>Sh=
+ubhangi</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote=
+">On Wed, Dec 7, 2016 at 4:26 PM, Varad Singhal <span dir=3D"ltr">&lt;<a hr=
+ef=3D"mailto:varad@unicommerce.com" target=3D"_blank">varad@unicommerce.com=
+</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin=
+:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr">f=
+yi</div><div class=3D"m_-145490013236030442m_6751055979260043138m_-32539307=
+01893537606m_7705884222026229467m_5859721160262976807m_-4010353973257781054=
+m_3775928040623032608m_6938236768345258906m_2642816099017154081m_8103283530=
+105975323m_-3097162890139591449m_-921614715528736546HOEnZb"><div class=3D"m=
+_-145490013236030442m_6751055979260043138m_-3253930701893537606m_7705884222=
+026229467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_=
+6938236768345258906m_2642816099017154081m_8103283530105975323m_-30971628901=
+39591449m_-921614715528736546h5"><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">On Tue, Dec 6, 2016 at 3:11 PM, Harsh Joshi <span dir=3D"l=
+tr">&lt;<a href=3D"mailto:harsh@pigen.in" target=3D"_blank">harsh@pigen.in<=
+/a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:=
+0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"auto">H=
+i varad,=C2=A0<div dir=3D"auto"><br></div><div dir=3D"auto">Please find att=
+ached label with necessary changes required.=C2=A0 The previous attachment =
+was the label which current provogue generates through unicommerce and the =
+current attachment contains necessary additions in the label.</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto"><br></div><div dir=3D"auto">You can c=
+ompare both of it and get to know the changes required. Please call in case=
+ of any query.=C2=A0</div><div dir=3D"auto"><br></div></div><div class=3D"m=
+_-145490013236030442m_6751055979260043138m_-3253930701893537606m_7705884222=
+026229467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_=
+6938236768345258906m_2642816099017154081m_8103283530105975323m_-30971628901=
+39591449m_-921614715528736546m_-5610537450037270355HOEnZb"><div class=3D"m_=
+-145490013236030442m_6751055979260043138m_-3253930701893537606m_77058842220=
+26229467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_6=
+938236768345258906m_2642816099017154081m_8103283530105975323m_-309716289013=
+9591449m_-921614715528736546m_-5610537450037270355h5"><div class=3D"gmail_e=
+xtra"><br><div class=3D"gmail_quote">On Dec 6, 2016 3:05 PM, &quot;Harsh Jo=
+shi&quot; &lt;<a href=3D"mailto:harsh@pigen.in" target=3D"_blank">harsh@pig=
+en.in</a>&gt; wrote:<br type=3D"attribution"><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"=
+><div dir=3D"auto">+attachment.<div dir=3D"auto"><br></div></div><div class=
+=3D"gmail_extra"><br><div class=3D"gmail_quote">On Dec 6, 2016 2:01 PM, &qu=
+ot;Varad Singhal&quot; &lt;<a href=3D"mailto:varad@unicommerce.com" target=
+=3D"_blank">varad@unicommerce.com</a>&gt; wrote:<br type=3D"attribution"><b=
+lockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px =
+#ccc solid;padding-left:1ex"><div dir=3D"ltr">+ Digvijay,<div><br></div><di=
+v>Please make necessary changes, or connect with Harsh in case any further =
+doubts=C2=A0<span style=3D"font-size:12.8px">8208806959</span></div></div><=
+div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Mon, Dec 5, 201=
+6 at 4:56 PM, Harsh Joshi <span dir=3D"ltr">&lt;<a href=3D"mailto:harsh@pig=
+en.in" target=3D"_blank">harsh@pigen.in</a>&gt;</span> wrote:<br><blockquot=
+e class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc sol=
+id;padding-left:1ex"><div dir=3D"ltr">Hi Varad,<div><br></div><div>I tried =
+reaching you regarding this label changes, please call back once free.I am =
+reachable at 8208806959.<br><br><br><br><div class=3D"m_-145490013236030442=
+m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_585972116=
+0262976807m_-4010353973257781054m_3775928040623032608m_6938236768345258906m=
+_2642816099017154081m_8103283530105975323m_-3097162890139591449m_-921614715=
+528736546m_-5610537450037270355m_-5296508146255181793m_-8837742746270223873=
+m_3901747998774811005m_-1268926674496822773mt-signature"><img src=3D"https:=
+//s3-eu-west-1.amazonaws.com/mailtrack-crx/icon-signature.png" width=3D"16"=
+ height=3D"14">=C2=A0<font color=3D"#999999" class=3D"m_-145490013236030442=
+m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_585972116=
+0262976807m_-4010353973257781054m_3775928040623032608m_6938236768345258906m=
+_2642816099017154081m_8103283530105975323m_-3097162890139591449m_-921614715=
+528736546m_-5610537450037270355m_-5296508146255181793m_-8837742746270223873=
+m_3901747998774811005m_-1268926674496822773mt-signature-text">Sent with <a =
+href=3D"https://mailtrack.io/install?source=3Dsignature&amp;lang=3Den&amp;r=
+eferral=3Dharsh@pigen.in&amp;idSignature=3D22" class=3D"m_-1454900132360304=
+42m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_5859721=
+160262976807m_-4010353973257781054m_3775928040623032608m_693823676834525890=
+6m_2642816099017154081m_8103283530105975323m_-3097162890139591449m_-9216147=
+15528736546m_-5610537450037270355m_-5296508146255181793m_-88377427462702238=
+73m_3901747998774811005m_-1268926674496822773mt-install" target=3D"_blank">=
+Mailtrack</a></font></div></div><img width=3D"0" height=3D"0" class=3D"m_-1=
+45490013236030442m_6751055979260043138m_-3253930701893537606m_7705884222026=
+229467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_693=
+8236768345258906m_2642816099017154081m_8103283530105975323m_-30971628901395=
+91449m_-921614715528736546m_-5610537450037270355m_-5296508146255181793m_-88=
+37742746270223873m_3901747998774811005m_-1268926674496822773mailtrack-img">=
+</div><div class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"m_-14=
+5490013236030442m_6751055979260043138m_-3253930701893537606m_77058842220262=
+29467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_6938=
+236768345258906m_2642816099017154081m_8103283530105975323m_-309716289013959=
+1449m_-921614715528736546m_-5610537450037270355m_-5296508146255181793m_-883=
+7742746270223873m_3901747998774811005m_-1268926674496822773gmail_signature"=
+ data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div style=3D"font-size:12.8px"><font face=3D"georgia, serif">Best,</font><=
+/div><div style=3D"font-size:12.8px"><font face=3D"georgia, serif">Harsh Jo=
+shi</font></div><span><div style=3D"font-size:12.8px"><br></div><div style=
+=3D"font-size:12.8px"><img src=3D"http://pigen.in/img/pigen-home-logo-final=
+-4.png" alt=3D"stylio theme" style=3D"border:0px;vertical-align:middle">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<br><span style=3D"fo=
+nt-family:Arial;font-size:10px"><br></span></div><div style=3D"font-size:12=
+.8px"><span style=3D"font-family:Arial;font-size:10px">Disclaimer:</span><b=
+r style=3D"font-family:Arial;font-size:10px"><span style=3D"font-family:Ari=
+al;font-size:10px">&quot;The information contained herein (including any ac=
+companying documents) is confidential and is intended solely for the addres=
+see(s). If you have erroneously received this message, please immediately d=
+elete it and notify the sender. Also, if you are not the intended recipient=
+, you are hereby notified that any disclosure, copying, distribution or tak=
+ing any action in reliance on the contents of this message or any accompany=
+ing document is strictly prohibited and is unlawful. The organization is no=
+t responsible for any damage caused by a virus or alteration of the e-mail =
+by a third party or otherwise.</span></div></span></div></div></div></div><=
+/div><div><div class=3D"m_-145490013236030442m_6751055979260043138m_-325393=
+0701893537606m_7705884222026229467m_5859721160262976807m_-40103539732577810=
+54m_3775928040623032608m_6938236768345258906m_2642816099017154081m_81032835=
+30105975323m_-3097162890139591449m_-921614715528736546m_-561053745003727035=
+5m_-5296508146255181793m_-8837742746270223873m_3901747998774811005h5">
+<br><div class=3D"gmail_quote">On Mon, Dec 5, 2016 at 12:05 PM, shubhangi p=
+rasad <span dir=3D"ltr">&lt;<a href=3D"mailto:shubhangi@pigen.in" target=3D=
+"_blank">shubhangi@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex"><div dir=3D"ltr">+1 Harsh Joshi</div><div class=3D"gmail_extra"><b=
+r><div class=3D"gmail_quote">On Mon, Dec 5, 2016 at 12:02 PM, shubhangi pra=
+sad <span dir=3D"ltr">&lt;<a href=3D"mailto:shubhangi@pigen.in" target=3D"_=
+blank">shubhangi@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"gma=
+il_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-lef=
+t:1ex"><div dir=3D"ltr"><span style=3D"font-size:12.8px">Hey Varad,</span><=
+div><span style=3D"font-size:12.8px">=C2=A0</span><div><span style=3D"font-=
+size:12.8px">PFA final Provogue label which needs to be designed and its sa=
+mple label which Provogue uses currently. Can you please update regarding t=
+he current status of work ?</span><br></div></div></div><div class=3D"m_-14=
+5490013236030442m_6751055979260043138m_-3253930701893537606m_77058842220262=
+29467m_5859721160262976807m_-4010353973257781054m_3775928040623032608m_6938=
+236768345258906m_2642816099017154081m_8103283530105975323m_-309716289013959=
+1449m_-921614715528736546m_-5610537450037270355m_-5296508146255181793m_-883=
+7742746270223873m_3901747998774811005m_-1268926674496822773m_-9722378415636=
+51839HOEnZb"><div class=3D"m_-145490013236030442m_6751055979260043138m_-325=
+3930701893537606m_7705884222026229467m_5859721160262976807m_-40103539732577=
+81054m_3775928040623032608m_6938236768345258906m_2642816099017154081m_81032=
+83530105975323m_-3097162890139591449m_-921614715528736546m_-561053745003727=
+0355m_-5296508146255181793m_-8837742746270223873m_3901747998774811005m_-126=
+8926674496822773m_-972237841563651839h5"><div class=3D"gmail_extra"><br><di=
+v class=3D"gmail_quote">On Thu, Dec 1, 2016 at 2:23 AM, Sourav Sarkar <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:sourav@pigen.in" target=3D"_blank">soura=
+v@pigen.in</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"ltr">Hi Varad,<div>=C2=A0 =C2=A0 =C2=A0 As discussed in the call, Here =
+I am sending you couple of place order responses and examples on how to pri=
+nt the misc params in the shipping labels. Also can we connect today at 12:=
+00 PM to discuss this things to clarify any doubt ?=C2=A0</div><div><br></d=
+iv><div>Here I am sharing you 4 sample accounts in gopigeon live servers (t=
+hese accounts are demo accounts which give live awb numbers so please use w=
+ith care to avoid awb wastage) -- &quot;ekart_only&quot;, &quot;xpressbees_=
+only&quot;, &quot;indiapost_api_only&quot; and &quot;indiapost_multimodal&q=
+uot;</div><div><br></div><div>In each of the case for the place order respo=
+nse you need to check the keys <b>&quot;is_multimodal&quot;</b>=C2=A0,=C2=
+=A0<b>&quot;misc_param_<wbr>list&quot;</b>=C2=A0,=C2=A0<b>&quot;printable_p=
+arams&quot;,=C2=A0</b><b>la<wbr>bel_from_address</b></div><div><br></div><d=
+iv><b>This label_from_address has to be printed on the shipping label as an=
+ extra &quot;from address&quot; in addition to yours if you are printing</b=
+></div><div><b><br></b></div><div><b>content of misc_param_list is dynamic =
+(can be empty also) depending on the partner, I have given example for a fe=
+w partners, but we add partners on a regular basis and custom requirements =
+like such codes come and put them inside misc_param_list, so if the code ca=
+n be written as a generic manner where you will iterate through the diction=
+ary (key value pair) and whatever comes their print on the shipping label t=
+hen all our logistic partner requirements will be fulfilled.</b></div><div>=
+<b><br></b></div><div><b>use of is_multimodal is shown in the last example.=
+</b></div><div><b><br></b></div><div><b>Request URL in all the cases :=C2=
+=A0</b></div><div><span id=3D"m_-145490013236030442m_6751055979260043138m_-=
+3253930701893537606m_7705884222026229467m_5859721160262976807m_-40103539732=
+57781054m_3775928040623032608m_6938236768345258906m_2642816099017154081m_81=
+03283530105975323m_-3097162890139591449m_-921614715528736546m_-561053745003=
+7270355m_-5296508146255181793m_-8837742746270223873m_3901747998774811005m_-=
+1268926674496822773m_-972237841563651839m_-4729290469998286313m_62155995744=
+18659024gmail-docs-internal-guid-9cec18fd-b6ee-2dc5-5f52-f0cf70b9b21a"><spa=
+n style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgroun=
+d-color:transparent;vertical-align:baseline;white-space:pre-wrap"><a href=
+=3D"http://gopigeon.biz/ecom-api/v3/place-order" target=3D"_blank">http://g=
+opigeon.biz/ecom-api/v<wbr>3/place-order</a></span></span><br></div><div><s=
+pan><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);b=
+ackground-color:transparent;vertical-align:baseline;white-space:pre-wrap"><=
+u><br></u></span></span></div><div><b><u>Example for Ekart : Nothing comes =
+now in misc param list</u></b></div><div><b><i>Request :</i></b></div><div>=
+<div>{</div><div>=C2=A0 &quot;password&quot;:&quot;ekart_only&quot;,</div><=
+div>=C2=A0 &quot;shipment_details&quot;:[</div><div>=C2=A0 {</div><div>=C2=
+=A0 =C2=A0 &quot;invoice&quot;:&quot;0006017986S1&quot;,</div><div>=C2=A0 =
+=C2=A0 &quot;weight&quot;:&quot;4.0&quot;,</div><div>=C2=A0 =C2=A0 &quot;de=
+claration&quot;:&quot;I hereby declare that the above mentioned information=
+ is true and correct and value declared(value) is for transportation purpos=
+e and has no commercial value.Signature:&quot;,</div><div>=C2=A0 =C2=A0 &qu=
+ot;length&quot;:&quot;15.0&quot;,</div><div>=C2=A0 =C2=A0 &quot;breadth&quo=
+t;:&quot;5.0&quot;,</div><div>=C2=A0 =C2=A0 &quot;height&quot;:&quot;18.0&q=
+uot;,</div><div>=C2=A0 =C2=A0 &quot;unique_id&quot;:&quot;INDIAPOST_API_TES=
+<wbr>T-878gfrrfg78&quot;,</div><div>=C2=A0 =C2=A0 &quot;product_detail&quot=
+;:&quot;Black casual shoes,Black casual shoes,Black casual shoes,Black casu=
+al shoes&quot;,</div><div>=C2=A0 =C2=A0 &quot;from_name&quot;:&quot;J K Mar=
+keting&quot;,&quot;from_address&quot;:&quot;sho<wbr>p no 3,1st floor,rz-1,k=
+harsa no 8, near hanuman mandir,village-khayala,delhi&quot;,</div><div>=C2=
+=A0 =C2=A0 &quot;from_city&quot;:&quot;surat&quot;,</div><div>=C2=A0 =C2=A0=
+ &quot;from_state&quot;:&quot;KA&quot;,</div><div>=C2=A0 =C2=A0 &quot;from_=
+mobile_number&quot;:&quot;80106909<wbr>38&quot;,</div><div>=C2=A0 =C2=A0 &q=
+uot;from_pin_code&quot;:&quot;560051&quot;,</div><div>=C2=A0 =C2=A0 &quot;t=
+o_name&quot;:&quot;MUKESH Kumar Gupta&quot;,</div><div>=C2=A0 =C2=A0 &quot;=
+to_address&quot;:&quot;Pipra toli KHUNTI ward 9 &quot;,</div><div>=C2=A0 =
+=C2=A0 &quot;to_city&quot;:&quot;RANCHI&quot;,</div><div>=C2=A0 =C2=A0 &quo=
+t;to_state&quot;:&quot;JH&quot;,</div><div>=C2=A0 =C2=A0 &quot;to_mobile_nu=
+mber&quot;:&quot;9931778090<wbr>&quot;,</div><div>=C2=A0 =C2=A0 &quot;to_pi=
+n_code&quot;:&quot;560034&quot;,</div><div>=C2=A0 =C2=A0 &quot;payment_type=
+&quot;:&quot;cod&quot;,</div><div>=C2=A0 =C2=A0 &quot;cod_collection&quot;:=
+&quot;2233&quot;,</div><div>=C2=A0 =C2=A0 &quot;declared_value&quot;:&quot;=
+4231&quot;,</div><div>=C2=A0 =C2=A0 &quot;from_email&quot;:&quot;<a href=3D=
+"mailto:abc@gmail.com" target=3D"_blank">abc@gmail.com</a>&quot;}]<wbr>,</d=
+iv><div>=C2=A0 &quot;market_name&quot;:&quot;ekart_only&quot;,</div><div>=
+=C2=A0 &quot;vendor_name&quot;:&quot;ekart_only&quot;</div><div>}</div></di=
+v><div><b><i>Response :</i></b></div><div><div>{</div><div>=C2=A0 &quot;ord=
+ers_data&quot;: [</div><div>=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 =
+&quot;success&quot;: true,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;awb_detail&=
+quot;: {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;is_multimodal&quot;: &=
+quot;0&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;printable_params&=
+quot;: &quot;&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;success&qu=
+ot;: true,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;misc_param_list&quot=
+;: {},</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shipping_label&quot;: &q=
+uot;<a href=3D"https://s3-ap-southeast-1.amazonaws.com/pigen-shipping-label=
+s/ekart/2016/11/30/PGNC0000003478_ekart6911967.pdf" target=3D"_blank">https=
+://s3-ap-southeast-1.ama<wbr>zonaws.com/pigen-shipping-labe<wbr>ls/ekart/20=
+16/11/30/PGNC000000<wbr>3478_ekart6911967.pdf</a>&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;validation_passed&quot;: true,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;label_from_address&quot;: &quot;shop no 3,1st fl=
+oor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi&quot;,</div=
+><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;result_code&quot;: 1,</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 &quot;partner&quot;: &quot;ekart&quot;,</div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;message&quot;: &quot;All is Well&quot;,</=
+div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;awb&quot;: &quot;PGNC0000003478&=
+quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;unique_id&quot;: &quot;I=
+NDIAPOST_API_TEST-878gfrrfg7<wbr>8&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 &quot;processed&quot;: true</div><div>=C2=A0 =C2=A0 =C2=A0 },</div><=
+div>=C2=A0 =C2=A0 =C2=A0 &quot;unique_id&quot;: &quot;INDIAPOST_API_TEST-87=
+8gfrrfg7<wbr>8&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;message&quot;: &=
+quot;All is Well&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;validation_pas=
+sed&quot;: true,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;result_code&quot;: 1,=
+</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;polling_required&quot;: false</div><d=
+iv>=C2=A0 =C2=A0 }</div><div>=C2=A0 ]</div><div>}</div></div><div>In this e=
+kart case nothing comes in the misc param list, so nothing is needed.</div>=
+<div>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D<wbr>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D</div><div><b><u>Example for XpressBees : origin=
+ code and routing code come in misc_param_list</u></b></div><div><div><b><i=
+>Request :</i></b></div><div><div>{</div><div>=C2=A0 &quot;password&quot;:&=
+quot;xpressbees_only&quot;,</div><div>=C2=A0 &quot;shipment_details&quot;:[=
+</div><div>=C2=A0 {</div><div>=C2=A0 =C2=A0 &quot;invoice&quot;:&quot;00060=
+17986S1&quot;,</div><div>=C2=A0 =C2=A0 &quot;weight&quot;:&quot;4.0&quot;,<=
+/div><div>=C2=A0 =C2=A0 &quot;declaration&quot;:&quot;I hereby declare that=
+ the above mentioned information is true and correct and value declared(val=
+ue) is for transportation purpose and has no commercial value.Signature:&qu=
+ot;,</div><div>=C2=A0 =C2=A0 &quot;length&quot;:&quot;15.0&quot;,</div><div=
+>=C2=A0 =C2=A0 &quot;breadth&quot;:&quot;5.0&quot;,</div><div>=C2=A0 =C2=A0=
+ &quot;height&quot;:&quot;18.0&quot;,</div><div>=C2=A0 =C2=A0 &quot;unique_=
+id&quot;:&quot;INDIAPOST_API_TES<wbr>T-878gfrrfg78&quot;,</div><div>=C2=A0 =
+=C2=A0 &quot;product_detail&quot;:&quot;Black casual shoes,Black casual sho=
+es,Black casual shoes,Black casual shoes&quot;,</div><div>=C2=A0 =C2=A0 &qu=
+ot;from_name&quot;:&quot;J K Marketing&quot;,&quot;from_address&quot;:&quot=
+;sho<wbr>p no 3,1st floor,rz-1,kharsa no 8, near hanuman mandir,village-kha=
+yala,delhi&quot;,</div><div>=C2=A0 =C2=A0 &quot;from_city&quot;:&quot;surat=
+&quot;,</div><div>=C2=A0 =C2=A0 &quot;from_state&quot;:&quot;KA&quot;,</div=
+><div>=C2=A0 =C2=A0 &quot;from_mobile_number&quot;:&quot;80106909<wbr>38&qu=
+ot;,</div><div>=C2=A0 =C2=A0 &quot;from_pin_code&quot;:&quot;560051&quot;,<=
+/div><div>=C2=A0 =C2=A0 &quot;to_name&quot;:&quot;MUKESH Kumar Gupta&quot;,=
+</div><div>=C2=A0 =C2=A0 &quot;to_address&quot;:&quot;Pipra toli KHUNTI war=
+d 9 &quot;,</div><div>=C2=A0 =C2=A0 &quot;to_city&quot;:&quot;RANCHI&quot;,=
+</div><div>=C2=A0 =C2=A0 &quot;to_state&quot;:&quot;JH&quot;,</div><div>=C2=
+=A0 =C2=A0 &quot;to_mobile_number&quot;:&quot;9931778090<wbr>&quot;,</div><=
+div>=C2=A0 =C2=A0 &quot;to_pin_code&quot;:&quot;560034&quot;,</div><div>=C2=
+=A0 =C2=A0 &quot;payment_type&quot;:&quot;prepaid&quot;,</div><div>=C2=A0 =
+=C2=A0 &quot;cod_collection&quot;:&quot;0&quot;,</div><div>=C2=A0 =C2=A0 &q=
+uot;declared_value&quot;:&quot;4231&quot;,</div><div>=C2=A0 =C2=A0 &quot;fr=
+om_email&quot;:&quot;<a href=3D"mailto:abc@gmail.com" target=3D"_blank">abc=
+@gmail.com</a>&quot;}]<wbr>,</div><div>=C2=A0 &quot;market_name&quot;:&quot=
+;xpressbees_only<wbr>&quot;,</div><div>=C2=A0 &quot;vendor_name&quot;:&quot=
+;xpressbees_only<wbr>&quot;</div><div>}</div></div><div><b><i>Response :</i=
+></b></div></div><div><div>{</div><div>=C2=A0 &quot;orders_data&quot;: [</d=
+iv><div>=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;success&quot;:=
+ true,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;awb_detail&quot;: {</div><div>=
+=C2=A0<b> =C2=A0 =C2=A0 =C2=A0 &quot;is_multimodal&quot;: &quot;0&quot;,</b=
+></div><div>=C2=A0 =C2=A0 <b>=C2=A0 =C2=A0 &quot;printable_params&quot;: &q=
+uot;origin_code:BLR/ULS - L--routing_code:BLR/STH - C&quot;,</b></div><div>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;success&quot;: true,</div><div><b>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;misc_param_list&quot;: {</b></div><div><b>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;origin_code&quot;: &quot;BLR/ULS - L&quo=
+t;,</b></div><div><b>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;routing_code&=
+quot;: &quot;BLR/STH - C&quot;</b></div><div><b>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ },</b></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;shipping_label&quot;: &=
+quot;<a href=3D"https://s3-ap-southeast-1.amazonaws.com/pigen-shipping-labe=
+ls/XpressBees/2016/11/30/125316111835_XpressBees6911969.pdf" target=3D"_bla=
+nk">https://s3-ap-southeast-1.ama<wbr>zonaws.com/pigen-shipping-labe<wbr>ls=
+/XpressBees/2016/11/30/12531<wbr>6111835_XpressBees6911969.pdf</a>&quot;<wb=
+r>,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;validation_passed&quot;: tr=
+ue,</div><div><b>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;label_from_address&quot;=
+: &quot;shop no 3,1st floor,rz-1,kharsa no 8, near hanuman mandir,village-k=
+hayala,delhi&quot;,</b></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;result_=
+code&quot;: 1,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;partner&quot;: &=
+quot;xpressbees&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;message&=
+quot;: &quot;All is Well&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot=
+;awb&quot;: &quot;125316111835&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ &quot;unique_id&quot;: &quot;INDIAPOST_API_TEST-878gfrrfg7<wbr>8&quot;,</d=
+iv><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;processed&quot;: true</div><div>=
+=C2=A0 =C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;unique_id&quot=
+;: &quot;INDIAPOST_API_TEST-878gfrrfg7<wbr>8&quot;,</div><div>=C2=A0 =C2=A0=
+ =C2=A0 &quot;message&quot;: &quot;All is Well&quot;,</div><div>=C2=A0 =C2=
+=A0 =C2=A0 &quot;validation_passed&quot;: true,</div><div>=C2=A0 =C2=A0 =C2=
+=A0 &quot;result_code&quot;: 1,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;pollin=
+g_required&quot;: false</div><div>=C2=A0 =C2=A0 }</div><div>=C2=A0 ]</div><=
+div>}</div></div><div>Here we are giving routing code and origin code so th=
+ey must be printed on the shipping label</div><div>=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D<wbr>=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</d=
+iv><div><b><u>Example for Indiapost Central :</u></b></div><div><div><b><i>=
+Request :</i></b></div><div><span id=3D"m_-145490013236030442m_675105597926=
+0043138m_-3253930701893537606m_7705884222026229467m_5859721160262976807m_-4=
+010353973257781054m_3775928040623032608m_6938236768345258906m_2642816099017=
+154081m_8103283530105975323m_-3097162890139591449m_-921614715528736546m_-56=
+10537450037270355m_-5296508146255181793m_-8837742746270223873m_390174799877=
+4811005m_-1268926674496822773m_-972237841563651839m_-4729290469998286313m_6=
+215599574418659024gmail-docs-internal-guid-9cec18fd-b6f9-0693-48eb-440967f2=
+e774"><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0)=
+;background-color:transparent;vertical-align:baseline;white-space:pre-wrap"=
+>{&quot;password&quot;:&quot;indiapost_api_onl<wbr>y&quot;,&quot;shipment_d=
+etails&quot;:[{&quot;invoi<wbr>ce&quot;:&quot;0006017986S1&quot;,&quot;weig=
+ht&quot;:&quot;4<wbr>.0&quot;,&quot;declaration&quot;:&quot;I hereby declar=
+e that the above mentioned information is true and correct and value declar=
+ed(value) is for transportation purpose and has no commercial value.Signatu=
+re:&quot;,&quot;length&quot;:&quot;15<wbr>.0&quot;,&quot;breadth&quot;:&quo=
+t;5.0&quot;,&quot;height&quot;:&quot;<wbr>18.0&quot;,&quot;unique_id&quot;:=
+&quot;INDIAPOST_A<wbr>PI_TEST100&quot;,&quot;product_detail&quot;:&quot;<wb=
+r>Black casual shoes,Black casual shoes,Black casual shoes,Black casual sho=
+es&quot;,&quot;from_name&quot;:&quot;J K Marketing&quot;,&quot;from_address=
+&quot;:&quot;sho<wbr>p no 3,1st floor,rz-1,kharsa no 8, near hanuman mandir=
+ ,village-khayala, delhi&quot;,&quot;from_city&quot; : &quot;surat&quot;, &=
+quot;from_state&quot;:&quot;DL&quot;, &quot;from_mobile_number&quot;: &quot=
+;8010690938&quot;,&quot;from_pin_code&quot;:&quot;<wbr>560068&quot;,&quot;t=
+o_name&quot;:&quot;MUKESH Kumar Gupta&quot;,&quot;to_address&quot;:&quot;Pi=
+pra toli KHUNTI ward 9 &quot;, &quot;to_city&quot; :&quot;RANCHI&quot;, &qu=
+ot;to_state&quot;:&quot;JH&quot;,&quot;to_mobile_num<wbr>ber&quot;:&quot;99=
+31778090&quot;, &quot;to_pin_code&quot;: &quot;560034&quot;,&quot;payment_t=
+ype&quot;:&quot;cod&quot;,<wbr>&quot;cod_collection&quot;:&quot;2233&quot;,=
+&quot;decla<wbr>red_value&quot;:&quot;4231&quot;,&quot;from_email&quot;<wbr=
+>:&quot;</span><a href=3D"mailto:abc@gmail.com" style=3D"text-decoration:no=
+ne" target=3D"_blank"><span style=3D"font-size:14.6667px;font-family:arial;=
+background-color:transparent;text-decoration:underline;vertical-align:basel=
+ine;white-space:pre-wrap">abc@gmail.com</span></a><span style=3D"font-size:=
+14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;v=
+ertical-align:baseline;white-space:pre-wrap">&quot;}],&quot;market_nam<wbr>=
+e&quot;:&quot;indiapost_api&quot;,&quot;vendor_nam<wbr>e&quot;:&quot;indiap=
+ost_api_only&quot;}</span></span><br></div><div><b><i>Response :</i></b></d=
+iv></div><div><span id=3D"m_-145490013236030442m_6751055979260043138m_-3253=
+930701893537606m_7705884222026229467m_5859721160262976807m_-401035397325778=
+1054m_3775928040623032608m_6938236768345258906m_2642816099017154081m_810328=
+3530105975323m_-3097162890139591449m_-921614715528736546m_-5610537450037270=
+355m_-5296508146255181793m_-8837742746270223873m_3901747998774811005m_-1268=
+926674496822773m_-972237841563651839m_-4729290469998286313m_621559957441865=
+9024gmail-docs-internal-guid-9cec18fd-b6f9-45ce-a5d8-6166a742b0ef"><p dir=
+=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span =
+style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;whit=
+e-space:pre-wrap">{</span></p><p dir=3D"ltr" style=3D"line-height:1.38;marg=
+in-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-famil=
+y:arial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0&quot;orders_d=
+ata&quot;: [</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:=
+0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial=
+;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0{</span><=
+/p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0p=
+t"><span style=3D"font-size:12.6667px;font-family:arial;vertical-align:base=
+line;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;success&quo=
+t;: true,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt=
+;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;ve=
+rtical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+&quot;awb_detail&quot;: {</span></p><p dir=3D"ltr" style=3D"line-height:1.3=
+8;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font=
+-family:arial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;font-fami=
+ly:arial;font-weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=
+=A0&quot;is_multimodal&quot;: &quot;0&quot;,</span></p><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-=
+size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pre-wr=
+ap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;printable_params&quot;=
+: &quot;ebiller_id:E-Biller ID 6542--weight:4.0--booking_offi<wbr>ce:Kadugu=
+di S.O.--rto_address:RTO Address: Holisol Logistics Pvt Ltd,#41 groundfloor=
+,opposite bimal showroom ,whitefeild road ,mahadevpura post Bangalore 56004=
+8 8892918554--customer_code_numb<wbr>er:SP COD (BNPL): BDM/NAF/BALODIS/02--=
+payment_of<wbr>fice:Payment Office: SAROJINI NAGAR HPO, NEW DELHI-110023--c=
+od_amount_in_wo<wbr>rds:Rupees Two Thousand, Two Hundred And Thirty-Three (=
+In Words)&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-=
+top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:a=
+rial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0&quot;success&quot;: true,</span></p><p dir=3D"ltr" st=
+yle=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fo=
+nt-size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pre=
+-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;misc_param_list&quo=
+t;: {</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;mar=
+gin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertic=
+al-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;font-family:arial;=
+font-weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0&quot;e=
+biller_id&quot;:</span><span style=3D"font-size:12.6667px;font-family:arial=
+;vertical-align:baseline;white-space:pre-wrap"> &quot;E-Biller ID 6542&quot=
+;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin=
+-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertical-=
+align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;font-family:ari=
+al;font-weight:700;vertical-align:baseline;white-space:pre-wrap">&quot;weig=
+ht&quot;</span><span style=3D"font-size:12.6667px;font-family:arial;vertica=
+l-align:baseline;white-space:pre-wrap">: &quot;4.0&quot;,</span></p><p dir=
+=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span =
+style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;whit=
+e-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</=
+span><span style=3D"font-size:12.6667px;font-family:arial;font-weight:700;v=
+ertical-align:baseline;white-space:pre-wrap">&quot;booking_office&quot;</sp=
+an><span style=3D"font-size:12.6667px;font-family:arial;vertical-align:base=
+line;white-space:pre-wrap">: &quot;Kadugudi S.O.&quot;,</span></p><p dir=3D=
+"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span sty=
+le=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;white-s=
+pace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</spa=
+n><span style=3D"font-size:12.6667px;font-family:arial;font-weight:700;vert=
+ical-align:baseline;white-space:pre-wrap">&quot;rto_address&quot;:</span><s=
+pan style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;=
+white-space:pre-wrap"> &quot;RTO Address: Holisol Logistics Pvt Ltd,#41 gro=
+undfloor,opposite bimal showroom ,whitefeild road ,mahadevpura post Bangalo=
+re 560048 8892918554&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1=
+.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;fo=
+nt-family:arial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:1=
+2.6667px;font-family:arial;font-weight:700;vertical-align:baseline;white-sp=
+ace:pre-wrap">&quot;customer_code_number<wbr>&quot;</span><span style=3D"fo=
+nt-size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pre=
+-wrap">: &quot;SP COD (BNPL): BDM/NAF/BALODIS/02&quot;,</span></p><p dir=3D=
+"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span sty=
+le=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;white-s=
+pace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><spa=
+n style=3D"font-size:12.6667px;font-family:arial;font-weight:700;vertical-a=
+lign:baseline;white-space:pre-wrap">=C2=A0&quot;payment_office&quot;</span>=
+<span style=3D"font-size:12.6667px;font-family:arial;vertical-align:baselin=
+e;white-space:pre-wrap">: &quot;Payment Office: SAROJINI NAGAR HPO, NEW DEL=
+HI-110023&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-=
+top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:a=
+rial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;=
+font-family:arial;font-weight:700;vertical-align:baseline;white-space:pre-w=
+rap">&quot;cod_amount_in_words&quot;</span><span style=3D"font-size:12.6667=
+px;font-family:arial;vertical-align:baseline;white-space:pre-wrap"><wbr>: &=
+quot;Rupees Two Thousand, Two Hundred And Thirty-Three (In Words)&quot;</sp=
+an></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-botto=
+m:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertical-align:=
+baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0}=
+,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-=
+bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertical-a=
+lign:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0</span><span style=3D"font-size:12.6667px;font-family:arial;font-weig=
+ht:700;vertical-align:baseline;white-space:pre-wrap">&quot;shipping_label&q=
+uot;</span><span style=3D"font-size:12.6667px;font-family:arial;vertical-al=
+ign:baseline;white-space:pre-wrap">: &quot;<a href=3D"https://s3-ap-southea=
+st-1.amazonaws.com/pigen-shipping-labels/indiapost_api/2016/11/09/AS0000008=
+75IN_indiapost_api6875020.pdf" target=3D"_blank">https://s3-ap-southeast-1.=
+ama<wbr>zonaws.com/pigen-shipping-labe<wbr>ls/indiapost_api/2016/11/09/AS<w=
+br>000000875IN_indiapost_api68750<wbr>20.pdf</a>&quot;,</span></p><p dir=3D=
+"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span sty=
+le=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;white-s=
+pace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;validation_=
+passed&quot;: true,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;marg=
+in-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-famil=
+y:arial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;font-family:ari=
+al;font-weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0&quo=
+t;label_from_address&quot;</span><span style=3D"font-size:12.6667px;font-fa=
+mily:arial;vertical-align:baseline;white-space:pre-wrap">: &quot;Holisol Lo=
+gistics Pvt Ltd,#41 groundfloor,opposite bimal showroom ,whitefeild road ,m=
+ahadevpura post Bangalore 560048 Karnataka 8892918554&quot;,</span></p><p d=
+ir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><spa=
+n style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;wh=
+ite-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;result=
+_code&quot;: 1,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-t=
+op:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:ar=
+ial;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:12.6667px;font-family:ari=
+al;font-weight:700;vertical-align:baseline;white-space:pre-wrap">&quot;part=
+ner&quot;: &quot;indiapost_api&quot;,</span></p><p dir=3D"ltr" style=3D"lin=
+e-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12=
+.6667px;font-family:arial;vertical-align:baseline;white-space:pre-wrap"> =
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;message&quot;: &quot;All is=
+ Well&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:=
+0pt;margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial=
+;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0&quot;awb&quot;: &quot;AS000000875IN&quot;,</span></p><p dir=
+=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span =
+style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;whit=
+e-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;unique_i=
+d&quot;: &quot;INDIAPOST_API_TEST10xcds0&quot;,</span></p><p dir=3D"ltr" st=
+yle=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fo=
+nt-size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pre=
+-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;processed&quot;: tr=
+ue</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin=
+-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertical-=
+align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0},</spa=
+n></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom=
+:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertical-align:b=
+aseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;unique_i=
+d&quot;: &quot;INDIAPOST_API_TEST10xcds0&quot;,</span></p><p dir=3D"ltr" st=
+yle=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fo=
+nt-size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pre=
+-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;message&quot;: &quot;All is Wel=
+l&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;=
+margin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;ver=
+tical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&=
+quot;validation_passed&quot;: true,</span></p><p dir=3D"ltr" style=3D"line-=
+height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:12.6=
+667px;font-family:arial;vertical-align:baseline;white-space:pre-wrap"> =C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;result_code&quot;: 1,</span></p><p dir=3D"=
+ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span styl=
+e=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;white-sp=
+ace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;polling_required&quot;: =
+false</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;mar=
+gin-bottom:0pt"><span style=3D"font-size:12.6667px;font-family:arial;vertic=
+al-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0}</span></p><p d=
+ir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><spa=
+n style=3D"font-size:12.6667px;font-family:arial;vertical-align:baseline;wh=
+ite-space:pre-wrap"> =C2=A0]</span></p><span style=3D"font-size:12.6667px;f=
+ont-family:arial;vertical-align:baseline;white-space:pre-wrap">}</span></sp=
+an><br></div><div><span><span style=3D"font-size:12.6667px;font-family:aria=
+l;vertical-align:baseline;white-space:pre-wrap">We are giving a lot of <b>m=
+andatory </b>parameters on the misc_param_list, in addition whatever comes =
+in label_from_address must be printed as from address.</span></span></div><=
+div>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D<wbr>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D</div><div><b><u>Example for Indiapost Central M=
+ultimodal :</u></b><br clear=3D"all"><div><div><b><i>Request :</i></b></div=
+><div><span id=3D"m_-145490013236030442m_6751055979260043138m_-325393070189=
+3537606m_7705884222026229467m_5859721160262976807m_-4010353973257781054m_37=
+75928040623032608m_6938236768345258906m_2642816099017154081m_81032835301059=
+75323m_-3097162890139591449m_-921614715528736546m_-5610537450037270355m_-52=
+96508146255181793m_-8837742746270223873m_3901747998774811005m_-126892667449=
+6822773m_-972237841563651839m_-4729290469998286313m_6215599574418659024gmai=
+l-docs-internal-guid-9cec18fd-b6f9-c07c-20df-4a9c37a3ce9d"><span style=3D"f=
+ont-size:12.6667px;font-family:arial;vertical-align:baseline;white-space:pr=
+e-wrap">{&quot;password&quot;:&quot;indiapost_multimo<wbr>dal&quot;,&quot;s=
+hipment_details&quot;:[{&quot;inv<wbr>oice&quot;:&quot;0006017986S1&quot;,&=
+quot;weight&quot;:<wbr>&quot;4.0&quot;,&quot;declaration&quot;:&quot;I here=
+by declare that the above mentioned information is true and correct and val=
+ue declared(value) is for transportation purpose and has no commercial valu=
+e.Signature:&quot;,&quot;length&quot;:&quot;15<wbr>.0&quot;,&quot;breadth&q=
+uot;:&quot;5.0&quot;,&quot;height&quot;:&quot;<wbr>18.0&quot;,&quot;unique_=
+id&quot;:&quot;INDIAPOST_A<wbr>PI_TEST10zzz0&quot;,&quot;product_detail<wbr=
+>&quot;:&quot;Black casual shoes,Black casual shoes,Black casual shoes,Blac=
+k casual shoes&quot;,&quot;from_name&quot;:&quot;J K Marketing&quot;,&quot;=
+from_address&quot;:&quot;sho<wbr>p no 3,1st floor,rz-1,kharsa no 8, near ha=
+numan mandir,village-khayala,delhi&quot;,<wbr>&quot;from_city&quot;:&quot;s=
+urat&quot;,&quot;from_stat<wbr>e&quot;:&quot;DL&quot;,&quot;from_mobile_num=
+ber&quot;:&quot;<wbr>8010690938&quot;,&quot;from_pin_code&quot;:&quot;5<wbr=
+>60068&quot;,&quot;to_name&quot;:&quot;MUKESH Kumar Gupta&quot;,&quot;to_ad=
+dress&quot;:&quot;Pipra toli KHUNTI ward 9 &quot;,&quot;to_city&quot;:&quot=
+;RANCHI&quot;,&quot;to_state<wbr>&quot;:&quot;JH&quot;,&quot;to_mobile_numb=
+er&quot;:&quot;993<wbr>1778090&quot;,&quot;to_pin_code&quot;:&quot;395010<w=
+br>&quot;,&quot;payment_type&quot;:&quot;cod&quot;,&quot;cod_co<wbr>llectio=
+n&quot;:&quot;2233&quot;,&quot;declared_val<wbr>ue&quot;:&quot;4231&quot;,&=
+quot;from_email&quot;:&quot;<a href=3D"mailto:abc@gmail.com" target=3D"_bla=
+nk">abc@g<wbr>mail.com</a>&quot;}],&quot;market_name&quot;:&quot;ind<wbr>ia=
+post_multimodal&quot;,&quot;vendor_nam<wbr>e&quot;:&quot;indiapost_multimod=
+al&quot;}</span></span><br></div><div><b><i>Response :</i></b></div></div><=
+div><span id=3D"m_-145490013236030442m_6751055979260043138m_-32539307018935=
+37606m_7705884222026229467m_5859721160262976807m_-4010353973257781054m_3775=
+928040623032608m_6938236768345258906m_2642816099017154081m_8103283530105975=
+323m_-3097162890139591449m_-921614715528736546m_-5610537450037270355m_-5296=
+508146255181793m_-8837742746270223873m_3901747998774811005m_-12689266744968=
+22773m_-972237841563651839m_-4729290469998286313m_6215599574418659024gmail-=
+docs-internal-guid-9cec18fd-b6f9-fe16-b911-6eed0883bce3"><p dir=3D"ltr" sty=
+le=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"fon=
+t-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transp=
+arent;vertical-align:baseline;white-space:pre-wrap">{</span></p><p dir=3D"l=
+tr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color=
+:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0&quot;ord=
+ers_data&quot;: [</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin=
+-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:=
+arial;color:rgb(0,0,0);background-color:transparent;vertical-align:baseline=
+;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0{</span></p><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-=
+size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transpar=
+ent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0&quot;success&quot;: true,</span></p><p dir=3D"ltr" style=3D"line-hei=
+ght:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667=
+px;font-family:arial;color:rgb(0,0,0);background-color:transparent;vertical=
+-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;=
+awb_detail&quot;: {</span></p><p dir=3D"ltr" style=3D"line-height:1.38;marg=
+in-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-famil=
+y:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:baseli=
+ne;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span>=
+<span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backg=
+round-color:transparent;font-weight:700;vertical-align:baseline;white-space=
+:pre-wrap">&quot;is_multimodal&quot;: &quot;1&quot;,</span></p><p dir=3D"lt=
+r" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color=
+:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;printable_params&quot;: &quot;ebiller_id:E=
+-Biller ID 6542--weight:4.0--booking_offi<wbr>ce:S.J. Sorting--forward_awb:=
+101262844<wbr>--rto_address:RTO Address: shop no 3,1st floor,rz-1,kharsa no=
+ 8, near hanuman mandir,village-khayala,delhi surat 560068 8010690938--cust=
+omer_code_numb<wbr>er:SP COD (BNPL): BDM/NAF/BALODIS/02--payment_of<wbr>fic=
+e:Payment Office: SAROJINI NAGAR HPO, NEW DELHI-110023--cod_amount_in_wo<wb=
+r>rds:Rupees Two Thousand, Two Hundred And Thirty-Three (In Words)--multimo=
+dal_header:bang<wbr>alore to surat by indiapost_api via holisol--forward_pa=
+rtner:holis<wbr>ol&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.3=
+8;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font=
+-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:=
+baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&=
+quot;success&quot;: true,</span></p><p dir=3D"ltr" style=3D"line-height:1.3=
+8;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font=
+-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:=
+baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&=
+quot;misc_param_list&quot;: {</span></p><p dir=3D"ltr" style=3D"line-height=
+:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;=
+font-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-al=
+ign:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:arial;=
+color:rgb(0,0,0);background-color:transparent;font-weight:700;vertical-alig=
+n:baseline;white-space:pre-wrap">&quot;ebiller_id&quot;: &quot;E-Biller ID =
+6542&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;=
+color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white=
+-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><s=
+pan style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgro=
+und-color:transparent;font-weight:700;vertical-align:baseline;white-space:p=
+re-wrap">=C2=A0&quot;weight&quot;: &quot;4.0&quot;,</span></p><p dir=3D"ltr=
+" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color=
+:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6=
+667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;font-=
+weight:700;vertical-align:baseline;white-space:pre-wrap">&quot;booking_offi=
+ce&quot;: &quot;S.J. Sorting&quot;,</span></p><p dir=3D"ltr" style=3D"line-=
+height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6=
+667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;verti=
+cal-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:arial;=
+color:rgb(0,0,0);background-color:transparent;font-weight:700;vertical-alig=
+n:baseline;white-space:pre-wrap">=C2=A0&quot;forward_awb&quot;: &quot;10126=
+2844&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;=
+color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white=
+-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-=
+size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transpar=
+ent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0=C2=
+=A0=C2=A0=C2=A0&quot;rto_address&quot;:</span><span style=3D"font-size:14.6=
+667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;verti=
+cal-align:baseline;white-space:pre-wrap"> &quot;RTO Address: shop no 3,1st =
+floor,rz-1,kharsa no 8, near hanuman mandir,village-khayala,delhi surat 560=
+068 8010690938&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;ma=
+rgin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-fam=
+ily:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:base=
+line;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:arial;color:=
+rgb(0,0,0);background-color:transparent;font-weight:700;vertical-align:base=
+line;white-space:pre-wrap">&quot;customer_code_number<wbr>&quot;: &quot;</s=
+pan><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);b=
+ackground-color:transparent;vertical-align:baseline;white-space:pre-wrap">S=
+P COD (BNPL): BDM/NAF/BALODIS/02&quot;,</span></p><p dir=3D"ltr" style=3D"l=
+ine-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:=
+14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;v=
+ertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:=
+arial;color:rgb(0,0,0);background-color:transparent;font-weight:700;vertica=
+l-align:baseline;white-space:pre-wrap">=C2=A0&quot;payment_office&quot;: </=
+span><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);=
+background-color:transparent;vertical-align:baseline;white-space:pre-wrap">=
+&quot;Payment Office: SAROJINI NAGAR HPO, NEW DELHI-110023&quot;,</span></p=
+><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"=
+><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);back=
+ground-color:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6=
+667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;font-=
+weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0=C2=A0&quot;=
+cod_amount_in_words&quot;<wbr>: </span><span style=3D"font-size:14.6667px;f=
+ont-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-ali=
+gn:baseline;white-space:pre-wrap">&quot;Rupees Two Thousand, Two Hundred An=
+d Thirty-Three (In Words)&quot;,</span></p><p dir=3D"ltr" style=3D"line-hei=
+ght:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667=
+px;font-family:arial;color:rgb(0,0,0);background-color:transparent;vertical=
+-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:arial;col=
+or:rgb(0,0,0);background-color:transparent;font-weight:700;vertical-align:b=
+aseline;white-space:pre-wrap">=C2=A0&quot;multimodal_header&quot;:</span><s=
+pan style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgro=
+und-color:transparent;vertical-align:baseline;white-space:pre-wrap"> &quot;=
+bangalore to surat by indiapost_api via holisol&quot;,</span></p><p dir=3D"=
+ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span styl=
+e=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-colo=
+r:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6667=
+px;font-family:arial;color:rgb(0,0,0);background-color:transparent;font-wei=
+ght:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0&quot;forward_p=
+artner&quot;: </span><span style=3D"font-size:14.6667px;font-family:arial;c=
+olor:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-=
+space:pre-wrap">&quot;holisol&quot;</span></p><p dir=3D"ltr" style=3D"line-=
+height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6=
+667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;verti=
+cal-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0},</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0=
+pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;=
+color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white=
+-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D=
+"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:tr=
+ansparent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">=C2=
+=A0&quot;shipping_label&quot;:</span><span style=3D"font-size:14.6667px;fon=
+t-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-align=
+:baseline;white-space:pre-wrap"> &quot;<a href=3D"https://s3-ap-southeast-1=
+.amazonaws.com/pigen-shipping-labels/indiapost_api/2016/11/09/AS000000907IN=
+_indiapost_api6875113.pdf" target=3D"_blank">https://s3-ap-southeast-1.ama<=
+wbr>zonaws.com/pigen-shipping-labe<wbr>ls/indiapost_api/2016/11/09/AS<wbr>0=
+00000907IN_indiapost_api68751<wbr>13.pdf</a>&quot;,</span></p><p dir=3D"ltr=
+" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=
+=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color=
+:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;validation_passed&quot;: true,</span></p><=
+p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><=
+span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgr=
+ound-color:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;=
+font-family:arial;color:rgb(0,0,0);background-color:transparent;font-weight=
+:700;vertical-align:baseline;white-space:pre-wrap">=C2=A0&quot;label_from_a=
+ddress&quot;</span><span style=3D"font-size:14.6667px;font-family:arial;col=
+or:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-sp=
+ace:pre-wrap">: &quot;shop no 3,1st floor,rz-1,kharsa no 8, near hanuman ma=
+ndir,village-khayala,delhi 560068&quot;,</span></p><p dir=3D"ltr" style=3D"=
+line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size=
+:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;=
+vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0&quot;result_code&quot;: 1,</span></p><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-=
+size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transpar=
+ent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0</span><span style=3D"font-size:14.6667px;font-family:arial;col=
+or:rgb(0,0,0);background-color:transparent;font-weight:700;vertical-align:b=
+aseline;white-space:pre-wrap">=C2=A0&quot;partner&quot;: &quot;indiapost_ap=
+i&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;=
+margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;col=
+or:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-sp=
+ace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;message&quot=
+;: &quot;All is Well&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1=
+.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;fo=
+nt-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-alig=
+n:baseline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><spa=
+n style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgroun=
+d-color:transparent;font-weight:700;vertical-align:baseline;white-space:pre=
+-wrap">=C2=A0=C2=A0&quot;awb&quot;: &quot;AS000000907IN&quot;,</span></p><p=
+ dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><s=
+pan style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgro=
+und-color:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;unique_id&quot;: &quot;INDIAPOST_=
+API_TEST10zzz0&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;ma=
+rgin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-fam=
+ily:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:base=
+line;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot=
+;processed&quot;: true</span></p><p dir=3D"ltr" style=3D"line-height:1.38;m=
+argin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-fa=
+mily:arial;color:rgb(0,0,0);background-color:transparent;vertical-align:bas=
+eline;white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0},</span></p><p =
+dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><sp=
+an style=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);backgrou=
+nd-color:transparent;vertical-align:baseline;white-space:pre-wrap"> =C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0&quot;unique_id&quot;: &quot;INDIAPOST_API_TEST10zz=
+z0&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt=
+;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;co=
+lor:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-s=
+pace:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;message&quot;: &quot;Al=
+l is Well&quot;,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-=
+top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:a=
+rial;color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;=
+white-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;validation_passe=
+d&quot;: true,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-to=
+p:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:ari=
+al;color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;wh=
+ite-space:pre-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;result_code&quot;:=
+ 1,</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margi=
+n-bottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;color:rg=
+b(0,0,0);background-color:transparent;vertical-align:baseline;white-space:p=
+re-wrap"> =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0&quot;polling_required&quot;: false=
+</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-b=
+ottom:0pt"><span style=3D"font-size:14.6667px;font-family:arial;color:rgb(0=
+,0,0);background-color:transparent;vertical-align:baseline;white-space:pre-=
+wrap"> =C2=A0=C2=A0=C2=A0}</span></p><p dir=3D"ltr" style=3D"line-height:1.=
+38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:14.6667px;fon=
+t-family:arial;color:rgb(0,0,0);background-color:transparent;vertical-align=
+:baseline;white-space:pre-wrap"> =C2=A0]</span></p><p dir=3D"ltr" style=3D"=
+line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size=
+:14.6667px;font-family:arial;color:rgb(0,0,0);background-color:transparent;=
+vertical-align:baseline;white-space:pre-wrap">}</span></p><div><span style=
+=3D"font-size:14.6667px;font-family:arial;color:rgb(0,0,0);background-color=
+:transparent;vertical-align:baseline;white-space:pre-wrap"><span style=3D"c=
+olor:rgb(34,34,34);font-size:12.6667px">We are giving a lot of </span><b st=
+yle=3D"color:rgb(34,34,34);font-size:12.6667px">mandatory </b><span style=
+=3D"color:rgb(34,34,34);font-size:12.6667px">parameters on the misc_param_l=
+ist, in addition whatever comes in label_from_address must be printed as fr=
+om address. In addition in the response &quot;is_multimodal&quot; flag is s=
+et as 1 (the key will always be in the reponse with value &quot;0&quot; or =
+&quot;1&quot;) -- if it is 1 as in the current case, then in the misc_param=
+_list there will be two keys forward_partner and forward_awb, this awbs bar=
+code also has to be printed on the shipping label and it must be mentioned =
+which forward partners awb number is this (using the forward_partner) key.<=
+/span><br></span></div></span></div><div>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D<wbr>=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D</div><span =
+class=3D"m_-145490013236030442m_6751055979260043138m_-3253930701893537606m_=
+7705884222026229467m_5859721160262976807m_-4010353973257781054m_37759280406=
+23032608m_6938236768345258906m_2642816099017154081m_8103283530105975323m_-3=
+097162890139591449m_-921614715528736546m_-5610537450037270355m_-52965081462=
+55181793m_-8837742746270223873m_3901747998774811005m_-1268926674496822773HO=
+EnZb"><font color=3D"#888888"><span class=3D"m_-145490013236030442m_6751055=
+979260043138m_-3253930701893537606m_7705884222026229467m_585972116026297680=
+7m_-4010353973257781054m_3775928040623032608m_6938236768345258906m_26428160=
+99017154081m_8103283530105975323m_-3097162890139591449m_-921614715528736546=
+m_-5610537450037270355m_-5296508146255181793m_-8837742746270223873m_3901747=
+998774811005m_-1268926674496822773m_-972237841563651839m_-47292904699982863=
+13HOEnZb"><font color=3D"#888888">-- <br><div class=3D"m_-14549001323603044=
+2m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_58597211=
+60262976807m_-4010353973257781054m_3775928040623032608m_6938236768345258906=
+m_2642816099017154081m_8103283530105975323m_-3097162890139591449m_-92161471=
+5528736546m_-5610537450037270355m_-5296508146255181793m_-883774274627022387=
+3m_3901747998774811005m_-1268926674496822773m_-972237841563651839m_-4729290=
+469998286313m_6215599574418659024gmail_signature"><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div style=3D"font-size:12.8px"><font face=3D"georgia, s=
+erif">Sourav Sarkar</font></div><div style=3D"font-size:12.8px"><font face=
+=3D"georgia, serif">Co-Founder &amp; CTO</font></div><div style=3D"font-siz=
+e:12.8px"><font face=3D"georgia, serif">+91 8670500969</font></div><div sty=
+le=3D"font-size:12.8px"><font face=3D"georgia, serif">GoPigeon,=C2=A0<span =
+style=3D"font-size:12.8px">J.K. Ashwath Lakshmi, 777, 2nd floor, 4-C block,=
+ Koramangala, Bangalore</span></font></div><div style=3D"font-size:12.8px">=
+<img src=3D"http://pigen.in/img/pigen-home-logo-final-4.png" alt=3D"stylio =
+theme" style=3D"border:0px;vertical-align:middle">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<br><span style=3D"font-family:arial;font-=
+size:10px"><br></span></div><div style=3D"font-size:12.8px"><span style=3D"=
+font-family:arial;font-size:10px">Disclaimer:</span><br style=3D"font-famil=
+y:arial;font-size:10px"><span style=3D"font-family:arial;font-size:10px">&q=
+uot;The information contained herein (including any accompanying documents)=
+ is confidential and is intended solely for the addressee(s). If you have e=
+rroneously received this message, please immediately delete it and notify t=
+he sender. Also, if you are not the intended recipient, you are hereby noti=
+fied that any disclosure, copying, distribution or taking any action in rel=
+iance on the contents of this message or any accompanying document is stric=
+tly prohibited and is unlawful. The organization is not responsible for any=
+ damage caused by a virus or alteration of the e-mail by a third party or o=
+therwise.=C2=A0</span></div></div></div></div></div></div>
+</font></span></font></span></div></div><span class=3D"m_-14549001323603044=
+2m_6751055979260043138m_-3253930701893537606m_7705884222026229467m_58597211=
+60262976807m_-4010353973257781054m_3775928040623032608m_6938236768345258906=
+m_2642816099017154081m_8103283530105975323m_-3097162890139591449m_-92161471=
+5528736546m_-5610537450037270355m_-5296508146255181793m_-883774274627022387=
+3m_3901747998774811005m_-1268926674496822773HOEnZb"><font color=3D"#888888"=
+>
+</font></span></blockquote></div><span class=3D"m_-145490013236030442m_6751=
+055979260043138m_-3253930701893537606m_7705884222026229467m_585972116026297=
+6807m_-4010353973257781054m_3775928040623032608m_6938236768345258906m_26428=
+16099017154081m_8103283530105975323m_-3097162890139591449m_-921614715528736=
+546m_-5610537450037270355m_-5296508146255181793m_-8837742746270223873m_3901=
+747998774811005m_-1268926674496822773HOEnZb"><font color=3D"#888888"><br></=
+font></span></div>
+</div></div></blockquote></div><br></div>
+</blockquote></div><br></div></div></div>
+</blockquote></div><br></div>
+</blockquote></div></div>
+</blockquote></div></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</blockquote></div></div>
+</div></div></blockquote></div><br></div></div></div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+</div></blockquote></div><br></div>
+</blockquote></div></div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div></div><=
+/div><span class=3D"m_-145490013236030442m_6751055979260043138m_-3253930701=
+893537606HOEnZb"><font color=3D"#888888">-- <br></font></span><div class=3D=
+"m_-145490013236030442m_6751055979260043138m_-3253930701893537606m_77058842=
+22026229467gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"=
+ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><spa=
+n class=3D"m_-145490013236030442m_6751055979260043138m_-3253930701893537606=
+HOEnZb"><font color=3D"#888888"><div style=3D"font-size:12.8px"><font face=
+=3D"georgia, serif">Shubham Sharma</font></div><div style=3D"font-size:12.8=
+px"><font face=3D"georgia, serif">AVP - Key Account Management</font></div>=
+<div style=3D"font-size:12.8px"><font face=3D"georgia, serif">+91 805008050=
+9</font></div></font></span><span><div style=3D"font-size:12.8px"><font fac=
+e=3D"georgia, serif">GoPigeon,=C2=A0<span style=3D"font-size:12.8px">J.K. A=
+shwath Lakshmi, 777, 2nd floor, 4-C block, Koramangala, Bangalore</span></f=
+ont></div><div style=3D"font-size:12.8px"><img src=3D"http://pigen.in/img/p=
+igen-home-logo-final-4.png" alt=3D"stylio theme" style=3D"border:0px;vertic=
+al-align:middle">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0=
+</div></span></div></div></div></div></div></div></div></div>
+</div>
+</blockquote></div><br><br clear=3D"all"><div><br></div></div></div><span c=
+lass=3D"m_-145490013236030442m_6751055979260043138HOEnZb"><font color=3D"#8=
+88888">-- <br><div class=3D"m_-145490013236030442m_6751055979260043138m_-32=
+53930701893537606gmail_signature" data-smartmail=3D"gmail_signature"><div d=
+ir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr=
+"><div dir=3D"ltr"><div><span style=3D"color:rgb(102,102,102);font-size:12.=
+8px">Best Regards,</span><br></div><font color=3D"#666666">Rakshit Narayana=
+n - <a href=3D"http://www.unicommerce.com" target=3D"_blank">Unicommerce</a=
+></font><div><font color=3D"#666666">Channel development | Enterprise Solut=
+ion Expert=C2=A0</font></div><div><b><font color=3D"#666666">+91-9711576893=
+</font></b></div><div><font color=3D"#666666">Skype: rakshit.narayanan1</fo=
+nt></div></div></div></div></div></div></div></div></div></div>
+</font></span></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"m_-145490013236030442m_6751055979260043138gmail_signature" data-smartma=
+il=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div><span style=3D"color:r=
+gb(102,102,102);font-size:12.8px">Best Regards,</span><br></div><font color=
+=3D"#666666">Rakshit Narayanan - <a href=3D"http://www.unicommerce.com" tar=
+get=3D"_blank">Unicommerce</a></font><div><font color=3D"#666666">Channel d=
+evelopment | Enterprise Solution Expert=C2=A0</font></div><div><b><font col=
+or=3D"#666666">+91-9711576893</font></b></div><div><font color=3D"#666666">=
+Skype: rakshit.narayanan1</font></div></div></div></div></div></div></div><=
+/div></div></div>
+</div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div class=3D"m_-145490013236030442gmail_signature" data-smartmail=3D"gmail=
+_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><d=
+iv><div dir=3D"ltr"><div dir=3D"ltr"><div><span style=3D"color:rgb(102,102,=
+102);font-size:12.8px">Best Regards,</span><br></div><font color=3D"#666666=
+">Rakshit Narayanan - <a href=3D"http://www.unicommerce.com" target=3D"_bla=
+nk">Unicommerce</a></font><div><font color=3D"#666666">Channel development =
+| Enterprise Solution Expert=C2=A0</font></div><div><b><font color=3D"#6666=
+66">+91-9711576893</font></b></div><div><font color=3D"#666666">Skype: raks=
+hit.narayanan1</font></div></div></div></div></div></div></div></div></div>=
+</div>
+</div>
+</div></div></blockquote></div><br></div>
+
+--001a113ce47611f70505434891c5--
+--001a113ce47611f70b05434891c7
+Content-Type: application/pdf; name="PROV1370212_new.pdf"
+Content-Disposition: attachment; filename="PROV1370212_new.pdf"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_iwivtjr60
+
+JVBERi0xLjQKJeLjz9MKNSAwIG9iago8PC9Db2xvclNwYWNlL0RldmljZVJHQi9TdWJ0eXBlL0lt
+YWdlL0hlaWdodCA4Ny9GaWx0ZXIvRENURGVjb2RlL1R5cGUvWE9iamVjdC9XaWR0aCAyNDkvQml0
+c1BlckNvbXBvbmVudCA4L0xlbmd0aCA1OTg2Pj5zdHJlYW0K/9j/4AAQSkZJRgABAQEAYABgAAD/
+7AARRHVja3kAAQAEAAAAUAAA/9sAQwACAQECAQECAgICAgICAgMFAwMDAwMGBAQDBQcGBwcHBgcH
+CAkLCQgICggHBwoNCgoLDAwMDAcJDg8NDA4LDAwM/9sAQwECAgIDAwMGAwMGDAgHCAwMDAwMDAwM
+DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAVwD5AwEiAAIR
+AQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAAB
+fQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5
+OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeo
+qaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMB
+AQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYS
+QVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNU
+VVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5
+usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/n/ooooA
+KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo
+oooAKKK634BfBvVf2jPjt4K+HuhS2cGt+O9esfDunyXbslvHcXdxHbxNIyhiEDyKSQCQM4B6UAcl
+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
+fxRq19r3iHX7p73UNQvZTLcXczklndjySSfw6DFfox/wSh/4OevjB/wTf8Dad4C8QaRZ/Fb4baUN
+lhp1/eNaajpMf/PK3ugr4iHZJEcL0UqOn5l0Z6E9qAP6TW/4PY/gk+iC4b4N/E7+2Fj4h8+wMG7H
+3fO8zcF9/L/Dmvn/AEf/AIPY/GcP7Q2pa1qHwZ0y5+HDaabXTvDdtr5gvorrzVb7VPetbuJPkDII
+0iRRuBySMn8M93sBQWz2AFAHs3/BQD9rb/htv9tf4gfGC10WbwqfG2rf2pHp3237U9gdiKFEwSPe
+Rszu2L9K/U7/AIJ8/wDB5J4y+CXw503wr8c/AcvxJ/sqFLaDxLpV+tnqk0aDANxFIpjnkxgeYrRk
+4y24kmvxKBxgjORS7hnOMUAf0jeMf+D2j4N6dodxL4b+C3xI1LVGGUh1C8sdPgkbHG6WN5mA+iGv
+xx/4Kx/8Fkfih/wVv+Jen6l4zWy0Lwr4eMg0Hw1pzMbTTt+A8rs3MszBVBdscDCqor5H3cYxSZ9s
+0AfqN/wRV/4OOrT/AIJE/sza18O7j4QXHj5tX1yXWftyeJ10wRB4o4/L8s2s2ceXnduHXGOK+xP+
+I5PTu/7M96f+5+X/AOV9fz7buCMcGkoA/fvxT/we86d4k8Malpy/s13sDahay2wl/wCE9U+XvQru
+x/Z/OM5r8BmIGQOP0ptGaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2QplbmRzdHJlYW0KZW5kb2JqCjYg
+MCBvYmoKPDwvRmlsdGVyL0ZsYXRlRGVjb2RlL0xlbmd0aCAyNTcwPj5zdHJlYW0KeJyVWd9T27oS
+fuev2Jk7dyY9Q4wk/+bpUig9nNsDaUh77gMvJhbExbFT24Hmv78rS7ItRxBapmBZu9+3Wu2uZOnn
+0cfFESUQuQwW6RGBKaMOCdWzS4kTdB1u7HixaHxaHH09+tn+Z/AX9n3GZ4EDBH8osJA4LICI+rBY
+H51cMkCGxcPRZJH8gqviucyW/MPih8AxUX7ib/H0A6Fe2jfCNDTCc2F9RCPm+LqZH91ip2rHbbdo
+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
+p0Am11nBmx2IP3BT5Hohe+PGkzJgHnG8tyJayDBPyUz+ACxo67LJyiLJ4XNZpjWcwOfsoalhCpcV
+51A+wLKsmzEGiTTGv0DMflE2sEl2yX2OKgU8VDx7XDUIluqDyTt7kN590GEKSQ0bXkHNl8IgYHeT
+FfaiAVjI4ZwXTYVG3iY5iooV8mzZHNPYD0am0ZgNXBDJsp3zpObCSI5gGc4msuG41pttg4yPvOBV
+e92QqbsnYeGKF/iUlkgnRldw7K+zxyJpthV3xqxhoB1y9QC7cgur5Fng7ODnlldiWSoreEmKBpoS
+noryBdZlhQL35bYBERgbuSWq4SlDz+zQuqJJlrJvua2bct36pnpu7WtOl0nF/7NRV5UOjkUQLJM8
+F/4XC6hHPN+jmAdjU4PDMUK9LkauCjgXzsN5mHMcenEMyp1V2xTjwQl6KPO8fBGzq06gT8eQLOpo
+mbmevuOqlVI9q++4ao27uTBuWk/lTSvsXaiO1CPtn4m+aIXuPhXaC1XApKeWC9XOaeI+tVL3qdBf
+qA5kvS6BRh0u25+df/gxhmPF7zEseNVkDzt0eSJjo+KPWY08bc7I3myJwQxYaDBiRO4MrBF3x+hu
+nCOMZp1FmM6EiZzAIvdQVkuOSKiXCpS9mxLaOfdllS1XUCd5GxyPbfWoN3yJBrSpJFPtPsvzEwzM
+egVrjjGPbtyuBdk6Sbm4DVujqXWbce2YkBjtLOpEVgFEFgzLEosIot7velQ4UTXx/45ypk8KZW5k
+c3RyZWFtCmVuZG9iago4IDAgb2JqCjw8L0NvbnRlbnRzIDYgMCBSL1R5cGUvUGFnZS9SZXNvdXJj
+ZXM8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXS9Gb250PDwv
+RjEgMiAwIFIvRjIgNCAwIFI+Pi9YT2JqZWN0PDwvWGYxIDEgMCBSL1hmMiAzIDAgUi9pbWcwIDUg
+MCBSPj4+Pi9QYXJlbnQgNyAwIFIvTWVkaWFCb3hbMCAwIDU5NSA4NDJdPj4KZW5kb2JqCjkgMCBv
+YmoKPDwvUy9KYXZhU2NyaXB0L0pTKHRoaXMucHJpbnRcKFwpOyk+PgplbmRvYmoKMTAgMCBvYmoK
+PDwvRmlsdGVyL0ZsYXRlRGVjb2RlL0xlbmd0aCAxOTk+PnN0cmVhbQp4nE2PzYoCMRCE73mKOo4H
+3cwoOHsVXFE8rJCjlzjTMVnyg8mMi29vZ09L01DNV01XP8ROiVaiX3dQo5BYrvuV3Fa9V+IiHn/d
+4cTowLq6IblatB36dgMVxMcXTxLKiGbQxSJQSFnHcQ6wuuBGFEHG0DDRiNuLOZjCTShWe88G6GFI
+c6zcpAwXMVnCNOeYnpSRDIr2VH6t8wTjvIt3hBcyVctqoX7+p9p+9jVV853TM91nwrU5xtHp6wJn
+FxwfqQv83hu4cEmjCmVuZHN0cmVhbQplbmRvYmoKMTEgMCBvYmoKPDwvQ29udGVudHMgMTAgMCBS
+L1R5cGUvUGFnZS9SZXNvdXJjZXM8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdl
+QyAvSW1hZ2VJXS9Gb250PDwvRjEgMiAwIFI+Pj4+L1BhcmVudCA3IDAgUi9NZWRpYUJveFswIDAg
+NTk1IDg0Ml0+PgplbmRvYmoKMiAwIG9iago8PC9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udC9CYXNl
+Rm9udC9IZWx2ZXRpY2EvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nPj4KZW5kb2JqCjQgMCBvYmoK
+PDwvU3VidHlwZS9UeXBlMS9UeXBlL0ZvbnQvQmFzZUZvbnQvSGVsdmV0aWNhLUJvbGQvRW5jb2Rp
+bmcvV2luQW5zaUVuY29kaW5nPj4KZW5kb2JqCjMgMCBvYmoKPDwvU3VidHlwZS9Gb3JtL0ZpbHRl
+ci9GbGF0ZURlY29kZS9UeXBlL1hPYmplY3QvTWF0cml4IFsxIDAgMCAxIDAgMF0vRm9ybVR5cGUg
+MS9SZXNvdXJjZXM8PC9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJ
+XS9Gb250PDwvRjEgMiAwIFI+Pj4+L0JCb3hbMCAwIDE2OCAzOS42Nl0vTGVuZ3RoIDIzNT4+c3Ry
+ZWFtCnicXZO9ToMxDEX3PEVG2qHk2rGTrEhlBaFPvAEdkFh4/4EiWHKU6do+jn+SVtcls6p6q98f
+xXcZf9L+5dyltEcLtIALvIG3Dp2IXygWvPse7wP+tfu77f7e4QcfDRp8oN+Yuz/Bp+3xCT7BD/Q7
+MO8BfmDeU9Cx8xP9Tsx74f6F+1dC87000YCNqyUN2JlkNKALadDAHMaHasxhA4g3GpjDWbpjferM
+0Zmj88d0rEDBPxd49ArWEcyRXEN2GjDCW3k6yuOz6qzHrai2+1ENv9xXrN/A46s8nF/fXt7lo5ns
+fDo+y/UoP6pE32kKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1N1YnR5cGUvRm9ybS9GaWx0
+ZXIvRmxhdGVEZWNvZGUvVHlwZS9YT2JqZWN0L01hdHJpeCBbMSAwIDAgMSAwIDBdL0Zvcm1UeXBl
+IDEvUmVzb3VyY2VzPDwvUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdl
+SV0vRm9udDw8L0YxIDIgMCBSPj4+Pi9CQm94WzAgMCAyMDcgMzcuNjZdL0xlbmd0aCAyNzI+PnN0
+cmVhbQp4nF2TMVJDMQxEe5/CJUkRvLIsyy0zhI5J8a9ACmZouH8BGWj8/q9W9q7XK7nVdYmoqpb1
++6P0HY4/aP8wdyjtuwW2QBf4Br45cAAnzDbgvuv3AF77fsf5Dr7jfF/7+jCk5VifOw74DeQVA3ju
+eLZdb8LvhN+JvBLnJ/iJvBJ5LeS14H+Bv5CXGgJTcxaCBWrIWEBq0mQB95BRwzipHDV1ZK/OYe+0
+3qnh1HBqOH04rQ++uYEmatDHoI8QKME2RHAHfUxqTLZhsg2TrUyOQ9JH4gVpMULOoBZ9LFzfGjSs
+dRYQ4b28HOX5qpr1uBfV9vurRlxSVY+Nx1d5Ot/e3m/t8cnc2vl0fJbXo/wAoXUU+gplbmRzdHJl
+YW0KZW5kb2JqCjcgMCBvYmoKPDwvS2lkc1s4IDAgUiAxMSAwIFJdL1R5cGUvUGFnZXMvQ291bnQg
+Mj4+CmVuZG9iagoxMiAwIG9iago8PC9OYW1lc1soMDAwMDAwMDAwMDAwMDAwMCkgOSAwIFJdPj4K
+ZW5kb2JqCjEzIDAgb2JqCjw8L0phdmFTY3JpcHQgMTIgMCBSPj4KZW5kb2JqCjE0IDAgb2JqCjw8
+L05hbWVzIDEzIDAgUi9UeXBlL0NhdGFsb2cvUGFnZXMgNyAwIFIvVmlld2VyUHJlZmVyZW5jZXM8
+PC9OdW1Db3BpZXMgMT4+Pj4KZW5kb2JqCjE1IDAgb2JqCjw8L01vZERhdGUoRDoyMDE2MTIxMDEy
+Mzk1OCswNSczMCcpL0NyZWF0aW9uRGF0ZShEOjIwMTYxMjEwMTIzOTU4KzA1JzMwJykvUHJvZHVj
+ZXIoaVRleHSuIDUuNC4yIKkyMDAwLTIwMTIgMVQzWFQgQlZCQSBcKEFHUEwtdmVyc2lvblwpKT4+
+CmVuZG9iagp4cmVmCjAgMTYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDEwMTE4IDAwMDAwIG4g
+CjAwMDAwMDk0ODAgMDAwMDAgbiAKMDAwMDAwOTY2MSAwMDAwMCBuIAowMDAwMDA5NTY4IDAwMDAw
+IG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwNjE1NCAwMDAwMCBuIAowMDAwMDEwNjEyIDAw
+MDAwIG4gCjAwMDAwMDg3OTIgMDAwMDAgbiAKMDAwMDAwOTAwMSAwMDAwMCBuIAowMDAwMDA5MDU0
+IDAwMDAwIG4gCjAwMDAwMDkzMjEgMDAwMDAgbiAKMDAwMDAxMDY3MCAwMDAwMCBuIAowMDAwMDEw
+NzIzIDAwMDAwIG4gCjAwMDAwMTA3NjIgMDAwMDAgbiAKMDAwMDAxMDg1NSAwMDAwMCBuIAp0cmFp
+bGVyCjw8L0luZm8gMTUgMCBSL0lEIFs8M2FkNDZjNzA0MGRkNjdlY2I4ZWE4YzliMGZiN2U5NDc+
+PGZmY2VjOGQ5OGUxN2JlOGQ4OTc2ODExZWYzMWZhZTkwPl0vUm9vdCAxNCAwIFIvU2l6ZSAxNj4+
+CiVpVGV4dC01LjQuMgpzdGFydHhyZWYKMTEwMDkKJSVFT0YK
+--001a113ce47611f70b05434891c7--

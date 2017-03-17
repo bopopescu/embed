@@ -1,0 +1,129 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2708131qgu;
+        Thu, 2 Feb 2017 00:03:58 -0800 (PST)
+X-Received: by 10.202.232.83 with SMTP id f80mr3100213oih.60.1486022638915;
+        Thu, 02 Feb 2017 00:03:58 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-ot0-x22a.google.com (mail-ot0-x22a.google.com. [2607:f8b0:4003:c0f::22a])
+        by mx.google.com with ESMTPS id x14si9151685oif.124.2017.02.02.00.03.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 02 Feb 2017 00:03:58 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c0f::22a is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c0f::22a;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c0f::22a is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-ot0-x22a.google.com with SMTP id f9so6360996otd.1
+        for <digvijay@unicommerce.com>; Thu, 02 Feb 2017 00:03:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=ItbX1tPXkaTkvHAI65Q5VKYltl8yOhGxNKljNCYZKaE=;
+        b=DPCRXMaqLkfZtqZa0BQTuhIdkT/nqhazPufYyHgIhxpc4dEp9Xjcl0rmiQUOU8hN63
+         6yR6K5ZzBjBy1CBDOuTR24Hdg2Lgi+KZP1zQ8WuNodC08Ic3A3zwVaYrZJhPg8iT9FEu
+         fWCFqOvGBYG8JIDjlZp5XETICMC+XzWjxBG7aLhm3seE/vmjNb2OQ58cZnc4UR6nwC8c
+         6seB11qfjQJCigiT7K8yUbeY00ZxnwQKqMZnTaj4AII5vocawTCKaI8BGZJhjs+4LSX8
+         QoONhPQAbHtES18LzpCOmoFzlruZCbwULudToFOVqygKNFlaMNcG88o6bMask64UGmlr
+         rEbw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=ItbX1tPXkaTkvHAI65Q5VKYltl8yOhGxNKljNCYZKaE=;
+        b=NphGLZFRr4V287cwrClDm7cZ7/eIX2LZmDQ0M++AOylxDCJKDcpGmzaz10jT0Fg7g0
+         R1ZduQR/ba18RfWg4SQvA9LbfAh3CRqPbCuJ6ia/I1yyWjQ6aNOzNrZC/1KXL7pz9i1k
+         rRzDG2YBEn1rR78U7HegwiB7f7RVFhQ56SOIvrUSQZaf8jsDNxuM1XGbqImuCTch0JeS
+         XOyW0FS6fRf4iSoLMWjIMFogF9CML2a+7GVuWOrtmXBRHjM+G6GxJVlMX+wMXEJOHhdA
+         GBVAd0cyn2j/kmqFPNgHi7h6WMJZ0JowxN3BuXitE2ZfxMlG8VaLJn3D7Ym+/4H781wt
+         UhrQ==
+X-Gm-Message-State: AIkVDXLfN4i8y/rajVV+YZ/WcGDewSaEIbq/5G/4bFEXDLq/958GFwdyMqurJiJdc8reESiUpyHNN/jGPbpQaA==
+X-Received: by 10.157.49.26 with SMTP id e26mr3155961otc.23.1486022638371;
+ Thu, 02 Feb 2017 00:03:58 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.151.17 with HTTP; Thu, 2 Feb 2017 00:03:57 -0800 (PST)
+In-Reply-To: <CAGttGOLnNv1iwJD_=Rq0KQTH9uOht54hS4VapgL+2wFUmw+h5Q@mail.gmail.com>
+References: <CAGttGOLnNv1iwJD_=Rq0KQTH9uOht54hS4VapgL+2wFUmw+h5Q@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 2 Feb 2017 13:33:57 +0530
+Message-ID: <CA+zaFGiPHFG-ew3j50e=YP5j0kTUb99yfGEcaOXBVkhjruWdhQ@mail.gmail.com>
+Subject: Fwd: Developer key for wormhole .
+To: Sagar Sahni <sagar@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a11417e867d86400547879b0a
+
+--001a11417e867d86400547879b0a
+Content-Type: multipart/alternative; boundary=001a11417e867d863c0547879b08
+
+--001a11417e867d863c0547879b08
+Content-Type: text/plain; charset=UTF-8
+
+Use this key to access wormhole and Staging.
+
+---------- Forwarded message ----------
+From: Puneet Sharma <puneet@unicommerce.com>
+Date: Thu, Feb 2, 2017 at 1:32 PM
+Subject: Developer key for wormhole .
+To: Sunny Agarwal <sunny@unicommerce.com>
+
+
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+--001a11417e867d863c0547879b08
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Use this key to access wormhole and Staging.</div><br=
+><div class=3D"gmail_quote">---------- Forwarded message ----------<br>From=
+: <b class=3D"gmail_sendername">Puneet Sharma</b> <span dir=3D"ltr">&lt;<a =
+href=3D"mailto:puneet@unicommerce.com">puneet@unicommerce.com</a>&gt;</span=
+><br>Date: Thu, Feb 2, 2017 at 1:32 PM<br>Subject: Developer key for wormho=
+le .<br>To: Sunny Agarwal &lt;<a href=3D"mailto:sunny@unicommerce.com">sunn=
+y@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr"><br clear=3D"all"><di=
+v><div class=3D"m_-8839928192158025284gmail_signature" data-smartmail=3D"gm=
+ail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Thanks,<div>Puneet Sh=
+arma</div><div>Unicommerce Esolutions Pvt. Ltd</div><div>+91-7666182895</di=
+v></div></div></div></div></div>
+</div>
+</div><br></div>
+
+--001a11417e867d863c0547879b08--
+--001a11417e867d86400547879b0a
+Content-Type: application/x-x509-ca-cert; name="developer_uni.pem"
+Content-Disposition: attachment; filename="developer_uni.pem"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_iyo3g9i50
+
+LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBeWkzLzJZcU9i
+ZmhmdTVSQzRFSlBNOGFFVnI5K1ZMSk1wc0o3OTFoOXVOTGg4UWxkClJDVUVYcGMwTEFkdHQ2Qk9Q
+cnNXaDhqbFNkZU5YcmJ6NHJacVkrRGFrSk1jcGNtSzN4amhqblVkVWNscnlrWHQKdjJEeURGdXQ5
+RjMwUGFjVktFUXhuZkZnNXczblRRaGM5Y1hROHhFUFRrYXZiKzdiUnhMRnhQQnhaWVBrQk03dwpl
+NEl2ZmxOR25XNjd0V2p1eHZzWjJJQmZRU2VMWGZ1VThNRlZTejlSaklmYnJYaVVLL1BzWWROV1VQ
+UEVuTkpRCklBQTNSb2tSZ3JSdS82Zis1SlJsd0oyNitEZU5GckgrRE9XeEtUekQ0YXR4ZFd0QWhR
+azRaYVREZjJYVlJPRGMKSWxMZ3IzcGpta09rMTNoUTE5d3lIcGFCTzd2YzBmKzdrYWdTaXdJREFR
+QUJBb0lCQUFZbmpsRkYrWDM1Z0ppSwpNOXIxeWNsdXNwcWRhN0FTV1dqK0pKM3I4Sy9PbzVnZHk5
+d0dNSExjc1hiaHB3SmUrK0xHK1RHYStQZmRldTAyCkxvaHBPeVhkTTJvUlFGNy9tcDJkK1VmSDR1
+T1plUkdJUFd1RS9QbEpWU3RLTE9RdmtPSlA2UjdBdVUxdlMrbzUKWmZNSldZbjhxL1diQ3o0aURF
+VEdtb1NiT1NoNDVHZG9sOTI4TlIreFJGcUNSYjNMT0s3OEx0NFkyMHlVdVNOWgpIOGk4MzQyQ2hh
+cGFWbWdzbmZ4ZHE4RkVITERDa1I1MDZWeVNuWG91dFgzcDVyRFdJMGY3UGU3cjRBK2YraEZhCjdi
+MmhyV2o3RWNpeGdwZEJmU25BdklCV1EvSXJRTHZIVWxxeEZjVktOTmM5bEpmbGdlS1kvLzhwSGtv
+NUcvTEoKczFHdzdka0NnWUVBLzJ4Q1pubjJycmtCWGMrdDI1VnkyellUd2o3K1QySHZsN2F5RGox
+cmdDOTBCbXZ5aXBDeAowWXpZNUxra001WmNpT2crTGpMRGxMZ3h0b0UrVlNCdkkxaStoZ2llL0Ix
+Y3UyOWpOUS93WG91UFZHbFFiay9RCmRhaUdWay8zdzVFQWZlVGF6b3BMcWpySEpWbjFHb29hVUVa
+U2I1d3ZtUVZUQUNDWEtnczZpbmNDZ1lFQXlxTHgKZmdleDQ1Y3o0RjBCNXVyWFdMUldXOHhieFlT
+ZkI0aTJsUFk4QUxCQWJZaUYwaU13ZWQya1VWSzU2NUU5Q2dyTwphZG8vbEhkNTZtTnlyK21qV1Vr
+S24rd2VMN2FJL1Y1TExnaDBHU3dOVWo1UkdGbVFlUmNKMkJEMU5VSEhaQk1uCkE3WWdqNWM0cmhi
+dTltcGEwbnprcWJrTlNBWTg5RkUyZ25ZWmFZMENnWUJQdlpDTlJZNUp4ZUF6VlY3RnFzYU0Kd1Rr
+eDcxQ2RuOG1ZNTZSMjVaM21DdXFDQnJsVm9RNmlpUUk5aGI5VGk2R2Y3RUZkVXVQVVRoelhDVXBZ
+Y1NQQgpPVGRoeU5jNWhrRXBFd0U1MDV3TEtDNjYvNVhvbW1wT0VTcS9UMy9lUWlxUkl4MWNWYmlC
+a0pBVGpSNEVCeEZuCjlreE9JOGlJVVMwMFlQaFFXK2tPeVFLQmdBbW4rQ0FNVjlMRG1zby9SRjd2
+by9GckxvNVRUN0E2NEtVb1E2TVgKbE1abm43cFlmaUFFWTBQN1p1QWxOQXpncityeGx1SitidmN4
+TmxNUUNDQVAzeVBiRWpHS3UrbUVKa1VFb0VxQwpScDRJZGw0TDhDdGI0VUdUOG5ra1hicjY5bmh6
+WFRHVkZUb2lkNlg4RzhrTVNtV3JZKzRlamw1M1JhSlMyR2toCkhaYmxBb0dBWmdxUFZKdUNubzEy
+bjBRb1Z0Tm9sTVhsSjZFRWY0WTJJenN3SVZPcTF6elBLblZJVHdxeW1yL3UKY2hFY2N2bkZNL0Uy
+SHV6UnZVYWVpQ0JYaHdScnlTcC9LNHY1THdRakNDWGx1UHNVT2p6RkZyVW1MYkNZZ2ZIKwp3ZGNs
+blpHKzZPK3kvRjN4QS9ma21iUG9rUll0VzlHZ0ZQZ0wrMjcwc1JCTGNLZ1hFRzg9Ci0tLS0tRU5E
+IFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+--001a11417e867d86400547879b0a--

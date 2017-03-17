@@ -1,0 +1,73 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Sun, 19 Feb 2017 19:42:31 -0800 (PST)
+Date: Mon, 20 Feb 2017 09:12:31 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3soora9JMcsew1P8VUTAQ7CqD5HRNif_L2XU3dv2cSLoJPg@mail.gmail.com>
+Subject: Problems with SWA
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Varad Singhal <varad@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11c13e9ea1f0300548ee0dc7
+
+--001a11c13e9ea1f0300548ee0dc7
+Content-Type: text/plain; charset=UTF-8
+
+GET /shipments/{shipment-id}/containers/{trackingid}/label
+
+Sample Response :
+{"shippingLabelDetails": {
+"labelStream": {
+"hb": [
+"ByteStream"
+],
+"offset": 0,
+"isReadOnly": false,
+"bigEndian": true,
+"nativeByteOrder": false,
+"mark": -1,
+"position": 0,
+"limit": 24008,
+"capacity": 24008,
+"address": 0
+},
+"labelSpecification": {
+"labelDimensions": {
+"length": {
+"dimensionUnit": "IN",
+"dimensionValue": 6
+},
+"width": {
+"dimensionUnit": "IN",
+"dimensionValue": 4
+}
+},
+"formatType": "PNG"
+}
+}
+}
+
+
+The corresponding API for *GetShipmentStatusResponse* is missing
+
+--001a11c13e9ea1f0300548ee0dc7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>GET /shipments/{shipment-id}/containers/{trackingid}/=
+label</div><div><br></div><div>Sample Response :</div><div>{&quot;shippingL=
+abelDetails&quot;: {</div><div>&quot;labelStream&quot;: {</div><div>&quot;h=
+b&quot;: [</div><div>&quot;ByteStream&quot;</div><div>],</div><div>&quot;of=
+fset&quot;: 0,</div><div>&quot;isReadOnly&quot;: false,</div><div>&quot;big=
+Endian&quot;: true,</div><div>&quot;nativeByteOrder&quot;: false,</div><div=
+>&quot;mark&quot;: -1,</div><div>&quot;position&quot;: 0,</div><div>&quot;l=
+imit&quot;: 24008,</div><div>&quot;capacity&quot;: 24008,</div><div>&quot;a=
+ddress&quot;: 0</div><div>},</div><div>&quot;labelSpecification&quot;: {</d=
+iv><div>&quot;labelDimensions&quot;: {</div><div>&quot;length&quot;: {</div=
+><div>&quot;dimensionUnit&quot;: &quot;IN&quot;,</div><div>&quot;dimensionV=
+alue&quot;: 6</div><div>},</div><div>&quot;width&quot;: {</div><div>&quot;d=
+imensionUnit&quot;: &quot;IN&quot;,</div><div>&quot;dimensionValue&quot;: 4=
+</div><div>}</div><div>},</div><div>&quot;formatType&quot;: &quot;PNG&quot;=
+</div><div>}</div><div>}</div><div>}</div><div><br></div><div><br></div><di=
+v><p class=3D"gmail-p1">The corresponding API for <b>GetShipmentStatusRespo=
+nse</b> is missing</p></div></div>
+
+--001a11c13e9ea1f0300548ee0dc7--

@@ -1,0 +1,222 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.33.180 with SMTP id j49csp215273qgj;
+        Thu, 13 Oct 2016 05:21:22 -0700 (PDT)
+X-Received: by 10.25.21.233 with SMTP id 102mr9532421lfv.77.1476361282688;
+        Thu, 13 Oct 2016 05:21:22 -0700 (PDT)
+Return-Path: <ravindra@unicommerce.com>
+Received: from mail-lf0-x22e.google.com (mail-lf0-x22e.google.com. [2a00:1450:4010:c07::22e])
+        by mx.google.com with ESMTPS id 42si8252107lfs.417.2016.10.13.05.21.22
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 13 Oct 2016 05:21:22 -0700 (PDT)
+Received-SPF: neutral (google.com: 2a00:1450:4010:c07::22e is neither permitted nor denied by best guess record for domain of ravindra@unicommerce.com) client-ip=2a00:1450:4010:c07::22e;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:4010:c07::22e is neither permitted nor denied by best guess record for domain of ravindra@unicommerce.com) smtp.mailfrom=ravindra@unicommerce.com
+Received: by mail-lf0-x22e.google.com with SMTP id x79so136926787lff.0
+        for <digvijay@unicommerce.com>; Thu, 13 Oct 2016 05:21:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=Krz4bEHP4852aIwejt9S+Vrf1UGifs987WQzuEq6Hvw=;
+        b=C8x07mAE08oeSey4a0m6cAuZDI5DZ/VIJP5N7ilXMPUUXE/fZXdWZZnMQ8p+XLyWi7
+         eCUf6QYgUIhk3isPyo2eowRDtKWy7gjWNShsqvtYP7ybwxxllczDQgJhUPnQbpzkJk4/
+         Fc4+5gaRhDHtfjjkrMqySPcfFLtbs1Uw2v4r67x8OAFUNmTWLcxd9rz9giUilgoYkh0p
+         mqNzVvKEaiVJpaHsPTxH6pHUxMVNvlsH1tqk5ez0l+JLMUhjXB1jkhEtTpNdJzv2d6H+
+         XkcHUzuOdStmn37gEQuxJ+c301osebAN2F5zIoWMxFfomw7FdDKzS2si1/qiyFdrPBBi
+         RoHw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=Krz4bEHP4852aIwejt9S+Vrf1UGifs987WQzuEq6Hvw=;
+        b=CFPlzNe6AciyoZhD1Fh+yOxr5n3s7xaMD+2Dejlh9qZ8QBbWkrlAJ32S5UHkQQim3o
+         cF5LXvIiuXArSLU6zrj+UnlymgrUrI2bI++awbD49J4zDCt8GXOGYDWzx9oOHUBVdQch
+         kHBQXW7JGnrUL4k0+Wl3kY0V2lTnfMvPaqTAHD1GUOn+AliBSgojswnsib2tZS66wIU+
+         Fw4/hlk5k2t5AgbPVEFpfPFEvE48wN2QYq3AMlxoP3EHrmT0rNBmzKnT2fYi8ayIRzWN
+         MM2/rYeV4GlPmdIB+EipaTUTVRvbaBK/H2KFP8/T5Z/B5EIL1J9F1npb3auF0J8ZmXGj
+         yckw==
+X-Gm-Message-State: AA6/9RkIN4GpsyWHDouqzfi2xz1lpqMAQNQ70KG/bgpSyqeAJgmPdsAAuZALSFs+Yk7hTYPmBvv06q5MZ7o41Q==
+X-Received: by 10.28.166.147 with SMTP id p141mr1987305wme.27.1476361282105;
+ Thu, 13 Oct 2016 05:21:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.28.153.73 with HTTP; Thu, 13 Oct 2016 05:21:21 -0700 (PDT)
+In-Reply-To: <CA+zaFGiEvL=bcd2YTxqC+7orG3kMzq42e8iz=xcLJ+F3_Se64g@mail.gmail.com>
+References: <CAMWjBm93A5w3gGLgKWepSPn-xi-uP=2uuNyp8HyR9dMqkSx0uw@mail.gmail.com>
+ <CA+zaFGiEvL=bcd2YTxqC+7orG3kMzq42e8iz=xcLJ+F3_Se64g@mail.gmail.com>
+From: Ravindra Kumar <ravindra@unicommerce.com>
+Date: Thu, 13 Oct 2016 17:51:21 +0530
+Message-ID: <CAMWjBm9Y8+xi0Hf+CYKWRRfWNVeDRNeWaV-eY7pB1KQeFC6BXA@mail.gmail.com>
+Subject: Re: UP FORM
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharma <digvijay@unicommerce.com>, Harsh Pal <harsh@unicommerce.com>, 
+	Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c12943ac7c7f3053ebe25e0
+
+--94eb2c12943ac7c7f3053ebe25e0
+Content-Type: text/plain; charset=UTF-8
+
+Digvijay,
+
+Please confirm on this
+
+Regard's
+Ravindra
+
+On Thu, Oct 13, 2016 at 2:48 PM, Sunny Agarwal <sunny@unicommerce.com>
+wrote:
+
+> Digvijay,
+>
+> Please take care of this.
+>
+> - Sunny
+>
+> On Thu, Oct 13, 2016 at 2:26 PM, Ravindra Kumar <ravindra@unicommerce.com>
+> wrote:
+>
+>> Hi Harsh,
+>>
+>> Please check User are unable to print Form UP 17 and 18 at all Healthkart
+>> Tenant.
+>>
+>> https://healthkartunivedhealthcare.unicommerce.com/order/shi
+>> pments?orderCode=2879173&shipmentCode=HEAL01478
+>> https://healthkartunivedhealthcare.unicommerce.com/oms/
+>> shipment/stateRegulatoryForm/print/UP_FORM17/HEAL01478?legacy=1
+>>
+>> HTTP Status 500 - Request processing failed; nested exception is
+>> java.lang.NullPointerException
+>>
+>> *type* Exception report
+>>
+>> *message* *Request processing failed; nested exception is
+>> java.lang.NullPointerException*
+>>
+>> *description* *The server encountered an internal error that prevented
+>> it from fulfilling this request.*
+>>
+>> *exception*
+>>
+>> org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+>> 	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+>> 	org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857)
+>> 	javax.servlet.http.HttpServlet.service(HttpServlet.java:618)
+>> 	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842)
+>> 	javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+>> 	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+>> 	com.codahale.metrics.servlet.AbstractInstrumentedFilter.doFilter(AbstractInstrumentedFilter.java:104)
+>> 	com.unifier.web.filter.AccessControlFilter.doFilterInternal(AccessControlFilter.java:68)
+>> 	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+>> 	org.tuckey.web.filters.urlr
+>>
+>>
+>>
+>> Regard's
+>> Ravindra
+>>
+>
+>
+
+--94eb2c12943ac7c7f3053ebe25e0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"color:rgb(11,83,148)=
+"><span style=3D"color:rgb(34,34,34);font-size:12.8px">Digvijay,</span><br>=
+</div><div class=3D"gmail_default" style=3D"color:rgb(11,83,148)"><span sty=
+le=3D"color:rgb(34,34,34);font-size:12.8px"><br></span></div><div class=3D"=
+gmail_default"><span style=3D"font-size:12.8px">Please confirm on this=C2=
+=A0</span></div></div><div class=3D"gmail_extra"><br clear=3D"all"><div><di=
+v class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"=
+ltr">Regard&#39;s<div>Ravindra</div></div></div></div>
+<br><div class=3D"gmail_quote">On Thu, Oct 13, 2016 at 2:48 PM, Sunny Agarw=
+al <span dir=3D"ltr">&lt;<a href=3D"mailto:sunny@unicommerce.com" target=3D=
+"_blank">sunny@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div dir=3D"ltr">Digvijay,<div><br></div><div>Please take car=
+e of this.</div><span class=3D"HOEnZb"><font color=3D"#888888"><div><br></d=
+iv><div>- Sunny</div></font></span></div><div class=3D"HOEnZb"><div class=
+=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Thu, O=
+ct 13, 2016 at 2:26 PM, Ravindra Kumar <span dir=3D"ltr">&lt;<a href=3D"mai=
+lto:ravindra@unicommerce.com" target=3D"_blank">ravindra@unicommerce.com</a=
+>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 =
+0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div=
+ class=3D"gmail_default" style=3D"color:rgb(11,83,148)">Hi Harsh,</div><div=
+ class=3D"gmail_default" style=3D"color:rgb(11,83,148)"><br></div><div clas=
+s=3D"gmail_default" style=3D"color:rgb(11,83,148)">Please check User are un=
+able to print Form UP 17 and 18 at all Healthkart Tenant.</div><div class=
+=3D"gmail_default" style=3D"color:rgb(11,83,148)"><div style=3D"color:rgb(3=
+4,34,34);font-size:12.8px"><br></div><div style=3D"color:rgb(34,34,34);font=
+-size:12.8px"><a href=3D"https://healthkartunivedhealthcare.unicommerce.com=
+/order/shipments?orderCode=3D2879173&amp;shipmentCode=3DHEAL01478" target=
+=3D"_blank">https://healthkartunivedhealth<wbr>care.unicommerce.com/order/s=
+hi<wbr>pments?orderCode=3D2879173&amp;shipm<wbr>entCode=3DHEAL01478</a></di=
+v><div class=3D"m_-3577000598580383462m_3713249411152530582gmail-yj6qo m_-3=
+577000598580383462m_3713249411152530582gmail-ajU" style=3D"margin:2px 0px 0=
+px;color:rgb(34,34,34);font-size:12.8px"><div id=3D"m_-3577000598580383462m=
+_3713249411152530582gmail-:2rv" class=3D"m_-3577000598580383462m_3713249411=
+152530582gmail-ajR"><img class=3D"m_-3577000598580383462m_37132494111525305=
+82gmail-ajT" src=3D"https://ssl.gstatic.com/ui/v1/icons/mail/images/cleardo=
+t.gif"></div></div></div><div class=3D"gmail_default"><font color=3D"#0b539=
+4"><a href=3D"https://healthkartunivedhealthcare.unicommerce.com/oms/shipme=
+nt/stateRegulatoryForm/print/UP_FORM17/HEAL01478?legacy=3D1" target=3D"_bla=
+nk">https://healthkartunivedhealth<wbr>care.unicommerce.com/oms/<wbr>shipme=
+nt/stateRegulatoryForm/<wbr>print/UP_FORM17/HEAL01478?<wbr>legacy=3D1</a></=
+font><br></div><div class=3D"gmail_default"><font color=3D"#0b5394"><br></f=
+ont></div><div class=3D"gmail_default"><h1 style=3D"font-family:tahoma,aria=
+l,sans-serif;color:white;background-color:rgb(82,93,118);font-size:22px">HT=
+TP Status 500 - Request processing failed; nested exception is java.lang.Nu=
+llPointerException</h1><div class=3D"m_-3577000598580383462m_37132494111525=
+30582gmail-line" style=3D"height:1px;background-color:rgb(82,93,118);border=
+:none;color:rgb(0,0,0);font-family:tahoma,arial,sans-serif;font-size:medium=
+"></div><p style=3D"font-family:tahoma,arial,sans-serif;background-image:in=
+itial;background-position:initial;background-size:initial;background-repeat=
+:initial;background-origin:initial;background-clip:initial;color:rgb(0,0,0)=
+;font-size:12px"><b style=3D"color:white;background-color:rgb(82,93,118)">t=
+ype</b>=C2=A0Exception report</p><p style=3D"font-family:tahoma,arial,sans-=
+serif;background-image:initial;background-position:initial;background-size:=
+initial;background-repeat:initial;background-origin:initial;background-clip=
+:initial;color:rgb(0,0,0);font-size:12px"><b style=3D"color:white;backgroun=
+d-color:rgb(82,93,118)">message</b>=C2=A0<u>Request processing failed; nest=
+ed exception is java.lang.NullPointerException</u></p><p style=3D"font-fami=
+ly:tahoma,arial,sans-serif;background-image:initial;background-position:ini=
+tial;background-size:initial;background-repeat:initial;background-origin:in=
+itial;background-clip:initial;color:rgb(0,0,0);font-size:12px"><b style=3D"=
+color:white;background-color:rgb(82,93,118)">description</b>=C2=A0<u>The se=
+rver encountered an internal error that prevented it from fulfilling this r=
+equest.</u></p><p style=3D"font-family:tahoma,arial,sans-serif;background-i=
+mage:initial;background-position:initial;background-size:initial;background=
+-repeat:initial;background-origin:initial;background-clip:initial;color:rgb=
+(0,0,0);font-size:12px"><b style=3D"color:white;background-color:rgb(82,93,=
+118)">exception</b></p><pre style=3D"color:rgb(0,0,0)">org.springframework.=
+web.util.N<wbr>estedServletException: Request processing failed; nested exc=
+eption is java.lang.NullPointerException
+	org.springframework.web.servle<wbr>t.FrameworkServlet.processRequ<wbr>est(=
+FrameworkServlet.java:978)
+	org.springframework.web.servle<wbr>t.FrameworkServlet.doGet(<wbr>Framework=
+Servlet.java:857)
+	javax.servlet.http.HttpServlet<wbr>.service(HttpServlet.java:618)
+	org.springframework.web.servle<wbr>t.FrameworkServlet.service(<wbr>Framewo=
+rkServlet.java:842)
+	javax.servlet.http.HttpServlet<wbr>.service(HttpServlet.java:725)
+	<a href=3D"http://org.apache.tomcat.websocket.se">org.apache.tomcat.websoc=
+ket.se</a><wbr>rver.WsFilter.doFilter(WsFilte<wbr>r.java:52)
+	com.codahale.metrics.servlet.A<wbr>bstractInstrumentedFilter.doFi<wbr>lter=
+(AbstractInstrumentedFilte<wbr>r.java:104)
+	com.unifier.web.filter.AccessC<wbr>ontrolFilter.doFilterInternal(<wbr>Acce=
+ssControlFilter.java:68)
+	org.springframework.web.filter<wbr>.OncePerRequestFilter.doFilter<wbr>(Onc=
+ePerRequestFilter.java:<wbr>107)
+	org.tuckey.web.filters.urlr</pre></div><div class=3D"gmail_default" style=
+=3D"color:rgb(11,83,148)"><br></div><div class=3D"gmail_default" style=3D"c=
+olor:rgb(11,83,148)"><br></div><div><div class=3D"m_-3577000598580383462m_3=
+713249411152530582gmail_signature"><div dir=3D"ltr">Regard&#39;s<span class=
+=3D"m_-3577000598580383462HOEnZb"><font color=3D"#888888"><div>Ravindra</di=
+v></font></span></div></div></div>
+</div>
+</blockquote></div><br></div>
+</div></div></blockquote></div><br></div>
+
+--94eb2c12943ac7c7f3053ebe25e0--

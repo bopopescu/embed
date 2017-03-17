@@ -1,0 +1,198 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp20938oic;
+        Thu, 11 Aug 2016 03:46:51 -0700 (PDT)
+X-Received: by 10.31.128.80 with SMTP id b77mr3653701vkd.31.1470912411028;
+        Thu, 11 Aug 2016 03:46:51 -0700 (PDT)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x229.google.com (mail-ua0-x229.google.com. [2607:f8b0:400c:c08::229])
+        by mx.google.com with ESMTPS id p134si378440vkp.201.2016.08.11.03.46.50
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Aug 2016 03:46:51 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x229.google.com with SMTP id 97so113371989uav.3
+        for <digvijay@unicommerce.com>; Thu, 11 Aug 2016 03:46:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=4J7Fxs7pf/GBP0uXThOTqj7gRCToW+B/UiSQWhhALfU=;
+        b=WNmp1BuzRupeWpiQjf7X0RFYPUy2Mx/6aOxpLNEfaWB4vqd9XLhUHumsknaTa7tVTQ
+         bPqv39MavEed9qPhjg9s+5WRkInjBk5reYIClFFbkGZkjmz4oxobcerM5p/osbvXKwV3
+         40R42J0BPKF9D4e+TqcQtDDOz8zMqM0p/ye8hJQeCRwrEGPkcOSbDgE7PN7Yd9ej+nOW
+         DHKPX1Wkoos4WukuiExCzA7LamSbpBLqxNtF3+2iMQpkq417Wxa9Dopfgh5ia+LggaQD
+         4jZIZocDk8BK4tLbr3v7/JcQM3cMaQo1WhDnd/j1gr+bYqqkQ70Zu0WbcnadAvj0Kx3j
+         3YmQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=4J7Fxs7pf/GBP0uXThOTqj7gRCToW+B/UiSQWhhALfU=;
+        b=nDogrPR1UBj0W5rugGFrXe19Z9uZmQwm5JX5CXJapX2d/tYbKoLG7+imv71B2FL0tP
+         TiAZ8rkyBvXWXzb7mZAzSa5LhOmQbr5l/zyNvWthkDBgd5B2HuYCp12P0JD+RlQGoFE6
+         DHURAXpmOwhDCZMZgApJdTOUF+ifv970RvBqtqDOjYB1PqMXupwKlBVnsO4tMcL6/r+O
+         pxnf4HHjxHStOGRH2S6c0GN72xII5hTU0hBovUjWyvq3H5JnfLkI71xLaZgtEfRy9hAw
+         lx/T/dGSK8yqF8wxwwWd9Sh1DmfGM25MP20D5j/MUTcEkwCoI+5F5dp0gxRyYIp9h+sf
+         wM0w==
+X-Gm-Message-State: AEkoouuuh1XEhBKlyYU/OI1iDxcnTrMYg1zH01QLkXvV70Kp+X2KVVw8jOnwZmdVY0PR8J/wwbl/i6hB5Qjl2g==
+X-Received: by 10.176.67.71 with SMTP id k65mr4284571uak.143.1470912410522;
+ Thu, 11 Aug 2016 03:46:50 -0700 (PDT)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 11 Aug 2016 10:46:40 +0000
+Message-ID: <CAPe2SZT0DhCepNGXrM66zLbQocOQXO+tdqtbm9xKPPM8=wpLPg@mail.gmail.com>
+Subject: Archer Problem
+To: Aditya Harit <aditya@unicommerce.com>, karan Garg <karangarg@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114fc04eb9d58b0539c97ba0
+
+--001a114fc04eb9d58b0539c97ba0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+The City Of Archers
+Back in human history there used to exist a city known as Genon City .It
+was always under threat from the enemies but it had the best archers in the
+world ever known to protect it.
+To prepare for battle all archers performed similar actions. First go to
+wamboo-a warehouse- to collect arrows. Number of arrows one gets is the
+sequence number in which he arrives, first one gets 1, second 2 and so on.
+No two archers arrive at the same time.
+
+Every archer then puts the arrows inside marina - a machine - which first
+cleans the arrow,
+then sharpens and finally colour=E2=80=99s it but every 5th arrows that is =
+cleaned
+get broken ,so machine replaces it with a special arrow which is equivalent
+to 2 normal arrows.
+
+At the battle fort they stand in same sequence as they arrived at warehouse
+and fire one by one starting with first. Far away are enemies. It takes 2n
+arrow to kill an enemy, first 2, and second 4, third 6 and so on. Every 7th
+arrow fired misses the enemy which increases that enemy=E2=80=99s strength =
+and it
+requires 2 more arrows now to get killed ,Archers is not aware of this.
+
+Before every arrow shot, an archerknows how many enemies are already killed
+or semi killed (shot with few arrows before). So he calculates arrows for
+killing next enemy .An archerleaves whenever he doesn't have enough arrows
+to kill the enemy and nextarchers come to action.
+
+A battle is won if all the enemies are killed with 0 or more arrows
+remaining.
+Write an application which models the above situation. First input to the
+application should be number of archers and the second input should be
+number of enemies.
+
+Sample Input/Outputs
+
+Input
+Number of Archer 4
+Number of Enemies 2
+
+
+Output
+Battle - Won
+Total Enemies Killed: 2 Total Arrows Fired: 6
+---------------------------------------------------------------------------=
+----------------------------------
+Input
+Number of Archer 20
+Number of Enemies 5
+
+Output
+Battle - Won
+Total Enemies Killed: 5 Total Arrows Fired: 41
+---------------------------------------------------------------------------=
+-----------------------------------
+Input
+Number of Archer 100
+Number of Enemies 50
+
+Output
+Battle - Lost
+Total Enemies Killed: 45 Total Arrows Fired: 2817
+---------------------------------------------------------------------------=
+-----------------------------------
+Input
+Number of Archer 70
+Number of Enemies 40
+
+Output
+Battle - Lost
+Total Enemies Killed: 31 Total Arrows Fired: 1428
+--=20
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a114fc04eb9d58b0539c97ba0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div style=3D"color:rgb(33,33,33);font-family:&quot;helvet=
+ica neue&quot;,helvetica,arial,sans-serif;font-size:13px"><p style=3D"font-=
+size:12.8px"><font color=3D"#222222">The City Of=C2=A0<span class=3D"inbox-=
+inbox-lG" style=3D"outline:transparent dashed 1px;background-color:rgba(251=
+,246,167,0.498039)">Archers</span><br>Back in human history there used to e=
+xist a city known as Genon City .It was always under threat from the enemie=
+s but it had the best=C2=A0<span class=3D"inbox-inbox-lG" style=3D"outline:=
+transparent dashed 1px;background-color:rgba(251,246,167,0.498039)">archers=
+</span>=C2=A0in the world ever known to protect it.<br>To prepare for battl=
+e all=C2=A0<span class=3D"inbox-inbox-lG" style=3D"outline:transparent dash=
+ed 1px;background-color:rgba(251,246,167,0.498039)">archers</span>=C2=A0per=
+formed similar actions. First go to wamboo-a warehouse- to collect arrows. =
+Number of arrows one gets is the sequence number in which he arrives, first=
+ one gets 1, second 2 and so on. No two=C2=A0<span class=3D"inbox-inbox-lG"=
+ style=3D"outline:transparent dashed 1px;background-color:rgba(251,246,167,=
+0.498039)">archers</span>=C2=A0arrive at the same time.<br><br>Every=C2=A0<=
+span class=3D"inbox-inbox-lG" style=3D"outline:transparent dashed 1px;backg=
+round-color:rgba(251,246,167,0.498039)">archer</span>=C2=A0then puts the ar=
+rows inside marina - a machine - which first cleans the arrow,<br>then shar=
+pens and finally colour=E2=80=99s it but every 5th arrows that is cleaned g=
+et broken ,so machine replaces it with a special arrow which is equivalent =
+to 2 normal arrows.<br><br>At the battle fort they stand in same sequence a=
+s they arrived at warehouse and fire one by one starting with first. Far aw=
+ay are enemies. It takes 2n arrow to kill an enemy, first 2, and second 4, =
+third 6 and so on. Every 7th arrow fired misses the enemy which increases t=
+hat enemy=E2=80=99s strength and it requires 2 more arrows now to get kille=
+d ,<span class=3D"inbox-inbox-lG" style=3D"outline:transparent dashed 1px;b=
+ackground-color:rgba(251,246,167,0.498039)">Archers</span>=C2=A0is not awar=
+e of this.<br><br>Before every arrow shot, an=C2=A0archerknows how many ene=
+mies are already killed or semi killed (shot with few arrows before). So he=
+ calculates arrows for killing next enemy .An=C2=A0archerleaves whenever he=
+ doesn&#39;t have enough arrows to kill the enemy and nextarchers=C2=A0come=
+ to action.<br><br>A battle is won if all the enemies are killed with 0 or =
+more arrows remaining.<br>Write an application which models the above situa=
+tion. First input to the application should be number of=C2=A0<span class=
+=3D"inbox-inbox-lG" style=3D"outline:transparent dashed 1px;background-colo=
+r:rgba(251,246,167,0.498039)">archers</span>=C2=A0and the second input shou=
+ld be number of enemies.<br><br>Sample Input/Outputs<br><br>Input<br>Number=
+ of=C2=A0<span class=3D"inbox-inbox-lG" style=3D"outline:transparent dashed=
+ 1px;background-color:rgba(251,246,167,0.498039)">Archer</span>=C2=A04<br>N=
+umber of Enemies 2<br></font><br></p></div><div style=3D"color:rgb(33,33,33=
+);font-family:&quot;helvetica neue&quot;,helvetica,arial,sans-serif;font-si=
+ze:13px"><font color=3D"#222222"><br>Output<br>Battle - Won<br>Total Enemie=
+s Killed: 2 Total Arrows Fired: 6<br>--------------------------------------=
+-----------------------------------------------------------------------<br>=
+Input<br>Number of=C2=A0<span class=3D"inbox-inbox-lG" style=3D"outline:tra=
+nsparent dashed 1px;background-color:rgba(251,246,167,0.498039)">Archer</sp=
+an>=C2=A020<br>Number of Enemies 5<br><br>Output<br>Battle - Won<br>Total E=
+nemies Killed: 5 Total Arrows Fired: 41<br>--------------------------------=
+---------------------------------------------------------------------------=
+---<br>Input<br>Number of=C2=A0<span class=3D"inbox-inbox-lG" style=3D"outl=
+ine:transparent dashed 1px;background-color:rgba(251,246,167,0.498039)">Arc=
+her</span>=C2=A0100<br>Number of Enemies 50<br><br>Output<br>Battle - Lost<=
+br>Total Enemies Killed: 45 Total Arrows Fired: 2817<br>-------------------=
+---------------------------------------------------------------------------=
+----------------<br>Input<br>Number of=C2=A0<span class=3D"inbox-inbox-lG" =
+style=3D"outline:transparent dashed 1px;background-color:rgba(251,246,167,0=
+.498039)">Archer</span>=C2=A070<br>Number of Enemies 40<br><br>Output<br>Ba=
+ttle - Lost</font><div>Total Enemies Killed: 31 Total Arrows Fired: 1428</d=
+iv></div></div><div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_s=
+ignature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Eng=
+ineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+
+--001a114fc04eb9d58b0539c97ba0--

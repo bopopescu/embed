@@ -1,0 +1,85 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2661353qgu;
+        Wed, 1 Feb 2017 21:12:24 -0800 (PST)
+X-Received: by 10.28.100.70 with SMTP id y67mr24744042wmb.45.1486012344434;
+        Wed, 01 Feb 2017 21:12:24 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-wm0-x229.google.com (mail-wm0-x229.google.com. [2a00:1450:400c:c09::229])
+        by mx.google.com with ESMTPS id l9si27153739wrl.261.2017.02.01.21.12.24
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Feb 2017 21:12:24 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2a00:1450:400c:c09::229;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::229 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-wm0-x229.google.com with SMTP id v77so70256741wmv.0
+        for <digvijay@unicommerce.com>; Wed, 01 Feb 2017 21:12:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=Mx6HniJXXSWOcrOMVzBX4bt7jR+zR4nGc1DiqeMZ7Io=;
+        b=XvaNWHz3NVfOaDhPlYjP6vzA+atfOnNAtWbIWLI9Hr+oJ/qLhOahSh2SNZ+dhnd2yF
+         ESA/jMHdQQX7Z+kyvEebzIat1YzN0+B51K87aZLc8ppM7vSnwVjljiM2g0QNk6jgRwN5
+         fJDDn+LKp6XkgU3/mQ5VChtE0OCQM/CMHcK2zKPYbPZmK5cDWGkjyWbtm5r5OAxgxNyY
+         AC3N6OVfWbUFBU1wbvaeiWbe53jfinv6IKB+wqSNOMuCl5uPaN+K0MI8ryb4t+4vAszc
+         rX1UncY6d9Roi6OOvm5Y3EGRaoV5de19hRy4diywdibEiRz2AwPkTs2YAvLJ23DZFqiM
+         d/ww==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=Mx6HniJXXSWOcrOMVzBX4bt7jR+zR4nGc1DiqeMZ7Io=;
+        b=nryrFaC1CNoiGf6vJBFp9Ya3Y9F7nEyuNRp8njF/83oBN+Go3b4NBtKEora4/mbp9/
+         lBpkqw7Yaoi+z9b77VUneCgcDqAuPFiKpSUuGCunJiVvY5oHncwDcAYqP+JXNskPEwLw
+         w220MXPETat56NiIqs553ASxz+TxolKFZcIV/7RZQc70kKyur6cLqmlDdFthEaToGy4o
+         7ddvfplGgL5AeRZQ4fGy6CWzJVDeGSAS0/jpNG2YW0XdP/F8NOyWECCktqDuCgxYt22L
+         ywi1LkyqXo2Bs2QRpnO1GKHFcLrJTX/XFFJnH7/QT0WJjCrZd5Kw2XU0zaNvq9NimNKf
+         uU2g==
+X-Gm-Message-State: AIkVDXIa1qNdg8+oI1VtD78EFIAgC4JJSwnYYM1YHgu+YFqwlJF8QX/e3Pw0a1BSDsQvRG6PcwEGk9iE1uw4EQ==
+X-Received: by 10.28.143.204 with SMTP id r195mr5711404wmd.32.1486012344040;
+ Wed, 01 Feb 2017 21:12:24 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 02 Feb 2017 05:12:13 +0000
+Message-ID: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+Subject: Reconciliation Update
+To: Kapil Makhija <kapil@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11470b4ce611a105478535c7
+
+--001a11470b4ce611a105478535c7
+Content-Type: text/plain; charset=UTF-8
+
+Hi Sir,
+We have updated the last column of the settlement invoices page from
+"status on channel" to "other info".
+Earlier it used to represent the payment reason for which the transaction
+is made (Like Refund, Return, MarketPlaceFee). But since Flipkart doesn't
+give any such reason in its sheet (we mapped it with order status as of
+now, which resulted in duplicate invoices), we have to put in invoice code
+in that field to maintain uniqueness of invoices. Hence renamed the column
+to "other info".
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a11470b4ce611a105478535c7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Sir,<div>We have updated the last column of the settlem=
+ent invoices page from &quot;status on channel&quot; to &quot;other info&qu=
+ot;.</div><div>Earlier it used to represent the payment reason for which th=
+e transaction is made (Like Refund, Return, MarketPlaceFee). But since Flip=
+kart doesn&#39;t give any such reason in its sheet (we mapped it with order=
+ status as of now, which resulted in duplicate invoices), we have to put in=
+ invoice code in that field to maintain uniqueness of invoices. Hence renam=
+ed the column to &quot;other info&quot;.</div></div><div dir=3D"ltr">-- <br=
+></div><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>=
+Akshay Agarwal</div><div>Software Engineer, Unicommerce</div><div>+91 9999-=
+872-129</div></div></div>
+
+--001a11470b4ce611a105478535c7--

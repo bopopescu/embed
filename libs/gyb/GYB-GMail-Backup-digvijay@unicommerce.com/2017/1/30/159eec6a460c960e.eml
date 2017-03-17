@@ -1,0 +1,98 @@
+MIME-Version: 1.0
+Received: by 10.140.19.178 with HTTP; Mon, 30 Jan 2017 01:48:32 -0800 (PST)
+Date: Mon, 30 Jan 2017 15:18:32 +0530
+Delivered-To: digvijay@unicommerce.com
+Message-ID: <CAJF3sor+ZBQZaB5=1UHQ=gmP5y2=ppat=QmOUhmNFM1OHjqcbw@mail.gmail.com>
+Subject: Queries for fba recon of amazon
+From: Digvijay Sharma <digvijay@unicommerce.com>
+To: Sunny Agarwal <sunny@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1139617cf28d5c05474cb7d7
+
+--001a1139617cf28d5c05474cb7d7
+Content-Type: text/plain; charset=UTF-8
+
+db.source.update({"code":"AMAZON_FBA"},{$addToSet:{"sourceProperties" :{
+$each:[
+{
+"sourceCode" : "AMAZON_FBA",
+"name" : "reconciliation.invoice.list.script.name",
+"value" : "amazonIndiaReconciliationInvoiceListScript"
+},
+{
+"sourceCode" : "AMAZON_FBA",
+"name" : "reconciliation.invoice.detail.script.name",
+"value" : "amazonIndiaReconciliationInvoiceDetailScript"
+},
+{
+"sourceCode" : "AMAZON_FBA",
+"name" : "unreconcilied.order.item.script.name",
+"value" : "amazonIndiaUnreconciliedOrdersScript"
+},
+{
+"sourceCode" : "AMAZON_FBA",
+"name" : "order.reconciliation.enabled",
+"value" : "true"
+},
+{
+"sourceCode" : "AMAZON_FBA",
+"name" : "payment.reconciliation.enabled",
+"value" : "false"
+}
+]
+}
+}})
+
+--001a1139617cf28d5c05474cb7d7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>db.source.update({&quot;code&quot;:&quot;AMAZON_FBA&q=
+uot;},{$addToSet:{&quot;sourceProperties&quot; :{ $each:[</div><div><span c=
+lass=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>{</div><d=
+iv><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span=
+>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=3D"=
+gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&quot; =
+: &quot;<a href=3D"http://reconciliation.invoice.list.script.name">reconcil=
+iation.invoice.list.script.name</a>&quot;,</div><div><span class=3D"gmail-A=
+pple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; : &quo=
+t;amazonIndiaReconciliationInvoiceListScript&quot;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>},</div><div><spa=
+n class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>{</div>=
+<div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</sp=
+an>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&qu=
+ot; : &quot;<a href=3D"http://reconciliation.invoice.detail.script.name">re=
+conciliation.invoice.detail.script.name</a>&quot;,</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot=
+; : &quot;amazonIndiaReconciliationInvoiceDetailScript&quot;</div><div><spa=
+n class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>},</div=
+><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</sp=
+an>{</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pr=
+e">			</span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><sp=
+an class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot=
+;name&quot; : &quot;<a href=3D"http://unreconcilied.order.item.script.name"=
+>unreconcilied.order.item.script.name</a>&quot;,</div><div><span class=3D"g=
+mail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; =
+: &quot;amazonIndiaUnreconciliedOrdersScript&quot;</div><div><span class=3D=
+"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>},</div><div><spa=
+n class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">				</span>{</di=
+v><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</=
+span>&quot;sourceCode&quot; : &quot;AMAZON_FBA&quot;,</div><div><span class=
+=3D"gmail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;name&qu=
+ot; : &quot;order.reconciliation.enabled&quot;,</div><div><span class=3D"gm=
+ail-Apple-tab-span" style=3D"white-space:pre">			</span>&quot;value&quot; :=
+ &quot;true&quot;</div><div><span class=3D"gmail-Apple-tab-span" style=3D"w=
+hite-space:pre">		</span>},</div><div><span class=3D"gmail-Apple-tab-span" =
+style=3D"white-space:pre">	</span>{</div><div><span class=3D"gmail-Apple-ta=
+b-span" style=3D"white-space:pre">			</span>&quot;sourceCode&quot; : &quot;=
+AMAZON_FBA&quot;,</div><div><span class=3D"gmail-Apple-tab-span" style=3D"w=
+hite-space:pre">			</span>&quot;name&quot; : &quot;payment.reconciliation.e=
+nabled&quot;,</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white=
+-space:pre">			</span>&quot;value&quot; : &quot;false&quot;</div><div><span=
+ class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span>}</div><=
+div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre">		</span=
+>]</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-space:pre"=
+>		</span>}</div><div><span class=3D"gmail-Apple-tab-span" style=3D"white-s=
+pace:pre">		</span>}})</div></div>
+
+--001a1139617cf28d5c05474cb7d7--

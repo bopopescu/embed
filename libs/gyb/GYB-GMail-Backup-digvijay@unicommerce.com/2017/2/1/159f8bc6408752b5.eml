@@ -1,0 +1,513 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp2222023qgu;
+        Wed, 1 Feb 2017 00:13:33 -0800 (PST)
+X-Received: by 10.55.89.196 with SMTP id n187mr1401590qkb.17.1485936813433;
+        Wed, 01 Feb 2017 00:13:33 -0800 (PST)
+Return-Path: <3rZiRWAcPCO4QdQcYaQkdYSeccUhSU.SecTYWlYZQokdYSeccUhSU.Sec@calendar-server.bounces.google.com>
+Received: from mail-qk0-x249.google.com (mail-qk0-x249.google.com. [2607:f8b0:400d:c09::249])
+        by mx.google.com with ESMTPS id 9si13928711qku.145.2017.02.01.00.13.33
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Feb 2017 00:13:33 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3rzirwacpco4qdqcyaqkdyseccuhsu.sectywlyzqokdyseccuhsu.sec@calendar-server.bounces.google.com designates 2607:f8b0:400d:c09::249 as permitted sender) client-ip=2607:f8b0:400d:c09::249;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=pass (google.com: domain of 3rzirwacpco4qdqcyaqkdyseccuhsu.sectywlyzqokdyseccuhsu.sec@calendar-server.bounces.google.com designates 2607:f8b0:400d:c09::249 as permitted sender) smtp.mailfrom=3rZiRWAcPCO4QdQcYaQkdYSeccUhSU.SecTYWlYZQokdYSeccUhSU.Sec@calendar-server.bounces.google.com
+Received: by mail-qk0-x249.google.com with SMTP id 11so3205679qkl.3
+        for <digvijay@unicommerce.com>; Wed, 01 Feb 2017 00:13:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:reply-to:sender:auto-submitted:message-id:date:subject
+         :from:to;
+        bh=sTqLEqMaoRUvS+ebySVuhMYx8w4DhfD8i/7i1ogO5lQ=;
+        b=EUr6YSnHaMz0DfAr9h59FMuoJmbGUdyd/vIabdBEydPDWZwmezIZAcgaKhK/N2j94/
+         YJg9R0QTBr833WnICPxHOGe3GThBNtUAKkQa+yNjnRfrbZUkoMXsobxu3/0Pk16LzSW0
+         KVlpYwIBLIk+I9pYNyzxOJJ2TXXcaJfTvmcsHj5XNadtPz2cx/Hciky9BSDVsfexDRve
+         XPc6b2PML5QlY9zxEtVkYcOy2sjQ8vNXDctcwAovBN+6XfoDFhNv4IEiTDu8uZd3/UJM
+         ZR7pCXV1dNO5wPX4HAEsVm7C/SlK5QGRxyNReijrKS6MQRCfob1oN/LsLLzLwHvOpNYm
+         7gvg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:reply-to:sender:auto-submitted:message-id:date:subject
+         :from:to;
+        bh=sTqLEqMaoRUvS+ebySVuhMYx8w4DhfD8i/7i1ogO5lQ=;
+        b=gHg1FgGP7NGY/a3c5TuRNDpqTJm08qjObbrTwuxJyFk/svcBBGhbBEGBhq/oUiceUd
+         stfkth2NpwMwbAa/ewp3MECRu3EjReX7wK1jJcs6yyHrn2nvIEiAjn5SGJzlNWgPr0tw
+         ciMT/Ih6ymEjN35J8TefRlrljDcpmXC062w3UV9ttes0l/IIORn1ig3DuI0rsbvkOuqK
+         M/0TrQf2okHSLloO6eR/FviV6wIFaymsOhn+i0+LXAzXOlSBswBLEBZ9uW6B52wNBenL
+         dRXdJxtSSgu2C7zzly2hku9tdl7p0tUlWlkkhP1IkYtbfJjdeQXCABAftkE2BXHDrSpE
+         ir5Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:sender:auto-submitted
+         :message-id:date:subject:from:to;
+        bh=sTqLEqMaoRUvS+ebySVuhMYx8w4DhfD8i/7i1ogO5lQ=;
+        b=FVAPs/yvwuyioH9jKD1oufOWgurwxIeDL6/Hx1Y/3zN2Q9+O/GVDQpqUV66b8dpbGw
+         w7Emy2Hg99zogHw5HGSs/15jdsN1luqsE5NTqAzyECB48ltxbDsEMjWW00MTkhZeUNCP
+         cnEl/K2LaLHakzNOjbAzNN2ckgG/9jNiLerWjTmOWaRARDd1Z4O2kj1KvmORIT0NQt14
+         5OV9K9RIdIsTeXi9m7fslq/lBHSmDtEL4D5lUXBFZOvPNS6/2wI7WRBPrFFQ7lCrTc63
+         iQLAojegmziQlo+acXqyapb4WF5SBw/IpO2sMvl00IyYJsuYS5IODf+Bz9nWz/j3zhtp
+         okkw==
+X-Gm-Message-State: AIkVDXI6+rY1AU/nkoTFynoDmg6bYZuN3QN3iq0HXj2IMq9YgcApVMGu0J82b5yFlztyEuwqTON+yxOFxm1vQJJUPIHBMRC0
+MIME-Version: 1.0
+X-Received: by 10.237.36.103 with SMTP id s36mr371822qtc.3.1485936813079; Wed,
+ 01 Feb 2017 00:13:33 -0800 (PST)
+Reply-To: Anamika Singh <anamika@unicommerce.com>
+Sender: Google Calendar <calendar-notification@google.com>
+Auto-Submitted: auto-generated
+Message-ID: <001a1145ea1ce72aa00547739f64@google.com>
+Date: Wed, 01 Feb 2017 08:13:33 +0000
+Subject: Updated Invitation: Invitation: Transfer formalities completion  @
+ Wed Feb 1, 2017 9am - 10am (Digvijay Sharma)
+From: Anamika Singh <anamika@unicommerce.com>
+To: digvijay@unicommerce.com, Bhupinder Garg <bhupi@unicommerce.com>, 
+	Amit Dalal <amit.dalal@unicommerce.com>, Shipra Gupta <shipra@unicommerce.com>, 
+	Ashish Garg <ashish1@unicommerce.com>, promil@unicommerce.com, karangarg@unicommerce.com, 
+	himanisingla@unicommerce.com, Shobhit Gupta <shobhit@unicommerce.com>, 
+	Sunny Agarwal <sunny@unicommerce.com>, ayush@unicommerce.com, aditya@unicommerce.com, 
+	Mukesh Bhardwaj <mukesh.bhardwaj@unicommerce.com>, Rishu Goyal <rishu@unicommerce.com>, 
+	Yogita Singla <yogita@unicommerce.com>, Rachit Sachdeva <rachit@unicommerce.com>, 
+	Sushant Majumdar <sushant@unicommerce.com>
+Content-Type: multipart/mixed; boundary=001a1145ea1ce72a6b0547739f63
+
+--001a1145ea1ce72a6b0547739f63
+Content-Type: multipart/alternative; boundary=001a1145ea1ce72a670547739f61
+
+--001a1145ea1ce72a670547739f61
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+VGhpcyBldmVudCBoYXMgYmVlbiBjaGFuZ2VkLg0KDQpUaXRsZTogSW52aXRhdGlvbjogVHJhbnNm
+ZXIgZm9ybWFsaXRpZXMgY29tcGxldGlvbg0KRGVhciBBbGwsDQoNCkJsb2NraW5nIFlvdXIgY2Fs
+ZW5kYXIgZm9yIHRoZSBjb21wbGV0aW9uIG9mIHRyYW5zZmVyIGZvcm1hbGl0aWVzLg0KDQpUaGFu
+a3MNCkFuYW1pa2ENCg0KV2hlbjogV2VkIEZlYiAxLCAyMDE3IDlhbSDigJMgMTBhbSBHTVQgKG5v
+IGRheWxpZ2h0IHNhdmluZykgKGNoYW5nZWQpDQpXaGVyZTogUm9kZW8gRHJpdmUsIEdyb3VuZCBG
+bG9vciBDZW50ZXIgQQ0KVmlkZW8gY2FsbDogaHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20vaGFuZ291
+dHMvXy91bmljb21tZXJjZS5jb20vaW52aXRhdGlvbiAgDQo8aHR0cHM6Ly9wbHVzLmdvb2dsZS5j
+b20vaGFuZ291dHMvXy91bmljb21tZXJjZS5jb20vaW52aXRhdGlvbj9oY2VpZD1ZVzVoYldscllV
+QjFibWxqYjIxdFpYSmpaUzVqYjIwLmM5c2ZwYzFhY3BlcXFpOTdrZGcybW1zbHNvPg0KQ2FsZW5k
+YXI6IERpZ3ZpamF5IFNoYXJtYQ0KV2hvOg0KICAgICAqIEFuYW1pa2EgU2luZ2ggLSBvcmdhbml6
+ZXINCiAgICAgKiBCaHVwaW5kZXIgR2FyZw0KICAgICAqIEFtaXQgRGFsYWwNCiAgICAgKiBTaGlw
+cmEgR3VwdGENCiAgICAgKiBBc2hpc2ggR2FyZw0KICAgICAqIHByb21pbEB1bmljb21tZXJjZS5j
+b20NCiAgICAgKiBrYXJhbmdhcmdAdW5pY29tbWVyY2UuY29tDQogICAgICogaGltYW5pc2luZ2xh
+QHVuaWNvbW1lcmNlLmNvbQ0KICAgICAqIFNob2JoaXQgR3VwdGENCiAgICAgKiBTdW5ueSBBZ2Fy
+d2FsDQogICAgICogYXl1c2hAdW5pY29tbWVyY2UuY29tDQogICAgICogYWRpdHlhQHVuaWNvbW1l
+cmNlLmNvbQ0KICAgICAqIERpZ3ZpamF5IFNoYXJtYQ0KICAgICAqIE11a2VzaCBCaGFyZHdhag0K
+ICAgICAqIFJpc2h1IEdveWFsDQogICAgICogWW9naXRhIFNpbmdsYQ0KICAgICAqIFJhY2hpdCBT
+YWNoZGV2YQ0KICAgICAqIFN1c2hhbnQgTWFqdW1kYXINCg0KRXZlbnQgZGV0YWlsczogIA0KaHR0
+cHM6Ly93d3cuZ29vZ2xlLmNvbS9jYWxlbmRhci9ldmVudD9hY3Rpb249VklFVyZlaWQ9WXpselpu
+QmpNV0ZqY0dWeGNXazVOMnRrWnpKdGJYTnNjMjhnWkdsbmRtbHFZWGxBZFc1cFkyOXRiV1Z5WTJV
+dVkyOXQmdG9rPU1qTWpZVzVoYldscllVQjFibWxqYjIxdFpYSmpaUzVqYjIwNVpqTmlNbVV5WmpK
+aE9USmtNalV6WWpWak9Ea3lORGRsWW1VMk5Ua3dOREZoTTJJelpqbGkmY3R6PVVUQyZobD1lbg0K
+DQpJbnZpdGF0aW9uIGZyb20gR29vZ2xlIENhbGVuZGFyOiBodHRwczovL3d3dy5nb29nbGUuY29t
+L2NhbGVuZGFyLw0KDQpZb3UgYXJlIHJlY2VpdmluZyB0aGlzIGVtYWlsIGF0IHRoZSBhY2NvdW50
+IGRpZ3ZpamF5QHVuaWNvbW1lcmNlLmNvbSAgDQpiZWNhdXNlIHlvdSBhcmUgc3Vic2NyaWJlZCBm
+b3IgdXBkYXRlZCBpbnZpdGF0aW9ucyBvbiBjYWxlbmRhciBEaWd2aWpheSAgDQpTaGFybWEuDQoN
+ClRvIHN0b3AgcmVjZWl2aW5nIHRoZXNlIGVtYWlscywgcGxlYXNlIGxvZyBpbiB0byAgDQpodHRw
+czovL3d3dy5nb29nbGUuY29tL2NhbGVuZGFyLyBhbmQgY2hhbmdlIHlvdXIgbm90aWZpY2F0aW9u
+IHNldHRpbmdzIGZvciAgDQp0aGlzIGNhbGVuZGFyLg0KDQpGb3J3YXJkaW5nIHRoaXMgaW52aXRh
+dGlvbiBjb3VsZCBhbGxvdyBhbnkgcmVjaXBpZW50IHRvIG1vZGlmeSB5b3VyIFJTVlAgIA0KcmVz
+cG9uc2UuIExlYXJuIG1vcmUgYXQgIA0KaHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vY2FsZW5k
+YXIvYW5zd2VyLzM3MTM1I2ZvcndhcmRpbmcNCg==
+--001a1145ea1ce72a670547739f61
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<span itemscope itemtype=3D"http://schema.org/InformAction"><span style=3D"=
+display:none" itemprop=3D"about" itemscope itemtype=3D"http://schema.org/Th=
+ing/Clock"><meta itemprop=3D"description" content=3D"Time updated"/></span>=
+<span itemprop=3D"object" itemscope itemtype=3D"http://schema.org/Event"><d=
+iv style=3D""><table cellspacing=3D"0" cellpadding=3D"8" border=3D"0" summa=
+ry=3D"" style=3D"width:100%;font-family:Arial,Sans-serif;border:1px Solid #=
+ccc;border-width:1px 2px 2px 1px;background-color:#fff;"><tr><td><meta item=
+prop=3D"eventStatus" content=3D"http://schema.org/EventRescheduled"/><h4 st=
+yle=3D"padding:6px 10px;margin:0 0 4px 0;font-family:Arial,Sans-serif;font-=
+size:13px;line-height:1.4;border:1px Solid #d9f2db;background:#d9f2db;color=
+:#222;font-weight:bold">This event has been changed.</h4><div style=3D"padd=
+ing:2px"><span itemprop=3D"publisher" itemscope itemtype=3D"http://schema.o=
+rg/Organization"><meta itemprop=3D"name" content=3D"Google Calendar"/></spa=
+n><meta itemprop=3D"eventId/googleCalendar" content=3D"c9sfpc1acpeqqi97kdg2=
+mmslso"/><div style=3D"float:right;font-weight:bold;font-size:13px"> <a hre=
+f=3D"https://www.google.com/calendar/event?action=3DVIEW&amp;eid=3DYzlzZnBj=
+MWFjcGVxcWk5N2tkZzJtbXNsc28gZGlndmlqYXlAdW5pY29tbWVyY2UuY29t&amp;tok=3DMjMj=
+YW5hbWlrYUB1bmljb21tZXJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2NTkwNDF=
+hM2IzZjli&amp;ctz=3DUTC&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap=
+" itemprop=3D"url">more details &raquo;</a><br></div><h3 style=3D"padding:0=
+ 0 6px 0;margin:0;font-family:Arial,Sans-serif;font-size:16px;font-weight:b=
+old;color:#222"><span itemprop=3D"name">Invitation: Transfer formalities co=
+mpletion </span></h3><div style=3D"padding-bottom:15px;font-size:13px;color=
+:#222;white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;wh=
+ite-space:-pre-wrap!important;white-space:-o-pre-wrap!important;white-space=
+:pre;word-wrap:break-word"><span>Dear All,<p>Blocking Your calendar for the=
+ completion of transfer formalities.<p>Thanks<br />Anamika<br /></p></p></s=
+pan><meta itemprop=3D"description" content=3D"Dear All,
+
+Blocking Your calendar for the completion of transfer formalities.
+
+Thanks
+Anamika
+"/></div><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" summary=3D=
+"Event details"><tr><td style=3D"padding:0 1em 10px 0;font-family:Arial,San=
+s-serif;font-size:13px;color:#888;white-space:nowrap" valign=3D"top"><div><=
+i style=3D"font-style:normal">When</i></div></td><td style=3D"padding-botto=
+m:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222" valign=3D"to=
+p"><strong style=3D"color:#080">Changed: </strong><time itemprop=3D"startDa=
+te" datetime=3D"20170201T090000Z"></time><time itemprop=3D"endDate" datetim=
+e=3D"20170201T100000Z"></time>Wed Feb 1, 2017 9am =E2=80=93 10am <span styl=
+e=3D"color:#888">GMT (no daylight saving)</span></td></tr><tr><td style=3D"=
+padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888=
+;white-space:nowrap" valign=3D"top"><div><i style=3D"font-style:normal">Whe=
+re</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,Sans-se=
+rif;font-size:13px;color:#222" valign=3D"top"><span itemprop=3D"location" i=
+temscope itemtype=3D"http://schema.org/Place"><span itemprop=3D"name" class=
+=3D"notranslate">Rodeo Drive, Ground Floor Center A</span><span dir=3D"ltr"=
+> (<a href=3D"https://maps.google.com/maps?q=3DRodeo+Drive,+Ground+Floor+Ce=
+nter+A&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap" target=3D"_blan=
+k" itemprop=3D"map">map</a>)</span></span></td></tr><tr><td style=3D"paddin=
+g:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888;white=
+-space:nowrap" valign=3D"top"><div><i style=3D"font-style:normal">Video cal=
+l</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,Sans-ser=
+if;font-size:13px;color:#222" valign=3D"top"><span itemprop=3D"potentialact=
+ion" itemscope itemtype=3D"http://schema.org/JoinAction"><span itemprop=3D"=
+name" content=3D"https://plus.google.com/hangouts/_/unicommerce.com/invitat=
+ion"/><span itemprop=3D"target" itemscope itemtype=3D"http://schema.org/Ent=
+ryPoint"><span itemprop=3D"url" content=3D"https://plus.google.com/hangouts=
+/_/unicommerce.com/invitation?hceid=3DYW5hbWlrYUB1bmljb21tZXJjZS5jb20.c9sfp=
+c1acpeqqi97kdg2mmslso"/><span itemprop=3D"httpMethod" content=3D"GET"/><a h=
+ref=3D"https://plus.google.com/hangouts/_/unicommerce.com/invitation?hceid=
+=3DYW5hbWlrYUB1bmljb21tZXJjZS5jb20.c9sfpc1acpeqqi97kdg2mmslso" style=3D"col=
+or:#20c;white-space:nowrap" target=3D"_blank">https://plus.google.com/hango=
+uts/_/unicommerce.com/invitation</a></span></span></td></tr><tr><td style=
+=3D"padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:=
+#888;white-space:nowrap" valign=3D"top"><div><i style=3D"font-style:normal"=
+>Calendar</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,=
+Sans-serif;font-size:13px;color:#222" valign=3D"top">Digvijay Sharma</td></=
+tr><tr><td style=3D"padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-=
+size:13px;color:#888;white-space:nowrap" valign=3D"top"><div><i style=3D"fo=
+nt-style:normal">Who</i></div></td><td style=3D"padding-bottom:10px;font-fa=
+mily:Arial,Sans-serif;font-size:13px;color:#222" valign=3D"top"><table cell=
+spacing=3D"0" cellpadding=3D"0"><tr><td style=3D"padding-right:10px;font-fa=
+mily:Arial,Sans-serif;font-size:13px;color:#222"><span style=3D"font-family=
+:Courier New,monospace">&#x2022;</span></td><td style=3D"padding-right:10px=
+;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div><div style=3D=
+"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http=
+://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate">Anamika=
+ Singh</span><meta itemprop=3D"email" content=3D"anamika@unicommerce.com"/>=
+</span><span itemprop=3D"organizer" itemscope itemtype=3D"http://schema.org=
+/Person"><meta itemprop=3D"name" content=3D"Anamika Singh"/><meta itemprop=
+=3D"email" content=3D"anamika@unicommerce.com"/></span><span style=3D"font-=
+size:11px;color:#888"> - organizer</span></div></div></td></tr><tr><td styl=
+e=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#=
+222"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></td>=
+<td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px=
+;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"atten=
+dee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name=
+" class=3D"notranslate">Bhupinder Garg</span><meta itemprop=3D"email" conte=
+nt=3D"bhupi@unicommerce.com"/></span></div></div></td></tr><tr><td style=3D=
+"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"=
+><span style=3D"font-family:Courier New,monospace">&#x2022;</span></td><td =
+style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;col=
+or:#222"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee"=
+ itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" cl=
+ass=3D"notranslate">Amit Dalal</span><meta itemprop=3D"email" content=3D"am=
+it.dalal@unicommerce.com"/></span></div></div></td></tr><tr><td style=3D"pa=
+dding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><s=
+pan style=3D"font-family:Courier New,monospace">&#x2022;</span></td><td sty=
+le=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:=
+#222"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" it=
+emscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=
+=3D"notranslate">Shipra Gupta</span><meta itemprop=3D"email" content=3D"shi=
+pra@unicommerce.com"/></span></div></div></td></tr><tr><td style=3D"padding=
+-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><span s=
+tyle=3D"font-family:Courier New,monospace">&#x2022;</span></td><td style=3D=
+"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"=
+><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemsco=
+pe itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"n=
+otranslate">Ashish Garg</span><meta itemprop=3D"email" content=3D"ashish1@u=
+nicommerce.com"/></span></div></div></td></tr><tr><td style=3D"padding-righ=
+t:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><span style=
+=3D"font-family:Courier New,monospace">&#x2022;</span></td><td style=3D"pad=
+ding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><di=
+v><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope i=
+temtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notra=
+nslate">promil@unicommerce.com</span><meta itemprop=3D"email" content=3D"pr=
+omil@unicommerce.com"/></span></div></div></td></tr><tr><td style=3D"paddin=
+g-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><span =
+style=3D"font-family:Courier New,monospace">&#x2022;</span></td><td style=
+=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#2=
+22"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" item=
+scope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=
+=3D"notranslate">karangarg@unicommerce.com</span><meta itemprop=3D"email" c=
+ontent=3D"karangarg@unicommerce.com"/></span></div></div></td></tr><tr><td =
+style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;col=
+or:#222"><span style=3D"font-family:Courier New,monospace">&#x2022;</span><=
+/td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:=
+13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"a=
+ttendee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"=
+name" class=3D"notranslate">himanisingla@unicommerce.com</span><meta itempr=
+op=3D"email" content=3D"himanisingla@unicommerce.com"/></span></div></div><=
+/td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;f=
+ont-size:13px;color:#222"><span style=3D"font-family:Courier New,monospace"=
+>&#x2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><s=
+pan itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><=
+span itemprop=3D"name" class=3D"notranslate">Shobhit Gupta</span><meta item=
+prop=3D"email" content=3D"shobhit@unicommerce.com"/></span></div></div></td=
+></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font=
+-size:13px;color:#222"><span style=3D"font-family:Courier New,monospace">&#=
+x2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans-se=
+rif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span=
+ itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><spa=
+n itemprop=3D"name" class=3D"notranslate">Sunny Agarwal</span><meta itempro=
+p=3D"email" content=3D"sunny@unicommerce.com"/></span></div></div></td></tr=
+><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size=
+:13px;color:#222"><span style=3D"font-family:Courier New,monospace">&#x2022=
+;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;f=
+ont-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span item=
+prop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span ite=
+mprop=3D"name" class=3D"notranslate">ayush@unicommerce.com</span><meta item=
+prop=3D"email" content=3D"ayush@unicommerce.com"/></span></div></div></td><=
+/tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-s=
+ize:13px;color:#222"><span style=3D"font-family:Courier New,monospace">&#x2=
+022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans-seri=
+f;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span i=
+temprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span =
+itemprop=3D"name" class=3D"notranslate">aditya@unicommerce.com</span><meta =
+itemprop=3D"email" content=3D"aditya@unicommerce.com"/></span></div></div><=
+/td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;f=
+ont-size:13px;color:#222"><span style=3D"font-family:Courier New,monospace"=
+>&#x2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><s=
+pan itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><=
+span itemprop=3D"name" class=3D"notranslate">Digvijay Sharma</span><meta it=
+emprop=3D"email" content=3D"digvijay@unicommerce.com"/></span></div></div><=
+/td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;f=
+ont-size:13px;color:#222"><span style=3D"font-family:Courier New,monospace"=
+>&#x2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><s=
+pan itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><=
+span itemprop=3D"name" class=3D"notranslate">Mukesh Bhardwaj</span><meta it=
+emprop=3D"email" content=3D"mukesh.bhardwaj@unicommerce.com"/></span></div>=
+</div></td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-=
+serif;font-size:13px;color:#222"><span style=3D"font-family:Courier New,mon=
+ospace">&#x2022;</span></td><td style=3D"padding-right:10px;font-family:Ari=
+al,Sans-serif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3e=
+m 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Pe=
+rson"><span itemprop=3D"name" class=3D"notranslate">Rishu Goyal</span><meta=
+ itemprop=3D"email" content=3D"rishu@unicommerce.com"/></span></div></div><=
+/td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;f=
+ont-size:13px;color:#222"><span style=3D"font-family:Courier New,monospace"=
+>&#x2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><s=
+pan itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><=
+span itemprop=3D"name" class=3D"notranslate">Yogita Singla</span><meta item=
+prop=3D"email" content=3D"yogita@unicommerce.com"/></span></div></div></td>=
+</tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-=
+size:13px;color:#222"><span style=3D"font-family:Courier New,monospace">&#x=
+2022;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans-ser=
+if;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span =
+itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span=
+ itemprop=3D"name" class=3D"notranslate">Rachit Sachdeva</span><meta itempr=
+op=3D"email" content=3D"rachit@unicommerce.com"/></span></div></div></td></=
+tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-si=
+ze:13px;color:#222"><span style=3D"font-family:Courier New,monospace">&#x20=
+22;</span></td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif=
+;font-size:13px;color:#222"><div><div style=3D"margin:0 0 0.3em 0"><span it=
+emprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span i=
+temprop=3D"name" class=3D"notranslate">Sushant Majumdar</span><meta itempro=
+p=3D"email" content=3D"sushant@unicommerce.com"/></span></div></div></td></=
+tr></table></td></tr></table></div><p style=3D"color:#222;font-size:13px;ma=
+rgin:0"><span style=3D"color:#888">Going?&nbsp;&nbsp;&nbsp;</span><wbr><str=
+ong><span itemprop=3D"potentialaction" itemscope itemtype=3D"http://schema.=
+org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http://schema.org/=
+RsvpAttendance/Yes"/><span itemprop=3D"handler" itemscope itemtype=3D"http:=
+//schema.org/HttpActionHandler"><link itemprop=3D"method" href=3D"http://sc=
+hema.org/HttpRequestMethod/GET"/><a href=3D"https://www.google.com/calendar=
+/event?action=3DRESPOND&amp;eid=3DYzlzZnBjMWFjcGVxcWk5N2tkZzJtbXNsc28gZGlnd=
+mlqYXlAdW5pY29tbWVyY2UuY29t&amp;rst=3D1&amp;tok=3DMjMjYW5hbWlrYUB1bmljb21tZ=
+XJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2NTkwNDFhM2IzZjli&amp;ctz=3DU=
+TC&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap" itemprop=3D"url">Ye=
+s</a></span></span><span style=3D"margin:0 0.4em;font-weight:normal"> - </s=
+pan><span itemprop=3D"potentialaction" itemscope itemtype=3D"http://schema.=
+org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http://schema.org/=
+RsvpAttendance/Maybe"/><span itemprop=3D"handler" itemscope itemtype=3D"htt=
+p://schema.org/HttpActionHandler"><link itemprop=3D"method" href=3D"http://=
+schema.org/HttpRequestMethod/GET"/><a href=3D"https://www.google.com/calend=
+ar/event?action=3DRESPOND&amp;eid=3DYzlzZnBjMWFjcGVxcWk5N2tkZzJtbXNsc28gZGl=
+ndmlqYXlAdW5pY29tbWVyY2UuY29t&amp;rst=3D3&amp;tok=3DMjMjYW5hbWlrYUB1bmljb21=
+tZXJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2NTkwNDFhM2IzZjli&amp;ctz=
+=3DUTC&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap" itemprop=3D"url=
+">Maybe</a></span></span><span style=3D"margin:0 0.4em;font-weight:normal">=
+ - </span><span itemprop=3D"potentialaction" itemscope itemtype=3D"http://s=
+chema.org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http://schem=
+a.org/RsvpAttendance/No"/><span itemprop=3D"handler" itemscope itemtype=3D"=
+http://schema.org/HttpActionHandler"><link itemprop=3D"method" href=3D"http=
+://schema.org/HttpRequestMethod/GET"/><a href=3D"https://www.google.com/cal=
+endar/event?action=3DRESPOND&amp;eid=3DYzlzZnBjMWFjcGVxcWk5N2tkZzJtbXNsc28g=
+ZGlndmlqYXlAdW5pY29tbWVyY2UuY29t&amp;rst=3D2&amp;tok=3DMjMjYW5hbWlrYUB1bmlj=
+b21tZXJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2NTkwNDFhM2IzZjli&amp;ct=
+z=3DUTC&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap" itemprop=3D"ur=
+l">No</a></span></span></strong>&nbsp;&nbsp;&nbsp;&nbsp;<wbr><a href=3D"htt=
+ps://www.google.com/calendar/event?action=3DVIEW&amp;eid=3DYzlzZnBjMWFjcGVx=
+cWk5N2tkZzJtbXNsc28gZGlndmlqYXlAdW5pY29tbWVyY2UuY29t&amp;tok=3DMjMjYW5hbWlr=
+YUB1bmljb21tZXJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2NTkwNDFhM2IzZjl=
+i&amp;ctz=3DUTC&amp;hl=3Den" style=3D"color:#20c;white-space:nowrap" itempr=
+op=3D"url">more options &raquo;</a></p></td></tr><tr><td style=3D"backgroun=
+d-color:#f6f6f6;color:#888;border-top:1px Solid #ccc;font-family:Arial,Sans=
+-serif;font-size:11px"><p>Invitation from <a href=3D"https://www.google.com=
+/calendar/" target=3D"_blank" style=3D"">Google Calendar</a></p><p>You are =
+receiving this email at the account digvijay@unicommerce.com because you ar=
+e subscribed for updated invitations on calendar Digvijay Sharma.</p><p>To =
+stop receiving these emails, please log in to https://www.google.com/calend=
+ar/ and change your notification settings for this calendar.</p><p>Forwardi=
+ng this invitation could allow any recipient to modify your RSVP response. =
+<a href=3D"https://support.google.com/calendar/answer/37135#forwarding">Lea=
+rn More</a>.</p></td></tr></table></div></span></span>
+--001a1145ea1ce72a670547739f61
+Content-Type: text/calendar; charset=UTF-8; method=REQUEST
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20170201T090000Z
+DTEND:20170201T100000Z
+DTSTAMP:20170201T081333Z
+ORGANIZER;CN=Anamika Singh:mailto:anamika@unicommerce.com
+UID:c9sfpc1acpeqqi97kdg2mmslso@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Bhupinder Garg;X-NUM-GUESTS=0:mailto:bhupi@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Amit Dalal;X-NUM-GUESTS=0:mailto:amit.dalal@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Shipra Gupta;X-NUM-GUESTS=0:mailto:shipra@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Ashish Garg;X-NUM-GUESTS=0:mailto:ashish1@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=promil@unicommerce.com;X-NUM-GUESTS=0:mailto:promil@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=karangarg@unicommerce.com;X-NUM-GUESTS=0:mailto:karangarg@unicommer
+ ce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Anamika Singh;X-NUM-GUESTS=0:mailto:anamika@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=himanisingla@unicommerce.com;X-NUM-GUESTS=0:mailto:himanisingla@uni
+ commerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Shobhit Gupta;X-NUM-GUESTS=0:mailto:shobhit@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Sunny Agarwal;X-NUM-GUESTS=0:mailto:sunny@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=ayush@unicommerce.com;X-NUM-GUESTS=0:mailto:ayush@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=aditya@unicommerce.com;X-NUM-GUESTS=0:mailto:aditya@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Digvijay Sharma;X-NUM-GUESTS=0:mailto:digvijay@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Mukesh Bhardwaj;X-NUM-GUESTS=0:mailto:mukesh.bhardwaj@unicommerce.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Rishu Goyal;X-NUM-GUESTS=0:mailto:rishu@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Yogita Singla;X-NUM-GUESTS=0:mailto:yogita@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Rachit Sachdeva;X-NUM-GUESTS=0:mailto:rachit@unicommerce.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Sushant Majumdar;X-NUM-GUESTS=0:mailto:sushant@unicommerce.com
+CREATED:20170201T053559Z
+DESCRIPTION:Dear All\,\n\nBlocking Your calendar for the completion of tran
+ sfer formalities.\n\nThanks\nAnamika\n\n\nThis event has a Google Hangouts 
+ video call.\nJoin: https://plus.google.com/hangouts/_/unicommerce.com/invit
+ ation?hceid=YW5hbWlrYUB1bmljb21tZXJjZS5jb20.c9sfpc1acpeqqi97kdg2mmslso&hs=1
+ 21\n\nView your event at https://www.google.com/calendar/event?action=VIEW&
+ eid=YzlzZnBjMWFjcGVxcWk5N2tkZzJtbXNsc28gZGlndmlqYXlAdW5pY29tbWVyY2UuY29t&to
+ k=MjMjYW5hbWlrYUB1bmljb21tZXJjZS5jb205ZjNiMmUyZjJhOTJkMjUzYjVjODkyNDdlYmU2N
+ TkwNDFhM2IzZjli&ctz=UTC&hl=en.
+LAST-MODIFIED:20170201T081332Z
+LOCATION:Rodeo Drive\, Ground Floor Center A
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Invitation: Transfer formalities completion 
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+--001a1145ea1ce72a670547739f61--
+--001a1145ea1ce72a6b0547739f63
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUOjIwMTcwMjAxVDA5MDAwMFoNCkRURU5EOjIwMTcwMjAx
+VDEwMDAwMFoNCkRUU1RBTVA6MjAxNzAyMDFUMDgxMzMzWg0KT1JHQU5JWkVSO0NOPUFuYW1pa2Eg
+U2luZ2g6bWFpbHRvOmFuYW1pa2FAdW5pY29tbWVyY2UuY29tDQpVSUQ6YzlzZnBjMWFjcGVxcWk5
+N2tkZzJtbXNsc29AZ29vZ2xlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1S
+RVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1CaHVw
+aW5kZXIgR2FyZztYLU5VTS1HVUVTVFM9MDptYWlsdG86Ymh1cGlAdW5pY29tbWVyY2UuY29tDQpB
+VFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1O
+RUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPUFtaXQgRGFsYWw7WC1OVU0tR1VFU1RTPTA6bWFp
+bHRvOmFtaXQuZGFsYWxAdW5pY29tbWVyY2UuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVB
+TDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVF
+O0NOPVNoaXByYSBHdXB0YTtYLU5VTS1HVUVTVFM9MDptYWlsdG86c2hpcHJhQHVuaWNvbW1lcmNl
+LmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFS
+VFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1Bc2hpc2ggR2FyZztYLU5VTS1HVUVT
+VFM9MDptYWlsdG86YXNoaXNoMUB1bmljb21tZXJjZS5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJ
+VklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0K
+IFRSVUU7Q049cHJvbWlsQHVuaWNvbW1lcmNlLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86cHJv
+bWlsQHVuaWNvbW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEt
+UEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1rYXJhbmdh
+cmdAdW5pY29tbWVyY2UuY29tO1gtTlVNLUdVRVNUUz0wOm1haWx0bzprYXJhbmdhcmdAdW5pY29t
+bWVyDQogY2UuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJ
+UEFOVDtQQVJUU1RBVD1BQ0NFUFRFRDtSU1ZQPVRSVUUNCiA7Q049QW5hbWlrYSBTaW5naDtYLU5V
+TS1HVUVTVFM9MDptYWlsdG86YW5hbWlrYUB1bmljb21tZXJjZS5jb20NCkFUVEVOREVFO0NVVFlQ
+RT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtS
+U1ZQPQ0KIFRSVUU7Q049aGltYW5pc2luZ2xhQHVuaWNvbW1lcmNlLmNvbTtYLU5VTS1HVUVTVFM9
+MDptYWlsdG86aGltYW5pc2luZ2xhQHVuaQ0KIGNvbW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBF
+PUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JT
+VlA9DQogVFJVRTtDTj1TaG9iaGl0IEd1cHRhO1gtTlVNLUdVRVNUUz0wOm1haWx0bzpzaG9iaGl0
+QHVuaWNvbW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFS
+VElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1TdW5ueSBBZ2Fy
+d2FsO1gtTlVNLUdVRVNUUz0wOm1haWx0bzpzdW5ueUB1bmljb21tZXJjZS5jb20NCkFUVEVOREVF
+O0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFD
+VElPTjtSU1ZQPQ0KIFRSVUU7Q049YXl1c2hAdW5pY29tbWVyY2UuY29tO1gtTlVNLUdVRVNUUz0w
+Om1haWx0bzpheXVzaEB1bmljb21tZXJjZS5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFM
+O1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7
+Q049YWRpdHlhQHVuaWNvbW1lcmNlLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86YWRpdHlhQHVu
+aWNvbW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElD
+SVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1EaWd2aWpheSBTaGFy
+bWE7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOmRpZ3ZpamF5QHVuaWNvbW1lcmNlLmNvbQ0KQVRURU5E
+RUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMt
+QUNUSU9OO1JTVlA9DQogVFJVRTtDTj1NdWtlc2ggQmhhcmR3YWo7WC1OVU0tR1VFU1RTPTA6bWFp
+bHRvOm11a2VzaC5iaGFyZHdhakB1bmljb21tZXJjZS5jDQogb20NCkFUVEVOREVFO0NVVFlQRT1J
+TkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQ
+PQ0KIFRSVUU7Q049UmlzaHUgR295YWw7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnJpc2h1QHVuaWNv
+bW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBB
+TlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1Zb2dpdGEgU2luZ2xhO1gt
+TlVNLUdVRVNUUz0wOm1haWx0bzp5b2dpdGFAdW5pY29tbWVyY2UuY29tDQpBVFRFTkRFRTtDVVRZ
+UEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047
+UlNWUD0NCiBUUlVFO0NOPVJhY2hpdCBTYWNoZGV2YTtYLU5VTS1HVUVTVFM9MDptYWlsdG86cmFj
+aGl0QHVuaWNvbW1lcmNlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEt
+UEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1TdXNoYW50
+IE1hanVtZGFyO1gtTlVNLUdVRVNUUz0wOm1haWx0bzpzdXNoYW50QHVuaWNvbW1lcmNlLmNvbQ0K
+Q1JFQVRFRDoyMDE3MDIwMVQwNTM1NTlaDQpERVNDUklQVElPTjpEZWFyIEFsbFwsXG5cbkJsb2Nr
+aW5nIFlvdXIgY2FsZW5kYXIgZm9yIHRoZSBjb21wbGV0aW9uIG9mIHRyYW4NCiBzZmVyIGZvcm1h
+bGl0aWVzLlxuXG5UaGFua3NcbkFuYW1pa2FcblxuXG5UaGlzIGV2ZW50IGhhcyBhIEdvb2dsZSBI
+YW5nb3V0cyANCiB2aWRlbyBjYWxsLlxuSm9pbjogaHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20vaGFu
+Z291dHMvXy91bmljb21tZXJjZS5jb20vaW52aXQNCiBhdGlvbj9oY2VpZD1ZVzVoYldscllVQjFi
+bWxqYjIxdFpYSmpaUzVqYjIwLmM5c2ZwYzFhY3BlcXFpOTdrZGcybW1zbHNvJmhzPTENCiAyMVxu
+XG5WaWV3IHlvdXIgZXZlbnQgYXQgaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9jYWxlbmRhci9ldmVu
+dD9hY3Rpb249VklFVyYNCiBlaWQ9WXpselpuQmpNV0ZqY0dWeGNXazVOMnRrWnpKdGJYTnNjMjhn
+WkdsbmRtbHFZWGxBZFc1cFkyOXRiV1Z5WTJVdVkyOXQmdG8NCiBrPU1qTWpZVzVoYldscllVQjFi
+bWxqYjIxdFpYSmpaUzVqYjIwNVpqTmlNbVV5WmpKaE9USmtNalV6WWpWak9Ea3lORGRsWW1VMk4N
+CiBUa3dOREZoTTJJelpqbGkmY3R6PVVUQyZobD1lbi4NCkxBU1QtTU9ESUZJRUQ6MjAxNzAyMDFU
+MDgxMzMyWg0KTE9DQVRJT046Um9kZW8gRHJpdmVcLCBHcm91bmQgRmxvb3IgQ2VudGVyIEENClNF
+UVVFTkNFOjINClNUQVRVUzpDT05GSVJNRUQNClNVTU1BUlk6SW52aXRhdGlvbjogVHJhbnNmZXIg
+Zm9ybWFsaXRpZXMgY29tcGxldGlvbiANClRSQU5TUDpPUEFRVUUNCkVORDpWRVZFTlQNCkVORDpW
+Q0FMRU5EQVINCg==
+--001a1145ea1ce72a6b0547739f63--

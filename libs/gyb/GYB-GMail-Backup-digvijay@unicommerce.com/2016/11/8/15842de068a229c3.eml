@@ -1,0 +1,58 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1455205qge;
+        Mon, 7 Nov 2016 23:36:36 -0800 (PST)
+X-Received: by 10.28.32.150 with SMTP id g144mr14465443wmg.46.1478590596903;
+        Mon, 07 Nov 2016 23:36:36 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id gr7si1224473wjc.215.2016.11.07.23.36.35
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Nov 2016 23:36:36 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uA87aXt7001739;
+	Tue, 8 Nov 2016 13:06:33 +0530
+Date: Tue, 8 Nov 2016 07:36:33 +0000 (UTC)
+From: build@unicommerce.com
+To: devops@unicommerce.com, sunny@unicommerce.com,
+        akshay.agarwal.js@snapdeal.com, digvijay@unicommerce.com
+Message-ID: <1657519240.33.1478590593027.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <814609689.26.1478581584279.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <814609689.26.1478581584279.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: Uniware #1926
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Jenkins-Job: Uniware
+X-Jenkins-Result: FAILURE
+
+See <http://jenkins.unicommerce.com:8080/job/Uniware/1926/changes>
+
+Changes:
+
+[digvijay] hasNextPage Flag added
+
+------------------------------------------
+Started by an SCM change
+Building in workspace <http://jenkins.unicommerce.com:8080/job/Uniware/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git -c core.askpass=true fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision a1f0314a7993b32289132611e96fa70467d6060c (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1f0314a7993b32289132611e96fa70467d6060c
+ > git rev-list 8751ba2686f8c7b7373461e2128062a2ddd5d664 # timeout=10
+Waiting for the completion of UniwareCommon
+UniwareCommon #3859 completed. Result was FAILURE
+Build step 'Trigger/call builds on other projects' marked build as failure
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern **/pmd.xml
+[PMD] No files found in <http://jenkins.unicommerce.com:8080/job/Uniware/ws/> for pattern: **/pmd.xml
+[PMD] Computing warning deltas based on reference build #1903

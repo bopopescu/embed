@@ -1,0 +1,145 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp47924itg;
+        Thu, 29 Sep 2016 21:47:03 -0700 (PDT)
+X-Received: by 10.129.41.208 with SMTP id p199mr3220431ywp.223.1475210823325;
+        Thu, 29 Sep 2016 21:47:03 -0700 (PDT)
+Return-Path: <tech+bncBCGJ5SVI3EKRBRW4W67QKGQE5L325UA@unicommerce.com>
+Received: from mail-yw0-x247.google.com (mail-yw0-x247.google.com. [2607:f8b0:4002:c05::247])
+        by mx.google.com with ESMTPS id t66si4545695ywd.248.2016.09.29.21.47.03
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 21:47:03 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbcgj5svi3ekrbrw4w67qkgqe5l325ua@unicommerce.com) client-ip=2607:f8b0:4002:c05::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::247 is neither permitted nor denied by best guess record for domain of tech+bncbcgj5svi3ekrbrw4w67qkgqe5l325ua@unicommerce.com) smtp.mailfrom=tech+bncBCGJ5SVI3EKRBRW4W67QKGQE5L325UA@unicommerce.com
+Received: by mail-yw0-x247.google.com with SMTP id 204sf21848526ywm.1
+        for <digvijay@unicommerce.com>; Thu, 29 Sep 2016 21:47:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=N9l6ecqdcrxCxtZNnz2Gzgmf2XO0hvl8Yq/cheWghx8=;
+        b=F4huKJNgoQPo3Mv+pPW4qfLSH3xvqgjY+sEUKi/QjrJ64DlELn9JG5rGB0EUL8Kju1
+         WymdHVTsGeRyOsMGYaoMh/J37u4Qnhi4wERI0n2XI+BT9wnvPtmRyCggupVmf15kJGCO
+         UjuZU1oqiUbII3BBnGKSzcNcOPylkcXZyeV5G0+v5Uir4ZcQA5kDfyHaac2012TQ06Fi
+         zciv9VfYTQbPFfddISicIVGiPyiehaBiXyGMp8NVY0nto9g0EWnQGkY1hwierRSM4BC3
+         uN7QdRkhMFo+w+Zls0jqIODwcF0snxjCRIAc/K7lc8aDKZu3akyu6RUpPv4shJIPL7HD
+         mLgw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=N9l6ecqdcrxCxtZNnz2Gzgmf2XO0hvl8Yq/cheWghx8=;
+        b=gH9GJPnBR3NLXI0irOf1NTSpkzurq+yWYTTks8QTBkaBib3ZWj1I0NDgkzTpnrAeBH
+         dZ/Q5kW6VftxZvaM58bE+liVQPnPoI0ZKu/xgIin+1WIG4zFH4I5eH92i2VdhnvdRcOz
+         InpzQGt//gUuLP7jAE8QSso8E57ecHYC8wgmrl9SYV5wlQNeuRGNLVlVV8ajqchs6fje
+         G76llBPs76kAmOQCgB76J/aK9a68b+D0hNYWZ1gJ219EmDWOdzZi/q1W8ePcLHWMvRDY
+         gN4xMCCQE1NLhmrRiDcl9Hwl0eByBFWwfrxAUJSw5WHUOnKu4NxgM3kVVp+DCg3yq6HF
+         oSYw==
+X-Gm-Message-State: AA6/9RlrXQxNl3PymGb3BlYAWG70MQpfnNKSzVySBZCkvA68tgT0j1X02AI0BrChZB5/yw==
+X-Received: by 10.13.213.213 with SMTP id x204mr1431973ywd.52.1475210822918;
+        Thu, 29 Sep 2016 21:47:02 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.34.18 with SMTP id o18ls3885499ota.40.gmail; Thu, 29 Sep
+ 2016 21:47:02 -0700 (PDT)
+X-Received: by 10.157.7.71 with SMTP id 65mr3980237ote.94.1475210822740;
+        Thu, 29 Sep 2016 21:47:02 -0700 (PDT)
+Received: from mail-oi0-x236.google.com (mail-oi0-x236.google.com. [2607:f8b0:4003:c06::236])
+        by mx.google.com with ESMTPS id e133si5908099oih.155.2016.09.29.21.47.02
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 21:47:02 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::236 is neither permitted nor denied by best guess record for domain of rishu@unicommerce.com) client-ip=2607:f8b0:4003:c06::236;
+Received: by mail-oi0-x236.google.com with SMTP id r126so117479494oib.0
+        for <tech@unicommerce.com>; Thu, 29 Sep 2016 21:47:02 -0700 (PDT)
+X-Received: by 10.157.12.173 with SMTP id b42mr3587109otb.248.1475210822179;
+ Thu, 29 Sep 2016 21:47:02 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.157.35.60 with HTTP; Thu, 29 Sep 2016 21:46:21 -0700 (PDT)
+In-Reply-To: <201609300445.u8U4jAPh002847@nagios1.unicommerce.infra>
+References: <201609300445.u8U4jAPh002847@nagios1.unicommerce.infra>
+From: Rishu Goyal <rishu@unicommerce.com>
+Date: Fri, 30 Sep 2016 10:16:21 +0530
+Message-ID: <CAF+w_SEgscH52b95LqrCL+iDFdYfTqBjbNf_84Hq=gNAcGpydg@mail.gmail.com>
+Subject: Fwd: activemq1.unicommerce.infra/ActiveMQ Invoice queue is CRITICAL
+To: Tech Team <tech@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1140b87206729b053db2491d
+X-Original-Sender: rishu@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:4003:c06::236 is neither permitted nor denied by best
+ guess record for domain of rishu@unicommerce.com) smtp.mailfrom=rishu@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a1140b87206729b053db2491d
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: <nagios@nagios1.unicommerce.infra>
+Date: Fri, Sep 30, 2016 at 10:15 AM
+Subject: activemq1.unicommerce.infra/ActiveMQ Invoice queue is CRITICAL
+To: devops-critical@unicommerce.com
+
+
+***** Nagios *****
+
+Notification Type: PROBLEM
+
+Service: ActiveMQ Invoice queue
+Host: activemq1.unicommerce.infra
+Address: activemq1.unicommerce.infra
+State: CRITICAL
+
+Date/Time: Fri Sept 30 10:15:10 IST 2016
+
+Additional Info:
+
+CRITICAL - INVOICE_QUEUE holding: 26723 msgs
+
+
+
+-- 
+
+Thanks & Regards
+ Rishu
+
+--001a1140b87206729b053db2491d
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"color:#3d85c6"><br><=
+/div><div class=3D"gmail_quote">---------- Forwarded message ----------<br>=
+From: <b class=3D"gmail_sendername"></b> <span dir=3D"ltr">&lt;nagios@nagio=
+s1.unicommerce.infra&gt;</span><br>Date: Fri, Sep 30, 2016 at 10:15 AM<br>S=
+ubject: activemq1.unicommerce.infra/ActiveMQ Invoice queue is CRITICAL<br>T=
+o: <a href=3D"mailto:devops-critical@unicommerce.com">devops-critical@unico=
+mmerce.com</a><br><br><br><span class=3D"">***** Nagios *****<br>
+<br>
+Notification Type: PROBLEM<br>
+<br>
+Service: ActiveMQ Invoice queue<br>
+Host: activemq1.unicommerce.infra<br>
+Address: activemq1.unicommerce.infra<br>
+State: CRITICAL<br>
+<br>
+</span>Date/Time: Fri Sept 30 10:15:10 IST 2016<br>
+<br>
+Additional Info:<br>
+<br>
+CRITICAL - INVOICE_QUEUE holding: 26723 msgs<br>
+</div><br><br clear=3D"all"><br>-- <br><div class=3D"gmail_signature" data-=
+smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><br></div><div>Thanks &=
+amp; Regards<div>=C2=A0Rishu</div></div></div></div>
+</div>
+
+--001a1140b87206729b053db2491d--

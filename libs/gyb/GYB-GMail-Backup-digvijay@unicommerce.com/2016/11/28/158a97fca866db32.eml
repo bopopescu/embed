@@ -1,0 +1,183 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.89.134 with SMTP id v6csp945413qgd;
+        Sun, 27 Nov 2016 21:54:34 -0800 (PST)
+X-Received: by 10.159.48.65 with SMTP id i1mr14222535uab.12.1480312474118;
+        Sun, 27 Nov 2016 21:54:34 -0800 (PST)
+Return-Path: <3mcY7WAgTCNwLM-PCNJW8AAMSLRQ.EMMEJC.AMKBGETGH8WSLGAMKKCPAC.AMK@gaia.bounces.google.com>
+Received: from mail-vk0-x247.google.com (mail-vk0-x247.google.com. [2607:f8b0:400c:c05::247])
+        by mx.google.com with ESMTPS id 2si12589341uab.140.2016.11.27.21.54.34
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 27 Nov 2016 21:54:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3mcy7wagtcnwlm-pcnjw8aamslrq.emmejc.amkbgetgh8wslgamkkcpac.amk@gaia.bounces.google.com designates 2607:f8b0:400c:c05::247 as permitted sender) client-ip=2607:f8b0:400c:c05::247;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@accounts.google.com;
+       spf=pass (google.com: domain of 3mcy7wagtcnwlm-pcnjw8aamslrq.emmejc.amkbgetgh8wslgamkkcpac.amk@gaia.bounces.google.com designates 2607:f8b0:400c:c05::247 as permitted sender) smtp.mailfrom=3mcY7WAgTCNwLM-PCNJW8AAMSLRQ.EMMEJC.AMKBGETGH8WSLGAMKKCPAC.AMK@gaia.bounces.google.com;
+       dmarc=pass (p=REJECT dis=NONE) header.from=accounts.google.com
+Received: by mail-vk0-x247.google.com with SMTP id h67so57030323vkf.4
+        for <digvijay@unicommerce.com>; Sun, 27 Nov 2016 21:54:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=accounts.google.com; s=20120806;
+        h=mime-version:date:feedback-id:message-id:subject:from:to;
+        bh=RKFEkPqesNDc3wfh0pjrmVBP3kuy3vV2i64hipJdD0o=;
+        b=bhQVh9Wrqucja1OCgEBXBGHZ7b7t4Y/d6gPkJHrDR/XJfCfmpqei4IBSPdkq7WznC3
+         ZdCqHHi/+qYWTKJl6qeZcxWWHgzkE6ieBLDwx5dYhPOKQp0343bik7GXtryrjbnq4pwb
+         2QlZXNxoyhx3fRqqgXEsfEu5KnOugEcJWGswkhfe4i0/U3uHLePoNb2GzmudxiG+Iz8H
+         uIASo788b55LEw/EVwMD+8bMU/HhglQXENpgqyQeVsRLebC/mOSMkzz4vocWz3QvYVTr
+         J0hyaCqQ2PopYxNnQ1ngPPcR4QaTvNnw0MO3sPcfUaJX+27Z08BIxPGAvPCFOy5vA6lz
+         9YNQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:feedback-id:message-id:subject
+         :from:to;
+        bh=RKFEkPqesNDc3wfh0pjrmVBP3kuy3vV2i64hipJdD0o=;
+        b=fg5IxBYz8j2UL5YNy5EApMYTisKs1p+oRaIdUDcfXHUx/GJ0eKG9/VkbimXmYYYURz
+         zxVgQfEMl7aPmNFLkLOMAORV03lkZ5E6mxxAxXYZAASHWvMQoYRfbq9TIyl76RWlYSu0
+         jS7mK7teiauSMlzKg6VlSOKD081n5RC7Vzva0pvQV32lSlt8rLQIuHDX/mcrpVTxm4cH
+         PdpQ0ztf3r8YE74t4e61oIRUhcRpHrXUrsjXxo7KA88rx9qp03zlMor2pp7S9+3j9oxm
+         8lBu65GnuyF4HsHC44vtwA9xhq+Z31lPfcHUvE1Khr28o4JvSdt/b2eXXYQQOS9zctG7
+         3LSQ==
+X-Gm-Message-State: AKaTC02c+waVqVho8/yYbnqOxjs/jbAekGqlbPSM5H/gfTIrWmV4M7G44GIFbjs114T//BoVtKF4DWmbp8eLkDQv
+MIME-Version: 1.0
+X-Received: by 10.31.11.199 with SMTP id 190mr2829491vkl.37.1480312473963;
+ Sun, 27 Nov 2016 21:54:33 -0800 (PST)
+Date: Mon, 28 Nov 2016 05:54:26 +0000 (GMT)
+X-Notifications: XEAAAAFbtm1Ds9qSAgTbr1oOYZ6g
+X-Account-Notification-Type: 31-anexp#ire-control
+Feedback-ID: 31-anexp#ire-control:account-notifier
+Message-ID: <SSnpZNc564B9azPU7o7HoQ@notifications.google.com>
+Subject: New sign-in from Chrome on Mac
+From: Google <no-reply@accounts.google.com>
+To: digvijay@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a11410afc2acf5d0542561bde
+
+--001a11410afc2acf5d0542561bde
+Content-Type: text/plain; charset=UTF-8; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+TmV3IHNpZ24taW4gZnJvbSBDaHJvbWUgb24gTWFjDQoNCg0KDQpIaSBEaWd2aWpheSwNCllvdXIg
+R29vZ2xlIEFjY291bnQgZGlndmlqYXlAdW5pY29tbWVyY2UuY29tIHdhcyBqdXN0IHVzZWQgdG8g
+c2lnbiBpbiBmcm9tDQpDaHJvbWUgb24gTWFjLg0KDQpEaWd2aWpheSBTaGFybWENCmRpZ3ZpamF5
+QHVuaWNvbW1lcmNlLmNvbQ0KDQpNYWMNCk1vbmRheSwgTm92ZW1iZXIgMjgsIDIwMTYgMTE6MjQg
+QU0gKEluZGlhIFN0YW5kYXJkIFRpbWUpDQpHdXJnYW9uLCBIYXJ5YW5hLCBJbmRpYSoNCkNocm9t
+ZSpEb24ndCByZWNvZ25pemUgdGhpcyBhY3Rpdml0eT8qDQpSZXZpZXcgeW91ciByZWNlbnRseSB1
+c2VkIGRldmljZXMNCjxodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vQWNjb3VudENob29zZXI/
+RW1haWw9ZGlndmlqYXlAdW5pY29tbWVyY2UuY29tJmNvbnRpbnVlPWh0dHBzOi8vc2VjdXJpdHku
+Z29vZ2xlLmNvbS9zZXR0aW5ncy9zZWN1cml0eS9hY3Rpdml0eS9udC8xNDgwMzEyNDY2MDAwP3Jm
+biUzRDMxJTI2cmZuYyUzRDElMjZldCUzRDAlMjZhc2FlJTNEMiUyNmFuZXhwJTNEaXJlLWNvbnRy
+b2w+DQpub3cuDQoNCldoeSBhcmUgd2Ugc2VuZGluZyB0aGlzPyBXZSB0YWtlIHNlY3VyaXR5IHZl
+cnkgc2VyaW91c2x5IGFuZCB3ZSB3YW50IHRvDQprZWVwIHlvdSBpbiB0aGUgbG9vcCBvbiBpbXBv
+cnRhbnQgYWN0aW9ucyBpbiB5b3VyIGFjY291bnQuDQpXZSB3ZXJlIHVuYWJsZSB0byBkZXRlcm1p
+bmUgd2hldGhlciB5b3UgaGF2ZSB1c2VkIHRoaXMgYnJvd3NlciBvciBkZXZpY2UNCndpdGggeW91
+ciBhY2NvdW50IGJlZm9yZS4gVGhpcyBjYW4gaGFwcGVuIHdoZW4geW91IHNpZ24gaW4gZm9yIHRo
+ZSBmaXJzdA0KdGltZSBvbiBhIG5ldyBjb21wdXRlciwgcGhvbmUgb3IgYnJvd3Nlciwgd2hlbiB5
+b3UgdXNlIHlvdXIgYnJvd3NlcidzDQppbmNvZ25pdG8gb3IgcHJpdmF0ZSBicm93c2luZyBtb2Rl
+IG9yIGNsZWFyIHlvdXIgY29va2llcywgb3Igd2hlbiBzb21lYm9keQ0KZWxzZSBpcyBhY2Nlc3Np
+bmcgeW91ciBhY2NvdW50Lg0KDQpCZXN0LA0KVGhlIEdvb2dsZSBBY2NvdW50cyB0ZWFtDQoNCg0K
+DQoqVGhlIGxvY2F0aW9uIGlzIGFwcHJveGltYXRlIGFuZCBkZXRlcm1pbmVkIGJ5IHRoZSBJUCBh
+ZGRyZXNzIGl0IHdhcyBjb21pbmcNCmZyb20uDQoNClRoaXMgZW1haWwgY2FuJ3QgcmVjZWl2ZSBy
+ZXBsaWVzLiBUbyBnaXZlIHVzIGZlZWRiYWNrIG9uIHRoaXMgYWxlcnQsIGNsaWNrDQpoZXJlDQo8
+aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vYWNjb3VudHMvY29udGFjdC9kZXZpY2VfYWxlcnRf
+ZmVlZGJhY2s/aGw9ZW4+Lg0KRm9yIG1vcmUgaW5mb3JtYXRpb24sIHZpc2l0IHRoZSBHb29nbGUg
+QWNjb3VudHMgSGVscCBDZW50ZXINCjxodHRwczovL3N1cHBvcnQuZ29vZ2xlLmNvbS9hY2NvdW50
+cy9hbnN3ZXIvMjczMzIwMz4uDQoNCg0KDQpZb3UgcmVjZWl2ZWQgdGhpcyBtYW5kYXRvcnkgZW1h
+aWwgc2VydmljZSBhbm5vdW5jZW1lbnQgdG8gdXBkYXRlIHlvdSBhYm91dA0KaW1wb3J0YW50IGNo
+YW5nZXMgdG8geW91ciBHb29nbGUgcHJvZHVjdCBvciBhY2NvdW50Lg0KwqkgMjAxNiBHb29nbGUg
+SW5jLiwgMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwgTW91bnRhaW4gVmlldywgQ0EgOTQwNDMs
+IFVTQQ0K
+--001a11410afc2acf5d0542561bde
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"en"><head><meta name=3D"format-detection" content=3D"date=3Dn=
+o"><meta name=3D"format-detection" content=3D"email=3Dno"></head><body styl=
+e=3D"margin: 0; padding: 0;" bgcolor=3D"#FFFFFF"><table width=3D"100%" heig=
+ht=3D"100%" style=3D"min-width: 348px;" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0"><tr height=3D"32px"></tr><tr align=3D"center"><td width=3D"32=
+px"></td><td><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"max-width: 600px;"><tr><td><table width=3D"100%" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tr><td align=3D"left"><img width=3D"92" height=
+=3D"32" src=3D"https://www.gstatic.com/accountalerts/email/googlelogo_color=
+_188x64dp.png" style=3D"display: block; width: 92px; height: 32px;"></td><t=
+d align=3D"right"><img width=3D"32" height=3D"32" style=3D"display: block; =
+width: 32px; height: 32px;" src=3D"https://www.gstatic.com/accountalerts/em=
+ail/keyhole.png"></td></tr></table></td></tr><tr height=3D"16"></tr><tr><td=
+><table bgcolor=3D"#4184F3" width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" style=3D"min-width: 332px; max-width: 600px; border: 1px s=
+olid #E0E0E0; border-bottom: 0; border-top-left-radius: 3px; border-top-rig=
+ht-radius: 3px;"><tr><td height=3D"72px" colspan=3D"3"></td></tr><tr><td wi=
+dth=3D"32px"></td><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,=
+sans-serif; font-size: 24px; color: #FFFFFF; line-height: 1.25;">New sign-i=
+n from Chrome on Mac</td><td width=3D"32px"></td></tr><tr><td height=3D"18p=
+x" colspan=3D"3"></td></tr></table></td></tr><tr><td><table bgcolor=3D"#FAF=
+AFA" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"min-width: 332px; max-width: 600px; border: 1px solid #F0F0F0; border-b=
+ottom: 1px solid #C0C0C0; border-top: 0; border-bottom-left-radius: 3px; bo=
+rder-bottom-right-radius: 3px;"><tr height=3D"16px"><td width=3D"32px" rows=
+pan=3D"3"></td><td></td><td width=3D"32px" rowspan=3D"3"></td></tr><tr><td>=
+<table style=3D"min-width: 300px;" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-=
+serif; font-size: 13px; color: #202020; line-height: 1.5;">Hi Digvijay,</td=
+></tr><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-ser=
+if; font-size: 13px; color: #202020; line-height: 1.5;">Your Google Account=
+ <a>digvijay@unicommerce.com</a> was just used to sign in from <span style=
+=3D"white-space:nowrap;">Chrome</span> on <span style=3D"white-space:nowrap=
+;">Mac</span>.<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"margin-top: 48px; margin-bottom: 48px;"><tr valign=3D"middle"><td width=
+=3D"32px" ></td><td align=3D"center" ><img src=3D"https://www.gstatic.com/a=
+ccountalerts/email/anonymous_profile_photo.png" width=3D"48px" height=3D"48=
+px" style=3D"width: 48px; height: 48px; display: block; border-radius: 50%;=
+"></td><td width=3D"16px" ></td><td style=3D"line-height: 1.2;"><span style=
+=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-serif;font-size: 20px;=
+ color: #202020;">Digvijay Sharma</span><br><span style=3D"font-family: Rob=
+oto-Regular,Helvetica,Arial,sans-serif;font-size: 13px; color: #727272;"><a=
+>digvijay@unicommerce.com</a></span></td></tr><tr valign=3D"middle"><td wid=
+th=3D"32px" height=3D"24px"></td><td align=3D"center" height=3D"24px"><img =
+src=3D"https://www.gstatic.com/accountalerts/email/down_arrow.png" width=3D=
+"4px" height=3D"10px" style=3D"width: 4px; height: 10px; display: block; ">=
+</td></tr><tr valign=3D"top"><td width=3D"32px" ></td><td align=3D"center" =
+><img src=3D"https://www.gstatic.com/accountalerts/devices/mac_laptop_wallp=
+aper_big.png" width=3D"48px" height=3D"48px" style=3D"width: 48px; height: =
+48px; display: block; "></td><td width=3D"16px" ></td><td style=3D"line-hei=
+ght: 1.2;"><span style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-=
+serif; font-size: 16px; color: #202020;">Mac</span><br><span style=3D"font-=
+family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 13px; color: =
+#727272;">Monday, November 28, 2016 11:24 AM (India Standard Time)<br>Gurga=
+on, Haryana, India*<br>Chrome</span></td></tr></table><b>Don&#39;t recogniz=
+e this activity?</b><br>Review your <a href=3D"https://accounts.google.com/=
+AccountChooser?Email=3Ddigvijay@unicommerce.com&amp;continue=3Dhttps://secu=
+rity.google.com/settings/security/activity/nt/1480312466000?rfn%3D31%26rfnc=
+%3D1%26et%3D0%26asae%3D2%26anexp%3Dire-control" data-meta-key=3D"review-dev=
+ices" style=3D"text-decoration: none; color: #4285F4;" target=3D"_blank">re=
+cently used devices</a> now.<br><br>Why are we sending this? We take securi=
+ty very seriously and we want to keep you in the loop on important actions =
+in your account.<br>We were unable to determine whether you have used this =
+browser or device with your account before. This can happen when you sign i=
+n for the first time on a new computer, phone or browser, when you use your=
+ browser's incognito or private browsing mode or clear your cookies, or whe=
+n somebody else is accessing your account.</td></tr><tr height=3D"32px"></t=
+r><tr><td style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-serif; =
+font-size: 13px; color: #202020; line-height: 1.5;">Best,<br>The Google Acc=
+ounts team</td></tr><tr height=3D"16px"></tr><tr><td><table style=3D"font-f=
+amily: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 12px; color: #=
+B9B9B9; line-height: 1.5;"><tr><td>*The location is approximate and determi=
+ned by the IP address it was coming from.<br></td></tr><tr><td>This email c=
+an't receive replies. To give us feedback on this alert, <a href=3D"https:/=
+/support.google.com/accounts/contact/device_alert_feedback?hl=3Den" data-me=
+ta-key=3D"feedback" style=3D"text-decoration: none; color: #4285F4;" target=
+=3D"_blank">click here</a>.<br>For more information, visit the <a href=3D"h=
+ttps://support.google.com/accounts/answer/2733203" data-meta-key=3D"help" s=
+tyle=3D"text-decoration: none; color: #4285F4;" target=3D"_blank">Google Ac=
+counts Help Center</a>.</td></tr></table></td></tr></table></td></tr><tr he=
+ight=3D"32px"></tr></table></td></tr><tr height=3D"16"></tr><tr><td style=
+=3D"max-width: 600px; font-family: Roboto-Regular,Helvetica,Arial,sans-seri=
+f; font-size: 10px; color: #BCBCBC; line-height: 1.5;"><tr><td><table style=
+=3D"font-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 10px=
+; color: #666666; line-height: 18px; padding-bottom: 10px"><tr><td>You rece=
+ived this mandatory email service announcement to update you about importan=
+t changes to your Google product or account.</td></tr><tr><td><div style=3D=
+"direction: ltr; text-align: left">&copy; 2016 Google Inc., 1600 Amphitheat=
+re Parkway, Mountain View, CA 94043, USA</div></td></tr></table></td></tr><=
+/td></tr></table></td><td width=3D"32px"></td></tr><tr height=3D"32px"></tr=
+></table></body></html>
+--001a11410afc2acf5d0542561bde--

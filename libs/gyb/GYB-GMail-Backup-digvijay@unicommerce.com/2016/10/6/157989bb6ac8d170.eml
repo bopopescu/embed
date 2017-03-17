@@ -1,0 +1,115 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.36.203.196 with SMTP id u187csp2904008itg;
+        Wed, 5 Oct 2016 23:08:44 -0700 (PDT)
+X-Received: by 10.98.156.193 with SMTP id u62mr14191820pfk.57.1475734124543;
+        Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+Return-Path: <tech+bncBC4YJAHS64FBB3GU267QKGQEL2THFUY@unicommerce.com>
+Received: from mail-pa0-x246.google.com (mail-pa0-x246.google.com. [2607:f8b0:400e:c03::246])
+        by mx.google.com with ESMTPS id p9si11196459pac.62.2016.10.05.23.08.44
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400e:c03::246 is neither permitted nor denied by best guess record for domain of tech+bncbc4yjahs64fbb3gu267qkgqel2thfuy@unicommerce.com) client-ip=2607:f8b0:400e:c03::246;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400e:c03::246 is neither permitted nor denied by best guess record for domain of tech+bncbc4yjahs64fbb3gu267qkgqel2thfuy@unicommerce.com) smtp.mailfrom=tech+bncBC4YJAHS64FBB3GU267QKGQEL2THFUY@unicommerce.com
+Received: by mail-pa0-x246.google.com with SMTP id bv10sf18562007pad.2
+        for <digvijay@unicommerce.com>; Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-help;
+        bh=K7TuDzdICLd6+n8eId/nX+7/rOFaXzGdmCKHYg+fv0s=;
+        b=XBID1bBV0qd4buO5nHoNGC6UDsbat4Jil6gp0nHCThQKv3Y8ChSHwOCjkCh4FQCrO3
+         hysxu45VaEI+WUvXkWmSLzg9sAEUR0zTMj9vgCXvHyXLuWqxSn4ckl4kMBxbnpcQReHU
+         MmNMS45MQ3yLaoW6bx/d7xRkF5BqQLCSf3zu35uXjtXBCuTrvqLjPibwvRe8nCvZdfnO
+         5fnVVIevNuTnoRI50YX1A6LC2+54j9Q+o+F+bdBoDG2VUBtaOvDID+kCEPpcfYYOrvbg
+         yH5dxfN9gPpt1GCPSGzye9PcKf0poiSu971RVWYmSk8FkkRyb7a2w2LJf8Pjnupt1nDJ
+         TgjQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-help;
+        bh=K7TuDzdICLd6+n8eId/nX+7/rOFaXzGdmCKHYg+fv0s=;
+        b=FIh3/3phUSX6k+kSffWW/HJItxshOVmRbz+FKhi1+9TzlC/EjZ9M3rFinZmAtUPK+z
+         7YzZ3bypB5kCWUhoRTU9y9m4EeQBH63N2ZCBkaMCll4RNFMzFWgGDZnwyEoJIxVWzWOv
+         MEYc7LrenjWQ7M+n4SyTP+kwoDt2yWebYKH6E27XK9jWRbzI+5J8moC7rWXCr6/+EKVL
+         dq3xosx96jpqi3ISJIdbWFO4wrQC6InP6avYZZ3lfmInEjVWhsj7cHIgNuXEpF3fcTk9
+         /J2QkWIUrVHLaU0rcyRX6wGGCqmbgbHWwg+BZ8ipgBap08SZilyAm/3kIcKx8o3O8TfW
+         bVvQ==
+X-Gm-Message-State: AA6/9RmLxe1fh1AxJiYqc7xJlP8YjLM+hg581wobG3SVvpReCzwepF6FoxzisBGATztBRQ==
+X-Received: by 10.98.207.69 with SMTP id b66mr3303515pfg.2.1475734124333;
+        Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+X-BeenThere: tech@unicommerce.com
+Received: by 10.157.23.236 with SMTP id j99ls2276680otj.7.gmail; Wed, 05 Oct
+ 2016 23:08:44 -0700 (PDT)
+X-Received: by 10.55.19.36 with SMTP id d36mr12326260qkh.247.1475734124091;
+        Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+Received: from mail-qt0-x234.google.com (mail-qt0-x234.google.com. [2607:f8b0:400d:c0d::234])
+        by mx.google.com with ESMTPS id j127si7093788qkd.209.2016.10.05.23.08.44
+        for <tech@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400d:c0d::234 is neither permitted nor denied by best guess record for domain of vikas@unicommerce.com) client-ip=2607:f8b0:400d:c0d::234;
+Received: by mail-qt0-x234.google.com with SMTP id s49so3979040qta.0
+        for <tech@unicommerce.com>; Wed, 05 Oct 2016 23:08:44 -0700 (PDT)
+X-Received: by 10.237.34.149 with SMTP id p21mr13203828qtc.84.1475734123863;
+ Wed, 05 Oct 2016 23:08:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.55.140.132 with HTTP; Wed, 5 Oct 2016 23:08:43 -0700 (PDT)
+From: Vikas Goyal <vikas@unicommerce.com>
+Date: Thu, 6 Oct 2016 11:38:43 +0530
+Message-ID: <CAEixeD8ya4qsEoLCozYKeDe-dMq66VX7-9-tFJeKxue1P5zz4g@mail.gmail.com>
+Subject: Lunch Party :)
+To: Tech Team <tech@unicommerce.com>, Vani Verma <vani@unicommerce.com>, 
+	Gurpreet Khanuja <gurpreet.khanuja@snapdeal.com>, Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a113c18623c7303053e2c200f
+X-Original-Sender: vikas@unicommerce.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@unicommerce-com.20150623.gappssmtp.com;       spf=neutral
+ (google.com: 2607:f8b0:400d:c0d::234 is neither permitted nor denied by best
+ guess record for domain of vikas@unicommerce.com) smtp.mailfrom=vikas@unicommerce.com
+Precedence: list
+Mailing-list: list tech@unicommerce.com; contact tech+owners@unicommerce.com
+List-ID: <tech.unicommerce.com>
+X-Spam-Checked-In-Group: tech@unicommerce.com
+X-Google-Group-Id: 18029546136
+List-Help: <https://support.google.com/a/unicommerce.com/bin/topic.py&topic=25838>,
+ <mailto:tech+help@unicommerce.com>
+
+--001a113c18623c7303053e2c200f
+Content-Type: text/plain; charset=UTF-8
+
+We are going for a lunch outing today. The reason being the birthday
+celebrations of our colleagues:
+
+1. Sunny Aggarwal
+2.Shipra Gupta
+3. Animesh
+
+The entire team is invited for the lunch treat today.
+
+Venue: Panchavati Gaurav
+Time: 01:30 pm
+
+Lets unwind ourselves today! See you all..
+
+--001a113c18623c7303053e2c200f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><span style=3D"font-size:12.8px">We are going for a=C2=A0<=
+/span><span class=3D"gmail-il" style=3D"font-size:12.8px">lunch</span><span=
+ style=3D"font-size:12.8px">=C2=A0outing today. The reason being the birthd=
+ay celebrations of our colleagues:</span><div style=3D"font-size:12.8px"><b=
+r><div>1. Sunny Aggarwal</div><div>2.Shipra Gupta</div><div>3. Animesh</div=
+><div><br></div><div>The entire team is invited for the=C2=A0<span class=3D=
+"gmail-il">lunch</span>=C2=A0treat today.</div><div><br></div><div>Venue:=
+=C2=A0<span style=3D"color:rgba(0,0,0,0.870588);font-family:arial,sans-seri=
+f-light,sans-serif;font-size:30px">Panchavati Gaurav</span></div><div>Time:=
+ 01:30 pm</div><div><br></div><div>Lets unwind ourselves today! See you all=
+..</div></div></div>
+
+--001a113c18623c7303053e2c200f--

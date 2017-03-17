@@ -1,0 +1,71 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2501134qgd;
+        Wed, 21 Dec 2016 18:44:19 -0800 (PST)
+X-Received: by 10.176.2.98 with SMTP id 89mr6323824uas.8.1482374659907;
+        Wed, 21 Dec 2016 18:44:19 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-ua0-x230.google.com (mail-ua0-x230.google.com. [2607:f8b0:400c:c08::230])
+        by mx.google.com with ESMTPS id s124si7366026vkg.137.2016.12.21.18.44.19
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Dec 2016 18:44:19 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::230 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c08::230;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::230 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-ua0-x230.google.com with SMTP id 88so67893684uaq.3
+        for <digvijay@unicommerce.com>; Wed, 21 Dec 2016 18:44:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=0Yo9FaEYdORWktX1YrB390yJwDHHdjGIdQdDdWWaEH8=;
+        b=lRqkLWO0HTiRs7wpN5yS8uxsRBQ7LzRKOiOAi1P8AMpiZ8o7XH2S3ePUf0q25anVkF
+         rb663w8nbGIRNzdY+CPNP/SiVKd/2tKKqBbOchgxdFwMMzM4eE/hkMuhjsv/OhrdFT5N
+         MmA7aCHKRxRuQO34lmuzahbtF5uHZWqvDDJE9zdHL88Uxl6tqY0oiP5Eo4QaUuq/cfqw
+         JSudWMic5USuLvUwXUsoYeoqrK8f71w16xJP4/f3qHJlgnJCDAyBld/xeLm5LdFGsMBI
+         aaKoOFjmJ+6q/aCKyhnNzMBjjWmMIj86GPcf26ppMKUr/eTFm8Jk0+L0rnBu88QuLdQ3
+         bpUw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=0Yo9FaEYdORWktX1YrB390yJwDHHdjGIdQdDdWWaEH8=;
+        b=C+wymdqMEvB+TwSjZSFsc40wj4Qnvc9tSNBcCuX9OpHF1Zw7v0UyyLud5gJ5n+krXX
+         4qHdcXJO28E2p2Fs/fG2LMbIDRgrZWulxAToYNWL+PWcVfUJbrE6DkotQQwVBC/UNQ93
+         i/jll3Rg2C76p6V1BKlVMRh4FNOiYPWSAdCgjv5IsLzjwWS5z1SvU5cO+9qeg8Lmo/ST
+         g3rFFv+Aj95AZ2nUZ1kxqPAQD6hW875SC61WrrqwGv1rC32uZJIOGROICbKAswlnuhdS
+         HzbBEBAAOGBjBHWzjBnEhyAQSgnmOkvTdgNvNNc7pBt33Gh0LZanHHlfadAM9QsV8lz3
+         PeWA==
+X-Gm-Message-State: AIkVDXLLCXkDpJyBCnxjA7Dm9TuvbWtkkcu15/Y3IfABDCtYbF79KsZuU1jwFlJM0iqJQ4bB5ugs3+FTmkSB1A==
+X-Received: by 10.159.38.228 with SMTP id 91mr6120337uay.102.1482374659494;
+ Wed, 21 Dec 2016 18:44:19 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Thu, 22 Dec 2016 02:44:08 +0000
+Message-ID: <CAPe2SZR2Po3o+Q5STeSENeWtU4K4WoeUZ0hO3dnji246FxoqaQ@mail.gmail.com>
+Subject: Working from home
+To: Sunny Agarwal <sunny@unicommerce.com>
+Cc: Digvijay Sharam <digvijay@unicommerce.com>, Sagar Sahni <sagar@unicommerce.com>
+Content-Type: multipart/alternative; boundary=94eb2c04769e00e4f20544363f1f
+
+--94eb2c04769e00e4f20544363f1f
+Content-Type: text/plain; charset=UTF-8
+
+I am advised a couple of days rest by orthopedist due to lumbar sprain in
+lower back. So I'll continue my tasks from home.
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--94eb2c04769e00e4f20544363f1f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">I am advised a couple of days rest by orthopedist due to l=
+umbar sprain in lower back. So I&#39;ll continue my tasks from home.</div><=
+div dir=3D"ltr">-- <br></div><div data-smartmail=3D"gmail_signature"><div d=
+ir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>Software Engineer, Unicommer=
+ce</div><div>+91 9999-872-129</div></div></div>
+
+--94eb2c04769e00e4f20544363f1f--

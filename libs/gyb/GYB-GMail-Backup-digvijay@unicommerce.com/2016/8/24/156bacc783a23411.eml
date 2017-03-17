@@ -1,0 +1,13 @@
+From: digvijay@unicommerce.com
+X-Uniform-Type-Identifier: com.apple.mail-note
+Content-Type: text/html;
+	charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Mac OS X Notes 4.2 \(555.10.42\))
+Date: Wed, 24 Aug 2016 09:56:22 +0530
+X-Mail-Created-Date: Wed, 24 Aug 2016 09:56:17 +0530
+Subject: #!/bin/bash
+X-Universally-Unique-Identifier: F1BD1015-6960-46AB-B8F5-2C380562B45F
+Message-Id: <9E4B2179-D147-4A2D-B286-DF011A785DD6@unicommerce.com>
+
+<html><head></head><body><div>#!/bin/bash</div><div>## list of commands to run on startup</div><div>cd /usr/local/Cellar/activemq/5.13.3/bin/</div><div>sudo ./activemq start</div><div>cd /usr/local/Cellar/zookeeper/3.4.8/bin/</div><div>sudo ./zkServer start</div><div>/usr/local/Cellar/elasticsearch/2.3.5/elasticsearch</div><div>/usr/local/Cellar/mysqld/5.7.14/bin/mysqld</div><div>cd /usr/local/apache-tomcat/bin/</div><div>sudo ./startup.sh</div><div>cd /usr/local/Cellar/mongodb/3.2.8/bin/</div><div>sudo ./mongod</div><div>sudo ./mongo</div><div><br></div><div>ps -eaf|grep activemq</div><div>ps -eaf|grep elasticsearch</div><div>ps -eaf|grep mysqld</div><div>ps -eaf|grep zookeeper</div><div>ps -eaf|grep tomcat</div><div>ps -eaf|grep mongod</div><div>ps -eaf|grep mongo</div><div><br></div></body></html>

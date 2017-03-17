@@ -1,0 +1,31 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1432428qge;
+        Sun, 20 Nov 2016 23:32:58 -0800 (PST)
+X-Received: by 10.98.217.67 with SMTP id s64mr16222839pfg.66.1479713578506;
+        Sun, 20 Nov 2016 23:32:58 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id e19si21359214pgk.268.2016.11.20.23.32.57
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 20 Nov 2016 23:32:58 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uAL7WuiP015201;
+	Mon, 21 Nov 2016 13:02:57 +0530
+Date: Mon, 21 Nov 2016 13:02:56 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1011819642.69.1479713576944.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+In-Reply-To: <1694898676.68.1479712900020.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+References: <1694898676.68.1479712900020.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Jenkins build is back to normal : UniwareAccountTest #228
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareAccountTest
+X-Jenkins-Result: SUCCESS
+
+http://jenkins.unicommerce.com:8080/job/UniwareAccountTest/228/

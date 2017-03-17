@@ -1,0 +1,67 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp63532qge;
+        Tue, 1 Nov 2016 21:04:08 -0700 (PDT)
+X-Received: by 10.13.221.78 with SMTP id g75mr1049146ywe.266.1478059448599;
+        Tue, 01 Nov 2016 21:04:08 -0700 (PDT)
+Return-Path: <sales.support@pigen.in>
+Received: from mail-pf0-x22b.google.com (mail-pf0-x22b.google.com. [2607:f8b0:400e:c00::22b])
+        by mx.google.com with ESMTPS id t101si87567ybi.12.2016.11.01.21.04.08
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 01 Nov 2016 21:04:08 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning sales.support@pigen.in does not designate 2607:f8b0:400e:c00::22b as permitted sender) client-ip=2607:f8b0:400e:c00::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pigen-in.20150623.gappssmtp.com;
+       spf=softfail (google.com: domain of transitioning sales.support@pigen.in does not designate 2607:f8b0:400e:c00::22b as permitted sender) smtp.mailfrom=sales.support@pigen.in
+Received: by mail-pf0-x22b.google.com with SMTP id n85so3583884pfi.1
+        for <digvijay@unicommerce.com>; Tue, 01 Nov 2016 21:04:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=pigen-in.20150623.gappssmtp.com; s=20150623;
+        h=message-id:date:mime-version:subject:from:to;
+        bh=xhfCofCcItzkaoVHrBE9LUeZEpqOL7WmZGP+2/G93JI=;
+        b=mnarkIcaUcUtiREndEa7BPdhxVIXJX9qhXm7eNPcR/0JxYBYJN4rVEMVP/wCTshJas
+         ISGp8LmkS47FLuGMhrl6Q7IaTj3W7NgGxJa71eRyOTYY35FXFSb6j3QUIKeZGMLWF15Y
+         m1XJ5Hw13B7o7iqAudsA06Nn4RL2JqU4nW0RFvd/yh5RRwQOYHpLHxOgiebEyeU6Dgjb
+         Rdm4rc58dqAjgoxoxVnMqStiWU1GsHK2QCuVpdOAsge0Si4Lm9Can4WZ60UN7gXdtoRW
+         LhQ55HmPN9c6UcjItiO21IbsLqU/jgxGb6sKGCOg7epmuFo9N6KNFUjokW0NnbiQ4YNf
+         iGdA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:date:mime-version:subject:from:to;
+        bh=xhfCofCcItzkaoVHrBE9LUeZEpqOL7WmZGP+2/G93JI=;
+        b=NuqHxYZKNuFjtvmI6hUyGq/ShPasHBjTlEzOqOjySSgE4Y20Qn5irZvAuwPGIgpLkk
+         qzZjk1J4Murf2r1MJG5R6EC/6uKIras3Svr6TjyPOoG+ulbA/cp5iXRByj8hs3CDH29v
+         LERoL/6N0Yg/diKcjiAVQqneV3OxT5vVzTCbx2EAvc52LuD7rv8DqAFbfJ3SFWIh8U50
+         6FtQg2yqX7Rb4w7RpvJ1gY6EuoR2/rGodtOtq1GyQvBM9G6TVJOISBjigxlDMRXe3Czm
+         iVrkeueQhSAwKxYocLtHRq+TpEb0RtO29+dY/T3hmAvxEnOS0Rg3gt1WS4kfxhhT6ATB
+         7SJQ==
+X-Gm-Message-State: ABUngvegUYZd8C636qJLw5r0ARCX1RwdfUqZxCyhcTYtdV9s0UXRP89xZ0v3VQZPbCH7s0TY
+X-Received: by 10.99.112.72 with SMTP id a8mr2446268pgn.43.1478059447519;
+        Tue, 01 Nov 2016 21:04:07 -0700 (PDT)
+Return-Path: <sales.support@pigen.in>
+Received: from ip-172-31-11-174.ap-southeast-1.compute.internal (ec2-54-179-167-108.ap-southeast-1.compute.amazonaws.com. [54.179.167.108])
+        by smtp.gmail.com with ESMTPSA id t7sm253371pfa.22.2016.11.01.21.04.06
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 01 Nov 2016 21:04:06 -0700 (PDT)
+Message-ID: <581965b6.0746620a.983e8.0d43@mx.google.com>
+Date: Tue, 01 Nov 2016 21:04:06 -0700 (PDT)
+Content-Type: multipart/mixed; boundary="===============2946762974717751080=="
+MIME-Version: 1.0
+Subject: Go pigeon Client serviceability
+From: sales.support@pigen.in
+To: digvijay@unicommerce.com
+
+List of  pincodes serviceability
+--===============2946762974717751080==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Hey,
+
+ Here is the data for pincodes serviceability
+
+
+https://gopigeon-client-servicability.s3.amazonaws.com/unicommerce_test2016-11-02%2004%3A05%3A52.774388.csv
+--===============2946762974717751080==--

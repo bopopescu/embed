@@ -1,0 +1,126 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.202.107.196 with SMTP id g187csp128513oic;
+        Fri, 12 Aug 2016 03:59:42 -0700 (PDT)
+X-Received: by 10.37.50.12 with SMTP id y12mr9775157yby.20.1470999582331;
+        Fri, 12 Aug 2016 03:59:42 -0700 (PDT)
+Return-Path: <karangarg@unicommerce.com>
+Received: from mail-yw0-x235.google.com (mail-yw0-x235.google.com. [2607:f8b0:4002:c05::235])
+        by mx.google.com with ESMTPS id c64si1531394ywd.51.2016.08.12.03.59.42
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 12 Aug 2016 03:59:42 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) client-ip=2607:f8b0:4002:c05::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c05::235 is neither permitted nor denied by best guess record for domain of karangarg@unicommerce.com) smtp.mailfrom=karangarg@unicommerce.com
+Received: by mail-yw0-x235.google.com with SMTP id j12so13082508ywb.2
+        for <digvijay@unicommerce.com>; Fri, 12 Aug 2016 03:59:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=w7k+aOclCZ/eSJOEtvBoAzWhnM45wI/ebphUm5KAIho=;
+        b=TesRN5g1wUmxWeJHQ06FFefAQFlflyEbrGKYacrxQUjFDKaFKCcHHB8yr61dQlfT27
+         b6hvfYEyPE71l8X0orNUdaJF+spT2ZgTeGUPNN4KtJmWRmEERRsAh6H1hjA5/PTfyacM
+         8VvKDNBhZwKwdEFoxcCe7QTmPejPdxkOeUfZFGTsrg9Ky+sfENiqPx15qXs/IZOK87eu
+         AwLjNjB7hczc1wZcBUEi6hradXIAgpcPh8uMvpMbKrVmsEbpF79yk5GYfc01Gz8besMs
+         oPOe488yPVmvKIaDS/qNQbKiJrldRe5UWbjOwuonscuiQ9tnejLEFIMvVrqCVYGn26Vr
+         tJfQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=w7k+aOclCZ/eSJOEtvBoAzWhnM45wI/ebphUm5KAIho=;
+        b=et4yMJMBeieUBDSjQPBUdVUW6xSTY9aaiW6lF3yULXaqYpkVGD4qZ+bQkJB+Pnk2pI
+         pPsOhd2iaV2KnvhE9zqeXjmnyY4zPOLcXcU5AnuRJd6ffpYXe9C4TX8mIIaoGXyEvdUS
+         ZTQbeUHb13zxRxnmQbmctgRwd+Axi0Rr/v5piLXGxutEpRP9B/l164Z/j+9ZNFPmBsUi
+         LePv+fqnDCjkycIQM5k9DIzlK3p4ba3Znmv+Z51/veelteKnBI+RHNmiEyNRzq1T1rDO
+         UAy5LSouel0UAQsjiqJ9v7tvxJ8ic/wj44VFo78HOSC5qfb7qgsiI/jlF47E82OJcssy
+         ZKVg==
+X-Gm-Message-State: AEkoousYPONKSS6BT3IeZnwgLFV09RErLbsinAWPpjdbEAyryrnYmLgrzfYxzloNMSpfITApRrW5nSTnS5EIEA==
+X-Received: by 10.129.90.3 with SMTP id o3mr2276841ywb.188.1470999582075; Fri,
+ 12 Aug 2016 03:59:42 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.13.204.78 with HTTP; Fri, 12 Aug 2016 03:59:41 -0700 (PDT)
+In-Reply-To: <CAEvR4bSAwUZe5yDAzUENA=qWr+s374xqcao=qbezXNi2oG-OZw@mail.gmail.com>
+References: <CAEvR4bQte9NAd2r+uGJn1WmS8vdaoNwtphU-jP-6RN=PFEnV0w@mail.gmail.com>
+ <CAEvR4bSAwUZe5yDAzUENA=qWr+s374xqcao=qbezXNi2oG-OZw@mail.gmail.com>
+From: karan Garg <karangarg@unicommerce.com>
+Date: Fri, 12 Aug 2016 16:29:41 +0530
+Message-ID: <CAG=LqmPkmxfS5hxfOY8GhPPd+GGLE9r5iQbD24axstbm_TDz-w@mail.gmail.com>
+Subject: Fwd: tomcat settings
+To: Aditya Harit <aditya@unicommerce.com>, Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a11491bd48e1cdb0539ddc737
+
+--001a11491bd48e1cdb0539ddc737
+Content-Type: text/plain; charset=UTF-8
+
+---------- Forwarded message ----------
+From: Shipra Gupta <shipra@unicommerce.com>
+Date: Fri, Aug 12, 2016 at 4:04 PM
+Subject: Fwd: tomcat settings
+To: karan Garg <karangarg@unicommerce.com>
+
+
+
+---------- Forwarded message ----------
+From: Shipra Gupta <shipra@unicommerce.com>
+Date: Fri, Aug 12, 2016 at 2:26 PM
+Subject: tomcat settings
+To: Garima Arora <garima@unicommerce.com>
+
+
+for db connections detail, add in Root.xml in tomcat/conf/Catalina/localhost
+/
+
+for jdbc connetor, copy mysql connector jar in tomcat\lib folder
+
+
+for adding system properties, use catalina.sh in tomcat\bin folder and add
+in java_opts;
+
+
+
+
+-- 
+Regards,
+Karan Garg
+
+--001a11491bd48e1cdb0539ddc737
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Shipra Gupta</b> <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:shipra@unicommerce.com">shipra@unicommerc=
+e.com</a>&gt;</span><br>Date: Fri, Aug 12, 2016 at 4:04 PM<br>Subject: Fwd:=
+ tomcat settings<br>To: karan Garg &lt;<a href=3D"mailto:karangarg@unicomme=
+rce.com">karangarg@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr"><br>=
+<div class=3D"gmail_quote">---------- Forwarded message ----------<br>From:=
+ <b class=3D"gmail_sendername">Shipra Gupta</b> <span dir=3D"ltr">&lt;<a hr=
+ef=3D"mailto:shipra@unicommerce.com" target=3D"_blank">shipra@unicommerce.c=
+om</a>&gt;</span><br>Date: Fri, Aug 12, 2016 at 2:26 PM<br>Subject: tomcat =
+settings<br>To: Garima Arora &lt;<a href=3D"mailto:garima@unicommerce.com" =
+target=3D"_blank">garima@unicommerce.com</a>&gt;<br><br><br><div dir=3D"ltr=
+">
+
+
+
+
+
+
+
+<p><span>for db connections detail, add in Root.xml in tomcat/conf/Catalina=
+/localhost<wbr>/</span></p>
+<p><span>for jdbc connetor, copy mysql connector jar in tomcat\lib folder</=
+span></p>
+<p><span></span><br></p>
+<p><span>for adding system properties, use catalina.sh in tomcat\bin folder=
+ and add in java_opts;</span></p></div>
+</div><br></div>
+</div><br><br clear=3D"all"><div><br></div>-- <br><div class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><span style=
+=3D"color:rgb(102,102,102)">Regards,<br></span></div><span style=3D"color:r=
+gb(102,102,102)">Karan Garg</span><br></div></div>
+</div>
+
+--001a11491bd48e1cdb0539ddc737--

@@ -1,0 +1,92 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp2551395qgd;
+        Wed, 21 Dec 2016 22:01:14 -0800 (PST)
+X-Received: by 10.129.85.11 with SMTP id j11mr6172148ywb.123.1482386474539;
+        Wed, 21 Dec 2016 22:01:14 -0800 (PST)
+Return-Path: <puneet@unicommerce.com>
+Received: from mail-yb0-x232.google.com (mail-yb0-x232.google.com. [2607:f8b0:4002:c09::232])
+        by mx.google.com with ESMTPS id l131si1383079ybl.258.2016.12.21.22.01.14
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Dec 2016 22:01:14 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4002:c09::232 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) client-ip=2607:f8b0:4002:c09::232;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4002:c09::232 is neither permitted nor denied by best guess record for domain of puneet@unicommerce.com) smtp.mailfrom=puneet@unicommerce.com
+Received: by mail-yb0-x232.google.com with SMTP id v132so78888742yba.0
+        for <digvijay@unicommerce.com>; Wed, 21 Dec 2016 22:01:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=from:mime-version:references:in-reply-to:date:message-id:subject:to
+         :cc;
+        bh=G1/AwV4YMJMSasaJVm96CVuuISTSpJNh3Lzpx2c9t7Q=;
+        b=cFFSDha5YWGjIiEcHU6qcwP8Ro1ET52FpRPqGf/Yyz+OzmyaPRiVjbPTjI+tsiYuXI
+         5VUErF5oH+YLYbfHGYu6nXlFTlr4JcvwfWt+Wymp/xQHXQBrumNRTozE+Wvg7cn1l1jl
+         tX/LNesvupsmdkiGKFKoPMbCmp8EzZTOPFPg9fRtCNGNUbzlLVIW2fh76Y2905wF7t3h
+         TrUxC4ItU3QS0oX8f5eWYBd8NL8mFWUGsKkAnNV0EF4n+UzTBtdQAOnrk3JEZQd7ITKM
+         h+BvRl0Ax5eBlIVSRERkQehZLqn2tMPm9GN3tMm1UadUxvqeXKhGmV3CAIR/jsepH6/1
+         JMyg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:mime-version:references:in-reply-to:date
+         :message-id:subject:to:cc;
+        bh=G1/AwV4YMJMSasaJVm96CVuuISTSpJNh3Lzpx2c9t7Q=;
+        b=bHX+4AhNkAUmnH2EloP9HEUX51EzT0vUjsHBnchV1aaf5ScPawEDTFE5baLdg/aroD
+         XGT0bJlCBCojLe1nZHEHzzVde+7Is7XkVZUf4VEouK8Dcx36QdHj2kAGjzxhxMiNsU9o
+         /UYi1OChlBIfYhUHRbdV6U62iD6VL04d8T+QHaLa/HNIR56XZ10E/pQ1nfNyy1EkGpLp
+         Fjgoig7yVG2P1b3f7v+3vB9FC2K4snCuV0lFlLqMd6daD68byxzT4m+xUV2LtLSnNT/E
+         yT0lFZE9XBmQt+DG5K50K8jUJeQGyg8ZJoGtxI+dLu8TLEIoaYd7GIvie3kqZEZI38bs
+         tfVg==
+X-Gm-Message-State: AIkVDXIipHKN5AqXq9W2rPLlw8/2B+Ij9qepow+a/db3oEVfA4p/QwtRqpUsqIYrghgzYNTI73YYrxKjVLjgCw==
+X-Received: by 10.37.21.2 with SMTP id 2mr5350125ybv.120.1482386474181; Wed,
+ 21 Dec 2016 22:01:14 -0800 (PST)
+From: Puneet Sharma <puneet@unicommerce.com>
+Mime-Version: 1.0 (1.0)
+References: <CAJF3soqjrt-4C4rrAvQ4dg4bS4mQPvGih2KrfyX_zAuEB4vgHg@mail.gmail.com>
+In-Reply-To: <CAJF3soqjrt-4C4rrAvQ4dg4bS4mQPvGih2KrfyX_zAuEB4vgHg@mail.gmail.com>
+Date: Thu, 22 Dec 2016 11:31:09 +0530
+Message-ID: <4406166405224390691@unknownmsgid>
+Subject: Re: Shift to bitbucket repos
+To: Digvijay Sharma <digvijay@unicommerce.com>, rishu@unicommerce.com
+Cc: Sunny Agarwal <sunny@unicommerce.com>, devops@unicommerce.com
+Content-Type: multipart/alternative; boundary=001a113e436836d87d054438ffae
+
+--001a113e436836d87d054438ffae
+Content-Type: text/plain; charset=UTF-8
+
+Rishu ,
+
+Please take care of this .
+
+Thanks,
+Puneet Sharma
+Unicommerce Esolutions Pvt. Ltd
++91-7666182895
+
+On 22-Dec-2016, at 11:13 AM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+Sir, could u shift the jenkins build source to bitbucket repos?
+
+--001a113e436836d87d054438ffae
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; charset=
+=3Dutf-8"></head><body dir=3D"auto"><div>Rishu ,</div><div id=3D"AppleMailS=
+ignature"><br></div><div id=3D"AppleMailSignature">Please take care of this=
+ .=C2=A0<br><br><div><span style=3D"color:rgba(0,0,0,0.701961);font-family:=
+UICTFontTextStyleBody;text-decoration:-webkit-letterpress">Thanks,</span><d=
+iv style=3D"color:rgba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;te=
+xt-decoration:-webkit-letterpress">Puneet Sharma</div><div style=3D"color:r=
+gba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-decoration:-webk=
+it-letterpress">Unicommerce Esolutions Pvt. Ltd</div><div style=3D"color:rg=
+ba(0,0,0,0.701961);font-family:UICTFontTextStyleBody;text-decoration:-webki=
+t-letterpress"><a href=3D"tel:+91-7666182895">+91-7666182895</a></div></div=
+></div><div><br>On 22-Dec-2016, at 11:13 AM, Digvijay Sharma &lt;<a href=3D=
+"mailto:digvijay@unicommerce.com">digvijay@unicommerce.com</a>&gt; wrote:<b=
+r><br></div><blockquote type=3D"cite"><div><div dir=3D"ltr">Sir, could u sh=
+ift the jenkins build source to bitbucket repos?</div>
+</div></blockquote></body></html>
+
+--001a113e436836d87d054438ffae--

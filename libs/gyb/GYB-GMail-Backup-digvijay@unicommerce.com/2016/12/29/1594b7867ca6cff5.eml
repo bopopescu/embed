@@ -1,0 +1,86 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.83.211 with SMTP id j77csp5853799qgd;
+        Thu, 29 Dec 2016 08:44:59 -0800 (PST)
+X-Received: by 10.202.184.214 with SMTP id i205mr20989224oif.130.1483029899041;
+        Thu, 29 Dec 2016 08:44:59 -0800 (PST)
+Return-Path: <sunny@unicommerce.com>
+Received: from mail-oi0-x22b.google.com (mail-oi0-x22b.google.com. [2607:f8b0:4003:c06::22b])
+        by mx.google.com with ESMTPS id u190si24308660oia.178.2016.12.29.08.44.58
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Dec 2016 08:44:59 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:4003:c06::22b is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) client-ip=2607:f8b0:4003:c06::22b;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:4003:c06::22b is neither permitted nor denied by best guess record for domain of sunny@unicommerce.com) smtp.mailfrom=sunny@unicommerce.com
+Received: by mail-oi0-x22b.google.com with SMTP id 3so219813276oih.1
+        for <digvijay@unicommerce.com>; Thu, 29 Dec 2016 08:44:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=zF4N/TZh8qf7HLzXmXHFz4BCsISbZSETt67YZ8khYXg=;
+        b=17lVcM452FnLKeQv7/TAvoLdOu2Xi19OeY5vap7fhCXYRwCLKuR/zU1Dsf9R+HOSoM
+         F7rwMaCxMjiPl1+UF2HgATzpV28xcNA2HWqEUAzvhPGymENv/9TpAuf7Po5DUSFS0DbE
+         7oyY+4vdrlIA9YL4OmchG8rbbH/lKAzymnP4JAUHA4+FWWOVwSXTXEuVD1DGVwl1ZEcC
+         fYiCEpc8V5GcH/ZX6lRmuzzSrR6m090AKzCJiJuWX0dgiJ/AOfENaOlr4PircAHaOvjK
+         T1X/7NBdFE3QbsqbovXYqYC/hhdqI3j7gu7GSY/k/wUZMvwPbhcvLn9L044IcoyuXHLL
+         YkVQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=zF4N/TZh8qf7HLzXmXHFz4BCsISbZSETt67YZ8khYXg=;
+        b=iHoBYb9oOvKZUVZ3E0j+SW6RF/8hyR1Cbj1BCHKwDoISxHW/UkPP9gbBT7cy0GxLuL
+         1gjYF+SRTP4pfZauhzm2x0sYo44J6QE+h3MSrpNgO7I8Afeut7+q/CEfKm9RtFJyfEXd
+         LuxfwFiXKH72rN266pCnlJbotiitLXXivYPIFINv55X8khQjuwlWw9+cTy3nEMLj+V64
+         gJNoQM6m9z2umeKV3Kq1yoGhoZ+fpyZj/twBZXzWh4KVR5Wk8E0hgOigQpXNW+VQBhjL
+         TgT9N4dKsNGm8L4FAUsTu5200swZdsyCQeVzMrt6+ryTT3PhWNHgnEL/mkyf53cBVH03
+         Vz+g==
+X-Gm-Message-State: AIkVDXI8HCuJ7t7WhNoAzk7VIYN1qnlb9ePfazurOBJqsB2DtcChZp6fSwM527M0Cj7V42bVFkZ5HQXhU9vFHw==
+X-Received: by 10.157.17.50 with SMTP id g47mr22931208ote.122.1483029898642;
+ Thu, 29 Dec 2016 08:44:58 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.118.104 with HTTP; Thu, 29 Dec 2016 08:44:58 -0800 (PST)
+In-Reply-To: <CAJF3sor34AU+2ONPWaXiD2reZhggQ5nR8w=FjzTzaxrBwAprPw@mail.gmail.com>
+References: <CAJF3sor34AU+2ONPWaXiD2reZhggQ5nR8w=FjzTzaxrBwAprPw@mail.gmail.com>
+From: Sunny Agarwal <sunny@unicommerce.com>
+Date: Thu, 29 Dec 2016 22:14:58 +0530
+Message-ID: <CA+zaFGig10ZEZPi_s=raPNxOK3k9vAvwaMJj=Z3zqdYVs8mhcQ@mail.gmail.com>
+Subject: Re: Permission for wormhole changes to go to prod
+To: Digvijay Sharma <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114146cc4cdc5a0544cece78
+
+--001a114146cc4cdc5a0544cece78
+Content-Type: text/plain; charset=UTF-8
+
+Yes, please do
+
+On Thu, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <digvijay@unicommerce.com>
+wrote:
+
+> Sir the changes i made, i have tested them all on staging. So should i
+> move these changes to prod?
+> The changes were :
+> 1. reload config one/all
+> 2. script edit enterprise scripts editable flag
+> 3. Activate Tenant Service
+> 4. wormhole to java 8
+>
+
+--001a114146cc4cdc5a0544cece78
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Yes, please do</div><div class=3D"gmail_extra"><br><div cl=
+ass=3D"gmail_quote">On Thu, Dec 29, 2016 at 8:37 PM, Digvijay Sharma <span =
+dir=3D"ltr">&lt;<a href=3D"mailto:digvijay@unicommerce.com" target=3D"_blan=
+k">digvijay@unicommerce.com</a>&gt;</span> wrote:<br><blockquote class=3D"g=
+mail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l=
+eft:1ex"><div dir=3D"ltr">Sir the changes i made, i have tested them all on=
+ staging. So should i move these changes to prod?=C2=A0<div>The changes wer=
+e :</div><div>1. reload config one/all</div><div>2. script edit enterprise =
+scripts editable flag</div><div>3. Activate Tenant Service</div><div>4. wor=
+mhole to java 8</div></div>
+</blockquote></div><br></div>
+
+--001a114146cc4cdc5a0544cece78--

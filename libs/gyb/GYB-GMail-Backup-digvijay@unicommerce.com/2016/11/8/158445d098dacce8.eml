@@ -1,0 +1,207 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1622806qge;
+        Tue, 8 Nov 2016 06:34:57 -0800 (PST)
+X-Received: by 10.31.227.195 with SMTP id a186mr8196315vkh.65.1478615697665;
+        Tue, 08 Nov 2016 06:34:57 -0800 (PST)
+Return-Path: <akshay.agarwal@unicommerce.com>
+Received: from mail-vk0-x236.google.com (mail-vk0-x236.google.com. [2607:f8b0:400c:c05::236])
+        by mx.google.com with ESMTPS id 76si9237549vki.233.2016.11.08.06.34.57
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 06:34:57 -0800 (PST)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) client-ip=2607:f8b0:400c:c05::236;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c05::236 is neither permitted nor denied by best guess record for domain of akshay.agarwal@unicommerce.com) smtp.mailfrom=akshay.agarwal@unicommerce.com
+Received: by mail-vk0-x236.google.com with SMTP id 137so102473619vkl.0
+        for <digvijay@unicommerce.com>; Tue, 08 Nov 2016 06:34:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=ozh1f8uwJjvIDVlbaqvWPCfqWuchr7LKdim9/iJsoP8=;
+        b=APJ627AwwQZ3tZooTTPp76sFT3QRrnJTAyYzQFI2Yc9144WHOW6B1rqMcWyEqjwbw7
+         888gUvrIneDJWJt2OilEbuFpFOnkWlO2j2oAw8kCvAVNT1XzPis54pzfoT9SZOGo8iZ6
+         Jth0z4e/Bg/4bf69tfgmi5XJ49NBdd1NlH7Pz/obVvOxb69mbTC9CLOglLxBfgRo2exI
+         c3Ur2vVQXKgxQFGuhQvHDbvGs0wU12J1HZnA0MXkE31NKFXwdoLczg/XGiZCvYAXEHKN
+         O5Q82IpzOCBdzFa8pr1nZKSLdFLqlUGAE+qWBgCNC8ujmbQ0LHgqG+CCrvHW35oHxDTC
+         GSzQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=ozh1f8uwJjvIDVlbaqvWPCfqWuchr7LKdim9/iJsoP8=;
+        b=gnAhXxkM+mT+ySTI6XtQ1fZyhvKBndlnEf14y+9NTs9S6g/uubuYLI2QO0MfVZFrRj
+         if/v1HZ2qyrEHE4La4MIHl5eP+H9GDXXPWWTQxpWhV/zhIo3evdSKPyEs/eIoicSrO9c
+         uvgjz6vh4hUfOvVIn9vd5UFU8EqNr/RoXl4anrXgYuL8HiP08uSlTd928YCitlCl8ZMb
+         oC2iRv2A3njVGHReFRPqU58voon0IN0W8+zJWhiG9B338W+YQFyjID1s4Pp9s/WQ1pJc
+         Ne4wE/P22e/bt4xUnUjUmy8JsLGoflAQ5e8hLn4nGuY9Zxbu5JQE1VwPkDtDLeU5lpMM
+         051g==
+X-Gm-Message-State: ABUngvfL0E9kGtfIQXOncoYVE4ct0iWte5cRSMChl9VzhWyybap4jAa2FZWB19D6vL7ATtevPXB1d+bnmcgTQw==
+X-Received: by 10.31.183.144 with SMTP id h138mr7574744vkf.48.1478615697282;
+ Tue, 08 Nov 2016 06:34:57 -0800 (PST)
+MIME-Version: 1.0
+From: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Date: Tue, 08 Nov 2016 14:34:47 +0000
+Message-ID: <CAPe2SZQ6BUNaeqSboHLgTQ9-hPwsTMam6+w3cG=-Ax-O0pvUTQ@mail.gmail.com>
+Subject: Go Pigeon queries
+To: DevOps Team <devops@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a1142f230657c1c0540cb0b1c
+
+--001a1142f230657c1c0540cb0b1c
+Content-Type: text/plain; charset=UTF-8
+
+*Please mysql2All these queries - *
+insert into shipping_source_color values(null,'GOPIGEON','#f79da0',1);
+insert into shipping_source_color values(null,'GOPIGEON','#c91b2c',2);
+insert into shipping_source_color values(null,'GOPIGEON','#cc2939',3);
+insert into shipping_source_color values(null,'GOPIGEON','#d03846',4);
+insert into shipping_source_color values(null,'GOPIGEON','#d34654',5);
+insert into shipping_source_color values(null,'GOPIGEON','#d75461',6);
+insert into shipping_source_color values(null,'GOPIGEON','#da626e',7);
+insert into shipping_source_color values(null,'GOPIGEON','#dd717b',8);
+insert into shipping_source_color values(null,'GOPIGEON','#e17f88',9);
+insert into shipping_source_color values(null,'GOPIGEON','#e48d95',10);
+insert into shipment_tracking_status_mapping values(null,'At Nearest
+Delivery Office',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping
+values(null,'Cancelled',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping
+values(null,'Claimed',29,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Damage or
+lost',27,'GOPIGEON');
+insert into shipment_tracking_status_mapping
+values(null,'Delivered',1,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Handed Over to
+Courier',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Improper Shipment
+Details',4,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Improper Transfer
+to CC',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'In
+Transit',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Invalid
+AWB',10,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Issue at
+Delivery',8,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Issue During
+Transit',8,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Out for
+Delivery',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Picked By
+Pigen',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO At Nearest
+Delivery Office',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+Cancelled',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO Damage or
+lost',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+Declared',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+Delivered',21,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO Handed over
+to Pigen',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO In
+Transit',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+inbounded',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO Issue at
+Delivery',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO Issue During
+Transit',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO Out for
+Delivery',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+outbounded',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO to
+sender',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'RTO
+Untraceable',20,'GOPIGEON');
+insert into shipment_tracking_status_mapping
+values(null,'Settled',21,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Shipment info
+received by Pigen',9,'GOPIGEON');
+insert into shipment_tracking_status_mapping values(null,'Unavoidable
+Issue',8,'GOPIGEON');
+insert into shipment_tracking_status_mapping
+values(null,'Untraceable',12,'GOPIGEON');
+-- 
+Thanks
+Akshay Agarwal
+Software Engineer, Unicommerce
++91 9999-872-129
+
+--001a1142f230657c1c0540cb0b1c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b>Please mysql2All these queries -=C2=A0</b><div><div>ins=
+ert into shipping_source_color values(null,&#39;GOPIGEON&#39;,&#39;#f79da0&=
+#39;,1);</div><div>insert into shipping_source_color values(null,&#39;GOPIG=
+EON&#39;,&#39;#c91b2c&#39;,2);</div><div>insert into shipping_source_color =
+values(null,&#39;GOPIGEON&#39;,&#39;#cc2939&#39;,3);</div><div>insert into =
+shipping_source_color values(null,&#39;GOPIGEON&#39;,&#39;#d03846&#39;,4);<=
+/div><div>insert into shipping_source_color values(null,&#39;GOPIGEON&#39;,=
+&#39;#d34654&#39;,5);</div><div>insert into shipping_source_color values(nu=
+ll,&#39;GOPIGEON&#39;,&#39;#d75461&#39;,6);</div><div>insert into shipping_=
+source_color values(null,&#39;GOPIGEON&#39;,&#39;#da626e&#39;,7);</div><div=
+>insert into shipping_source_color values(null,&#39;GOPIGEON&#39;,&#39;#dd7=
+17b&#39;,8);</div><div>insert into shipping_source_color values(null,&#39;G=
+OPIGEON&#39;,&#39;#e17f88&#39;,9);</div><div>insert into shipping_source_co=
+lor values(null,&#39;GOPIGEON&#39;,&#39;#e48d95&#39;,10);</div><div>insert =
+into shipment_tracking_status_mapping values(null,&#39;At Nearest Delivery =
+Office&#39;,9,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_=
+status_mapping values(null,&#39;Cancelled&#39;,20,&#39;GOPIGEON&#39;);</div=
+><div>insert into shipment_tracking_status_mapping values(null,&#39;Claimed=
+&#39;,29,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_statu=
+s_mapping values(null,&#39;Damage or lost&#39;,27,&#39;GOPIGEON&#39;);</div=
+><div>insert into shipment_tracking_status_mapping values(null,&#39;Deliver=
+ed&#39;,1,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_stat=
+us_mapping values(null,&#39;Handed Over to Courier&#39;,9,&#39;GOPIGEON&#39=
+;);</div><div>insert into shipment_tracking_status_mapping values(null,&#39=
+;Improper Shipment Details&#39;,4,&#39;GOPIGEON&#39;);</div><div>insert int=
+o shipment_tracking_status_mapping values(null,&#39;Improper Transfer to CC=
+&#39;,9,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_status=
+_mapping values(null,&#39;In Transit&#39;,9,&#39;GOPIGEON&#39;);</div><div>=
+insert into shipment_tracking_status_mapping values(null,&#39;Invalid AWB&#=
+39;,10,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_status_=
+mapping values(null,&#39;Issue at Delivery&#39;,8,&#39;GOPIGEON&#39;);</div=
+><div>insert into shipment_tracking_status_mapping values(null,&#39;Issue D=
+uring Transit&#39;,8,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tr=
+acking_status_mapping values(null,&#39;Out for Delivery&#39;,9,&#39;GOPIGEO=
+N&#39;);</div><div>insert into shipment_tracking_status_mapping values(null=
+,&#39;Picked By Pigen&#39;,9,&#39;GOPIGEON&#39;);</div><div>insert into shi=
+pment_tracking_status_mapping values(null,&#39;RTO At Nearest Delivery Offi=
+ce&#39;,20,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_sta=
+tus_mapping values(null,&#39;RTO Cancelled&#39;,20,&#39;GOPIGEON&#39;);</di=
+v><div>insert into shipment_tracking_status_mapping values(null,&#39;RTO Da=
+mage or lost&#39;,20,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tr=
+acking_status_mapping values(null,&#39;RTO Declared&#39;,20,&#39;GOPIGEON&#=
+39;);</div><div>insert into shipment_tracking_status_mapping values(null,&#=
+39;RTO Delivered&#39;,21,&#39;GOPIGEON&#39;);</div><div>insert into shipmen=
+t_tracking_status_mapping values(null,&#39;RTO Handed over to Pigen&#39;,20=
+,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_status_mappin=
+g values(null,&#39;RTO In Transit&#39;,20,&#39;GOPIGEON&#39;);</div><div>in=
+sert into shipment_tracking_status_mapping values(null,&#39;RTO inbounded&#=
+39;,20,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_status_=
+mapping values(null,&#39;RTO Issue at Delivery&#39;,20,&#39;GOPIGEON&#39;);=
+</div><div>insert into shipment_tracking_status_mapping values(null,&#39;RT=
+O Issue During Transit&#39;,20,&#39;GOPIGEON&#39;);</div><div>insert into s=
+hipment_tracking_status_mapping values(null,&#39;RTO Out for Delivery&#39;,=
+20,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_status_mapp=
+ing values(null,&#39;RTO outbounded&#39;,20,&#39;GOPIGEON&#39;);</div><div>=
+insert into shipment_tracking_status_mapping values(null,&#39;RTO to sender=
+&#39;,20,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_statu=
+s_mapping values(null,&#39;RTO Untraceable&#39;,20,&#39;GOPIGEON&#39;);</di=
+v><div>insert into shipment_tracking_status_mapping values(null,&#39;Settle=
+d&#39;,21,&#39;GOPIGEON&#39;);</div><div>insert into shipment_tracking_stat=
+us_mapping values(null,&#39;Shipment info received by Pigen&#39;,9,&#39;GOP=
+IGEON&#39;);</div><div>insert into shipment_tracking_status_mapping values(=
+null,&#39;Unavoidable Issue&#39;,8,&#39;GOPIGEON&#39;);</div><div>insert in=
+to shipment_tracking_status_mapping values(null,&#39;Untraceable&#39;,12,&#=
+39;GOPIGEON&#39;);</div></div></div><div dir=3D"ltr">-- <br></div><div data=
+-smartmail=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</=
+div><div>Software Engineer, Unicommerce</div><div>+91 9999-872-129</div></d=
+iv></div>
+
+--001a1142f230657c1c0540cb0b1c--

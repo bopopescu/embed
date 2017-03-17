@@ -1,0 +1,203 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.101.145 with SMTP id u17csp1617553qge;
+        Tue, 8 Nov 2016 06:23:57 -0800 (PST)
+X-Received: by 10.99.64.132 with SMTP id n126mr19190057pga.87.1478615037374;
+        Tue, 08 Nov 2016 06:23:57 -0800 (PST)
+Return-Path: <build@unicommerce.com>
+Received: from app1.jenkins.unicommerce.infra (ec2-52-74-60-83.ap-southeast-1.compute.amazonaws.com. [52.74.60.83])
+        by mx.google.com with ESMTPS id fd10si31037124pab.217.2016.11.08.06.23.56
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 08 Nov 2016 06:23:57 -0800 (PST)
+Received-SPF: neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) client-ip=52.74.60.83;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 52.74.60.83 is neither permitted nor denied by best guess record for domain of build@unicommerce.com) smtp.mailfrom=build@unicommerce.com
+Received: from ip-10-0-0-14.ap-southeast-1.compute.internal (localhost [127.0.0.1])
+	by app1.jenkins.unicommerce.infra (8.14.4/8.14.4) with ESMTP id uA8ENtQJ015150;
+	Tue, 8 Nov 2016 19:53:55 +0530
+Date: Tue, 8 Nov 2016 19:53:55 +0530 (IST)
+From: build@unicommerce.com
+To: devops@unicommerce.com, akshay.agarwal.js@snapdeal.com,
+        sunny@unicommerce.com, digvijay@unicommerce.com
+Message-ID: <1349445279.0.1478615035533.JavaMail.jenkins@app1.jenkins.unicommerce.infra>
+Subject: Build failed in Jenkins: UniwareProduction #789
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Instance-Identity: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYlzS6IGvxlo8jZQg9Qwev5ZvqarOA0rsumuzNht3ds2tYlyJ8vbHFmV62oV1pdjp9Df/iSVjBETyunN4wptn9fDr02iZeKuZxv/Kmlil2qE3p4t/jdm1ZvFJeirQTCnKIHrQSvFPXcuvqlTz2SqqyIR/0ubu5x8//HaufzeLcmmYI194x/aQjWNgJxh0y3Le1cLM2gmvOAXLX+ZFZ6V1z5PVYVH+BKEITyNbZyViOuEke3wptuzrENYjZ2/6R8gVtQZTillIGKLzKRF6RvfMpXEjE2hAO4rgkpCsA8DCODn3/W90ozXWgKEGJ7UI8lexee86lmnNDOFX46G/NaHAQIDAQAB
+X-Jenkins-Job: UniwareProduction
+X-Jenkins-Result: FAILURE
+
+http://jenkins.unicommerce.com:8080/job/UniwareProduction/789/Changes:
+
+[akshay.agarwal.js] channel Product name added to unreconciled row datatable
+
+[sunny] allocateInventoryAndGenerateInvoice api
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - check for fulfillable
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - added more logging
+
+[sunny] allocateInventoryAndGenerateInvoice api fixes - fix typos
+
+[akshay.agarwal.js] moving to JDK 1.8
+
+[akshay.agarwal.js] build fix
+
+[akshay.agarwal.js] bcel moved to 6.1-SNAPSHOT
+
+[akshay.agarwal.js] binding info
+
+[akshay.agarwal.js] ant run plugin 1.7
+
+[akshay.agarwal.js] schemaBindingDirectory
+
+[akshay.agarwal.js] datatable filters fixed
+
+[akshay.agarwal.js] unifier and common services moved to 2.0 for java 8
+
+[digvijay] MINOR BUGS
+
+[digvijay] MINOR BUGS
+
+[digvijay] Minor bug
+
+[digvijay] Minor Bugs
+
+[digvijay] minor bug
+
+[digvijay] Minor bug
+
+[digvijay] minor bug
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Pagination FK
+
+[digvijay] Refactoring FK REcon
+
+[digvijay] Bigdecimal Orderitemvalue
+
+[sunny] TOL-109: usernames should be in lower case
+
+[sunny] TOL-109: null check for state code
+
+[digvijay] Integrating GoPigeon
+
+[digvijay] GoPigeon Mysql queries
+
+[digvijay] Mysql queries
+
+[sunny] TOL-109: restricted product types in recurrent job
+
+[digvijay] GoPigeon Integrated
+
+[digvijay] Queries refactoed
+
+[akshay.agarwal.js] query fix
+
+[digvijay] Channel Recovery Breakup Fixed
+
+[akshay.agarwal.js] flipkart shipment id null check in fetch order list
+
+[digvijay] Zero values handled in sheet
+
+[digvijay] EMI Charges removed from Financial Breakup
+
+[digvijay] hasNextPage Flag added
+
+[digvijay] Null Invoice status valuetag handled
+
+[digvijay] Recon Scripts Refactored
+
+[digvijay] CNBODY missing Exception handled
+
+------------------------------------------
+Started by an SCM change
+Building in workspace <http://jenkins.unicommerce.com:8080/job/UniwareProduction/ws/>
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@bitbucket.org:unicommercetechnology/uniware.git # timeout=10
+Fetching upstream changes from git@bitbucket.org:unicommercetechnology/uniware.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials jenkins
+ > git fetch --tags --progress git@bitbucket.org:unicommercetechnology/uniware.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse origin/production^{commit} # timeout=10
+Checking out Revision e947e85bfc319523b8be8f532a49ccb6527e18cf (origin/production)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e947e85bfc319523b8be8f532a49ccb6527e18cf
+ > git rev-list 2eee5c1274244bfaeea45f65792288b7a571c359 # timeout=10
+Waiting for the completion of UniwareCommonProduction
+UniwareCommonProduction #860 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[UniwareProduction] $ /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/_usr_local_apache-maven/bin/mvn -f pom.xml clean package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for unicommerce:UniwareCore:jar:1.0
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> duplicate declaration of version 4.8.1 @ line 93, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: io.dropwizard.metrics:metrics-core:jar -> duplicate declaration of version 3.1.2 @ line 134, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Uniware
+[INFO] UniwareCore
+[INFO] UniwareServices
+[INFO] UniwareWeb
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Uniware 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Uniware ---
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ Uniware ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building UniwareCore 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ UniwareCore ---
+[INFO] Deleting <http://jenkins.unicommerce.com:8080/job/UniwareProduction/ws/UniwareCore/target>
+[INFO] 
+[INFO] --- properties-maven-plugin:1.0-alpha-2:read-project-properties (default) @ UniwareCore ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ UniwareCore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ UniwareCore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1934 source files to <http://jenkins.unicommerce.com:8080/job/UniwareProduction/ws/UniwareCore/target/classes>
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Uniware ............................................ SUCCESS [  0.277 s]
+[INFO] UniwareCore ........................................ FAILURE [  2.581 s]
+[INFO] UniwareServices .................................... SKIPPED
+[INFO] UniwareWeb ......................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.018 s
+[INFO] Finished at: 2016-11-08T14:23:55+00:00
+[INFO] Final Memory: 18M/178M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project UniwareCore: Fatal error compiling: invalid target release: 1.8 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :UniwareCore
+Build step 'Invoke top-level Maven targets' marked build as failure

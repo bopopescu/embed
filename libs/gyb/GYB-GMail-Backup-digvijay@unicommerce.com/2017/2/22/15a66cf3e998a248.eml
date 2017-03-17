@@ -1,0 +1,260 @@
+Delivered-To: digvijay@unicommerce.com
+Received: by 10.140.39.85 with SMTP id u79csp940476qgu;
+        Wed, 22 Feb 2017 09:12:22 -0800 (PST)
+X-Received: by 10.28.207.7 with SMTP id f7mr3365320wmg.112.1487783542476;
+        Wed, 22 Feb 2017 09:12:22 -0800 (PST)
+Return-Path: <kapil@unicommerce.com>
+Received: from mail-wm0-x235.google.com (mail-wm0-x235.google.com. [2a00:1450:400c:c09::235])
+        by mx.google.com with ESMTPS id u32si2465267wrc.134.2017.02.22.09.12.22
+        for <digvijay@unicommerce.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 22 Feb 2017 09:12:22 -0800 (PST)
+Received-SPF: neutral (google.com: 2a00:1450:400c:c09::235 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) client-ip=2a00:1450:400c:c09::235;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unicommerce-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2a00:1450:400c:c09::235 is neither permitted nor denied by best guess record for domain of kapil@unicommerce.com) smtp.mailfrom=kapil@unicommerce.com
+Received: by mail-wm0-x235.google.com with SMTP id v77so4493202wmv.1
+        for <digvijay@unicommerce.com>; Wed, 22 Feb 2017 09:12:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=unicommerce-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc;
+        bh=ZLTVZRKIJLL/nFnUbtqCCrIrcrVbL9XpRaMwhx8NIMw=;
+        b=qUcDWr43JlfX5pKFyZKRDhPrr7JsV9pqDYV74SXoHKAX3KH6RsYo5zQCV9VgorYrdh
+         H3xuVt26oJI2wqi8pZ+bHgxLsZn+UYDxQdfpTwMI682FwnqPgWa8DfRR/4Z33ZsNEHAa
+         9i8FrNdTZ4pcvHnL3Kf5nJCEKpsgZ7UAOBSu1syXXu2+o43pz53ddHrDMrgn8MgjfE3+
+         8J/Grm7O4c4d+/PSLoHA2adtlH9OijFaVIpz4HBZKlsloVN2ffFZIQ0irfqR/IJZKGAy
+         RTL1g1eCODYNBD8mOv7alo2iwAuHAFZqANMLQ96jLF6bu6ndgc0SIkfDwY/cg/anvOhX
+         wFkA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:cc;
+        bh=ZLTVZRKIJLL/nFnUbtqCCrIrcrVbL9XpRaMwhx8NIMw=;
+        b=Z7+x+v5dBJGVyJLU7arGt5REoo9aHdQPWtNTOHpavpgIMtf9GWe20KIfRa1YngwQkE
+         HO0WzaUbpdi3Hq219uI3nJXZSbXMGlLRsT1ALs0CSr7grVLjWRz8uAGVR/7jnJmWjDg9
+         pJ1n93kbtPUK4H5RK1fNT3LAN+9bpKzyglyyhvUPLKsd97EiRN0eYR06tK6q7fZ3ibBk
+         EAPuoOHGl/amLWvFs86V0MaYlGZ9LZNlfHn2Q5wo6snw73rATWpwpQAnlQdsPJ0vKy0A
+         oD57H3n9KjY/aNZEF5DdhtGKRPFeggmFOEl3AtSTCz9H256KxTz3fCpPwBr/Gz+FEWSx
+         hgWw==
+X-Gm-Message-State: AMke39myPNORFfVY6kH+5r3MTK/UnZFArq1Qw5b6n46d7uaYxs8yIrE1+iY81hcbO64+bdBJryy68pr5sphE5Q==
+X-Received: by 10.28.103.3 with SMTP id b3mr3124309wmc.99.1487783541989; Wed,
+ 22 Feb 2017 09:12:21 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.28.15.75 with HTTP; Wed, 22 Feb 2017 09:12:21 -0800 (PST)
+In-Reply-To: <CAOzor=6y8EmqV4bRBs6UKAm5JptXf66a9hCPZKSFZ=N-TJ=CTQ@mail.gmail.com>
+References: <CAPe2SZRB2Np_Qd1z4QXaq_mPpPXXsVkN6nTHXzU5c6XkF6BuWA@mail.gmail.com>
+ <CAOzor=6WtKeY6S7cAt02zrbyy2hR1SKBWx-gFhDYpCPjOnyMWg@mail.gmail.com>
+ <CAPe2SZSU1PJe3q7OvwCaO1A5gCVbKdiEkCYJuO=VxWvH1Zyk-A@mail.gmail.com> <CAOzor=6y8EmqV4bRBs6UKAm5JptXf66a9hCPZKSFZ=N-TJ=CTQ@mail.gmail.com>
+From: Kapil Makhija <kapil@unicommerce.com>
+Date: Wed, 22 Feb 2017 22:42:21 +0530
+Message-ID: <CAOzor=6jgUTeidhTNRZ8JDmYJfbBRL=B64=To_mObEyb0T3x=A@mail.gmail.com>
+Subject: Re: Reconciliation Update
+To: Akshay Agarwal <akshay.agarwal@unicommerce.com>
+Cc: Sunny Agarwal <sunny@unicommerce.com>, Varad Singhal <varad@unicommerce.com>, 
+	Digvijay Sharam <digvijay@unicommerce.com>
+Content-Type: multipart/alternative; boundary=001a114a91b285fc4405492199ed
+
+--001a114a91b285fc4405492199ed
+Content-Type: text/plain; charset=UTF-8
+
+Hi Akshay,
+
+We need to make the following changes for Net Profit:
+
+*Priority 1*
+
+1. Update the column header to show the formula (Settled - Cost Price). May
+be we can add help text so that if we hover, we see the formula
+2. Net Profit column should have a value only if both Settled Amount and
+Cost Price are greater than 0
+
+*Priority 2*
+
+1. We should add a tax column showing the VAT/CST calculated on each item
+based on the tax class
+2. Net Profit should be updated to show Settled Amount - Cost Price - Tax
+
+Regards,
+Kapil Makhija
+
+On Mon, Feb 6, 2017 at 6:50 PM, Kapil Makhija <kapil@unicommerce.com> wrote:
+
+> Hi Akshay,
+>
+> In the "Disputed" tab, we are showing a column "Reconciled by" in the end.
+> Ideally, that should be changed to "Disputed by" and should show a user
+> there.
+>
+> Regards,
+> Kapil Makhija
+>
+> On Thu, Feb 2, 2017 at 11:37 AM, Akshay Agarwal <
+> akshay.agarwal@unicommerce.com> wrote:
+>
+>> Yeah, was waiting for your confirmation on column name.
+>> Updated on all clients, please check now!
+>>
+>>
+>> On Thu, Feb 2, 2017 at 11:02 AM Kapil Makhija <kapil@unicommerce.com>
+>> wrote:
+>>
+>>> Sure..that should be fine. Although I did not see any changes for the
+>>> same on sbhomefashion.unicommerce.com
+>>>
+>>> On Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <
+>>> akshay.agarwal@unicommerce.com> wrote:
+>>>
+>>> Hi Sir,
+>>> We have updated the last column of the settlement invoices page from
+>>> "status on channel" to "other info".
+>>> Earlier it used to represent the payment reason for which the
+>>> transaction is made (Like Refund, Return, MarketPlaceFee). But since
+>>> Flipkart doesn't give any such reason in its sheet (we mapped it with order
+>>> status as of now, which resulted in duplicate invoices), we have to put in
+>>> invoice code in that field to maintain uniqueness of invoices. Hence
+>>> renamed the column to "other info".
+>>> --
+>>> Thanks
+>>> Akshay Agarwal
+>>> Software Engineer, Unicommerce
+>>> +91 9999-872-129 <+91%2099998%2072129>
+>>>
+>>>
+>>>
+>>>
+>>> --
+>>> Kapil Makhija
+>>> Director, Strategy - Unicommerce
+>>> M: +91-9718470888 <+91%2097184%2070888>
+>>>
+>> --
+>> Thanks
+>> Akshay Agarwal
+>> Software Engineer, Unicommerce
+>> +91 9999-872-129
+>>
+>
+>
+>
+> --
+> Kapil Makhija
+> Director, Strategy - Unicommerce
+> M: +91-9718470888
+>
+
+
+
+-- 
+Kapil Makhija
+Director, Strategy - Unicommerce
+M: +91-9718470888
+
+--001a114a91b285fc4405492199ed
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Akshay,<div><br></div><div>We need to make the followin=
+g changes for Net Profit:</div><div><br></div><div><b><i>Priority 1</i></b>=
+</div><div><b><i><br></i></b></div><div>1. Update the column header to show=
+ the formula (Settled - Cost Price). May be we can add help text so that if=
+ we hover, we see the formula</div><div>2. Net Profit column should have a =
+value only if both Settled Amount and Cost Price are greater than 0</div><d=
+iv><br></div><div><b><i>Priority 2</i></b></div><div><br></div><div>1. We s=
+hould add a tax column showing the VAT/CST calculated on each item based on=
+ the tax class</div><div>2. Net Profit should be updated to show Settled Am=
+ount - Cost Price - Tax</div><div><br></div><div>Regards,</div><div>Kapil M=
+akhija=C2=A0</div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_=
+quote">On Mon, Feb 6, 2017 at 6:50 PM, Kapil Makhija <span dir=3D"ltr">&lt;=
+<a href=3D"mailto:kapil@unicommerce.com" target=3D"_blank">kapil@unicommerc=
+e.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"m=
+argin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"l=
+tr">Hi Akshay,<div><br></div><div>In the &quot;Disputed&quot; tab, we are s=
+howing a column &quot;Reconciled by&quot; in the end. Ideally, that should =
+be changed to &quot;Disputed by&quot; and should show a user there.</div><d=
+iv><br></div><div>Regards,</div><div>Kapil Makhija</div></div><div class=3D=
+"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div class=3D"gma=
+il_quote">On Thu, Feb 2, 2017 at 11:37 AM, Akshay Agarwal <span dir=3D"ltr"=
+>&lt;<a href=3D"mailto:akshay.agarwal@unicommerce.com" target=3D"_blank">ak=
+shay.agarwal@unicommerce.<wbr>com</a>&gt;</span> wrote:<br><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex"><div dir=3D"ltr"><div>Yeah, was waiting for your confirmatio=
+n on column name.<br></div>Updated on all clients, please check now!<div><b=
+r></div></div><div class=3D"m_8514488408223127229HOEnZb"><div class=3D"m_85=
+14488408223127229h5"><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Thu=
+, Feb 2, 2017 at 11:02 AM Kapil Makhija &lt;<a href=3D"mailto:kapil@unicomm=
+erce.com" target=3D"_blank">kapil@unicommerce.com</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px=
+ #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_85144884082231272=
+29m_4745792821879104576gmail_msg">Sure..that should be fine. Although I did=
+ not see any changes for the same on <a href=3D"http://sbhomefashion.unicom=
+merce.com" class=3D"m_8514488408223127229m_4745792821879104576gmail_msg" ta=
+rget=3D"_blank">sbhomefashion.unicommerce.com</a></div><div class=3D"gmail_=
+extra m_8514488408223127229m_4745792821879104576gmail_msg"><br class=3D"m_8=
+514488408223127229m_4745792821879104576gmail_msg"><div class=3D"gmail_quote=
+ m_8514488408223127229m_4745792821879104576gmail_msg"></div></div><div clas=
+s=3D"gmail_extra m_8514488408223127229m_4745792821879104576gmail_msg"><div =
+class=3D"gmail_quote m_8514488408223127229m_4745792821879104576gmail_msg">O=
+n Thu, Feb 2, 2017 at 10:42 AM, Akshay Agarwal <span dir=3D"ltr" class=3D"m=
+_8514488408223127229m_4745792821879104576gmail_msg">&lt;<a href=3D"mailto:a=
+kshay.agarwal@unicommerce.com" class=3D"m_8514488408223127229m_474579282187=
+9104576gmail_msg" target=3D"_blank">akshay.agarwal@unicommerce.co<wbr>m</a>=
+&gt;</span> wrote:<br class=3D"m_8514488408223127229m_4745792821879104576gm=
+ail_msg"></div></div><div class=3D"gmail_extra m_8514488408223127229m_47457=
+92821879104576gmail_msg"><div class=3D"gmail_quote m_8514488408223127229m_4=
+745792821879104576gmail_msg"><blockquote class=3D"gmail_quote m_85144884082=
+23127229m_4745792821879104576gmail_msg" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr" class=3D"m_8514488408=
+223127229m_4745792821879104576gmail_msg">Hi Sir,<div class=3D"m_85144884082=
+23127229m_4745792821879104576gmail_msg">We have updated the last column of =
+the settlement invoices page from &quot;status on channel&quot; to &quot;ot=
+her info&quot;.</div><div class=3D"m_8514488408223127229m_47457928218791045=
+76gmail_msg">Earlier it used to represent the payment reason for which the =
+transaction is made (Like Refund, Return, MarketPlaceFee). But since Flipka=
+rt doesn&#39;t give any such reason in its sheet (we mapped it with order s=
+tatus as of now, which resulted in duplicate invoices), we have to put in i=
+nvoice code in that field to maintain uniqueness of invoices. Hence renamed=
+ the column to &quot;other info&quot;.</div></div><span class=3D"m_85144884=
+08223127229m_4745792821879104576m_6584795136512795450HOEnZb m_8514488408223=
+127229m_4745792821879104576gmail_msg"><font color=3D"#888888" class=3D"m_85=
+14488408223127229m_4745792821879104576gmail_msg"><div dir=3D"ltr" class=3D"=
+m_8514488408223127229m_4745792821879104576gmail_msg">-- <br class=3D"m_8514=
+488408223127229m_4745792821879104576gmail_msg"></div><div data-smartmail=3D=
+"gmail_signature" class=3D"m_8514488408223127229m_4745792821879104576gmail_=
+msg"><div dir=3D"ltr" class=3D"m_8514488408223127229m_4745792821879104576gm=
+ail_msg">Thanks<div class=3D"m_8514488408223127229m_4745792821879104576gmai=
+l_msg">Akshay Agarwal</div><div class=3D"m_8514488408223127229m_47457928218=
+79104576gmail_msg">Software Engineer, Unicommerce</div><div class=3D"m_8514=
+488408223127229m_4745792821879104576gmail_msg"><a href=3D"tel:+91%2099998%2=
+072129" value=3D"+919999872129" class=3D"m_8514488408223127229m_47457928218=
+79104576gmail_msg" target=3D"_blank">+91 9999-872-129</a></div></div></div>
+</font></span></blockquote></div></div><div class=3D"gmail_extra m_85144884=
+08223127229m_4745792821879104576gmail_msg"><br class=3D"m_85144884082231272=
+29m_4745792821879104576gmail_msg"><br clear=3D"all" class=3D"m_851448840822=
+3127229m_4745792821879104576gmail_msg"><div class=3D"m_8514488408223127229m=
+_4745792821879104576gmail_msg"><br class=3D"m_8514488408223127229m_47457928=
+21879104576gmail_msg"></div>-- <br class=3D"m_8514488408223127229m_47457928=
+21879104576gmail_msg"><div class=3D"m_8514488408223127229m_4745792821879104=
+576m_6584795136512795450gmail_signature m_8514488408223127229m_474579282187=
+9104576gmail_msg" data-smartmail=3D"gmail_signature"><div dir=3D"ltr" class=
+=3D"m_8514488408223127229m_4745792821879104576gmail_msg">Kapil Makhija<div =
+class=3D"m_8514488408223127229m_4745792821879104576gmail_msg">Director, Str=
+ategy - Unicommerce</div><div class=3D"m_8514488408223127229m_4745792821879=
+104576gmail_msg">M: <a href=3D"tel:+91%2097184%2070888" value=3D"+919718470=
+888" class=3D"m_8514488408223127229m_4745792821879104576gmail_msg" target=
+=3D"_blank">+91-9718470888</a></div></div></div>
+</div></blockquote></div><div dir=3D"ltr">-- <br></div><div data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr">Thanks<div>Akshay Agarwal</div><div>S=
+oftware Engineer, Unicommerce</div><div>+91 9999-872-129</div></div></div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div class=3D"m_8514488408223127229gmail_signature" data-smartmail=3D"gmail=
+_signature"><div dir=3D"ltr">Kapil Makhija<div>Director, Strategy - Unicomm=
+erce</div><div>M: +91-9718470888</div></div></div>
+</div>
+</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
+<div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
+=3D"ltr">Kapil Makhija<div>Director, Strategy - Unicommerce</div><div>M: +9=
+1-9718470888</div></div></div>
+</div>
+
+--001a114a91b285fc4405492199ed--
