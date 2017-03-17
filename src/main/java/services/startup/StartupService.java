@@ -1,248 +1,262 @@
-package main.java.services.startup;
-
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
-import com.pi4j.io.gpio.GpioPinDigitalInput;
-import com.pi4j.io.gpio.GpioPinDigitalOutput;
-import com.pi4j.io.gpio.RaspiPin;
-import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
-import com.pi4j.io.gpio.event.GpioPinListenerDigital;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import main.java.core.entity.RemoteStats;
-import uk.co.caprica.lircj.LircBridge;
-
-/**
- * Created by digvijaysharma on 26/01/17.
+package main.java.services.startup; /**
+ * Created by admin on 4/27/16.
  */
-public class StartupService {
 
-    static GpioPinDigitalInput my_switch_1,app_input;    static boolean my_switchValue = false;
-    static GpioPinDigitalOutput relay;          static boolean relayValue;
-    static boolean app_inputValue = false;
+import com.github.toastshaman.dropwizard.auth.jwt.JwtAuthFilter;
+import com.meltmedia.dropwizard.mongo.MongoBundle;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
+import io.dropwizard.Application;
+import io.dropwizard.auth.AuthDynamicFeature;
+import io.dropwizard.auth.AuthValueFactoryProvider;
+import io.dropwizard.setup.Bootstrap;
+import io.dropwizard.setup.Environment;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import main.java.core.annotation.Controller;
+import main.java.core.annotation.FetchBean;
+import main.java.core.annotation.Mao;
+import main.java.core.annotation.Service;
+import main.java.core.config.AppNameConfig;
+import main.java.core.config.JawtConfig;
+import main.java.core.config.MongoConfig;
+import main.java.core.vo.JawtUserVO;
+import main.java.core.vo.UserVO;
+import main.java.utils.security.JawtAuthenticator;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
+import org.jose4j.jwt.consumer.JwtConsumer;
+import org.jose4j.jwt.consumer.JwtConsumerBuilder;
+import org.jose4j.keys.HmacKey;
+import org.mongodb.morphia.DatastoreImpl;
+import org.mongodb.morphia.Morphia;
 
-    /*  Shows The Statistics Of The Remote Being Used */
-    public static RemoteStats remoteStats = new RemoteStats();
+public class StartupService extends Application<StartupConfig> {
 
-    /*  Controls GPIO Pins */
-    public static GpioController gpio = GpioFactory.getInstance();
+    private MongoClient client;
 
-    public static void main(String[] args) throws InterruptedException, IOException {
-        System.out.println("Starting Raspberry Pi 3 Model B Server !");
-//        wireLedAndSwitch();
-//        controlBulbUsingRelay();
-        System.out.println("Listening for events");
-        init();
-        gpio.shutdown();
+    private DatastoreImpl datastore;
+
+    private Morphia morphia;
+
+    private ServerAddress addr;
+
+    private MongoCredential credentia;
+
+    public static List<Object> maos;
+
+    public static List<Object> services;
+
+    public static List<Object> resources;
+
+    private JwtConsumer consumer;
+
+    private org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(StartupService.class);
+
+    public static void main(String[] args) throws Exception {
+        new StartupService().run(args);
     }
 
-    /**
-     * Initializes all the services and listeners
-     * @throws IOException
-     * @throws InterruptedException
-     */
-    public static void init() throws IOException, InterruptedException {
-        System.out.println("Initializing");
-        StartupConfig config = new StartupConfig();
-        config.startVncServer();
-        config.exit();
-        config.restartLircDaemon();
-        config.setupBridge();
-        /* Sends a test remote key press */
-        config.send();
-        config.stayRunning();
-        config.exit();
+    @Override public String getName() {
+        return ((AppNameConfig) utils.yaml.YamlMapper.getObject("app_name.yml", AppNameConfig.class)).getAppName();
     }
 
-    /**
-     * Test LED-SWITCH Program ---> Controls LED on and off with switch presses and logs the presses
-     */
-    private static void controlBulbUsingRelay() {
-        relay = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06);
-        relay.high();
-//        my_switch_1 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04);
-//        app_input = gpio.provisionDigitalInputPin(RaspiPin.GPIO_05);
-//        my_switch_1.setShutdownOptions(true);
-//        relay.low();
-//        relayValue = true;
-//        my_switch_1.addListener(new GpioPinListenerDigital() {
-//            @Override public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                relay.setState(event.getState());
-//            }
-//        });
-//        app_input.addListener(new GpioPinListenerDigital() {
-//            @Override public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                relay.setState(event.getState());
-//            }
-//        });
+    @Override public void initialize(Bootstrap<StartupConfig> bootstrap) {
+        LOG.info("Initializing App");
+        bootstrap.addBundle(MongoBundle.<StartupConfig>builder().withConfiguration(StartupConfig::getMongo).build());
+        setupMongo();
     }
 
-    public static void changeRelayAccordingToSwitch() {
-//        /*     Switch is ON and APP says ON     */
-//        if(my_switchValue && app_input) {
-//            relay.high();
-//        }
-//        /*     Switch is ON and APP says OFF     */
-//        else if(my_switchValue && !app_input) {
-//            relay.high();
-//        }
-//        /*     Switch is OFF and APP says ON     */
-//        else if(!my_switchValue && app_input) {
-//            relay.high();
-//        }
-//        /*     Switch is OFF and APP says OFF     */
-//        else if(!my_switchValue && !app_input) {
-//            relay.low();
-//        }
+    @Override public void run(StartupConfig configuration, Environment environment) throws IllegalAccessException {
+        LOG.info("Starting App");
+        setupJawt(configuration, environment);
+        setupEnvironment(environment);
+        setupControllers(environment);
+        fetchBeans();
+//        setupHazelcast();
     }
 
-    /**
-     * Test LED-SWITCH Program ---> Controls LED on and off with switch presses and logs the presses
-     */
-    private static void wireLedAndSwitch() {
-        GpioPinDigitalOutput led = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06);
-        GpioPinDigitalInput my_switch = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04);
-        my_switch.setShutdownOptions(true);
-        led.high();
-        my_switch.addListener(new GpioPinListenerDigital() {
-            @Override public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-                System.out.println("Entered listener");
-                handleSensorInput(led, event);
-            }
+    private void setupJawt(StartupConfig configuration, Environment environment) {
+        LOG.info("Setting Up Jawt");
+        configuration.setJawtConfig(utils.yaml.YamlMapper.getObject("jawt.yml", JawtConfig.class));
+        try {
+            final byte[] key = configuration.getJawtConfig().getJwtTokenSecret();
+            consumer = new JwtConsumerBuilder().setAllowedClockSkewInSeconds(
+                    30)           // allow some leeway in validating time based claims to account for clock skew
+                    .setRequireExpirationTime()                 // the JWT must have an expiration time
+                    .setRequireSubject()                        // the JWT must have a subject claim
+                    .setVerificationKey(new HmacKey(key))       // verify the signature with the public key
+                    .setRelaxVerificationKeyValidation()        // relaxes key length requirement
+                    .build();                                   // create the JwtConsumer instance
+            environment.jersey().register(new AuthDynamicFeature(
+                    new JwtAuthFilter.Builder<JawtUserVO>().setJwtConsumer(consumer).setRealm("realm")
+                            .setPrefix("Bearer")
+                            .setAuthenticator(new JawtAuthenticator(new UserMaoImpl(datastore)))
+                            .buildAuthFilter()));
+            environment.jersey().register(new AuthValueFactoryProvider.Binder<>(Principal.class));
+            environment.jersey().register(RolesAllowedDynamicFeature.class);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-            private void handleSensorInput(GpioPinDigitalOutput led,GpioPinDigitalStateChangeEvent event) {
-                System.out.println(" --> GPIO PIN STATE CHANGE: ");
-                if (event.getState().isLow()) {
-                    notifySwitchUnpressed(led);
+    private void setupEnvironment(Environment environment) {
+        LOG.info("Setting Up Environment");
+        environment.jersey().setUrlPattern("/*");
+        environment.jersey().register(MultiPartFeature.class);
+    }
+
+    private void setupControllers(Environment environment) {
+        LOG.info("Setting Up Controllers");
+        registerResources(environment, inflateResources(inflateServices(inflateMaos())));
+    }
+
+    private void registerResources(Environment environment, List<Object> resources) {
+        LOG.info("Registering Controllers");
+        for (Object res : resources) {
+            environment.jersey().register(res);
+        }
+    }
+
+    private List<Object> inflateMaos() {
+        LOG.info("Inflating Maos");
+        return maos = injectDependencies("mao", Mao.class, Arrays.asList(new Object[] { datastore }));
+    }
+
+    private List<Object> inflateServices(List<Object> maos) {
+        LOG.info("Inflating Services");
+        return services = injectDependencies("services", Service.class, maos);
+    }
+
+    private List<Object> inflateResources(List<Object> services) {
+        LOG.info("Inflating Resources");
+        return resources = injectDependencies("core.web.controller", Controller.class, services);
+    }
+
+    private List<Object> injectDependencies(String dependencyPackageName, Class<? extends Annotation> annotation,
+            List<Object> dependencies)
+    {
+        List<Object> beans = new ArrayList<Object>();
+        Reflections reflections = new Reflections(dependencyPackageName);
+        Set<Class<?>> annotated = reflections.getTypesAnnotatedWith(annotation);
+        for (Class<?> clazz : annotated) {
+            Constructor<?>[] ctor = null;
+            ctor = clazz.getConstructors();
+            List<Object> injectionParams = new ArrayList<Object>();
+            for (Class<?> cl : ctor[0].getParameterTypes()) {
+                for (Object dependency : dependencies) {
+                    if (dependency.getClass().getName().equals(cl.getName())) {
+                        injectionParams.add(dependency);
+                    }
                 }
-                else {
-                    notifySwitchPressed(led);
+            }
+            Object[] injectionArray = (Object[]) injectionParams.toArray();
+            try {
+                beans.add(ctor[0].newInstance(injectionArray));
+            }
+            catch (InstantiationException e) {
+                e.printStackTrace();
+            }
+            catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+            catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
+        for (Object bean : beans)
+            LOG.info(bean.getClass().getName());
+        return beans;
+    }
+
+    private void fetchBeans() throws IllegalAccessException {
+        LOG.info("Fetching field dependency beans and injecting them");
+        fetchBeans("mao");
+        fetchBeans("services");
+        fetchBeans("core.web.controller");
+    }
+
+    private void fetchBeans(String dependencyPackageName) throws IllegalAccessException {
+        Reflections reflections = new Reflections(dependencyPackageName, new FieldAnnotationsScanner());
+        Set<Field> annotated = reflections.getFieldsAnnotatedWith(FetchBean.class);
+        for (Field field : annotated) {
+            Class<?> owningClazz = field.getDeclaringClass();
+            LOG.info(owningClazz.getName());
+            Object owningInstance = null;
+            Class<?> typeClazz = field.getType();
+            if(owningClazz.isAnnotationPresent(Mao.class)) {
+                for(Object mao : maos) {
+                    if(mao.getClass().getName().equals(owningClazz.getName())) {
+                        owningInstance = mao;
+                    }
                 }
             }
-
-            private void notifySwitchPressed(GpioPinDigitalOutput led) {
-                System.out.println("Switch is on");
-                led.high();
+            else if(owningClazz.isAnnotationPresent(Service.class)) {
+                for(Object service : services) {
+                    if(service.getClass().getName().equals(owningClazz.getName())) {
+                        owningInstance = service;
+                    }
+                }
             }
-
-            private void notifySwitchUnpressed(GpioPinDigitalOutput led) {
-                System.out.println("Switch is off");
-                led.low();
+            else if(owningClazz.isAnnotationPresent(Controller.class)) {
+                for(Object resource : resources) {
+                    if(resource.getClass().getName().equals(owningClazz.getName())) {
+                        owningInstance = resource;
+                    }
+                }
             }
-        });
-    }
-}
-
-class StartupConfig {
-
-    /*    To Stash a bean of the VNC Server Instance for manual Control  */
-    private Process vncServer;
-
-    /**
-     * IR OUT_PIN = 17th Pin Actual
-     * IR IN_PIN = 13th Pin Actual
-     * Keep emitting stats of remote every 500ms
-     * @throws InterruptedException
-     */
-    public void stayRunning() throws InterruptedException {
-//        GpioPinDigitalInput ir_in = StartupService.gpio.provisionDigitalInputPin(RaspiPin.GPIO_27);
-//        ir_in.addListener(new GpioPinListenerDigital() {
-//            @Override public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                System.out.println("Entered listener");
-//                handleSensorInput(event);
-//            }
-//
-//            private void handleSensorInput(GpioPinDigitalStateChangeEvent event) {
-//                System.out.println(" --> GPIO PIN STATE CHANGE: ");
-//                if (event.getState().isLow()) {
-//                    System.out.println("State is low!");
-//                }
-//                else {
-//                    System.out.println("State is high!");
-//                }
-//            }
-//        });
-        while(true) {
-            Thread.sleep(500);
-//            StartupService.changeRelayAccordingToSwitch();
-            System.out.println("buttonName = [" + StartupService.remoteStats.buttonName + "], remoteControlName = [" + StartupService.remoteStats.remoteControlName
-                    + "], repeatCount = [" + StartupService.remoteStats.repeatCount + "]");
+            else {
+                LOG.error("Owning class should be one of { Mao,Service,Controller }");
+                return;
+            }
+                
+            if(typeClazz.isAnnotationPresent(Mao.class)) {
+                for(Object mao : maos) {
+                    if(mao.getClass().getName().equals(typeClazz.getName())) {
+                        field.set(owningInstance, mao);
+                    }
+                }
+            }
+            else if(typeClazz.isAnnotationPresent(Service.class)) {
+                for(Object service : services) {
+                    if(service.getClass().getName().equals(typeClazz.getName())) {
+                        field.set(owningInstance, service);
+                    }
+                }
+            }
+            else if(typeClazz.isAnnotationPresent(Controller.class)) {
+                for(Object resource : resources) {
+                    if(resource.getClass().getName().equals(typeClazz.getName())) {
+                        field.set(owningInstance, resource);
+                    }
+                }
+            }
+            else {
+                LOG.error("Type class should be one of { Mao,Service,Controller }");
+                return;
+            }
         }
     }
 
-    /**
-     * Usage ::
-     * Map<String, String> env = pb.environment();
-     * env.put("VAR1", "myValue");
-     * env.remove("OTHERVAR");
-     * env.put("VAR2", env.get("VAR1") + "suffix");
-     * pb.directory(new File("/home/pi"));
-     *
-     * @throws IOException
-     * @throws InterruptedException
-     */
-    public void send() throws IOException, InterruptedException {
-        System.out.println("Sending sample key press");
-//        new ProcessBuilder("irsend","SEND_START","vuplus.conf","KEY_PLAY").start().waitFor();
-        new ProcessBuilder("irsend","SEND_START","/home/pi/lircd.conf","KEY_0").start().waitFor();
-    }
-
-    /*
-     *   Running on wrong port right now. To be checked later
-     */
-    public void startVncServer() throws IOException, InterruptedException {
-        System.out.println("Starting VNC Server for remote desktop");
-        this.vncServer = new ProcessBuilder("vncserver",":1").start();
-        this.vncServer.waitFor();
-        BufferedReader br = new BufferedReader(new InputStreamReader(this.vncServer.getInputStream()));
-        String line;
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
-        }
-    }
-
-    /**
-     * Bootstrap Lirc Library
-     * @throws IOException
-     * @throws InterruptedException
-     */
-    public void restartLircDaemon() throws IOException, InterruptedException {
-        System.out.println("Starting LIRC Daemon");
-        ProcessBuilder pb = new ProcessBuilder("/bin/bash","init.sh").directory(new File("/home/pi"));
-        Process p = pb.start();
-        BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line;
-        p.waitFor();
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
-        }
-    }
-
-    /**
-     * The bridge is not capturing lirc events. To be checked later
-     */
-    public void setupBridge() {
-        System.out.println("Wiring LIRC Event Listener");
-        LircBridge bridge = new LircBridge("/var/run/lirc/lircd");
-        bridge.addLircListener((buttonName, remoteControlName, repeatCount) -> {
-            System.out.println("buttonName = [" + buttonName + "], remoteControlName = [" + remoteControlName
-                    + "], repeatCount = [" + repeatCount + "]");
-            StartupService.remoteStats.buttonName = buttonName;
-            StartupService.remoteStats.remoteControlName = remoteControlName;
-            StartupService.remoteStats.repeatCount = repeatCount;
-        });
-        bridge.start();
-    }
-
-    /**
-     * Stop the program and all running daemons
-     * @throws IOException
-     * @throws InterruptedException
-     */
-    public void exit() throws IOException, InterruptedException {
-//        bridge.release();
-        new ProcessBuilder("irsend","SEND_STOP","/home/pi/lircd.conf","KEY_0").start().waitFor();
+    private void setupMongo() {
+        LOG.info("Configuring Mongo Client");
+        MongoConfig mongoConfig = utils.yaml.YamlMapper.getObject("mongo.yml", MongoConfig.class);
+        morphia = new Morphia();
+        morphia.map(UserVO.class);
+        addr = new ServerAddress(mongoConfig.getServer(), mongoConfig.getPort());
+        List<MongoCredential> credentialsList = new ArrayList<MongoCredential>();
+        credentia = MongoCredential.createCredential(mongoConfig.getUsername(), mongoConfig.getDatabase(), mongoConfig.getPassword().toCharArray());
+        credentialsList.add(credentia);
+        client = new MongoClient(addr, credentialsList);
+        datastore = (DatastoreImpl) morphia.createDatastore(client, mongoConfig.getClientName());
     }
 }

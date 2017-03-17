@@ -1,0 +1,20 @@
+mongo:
+  seeds:
+#  - host: "ds017231.mlab.com"
+#17231
+  - host: "ds139198.mlab.com"
+    port: 39198
+  database: "carecoo"
+server:
+  rootPath: '/*'
+  applicationConnectors:
+    - type: http
+      port: 8080
+    #- type: h2
+    #  port: 8079
+  adminConnectors:
+    - type: http
+      port: 8081
+  minThreads: 8
+  maxThreads: 512
+  maxQueuedRequests: 128
