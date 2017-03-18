@@ -27,6 +27,8 @@ import org.lirc.TcpLircClient;
  */
 public class StartupServiceNew {
 
+    private static org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(StartupServiceNew.class);
+
     public enum LOCK {
         OPEN,
         CLOSE
@@ -46,29 +48,28 @@ public class StartupServiceNew {
     public static GpioController gpio = GpioFactory.getInstance();
 
     public static void runCoreCode() throws InterruptedException, IOException {
-        System.out.println("Starting Raspberry Pi 3 Model B Server !");
+        LOG.info("Starting Raspberry Pi 3 Model B Server !");
 //        controlWifi();
 //        wireLedAndSwitch();
 //        addDeviceListener();
 //        controlBulbUsingRelay();
-        System.out.println("Listening for events");
-        return;
-//        init();
-//        gpio.shutdown();
+        LOG.info("Listening for events");
+        init();
+        gpio.shutdown();
     }
 
     public static void useLircClient() {
-        System.out.println("Init LIRC Client........");
+        LOG.info("Init LIRC Client........");
         try {
             LircClient lirc = new TcpLircClient("localhost", 8765);
             String version = lirc.getVersion();
-            System.out.println(version);
+            LOG.info(version);
             List<String> remotes = lirc.getRemotes();
             int i = 0;
             for (String remote : remotes)
-                System.out.println(i++ + ":\t" + remote);
+                LOG.info(i++ + ":\t" + remote);
 
-            System.out.println("Select a remote by entering its number");
+            LOG.info("Select a remote by entering its number");
 //            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in, LircClient.encodingName));
 //            String line = reader.readLine();
             String line = System.console().readLine();
@@ -79,15 +80,15 @@ public class StartupServiceNew {
             List<String> commands = lirc.getCommands(remote);
             i = 0;
             for (String command : commands)
-                System.out.println(i++ + ":\t" + command);
-            System.out.println("Select a command by entering its number");
+                LOG.info(i++ + ":\t" + command);
+            LOG.info("Select a command by entering its number");
             line = System.console().readLine();
             if (line == null)
                 return;
             int commandNo = Integer.parseInt(line);
             String command = commands.get(commandNo);
             lirc.sendIrCommand(remote, command, 1);
-            System.out.println("Command successful");
+            LOG.info("Command successful");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -103,29 +104,29 @@ public class StartupServiceNew {
                             public void run() {
                                 this.thread =  ++threadCount;
                                 this.myEvent = event;
-                                System.out.println("Thread " + thread + "Entered listener");
+                                LOG.info("Thread " + thread + "Entered listener");
                                 handleSensorInput(this.thread, this.myEvent);
                             }
                         });
                     }
 
                     private synchronized void handleSensorInput(int thread, GpioPinDigitalStateChangeEvent event) {
-                        System.out.println(" --> GPIO PIN STATE CHANGE: ");
+                        LOG.info(" --> GPIO PIN STATE CHANGE: ");
                         boolean inputState = event.getState().isHigh() ? true : false;
                         while(key != thread);
-                        System.out.println("Thread " + thread + " taking LOCK");
+                        LOG.info("Thread " + thread + " taking LOCK");
 //                        lock = LOCK.CLOSE.name();
                         queue.add(inputState);
-                        System.out.println("Thread " + thread + " adding IR code bit to queue");
-                        System.out.println(" ** Queue Size ------    " + queue.size());
+                        LOG.info("Thread " + thread + " adding IR code bit to queue");
+                        LOG.info(" ** Queue Size ------    " + queue.size());
                         if(queue.size()>=50) {
                             ir_led_lirc_input.removeAllListeners();
-                            System.out.println("Listeners Removed");
+                            LOG.info("Listeners Removed");
                             dequeue(queue);
                             queue = new ArrayList<Boolean>();
                         }
 //                        lock = LOCK.OPEN.name();
-                        System.out.println("Thread " + thread + " opened LOCK");
+                        LOG.info("Thread " + thread + " opened LOCK");
                         key++;
                     }
                 });
@@ -133,7 +134,7 @@ public class StartupServiceNew {
     }
 
     private static void dequeue(List<Boolean> code) {
-        System.out.println("Dequeueing");
+        LOG.info("Dequeueing");
 //        List<Boolean> irCode = new ArrayList<Boolean>();
 //        for(Boolean inputState : code) {
 //            irCode.add(inputState);
@@ -148,7 +149,7 @@ public class StartupServiceNew {
                 } catch (URISyntaxException e) {
                     e.printStackTrace();
                 }
-                System.out.println(response);
+                LOG.info(String.valueOf(response));
             } else {
                 StringBuffer response = null;
                 try {
@@ -158,7 +159,7 @@ public class StartupServiceNew {
                 } catch (URISyntaxException e) {
                     e.printStackTrace();
                 }
-                System.out.println(response);
+                LOG.info(String.valueOf(response));
             }
         }
         GpioPinDigitalOutput rpi_code = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06);
@@ -192,7 +193,7 @@ public class StartupServiceNew {
      * @throws InterruptedException
      */
     public static void init() throws IOException, InterruptedException {
-        System.out.println("Initializing");
+        LOG.info("Initializing");
         StartupConfigNew config = new StartupConfigNew();
 //        config.startVncServer();
 //        config.exit();
@@ -254,7 +255,7 @@ public class StartupServiceNew {
         GpioPinDigitalInput my_switch = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04);
         my_switch.setShutdownOptions(true);
         while(true) {
-            System.out.println(System.currentTimeMillis());
+            LOG.info(String.valueOf(System.currentTimeMillis()));
             led.high();
             try {
                 Thread.sleep(500);
@@ -270,12 +271,12 @@ public class StartupServiceNew {
         }
 //            my_switch.addListener(new GpioPinListenerDigital() {
 //            @Override public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                System.out.println("Entered listener");
+//                LOG.info("Entered listener");
 //                handleSensorInput(led, event);
 //            }
 //
 //            private void handleSensorInput(GpioPinDigitalOutput led,GpioPinDigitalStateChangeEvent event) {
-//                System.out.println(" --> GPIO PIN STATE CHANGE: ");
+//                LOG.info(" --> GPIO PIN STATE CHANGE: ");
 //                if (event.getState().isLow()) {
 //                    notifySwitchUnpressed(led);
 //                }
@@ -285,12 +286,12 @@ public class StartupServiceNew {
 //            }
 //
 //            private void notifySwitchPressed(GpioPinDigitalOutput led) {
-//                System.out.println("Switch is on");
+//                LOG.info("Switch is on");
 //                led.high();
 //            }
 //
 //            private void notifySwitchUnpressed(GpioPinDigitalOutput led) {
-//                System.out.println("Switch is off");
+//                LOG.info("Switch is off");
 //                led.low();
 //            }
 //        });
