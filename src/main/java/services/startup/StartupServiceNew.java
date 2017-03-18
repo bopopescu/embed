@@ -45,7 +45,7 @@ public class StartupServiceNew {
     /*  Controls GPIO Pins */
     public static GpioController gpio = GpioFactory.getInstance();
 
-    public static void main() throws InterruptedException, IOException {
+    public static void runCoreCode() throws InterruptedException, IOException {
         System.out.println("Starting Raspberry Pi 3 Model B Server !");
 //        controlWifi();
 //        wireLedAndSwitch();

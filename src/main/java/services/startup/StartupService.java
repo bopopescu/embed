@@ -87,7 +87,7 @@ public class StartupService extends Application<StartupConfig> {
         setupControllers(environment);
         fetchBeans();
         LOG.info("Running the core code on Pi Now.....");
-        StartupServiceNew.main();
+        StartupServiceNew.runCoreCode();
     }
 
     private void setupJawt(StartupConfig configuration, Environment environment) {
