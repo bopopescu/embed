@@ -1,8 +1,8 @@
 package mao.random.impl;
 
-import core.annotation.Mao;
-import core.vo.RandomCodeVO;
-import mao.random.IRandomCodeMao;
+import main.java.core.annotation.Mao;
+import main.java.core.vo.RandomCodeVO;
+import main.java.mao.random.IRandomCodeMao;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.DatastoreImpl;
 

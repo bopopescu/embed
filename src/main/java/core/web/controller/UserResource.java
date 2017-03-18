@@ -23,9 +23,7 @@ import main.java.core.api.response.UserLoginResponse;
 import main.java.core.api.response.VerifyOtpResponse;
 import main.java.core.api.validation.ResponseCode;
 import main.java.core.vo.UserVO;
-import services.customer.impl.CustomerServiceImpl;
-import services.seller.impl.SellerServiceImpl;
-import services.user.impl.UserServiceImpl;
+import main.java.services.user.impl.UserServiceImpl;
 
 /**
  * Created by admin on 4/27/16.
@@ -35,13 +33,7 @@ import services.user.impl.UserServiceImpl;
 
     private UserServiceImpl userService;
 
-    private SellerServiceImpl sellerService;
-
-    private CustomerServiceImpl customerService;
-
-    public UserResource(UserServiceImpl userService, SellerServiceImpl sellerService, CustomerServiceImpl customerService) {
-        this.customerService = customerService;
-        this.sellerService = sellerService;
+    public UserResource(UserServiceImpl userService) {
         this.userService = userService;
     }
 
@@ -51,10 +43,10 @@ import services.user.impl.UserServiceImpl;
         if(!response.hasErrors()) {
             if(response.getType() != null) {
                 if(response.getType().equals(UserVO.Type.SELLER.name())) {
-                    sellerService.createSeller(userRollbackRequest);
+//                    sellerService.createSeller(userRollbackRequest);
                 }
                 else if(response.getType().equals(UserVO.Type.CUSTOMER.name())) {
-                    customerService.createCustomer(userRollbackRequest);
+//                    customerService.createCustomer(userRollbackRequest);
                 }
                 else {
                     String type = response.getType();

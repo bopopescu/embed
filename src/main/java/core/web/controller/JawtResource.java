@@ -19,7 +19,7 @@ import main.java.core.api.response.GenerateExpiredTokenResponse;
 import main.java.core.api.response.GenerateValidTokenResponse;
 import main.java.core.api.response.RefreshAuthTokenResponse;
 import main.java.core.vo.JawtUserVO;
-import services.jawt.impl.JawtServiceImpl;
+import main.java.services.jawt.impl.JawtServiceImpl;
 
 /**
  * Created by digvijaysharma on 08/01/17.

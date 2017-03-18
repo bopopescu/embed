@@ -39,7 +39,7 @@ public class JawtUserVO implements Principal {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        final core.vo.JawtUserVO myUser = (core.vo.JawtUserVO) o;
+        final main.java.core.vo.JawtUserVO myUser = (main.java.core.vo.JawtUserVO) o;
         return Objects.equals(id, myUser.id) && Objects.equals(name, myUser.name);
     }
 

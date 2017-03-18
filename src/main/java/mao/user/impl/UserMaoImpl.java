@@ -1,13 +1,13 @@
 package main.java.mao.user.impl;
 
 import com.mongodb.WriteResult;
-import core.annotation.Mao;
-import core.dto.WsUser;
-import core.vo.AuthTokenVO;
-import core.vo.DeviceFingerprintVO;
-import core.vo.UserVO;
+import main.java.core.annotation.Mao;
+import main.java.core.dto.WsUser;
+import main.java.core.vo.AuthTokenVO;
+import main.java.core.vo.DeviceFingerprintVO;
+import main.java.core.vo.UserVO;
 import java.util.Date;
-import mao.user.IUserMao;
+import main.java.mao.user.IUserMao;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.DatastoreImpl;

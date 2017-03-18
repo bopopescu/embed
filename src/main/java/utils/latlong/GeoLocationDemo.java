@@ -1,4 +1,6 @@
-package main.java.utils.latlong;
+package utils.latlong;
+
+import main.java.utils.latlong.GeoLocation;
 
 /**
  * Created by digvijaysharma on 04/02/17.
@@ -43,14 +45,14 @@ public class GeoLocationDemo {
         double earthRadius = 6371.01;
         GeoLocation myLocation = GeoLocation.fromRadians(1.3963, -0.6981);
         double distance = 1000;
-//        java.sql.Connection connection = new java.sql.Connection();
-//
-//        try {
-//            java.sql.ResultSet resultSet = findPlacesWithinDistance(
-//                    earthRadius, myLocation, distance, connection);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        //        java.sql.Connection connection = new java.sql.Connection();
+        //
+        //        try {
+        //            java.sql.ResultSet resultSet = findPlacesWithinDistance(
+        //                    earthRadius, myLocation, distance, connection);
+        //        } catch (SQLException e) {
+        //            e.printStackTrace();
+        //        }
     }
 
 }

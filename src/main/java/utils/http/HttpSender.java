@@ -56,8 +56,8 @@ public class HttpSender {
     private StringBuffer get(String url, String headers, String params)
             throws URISyntaxException
     {
-        Map<String,Object> headersMapWithPrimitive = utils.json.JsonUtils.jsonToMap(utils.json.JsonUtils.stringToJson(headers));
-        Map<String,Object> paramsMapWithPrimitive = utils.json.JsonUtils.jsonToMap(utils.json.JsonUtils.stringToJson(params));
+        Map<String,Object> headersMapWithPrimitive = main.java.utils.json.JsonUtils.jsonToMap(main.java.utils.json.JsonUtils.stringToJson(headers));
+        Map<String,Object> paramsMapWithPrimitive = main.java.utils.json.JsonUtils.jsonToMap(main.java.utils.json.JsonUtils.stringToJson(params));
         Map<String,String> headersMap = new HashMap<String,String>();
         Map<String,String> paramsMap = new HashMap<String,String>();
         for(Map.Entry<String,Object> primitiveEntry : headersMapWithPrimitive.entrySet()) {
@@ -111,8 +111,8 @@ public class HttpSender {
     private StringBuffer post(String url, String headers, String params, String body)
             throws URISyntaxException
     {
-        Map<String,Object> headersMapWithPrimitive = utils.json.JsonUtils.jsonToMap(utils.json.JsonUtils.stringToJson(headers));
-        Map<String,Object> paramsMapWithPrimitive = utils.json.JsonUtils.jsonToMap(utils.json.JsonUtils.stringToJson(params));
+        Map<String,Object> headersMapWithPrimitive = main.java.utils.json.JsonUtils.jsonToMap(main.java.utils.json.JsonUtils.stringToJson(headers));
+        Map<String,Object> paramsMapWithPrimitive = main.java.utils.json.JsonUtils.jsonToMap(main.java.utils.json.JsonUtils.stringToJson(params));
         Map<String,String> headersMap = new HashMap<String,String>();
         Map<String,String> paramsMap = new HashMap<String,String>();
         for(Map.Entry<String,Object> primitiveEntry : headersMapWithPrimitive.entrySet()) {
@@ -194,7 +194,7 @@ public class HttpSender {
 //            e.printStackTrace();
 //        }
 //        System.out.println(new HttpSender(true).executeGet("https://www.singlekart.com/wp-json/wc/v1/products?consumer_key=ck_ac07ede27ebf2884d9a06dada0fb1eb3a6f19810&consumer_secret=cs_c9ec0eeb500af6b34bcec948ac6ee88396daf4cc&per_page=1&page=1",null));
-        String s ='import machine\nimport time\n\ndef CONVERT_DISPLAY(d):\n    \t""" Write dimming level on the SPI Connection """    \t\n    \tdig = []\n    \ttemp = d\n    \ttemp = temp/10\n    \tdig1 = d%10\n    \tdig2 = temp%10\n\t\tdig3 = temp/10\n\t\tdig[0] = dig3\n\t\tdig[1] = dig2\n\t\tdig[2] = dig1\n\t\tfor(x=0;x<3;x++)\n\t\t{\n\t\ttemp = dig[x]|0x30;\t\t\n\t\tspi.write(btemp)\n\t\t}\n\n# initiliazing loads for different Dimmer levels\nLOAD1 = 0, LOAD2 = 20, LOAD3 = 50, LOAD4 = 100\n# init SPI with baud 9600\nspi = machine.SPI(1, baudrate=9600, polarity=0, phase=0)\n\n# Writing A? where ? = dimming level\n# and A = LOAD1 as given on chip\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD1)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD2)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD3)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD4)\ntime.sleep_ms(3000)\n\n'
+//        String s ="import machine\nimport time\n\ndef CONVERT_DISPLAY(d):\n    \t""" Write dimming level on the SPI Connection """    \t\n    \tdig = []\n    \ttemp = d\n    \ttemp = temp/10\n    \tdig1 = d%10\n    \tdig2 = temp%10\n\t\tdig3 = temp/10\n\t\tdig[0] = dig3\n\t\tdig[1] = dig2\n\t\tdig[2] = dig1\n\t\tfor(x=0;x<3;x++)\n\t\t{\n\t\ttemp = dig[x]|0x30;\t\t\n\t\tspi.write(btemp)\n\t\t}\n\n# initiliazing loads for different Dimmer levels\nLOAD1 = 0, LOAD2 = 20, LOAD3 = 50, LOAD4 = 100\n# init SPI with baud 9600\nspi = machine.SPI(1, baudrate=9600, polarity=0, phase=0)\n\n# Writing A? where ? = dimming level\n# and A = LOAD1 as given on chip\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD1)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD2)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD3)\ntime.sleep_ms(3000)\n\nspi.write(b\'A\')\nCONVERT_DISPLAY(LOAD4)\ntime.sleep_ms(3000)\n\n"
         try {
             response = new HttpSender().send(
                     "GET",

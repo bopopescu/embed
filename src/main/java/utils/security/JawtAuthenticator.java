@@ -1,11 +1,11 @@
 package main.java.utils.security;
 
-import core.vo.JawtUserVO;
-import core.vo.UserVO;
+import main.java.core.vo.JawtUserVO;
+import main.java.core.vo.UserVO;
 import io.dropwizard.auth.Authenticator;
 import static java.math.BigDecimal.ONE;
 import java.util.Optional;
-import mao.user.impl.UserMaoImpl;
+import main.java.mao.user.impl.UserMaoImpl;
 import org.jose4j.jwt.MalformedClaimException;
 import org.jose4j.jwt.consumer.JwtContext;
 

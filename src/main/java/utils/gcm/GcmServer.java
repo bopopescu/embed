@@ -1,7 +1,7 @@
 package main.java.utils.gcm;
 
 import java.net.URISyntaxException;
-import utils.http.HttpSender;
+import main.java.utils.http.HttpSender;
 
 /**
  * Created by digvijaysharma on 05/01/17.

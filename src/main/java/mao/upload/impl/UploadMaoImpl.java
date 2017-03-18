@@ -1,7 +1,7 @@
-package mao.upload.impl;
+package main.java.mao.upload.impl;
 
-import core.annotation.Mao;
-import mao.upload.IUploadMao;
+import main.java.core.annotation.Mao;
+import main.java.mao.upload.IUploadMao;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.DatastoreImpl;
 

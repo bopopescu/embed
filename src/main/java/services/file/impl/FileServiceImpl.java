@@ -1,9 +1,5 @@
-package services.file.impl;
+package main.java.services.file.impl;
 
-import core.annotation.Service;
-import core.api.request.ImageDownloadRequest;
-import core.api.request.UploadFileRequest;
-import core.api.response.UploadFileResponse;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,10 +7,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import javax.mail.MessagingException;
 import javax.ws.rs.core.Response;
-import mao.upload.impl.UploadMaoImpl;
+import main.java.core.annotation.Service;
+import main.java.core.api.request.ImageDownloadRequest;
+import main.java.core.api.request.UploadFileRequest;
+import main.java.core.api.response.UploadFileResponse;
+import main.java.mao.upload.impl.UploadMaoImpl;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import services.file.IFileService;
-
+import main.java.services.file.IFileService;
 /**
  * Created by digvijaysharma on 16/12/16.
  */

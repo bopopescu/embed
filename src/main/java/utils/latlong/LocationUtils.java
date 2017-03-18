@@ -1,6 +1,5 @@
 package main.java.utils.latlong;
 
-import core.vo.CoordinatesVO;
 import static java.lang.Math.acos;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -8,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import main.java.core.vo.CoordinatesVO;
 
 /**
  * Created by digvijaysharma on 04/02/17.

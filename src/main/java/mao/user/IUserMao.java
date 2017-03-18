@@ -1,10 +1,10 @@
 package main.java.mao.user;
 
 import com.mongodb.WriteResult;
-import core.dto.WsUser;
-import core.vo.AuthTokenVO;
-import core.vo.DeviceFingerprintVO;
-import core.vo.UserVO;
+import main.java.core.dto.WsUser;
+import main.java.core.vo.AuthTokenVO;
+import main.java.core.vo.DeviceFingerprintVO;
+import main.java.core.vo.UserVO;
 
 /**
  * Created by digvijaysharma on 18/12/16.

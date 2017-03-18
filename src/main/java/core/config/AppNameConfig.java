@@ -12,6 +12,6 @@ public class AppNameConfig {
     }
 
     public void setAppName(String appName) {
-        core.config.AppNameConfig.appName = appName;
+        main.java.core.config.AppNameConfig.appName = appName;
     }
 }

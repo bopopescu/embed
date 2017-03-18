@@ -15,11 +15,11 @@ public class StartupConfig extends Configuration {
     @JsonProperty @NotNull @Valid private MongoConfiguration mongo;
 
     /* Mongo Configuration input from yml */
-    private static core.config.MongoConfig mongoConfig;
+    private static MongoConfig mongoConfig;
 
     private static String appName;
 
-    private static core.config.JawtConfig jawtConfig;
+    private static JawtConfig jawtConfig;
 
     public MongoConfiguration getMongo() {
         return mongo;
@@ -29,20 +29,20 @@ public class StartupConfig extends Configuration {
         this.mongo = mongo;
     }
 
-    public static core.config.MongoConfig getMongoConfig() {
+    public static MongoConfig getMongoConfig() {
         return mongoConfig;
     }
 
-    public static void setMongoConfig(core.config.MongoConfig mongoConfig) {
-        core.config.StartupConfig.mongoConfig = mongoConfig;
+    public static void setMongoConfig(MongoConfig mongoConfig) {
+        StartupConfig.mongoConfig = mongoConfig;
     }
 
-    public static core.config.JawtConfig getJawtConfig() {
+    public static JawtConfig getJawtConfig() {
         return jawtConfig;
     }
 
-    public static void setJawtConfig(core.config.JawtConfig jawtConfig) {
-        core.config.StartupConfig.jawtConfig = jawtConfig;
+    public static void setJawtConfig(JawtConfig jawtConfig) {
+        StartupConfig.jawtConfig = jawtConfig;
     }
 
     public static String getAppName() {
@@ -50,6 +50,6 @@ public class StartupConfig extends Configuration {
     }
 
     public static void setAppName(String appName) {
-        core.config.StartupConfig.appName = appName;
+        StartupConfig.appName = appName;
     }
 }

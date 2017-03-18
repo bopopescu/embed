@@ -2,7 +2,6 @@ package main.java.utils.string;
 
 import java.util.ArrayList;
 import java.util.List;
-import utils.json.JsonUtils;
 
 /**
  * Created by digvijaysharma on 15/01/17.
@@ -31,7 +30,7 @@ public class StringUtils {
      * @return
      */
     public static String toString(Object object) {
-        return utils.json.JsonUtils.objectToString(object);
+        return main.java.utils.json.JsonUtils.objectToString(object);
     }
 
     /**
@@ -41,7 +40,7 @@ public class StringUtils {
      * @return
      */
     public static Object toObject(String s, Class toClass) {
-        return utils.json.JsonUtils.stringToObject(s,toClass);
+        return main.java.utils.json.JsonUtils.stringToObject(s,toClass);
     }
 
     public static boolean isNotBlank(String string) {

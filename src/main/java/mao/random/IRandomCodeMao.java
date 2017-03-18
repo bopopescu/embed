@@ -1,6 +1,6 @@
-package mao.random;
+package main.java.mao.random;
 
-import core.vo.RandomCodeVO;
+import main.java.core.vo.RandomCodeVO;
 
 /**
  * Created by digvijaysharma on 15/01/17.

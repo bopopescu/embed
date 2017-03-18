@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import main.java.core.annotation.Controller;
 import main.java.core.api.request.UploadFileRequest;
 import main.java.core.api.response.UploadFileResponse;
-import services.file.impl.FileServiceImpl;
+import main.java.services.file.impl.FileServiceImpl;
 
 /**
  * Created by Sonu on 6/4/16.

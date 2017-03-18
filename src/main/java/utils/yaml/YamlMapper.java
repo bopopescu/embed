@@ -1,8 +1,8 @@
-package utils.yaml;
+package main.java.utils.yaml;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import core.config.MongoConfig;
+import main.java.core.config.MongoConfig;
 import java.io.IOException;
 
 /**

@@ -28,7 +28,7 @@ public class JawtConfig {
     }
 
     public void setAppPort(String appPort) {
-        core.config.JawtConfig.appPort = appPort;
+        main.java.core.config.JawtConfig.appPort = appPort;
     }
 
     public String getAppHost() {
@@ -36,6 +36,6 @@ public class JawtConfig {
     }
 
     public void setAppHost(String appHost) {
-        core.config.JawtConfig.appHost = appHost;
+        main.java.core.config.JawtConfig.appHost = appHost;
     }
 }

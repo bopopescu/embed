@@ -12,6 +12,7 @@ import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -28,8 +29,10 @@ import main.java.core.annotation.Service;
 import main.java.core.config.AppNameConfig;
 import main.java.core.config.JawtConfig;
 import main.java.core.config.MongoConfig;
+import main.java.core.config.StartupConfig;
 import main.java.core.vo.JawtUserVO;
 import main.java.core.vo.UserVO;
+import main.java.mao.user.impl.UserMaoImpl;
 import main.java.utils.security.JawtAuthenticator;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
@@ -38,6 +41,8 @@ import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import org.jose4j.keys.HmacKey;
 import org.mongodb.morphia.DatastoreImpl;
 import org.mongodb.morphia.Morphia;
+import org.reflections.Reflections;
+import org.reflections.scanners.FieldAnnotationsScanner;
 
 public class StartupService extends Application<StartupConfig> {
 
@@ -66,7 +71,7 @@ public class StartupService extends Application<StartupConfig> {
     }
 
     @Override public String getName() {
-        return ((AppNameConfig) utils.yaml.YamlMapper.getObject("app_name.yml", AppNameConfig.class)).getAppName();
+        return ((AppNameConfig) main.java.utils.yaml.YamlMapper.getObject("app_name.yml", AppNameConfig.class)).getAppName();
     }
 
     @Override public void initialize(Bootstrap<StartupConfig> bootstrap) {
@@ -75,18 +80,19 @@ public class StartupService extends Application<StartupConfig> {
         setupMongo();
     }
 
-    @Override public void run(StartupConfig configuration, Environment environment) throws IllegalAccessException {
+    @Override public void run(StartupConfig configuration, Environment environment) throws IllegalAccessException, IOException, InterruptedException {
         LOG.info("Starting App");
         setupJawt(configuration, environment);
         setupEnvironment(environment);
         setupControllers(environment);
         fetchBeans();
-//        setupHazelcast();
+        LOG.info("Running the core code on Pi Now.....");
+        StartupServiceNew.main();
     }
 
     private void setupJawt(StartupConfig configuration, Environment environment) {
         LOG.info("Setting Up Jawt");
-        configuration.setJawtConfig(utils.yaml.YamlMapper.getObject("jawt.yml", JawtConfig.class));
+        configuration.setJawtConfig(main.java.utils.yaml.YamlMapper.getObject("jawt.yml", JawtConfig.class));
         try {
             final byte[] key = configuration.getJawtConfig().getJwtTokenSecret();
             consumer = new JwtConsumerBuilder().setAllowedClockSkewInSeconds(
@@ -129,17 +135,17 @@ public class StartupService extends Application<StartupConfig> {
 
     private List<Object> inflateMaos() {
         LOG.info("Inflating Maos");
-        return maos = injectDependencies("mao", Mao.class, Arrays.asList(new Object[] { datastore }));
+        return maos = injectDependencies("main.java.mao", Mao.class, Arrays.asList(new Object[] { datastore }));
     }
 
     private List<Object> inflateServices(List<Object> maos) {
         LOG.info("Inflating Services");
-        return services = injectDependencies("services", Service.class, maos);
+        return services = injectDependencies("main.java.services", Service.class, maos);
     }
 
     private List<Object> inflateResources(List<Object> services) {
         LOG.info("Inflating Resources");
-        return resources = injectDependencies("core.web.controller", Controller.class, services);
+        return resources = injectDependencies("main.java.core.web.controller", Controller.class, services);
     }
 
     private List<Object> injectDependencies(String dependencyPackageName, Class<? extends Annotation> annotation,
@@ -180,9 +186,9 @@ public class StartupService extends Application<StartupConfig> {
 
     private void fetchBeans() throws IllegalAccessException {
         LOG.info("Fetching field dependency beans and injecting them");
-        fetchBeans("mao");
-        fetchBeans("services");
-        fetchBeans("core.web.controller");
+        fetchBeans("main.java.mao");
+        fetchBeans("main.java.services");
+        fetchBeans("main.java.core.web.controller");
     }
 
     private void fetchBeans(String dependencyPackageName) throws IllegalAccessException {
@@ -249,7 +255,7 @@ public class StartupService extends Application<StartupConfig> {
 
     private void setupMongo() {
         LOG.info("Configuring Mongo Client");
-        MongoConfig mongoConfig = utils.yaml.YamlMapper.getObject("mongo.yml", MongoConfig.class);
+        MongoConfig mongoConfig = main.java.utils.yaml.YamlMapper.getObject("mongo.yml", MongoConfig.class);
         morphia = new Morphia();
         morphia.map(UserVO.class);
         addr = new ServerAddress(mongoConfig.getServer(), mongoConfig.getPort());

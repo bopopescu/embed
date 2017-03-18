@@ -11,7 +11,7 @@ import main.java.core.annotation.Controller;
 import main.java.core.api.request.ImageDownloadRequest;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
-import services.file.impl.FileServiceImpl;
+import main.java.services.file.impl.FileServiceImpl;
 
 /**
  * Created by digvijaysharma on 09/01/17.
