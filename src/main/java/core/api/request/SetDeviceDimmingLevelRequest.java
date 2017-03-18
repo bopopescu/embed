@@ -9,13 +9,13 @@ public class SetDeviceDimmingLevelRequest extends ServiceRequest {
 
     private static final long serialVersionUID = -7191710901031348258L;
 
-    private int level;
+    private String level;
 
-    public int getLevel() {
+    public String getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(String level) {
         this.level = level;
     }
 }
