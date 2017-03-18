@@ -25,6 +25,6 @@ public class OtpServer {
     }
 
     public static void main(String[] args) {
-        System.out.println(sendOtp("9818539195", 987125));
+        System.out.println(sendOtp("9999886115", 987125));
     }
 }

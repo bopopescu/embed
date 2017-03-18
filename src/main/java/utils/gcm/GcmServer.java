@@ -22,7 +22,7 @@ public class GcmServer {
                     "{\"Content-Type\":\"application/json\",\"Authorization\":\"key=AAAAAETG2us:APA91bFsAecpya9Ow53OumKLpNCzCA1DYKSXg-cvNDgX8A98iALfHpED56cG_zLYl2zAaE3PHBKQzbV5QTBZau5H64O5LIiooYdnS8D5eZGwX5__Iw0lP59RJv1Kb4ZjxcrrjngvaPmS\"}",
                     "",
                     "{ \"data\":"+ data +",\n"
-                            + "  \"to\" : \"bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1...\"\n" + "}"
+                            + "  \"to\" : \"" + gcmId + "\"\n" + "}"
             );
         }
         catch (URISyntaxException e) {
