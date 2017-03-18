@@ -201,8 +201,9 @@ public class StartupServiceNew {
 //        config.setupBridge();
 //        /* Sends a test remote key press */
 //        config.send();
-        config.stayRunning();
-        config.exit();
+//        config.stayRunning();
+//        config.exit();
+        LOG.info("Initialized");
     }
 
     /**
